@@ -1,0 +1,3718 @@
+% \iffalse meta-comment
+%%% The todo list:
+%%% Tips and tricks
+%%% spacing ties ~
+%%
+% \fi
+% \CheckSum{0}
+%
+% \CharacterTable
+%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%   Digits        \0\1\2\3\4\5\6\7\8\9
+%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%   Dollar        \$     Percent       \%     Ampersand     \&
+%   Acute accent  \'     Left paren    \(     Right paren   \)
+%   Asterisk      \*     Plus          \+     Comma         \,
+%   Minus         \-     Point         \.     Solidus       \/
+%   Colon         \:     Semicolon     \;     Less than     \<
+%   Equals        \=     Greater than  \>     Question mark \?
+%   Commercial at \@     Left bracket  \[     Backslash     \\
+%   Right bracket \]     Circumflex    \^     Underscore    \_
+%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%   Right brace   \}     Tilde         \~}
+%
+%^^A
+%^^A List general changes here
+%^^A
+% \changes{2.3}{02 Nov 2020}
+%   {Modified table of contents to temporarily have parskip=0.}
+% \changes{2.2}{26 Apr 2006}
+%   {Modified table of contents to temporarily have parskip=0.}
+% \changes{1.4}{20 Apr 2005}
+%   {Full conformance to 2004 guidelines achieved}
+% \changes{1.4}{20 Apr 2005}
+%   {Many typoos fixed}
+% \changes{1.4}{20 Apr 2005}
+%   {Documentation completed}
+% \changes{1.3}{19 Apr 2005}
+%   {Template examples completed}
+% \changes{0.9}{04 Jan 2005}
+%   {corrected use of wrong front page setup command in preface,
+%   dedication and preface page commands}
+% \changes{0.8}{20 Dec 2004}
+%   {docstrip documentation added.}
+% \changes{0.5}{03 Dec 2004}
+%   {Brought into conformance with Graduate Evalutor's requirements.}
+% \changes{0.1}{22 Jul 2004}
+%   {Initial creation}
+%
+% \iffalse meta-comment
+%
+% Doc-Source file to use with LaTeX2e
+%
+% Copyright (C) 2020 by Jeff Wiegley, Ph.D.
+% -----------------------------------------
+%
+% This file may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either
+% version 1.2 or this license of (at your option) any
+% later version. The latest version of this license is in:
+%
+%    http://www.latex-project.org/lppl.txt
+%
+% and version 1.2 or later is part of all distributions of
+% LaTeX version 1999/12/01 or later.
+%
+% \fi
+%
+% \iffalse
+%
+%<*batchfile>
+\begingroup
+
+\input docstrip.tex
+\keepsilent
+
+\preamble
+
+Copyright (C) 2020 by Jeff Wiegley, Ph.D.
+
+This file may be distributed and/or modified under the
+conditions of the LaTeX Project Public License, either
+version 1.2 or this license of (at your option) any
+later version. The latest version of this license is in:
+
+   http://www.latex-project.org/lppl.txt
+
+and version 1.2 or later is part of all distributions of
+LaTeX version 1999/12/01 or later.
+
+\endpreamble
+\generateFile{CSUNthesis.cls}{f}{\from{CSUNthesis.dtx}{class}}
+
+\endgroup
+%</batchfile>
+%
+%<*dtx>
+\ProvidesFile{CSUNthesis.dtx}
+%</dtx>
+%<*class>
+%<class>\NeedsTeXFormat{LaTeX2e}
+%<class>\ProvidesClass{CSUNthesis}
+%<*class>
+    [2020/11/01 2.3 CSU Northridge]
+%</class>
+%<*driver>
+\documentclass{ltxdoc}
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+%\usepackage{times}%BLECH! cmr is a much easier to read typeface. Times is
+%so heavy that it is almost bold. How did it ever get to be ubiquitous?
+\usepackage{fancyvrb}
+\usepackage{makeidx}
+\usepackage{url}
+\usepackage{lstdoc}
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage{pifont}
+\begin{document}
+  \DocInput{CSUNthesis.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+% \GetFileInfo{CSUNthesis.dtx}
+%^^A
+%^^A I wanted to use the ``dbend'' symbol but it is defined in the
+%^^A manfnt package which is not installed by default. It seems a
+%^^A a lot of trouble to install an entire package for a single,
+%^^A symbol.
+%^^A
+%\DeclareFontFamily{U}{manual}{}
+%\DeclareFontShape{U}{manual}{m}{n}{ <->  manfnt }{}
+%\newcommand{\manfntsymbol}[1]{%
+%    {\fontencoding{U}\fontfamily{manual}\selectfont\symbol{#1}}}
+% \newcommand{\dbend}{\manfntsymbol{127}}
+% \newcommand{\danger}{\marginpar[\hfill\dbend]{\dbend\hfill}}
+%
+% \makeatletter
+%^^A
+%^^A Carsten Heinz produced truly excellent documentation for the
+%^^A listings.sty package. His macros for syntax are helpful.
+%^^A
+%
+%\def\@option{\begingroup
+%   \catcode`\\12
+%   \MakePrivateLetters \m@cro@ \iftrue {Macro}}
+%\let\end@option\endmacro
+%
+%\def\@category{\begingroup
+%   \catcode`\\12
+%   \MakePrivateLetters \m@cro@ \iftrue {Category}}
+%\let\end@category\endmacro
+%
+%\newenvironment{category}[1]{
+%    \index{Code Categories\levelchar#1\actualchar\string\verb%
+%     \quotechar*\verbatimchar#1\verbatimchar}%
+%\begin{@category}{#1}}
+%{\end{@category}}
+%
+%\newenvironment{option}[2]{
+%    \index{#2\levelchar\string#1\actualchar\string\verb%
+%     \quotechar*\verbatimchar\string#1\verbatimchar\encapchar usage}%
+%    \index{\string#1\actualchar\string\verb%
+%     \quotechar*\verbatimchar\string#1\verbatimchar\encapchar usage}%
+%\begin{@option}{#1}}
+%{\end{@option}}
+%
+%\newcommand{\indexbasic}[1]{
+%  \texttt{#1}
+%    \index{#1\actualchar\string\verb\quotechar*\verbatimchar#1\verbatimchar%
+%           \encapchar usage}%
+%}
+%\newcommand{\indexslash}[1]{
+%  \texttt{\string#1}
+%    \index{\expandafter\@gobble\string#1\actualchar%
+%           \string\verb\quotechar*\verbatimchar\string#1\verbatimchar%
+%           \encapchar usage}%
+%}
+%\newcommand{\indexcommand}[2]{
+%  \texttt{\string#2}
+%    \index{Content commands\levelchar#1\levelchar%
+%           \expandafter\@gobble\string#2\actualchar%
+%           \string\verb\quotechar*\verbatimchar\string#2\verbatimchar%
+%           \encapchar usage}%
+%}
+% \makeatother
+%
+%^^A italicindex
+% \DoNotIndex{\#,\$,\%,\&,\@,\\,\{,\},\^,\_,\~,\ }
+% \DoNotIndex{\@one}
+% \DoNotIndex{\advance,\begingroup,\catcode,\closein}
+% \DoNotIndex{\closeout,\day,\def,\edef,\else,\empty,\endgroup}
+%
+% \DoNotIndex{\@abstract,\@acknowledgement,\@author,\@chapapp}
+% \DoNotIndex{\@collaborator,\@contact,\@coordinator,\@copyrightyear}
+% \DoNotIndex{\@csunbibfile,\@csunbibstyle,\@dedication,\@defensedate}
+% \DoNotIndex{\@defenseday,\@defenselocation,\@defensetime,\@degree}
+% \DoNotIndex{\@department,\@highpenalty,\@makechapterhead}
+% \DoNotIndex{\@makeschapterhead,\@memberA,\@memberB,\@memberChair}
+% \DoNotIndex{\@plus,\@pnumwidth,\@preface,\@startsection,\@submitmonth}
+% \DoNotIndex{\@submityear,\@tempdima,\@title,\AtBeginDocument}
+% \DoNotIndex{\AtEndDocument,\ClassError,\ClassWarning,\ExecuteOptions}
+% \DoNotIndex{\Large,\LoadClass,\MakeUppercase,\OptionNotUsed}
+% \DoNotIndex{\PassOptionsToClass,\abstractfalse,\abstracttrue,\addpenalty}
+% \DoNotIndex{\addtolength,\announcefalse,\announcetrue,\arabic,\baselineskip}
+% \DoNotIndex{\bibliography,\bibliographystyle,\bibname,\c@secnumdepth}
+% \DoNotIndex{\c@tocdepth,\centering,\draftfalse,\drafttrue,\evensidemargin}
+% \DoNotIndex{\fontsize,\footskip,\frontmaatertopmargin,\frontpage,\hb@xt@}
+% \DoNotIndex{\headheight,\headsep,\hfil,\hfill,\hskip,\ifabstract}
+% \DoNotIndex{\ifannounce,\ifdraft,\iflof,\iflot,\ifproject,\ifproposal}
+% \DoNotIndex{\ifthesis,\interlinepenalty,\item,\itemsep,\l@chapter}
+% \DoNotIndex{\leavevmode,\leftmargin,\line,\listoffigures,\listoftables}
+% \DoNotIndex{\loffalse,\loftrue,\lotfalse,\lottrue,\makebox,\maketitle}
+% \DoNotIndex{\mpabstract,\mpacknowledgement,\mpannouncement,\mpcopyright}
+% \DoNotIndex{\mpdedication,\mppreface,\mpproposal,\mpsignature}
+% \DoNotIndex{\mptableofcontents,\mplistoffigures,\mplofillustrations}
+% \DoNotIndex{\mplistoflistings,\mplistoftables,\mptitle,\newif,\newlength}
+% \DoNotIndex{\newpage,\nobreak,\normalsize,\null,\oddsidemargin}
+% \DoNotIndex{\oldbaselineskip,\oldheight,\oldoddside,\oldtop,\oldwidth}
+% \DoNotIndex{\onehalfspacing,\p@,\pagenumbering,\pagestyle,\parindent}
+% \DoNotIndex{\penalty,\projectfalse,\projecttrue,\proposalfalse}
+% \DoNotIndex{\proposaltrue,\put,\section,\selectfont,\setcounter,\setlength}
+% \DoNotIndex{\singlespacing,\subsection,\subsubsection}
+% \DoNotIndex{\textbf,\textheight,\textwidth,\thesection,\thesisfalse}
+% \DoNotIndex{\frontpagesetup,\thesistrue,\thispagestyle,\titlewidth,\today}
+% \DoNotIndex{\topmargin,\topsep,\undefined,\vfill,\vskip,\vspace}
+%
+%^^A
+%^^A Don't index TeX-primitives.
+%^^A
+% \DoNotIndex{\advance,\afterassignment,\aftergroup,\batchmode,\begingroup}
+% \DoNotIndex{\box,\catcode,\char,\chardef,\closeout,\copy,\count,\csname,\def}
+% \DoNotIndex{\dimen,\discretionary,\divide,\dp,\edef,\else,\end,\endcsname}
+% \DoNotIndex{\endgroup,\endinput,\endlinechar,\escapechar,\everypar}
+% \DoNotIndex{\expandafter,\fi,\gdef,\global,\globaldefs,\hbadness,\hbox}
+% \DoNotIndex{\hrulefill,\hss,\ht}
+% \DoNotIndex{\if,\ifdim,\iffalse,\ifhmode,\ifinner,\ifnum,\ifodd,\iftrue}
+% \DoNotIndex{\ifvoid,\ifx,\ignorespaces,\immediate,\input,\jobname,\kern}
+% \DoNotIndex{\lccode,\leftskip,\let,\long,\lower,\lowercase,\meaning,\message}
+% \DoNotIndex{\multiply,\muskip,\noexpand,\noindent,\openout,\par,\parfillskip}
+% \DoNotIndex{\parshape,\parskip,\raise,\read,\relax,\rightskip,\setbox,\skip}
+% \DoNotIndex{\string,\the,\toks,\uppercase,\vbox,\vcenter,\vrule,\vtop,\wd}
+% \DoNotIndex{\write,\xdef}
+%
+%^^A
+%^^A Don't index LaTeX's private definitions.
+%^^A
+% \DoNotIndex{\@@end,\@@par,\@M,\@arabic,\@circlefnt,\@currentlabel}
+% \DoNotIndex{\@currenvir,\@depth,\@doendpe,\@dottedtocline,\@eha,\@ehc}
+% \DoNotIndex{\@empty,\@firstofone,\@firstoftwo,\@float,\@for,\@getcirc}
+% \DoNotIndex{\@gobble,\@gobbletwo,\@halfwidth,\@height,\@ifnextchar}
+% \DoNotIndex{\@ifundefined,\@ignoretrue,\@makecaption,\@makeother,\@namedef}
+% \DoNotIndex{\@ne,\@noligs,\@notprerr,\@onlypreamble,\@secondoftwo,\@spaces}
+% \DoNotIndex{\@starttoc,\@totalleftmargin,\@undefined,\@whilenum}
+% \DoNotIndex{\@wholewidth,\@width}
+% \DoNotIndex{\c@chapter,\c@figure,\c@page,\end@float,\f@family,\filename@area}
+% \DoNotIndex{\filename@base,\filename@ext,\filename@parse,\if@twoside}
+% \DoNotIndex{\l@ngrel@x,\m@ne,\new@command,\nfss@catcodes,\tw@,\thr@@}
+% \DoNotIndex{\z@,\zap@space}
+%
+%^^A
+%^^A Don't index LaTeX's package definitions.
+%^^A
+% \DoNotIndex{\AtEndOfPackage}
+% \DoNotIndex{\CurrentOption,\DeclareOption,\IfFileExists,\InputIfFileExists}
+% \DoNotIndex{\MessageBreak,\NeedsTeXFormat,\PackageError,\PackageWarning}
+% \DoNotIndex{\ProcessOptions,\ProvidesFile,\ProvidesPackage,\RequirePackage}
+%
+%^^A
+%^^A Don't index LaTeX's public definitions.
+%^^A
+% \DoNotIndex{\abovecaptionskip,\active,\addcontentsline,\addtocounter,\begin}
+% \DoNotIndex{\belowcaptionskip,\bfseries,\bgroup,\bigbreak,\chapter}
+% \DoNotIndex{\contentsname,\do,\egroup,\footnotesize,\index,\itshape}
+% \DoNotIndex{\linewidth,\llap,\makeatletter,\newbox,\newcommand,\newcount}
+% \DoNotIndex{\newcounter,\newdimen,\newtoks,\newwrite,\nointerlineskip}
+% \DoNotIndex{\normalbaselines,\normalfont,\numberline,\pretolerance,\protect}
+% \DoNotIndex{\qquad,\refstepcounter,\removelastskip,\renewcommand,\rlap}
+% \DoNotIndex{\small,\smallbreak,\smallskipamount,\smash,\space,\strut}
+% \DoNotIndex{\strutbox,\tableofcontents,\textasciicircum,\textasciitilde}
+% \DoNotIndex{\textasteriskcentered,\textbackslash,\textbar,\textbraceleft}
+% \DoNotIndex{\textbraceright,\textdollar,\textendash,\textgreater,\textless}
+% \DoNotIndex{\textunderscore,\textvisiblespace,\thechapter,\ttdefault}
+% \DoNotIndex{\ttfamily,\typeout,\value,\vphantom}
+%
+%^^A
+%^^A Don't index definitions from other packages.
+%^^A
+% \DoNotIndex{\MakePercentComment,\MakePercentIgnore}
+%
+% \title{The CSU Northridge Masters Thesis \LaTeXe\ class\thanks{
+%    This file has version \fileversion\ last revised \filedate}
+% }
+%
+% \author{Jeff Wiegley, Ph.D. \\ \texttt{jeffw@csun.edu}\thanks{%
+%    The class file author acknowledges the significant contributions
+%    of Joohwan Lee, Amy Snetzler and Veerawan Sarbua for their
+%    patience and invaluable assistance in pointing out and helping to
+%    correct my initial blunders while creating the class file.}}
+%
+% \date{\filedate\ Version \fileversion}
+%
+% \maketitle
+%
+% \begin{abstract}
+%    \LaTeXe\ is a professional document typesetting program. It is a
+%    commonly accepted document preparation system used, or recognized,
+%    by most of the mathematic and scientific disciplines. \LaTeX's
+%    ability to handle and typeset mathematical equations properly and
+%    with minimum effort is outstanding. Its knowledge and
+%    implementation of professional
+%    typesetting rules and behaviors is second to none. The biggest
+%    advantage over alternative document applications is that \LaTeX\
+%    allows an author to ignore document formatting, and concentrate
+%    on the intellectual content instead.
+%
+%    The CSU Northridge Graduate Evaluator's office sets strict
+%    guidelines regarding the visual appearance and format of graduate
+%    theses. The \textsf{CSUNthesis}~\cite{url:csunthesis.cls} class file
+%    was developed to enable
+%    CSU Northridge graduate students to prepare their thesis using
+%    \LaTeXe\ without having to learn the more advanced formatting
+%    concepts used to control the details of \LaTeX. By
+%    using this class file, graduate students need to learn only the
+%    basics of \LaTeX. The use of this class file also allows graduate
+%    students to concentrate on the content of their thesis topic and
+%    almost completely ignore the format and layout of the
+%    document.
+%
+%    The \textsf{CSUNthesis} class file correctly implements all the
+%    format requirements of the Graduate Evaluator's office for the
+%    preparation of graduate theses, projects and abstracts as
+%    presented in the \emph{Guidelines for the preparation of
+%    theses, graduate projects and artistic
+%    abstracts}~\cite{url:2004csunthesesguide}
+%
+%    \textbf{\underbar{Please}}: Report any mistakes or problems with
+%    the \textsf{CSUNthesis} class file to the class file author at
+%    \texttt{jeffw@csun.edu} so that they may be permanently corrected.
+% \end{abstract}
+%
+% \tableofcontents
+%
+% \parskip=10pt
+% \parindent=0pt
+%
+% \lstset{basicstyle=\ttfamily\small,
+%    numberstyle=\tiny,numbers=left,
+%    xleftmargin=0.5in,
+%    gobble=1,
+%    language=Clean
+%}
+%
+% \section{Introduction}
+%
+%    Impatient authors with prior knowledge of \LaTeX\ may want to
+%    skip directly to Section~\ref{sec:reference} to begin using the
+%    class file. Really impatient thesis authors who have procrastinated
+%    until the night before their defense may want to skip to
+%    Section~\ref{sec:templates}
+%
+%    \TeX\ is a markup language designed in 1978 by Donald
+%    E. Knuth. \TeX\ is pronounced like ``tech'' as in \TeX-nician.
+%    Donald Knuth is famous for writing \emph{The Art of Computer
+%    Programming} books~\cite{knuth98:_art_progr}. While
+%    writing the first volumes of his work he became frustrated by the
+%    typesetting mistakes his publishers were making with his work and
+%    with the limited abilities of the \emph{troff} program to produce
+%    properly typeset results. This motivated him to write the Turing
+%    complete language \TeX. The purpose of \TeX\ is to properly handle
+%    the minute
+%    details associated with properly formatting bits of text and
+%    mathematical formulae.
+%
+%    \LaTeX\ was written by Leslie Lamport in 1985. \LaTeX\ is a
+%    collection of macros, written in the language \TeX, that allows
+%    an author to concentrate on the higher-level document features
+%    rather than on the details of typesetting.
+%
+%    \TeX\ and \LaTeX\ are far older, more mature and more capable of
+%    preparing professional technical documents than Microsoft Word,
+%    WordPerfect or any other inferior graphical applications.
+%
+%    \subsection{Disadvantages of using \TeX/\LaTeX}
+%    Using \TeX\ and \LaTeX\ is not without disadvantages:
+%    \begin{itemize}
+%      \item Documents are stored as plain 7-bit ASCII text and will
+%      need to be compiled into a \texttt{.dvi}, \texttt{.ps} or
+%      \texttt{.pdf} file in order to view the typeset results.
+%
+%      \emph{Instructions on how to do so are provided in this
+%      documentation.}
+%
+%      \item The editing of documents is done through any ASCII
+%      text editor and not through a ``What You See Is What You Get''
+%      (WYSIWYG) graphical application.
+%
+%      \emph{This allows an author to choose what ever editor and
+%      environment with which he is most productive.}
+%
+%      \item To include graphics into \LaTeX\ documents the
+%      graphics need to be supplied as Encapsulated PostScript images.
+%      \item The author needs to learn a new markup
+%      language.
+%
+%      \emph{The core amount of information that is required though
+%      fits in the first 40 pages of Lamport's informative book 
+%      \emph{LaTeX: A Document Preparation
+%      System}}~\cite{lamport94:_latex}.
+%
+%      \item Limited typeface capability. Switching typefaces is
+%      not as easy. This is due to \TeX\ being developed at a time
+%      when PostScript and TrueType typeface technologies were not
+%      available. This limitation has been corrected and \TeX\ can
+%      use TrueType typefaces, but it has to be setup properly and to
+%      do so is not a trivial undertaking.
+%   \end{itemize}
+%
+%   \subsection{Advantages of using \TeX/\LaTeX}
+%   The presence of these disadvantages raises the question ``Why use
+%   \LaTeXe?''
+%   \begin{itemize}
+%      \item It is free. You can obtain \TeX\ and \LaTeXe\ without cost
+%      for just about any operating system available including Linux,
+%      Windows, Mac and even DOS.
+%
+%      \item It is free. You can modify the source code to \LaTeXe\ and
+%      even distribute the derived work under certain, reasonable
+%      conditions.  If \LaTeXe\ doesn't do exactly what you want it to
+%      then you can change it so that it does.
+%
+%      \emph{Though, doing so is not always trivial. The
+%      \texttt{CSUNthesis.dtx} file is now $2,857$ lines and growing
+%      just to provide thesis authors with the changes necessary to
+%      conform to the thesis guidelines.}
+%      
+%      \item If you need to format mathematical formulae then \LaTeXe\
+%      with the \texttt{amsmath} package is unbeatable.
+%
+%      Open up Microsoft Word's equation editor and try to insert the
+%      simple formulae ``$B\nrightarrow A$''. (Hint: Word doesn't have
+%      something as simple as negated arrows.) In \LaTeX\ that formula
+%      is typeset by simply typing |$B\nrightarrow A$|.
+%
+%      A quick  survey of Word's equation editor reveals that Word
+%      provides the author with a total of $286$ different symbols or
+%      relationships; \LaTeXe\ provides an author with over $2,000$
+%      symbols. The common math packages alone provide $576$
+%      mathematical symbols (including the $\nrightarrow$ symbol
+%      example). 
+%
+%      \item \LaTeX\ automatically organizes, numbers and builds your
+%      \emph{Table of Contents}, \emph{List of Figures}, \emph{List of
+%      Illustrations} and \emph{Bibliography} sections.
+%      \item Figures, sections, chapters, subsections and equations
+%      are all numbered automatically and updated whenever content is
+%      reorganized. Cross-references to numbered material are also
+%      automatically updated when numbering changes.
+%      \item With a decent class file, such as \textsf{CSUNthesis},
+%      all formatting is handled for you automatically.
+%      \item \LaTeX\ is always consistent. Spacing between words, lines,
+%      paragraphs, itemized or enumerated list items is always the
+%      same and labeled consistently.
+%      \item with a decent bibliography data file the content and
+%      formatting of the bibliography section is always built
+%      correctly. The bibliography is automatically sorted, formatted
+%      and numbered whenever new citations are added to the document.
+%      \item \LaTeX\ produces a document that is generally more
+%      professional and ready for publishing than those produced by
+%      weaker word processing systems.
+%      \item \LaTeX\ is a professional document preparation system,
+%      not a word processor.
+%      \item \LaTeX\ supports \emph{literate programming}. This means
+%      that the source file can be self documenting. Not only can
+%      comments be inserted into the source file, but full
+%      documentation can be supported. This documentation and the
+%      \texttt{CSUNthesis.cls} file are generated from the same
+%      original \LaTeXe\ source file.
+%   \end{itemize}
+%
+%   The remainder of this document instructs an author on how to use
+%   the \textsf{CSUNthesis} class class file to prepare a suitable
+%   masters thesis using \LaTeX.
+%
+% \section{Academic (Dis)Honesty}
+%
+%   This section is present in order to inform students about the
+%   standards to which they are required to adhere to when producing
+%   an acceptable thesis. If you are reading this document because you
+%   chose Prof. Wiegley or Prof. Noga and they are making you do you
+%   thesis in \LaTeXe\ then you should at least be aware that both of
+%   these professors, and almost all other professor's on campus, have
+%   failed theses for reasons of academic dishonesty.
+%
+%   The first thing to remember is that, above all else, your thesis
+%   stands as representing yourself to the world. Your thesis
+%   represents the levels of excellence that you are capable of
+%   acheiving and the depth to which your knowledge, research and
+%   problem solving skills extend. What you produce will be archived
+%   forever for the public to view.
+%
+%   Your thesis also reflects on the quality of education and the
+%   reputation of CSU Northridge.
+%
+%   It is in nobody's interest to produce a thesis through any form of
+%   academic dishonesty. It should consist of your ideas and your
+%   analysis of the problem you tackled. The works of others should
+%   only be included as evidence to support your conclusions.
+%
+%   The most common form of academic dishonesty is
+%   \emph{plagiarism}. Plagiarism is is easy to commit and most
+%   students dont' believe they have done anything wrong. Ignorance of
+%   the law however is not an excuse. The end result of committing the
+%   act will be that you are not allowed to defend.
+%
+%   So what is plagiarism and how do I avoid it?
+%
+%   Plagiarism: ``the act of plagiarizing; taking someone's words or
+%   ideas as if they were your own''\cite{url:plagiarism}
+%
+%   Plagiarism occurs the moment you cut and paste the published
+%   material produced by some other author without the following three
+%   criteria:
+%   \begin{enumerate}
+%      \item you must have either the author's (or copyright holder's)
+%      permission, or the amount and type of work being copied must
+%      conform to the rules of fair use.\cite{url:fairuse}
+%      \item You must cite the full bibliographic information for the
+%      work in your references.
+%      \item The item must be used as evidence to support a conclusion
+%      stated by you. The item cannot be used as an alternative to
+%      writing your ideas up, even you have the same concept to
+%      state.
+%   \end{enumerate}
+%
+%   For example, the definition of plagiarism included above has been
+%   obtained via fair use rules (it's amount and scope is sufficiently
+%   small.) I have also cited where the reference was found and who
+%   published it. (It's a URL which are sometimes hard to find author
+%   and date information for, but none the less it is cited.) I used
+%   it as an example to demonstrate what it was I was talking about. I
+%   did not put forth the notion that I was somehow defining
+%   plagiarism myself.
+%
+%   \emph{``But somebody has a really great image I want to use and seems a
+%   waste of time to build my own.''} Fine. Ask the author if you can
+%   use his image. Most likely if all you want is an image they will
+%   happily agree. Once permissions is obtained then you can cite the
+%   origin of the image and provide your own analysis about the image
+%   or draw conclusions from it.
+%
+%   \emph{``But they did some really great work that I want to talk about.''}
+%   Lots of people do lots of great work. It is your responsibility to
+%   be one of those people. To this end you should be generating your
+%   own, unique, ideas. You ideas can be related to other author's
+%   ideas or an outgrowth from them. In which case you can include
+%   their work in order to compare, contrast and support their ideas
+%   with what you have developed. For instance, take the following
+%   excerpt:
+%   \begin{quote}
+%      After we came out of the church, we stood talking for some time
+%      together of Bishop Berkeley's ingenious sophistry to prove the
+%      nonexistence of matter, and that every thing in the universe is
+%      merely ideal. I observed, that though we are satisfied his
+%      doctrine is not true, it is impossible to refute it. I never
+%      shall forget the alacrity with which Johnson answered, striking
+%      his foot with mighty force against a large stone, till he
+%      rebounded from it -- "I refute it thus."
+%   \end{quote}\cite{oxford:boswelllife}
+%   This is one of my favorite quotes and is illustrates an example of
+%   an effective and easy method for proving that reality is real and
+%   not some illusion present in some nebulous being. There exist
+%   other effective arguments as well.
+%
+%   Notice that my point is that there exists argument to prove
+%   reality and that there are certain types of quotes that I like
+%   better than others. I have not used Mr. Johnson's quote, in place
+%   of my own words, to state that reality exists. I used it to back
+%   up my own concepts. You can use material in a similar fashion.
+%
+%   \emph{``But what I included is freely available on the web.''} That may
+%   be true. The work you are borrowing could be ``freely'' available
+%   for anybody to view but \emph{only} through the means and methods
+%   that the publisher or author chose. You do not have the right to
+%   expose their ideas through another means.
+%
+%   \emph{``But I only borrowed a little bit for the introduction; the rest
+%   of the work is all mine.''} Too bad. If even just one paragraph is
+%   plagiarized then the entire work unacceptable. It's sort of like
+%   being pregnant... You can't be just a ``little'' pregnant.
+%
+%   If you have \textbf{any} doubts about whether or not an intended
+%   course of action would constitute some form of academic dishonesty
+%   then you should seek your advisor's advice. They will know what to
+%   do and how to achieve the result you are looking for. It's one of
+%   the reasons they exist for you.
+%
+% \section{Obtaining \LaTeXe}
+%
+%   \LaTeXe\ is available for almost every operating system. The method
+%   for obtaining and installing \LaTeXe\ is a little different for each
+%   operating system. Most authors will be working on a
+%   \texttt{Linux} or \texttt{Microsoft Windows} operating system and
+%   the general directions for these two systems are covered in this
+%   document.
+%
+%   \subsection{Un*x}
+%   Linux comes in several ``flavors'' called
+%   distributions. \emph{RedHat}, \emph{Debian} and \emph{Slackware}
+%   are some of the popular ones. Almost all Linux distributions are
+%   packaged based these days, making installation of large
+%   applications very easy.
+%
+%   under Debian the command:\begin{verbatim}
+%       apt-get install tetex-base tetex-bin tetex-extras\end{verbatim}
+%   will download and install all the necessary programs. Redhat users
+%   can install similar RPM packages using tools provided by Redhat.
+%
+%   \subsection{Microsoft Windows}
+%
+%   Windows users will want to obtain and install the \LaTeXe\
+%   distribution named \texttt{MikTeX}~\cite{url:miktex}.
+%   
+% \section{Document production}
+%
+%   Preparing a document using \LaTeX\ involves iteration of the
+%   following steps.
+%
+%   \newlength{\oldleftmargini}
+%   \setlength{\oldleftmargini}{\leftmargini}
+%   \leftmargini=1in
+%   \begin{enumerate}
+%     \item[\textbf{Edit}:] Edit Source Code. Any \texttt{ASCII} text
+%     editor is sufficient for this task. Any changes to the
+%     document's content are made by editing a source file (or a collection
+%     of source files).
+%     \item[\textbf{Compile}:] Compile the source file using the
+%     command \texttt{latex} (and possibly \texttt{bibtex}).
+%     \item[\textbf{Preview}:] Preview the resulting document using a
+%     preview application such as \texttt{xdvi} (Un$\star$x) or
+%     \texttt{yap} (Windows).
+%     \item[\textbf{Print}:] Convert the document to PostScript or PDF
+%     for printing.
+%
+%     (The final review of a document should be performed on
+%     the PostScript or PDF version using a viewer such as \texttt{xpdf}
+%     or Acrobat Reader as \texttt{xdvi} and \texttt{yap} have some
+%     problems rendering PostScript correctly.)
+%   \end{enumerate}
+%   \leftmargini=\oldleftmargini
+%
+% \subsection{Editing the document}
+%
+%    The source document is the file that the author works on and
+%    changes. Traditionally, the extension of the file name is either
+%    \texttt{.tex} or \texttt{.ltx} to reflect the file's purpose. The
+%    source file is a simple 7-bit \texttt{ASCII} encoded file. Any
+%    text editor can be used to create and edit the source
+%    file. Common editors include \texttt{emacs}, \texttt{vi},
+%    \texttt{pico}, \texttt{nano}, and \texttt{notepad}.
+%
+%    To illustrate the remaining procedures for creating the final
+%    publishable document from the source file it is helpful to have a
+%    sample document to reference. Listing~\ref{lst:example} on
+%    Page~\pageref{lst:example} is such a document. Consider this to
+%    be the source file named ``\texttt{example.tex}''.
+%
+%\begin{lstlisting}[
+%    label=lst:example,
+%    caption=Minimal CSUNthesis document example: \texttt{example.tex}
+%]
+%\documentclass[12pt]{CSUNthesis}
+%
+%\submitted{December}{2004}
+%
+%\author{John Doe}
+%
+%\title{CSUNthesis Example}
+%
+%\committee
+%    {John Q. Public, Ph.D.}
+%    {Jane Doe, Ph.D.}
+%    {David Phantom, Ph.D.}
+%
+%\abstract{This document is a simple example of using the
+%\textsf{CSUNthesis} class file.}
+%
+%\begin{document}
+%
+%\chapter{Introduction}
+%This document was produced using \LaTeX\ code. The
+%source for this example represents the minimum amount
+%of markup commands needed in the preamble to produce
+%a document using the \textsf{CSUNthesis} class
+%file.
+%
+%\end{document}
+%\end{lstlisting}
+%
+% \subsection{Compiling the document}
+%
+%    As the reader can see, the source file contains no binary
+%    formatting. Instead formatting is specified by directives (called
+%    \emph{macros}). The |\textsf{|$\ldots$|}| is a
+%    directive that typesets its argument in \textsf{\underbar{s}ans-seri\underbar{f}}
+%    typeface, a simplified stroke typeface similar to Helvatica.
+%
+%    To produce actual formatted output it is necessary to compile the
+%    source file. The program \texttt{latex} is the compiler and
+%    produces a formatted output file that ends in the filename suffix
+%    of \texttt{.dvi}. DVI is an acronym for
+%    \underbar{D}e\underbar{v}ice \underbar{I}ndependent file.
+%
+%    It is easy to compile simple files. The command\begin{verbatim}
+%       latex example.tex\end{verbatim}
+%
+%    will compile the file and produce a DVI file as output. The
+%    compilation also produces a variety of other auxiliary files which
+%    will be discussed in a moment.
+%
+%    Authors should carefully read the debugging output that
+%    \LaTeX\ issues while compiling a file. If it encounters any fatal
+%    errors it will stop and fail to compile the file and tell the
+%    author why. Non-fatal warnings will simply be logged and the
+%    compilation will proceed.
+%
+%    The \danger worst warning that can occur that authors
+%    \textbf{must} be aware of and correct are ``|Overfull \hbox|''
+%    and ``|float too wide|'' warnings. \TeX\ uses the concept of
+%    boxes to
+%    construct the formatted output. Boxes
+%    containing individual characters are glued together to make a box
+%    containing a word, word boxes are glued together to make line
+%    boxes and line boxes are glued together vertically to make
+%    pages. An |Overfull \hbox| means that \TeX\ could not find a
+%    decent place to break a line and has produced a box that is too
+%    wide. This box extends out into the margin area and will result in
+%    the result being rejected by the Graduate
+%    Evaluator. \textbf{Always correct overfull hboxes!} This can
+%    usually be done by simply altering the chosen wording for the
+%    line. If the line is caused by a float figure being too wide then
+%    the figure can be resized smaller to correct the problem.
+%    \texttt{The~Graduate~Evaluator~will~not~accept~theses~that~violate~the~margins!}
+%
+% \subsubsection{Advanced compiling}
+%
+%    \LaTeX\ tries to perform its work in a single pass through the document. If
+%    references, citations and section numbering is used then this
+%    causes some problems. A citation or reference may be encountered
+%    before the number is known. So \LaTeX\ is unable to determine the
+%    proper value to produce in the output during the first pass.
+%
+%    The problem is solved through the generation of an auxiliary file
+%    during the first pass. A second compilation pass is required and fixes up
+%    the problem. The auxiliary file ends in a suffix of
+%    \texttt{.aux}. Other, similar auxiliary files are created to
+%    assist with the table of contents, list of figures and list of
+%    tables if they are called for.
+%
+%    When \LaTeX\ computes a new number for a figure, section or
+%    citation it records the label and number in the auxiliary
+%    files. When \LaTeX\ encounters a reference to a figure, section
+%    or citation it looks up the label in the auxiliary file and
+%    obtains the value recorded earlier or in a previous pass.
+%
+%    The first compilation pass results in a complete and correct
+%    auxiliary file but label references may not be correct since the
+%    auxiliary file wasn't complete at the start of the pass. Rerunning
+%    \texttt{latex} a second time will correct all the label
+%    references.
+%
+%    The second pass is only necessary if label references have
+%    changed. \LaTeX\ is pretty smart and will issue a warning at the
+%    end of a compilation pass if it thinks it needs to be recompiled
+%    to get the references corrected. In rare cases a third pass is
+%    required.
+%
+%    In general a complete compilation run will consist of the
+%    following commands:\begin{verbatim}
+%       latex example.tex
+%       bibtex example
+%       latex example.tex
+%       latex example.tex\end{verbatim}
+%
+%   \texttt{bibtex} only needs to be run when the bibliographic
+%   database changes or when citations are changed in the source
+%   document. The \BibTeX\ database and its usage is discussed in
+%   Section~\ref{sec:bibtex}.
+%
+% \subsection{Previewing the document}
+%
+%   One drawback to the use of \LaTeX\ is its lack of ``What you see
+%   is what you get'' interactive capabilities. After compiling the
+%   file most authors will want to preview the formatted output to
+%   make sure it is professional and ready for publication.
+%
+%   There are graphical previewers available that can handle DVI
+%   files. On Un$\star$x like platforms with X-windows, the application
+%   called \texttt{xdvi} can display the resulting DVI file. Under
+%   windows the MikTeX distribution includes an application
+%   named \texttt{yap}
+%   (\underbar{y}et~\underbar{a}nother~\underbar{p}reviewer).
+%
+%   \texttt{xdvi} and \texttt{yap} both support recognition of a
+%   change in the DVI file and redisplay the result. This means that
+%   you only have to launch these programs once and then leave them
+%   running. Every time the source file is recompiled the already opened
+%   previewer will display the new result. (\texttt{xdvi} only checks
+%   the file when the \texttt{xdvi} window is ``exposed''.)
+%
+%   \subsubsection{PostScript preview problems}
+%
+%   \texttt{xdvi} and \texttt{yap} are good, but both seem to have
+%   problems previewing certain PostScript features. \texttt{xdvi},
+%   for instance, is unable to display landscape rotated pages.
+%
+%   A fool-proof method for previewing documents is to convert the
+%   DVI file to PostScript and then use a fully capable PostScript
+%   previewing application. Conversion is done using the
+%   \texttt{dvips} program as described in
+%   Section~\ref{sub:convert}. \texttt{ghostscript} is a powerful
+%   PostScript previewer that is free but it is not very user
+%   friendly. \texttt{gv} (Ghost View) is a user friendly, paged
+%   front-end to \texttt{ghostscript}. With the proper command line
+%   argument \texttt{gv} also supports recognizing when the PostScript
+%   file changes and updating the display.
+%
+% \subsection{Converting the document for printing}
+% \label{sub:convert}
+%   
+%   Once the document is complete the author will need to print the
+%   document. Modern printers typically communicate using proprietary
+%   protocols and print languages and do not recognize DVI formatted
+%   material natively. Many printers do understand the PostScript
+%   printing language. Adobe produces \emph{Acrobat Reader}, a free
+%   Portable Document Format (PDF) viewer that can print PDF files to
+%   any printer. PostScript can easily be converted to PDF format.
+%
+%   PostScript makes a good common denominator. The \LaTeX\ packages
+%   come with a DVI-to-PostScript converter named \texttt{dvips}
+%
+%   Running the command\begin{verbatim}
+%       dvips -o example.ps example.dvi\end{verbatim} will produce
+%   a PostScript formatted output
+%   file named \texttt{example.ps} that is ready for printing or
+%   conversion to PDF.
+%
+%   Conversion from DVI directly to PDF is possible using the
+%   \texttt{dvipdf} tool. However, the author of the
+%   \textsf{CSUNthesis} class has had problems with this tool where the
+%   resulting format did not match that produced by \texttt{dvips}
+%
+%   A better way to produce to produce a PDF version is to use the
+%   \texttt{ps2pdf}. The command\begin{verbatim}
+%       ps2pdf example.ps example.pdf\end{verbatim} will produce a PDF
+%    file named \texttt{example.ps} from the PostScript file
+%    \texttt{example.ps}.
+%    
+%   So in conclusion the process is:
+% $$ \textrm{.tex}\rightarrow \textrm{.dvi}\rightarrow \textrm{.ps}\rightarrow \textrm{.pdf}$$
+%
+% \subsection{Maintaining a bibliographic database}
+% \label{sec:bibtex}
+%
+%   The bibliography is an essential component of any scholarly
+%   work. It provides the reader with references to additional,
+%   helpful information. It also provides previous authors with
+%   recognition for the value of the work that they produced and that
+%   the new document has relied on to achieve success. The correctness
+%   and format of the bibliography is therefore very important and
+%   great attention should be paid to its preparation.
+%
+%   The format of a bibliography is not standard. Some bibliographies
+%   are sorted by author's last name, some are sorted by title. Some
+%   italicize titles while others place the title in quotes. The
+%   bibliographic style is usually dictated by the publisher. Famous
+%   styles include the Chicago Manual of
+%   Style~\cite{chicago03:_chicag_manual_style} and Kluwer Academic
+%   publishers. With a variety of styles mandated by publishers,
+%   authors do not want to have to re-format their bibliography
+%   entries for each document. The problem is made worse by the fact
+%   that authors frequently use the same references in different, but
+%   related works and don't want to re-enter the information
+%   repeatedly.
+%
+%   \LaTeX\ relies on a helper application named \BibTeX\ to automate
+%   much of the tedious preparation required for professional
+%   bibliography. \BibTeX\ solves these problems by having the author
+%   maintain a single, format independent database file of
+%   bibliographic information. The author maintains a single, separate
+%   \texttt{ASCII} file that ends in a filename suffix of
+%   \texttt{.bib}. This document assumes that the filename is
+%   \texttt{authors.bib}.
+%
+%   Publications are listed in the \texttt{bib} file as specially
+%   formatted entries (but a standard format that supports all
+%   bibliographic styles in an independent
+%   manner). Listing~\ref{lst:bibfile} illustrates the two
+%   entries used to provide the Lamport~\cite{lamport94:_latex} and
+%   Chicago Manual Of Style~\cite{chicago03:_chicag_manual_style}
+%   references.
+%
+%\begin{lstlisting}[
+%    label=lst:bibfile,
+%    caption=\BibTeX\ database entry examples
+%]
+%@Book{lamport94:_latex,
+%  author =       {Lamport, Leslie},
+%  title =        {LaTeX: A Document Preparation System},
+%  edition =      {third},
+%  publisher =    {Addison-Wesley, Professional},
+%  ISBN =         0201529831,
+%  month =        jun,
+%  year =         1994
+%}
+%
+%@Misc{url:miktex,
+%  title =        {{MikTeX}},
+%  howpublished = {\url{http://www.miktex.org/}},
+%}
+%
+%@Book{chicago03:_chicag_manual_style,
+%  author =       {University of Chicago Press Staff},
+%  title =        {The Chicago Manual of Style},
+%  publisher =    {University of Chicago Press},
+%  edition =      {$15^{th}$},
+%  ISBN =         0226104036,
+%  month =        aug,
+%  year =         2003,
+%  pages =        984
+%}
+%\end{lstlisting}
+%
+% Once the bibliographic database is maintained it needs to be
+% incorporated into the compilation procedure. Whenever the
+% \texttt{.bib} file is changed or if citations in the document are
+% added or removed then \BibTeX\ needs to be rerun on the auxiliary
+% file. If \LaTeX\ complains about ``undefined references'' then run
+% the command\begin{verbatim}
+%       bibtex example\end{verbatim} and then rerun the
+% \texttt{latex} compiler until there are no cross-reference warnings.
+%
+% Various websites~\cite{url:bibtex1,url:bibtex2,url:bibtex3} can
+% provide the author with more information and tutorials on using
+% \BibTeX.
+%
+% \section{Tips and tricks}
+%
+% \subsection{Source code listings}
+% In the discipline of computer science it is frequently necessary to
+% illustrate source code. Carsten Heinz has written a very excellent
+% package called \indexbasic{listings.sty}~\cite{url:listings} for
+% typesetting source code into \LaTeX\ documents. Authors should
+% refer to the PDF documentation available at the given URL for usage
+% of this package.
+%
+% Authors should avoid cutting and pasting code into their
+% thesis. Instead, use the \indexslash{\lstinputlisting} command from the
+% |listings.sty| package to obtain the desired portion from an external
+% file. This way if the source file changes, so does the thesis,
+% thereby maintaining accuracy.
+%
+% \changes{1.1}{14 Apr 2005}
+%   {Added section on Templates}
+% \section{Templates}
+% \label{sec:templates}
+% The effort and experience required to modify \LaTeX\ to conform to
+% the guidelines is rather extensive (nearly a thousand lines of
+% \LaTeX\ code). This may make understanding the reference section
+% rather overwhelming for the beginner. To make that learning curve
+% easier the following subsections present basic templates for
+% proposals and thesis creation.
+%
+% \subsection{The minimum requirements for a proposal}
+% \label{sec:proposaltemplate}
+% Graduate students begin with a proposal. The following shows example
+% \LaTeX\ code used to create an acceptable proposal. Proposal
+% format requirements are not as rigid as thesis requirements and are
+% not subject to the approval of the Graduate Evaluator. The example
+% sections in the proposal templates have been fleshed out with a
+% description of the content graduate students should include in their
+% proposal.
+%
+%\begin{lstlisting}[
+%    label=lst:proposaltemplate,
+%    caption=Proposal document example,
+%    basicstyle=\small\ttfamily,
+%]
+%\documentclass[proposal]{CSUNthesis}
+%
+%\title{Minimum Proposal Example}
+%
+%\author{John Q. Public}
+%\contact{jpublic@csun.edu}
+%
+%\committee{Jane Q. Vicktumb, Ph.D}
+%          {Robert Victem, Ph.D}
+%          {Ignacious Viktom, Ph.D}
+%
+%\coordinator{Richard O. Sight, Ph.D}
+%
+%\begin{document}
+%
+%  \section{OBJECTIVE}
+%
+%  A short statement describing the primary objective
+%  of the proposed work. Shoot for no more than five
+%  sentences.
+%
+%  \section{INTRODUCTION}
+%
+%  Introduce the reader to the area in which you will
+%  be working. This includes basic definitions and
+%  explanations geared toward an intelligent
+%  undergraduate computer science student who has never
+%  been exposed to your area of work. Proceed to
+%  describe what sort of work has already been done and
+%  exactly what you propose to do, going into as much
+%  detail as possible. Indicate the technical importance
+%  and/or interest of your proposed work. In discussing
+%  previous work you should cite references gathered in
+%  a literature search including critiques and summaries
+%  of the references read and cited.
+%
+%  \section{TECHNICAL APPROACH}
+%
+%  Describe your approach to your work. For example,
+%  describe any special machinery you will be using, the
+%  design methods you plan to employ, insights you have
+%  into potential new algorithms, etc. Produce a work
+%  breakdown structure, listing the major tasks and
+%  sub-tasks of the proposed project or thesis.
+%
+%  \section{SCHEDULE}
+%
+%  Provide a Gantt chart or similar device showing the
+%  start and completion dates of the tasks and sub-tasks
+%  described in the work breakdown structure.
+%
+%  \section{CRITERIA FOR SUCCESS}
+%
+%  Establish a set of criteria that can be used to
+%  evaluate the degree of success of your proposed work.
+%  For example, how much faster will your new algorithm
+%  be than existing algorithms?  What level of skill
+%  will your go playing program achieve?  How closely
+%  will your simulator model the item being simulated
+%  and how efficient will the simulation be?  It should
+%  be possible to make an objective evaluation of your
+%  completed work using the criteria you set down.
+%
+%  \references{plain}{references}
+%
+%\end{document}
+%\end{lstlisting}
+% \subsection{Minimum Thesis example}
+% The same \textsf{CSUNthesis} class that was used to create the proposal
+% is also used to create the full thesis. (Actually the class file's
+% purpose is to create theses; the proposal format creation was added
+% as a convenience. Proposals use only a small subset of the
+% features provided by the class.)
+%
+% The biggest difference is the absence of \texttt{proposal} from the
+% document class options.
+%
+% A template is presented here for illustrating the minimum macros
+% requires for producing a thesis using the class file.
+%\begin{lstlisting}[
+%    label=lst:minimumtemplate,
+%    caption=Proposal document example,
+%    basicstyle=\small\ttfamily,
+%]
+%\documentclass{CSUNthesis}
+%
+%\title{A Minimum Thesis Example}
+%
+%\author{John Q. Public}
+%
+%\submitted{May}{2005}
+%
+%\committee{Jane Q. Vicktumb, Ph.D}
+%          {Robert Victem, Ph.D}
+%          {Ignacious Viktom, Ph.D}
+%
+%\abstract{This document in the result of a minimal
+%          \textsf{CSUNthesis} thesis document.}
+%
+%\begin{document}
+%
+%  \chapter{Introduction}
+%
+%  Authors can use the minimum thesis template as a
+%  starting point for creating their CSU Northridge,
+%  masters thesis using \LaTeX\ and the
+%  \textsf{CSUNthesis} class. The class file
+%  automatically satisfies almost all of the
+%  requirements as set forth in the ``Guidelines for
+%  the preparation of theses, graduate projects and
+%  artistic abstracts.''
+%
+%  Authors who wish to use the more advanced features
+%  of the \textsf{CSUNthesis} class should refer to
+%  the advanced template instead.
+%
+%\references{plain}{references}
+%
+%\end{document}
+%\end{lstlisting}
+%
+%\subsection{A Maximum Thesis Example}
+%
+% Most authors will want to produce a thesis that consists of more
+% than the minimum features. This example illustrates almost all of
+% the features made possible by the \textsf{CSUNthesis} class
+% (including the inclusion of source documentation).
+%
+%\begin{lstlisting}[
+%    label=lst:maximumtemplate,
+%    caption=Proposal document example,
+%    basicstyle=\small\ttfamily,
+%]
+%\documentclass[10pt,lof,lot,lol]{CSUNthesis}
+%
+%%most CS students will want to present code listings.
+%\usepackage{listings}
+%
+%%For easy line spacing
+%\usepackage{setspace}
+%
+%%most authors will want to include graphics
+%\usepackage{graphicx}
+%
+%\title{A Maximum Thesis Example}
+%
+%\author{John Q. Public}
+%
+%\submitted{May}{2005}
+%
+%\committee{Jane Q. Vicktumb, Ph.D}
+%          {Robert Victem, Ph.D}
+%          {Ignacious Viktom, Ph.D}
+%
+%\abstract{This document in the result of a maximal
+%          \textsf{CSUNthesis} thesis document.}
+%
+%% There is more to life than computers
+%\degree{Master of Science}{Psychology}
+%
+%%various front matter pages, the absence of any of these
+%%macros just causes an absence of those pages.
+%
+%%information for producing a defense announcement page
+%%comment out to supress announcement page.
+%\defense{Monday}{May $14^\textrm{th}$}{3:30PM}{EA1440}
+%
+%%Cause a copyright page to appear after the title page.
+%\copyrightyear{2005}
+%
+%\dedication{This template is dedicated to the brave,
+%            pioneering students who choose to produce
+%            their thesis using \LaTeX.}
+%
+%\acknowledgement{Special thanks to Joohwan Lee, Amy
+%                 Snetzler and Joel Iniguez for pointing
+%                 out all the mistakes present in the
+%                 \textsf{CSUNthesis} class file and for
+%                 their continued pressure to make the
+%                 class file perfekt and well documented.}
+%
+%\preface{Authors may want to describe, or inform the
+%         reader of something special prior to
+%         presenting the thesis material.}
+%
+%\collaboration{Jimmy Anonymous}
+%
+%\begin{document}
+%
+%\chapter{Introduction}
+%  This is an example including most of the features
+%  students may want to use in their thesis.
+%
+%\section{First section}
+%  Authors will want to research the following \LaTeX\
+%  environments for producing certain formats:
+%  \begin{itemize}
+%  \item \verb|\begin{itemize}| and
+%    \verb|\begin{enumerate}| for producing bulleted and
+%    enumerated lists (like this one).
+%  \item \verb|\begin{figure}| and
+%    \verb|\begin{tabular}| for making figure and tabular
+%     environments.
+%  \item \verb|\chapter|, \verb|\section|,
+%    \verb|\subsection| and \verb|\subsubsection| for
+%    sectioning their work.
+%  \item \verb|\begin{center}| for centering their
+%     figures and tables.
+%  \end{itemize}
+%
+%\section{Some other goodies}
+%  Authors may want to change typefaces every now and
+%  then to provide contextual information through the
+%  use of typographical conventions.
+%  \begin{itemize}
+%  \item \verb|\texttt{desired text}| yields a
+%    \texttt{fixed-width}, Courier-like typeface. Good
+%    for use in writing out \texttt{method()} names,
+%    code examples and \texttt{filenames}.
+%  \item \verb|\emph{desired text}| produces
+%    \emph{italics}. Good for introducing new
+%    terminology. The vocabulary chosen to represent
+%    something is called \emph{nomenclature}.
+%  \item \verb|\textbf{desired text}| produces
+%    \textbf{bold face}. Good for adding stength to a
+%    portion of a statement. It \textbf{should} be used
+%    carefully.
+%  \item \verb|\textsf{desired text}| produces a
+%    \textsf{sans-serif} typeface which is possibly good
+%    for other typographical conventions. This document
+%    uses sans-serif when referring to \LaTeX\ packages
+%    such as \textsf{CSUNthesis}; though it
+%    should be \texttt{CSUNthesis.cls} when referring to
+%    the actual filename, and \textsf{CSUNthesis} when
+%    referring to the class in general.
+%  \end{itemize}
+%
+%%references come before appendicies.
+%\references{plain}{references}
+%
+%\appendix % switch chapters to be appendicies
+%
+%\chapter{First appendix}
+%
+%\chapter{Last appendix}
+%
+%\end{document}
+%\end{lstlisting}
+%
+% Since the example maximum template has a lot of hints
+% provided in the example sections it might be beneficial
+% to also provide the reader with the resulting format
+% that would be produced by those sections to make it easier to
+% read and digest and to see the product of the markup macros.
+%
+%\newsavebox{\myboxa}
+%\begin{lrbox}{\myboxa}\verb|\section{First section}|\end{lrbox}
+%\newsavebox{\myboxb}
+%\begin{lrbox}{\myboxb}\verb|\section{Some other goodies}|\end{lrbox}
+%\newsavebox{\myboxc}
+%\begin{lrbox}{\myboxc}\verb|\begin{itemize}|\end{lrbox}
+%\newsavebox{\myboxd}
+%\begin{lrbox}{\myboxd}\verb|\begin{enumerate}|\end{lrbox}
+%\newsavebox{\myboxe}
+%\begin{lrbox}{\myboxe}\verb|\begin{figure}|\end{lrbox}
+%\newsavebox{\myboxf}
+%\begin{lrbox}{\myboxf}\verb|\begin{tabular}|\end{lrbox}
+%\newsavebox{\myboxg}
+%\begin{lrbox}{\myboxg}\verb|\chapter|\end{lrbox}
+%\newsavebox{\myboxh}
+%\begin{lrbox}{\myboxh}\verb|\section|\end{lrbox}
+%\newsavebox{\myboxi}
+%\begin{lrbox}{\myboxi}\verb|\subsection|\end{lrbox}
+%\newsavebox{\myboxj}
+%\begin{lrbox}{\myboxj}\verb|\subsubsection|\end{lrbox}
+%\newsavebox{\myboxk}
+%\begin{lrbox}{\myboxk}\verb|\texttt{desired text}|\end{lrbox}
+%\newsavebox{\myboxl}
+%\begin{lrbox}{\myboxl}\verb|\emph{desired text}|\end{lrbox}
+%\newsavebox{\myboxm}
+%\begin{lrbox}{\myboxm}\verb|\textsf{desired text}|\end{lrbox}
+%\newsavebox{\myboxn}
+%\begin{lrbox}{\myboxn}\verb|\begin{center}|\end{lrbox}
+%\newsavebox{\myboxo}
+%\begin{lrbox}{\myboxo}\verb|\textbf{desired text}|\end{lrbox}
+%\hspace{0.25in}\fbox{\begin{minipage}{4.5in}
+%\usebox{\myboxa}
+%
+%  Authors will want to research the following \LaTeX\
+%  environments for producing certain formats:
+%  \begin{itemize}
+%  \item \usebox{\myboxc} and \usebox{\myboxd}
+%    for producing bulleted and enumerated lists (like this one).
+%  \item \usebox{\myboxe} and \usebox{\myboxf} for
+%    making figure and tabular environments.
+%  \item \usebox{\myboxg}, \usebox{\myboxh}, \usebox{\myboxi}
+%    and \usebox{\myboxj} for sectioning their work.
+%  \item \usebox{\myboxn} for centering their figures and
+%     tables.
+%  \end{itemize}
+%
+%\usebox{\myboxb}
+%
+%  Authors may want to change typefaces every now and then
+%  to provide contextual information through the use of
+%  typographical conventions.
+%  \begin{itemize}
+%  \item \usebox{\myboxk} yields a
+%    \texttt{fixed-width}, Courier-like typeface. Good for
+%    use in writing out \texttt{method()} names, code examples
+%    and \texttt{filenames}.
+%  \item \usebox{\myboxl} produces \emph{italics}.
+%    Good for introducing new terminology. The vocabulary chosen
+%    to represent something is called \emph{nomenclature}.
+%  \item \usebox{\myboxo} produces \textbf{bold face}.
+%    Good for adding stength to a portion of a statement. It
+%   \textbf{should} be used carefully.
+%  \item \usebox{\myboxm} produces a
+%    \textsf{sans-serif} typeface which is possibly good for
+%    other typographical conventions. This document uses
+%    sans-serif when referring to \LaTeX\ packages such as
+%    \textsf{CSUNthesis}; though it should be
+%    \texttt{CSUNthesis.cls} when referring to the actual
+%    filename, and \textsf{CSUNthesis} when referring to the
+%    class in general.
+%  \end{itemize}
+%\end{minipage}}
+%
+% \section{Writing guidelines/FAQ}
+%
+% \subsection{The written vs spoken language}
+%
+% We learn to speak before we learn to read or write. While almost
+% adults become fluent in a language there are great many that remain
+% illiterate. Once we learn how to speak and understand what is spoken
+% why can't we automatically read and write? There are least two reasons:
+% \begin{enumerate}
+% \item Reading and writing require the additional ability of
+% recognizing and producing visual symbols.
+% \item Speech is produced in real time and is
+% continuous.\label{item:real-time}
+% \end{enumerate}
+% The more important point is item~\ref{item:real-time}. Speech is
+% produced in real time and can be continuous. Any misunderstandings or omissions can
+% be corrected and clarified by augmenting and continuing the
+% spoken dialog. Written documents, on the other hand, are produced once and
+% become a permanent, static transfer of knowledge. It is not possible
+% to interact with the reader and make clarifications or corrections
+% once the document has been published.
+% It is therefore much harder to write than it is to speak because
+% much more effort must be spent planning, designing and organizing
+% the information that the author wishes to publishes so that
+% corrections and clarifications are not required for readers to
+% understand.
+%
+% Must students, and many authors, ignore how important this is. When
+% writing you must be very specific, very consistent and very
+% accurate. How long does it take to write a thesis? Well, for the
+% first draft ten pages per day is rather easy. So why doesn't it take
+% one week to write a thesis? Because the editing and organization to
+% take a draft copy to final publication is $90\%$ of the effort. You can
+% expect to spend nine times as much time editing your document as it
+% took to include the majority of the content.
+%
+% \subsection{Providing examples}
+%
+% One failing that many authors make is the overuse of the
+% abbreviation \emph{etc.} to indicate to the reader that a list of
+% examples is not exhaustive. When speaking a list of examples to an
+% audience you may find that in retrospective you need to indicate
+% that the list is non-exhaustive. One can either add a phrase such as
+% ``or other things such as those I have already mentioned'', or to
+% make the converstation shorter simple say ``etcetera.''
+%
+% In writing however it is a rather lazy method of indicating a
+% non-exhaustive list and indicates that the author has not taken the
+% time necessary to properly organize his work. There is almost always
+% a more professional alternative, in terms of grammar, that
+% eliminates the need for this latin abbreviation and makes the
+% reading pleasant.
+%
+% \emph{``There are many types of types of atoms. Cesium, Iron,
+% Mercury, etc. to name a few''} should be replaced by \emph{``There
+% are many types of atoms such as Cesium, Iron or Mercury.''} Thereby
+% avoiding the use of etcetera. An equally suitable alternative is
+% \emph{``There are many types of atoms including Cesium, Iron and
+% Mercury.''} (Note the switch to \emph{and} instead of \emph{or} which
+% is logically important.)
+%
+% Avoid the use of the word ``like'' when providing examples.  The
+% word like either indicates a preference, as used in ``I like ice
+% cream'', or indicates direct comparison, as used in ``The cat rose
+% up on its hind legs like an angry bear.'' The cat is acting like a
+% bear but the bear is not an example of a cat.
+%
+% \subsection{Don't dictate commands to the reader}
+%
+% Many thesis writers are inclined to describe the implementation of
+% their work as a tutorial which leads the reader through the creation
+% or use of their project. A thesis is a publication of knowledge and
+% concepts learned; it is not a usage tutorial.
+%
+% Avoid, at all costs, commanding wording such as: ``Create a new
+% APS.NET web 
+% application and rename the default file WebForm1.aspx to
+% ItemInfo.aspx''~cite{thesis:nmathews}. In doing so, you have commanded the reader to
+% perform an action that they cannot possibly complete. The thesis
+% presently
+% in their hand is made of paper and is
+% not a computer. It does not have the capability of allowing the
+% reader to create a new web application nor does it contain a
+% filesystem. Maybe, someday in the future, this will change but for
+% now stick to providing the reader with digestible information and
+% avoid telling them to do something.
+%
+% In general, writing a sequence of actions to perform to complete a task
+% makes for some of the worst, most boring, reading when formatted as
+% a narrative paragraph. If you must provide such information then
+% provide it as an enumerated list where each item represents a single
+% step. For instance, The steps a user would need to recreate the web
+% appliction presented in this section consists of:
+% \begin{enumerate}
+% \item Using the IDE to create a new ASP.NET web application.
+% \item renaming the default file, ``WebForm1.aspx'', to
+% ``ItemInfo.aspx''.
+% \item $\ldots$
+% \end{enumerate}
+% If you need to do this frequently in your thesis then you
+% should first pick up an automotive factory service manual and see
+% how professional procedural tutorials are written. First, you should
+% probably consider that you are actually not writing a thesis but are
+% instead writing an automotive service manual.
+%
+% \subsection{Consistency}
+%
+% Writing is an art. Like fine art, any brush stroke that
+% inconsistent, or contrary, to the other strokes diminishes the
+% quality of the work. Even a single wrong stroke can utterly destroy
+% the beauty of the work.
+%
+% In writing one must be very careful to be consistent. There are many
+% styles and formats to choose from.
+% \subsubsection{Paragraph indentation and spacing}
+% The indentation of
+% paragraphs and the spacing between paragraphs is a choice made by
+% the author. Here are some possibilities:
+% \begin{itemize}
+% \item Indent the first line of every paragraph, No spacing between
+% paragraphs. (The beginning of a paragraph is easy to locate by it's
+% indented line.)
+% \item Paragraphs are not indented but spacing is added between
+% paragraphs. (The beginning of a paragraph is easy to locate by the
+% separation between paragraphs.)
+% \item The first line of every paragraph (except the first paragraph
+% of any chapter, section or subsection) is indented and spacing is added between
+% paragraphs. (The beginning of a paragraph is easy to locate by the
+% separation between paragraphs. Indentation is not necessary for the
+% first paragraph because it can quickly be recognized because it
+% follows a sectioning break.)
+% \end{itemize}
+% So which do you choose? It doesn't matter as long as you are
+% perfectly consistent with its usage throughout the entire
+% document.
+%
+% \subsubsection{Typographical conventions}
+%
+% Words, syntax and grammar are only some of the tools available to a
+% writer to convey content. Sometimes these alone are not enough to
+% convey the proper content to a reader or may become confusing
+% without additional verbage or tools.
+%
+% Take, for example, the following discussion of source code:
+% \begin{quote}
+%    We did this to increment the variable classification by four.
+% \end{quote}
+% Does the author mean that there is a classification of variables and
+% that they are promoting the topic to a higher classification? No. In
+% this case the author is talking about a variable named
+% ``classification.'' How can we clarify this for the reader? The most
+% obvious method is to add wording or syntax to the phrase:
+% \begin{quote}
+%    We did this to increment the variable named ``classification'' by four.
+% \end{quote}
+% However, the use of double quotes is well established in writing to
+% indicate either a direct quote of somebody else, to indicate that
+% dialog between characters is occuring, or to indicate that the
+% reader should consider a non-obvious connotation for a word. They
+% should not be used to indicate a different context for word.
+%
+% See, you actually already knew about some well established and
+% ubiquitous typographical conventions. You probably just didn't know
+% that they were just part of a larger family or that you get to
+% choose what the conventions are.
+% 
+% There are much better ways to provide contextual information for a
+% word or phrase and these methods are termed \emph{typographical
+% conventions}. (Notice that quotes were not used to provide the
+% context that typographical conventions is a new phrase used to
+% describe the class of concepts being introduced in this section.)
+%
+% Typographical conventions consist of assigning specific typefaces to
+% represent additional context.
+%
+% \emph{Emphasis} is frequently used to indicate that a term is being
+% introduced or defined.
+%
+% \texttt{Monospacing} is frequently used to indicate that source code
+% or computerized information is being presented. So the best way to
+% rework the above example is:
+ % \begin{quote}
+%    We did this to increment the variable \texttt{classification} by
+%    four.
+% \end{quote}
+% This makes it shorter for the reader who is, presumably, use to
+% encountering this convention while reading your document.
+%
+% \textsf{Sans-serif} is another style that can be used to indicate
+% context. For computer science it can be used to indicate class names
+% or applications.
+%
+% \textsc{Small caps} can also be used for another context. It is
+% rather like \textsc{shouting} however, so it should be used for a context
+% that is only needed infrequently.
+%
+% \textbf{Bold face} can be used to distinguish user input from output
+% suppied by the system in response to the user's interaction.
+%
+% \underbar{underline} is another example. Though it, like bold face,
+% is frequently used to indicate specific importance of a word or
+% concept.
+%
+% When choosing your typographic conventions it is important to:
+% \begin{enumerate}
+% \item Choose carefully. Avoid choosing a convention that could lead to
+% the reader having to guess between contexts. (Bold face for code for
+% example could make it difficult for the reader because they might
+% not be able to tell if you are illustrating a variable name or an
+% important word.)
+% \item Choose wisely. Try to choose conventions to match that which
+% the reader might already be familiar with. For example, almost all
+% program code editors and terminals display source code using a
+% monospaced font such as \texttt{Courier}. When presenting code the
+% reader you should also pick \texttt{Courier} to present your code
+% samples so that reader encounters a familiar and friendly
+% environment in which to read. To professional programmers source
+% code looks absolutely hideous when presented in a proportional font
+% where columns do not necessarily line up.
+% \item Be thoroughly consistent. Never fail to use a convention that
+% you have decided on and never use the convention for another purpose
+% where that purpose could be confusing or where the convention's
+% meaning could not be easily deduced from the surrounding context.
+% \item Define your choice. Unless your selection is trivial or
+% common, you should provide the reader with a
+% preface section to your work that defines and illustrates what your
+% conventions are. This is especially important if your conventions
+% are non-traditional. Nearly every O'Reilly publication from their
+% famous set of technical reference books includes such a preface
+% section titled ``Conventions used in this book.''
+% \end{enumerate}
+%
+% Some other typographical conventions include:
+% \begin{itemize}
+% \item Special formatting. Large quotes are indicated by increased
+% left and right margins to produce a block quote.
+% \item Increased indenting can be used to offset code or printouts
+% from the main body. (Though it should still be in a monospaced
+% typeface.)
+% \item \danger Marginal icons can be used! (Though its use here is a bit
+% erroneous since there is nothing dangerous about this item unless
+% you are reading this while operating heavy machinery.)
+% \end{itemize}
+%
+% \subsection{Quick tips}
+% \begin{itemize}
+%   \item \textbf{etc.} ends a list as though it were another item. It
+%   is always preceded by a comma. (Though maybe you should avoid is
+%   entirely.)
+%   \begin{itemize}
+%     \item[\ding{52}] He could dance, sing, fly, etc.
+%     \item[\ding{56}] He could dance, sing, fly etc.
+%   \end{itemize}
+%   (Notice that the complete absence of \emph{etc.} in this case is
+%   perfectly acceptable as well and would simplify the wording
+%   without loss of content or meaning.)
+%   \item \textbf{etc.} is an abbreviation of the word
+%   ``etcetera''. Abbreviations are terminated with a period to
+%   indicate the absent letters.
+%   \begin{itemize}
+%     \item[\ding{52}] He could dance, sing, fly, etc.
+%     \item[\ding{56}] He could dance, sing, fly, etc
+%   \end{itemize}
+%   \item ``, '', `, and ': Quotes are like parenthesis, there are
+%   opening quotes and closing quotes that are distinct. Don't use |"|
+%   unless it is in a code sample.
+%   \begin{list}{}
+%      \item Opening single quote \fbox{`} is produced in \LaTeXe\ with a
+%      single backtick (most probably the keyboard key to the left of
+%      the digit 1.)
+%      \item Closing single quote \fbox{'} is produced in \LaTeXe\ with a
+%      single quote (most probably the keyboard key to the left of
+%      the enter key.)
+%      \item Opening double quotes \fbox{``} is produced in \LaTeXe\ with two
+%      consecutive backticks.
+%      \item Closing double quotes \fbox{''} is produced in \LaTeXe\ with two
+%      single quotes.
+%      \item Raw double quote character \\fbox{|"|} is produced in
+%      \LaTeXe\ inside of verbatim environments by the usual double
+%      quote key stroke.
+%   \end{list}
+%   \item When possible, compose you sentences and statements using
+%   positive, rather than negative, tense.
+%   \begin{itemize}
+%     \item[\ding{52}] ``The tight binding of languages to hardware
+%     and operating platforms makes the problem more difficult.''
+%     \item[\ding{56}] ``The tight binding of languages to hardware
+%     and operating platforms never made it
+%     easier.''~\cite{thesis:pchaudhari}
+%   \end{itemize}
+%   Basically, the fewer negations you have in a sentence the easier
+%   it is for the reader to figure out what you meant.
+%   \item Similarly, mathematical theorems should be stated as a
+%   concise, provably false statement.
+%   \begin{itemize}
+%     \item\ding{52} The lower bound for $\mu$ is $\frac{sqrt{6}}{2}$.
+%     \item\ding{56} It can be show that the lower bound for $\mu$ is
+%     $\frac{sqrt{6}}{2}$.
+%   \end{itemize}
+% \end{itemize}
+%
+% \section{Reference guide}
+% \label{sec:reference}
+%
+% The reference guide section explains, in detail, all of the various
+% document options and macors that a thesis author may wish to use
+%
+% \subsection{How to read the reference}
+%
+% Commands, keys and environments are presented as follows.
+%
+% \begin{syntax}
+% \item[0.1,default,hints] \texttt{command}, \texttt{environment} or
+%       \indexbasic{key} with \meta{parameters}
+%
+%       This field contains the explanation; here we describe the
+%       other fields.
+%
+%       If present, the label in the left margin provides extra
+%       information: `\textit{addon}' indicates additionally
+%       introduced functionality, `\textit{changed}' a modified key,
+%       `\textit{data}' a command just containing data (which is
+%       therefore adjustable via |\renewcommand|), and so on. Some
+%       keys and functionality are `\emph{bug}'-marked or with a
+%       \dag-sign. These features might change in future or could be
+%       removed, so use them with care.
+%
+%       If there is verbatim text touching the right margin, it is the
+%       predefined value.
+%
+%       The label in the right margin is the current version number
+%       and marks newly introduced features.
+% \end{syntax}
+% Regarding the parameters, please keep in mind the following:
+% \begin{enumerate}
+% \item A list always means a comma separated list. You must put
+% braces around such a list. Otherwise you'll get in trouble with the
+% \texttt{keyval} package; it complains about an undefined key.
+% \item You must put parameter braces around the whole value of a key
+% if you use an \oarg{optional argument} of a key inside an optional
+% \oarg{key=value list}:
+% |\begin{lstlisting}[caption=|{|{|}|[one]two|{|}|}|]|.
+% \item Brackets `|[ ]|' usually enclose optional arguments and must
+% be typed in verbatim. Normal brackets `[ ]' always indicate an
+% optional argument and must not be typed in. Thus |[*]| must be typed
+% in exactly as is, but [|*|] just gets |*| if you use this argument.
+% \item A vertical rule indicates an alternative, e.g.~^^A
+% \meta{true$\vert$false} allows either \texttt{true} or
+% \texttt{false} as arguments.
+% \item If you want to enter one of the special characters |{}#%\|,
+% this character must be escaped with a backslash. This means that you
+% must write |\}| for the single character `right brace'---but of
+% course not for the closing parameter character.
+% \end{enumerate}
+%
+% \subsection{\textsf{CSUNthesis} class file usage}
+%
+%   The usage of the \textsf{CSUNthesis} class file is broken into
+%   three distinct sections.
+%   \begin{enumerate}
+%      \item Document options. These are values that can be passed as
+%      options to
+%      the |\documentclass[|$\ldots$|]{CSUNthesis}|
+%      line. These options control very high level document formats
+%      such as typeface size or draft/final options.
+%      \item Required preamble commands. These commands must be
+%      present for the thesis source file to compile.
+%      \item Optional preamble commands. These commands provide
+%      additional, or optional, features.
+%   \end{enumerate}
+%
+%  The preamble section of the source files is the top of the source
+%  file prior to the |\begin{document}| command. This is where
+%  all of the class commands (except for \verb|\references|) are
+%  given. Order of the commands in the
+%  preamble generally does not matter. Beyond the beginning of the
+%  document an author simply uses any \TeX\ or \LaTeX\ commands he
+%  wishes to use in order to produce the desired publication.
+%
+%  The author uses the \verb|\references| command at the point in his
+%  document where the bibiliography is expected to appear. This is
+%  always just before the first appendix, or at the very end of the
+%  document if no appendicies are included.
+%
+% \subsection{Document class options}
+%
+%   The first non-comment line of a \LaTeX document is always the
+%   |\documentclass| command. Its full syntax is\begin{quote}
+%   \verb|\documentclass[|$opt_1,opt_2,opt_3,$\ldots$,opt_n$\verb|]{CSUNthesis}|
+%   \end{quote}
+%   The bracketed part is optional and allows an author to change
+%   certain document options such as default point size. It also allows
+%   an author to change certain aspects of his thesis. The following
+%   options are available:
+%
+% \begin{syntax}
+%   \item[0.1,final]
+%   $\langle$\indexbasic{draft}$\vert$\indexbasic{draftcls}$\vert$\indexbasic{final}$\rangle$
+%
+%      Publications go through numerous proof-reading and rewriting
+%      iterations before they are ready to be published. During
+%      proof-reading it is convenient to have a larger baseline
+%      skip (inter-line spacing) so that corrections can be marked
+%      manually with red ink easily.
+%
+%      Specifying \texttt{final} (which is the default) will format the
+%      document with normal baseline skip (single spacing).
+%
+%      Specifying \texttt{draft} or \texttt{draftcls} will increase
+%      the baseline skip to $150\%$ allowing for easy insertion of
+%      manual corrections. \texttt{draft} affects the
+%      underlying \emph{report} document style while \texttt{draftcls}
+%      will only affect items defined by the \textsf{CSUNthesis}
+%      class. Most authors will only want to use \texttt{draftcls}.
+% \end{syntax}
+%
+% \begin{syntax}
+%   \item[0.1,12pt]
+%   $\langle$\indexbasic{10pt}$\vert$\indexbasic{11pt}$\vert$\indexbasic{12pt}$\rangle$
+%
+%   Selects the normal typeface size for the document.
+%
+%   Most authors at CSU Northridge will want the default of 12pt; but
+%   10pt is acceptable too.
+% \end{syntax}
+%   
+% \begin{syntax}
+% \item[0.1,thesis]
+% $\langle$\indexbasic{thesis}$\vert$\indexbasic{project}$\vert$\indexbasic{abstract}$\rangle$
+%
+% Specify one of these options to select the type of thesis. This will
+% change the title page to use the appropriate wording.
+%
+% \begin{list}{}{}
+% \item[\texttt{thesis}:] Works of an intellectual nature that
+% develops and investigates new scholarly information.
+% \item[\texttt{project}:] Works of a project nature where the effort
+% results in a functional product based on known information.
+% \item[\texttt{abstract}:] Works of a nature that defy textual
+% publication such as theatre performances or artistic exhibits.
+% \end{list}
+% \end{syntax}
+%
+% \begin{syntax}
+% \item[0.1,nolot]
+%      $\langle$\indexbasic{lot}$\vert$\indexbasic{nolot}$\rangle$
+%
+% Publications that make heavy use of tabular materials and references
+% to them should have a \emph{list of tables} in the front
+% matter. Specifying \texttt{lot} will cause such a list to be built
+% and inserted after the table of contents.
+% \end{syntax}
+%
+% \begin{syntax}
+% \item[0.1,nolof]
+%      $\langle$\indexbasic{lof}$\vert$\indexbasic{nolof}$\rangle$
+%
+% Publications that make heavy use of figures and references to them
+% should have a \emph{list of figures} in the front
+% matter. Specifying \texttt{lof} will cause such a list to be built
+% and inserted after the table of contents and the list of
+% tables.
+% \end{syntax}
+%
+% \begin{syntax}
+% \item[0.8,nolol]
+%      $\langle$\indexbasic{lol}$\vert$\indexbasic{nolol}$\rangle$
+%
+% Publications that make heavy use of source code listings and
+% references to them should have a \emph{list of listings} in the front
+% matter. Specifying \texttt{lol} will cause such a list to be built
+% and inserted after the table of contents, the list of tables and
+% list of figures.
+%
+% Authors that specify the |lol| option \textbf{must} include
+% |\usepackage{listings}| in their thesis so that the
+% listings package~\cite{url:listings}\indexbasic{listings.sty} will be
+% available when the list of listings is built.
+% \end{syntax}
+%
+% \begin{syntax}
+% \item[0.1]
+%      $\langle$\indexbasic{proposal}$\rangle$
+%
+% The presence of the |proposal| document option causes a radical
+% change in the format of the thesis. The result is a much simpler and
+% informal format suitable for presenting a proposal to the graduate
+% coordinator of Computer Science.
+%
+% Front matter is no longer produced, section numbering is changed and
+% a proposal title page with signature entries suitable for a proposal
+% is created.
+%
+% Applicability of the proposal format for other departments
+% should be checked with the graduate coordinator of the
+% intended department before proceeding.
+%
+% \end{syntax}
+%
+% \subsection{Required preamble commands}
+%
+% The following commands must be present and appear prior to
+% |\begin{document}|. The order that they appear does not matter.
+%
+% \subsubsection{Items mandatory for all documents}
+% \begin{syntax}
+% \item[0.1,,required]\indexcommand{Required}{\author}|{|\meta{author--name}|}|
+%
+% Specifies the primary author's name. This affects the authorship
+% material present on the title, copyright, signature and abstract pages.
+%
+% (If necessary, see \indexslash{\collaboration} for multiple authors.)
+% \end{syntax}
+%
+% \begin{syntax}
+% \item[0.1,,required]\indexcommand{Required}{\committee}|{|\meta{chair
+% member}|}{|\meta{2$^{nd}$ member}|}{|\meta{$3^{rd}$ member}|}|
+%
+% the |\committee| command is used to specify the proper names of the
+% committee members. The three names given to the command will appear
+% on the signature in the proper order. The first name is that of the
+% committee chair. the suffix ``, chair'' will be automatically
+% appended to the name given for the signature page.
+% \end{syntax}
+%
+% \begin{syntax}
+% \item[0.1,,required]\indexcommand{Required}{\title}|{|\meta{title of work}|}|
+%
+% Specifies the title of the work. This affects the signature and
+% abstract pages.
+% \end{syntax}
+%
+% \subsubsection{Additional mandatory item only for proposals}
+% \begin{syntax}
+% \item[0.1,,(proposal) required]
+%      \indexcommand{Required}{\coordinator}|{|\meta{coordinator--name}|}|
+%
+% Computer Science graduate students must first submit a proposal of
+% their thesis topic. The proposal requires the graduate coordinator's
+% signature. The |\coordinator| command serves to specify the graduate
+% coordinator's name when producing a proposal.
+%
+% \end{syntax}
+%
+% \subsubsection{Addtional mandatory items only for theses}
+% \begin{syntax}
+% \item[0.1,,(thesis) required]\indexcommand{Required}{\submitted}|{|\meta{month}|}{|\meta{year}|}|
+%
+% Specifies the month and year that the work is submitted to the
+% graduate evaluator.
+% \end{syntax}
+%
+% \begin{syntax}
+% \item[0.1,,(thesis) required]\indexcommand{Required}{\abstract}|{|\meta{abstract material}|}|
+%
+% Dictates the body of the abstract on the abstract page. The header
+% of the abstract page is created automatically and the material
+% specified with the |\abstract| command appears beneath the generated
+% header.
+% \end{syntax}
+%
+% \subsection{Optional preamble commands}
+%
+% \begin{syntax}
+% \item[0.1,,optional]
+%      \indexcommand{Optional}{\degree}|{|\meta{degree}|}{|\meta{department}|}|
+%
+% The |\degree| command provides the author with the ability to
+% specify a degree objective and department of discipline other than
+% ``Master of Science'' in ``Computer Science'', which is the default
+% since the \textsf{CSUNthesis} class was originally written for
+% Computer Science graduate students.
+% \end{syntax}
+%
+% \begin{syntax}
+% \item[0.1,,optional]
+%    \indexcommand{Optional}{\defense}|{|\meta{dayname}|}{|\meta{date}|}{|\relax
+%    \meta{time}|}{|\meta{location}|}|
+%
+%    Students must submit an announcement page to the department of
+%    Computer Science prior to their defense. The page is posted in
+%    display cabinets to inform colleagues of the event time and
+%    place.
+%
+%    The presence of the |\defense| command causes an appropriate
+%    announcement page to appear prior to the title page. To suppress the
+%    announcement page simply comment out the |\defense| command or
+%    omit it entirely.
+%
+%    \begin{list}{}{}
+%    \item[\emph{dayname}:] The day of the week the defense is being
+%    held.\\\emph{$\langle$Monday$\vert$Tuesday$\vert$Wednesday
+%    $\vert$Thursday$\vert$Friday$\rangle$}.
+%    \item[\emph{date}:] Formal date the defense is being held. Such
+%    as \emph{December $3^\textrm{rd}$}.
+%    \item[\emph{time}:] Time the defense is being held. Such
+%    as \emph{3:30PM}.
+%    \item[\emph{location}:] Location the defense is being held. Such
+%    as \emph{EA1440}.
+%    \end{list}
+% \end{syntax}
+%
+% \begin{syntax}
+% \item[0.1,,optional]\indexcommand{Optional}{\copyrightyear}|{|\meta{year}|}|
+%
+% It is acceptable to copyright the work produced. Using the
+% \indexslash{\copyrightyear} command with a year will cause a copyright front
+% matter page to be inserted after the title page and prior to the
+% signature page.
+% \end{syntax}
+%
+% \begin{syntax}
+% \item[0.1,,optional]\indexcommand{Optional}{\dedication}|{|\meta{text}|}|
+%
+% Authors may wish to dedicate the published work to special
+% people. Including a |\dedication| command will cause the text
+% argument to be formatted as a dedication page and included in the
+% front matter.
+% \end{syntax}
+%
+% \begin{syntax}
+% \item[0.1,,optional]\indexcommand{Optional}{\preface}|{|\meta{text}|}|
+%
+% Authors may wish to include a preface to the main body of the
+% work. Including a |\preface| command will cause the text
+% argument to be formatted as a preface and included in the
+% front matter.
+% \end{syntax}
+%
+% \begin{syntax}
+% \item[0.1,,optional]\indexcommand{Optional}{\acknowledgement}|{|\meta{text}|}|
+%
+% Authors may wish to acknowledge additional people for supporting
+% their work. Including an |\acknowledgement| command will cause the
+% text argument to be formatted as an acknowledgement page and
+% included in the front matter.
+% \end{syntax}
+%
+% \begin{syntax}
+% \item[0.1,,optional]\indexcommand{Optional}{\contact}|{|\meta{contact--info}|}|
+%
+% On the proposal title page it is polite to provide contact
+% information such as an e-mail address so that committee members can
+% contact the author if they need to.
+%
+% The |\contact| command is used to specify the contact content for
+% the proposal title page. When printing a formal thesis the contact
+% information, if specified, is suppressed from the title page.
+% \end{syntax}
+%
+% \begin{syntax}
+% \item[0.1,,optional]
+%      \indexcommand{Optional}{\collaboration}|{|\meta{coauthor--name}|}|
+%
+%   On rare occasions a thesis is produced through collaboration. To
+%   identify a second author on the title page the command
+%   |\collaboration| can be used to specify the second author.
+% \end{syntax}
+%
+% \begin{syntax}
+% \item[0.1,,necessary]\indexcommand{Optional}{\references}|{|\meta{style}|}{|\meta{file}|}|
+%
+% A bibliography is generated at the point in the document
+% where the author issues the |\references| macro. The first argument,
+% \emph{style}, is the style to be passed internally to \LaTeX's
+% |\bibliographicstyle| command. The second argument, \emph{file}, is
+% the name of the author's bibliography database file without the
+% ``\texttt{.bib}'' suffix. The file argument is passed internally to
+% \LaTeX's |\bibliography| command.
+% This macro also causes an entry to be inserted into the table of
+% contents as to the presence and location of the references section.
+% \end{syntax}
+%
+% \StopEventually{
+%   \bibliographystyle{plain}
+%   \bibliography{jwcsun}
+%   \PrintChanges\PrintIndex
+% }
+%
+% \section{Implementation}
+% \label{sec:implementation}
+% The material in Section~\ref{sec:implementation},
+% Pages~\pageref{sec:implementation}--\pageref{sec:implementation_end}
+% is the actual \LaTeXe\ implementation of the
+% \textsf{CSUNthesis} class. It is present for completeness and to
+% encourage continued development. It is not necessary for thesis
+% authors to review or understand such material.
+%
+% In fact for beginners it can be overwhelming and really scary.
+% An interesting fact is that this documentation and the
+% \textsf{CSUNthesis} class are maintained as the exact same file
+% (\texttt{CSUNthesis.dtx}). Compiling the \texttt{.dtx} file with latex
+% produces the \texttt{.cls} (class) and the \texttt{.dvi}
+% (documentation) file. So it is impossible to omit the scary, but
+% very useful, information presented here in
+% Section~\ref{sec:implementation} as doing so would remove it from
+% the class file as well!
+%
+% The other advantage to this section is that it is the actual
+% \LaTeXe\ code that is present in the class file. So adventurous
+% authors can learn how the \textsf{CSUNthesis} class file was
+% engineered and can even change it to suit their specific
+% needs. (The original author of the \textsf{CSUNthesis} class
+% \textbf{highly} recommends that changes be suggested to him or
+% back-ported so that future students can benefit from continued
+% refinement and development.
+%
+% \begin{category}{Identification}
+% Print information during compilation to indicate what version of the
+% \texttt{CSUNthesis.cls} file was found and loaded.
+%    \begin{macrocode}
+\typeout{-- CSUN Thesis style} \typeout{-- Author: Wiegley, Jeff,
+jeffw@csun.edu}
+%    \end{macrocode}
+%
+% Request that mistakes be reported so they may be corrected for all
+% students.
+%    \begin{macrocode}
+\typeout{--   Please contact the author to have any mistakes corrected.}
+%    \end{macrocode}
+% \end{category}
+%
+% \begin{category}{Typeface}
+% \changes{1.3}{19 Apr 2005}
+%   {Changed default typeface family to Times (Blech!)}
+% \changes{2.1}{01 Dec 2005}
+%   {removed changes to math typeface. math is now cmr again to allow bold.}
+% Graduate evaluator demands Times New Roman. They shouldn't; but they
+% do. To conform to this we use the \texttt{times} package and we
+% execute a few work arounds to get math mode looking similar.
+% (It may make |\texttt{}| look strange because that is an entirely
+% typeface family than Times New
+%    \begin{macrocode}
+\usepackage{times}
+% \iffalse meta-comment
+% Do not use mathptm because:
+%  - \boldmath produces non-italic characters
+%  - \boldmath seems ultra-fragile, usage in redifining sectioning
+%    macros produces non-bold behavior.
+% \usepackage{mathptm}
+% Do not use mathptm because:
+%  - mathtime has no bold support
+% We should use mathtime with mtbold option BUT it doesn't map
+% characters properly and everything is just plain screw up.
+% one area that latex *sucks* at is providing font options.
+% And YES I do know about installing postscript fonts and all that jazz but:
+%   A) I shouldn't have to know this crap to select a font.
+%   B) Not all distributions have a decent set of fonts pre-installed
+%   C) Fonts aren't free.
+%   D) There's no way a new student/author will be able to figure it out
+% \usepackage[mtbold]{mathtime}
+% \fi
+%    \end{macrocode}
+% \end{category}
+% \begin{category}{Custom lengths}
+% The title on the title page is typeset in a minipage of width
+% |\titlewidth|. This prevents ugly, wide titles from being produced.
+%    \begin{macrocode}
+\newlength{\titlewidth}
+\setlength{\titlewidth}{4.5in}
+%    \end{macrocode}
+% Some of the front matter pages have their material start further
+% down the page. |\frontmattertopmargin| controls the amount of
+% additional space to add to the normal top margin for these pages.
+%    \begin{macrocode}
+\newlength{\frontmattertopmargin}
+\setlength{\frontmattertopmargin}{1.0in}
+%    \end{macrocode}
+% \end{category}
+
+% \begin{category}{Conditionals}
+% Several conditionals are need to keep track of format specifications
+% and control the final output.
+%
+% |\ifproposal| controls the formality of the document.
+%    \begin{macrocode}
+\newif\ifproposal\proposalfalse
+%    \end{macrocode}
+% one of |\ifthesis|, |\ifproject|, or |\ifabstract| gets set to true
+% and controls wording in the front matter based on the presence of
+% the document options \indexbasic{thesis}, \indexbasic{project} or
+% \indexbasic{abstract}.
+%    \begin{macrocode}
+\newif\ifthesis\thesisfalse
+\newif\ifabstract\abstractfalse
+\newif\ifproject\projectfalse
+%    \end{macrocode}
+% |\iflof|, |\iflot| and |\iflol| control whether or not the front
+% matter includes a list of figures, list of tables and a list of
+% listings, respectively. All default to false. If the author supplies
+% the |lol| option then the |listings| package will automatically be
+% included.
+%    \begin{macrocode}
+\newif\iflof\loffalse
+\newif\iflot\lotfalse
+\newif\iflol\lotfalse
+%    \end{macrocode}
+% |\ifdraft| controls whether the baseline skip is $100\%$ (false) or
+% $150\%$ (true) of normal.
+%    \begin{macrocode}
+\newif\ifdraft\draftfalse
+%    \end{macrocode}
+% |\ifsizespec| maintains whether or not a typesize option has been
+% specified.
+%    \begin{macrocode}
+\newif\ifsizespec\sizespecfalse
+%    \end{macrocode}
+% |\ifmadebib| maintains whether or not the bibliography chapter has
+% already been produced.
+%    \begin{macrocode}
+\newif\ifmadebib\madebibfalse
+%    \end{macrocode}
+% \end{category}
+%
+% \begin{category}{Illegal options}
+% This class bases its format on the |report| style. Several options
+% available to the |report| style make no sense in the context of a
+% CSU Northridge thesis. The following declarations cause class errors
+% if such options are present. This action effectively disables the
+% possibility of successfully using any of the listed options.
+%
+% \begin{option}{twocolumn}{Document options\levelchar Illegal}
+% Two column format is standard in many conference proceedings but are
+% not allowed by the CSU Northridge graduate evaluator.
+%    \begin{macrocode}
+\DeclareOption{twocolumn}{
+  \OptionNotUsed
+  \ClassError{CSUNthesis}{only single column documents allowed}{}
+}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{twosided}{Document options\levelchar Illegal}
+% Thesis need to be submitted in a format suitable for photo
+% typesetting. This requires that the document be single sided.
+%    \begin{macrocode}
+\DeclareOption{twosided}{
+  \OptionNotUsed
+  \ClassError{CSUNthesis}{only single sided publications allowed}{}
+}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{8pt}{Document options\levelchar Illegal}
+% Thesis are allowed to be 10 or 12 points. Typeface sizes of 8 points are
+% also too small to meet the requirements of the graduate evaluator.
+%    \begin{macrocode}
+\DeclareOption{8pt}{
+  \OptionNotUsed
+  \ClassError{CSUNthesis}{only 10pt or 12pt typeface allowed}{}
+}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{9pt}{Document options\levelchar Illegal}
+% Thesis are allowed to be 10 or 12 points. Typeface sizes of 9 points are
+% too small to meet the requirements of the graduate evaluator.
+%    \begin{macrocode}
+\DeclareOption{9pt}{
+  \OptionNotUsed
+  \ClassError{CSUNthesis}{only 10pt or 12pt typeface allowed}{}
+}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{10pt}{Document options\levelchar Legal}
+% Specifies that the thesis should be typeset in 10 point typeface family.
+%    \begin{macrocode}
+\DeclareOption{10pt}{
+  \sizespectrue
+  \PassOptionsToClass{\CurrentOption}{report}  
+}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{11pt}{Document options\levelchar Legal}
+% Specifies that the thesis should be typeset in 11 point typeface family.
+%    \begin{macrocode}
+\DeclareOption{11pt}{
+  \sizespectrue
+  \PassOptionsToClass{\CurrentOption}{report}  
+}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{12pt}{Document options\levelchar Legal}
+% Specifies that the thesis should be typeset in 12 point typeface family.
+%    \begin{macrocode}
+\DeclareOption{12pt}{
+  \sizespectrue
+  \PassOptionsToClass{\CurrentOption}{report}  
+}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{a4paper}{Document options\levelchar Illegal}
+% American institutions all use \emph{letter} sized paper
+% ($8.5\times11$ inches) and not \emph{a4} as is used in Europe.
+%    \begin{macrocode}
+\DeclareOption{a4paper}{
+  \OptionNotUsed
+  \ClassWarning{CSUNthesis}{CSU requires letter sized paper, a4paper
+    ignored}{}
+}
+%    \end{macrocode}
+% \end{option}
+% \end{category}
+% \begin{category}{Thesis types}
+% Masters thesis come in three varieties. Certain wording in the front
+% matter needs to be changed accordingly. The \indexbasic{thesis},
+% \indexbasic{project} and \indexbasic{abstract} document options set the
+% conditionals that control such wording.
+% \begin{option}{thesis}{Document options\levelchar Legal}
+% Selects the wording to be ``graduate thesis'', causes an error if a
+% different format has already been specified
+%    \begin{macrocode}
+\DeclareOption{thesis}{
+  \ifproject
+  \ClassError{CSUNthesis}{only one thesis type may be specified}{}
+  \fi
+  \ifabstract
+  \ClassError{CSUNthesis}{only one thesis type may be specified}{}
+  \fi
+  \thesistrue
+}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{project}{Document options\levelchar Legal}
+% Selects the wording to be ``graduate project'', causes an error if a
+% different format has already been specified
+%    \begin{macrocode}
+\DeclareOption{project}{
+  \ifthesis
+  \ClassError{CSUNthesis}{only one thesis type may be specified}{}
+  \fi
+  \ifabstract
+  \ClassError{CSUNthesis}{only one thesis type may be specified}{}
+  \fi
+  \projecttrue
+}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{abstract}{Document options\levelchar Legal}
+% Selects the wording to be ``graduate abstract'', causes an error if a
+% different format has already been specified
+%    \begin{macrocode}
+\DeclareOption{abstract}{
+  \ifthesis
+  \ClassError{CSUNthesis}{only one thesis type may be specified}{}
+  \fi
+  \ifproject
+  \ClassError{CSUNthesis}{only one thesis type may be specified}{}
+  \fi
+  \abstracttrue
+}
+%    \end{macrocode}
+% \end{option}
+% \end{category}
+
+% \begin{category}{Switch options}
+% The front matter may contain lists of materials other than the
+% \emph{table of contents}. The \textsf{CSUNthesis} class provides
+% a number of document options that control the presence or absence of
+% these front matter pages.
+% \begin{option}{lof}{Switch options}
+% |lof| causes a \emph{list of figures}\indexbasic{list of figures} to be
+% included in the front matter. 
+%    \begin{macrocode}
+\DeclareOption{lof}{\loftrue}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{nolof}{Switch options}
+% |nolof| prevents the \emph{list of figures}\indexbasic{list of figures}
+% from being included in the front matter. (This is the default if
+% neither |lof| or |nolof| is specified.
+%    \begin{macrocode}
+\DeclareOption{nolof}{\loftrue}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{lol}{Switch options}
+% |lol| causes a \emph{list of listings}\indexbasic{list of listings} to be
+% included in the front matter. 
+%    \begin{macrocode}
+\DeclareOption{lol}{\loltrue}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{nolol}{Switch options}
+% |nolol| prevents the \emph{list of listings}\indexbasic{list of listings}
+% from being included in the front matter. (This is the default if
+% neither |lol| or |nolol| is specified.
+%    \begin{macrocode}
+\DeclareOption{nolol}{\loltrue}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{lot}{Switch options}
+% |lot| causes a \emph{list of tables}\indexbasic{list of tables} to be
+% included in the front matter. 
+%    \begin{macrocode}
+\DeclareOption{lot}{\lottrue}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{nolot}{Switch options}
+% |nolot| prevents the \emph{list of tables}\indexbasic{list of tables}
+% from being included in the front matter. (This is the default if
+% neither |lot| or |nolot| is specified.
+%    \begin{macrocode}
+\DeclareOption{nolot}{\lottrue}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{draft}{Switch options}
+% The \texttt{draft} and \texttt{draftcls} options cause the baseline
+% skip to be increased to $150\%$ of normal. This facilitates
+% proof-reading and corrections as it provides space for correction
+% notations and makes such corrections easy to spot. They should not
+% be used for the final publication.
+%    \begin{macrocode}
+\DeclareOption{draft}{\drafttrue\AtBeginDocument{\onehalfspacing}}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{draftcls}{Switch options}
+%   The \texttt{draft} and \texttt{draftcls} options are passed to the
+%   underlying \texttt{report} document style. \texttt{report}
+%   recognizes \texttt{draft} and will change many behaviors including
+%   spacing in the table of contents and in captions. This is usually
+%   not desirable.  Most thesis authors will want to use the
+%   \texttt{draftcls} option instead. \texttt{draftcls} is not
+%   recognized by \texttt{report} and therefore only affects the
+%   format of the \textsf{CSUNthesis} features.
+%    \begin{macrocode}
+\DeclareOption{draftcls}{\drafttrue\AtBeginDocument{\onehalfspacing}}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{final}{Switch options}
+%   For final publication authors should either specify the document
+%   option \texttt{final} or specify no draft/final option as
+%   \texttt{final} is the default. This produces a document with a
+%   normal baseline skip.
+%    \begin{macrocode}
+\DeclareOption{final}{\draftfalse\AtBeginDocument{\singlespacing}}
+%    \end{macrocode}
+% \end{option}
+% \begin{option}{proposal}{Switch options}
+%   A simple switch that changes the format to a much more informal
+%   style that is adequate for producing a thesis proposal in the
+%   department of computer science.
+%    \begin{macrocode}
+\DeclareOption{proposal}{\proposaltrue}
+%    \end{macrocode}
+% \end{option}
+% \end{category}
+
+% \begin{category}{Base Style}
+%   The \textsf{CSUNthesis} class file is based on the basic
+%   \texttt{report} style of \LaTeX. A boolean is used to determine
+%   if the author already specified a typesize that was, in turn,
+%   scheduled for forwarding to the \emph{report} class. If no
+%   specific size option was provided then a default of 12pt is passed
+%   on to the \emph{report} class.
+%    \begin{macrocode}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
+\ExecuteOptions{final}
+\ProcessOptions\relax
+\ifsizespec\relax\else\PassOptionsToClass{12pt}{report}\fi
+\LoadClass{report}
+%    \end{macrocode}
+% \end{category}
+% \begin{category}{Change tracking}
+% \changes{1.5}{1 May 2005}
+%  {Added rudimentary Change tracking capabilities}
+% \LaTeXe\ unfortunately does not do change tracking (also known as
+% ``red-lining'' very well. To provide a rudimentary feature the
+% |\edit{}|, |\delete{}| and |\add{}| macros are defined here.
+%
+% The change tracking macros change the color of text. This requires
+% the color pacage
+%    \begin{macrocode}
+%%%%%\usepackage[usenames]{color}
+%    \end{macrocode}
+% The change tracking macros also want to strike-through text. This
+% feature requires the ulem package and that normal emphasis style be
+% restored.
+%    \begin{macrocode}
+\usepackage{ulem}
+\normalem
+%    \end{macrocode}
+% \begin{macro}{\udot}
+% \changes{1.5}{1 May 2005}
+%  {Added dotted and dashed underlining methods}
+% Because must documents are destined to be printed on a monochrome
+% device the color chnages that highlight changes may be lost during
+% printing. To prevent loss of context all changes are also indicated
+% by some sort of non-color visual. Deletions are struck through,
+% changes are underlined nd notes are underlined with a wavy
+% line. Something is also needed for additions. The ulem package
+% doesn't have many predefined underline type but a couple are easy to
+% implement. We define |\udot{}| for use with |\add| which produces an
+% unobtrusive dotted underline style. A dashed underline style is also
+% defined.
+%    \begin{macrocode}
+\newcommand{\udot}{\bgroup \markoverwith{\lower .4ex\hbox{.}}\ULon}
+\newcommand{\udash}{\bgroup \markoverwith{\lower .8ex\hbox{-}}\ULon}
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\marginreason}
+% \changes{1.9}{20 Oct 2005}
+%  {change tracking: empty reason suppresses marginpar}
+% \LaTeXe\ can only handle 18 floats per page. This causes problems
+% with change tracking because margin paragraphs (notes) are
+% implemented as floats. Therefore if every change produces a margin
+% note then you are limited to 18 changes per page. This is
+% unacceptable because there are frequently more changes required per
+% page and some changes have an obvious reason such as punctuation,
+% spacing and capitalization. So we implement |\marginreason{}{}|
+% which takes two arguments, The first being the color to format the
+% reason and the second being the reason. If the reason is left empty
+% (not just blank... empty |{}|) then the actual call to
+% |\marginpar{}| is suppressed.
+%
+% This macro is not perfect!! There are instances where it will fail.
+% This code was adapted from \url{http://groups.google.com/group/comp.text.tex/browse_frm/thread/fdf45ac7b2eeff5f/2fff0f06937be0e7}.
+%    \begin{macrocode}
+\newcommand{\marginreason}[2]{%
+\def\thereason{#2}%
+\ifx\@empty\thereason\relax\else\marginpar{\color{#1}#2}\fi%
+}
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\edit}
+%   Text inside the |\edit macro| should be underlined and have it's color changed to red to indicate that something is wrong and needs to be corrected. The second argument produces a marginpar that explains the needed change.
+%    \begin{macrocode}
+\newcommand\edit[2]{%
+  \typeout{WARNING: edit change tracking macro exists in source}%
+  {\color{Red}\uline{#1}}\marginreason{Red}{#2}}%
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\delete}
+%   Text inside the |\delete macro| is struck-through and has it's
+%  color changed to red to indicate that something should be deleted.
+%    \begin{macrocode}
+\newcommand\delete[2]{%
+  \typeout{WARNING: delete change tracking macro exists in source}%
+  {\color{Red}\sout{#1}}\marginreason{Red}{#2}}%
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\add}
+%   Text inside the |\add macro| is inserted into the document
+%  underlined and red. The second argument is formatted in a margin
+%  paragraph to explain the change.
+%    \begin{macrocode}
+\newcommand\add[2]{%
+  \typeout{WARNING: add change tracking macro exists in source}%
+  {\color{Red}\udot{#1}}\marginreason{Red}{#2}}%
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\replace}
+%   Text inside the |\replace macro| is marked for deletion. The
+%  second macro specifies what to replace with and the third is
+%  formatted as the margin paragraph. The formatting is identical to delete
+%  followed by add
+%%    \begin{macrocode}
+\newcommand\replace[3]{%
+  \typeout{WARNING: replace change tracking macro exists in source}%
+  {\color{Red}\sout{#1}\udot{#2}}\marginreason{Red}{#3}}%
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\note}
+%   Text inside the |\note macro| inserts text that is descriptive but
+%  not intended as part of the final document. Wavy underline is used
+%  to help provide the note context. All notes should be removed prior
+%  to final publication. No reason argument is provided. 
+%%    \begin{macrocode}
+\newcommand\note[1]{%
+  \typeout{WARNING: replace change tracking macro exists in source}%
+  {\color{Red}\uwave{#1}}}%
+%    \end{macrocode}
+% \end{macro}
+% \end{category}
+
+% Although, by default, \LaTeX\ has a very professional appearance
+% the CSU Northridge graduate evaluator dictates a more traditional
+% ``typewriter'' appearance. It is therefore necessary to alter many
+% of the basic \LaTeX\ commands. The required commands are
+% re-implemented here.
+%
+% \begin{macro}{\contentsname}
+%   The \LaTeX\ default table of contents is labeled ``Contents'' the
+%   graduate evaluator dictates a heading of ``Table of
+%   Contents''. This change is minor and is implemented by simply
+%   redefining the default string.
+%    \begin{macrocode}
+\renewcommand\contentsname{\normalfont Table of Contents}
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\bibname}
+% \changes{1.2}{18 Apr 2005}
+%   {Changed bibliography title to ``References''}
+%   The \LaTeX\ default table of contents is labeled ``Contents'' the
+%   graduate evaluator dictates a heading of ``Table of
+%   Contents''. This change is minor and is implemented by simply
+%   redefining the default string.
+%    \begin{macrocode}
+\renewcommand\bibname{References}
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\@makechapterhead}
+%   All modern, professional publications present chapter headings
+%   left justified, in a larger typeface and typeset with a larger top
+%   margin. This is contrary to the graduate evaluator's
+%   specifications. The |\@makechapterhead| is redefined for centering
+%   and normal to comply.
+% \changes{2.0}{30 Nov 2005}
+%   {added bold math to chapter headings}
+%    \begin{macrocode}
+\def\@makechapterhead#1{%
+  {\parindent \z@ \centering \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+        \bfseries\boldmath \@chapapp\space \thechapter
+        \par\nobreak
+    \fi
+    \interlinepenalty\@M
+    \bfseries\boldmath #1\par\nobreak
+    \vskip 20\p@
+  }}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\@makeschapterhead}
+%   the |\begin{chapter*}| must also be changed in case authors want
+%   a chapter that is not listed in the table of contents.
+%    \begin{macrocode}
+\def\@makeschapterhead#1{%
+  {\parindent \z@ \centering
+    \normalfont
+    \interlinepenalty\@M
+    \bfseries\boldmath #1\par\nobreak
+    \vskip 20\p@
+  }}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\@makepchapterhead}
+%   like \verb|\@makechapterhead| a correct
+%   \verb|\@makepchapterhead| needs to be supplied so that preface
+%   chapter heads are produced correctly.
+%    \begin{macrocode}
+\def\@makepchapterhead#1{%
+  {\parindent \z@ \centering
+    \normalfont
+    \interlinepenalty\@M
+    #1\par\nobreak
+    \vskip 20\p@
+  }}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\prefacechapter}
+%   Preface chapters are not allowed to be bold. A different chapter
+%   type is created to allow for preface chapters to formatted correctly.
+%    \begin{macrocode}
+\def\prefacechapter#1{\if@twocolumn
+                   \@topnewpage[\@makepchapterhead{#1}]%
+                 \else
+                   \@makepchapterhead{#1}%
+                   \@afterheading
+                 \fi}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\listoffigures}
+%   The list of figures is a preface page and all preface pages are not
+%   permitted to have bold wieght text. We call a different |\chapter*|
+%   type command that is identical to |\chapter*| but supresses boldface.
+%    \begin{macrocode}
+\renewcommand\listoffigures{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \prefacechapter{\listfigurename}%
+      \@mkboth{\MakeUppercase\listfigurename}%
+              {\MakeUppercase\listfigurename}%
+    \@starttoc{lof}%
+    \if@restonecol\twocolumn\fi
+    }
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\listoffigures}
+%   The list of tables is a preface page and all preface pages are not
+%   permitted to have bold wieght text.
+%    \begin{macrocode}
+\renewcommand\listoftables{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \prefacechapter{\listtablename}%
+      \@mkboth{%
+          \MakeUppercase\listtablename}%
+         {\MakeUppercase\listtablename}%
+    \@starttoc{lot}%
+    \if@restonecol\twocolumn\fi
+    }
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\section}
+%   All modern, professional publications emphasize sections and
+%   subsections by larger typeface, weight or vertical spacing. The
+%   graduate evaluator dictates $12$ point typeface throughout a
+%   thesis. The section, subsection and subsubsection commands are
+%   similarly redefined to comply. \danger We do not account for the starred
+%   version of these sectioning commands and so they should not be
+%   used in a thesis.
+%
+%   \changes{2.0}{30 Nov 2005}
+%     {added bold math to section headings}
+%   Command for sections
+%    \begin{macrocode}
+\renewcommand{\section}{
+  \@startsection{section}{1}{0mm}{0pt}{0.0001pt}%
+		{\noindent\normalfont\normalsize\bfseries\boldmath}}%
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\subsection}
+%   \changes{2.0}{30 Nov 2005}
+%     {added bold math to subsection headings}
+%   \changes{2.0}{11 Aug 2006}
+%     {changed spacing before and after section headings}
+%   Command for subsections
+%    \begin{macrocode}
+\renewcommand{\subsection}{
+  \@startsection{subsection}{1}{0mm}{0pt}{0.0001pt}%
+		{\noindent\normalfont\normalsize\bfseries\boldmath}}%
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\subsubsection}
+%   \changes{2.0}{30 Nov 2005}
+%     {added bold math to subsubsection headings}
+%   Command for subsubsections
+%    \begin{macrocode}
+\renewcommand{\subsubsection}{
+  \@startsection{subsubsection}{1}{0mm}{0pt}{0.0001pt}%
+		{\noindent\normalfont\normalsize\bfseries\boldmath}}%
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\l@chapter}
+%   Contrary to modern publishing standards the graduate evaluator
+%   does not allow any typeface size or series differences in the front
+%   matter. Chapter entries in the table of contest, as provided byb
+%   \LaTeX, violates this. Such entries are produced by the
+%   \l@chapter command. This command is redefined here to comply.
+%    \begin{macrocode}
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne%
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@%
+    \setlength\@tempdima{1.5em}%
+    \begingroup%
+      \parindent \z@ \rightskip \@pnumwidth%
+      \parfillskip -\@pnumwidth%
+      \leavevmode%\bfseries
+      \advance\leftskip\@tempdima%
+      \hskip -\leftskip%
+      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par%
+      \penalty\@highpenalty%
+    \endgroup%
+  \fi}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\maketitle}
+%   The \texttt{report} style causes a call to |\maketitle| at the
+%   |\begin{document}| command. The \textsf{CSUNthesis} class
+%   creates its own front matter. So |\maketitle| is trivialized to
+%   prevent its invocation from producing content.
+%    \begin{macrocode}
+\renewcommand{\maketitle}{}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{Formality}
+%   Normally, sections are labeled $X.Y$. Proposals don't have chapter
+%   and thus no $X$. To prevent numbering of $0.Y$ the section
+%   numbering command is redefined. \danger This will not provide
+%   provide proper sub- and subsub- section numbers.
+%    \begin{macrocode}
+\ifproposal
+\renewcommand{\thesection}{\arabic{section}}
+\fi
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{Thesis type}
+% The front matter creation pages require that at least one type be
+% set in order to select the proper wording. This guarantees that at
+% least |\thesistrue| will be set internally in case the
+% author does not specify one at all.
+%    \begin{macrocode}
+\ifthesis
+\relax
+\else
+\ifabstract\relax\else\ifproject\relax\else\thesistrue\fi\fi
+\fi
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{Margins}
+%   It is generally a better idea to use the \textsf{geometry} package
+%   to specify page margins and layout dimensions. The \texttt{MikTeX}
+%   package does not include the \textsf{geometry} package by
+%   default. The page layout is not difficult so it is done through
+%   basic \TeX\ commands so that the \textsf{CSUNthesis} class is easily
+%   used by \texttt{MikTeX} users (which doesn't provide the
+%   \textsf{geometry} package by default).
+%
+%   There is no header so header dimensions are reduced to zero.
+%
+%   Thesis are printed single sided so the odd side and even side
+%   margins are set equal.
+%    \begin{macrocode}
+\setlength{\headheight}{0.0in}     % results in 1.0inch
+\setlength{\headsep}{0.0in}     % results in 1.0inch
+\setlength{\topmargin}{0.0in}     % results in 1.0inch
+\setlength{\textheight}{9.0in}
+\setlength{\footskip}{0.5in}
+\setlength{\oddsidemargin}{0.5in} % results in 1.5in
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\textwidth}{6.0in}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{Spacing}
+%   spacing is better handled through the \textsf{setspace} package
+%   because it knows how to adjust spacing for nearly all typeset
+%   elements including lists and quotes.
+%    \begin{macrocode}
+\RequirePackage{setspace}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{page style}
+%   Page style of plain is the default because that centers a page
+%   number and nothing else in the header and footer.
+%    \begin{macrocode}
+\pagestyle{plain}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\@degree}
+%   The type of degree being fullfilled is stored in te |\@degree|
+%   macro. It is initially set to the default here but can be changed
+%   by author by issuing the |\degree| command.
+%    \begin{macrocode}
+\newcommand{\@degree}{Master~of~Science}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\@department}
+%   The department the student is seeking the degree from is stored in
+%   a variable macro named |\@department|. That variable is created
+%   and initialized here to the
+%   default of computer science. Though other disciplines are
+%   encouraged to promote the use of \LaTeX\ amongst their graduates
+%   students.
+%    \begin{macrocode}
+\newcommand{\@department}{Computer~Science}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\degree}
+%   The |\degree| command is used to change both the degree sought and
+%   the issuing department. It simply overwrites the defaults stored
+%   in the corresponding variable macros.
+%    \begin{macrocode}
+\newcommand{\degree}[2]{
+  \renewcommand{\@degree}{#1}
+  \renewcommand{\@department}{#2}
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\bib}
+% \changes{1.2}{18 Apr 2005}
+%   {replaced by references macro}
+% \end{macro}
+
+% \begin{macro}{\references}
+% \changes{1.2}{18 Apr 2005}
+%   {added}
+% \changes{1.6}{03 May 2005}
+%   {behavior of \\references is changed. Now works at top of document only.}
+%
+%   The production of the bibliography must appear before any
+%   appendecies and an entry in the table of contents must
+%   appear for the bibliography page title ``References.''
+%
+%   Authors should put the |\references{}{}| macro at the
+%   top of their doccument. The references will either be produced at
+%   the point where the author uses the |\appendix| macro or at the
+%   end of the document, which ever occurs first.
+%    \begin{macrocode}
+\newcommand{\references}[2]{
+  \ifx\undefined\@thesisbibstyle
+  \newcommand{\@thesisbibstyle}{#1}
+  \else
+  \renewcommand{\@thesisbibstyle}{#1}
+  \fi
+  \ifx\undefined\@thesisbibfile
+  \newcommand{\@thesisbibfile}{#2}
+  \else
+  \renewcommand{\@thesisbibfile}{#2}
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\submitted}
+%   The author must state the month and year in which the thesis is
+%   submitted to the graduate evaluator. This date is used in the
+%   front matter. A formal month and four digit year shall be used.
+%    \begin{macrocode}
+\newcommand{\submitted}[2]{
+  \ifx\undefined\@submitmonth
+  \newcommand{\@submitmonth}{#1}
+  \else
+  \renewcommand{\@submitmonth}{#1}
+  \fi
+  \ifx\undefined\@submityear
+  \newcommand{\@submityear}{#2}
+  \else
+  \renewcommand{\@submityear}{#2}
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\defense}
+%   Each author must announce the date of their defense. An
+%   announcement page is built automatically if the |\defense| command
+%   is present. This macro is provided here and simply defines the four
+%   time and location values that are added to the committee, author and
+%   abstract information to create an announcement page.
+%    \begin{macrocode}
+\newcommand{\defense}[4]{
+  \ifx\undefined\@defenseday
+  \newcommand{\@defenseday}{#1}
+  \newcommand{\@defensedate}{#2}
+  \newcommand{\@defensetime}{#3}
+  \newcommand{\@defenselocation}{#4}
+  \else
+  \renewcommand{\@defenseday}{#1}
+  \renewcommand{\@defensedate}{#2}
+  \renewcommand{\@defensetime}{#3}
+  \renewcommand{\@defenselocation}{#4}
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\contact}
+%   |\contact| provides the command to specify the contact content to
+%   place on the title page of proposals.
+%    \begin{macrocode}
+\newcommand{\contact}[1]{
+  \ifx\undefined\@contact
+  \newcommand{\@contact}{#1}
+  \else
+  \renewcommand{\@contact}{#1}
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\collaboration}
+%   Provides the ability to specify a collaborative author. Leaving it
+%   undefined produces single authorship front matter.
+%    \begin{macrocode}
+\newcommand{\collaboration}[1]{
+  \ifx\undefined\@collaborator
+  \newcommand{\@collaborator}{#1}
+  \else
+  \renewcommand{\@collaborator}{#1}
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\dedication}
+%   Using |\dedication| specifies the content for placing on a
+%   dedication page and causes the dedication page to be added to the
+%   front matter.
+%    \begin{macrocode}
+\newcommand{\dedication}[1]{
+  \ifx\undefined\@dedication
+  \newcommand{\@dedication}{#1}
+  \else
+  \renewcommand{\@dedication}{#1}
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\acknowledgement}
+%   Using |\acknowledgment| specifies the content for placing on a
+%   acknowledgement page and causes the acknowledgement page to be
+%   added to the front matter.
+%    \begin{macrocode}
+\newcommand{\acknowledgement}[1]{
+  \ifx\undefined\@acknowledgement
+  \newcommand{\@acknowledgement}{#1}
+  \else
+  \renewcommand{\@acknowledgement}{#1}
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\preface}
+%   Using |\preface| specifies the content for placing on
+%  preface pages and causes preface pages to be added to the
+%  front matter.
+%    \begin{macrocode}
+\newcommand{\preface}[1]{
+  \ifx\undefined\@preface
+  \newcommand{\@preface}{#1}
+  \else
+  \renewcommand{\@preface}{#1}
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\abstract}
+%   Using |\abstract| specifies the content for placing on the
+%   abstract page. The use of this command is required since all
+%   thesis must have an abstract.
+%    \begin{macrocode}
+\renewcommand{\abstract}[1]{
+  \ifx\undefined\@abstract
+  \newcommand{\@abstract}{#1}
+  \else
+  \renewcommand{\@abstract}{#1}
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\copyrightyear}
+%   The page following the title page is allowed to be a copyright
+%   page. If an author desires such a page then the use of the
+%   |\copyrightyear| will cause such a page to be added and uses the
+%   argument as the copyright year.
+%    \begin{macrocode}
+\newcommand{\copyrightyear}[1]{
+  \ifx\undefined\@copyrightyear
+  \newcommand{\@copyrightyear}{#1}
+  \else
+  \renewcommand{\@copyrightyear}{#1}
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\coordinator}
+%   Provides for the graduate coordinator's name as a signature line
+%   on the proposal title page.
+%    \begin{macrocode}
+\newcommand{\coordinator}[1]{
+  \ifx\undefined\@coordinator
+  \newcommand{\@coordinator}{#1}
+  \else
+  \renewcommand{\@coordinator}{#1}
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\committee}
+%   The thesis is approved by a committee of three faculty
+%   members. The front matter must contain a signature space with a line
+%   for each member to sign. The |\committee| command provides the
+%   means to specify the names of the committee members.
+%    \begin{macrocode}
+\newcommand{\committee}[3]{
+  \ifx\undefined\@memberA
+  \newcommand{\@memberA}{#2}
+  \else
+  \renewcommand{\@memberA}{#2}
+  \fi
+  \ifx\undefined\@memberB
+  \newcommand{\@memberB}{#3}
+  \else
+  \renewcommand{\@memberB}{#3}
+  \fi
+  \ifx\undefined\@memberChair
+  \newcommand{\@memberChair}{#1}
+  \else
+  \renewcommand{\@memberChair}{#1}
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\frontpagesetup}
+% \changes{1.1}{14 Apr 2005}
+%   {removed boldface from front pages}
+% \changes{1.1}{14 Apr 2005}
+%   {remove 12pt typeface override, frontpage header is now same as document}
+% \changes{1.6}{03 May 2005}
+%   {Front matter pages' top margin changed to 1 inch}
+%  The dedication, acknowledgement and preface pages have a slightly
+%  larger top margin. The |\frontpagesetup| sets up a generic page in the
+%  front matter for use as these types of pages.
+%    \begin{macrocode}
+\newcommand{\frontpagesetup}[1]{
+%  \vspace*{\frontmattertopmargin}
+  \begin{center}
+    %\Large #1
+    #1
+  \end{center}
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\mpbibliography}
+% \changes{1.6}{03 May 2005}
+%   {Added intelligent bibliography making page}
+% \changes{1.8}{09 May 2005}
+%   {Changed to produce warning when no references specified.}
+%  A call to the |\mpbibliograph| causes the bibliography to be produced
+%  This is not for authors to call but rather for the end document and
+%  |\appendix| macro to call.
+%    \begin{macrocode}
+\newcommand{\mpbibliography}{
+  \ifmadebib\relax\else
+  \ifx\undefined\@thesisbibstyle
+  \typeout{WARNING: YOU NEED A BIBLIOGRAPHY!! See the references macro}
+  \else
+  \bibliographystyle{\@thesisbibstyle}
+  \bibliography{\@thesisbibfile}
+  \addcontentsline{toc}{chapter}{\bibname}
+  \madebibtrue\fi
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\appendix}
+% \changes{1.6}{03 May 2005}
+%   {modified appendix to also produce bibliography}
+%    Most publications have the bibliography at the very end so that it
+%    is easy to find. The Graduate Evaluator's guidelines dictate that
+%    the bibliography for a thesis appears prior to the appendix.
+%    So a modification is made so that when an author switches chapters
+%    to appendix mode the bibliography is inserted first.
+%    \begin{macrocode}
+\renewcommand\appendix{\mpbibliography\par
+  \setcounter{chapter}{0}%
+  \setcounter{section}{0}%
+  \gdef\@chapapp{\appendixname}%
+  \gdef\thechapter{\@Alph\c@chapter}}
+%    \begin{macrocode}
+% \end{macro}
+
+% \begin{macro}{\mpproposal}
+% \changes{1.6}{14 Apr 2005}
+%   {Modified proposal title page typeface size to be identical with document}
+%   This command creates a title page. It relies on other commands to
+%   set content details prior to its invokation.
+%    \begin{macrocode}
+\newcommand{\mpproposal}{
+  \ifx\undefined\@author
+  \ClassError{CSUNthesis}{no \protect\author{<author>} given.}{}
+  \fi
+  \ifx\undefined\@title
+  \ClassError{CSUNthesis}{no \protect\title{<title>} given.}{}
+  \fi
+  {
+    \thispagestyle{empty}
+    \begin{center}
+      \vspace*{\frontmattertopmargin}
+      %University heading
+%      \fontsize{12}{14.4}\selectfont
+      CALIFORNIA STATE UNIVERSITY, NORTHRIDGE
+
+      %space before title
+      \vspace{0.625in}
+
+      %title
+      %minipage required because the title should wrap rather narrow
+      \begin{minipage}{5.5in}
+	\centering
+	\begin{spacing}{0.0}
+%	  \fontsize{12}{14.4}\selectfont
+
+	  \textbf{\MakeUppercase{\@title}}
+
+	\end{spacing}
+
+	%space before declaration
+	\vspace{0.375in}
+
+	\begin{spacing}{3.0}
+%	  \fontsize{12}{14.4}\selectfont
+
+	  \ifthesis A thesis
+          \else
+             \ifproject A graduate project
+             \else An abstract
+             \fi
+          \fi
+	  proposal for the degree of
+	  \ifx\undefined\@degree
+	    Master~of~Science
+	  \else
+	    \@degree
+	  \fi
+	  \ in
+	  \ifx\undefined\@department
+	    Computer~Science
+	  \else
+	    \@department
+	  \fi
+
+	  \vspace{0.375in}
+
+	  By
+
+	  \vspace{0.375in}
+
+	  \@author
+	  \ifx\undefined\@contact
+	  \relax
+	  \else
+	  \\\@contact
+	  \fi
+
+	  \today
+
+	  \ifx\undefined\@collaborator
+	  \relax
+	  \else
+	  \vspace*{0.625in}
+	  in collaboration with\\\@collaborator
+	  \fi
+	\end{spacing}
+      \end{minipage}
+
+      % the date needs to be outside of the minipage so that \vfill
+      % works to flush the date to the bottom of the page.
+
+      \vfill
+      \hfill
+      \begin{minipage}{4.00in}
+
+	\makebox[2.75in]{\hrulefill}\makebox[0.5in][r]{Date:}
+	\hrulefill\\
+	\makebox[4.125in][l]{\@memberChair, Committee Chair}
+
+	\vspace{.25in}
+
+	\makebox[2.75in]{\hrulefill}\makebox[0.5in][r]{Date:}
+	\hrulefill\\
+	\makebox[4.125in][l]{\@coordinator, Graduate Coordinator}
+
+	\vspace{.25in}
+
+	\makebox[2.75in]{\hrulefill}\makebox[0.5in][r]{Date:}
+	\hrulefill\\
+	\makebox[4.125in][l]{\@author, Student}
+
+      \end{minipage}
+      %fill to the bottom of page
+    \end{center}
+  }
+  \newpage
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\mpannouncement}
+%   Command to produce an announcement page. If the defense date has
+%   been set then the conditional will skip creating the announcement
+%   page. Announce page is not numbered and does not affect the
+%   numbering of other pages.
+%    \begin{macrocode}
+\newcommand{\mpannouncement}
+{
+  \ifx\undefined\@defensedate
+  \relax
+  \else
+  \thispagestyle{empty}
+  % save current margin information
+  \newlength{\oldwidth}
+  \newlength{\oldoddside}
+  \newlength{\oldtop}
+  \newlength{\oldheight}
+  \setlength{\oldtop}{\topmargin}
+  \setlength{\oldheight}{\textheight}
+  \setlength{\oldwidth}{\textwidth}
+  \setlength{\oldoddside}{\oddsidemargin}
+  % set new margins for even page layout
+  \setlength{\oddsidemargin}{0.25in}
+  \setlength{\textwidth}{6in}
+  \setlength{\topmargin}{0.25in}
+  \setlength{\textheight}{8.5in}
+  % draw the simple border frame
+  % picture width and height needs to be (0,0) so as not
+  % to take up space. (you can draw outside the boundary
+  \noindent\begin{picture}(0,0)(72,-81.5)
+  \put(0,0){\line(1,0){576}}
+  \put(0,0){\line(0,-1){756}}
+  \put(576,-756){\line(-1,0){576}}
+  \put(576,-756){\line(0,1){756}}
+  \end{picture}
+  \vspace{-.5in}
+  \begin{center}
+    \bfseries
+    \begin{minipage}{5in}
+      \begin{center}
+	MASTERS PRESENTATION
+	
+	\vspace{0.5in}
+	
+	\MakeUppercase{\@title}
+	
+	By
+	
+	\@author
+      \end{center}
+      
+      \noindent Committee Members:
+      \begin{list}{}{\leftmargin=2in\itemsep=-6pt\topsep=-6pt}
+      \item \@memberChair\ (Chair)
+      \item \@memberA
+      \item \@memberB
+      \end{list}
+      
+      \vspace{14pt}
+      \noindent\begin{tabular}{@{}ll}
+      Date: & \@defenseday, \@defensedate\ at \@defensetime \\
+      Location: & \@defenselocation
+      \end{tabular}
+    \end{minipage}
+  \end{center}
+  \begin{center}
+    \bfseries ABSTRACT
+  \end{center}
+  \noindent \@abstract
+  
+  % generate the page
+  \newpage
+  %reset margins to original values
+  \setlength{\oddsidemargin}{\oldoddside}
+  \setlength{\textwidth}{\oldwidth}
+  \setlength{\textheight}{\oldheight}
+  \setlength{\topmargin}{\oldtop}
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\mptitle}
+% \changes{1.6}{14 Apr 2005}
+%   {Modified thesis title page typeface size to be identical with document}
+%   Creates the title page for thesis, projects and abstracts.
+%    \begin{macrocode}
+\newcommand{\mptitle}{
+  \ifx\undefined\@submitmonth
+  \ClassError{CSUNthesis}{no
+    \protect\submitted{<month>}{<year>}given.}{}
+  \fi
+  \ifx\undefined\@submityear
+  \ClassError{CSUNthesis}{no
+    \protect\submitted{<month>}{<year>}given.}{}
+  \fi
+  \ifx\undefined\@author
+  \ClassError{CSUNthesis}{no \protect\author{<author>} given.}{}
+  \fi
+  \ifx\undefined\@title
+  \ClassError{CSUNthesis}{no \protect\title{<title>} given.}{}
+  \fi
+  {
+    \thispagestyle{empty}
+    \setcounter{page}{1}
+    \begin{center}
+%      \vspace*{\frontmattertopmargin}
+      %University heading
+%      \fontsize{12}{14.4}\selectfont
+      CALIFORNIA STATE UNIVERSITY, NORTHRIDGE
+
+      %space before title
+      \vspace{2.625in}
+
+      %title
+      %minipage required because the title should wrap rather narrow
+      \begin{minipage}{\titlewidth}
+	\centering
+	\begin{spacing}{2.0}
+%	  \fontsize{12}{14.4}\selectfont
+
+	  \MakeUppercase{\@title}
+
+	\end{spacing}
+
+	%space before declaration
+	\vspace{0.375in}
+
+	\begin{spacing}{1.0}
+%	  \fontsize{12}{14.4}\selectfont
+
+	  \ifthesis A thesis
+          \else
+             \ifproject A graduate project
+             \else An abstract
+             \fi
+          \fi
+	  submitted in partial fulfillment of the
+	  requirements for the degree of
+	  \ifx\undefined\@degree
+	    Master~of~Science
+	  \else
+	    \@degree\ 
+	  \fi
+	  in
+	  \ifx\undefined\@department
+	    Computer~Science
+	  \else
+	    \@department
+	  \fi
+
+	  \vspace{0.375in}
+
+	  By
+
+	  \vspace{0.375in}
+
+	  \@author
+	  \ifdraft
+	  \ifx\undefined\@contact
+	  \relax
+	  \else
+	  \\\@contact
+	  \fi
+	  \fi
+
+	  \ifx\undefined\@collaborator
+	  \relax
+	  \else
+	  \vspace*{0.625in}
+	  in collaboration with\\\@collaborator
+	  \fi
+	\end{spacing}
+      \end{minipage}
+
+      % the date needs to be outside of the minipage so that \vfill
+      % works to flush the date to the bottom of the page.
+
+      %fill to the bottom of page
+      \vfill
+
+%      \fontsize{12}{14.4}\selectfont
+
+      \@submitmonth\ \@submityear
+    \end{center}
+  }
+  \newpage
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\mpcopyright}
+% \changes{1.1}{14 Apr 2005}
+%   {Forced 12pt typeface for copyright page.}
+% \changes{1.1}{14 Apr 2005}
+%   {added copyright entry to title of contents page.}
+% \changes{1.6}{03 May 2005}
+%   {Modified copyright page typeface size to be identical with document}
+% \changes{1.7}{04 May 2005}
+%   {Conformance: copyright declaration flushed to bottom of page.}
+%   Creates the copyright page if a copyright year has been provided.
+%    \begin{macrocode}
+\newcommand{\mpcopyright}{
+  \ifx\undefined\@copyrightyear
+    \relax
+  \else
+  \null\vfill
+  \begin{center}
+    %\fontsize{14}{16.8}\selectfont
+%    \fontsize{12}{14.4}\selectfont
+    \copyright\ Copyright\ by \@author\ \@copyrightyear\\
+    All Rights Reserved
+  \end{center}
+%  \vfill
+  \addcontentsline{toc}{chapter}{Copyright}
+  \newpage
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\mpsignature}
+% \changes{1.6}{14 Apr 2005}
+%   {Modified signature page typeface size to be identical with document}
+%   Creates the signature page, with committee names
+%    \begin{macrocode}
+\newcommand{\mpsignature}{
+  \ifx\undefined\@memberA
+  \ClassError{CSUNthesis}{No
+    \protect\committee given; must be provided}{}
+  \fi
+  \ifx\undefined\@memberB
+  \ClassError{CSUNthesis}{No
+    \protect\committee given; must be provided}{}
+  \fi
+  \ifx\undefined\@memberChair
+  \ClassError{CSUNthesis}{No
+    \protect\committee given; must be provided}{}
+  \fi
+  \ifx\undefined\@author
+  \ClassError{CSUNthesis}{no \protect\author{<author>} given.}{}
+  \fi
+  \vspace*{2.5in}
+  \begin{center}
+%    \fontsize{12}{14.4}\selectfont
+    \begin{minipage}{5.05in}
+      The
+      \ifthesis
+      thesis
+      \else
+      \ifproject
+      graduate project
+      \else
+      abstract
+      \fi
+      \fi
+      of \@author\ is approved:
+
+      \vspace*{1in}
+
+      \makebox[3in]{\hrulefill}\makebox[0.5in]{}
+      \makebox[1.5in]{\hrulefill}\\
+      \makebox[3in][l]{\@memberA}\makebox[0.5in]{}
+      \makebox[1.5in][l]{Date}
+
+      \vspace{.375in}
+
+      \makebox[3in]{\hrulefill}\makebox[0.5in]{}
+      \makebox[1.5in]{\hrulefill}\\
+      \makebox[3in][l]{\@memberB}\makebox[0.5in]{}
+      \makebox[1.5in][l]{Date}
+
+      \vspace{.375in}
+
+      \makebox[3in]{\hrulefill}\makebox[0.5in]{}
+      \makebox[1.5in]{\hrulefill}\\
+      \makebox[3in][l]{\@memberChair, Chair}\makebox[0.5in]{}
+      \makebox[1.5in][l]{Date}
+
+    \end{minipage}
+    \vfill
+    California State University, Northridge
+  \end{center}
+  \addcontentsline{toc}{chapter}{Signature page}
+  \newpage
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\mppreface}
+%   Creates preface pages based on the preface content specified by
+%   |\preface|.
+%    \begin{macrocode}
+\newcommand{\mppreface}{
+  \ifx\undefined\@preface
+    \relax
+  \else
+    \frontpagesetup{Preface}
+    \@preface
+    \addcontentsline{toc}{chapter}{Preface}
+    \newpage
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\mpdedication}
+%   Creates a dedication page if dedication material has been provided.
+%    \begin{macrocode}
+\newcommand{\mpdedication}{
+  \ifx\undefined\@dedication
+    \relax
+  \else
+    \frontpagesetup{Dedication}
+    \@dedication
+    \addcontentsline{toc}{chapter}{Dedication}
+    \newpage
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\mpackknowledgement}
+%   Creates an acknowledgement page if acknowledgement material has
+%   been provided.
+%    \begin{macrocode}
+\newcommand{\mpacknowledgement}{
+  \ifx\undefined\@acknowledgement
+    \relax
+  \else
+    \frontpagesetup{Acknowledgements}
+    \@acknowledgement
+    \addcontentsline{toc}{chapter}{Acknowledgements}
+    \newpage
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\mptableofcontents}
+%   Creates the table of contents. A simple wrapper around the
+%   \LaTeX\ command.
+%    \begin{macrocode}
+\newcommand{\mptableofcontents}{
+%%  \newlength{\oldparskip}
+%%  \setlength{\oldparskip}{\parskip}
+%%  \setlength{\parskip}{0pt}
+%%Graduate Evaluator Shrew, now changes her mind, again, and this
+%%is no longer allowed to be listed in the Table of Contents;
+%%Contrary to her original whim which made me put this in here in
+%%the first place.
+%%  \addcontentsline{toc}{chapter}{Table of Contents}
+  \tableofcontents
+%%  \setlength{\parskip}{\oldparskip}
+  \newpage
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\mplistoftables}
+%   Conditionally creates the list of tables.
+%    \begin{macrocode}
+\newcommand{\mplistoftables}{
+  \iflot
+    \addcontentsline{toc}{chapter}{List of Tables}
+    \listoftables
+    \newpage
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\mplistoffigures}
+%   Conditionally creates the list of figures.
+%    \begin{macrocode}
+\newcommand{\mplistoffigures}{
+  \iflof
+    \addcontentsline{toc}{chapter}{List of Figures}
+    \listoffigures
+    \newpage
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\mplofillustrations}
+%   Conditionally creates the list of illustrations. (Currently a
+%   command that does nothing.)
+%    \begin{macrocode}
+\newcommand{\mplofillustrations}{}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\mplistoflistings}
+%   Conditionally creates the list of source code listings.
+%    \begin{macrocode}
+\newcommand{\mplistoflistings}{
+  \iflol
+    \renewcommand{\lstlistlistingname}{\normalfont List of Listings}
+    \addcontentsline{toc}{chapter}{List of Listings}
+    \lstlistoflistings
+    \newpage
+  \fi
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\mpabstract}
+% \changes{1.1}{14 Apr 2005}
+%   {Corrected typeface size for abstract body to be equal to document.}
+% \changes{1.6}{14 Apr 2005}
+%   {Modified abstract page typeface size to be identical with document}
+%   Formats and creates the abstract page.
+%    \begin{macrocode}
+\newcommand{\mpabstract}
+{
+  \ifx\undefined\@abstract
+    \ifproposal\relax\else
+      \ClassError{CSUNthesis}
+		 {No \protect\abstract given; must be provided}{}
+    \fi
+  \fi
+  {
+%    \vspace*{40pt}
+    {
+%    \fontsize{12}{14.4}\selectfont
+    \newlength{\oldbaselineskip}
+    \setlength{\oldbaselineskip}{\baselineskip}
+    \setlength{\baselineskip}{34pt}
+    \begin{center}
+      ABSTRACT
+      
+      \MakeUppercase{\@title}
+      
+      By
+      
+      \@author
+      
+      \@degree\ in \@department
+    \end{center}
+    }
+    %\setlength{\baselineskip}{\oldbaselineskip}
+		\begin{doublespace}
+    \@abstract
+		\end{doublespace}
+  }
+  \addcontentsline{toc}{chapter}{Abstract}
+  \newpage
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\AtBeginDocument}
+%   When the author invokes the |\begin{document}| environment all of
+%   the commands that \underline{m}ake front matter \underline{p}ages
+%   (|\mp*|) are called in order to produce the properly formatted
+%   front matter.  All pages creation commands are invoked and control
+%   of whether or not individual pages are actually created are left
+%   up to the individual page making commands.
+%    \begin{macrocode}
+\AtBeginDocument{
+  \pagenumbering{roman}
+  \ifproposal
+  \mpproposal
+  \else
+  \parskip=10pt
+  \mpannouncement
+  \mptitle
+  \mpcopyright
+  \mpsignature
+  \mpdedication
+  \mpacknowledgement
+  \mppreface
+  \parskip=0pt
+  \mptableofcontents
+  \mplistoftables
+  \mplistoffigures
+  \mplofillustrations
+  \mplistoflistings
+  \parskip=10pt
+  \mpabstract
+  \fi
+  \pagenumbering{arabic}
+}
+%    \end{macrocode}
+% \end{macro}
+
+% \begin{macro}{\AtEndDocument}
+%   At the end of the document the bibliography is automatically
+%   produced if a bibliographic style has been provided.
+%    \begin{macrocode}
+\AtEndDocument{%
+\mpbibliography%
+}
+%    \end{macrocode}
+% \end{macro}
+%
+% \label{sec:implementation_end}
+% \Finale
+% \obeyspaces
+% \typeout{****************************************************}
+% \typeout{*                                                  *}
+% \typeout{* To finish the installation you have to move the  *}
+% \typeout{* following file into a directory searched by Tex: *}
+% \typeout{*                                                  *}
+% \typeout{*       CSUNthesis.cls                             *}
+% \typeout{*                                                  *}
+% \typeout{* Most students will find it more convenient to    *}
+% \typeout{* put the file in the same location as their       *}
+% \typeout{* thesis source. (Since the current directory is   *}
+% \typeout{* searched by default.) It would also be           *}
+% \typeout{* acceptable to modify the TEXINPUTS environment   *}
+% \typeout{* variable to include a path of the users          *}
+% \typeout{* choosing.                                        *}
+% \typeout{*                                                  *}
+% \typeout{* To produce the documentation run the file        *}
+% \typeout{* CSUNthesis.dtx through LaTeX.                    *}
+% \typeout{*                                                  *}
+% \typeout{****************************************************}
+
+\endinput
