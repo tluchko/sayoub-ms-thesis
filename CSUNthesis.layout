@@ -1,0 +1,5 @@
+#% Do not delete the line below; configure depends on this      
+#  \DeclareLaTeXClass[CSUNthesis-latex-class/CSUNthesis]{CSUN Thesis}
+
+# Read the definitions from article.layout
+Input report.layout
