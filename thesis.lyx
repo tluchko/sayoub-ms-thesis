@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -7,9 +7,9 @@
 \textclass CSUNthesis
 \begin_preamble
 %Required
-\title{<Title>}
-\author{<Author>}
-\committee{<Chair>}{<Member1>}{<Member2>}
+\title{Automated, efficient and rigorous absolute binding free energy calculations}
+\author{<Steven Ayoub Jr>}
+\committee{<Tyler Luchko>}{<Ravi Abrol>}{<Miao>}
 
 \abstract{<abstract>}
 
@@ -56,6 +56,8 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -86,6 +88,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -98,7 +101,10 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -183,18 +189,288 @@ http://www.csun.edu/~mathgs/LaTex.html
 \end_layout
 
 \begin_layout Chapter
-\noindent
-<chapter 1>
+Introduction 
 \end_layout
 
-\begin_layout Standard
-Text
+\begin_layout Itemize
+create urgency covid-19 needed antivial pill & monkey pox pandemic
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+The discovery for new drug has has a remained a crucial endevour in human
+ history.
+ From influenze empidemic 1889-1890, to recent years COVID-19 virus outbreak,
+ the world population constantly face life threating events and life threating
+ dieseas such as cancer.
+\end_layout
+
+\begin_layout Itemize
+Talk about the process of drug discovery-> why is this a problem? –> from
+ the identification of potential lead compounds to FDA approavel is a risky,
+ costly and time-consuming process.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+convential process of drug development to reach the market has been estimated
+ to 1.8 billion USD[
+\begin_inset CommandInset citation
+LatexCommand citet
+key "paulHowImproveProductivity2010"
+literal "false"
+
+\end_inset
+
+]) and attrition rate as high as 96% [
+\begin_inset CommandInset citation
+LatexCommand citet
+key "paulHowImproveProductivity2010"
+literal "false"
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Itemize
+reasons for high attrition rate are due to poor ADME-Tox properties [
+\begin_inset CommandInset citation
+LatexCommand citet
+key "giriLowcostHighqualityNew2015"
+literal "false"
+
+\end_inset
+
+] 
+\end_layout
+
+\begin_layout Itemize
+Average of 14 years to complete the entire development cycle of a single
+ drug (from the research lab to market) [cite].
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+typically in vitro and invitro technquies are utilized to exame drug saftety,
+ including toxic effects-> 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Traditional methods such as HTS were develop to accelerate identification
+ of phamrcologivally active compounds with autmation tools, without the
+ need of human intervension.
+ However, HTS is still expensive and requires a lot of resources of targets
+ and ligands
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+computer aided drug discovery (CADD) can minigate the scale of time
+\end_layout
+
+\begin_layout Itemize
+CADD could be utilized in all steps in drug disocvery , identification of
+ potential drug targets, virtual screening campaigns for effective drug
+ candidates, optimization of candidates and potential toxicity assement
+ 
+\end_layout
+
+\begin_layout Itemize
+CADD could reduced the number of chemical compounds that must be evaluated
+ experimentally and while removing indefficient and toxic compounds 
+\end_layout
+
+\begin_layout Itemize
+CADD successfully employed to bring new drug compounds to markey for diverse
+ diseses including HIV-1-inhibting druces (atazanvir[ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "robinsonBMS232632HighlyPotent2000"
+literal "false"
+
+\end_inset
+
+] saquinavir[ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "krohnNovelBindingMode1991"
+literal "false"
+
+\end_inset
+
+] and ritonvir [ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "kempfABT538PotentInhibitor1995"
+literal "false"
+
+\end_inset
+
+]) and anticancer drugs such as raltitrexed [ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "andersonProcessStructureBasedDrug2003"
+literal "false"
+
+\end_inset
+
+] and antibiotics (norfloxacin [
+\begin_inset CommandInset citation
+LatexCommand citet
+key "rutenberBindingAnticancerDrug1996"
+literal "false"
+
+\end_inset
+
+ ]).
+\end_layout
+
+\begin_layout Itemize
+An area of CADD -> structure based design effectivite in the idenification
+ of potential drug canidiates by utilizing 3D of proteins and ligands 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Talk about vast information of databases? Such as uniprot, Zinc, pdb..ect?
+\end_layout
+
+\begin_layout Itemize
+Molecular docking utilizies structure based design however is limited since
+ the protein is a static structure –> proteins/receptors are flexiable as
+ the ligand binds -> induce fit
+\end_layout
+
+\begin_layout Itemize
+solution molecular dynamics –> physics based 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+first hurdle in drug discovery is to screen chemical compounds to find those
+ are pharmcologically effectived
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+identifying ligands with that bind with high affinity to a target protiend
+ with desired ADMET properies is gaol of small molecule drug disovery projects
+\end_layout
+
+\begin_layout Itemize
+accurate predicition of protien ligand binding free energies 
+\end_layout
+
+\begin_layout Itemize
+physics based free energy calculations using monte-carlo or molecular dynamics
+ simulations -> rigorous 
+\end_layout
+
+\begin_layout Itemize
+Historically challenges have limited success of free energy simulations
+ -> high computional costs, limited force field accuracy and challends to
+ 
+\series bold
+setup/run/analyze 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+computational cost solved advances in hardward and GPUs [cite papers]
+\end_layout
+
+\begin_layout Itemize
+force field improvments -> AMBER, CHARMM and GROMAOS simulations packages
+ improved performance and parallel performance being to deliver 12-100ns/day/clu
+ster [10.1146/annurev-biophys-042910-155245] 
+\end_layout
+
+\begin_layout Itemize
+automation scrips examples FeSetup[10.1021/acs.jcim.5b00368 ] and Lead Optimization
+ Mapper[10.1007/s10822-013-9678-y] for relative binding 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Relative vs absolute binding free energies 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+relative ability to compute binding free energy bewteen congeneric molecules
+ 
+\end_layout
+
+\begin_layout Itemize
+relative used thermodynamic cycle that facilitates a small perturbation
+ of phase space (
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+give examples of how molecular dyamics and montecarlo simulations helped
+ drug discovery 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Endstate methods MMPBSA, FEP, MMGBSA forcefields still a limiting factor
+\end_layout
+
+\begin_layout Itemize
+solution free energy simulation solution to endstate methods?
+\end_layout
+
+\begin_layout Itemize
+alchemcial methods ^^ or thermodynmica integration methods?
+\end_layout
+
+\begin_layout Itemize
+current computational approach for binding free energies relative vs absolute
+ 
+\end_layout
+
+\begin_layout Itemize
+problems with relative binding stuctual similarity limited chemical space
+ 
+\end_layout
+
+\begin_layout Itemize
+solution→ absolute binding free energies can explore chemical space without
+ limitation of structural analogs 
+\end_layout
+
+\begin_layout Itemize
+problems with absolute bindings complexity [find papers] 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+why hasn’t people solved this problem yet?
+\end_layout
+
+\begin_layout Itemize
+what has been done computing absolute binding free energies 
+\end_layout
+
+\begin_layout Itemize
+how our approach is different 
+\end_layout
+
+\begin_layout Itemize
+DDM 
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset CommandInset citation
 LatexCommand cite
 key "knuth1986texthe"
+literal "true"
 
 \end_inset
 
@@ -259,7 +535,8 @@ The CSUNthesis way of adding the bibliography does not work with \SpecialChar Ly
 
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "thesis"
+btprint "btPrintCited"
+bibfiles "thesis,thesis_papers"
 options "agu"
 
 \end_inset
