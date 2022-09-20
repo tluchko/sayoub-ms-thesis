@@ -192,6 +192,60 @@ http://www.csun.edu/~mathgs/LaTex.html
 Introduction 
 \end_layout
 
+\begin_layout Standard
+The discovery for potential drug canidates has remained a crucial endevour
+ in human history.
+ From the influenza empidemic (18889-1890) to recent years COVID-19 virus
+ outbreak, the world population has constatnly face life threating events
+ and deadly deeseas such as cancer.
+ Modern drug development requires screening a vast and diverse chemical
+ space of potential lead compounds to FDA approval, which is a risky, costly
+ and time-consuming process.
+ The convential process of potential drug canidate to reach the market has
+ been estimates to take on average 14 years, reaching 1.8 billion USD[
+\begin_inset CommandInset citation
+LatexCommand citet
+key "paulHowImproveProductivity2010"
+literal "false"
+
+\end_inset
+
+] and an attrition rate as high as 96% [
+\begin_inset CommandInset citation
+LatexCommand citet
+key "paulHowImproveProductivity2010"
+literal "false"
+
+\end_inset
+
+].
+ Drugs that are often passed as being safe often shown poor chemical absorption,
+ distribution, metabolism, excretion and toxicity (ADMET) properties during
+ the clinical stages, resulting in their failure in clinical trials.
+ Therefore the ability to quickly scan a large chemical for poetnial drug
+ canidates with desired ADMET properties is an ongoning importance in drug
+ disovery.
+ 
+\end_layout
+
+\begin_layout Standard
+This daughting task to explore a vast chemical space dates back from early
+ drug discovery period (before 19
+\begin_inset Formula $^{th}$
+\end_inset
+
+ century) and drug disocvery and drug development period (20
+\begin_inset Formula $^{th}$
+\end_inset
+
+ century and beyond).
+ It was until the mid 20
+\begin_inset Formula $^{th}$
+\end_inset
+
+ century during the 'post-genome era' 
+\end_layout
+
 \begin_layout Itemize
 
 \series bold
@@ -256,33 +310,21 @@ Average of 14 years to complete the entire development cycle of a single
 \end_deeper
 \end_deeper
 \begin_layout Itemize
-Traditional drug discovery methods: 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-typically in vitro and invitro technquies are utilized to exame drug saftety,
- including toxic effects-> 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Traditional methods such as HTS were develop to accelerate identification
- of phamrcologivally active compounds with autmation tools, without the
- need of human intervension.
- However, HTS is still expensive and requires a lot of resources of targets
- and ligands
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
 Therefore CADD,
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-computer aided drug discovery (CADD) can minigate the scale of time
+computer aided drug discovery (CADD) can minigate the scale time and costs
+ [
+\begin_inset CommandInset citation
+LatexCommand citet
+key "macalinoRoleComputeraidedDrug2015"
+literal "false"
+
+\end_inset
+
+]
 \end_layout
 
 \begin_layout Itemize
@@ -298,8 +340,8 @@ reduced the number of chemical compounds that must be evaluated experimentally
 \end_layout
 
 \begin_layout Itemize
-CADD examples of FDA approved drugs: successfully employed with to bring
- new drug compounds to markey for diverse diseses including HIV-1-inhibting
+CADD has been successfully applied in all areas in drug disocvery and brought
+ new drug compounds to market for diverse diseses, including HIV-1-inhibting
  druces (atazanvir[ 
 \begin_inset CommandInset citation
 LatexCommand citet
