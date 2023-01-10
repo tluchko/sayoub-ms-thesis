@@ -725,38 +725,224 @@ s and generalized Born (GB) solvent to enhance convergence.
  suite to maximize computational throughput.
  The ISDDM tool will be tested for accuracy by calculating the binding free
  energy of host-guest systems from SAMPL (Statistical Assessment of Modeling
- of Proteins and Ligands) challenges[
-\begin_inset CommandInset citation
-LatexCommand citealp
-key "muddanaSAMPL4HostGuest2014a"
-literal "false"
-
-\end_inset
-
-,
-\begin_inset CommandInset citation
-LatexCommand citealp
-key "rizziOverviewSAMPL6Host2018"
-literal "false"
-
-\end_inset
-
-,
-\begin_inset CommandInset citation
-LatexCommand citealp
-key "yinOverviewSAMPL5Host2017"
-literal "false"
-
-\end_inset
-
-].
+ of Proteins and Ligands) challenges[44,45,48-tl].
  
 \end_layout
 
-\begin_layout Standard
-The following sections… 
+\begin_layout Itemize
+computer aided drug discovery (CADD) can minigate the scale time and costs
+ [
+\begin_inset CommandInset citation
+LatexCommand citet
+key "macalinoRoleComputeraidedDrug2015"
+literal "false"
+
+\end_inset
+
+]
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+CADD could be utilized in all steps in drug disocvery , identification of
+ potential drug targets, virtual screening campaigns for effective drug
+ candidates, optimization of candidates and potential toxicity assement
+ 
+\end_layout
+
+\begin_layout Itemize
+reduced the number of chemical compounds that must be evaluated experimentally
+ and while removing indefficient and toxic compounds 
+\end_layout
+
+\begin_layout Itemize
+CADD has been successfully applied in all areas in drug disocvery and brought
+ new drug compounds to market for diverse diseses, including HIV-1-inhibting
+ druces (atazanvir[ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "robinsonBMS232632HighlyPotent2000"
+literal "false"
+
+\end_inset
+
+] saquinavir[ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "krohnNovelBindingMode1991"
+literal "false"
+
+\end_inset
+
+] and ritonvir [ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "kempfABT538PotentInhibitor1995"
+literal "false"
+
+\end_inset
+
+]) and anticancer drugs such as raltitrexed [ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "andersonProcessStructureBasedDrug2003"
+literal "false"
+
+\end_inset
+
+] and antibiotics (norfloxacin [
+\begin_inset CommandInset citation
+LatexCommand citet
+key "rutenberBindingAnticancerDrug1996"
+literal "false"
+
+\end_inset
+
+ ]).
+\end_layout
+
+\begin_layout Itemize
+An area of CADD -> structure based design effectivite in the idenification
+ of potential drug canidiates by utilizing 3D of proteins and ligands 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Talk about vast information of databases? Such as uniprot, Zinc, pdb..ect?
+\end_layout
+
+\begin_layout Itemize
+Molecular docking utilizies structure based design however is limited since
+ the protein is a static structure –> proteins/receptors are flexiable as
+ the ligand binds -> induce fit
+\end_layout
+
+\begin_layout Itemize
+solution molecular dynamics –> physics based 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+first hurdle in drug discovery is to screen chemical compounds to find those
+ are pharmcologically effectived
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+identifying ligands with that bind with high affinity to a target protiend
+ with desired ADMET properies is goal of small molecule drug disovery projects
+\end_layout
+
+\begin_layout Itemize
+accurate predicition of protien ligand binding free energies 
+\end_layout
+
+\begin_layout Itemize
+physics based free energy calculations using monte-carlo or molecular dynamics
+ simulations -> rigorous 
+\end_layout
+
+\begin_layout Itemize
+Historically challenges have limited success of free energy simulations
+ -> high computional costs, limited force field accuracy and challends to
+ 
+\series bold
+setup/run/analyze 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+computational cost solved advances in hardward and GPUs [cite papers]
+\end_layout
+
+\begin_layout Itemize
+force field improvments -> AMBER, CHARMM and GROMAOS simulations packages
+ improved performance and parallel performance being to deliver 12-100ns/day/clu
+ster [10.1146/annurev-biophys-042910-155245] 
+\end_layout
+
+\begin_layout Itemize
+automation scrips examples FeSetup[10.1021/acs.jcim.5b00368 ] and Lead Optimization
+ Mapper[10.1007/s10822-013-9678-y] for relative binding
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Relative vs absolute binding free energies 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Relative ability to compute binding free energy bewteen congeneric molecules
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+unable able to explore a large chemical space –> ligand need to have a similar
+ scaffold structure 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Absolute binding can sample a large chemical however it's difficult to implement
+ [find papers for Absolute binding] 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Free energy Methods for absolute solute binding 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Endstate methods MMPBSA, FEP, MMGBSA
+\end_layout
+
+\begin_layout Itemize
+alchemical methods: DDM, 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+current computational approach for binding free energies relative vs absolute
+ 
+\end_layout
+
+\begin_layout Itemize
+problems with relative binding stuctual similarity limited chemical space
+ 
+\end_layout
+
+\begin_layout Itemize
+solution→ absolute binding free energies can explore chemical space without
+ limitation of structural analogs 
+\end_layout
+
+\begin_layout Itemize
+problems with absolute bindings complexity [find papers] 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+why hasn’t people solved this problem yet?
+\end_layout
+
+\begin_layout Itemize
+what has been done computing absolute binding free energies 
+\end_layout
+
+\begin_layout Itemize
+how our approach is different 
+\end_layout
+
+\begin_layout Itemize
+DDM 
+\end_layout
+
+\end_deeper
 \begin_layout Chapter*
 Chapter 2 
 \end_layout
