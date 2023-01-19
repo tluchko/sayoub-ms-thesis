@@ -192,52 +192,103 @@ http://www.csun.edu/~mathgs/LaTex.html
 Introduction 
 \end_layout
 
-\begin_layout Standard
-The discovery of potential drug candidates has remained a crucial endeavor
- in human history, especially in regards to science and pharmacology.
- From the influenza epidemic (1889-1890) to the most recent COVID-19 virus
+\begin_layout Itemize
+From the influenza epidemic (1889-1890) to the most recent COVID-19 virus
  outbreak, the world population is constantly facing life-threatening events
  and diseases, such as cancer.
- Drug discovery, production, and implementation have been a huge part of
- preventing or improving these events and diseases.
- Modern drug development requires the screening of a vast and diverse chemical
- space of potential candidate compounds for FDA approval.
- This process is often risky, costly, and very time-consuming.
- Currently, the conventional process of a potential drug candidate to reach
- the market has been estimated to take an average of 14 years, reaching
- up to 1.8 billion USD and an attrition rate as high as 96% [[paulHowImproveProdu
-ctivity2010]].
- Drugs that were initially deemed as potential lead candidates often show
- poor chemical absorption, distribution, metabolism, excretion, and toxicity
- (ADMET) properties during the clinical stages, ultimately resulting in
- their failure in clinical trials.
- Therefore, the ability to efficiently, effectively, and quickly scan a
- large chemical for potential drug candidates with desired ADMET properties
- is sought out and is of great importance in drug discovery.
  
 \end_layout
 
-\begin_layout Standard
+\begin_deeper
+\begin_layout Itemize
+Drug discovery, production, and implementation have been a huge part of
+ preventing or improving these events and diseases.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Modern drug development requires the screening of a vast and diverse chemical
+ space of potential candidate compounds for FDA approval.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This process is often risky, costly, and very time-consuming.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Currently, the conventional process of a potential drug candidate to reach
+ the market has been estimated to take an average of 14 years, reaching
+ up to 1.8 billion USD and an attrition rate as high as 96% [[paulHowImproveProdu
+ctivity2010]].
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Drugs that were initially deemed as potential lead candidates often show
+ poor chemical absorption, distribution, metabolism, excretion, and toxicity
+ (ADMET) properties during the clinical stages, ultimately resulting in
+ their failure in clinical trials.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Therefore, the ability to efficiently, effectively, and quickly scan a large
+ chemical for potential drug candidates with desired ADMET properties is
+ sought out and is of great importance in drug discovery.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
 Exploring the vast chemical space dates back to the early drug discovery
  period (before the 19th century() and the drug discovery and drug development
  period (20th century and beyond).
- It was not until the “post-genome era,” during the late 20th century, when
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+It was not until the “post-genome era,” during the late 20th century, when
  the combination of molecular biology along with advances in computing robotics
  that led to the optimism that drug discovery was indeed a scalable process.
- During this time there was also a shift in drug discovery strategies that
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+During this time there was also a shift in drug discovery strategies that
  focused largely on high-throughput screening (HTS) which led to the identificat
 ion of all drug targets and the creation of very large compound libraries
  [[jhotiHighthroughputScreeningStructurebased2013]].
  
 \end_layout
 
-\begin_layout Standard
+\end_deeper
+\end_deeper
+\begin_layout Itemize
 Despite this, HTS operates on the fundamental basis that assumes no prior
  knowledge of the drug binding site on the target protein.
- This led to an “irrational” drug design approach in which many pharmaceutical
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This led to an “irrational” drug design approach in which many pharmaceutical
  companies saw a decrease in launched drug candidates that were successful
  in the market.
- While HTS continues to be a big part of drug discovery and development,
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+While HTS continues to be a big part of drug discovery and development,
  the lack of understanding of the molecular mechanism behind the potential
  drug species hinders the search for more promising candidates (Macarron
  et al.
@@ -246,12 +297,17 @@ Despite this, HTS operates on the fundamental basis that assumes no prior
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 On the other hand, a computer-aided drug discovery (CADD) provides a rational
  structure-based approach that can yield valuable information about intermolecul
 ar interactions between protein and ligand systems as well as the binding
  affinity.
- CADD has already been successfully applied in all areas of drug discovery
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+CADD has already been successfully applied in all areas of drug discovery
  and has brought new drug compounds to the market for diverse diseases,
  including HIV-1-inhibiting drugs (atazanavir[ [robinsonBMS232632HighlyPotent200
 0]] saquinavir[ [krohnNovelBindingMode1991]] and ritonavir [ [kempfABT538PotentI
@@ -261,25 +317,55 @@ ancerDrug1996] ]).
  
 \end_layout
 
-\begin_layout Standard
+\end_deeper
+\begin_layout Itemize
 Understanding how ligands bind to a targeted receptor, how proteins interact
  with each other, and how proteins aggregate in the cell membrane is not
  only important for the field of biophysics but also for rational drug design.
- The use of molecular simulations on drug discovery has shown major impact
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The use of molecular simulations on drug discovery has shown major impact
  in the past decade in response to the rapid development of computer hardware
  and performing computations in a time affordable manner.
- An example being molecular docking programs[cite] which are widely used
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+An example being molecular docking programs[cite] which are widely used
  to target the binding site and compute the ligand binding affinity.
- Although molecular docking provides a fast and efficient way to screen
- a large number of potential drug candidates, the accuracy of docking is
- limited by approximations used to achieve high computational speed.
- Docking programs usually treat the receptor as a rigid molecule, and the
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Although molecular docking provides a fast and efficient way to screen a
+ large number of potential drug candidates, the accuracy of docking is limited
+ by approximations used to achieve high computational speed.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Docking programs usually treat the receptor as a rigid molecule, and the
  lack of water treatments and conformational fluctuations are handled with
  a gross approximation.
  
 \end_layout
 
+\end_deeper
+\end_deeper
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
 In recent years, modern algorithms and rapid development of faster graphics
  processor units (GPUs) [
 \begin_inset CommandInset citation
@@ -307,17 +393,40 @@ literal "false"
 
 ] have made great strides in estimating protein-ligand molecule binding
  free energies.
- Molecular dynamics (MD) simulations implement structure-based design strategies
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Molecular dynamics (MD) simulations implement structure-based design strategies
  and the ability to account for structural flexibility at full atomic descriptio
 n.
- MD studies the physical interaction and motion of atoms based on Newtonian
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+MD studies the physical interaction and motion of atoms based on Newtonian
  physics.
- MD are time-evolution simulations in which Newton’s laws of motions are
+ 
+\end_layout
+
+\begin_layout Itemize
+MD are time-evolution simulations in which Newton’s laws of motions are
  continuously being updated generating configurations and trajectories of
  particles over time.
- A force field is used to describe the potential energy of a system representing
+ 
+\end_layout
+
+\begin_layout Itemize
+A force field is used to describe the potential energy of a system representing
  both bonded and non-bonded (van der Waals) and electrostatic interactions.
- Several force fields commonly used in MD simulations are AMBER [
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Several force fields commonly used in MD simulations are AMBER [
 \begin_inset CommandInset citation
 LatexCommand citeauthor
 key "cornellSecondGenerationForce1995a"
@@ -350,16 +459,34 @@ literal "false"
 \end_inset
 
 ].
- Today, classical MD simulations of protein and ligand binding events can
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Today, classical MD simulations of protein and ligand binding events can
  last up to a few microseconds and have a sufficient degree of accuracy.
- Despite this success, classical MD suffers from two major challenges: force
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Despite this success, classical MD suffers from two major challenges: force
  field inaccuracy and insufficient sampling of conformational states due
  to the high computational demands that prohibit simulations greater than
  a microsecond in length.
  
 \end_layout
 
+\end_deeper
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
 Additionally, insufficient sampling is a well-recognized problem in molecular
  simulation due to the fact there are high energy barriers separating structures
 /conformations, resulting in biological systems to become trapped in deep
@@ -371,7 +498,12 @@ literal "false"
 
 \end_inset
 
-].A direct and effective way to accelerate the thermodynamics calculations
+].
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A direct and effective way to accelerate the thermodynamics calculations
  is to modify the potential energy surfaces by adding a bias potential to
  the Hamiltonian on the system; such techniques are called enhanced sampling[
 \begin_inset CommandInset citation
@@ -381,7 +513,12 @@ literal "false"
 
 \end_inset
 
-].Such methods , that are commonly used,adaptive force bias [
+].
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Such methods , that are commonly used,adaptive force bias [
 \begin_inset CommandInset citation
 LatexCommand citeauthor
 key "darveAdaptiveBiasingForce2008"
@@ -450,23 +587,43 @@ literal "false"
 \end_inset
 
 ].
- However, these techniques suffer from being computationally intensive,
- requiring a significant number of ensembles to converge completely.
  
 \end_layout
 
-\begin_layout Standard
+\end_deeper
+\begin_layout Itemize
+However, these techniques suffer from being computationally intensive, requiring
+ a significant number of ensembles to converge completely.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
 Rather than following a physical pathway between two states, one can construct
  a non-physical pathway that involves the transformation of one system to
  another.
- These classes of unphysical pathways are referred to as alchemical transformati
-on and have emerged as a useful tool for predicting free energy differences
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+These classes of unphysical pathways are referred to as alchemical transformatio
+n and have emerged as a useful tool for predicting free energy differences
  such as the binding of a small molecule to a receptor.
- The term “alchemical” was coined by the fact that in silico, a molecule
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The term “alchemical” was coined by the fact that in silico, a molecule
  can be manipulated by transforming into a noninteraction molecule where
  its respective potentials are switched off through a series of intermediate
  steps.
- Most alchemical methods include free energy perturbation (FEP) [
+ 
+\end_layout
+
+\begin_layout Itemize
+Most alchemical methods include free energy perturbation (FEP) [
 \begin_inset CommandInset citation
 LatexCommand citeauthor
 key "zwanzigHighTemperatureEquation1954"
@@ -509,10 +666,20 @@ literal "false"
 \end_inset
 
 ].
- Alchemical methods could be classified as relative (RBFE) or absolute (ABFE)
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Alchemical methods could be classified as relative (RBFE) or absolute (ABFE)
  binding free energy calculations.
- RBFE calculations are often utilized during the hit-to-lead and lead optimizati
-ons of drug discovery [
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+RBFE calculations are often utilized during the hit-to-lead and lead optimizatio
+ns of drug discovery [
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "paulHowImproveProductivity2010"
@@ -520,10 +687,20 @@ literal "false"
 
 \end_inset
 
-].RBFE calculations yield the binding free energy of two compounds by computing
+].
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+RBFE calculations yield the binding free energy of two compounds by computing
  free energy change by artificially transforming one compound to the other
  in the binding site.
- However, RBFE requires prior knowledge of the reference compound’s binding
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+However, RBFE requires prior knowledge of the reference compound’s binding
  affinity and requires that the two compounds being prepared are structurally
  and chemically similar.
  This works well in lead optimization during the later stages of drug discovery
@@ -537,11 +714,25 @@ literal "false"
 \end_inset
 
 ].
- Additionally, RBFE also requires structural similarity between molecules
+\end_layout
+
+\begin_layout Itemize
+Additionally, RBFE also requires structural similarity between molecules
  which in turn limits its capability of exploring chemical space.
- Conversely, ABFE calculations are capable of computing the standard free
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Conversely, ABFE calculations are capable of computing the standard free
  energy difference between a given compound and the receptor of interest.
- The standard free energy difference is computed from the reversible work
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The standard free energy difference is computed from the reversible work
  of decoupling the ligand from the binding site and recoupling it with the
  bulk solvent [
 \begin_inset CommandInset citation
@@ -552,7 +743,11 @@ literal "false"
 \end_inset
 
 ].
- Importantly, ABFE can be applied to diverse chemical space without requiring
+ 
+\end_layout
+
+\begin_layout Itemize
+Importantly, ABFE can be applied to diverse chemical space without requiring
  prior knowledge of the affinity or structural similarities of compounds
  [
 \begin_inset CommandInset citation
@@ -571,7 +766,14 @@ literal "false"
 \end_inset
 
 ].
- Therefore, ABFE is more suitable for the virtual screening of diverse ligands
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Therefore, ABFE is more suitable for the virtual screening of diverse ligands
  but suffers from the computational expense and the design (setup/running
  calculations) can be complicated to perform [
 \begin_inset CommandInset citation
@@ -586,16 +788,40 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+—
+\end_layout
+
+\begin_layout Itemize
 While ABFE and RBFE underlying theory is similar, the main difference between
  the two is the implemented thermodynamic cycle pathway.
- In general, performing MD simulation only at the end-states (i.e receptor-bound
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In general, performing MD simulation only at the end-states (i.e receptor-bound
  and receptor-unbound ligand) is still not computationally feasible with
  unbiased simulations due to the time scales in the binding or unbinding
  process.
- Therefore, a pathway of intermediate states is needed to allow sufficient
+ 
+\end_layout
+
+\begin_layout Itemize
+Therefore, a pathway of intermediate states is needed to allow sufficient
  space overlap between the two endstates to produce reliable binding affinity
  calculations.
- A widely used approach called the double decoupling method (DDM) [
+ 
+\end_layout
+
+\begin_layout Itemize
+A widely used approach called the double decoupling method (DDM) [
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "gilsonStatisticalthermodynamicBasisComputation1997a"
@@ -605,24 +831,57 @@ literal "false"
 
 ] is used to estimate the absolute binding free energy through a series
  of alchemical steps.
- The DDM cycle consists of two physically meaningful end states (i.e bound
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The DDM cycle consists of two physically meaningful end states (i.e bound
  and unbound states) and a series of intermediate states where the ligand
  is decoupled from the environment.
- The ligand intermolecular and intramolecular interactions are removed through
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The ligand intermolecular and intramolecular interactions are removed through
  a series of intermediate windows scaling its electrostatics and van der
  Waals (VDW) interactions to zero.
- In this way, the two molecules (receptor and ligand) are brought together
+ 
+\end_layout
+
+\begin_layout Itemize
+In this way, the two molecules (receptor and ligand) are brought together
  without having to account for complicated interactions during the binding
  process and then gradually turning back on the interactions of the ligand
  allowing it to go through the physical binding process.
- Nevertheless, the DDM method is known to suffer from poor convergence without
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Nevertheless, the DDM method is known to suffer from poor convergence without
  intramolecular interactions of the ligand.
- The ligands may collide or overlap in physical space, creating enormous
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The ligands may collide or overlap in physical space, creating enormous
  potential energies and numerical instabilities.
- To prevent this from occurring, the use of artificial restraints is proposed
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+To prevent this from occurring, the use of artificial restraints is proposed
  that will keep the ligand from leaving the binding pocket and stop it from
  interacting with the environment.
- The use of these restraints is necessary to ensure conformations are sampled
+ 
+\end_layout
+
+\begin_layout Itemize
+The use of these restraints is necessary to ensure conformations are sampled
  during the simulations and aids in good phase space overlap and faster
  convergence [
 \begin_inset CommandInset citation
@@ -635,13 +894,25 @@ literal "false"
 ].
 \end_layout
 
-\begin_layout Standard
+\end_deeper
+\end_deeper
+\begin_layout Itemize
 Explicit solvents are fully atomic representations of water molecules that
  surround the solute, providing a physically detailed and generally accurate
  model.
- Therefore, the DDM approach to ABFE was conceived with explicit solvents
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Therefore, the DDM approach to ABFE was conceived with explicit solvents
  in mind.
- However, the inclusion of these explicit water molecules causes the simulations
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+However, the inclusion of these explicit water molecules causes the simulations
  to be computationally expensive because the degrees of freedom of each
  water molecule must be calculated for every time-step [
 \begin_inset CommandInset citation
@@ -652,9 +923,18 @@ literal "false"
 \end_inset
 
 ].
- Additionally, explicit solvent specific to ABFE calculations can cause
- “singularity events,” meaning that solute-solvent steric overlap occurs.
- The use of soft-core potentials [
+ 
+\end_layout
+
+\begin_layout Itemize
+Additionally, explicit solvent specific to ABFE calculations can cause “singular
+ity events,” meaning that solute-solvent steric overlap occurs.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The use of soft-core potentials [
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "leeAlchemicalBindingFree2020"
@@ -665,14 +945,35 @@ literal "false"
 ] is used in order to minimize or resolve the instabilities observed during
  the decoupling of the VDW parameters by shifting the inter-particle distance
  between the solute and solvent atoms.
- To avoid the extra complexity and the required computational costs of using
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+To avoid the extra complexity and the required computational costs of using
  explicit solvents, implicit solvents are proposed.
- Implicit solvents are well suited for the DDM approach as the solvent degrees
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Implicit solvents are well suited for the DDM approach as the solvent degrees
  of freedom (DOF) are integrated out and solute-solvent steric overlap does
  not occur.
- Rather than physically representing water molecules, implicit solvent models
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Rather than physically representing water molecules, implicit solvent models
  provide a mean-field dielectric representation.
- Two popular pathway techniques that utilized implicit solvent models that
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Two popular pathway techniques that utilized implicit solvent models that
  have been widely exploited in free energy calculations are Molecular Mechanics/
 Poisson-Boltzmann Surface Area (MM/PBSA) and Molecular Mechanics/Generalized
  Born Surface Area (MM/GBSA) [
@@ -692,7 +993,11 @@ literal "false"
 \end_inset
 
 ].
- However, both of these methods have severe thermodynamic approximations
+ 
+\end_layout
+
+\begin_layout Itemize
+However, both of these methods have severe thermodynamic approximations
  [
 \begin_inset CommandInset citation
 LatexCommand citealp
@@ -706,24 +1011,51 @@ literal "false"
  
 \end_layout
 
-\begin_layout Standard
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Itemize
 Our work attempts to reduce the complexity and computational cost of ABFE
  calculations by using implicit solvent models while achieving reliability
  and accuracy.
- To achieve this, we use a modified DDM cycle that uses conformational restraint
-s and generalized Born (GB) solvent to enhance convergence.
- Our DDM cycle (fig.1) provides improved sampling at the end states while
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+To achieve this, we use a modified DDM cycle that uses conformational restraints
+ and generalized Born (GB) solvent to enhance convergence.
+ 
+\end_layout
+
+\begin_layout Itemize
+Our DDM cycle (fig.1) provides improved sampling at the end states while
  reducing the need for sampling in intermediate states.
  We aim to prove that ABFE calculations can be performed for diverse ligands
  and can be done in a fast,efficient, and effective manner.
- To this end, we created the Implicit Solvent DDM tool (ISDDM), a command
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+To this end, we created the Implicit Solvent DDM tool (ISDDM), a command
  line Python interface, to facilitate and automate the use of ABFE calculations
  for virtual compound screening.
- The ISDDM package begins with a parametrized model of the complex and performs
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The ISDDM package begins with a parametrized model of the complex and performs
  all calculations of the alchemical cycle, post-processing, and data analysis.
  Our implementation utilizes the open-source AmberTools molecular modeling
  suite to maximize computational throughput.
- The ISDDM tool will be tested for accuracy by calculating the binding free
+ 
+\end_layout
+
+\begin_layout Itemize
+The ISDDM tool will be tested for accuracy by calculating the binding free
  energy of host-guest systems from SAMPL (Statistical Assessment of Modeling
  of Proteins and Ligands) challenges[
 \begin_inset CommandInset citation
@@ -753,103 +1085,49 @@ literal "false"
  
 \end_layout
 
+\end_deeper
+\end_deeper
+\end_deeper
 \begin_layout Standard
 The following sections… 
 \end_layout
 
-\begin_layout Chapter*
-Chapter 2 
+\begin_layout Chapter
+Functionality and workflow of ISDDM
 \end_layout
 
-\begin_layout Chapter*
+\begin_layout Chapter
 Theory
 \end_layout
 
-\begin_layout Section*
-2.1 Modeling physical chemistry of binding
-\end_layout
-
-\begin_layout Subparagraph
-2.1.2 Molecular dynamics theory (protein flexibilty -> potential energies)
-\end_layout
-
-\begin_layout Standard
-- The design of ligand for biological receptors is an important aspect of
- drug discovery.
- 
-\end_layout
-
-\begin_layout Standard
-- An understanding of moleular recongintion is a crucial for desgin of molecules
- that can mimic or inhibit the association of biological molecules and a
- deeper insight into these interactions such as association are often gained
- from molecular simulations 
-\end_layout
-
-\begin_layout Standard
-- 
-\end_layout
-
-\begin_layout Subparagraph
-2.1.3 Solvations effects –> Generalized born theory 
-\end_layout
-
-\begin_layout Section*
-2.2 Free energy calculations 
-\end_layout
-
-\begin_layout Subsection*
-2.2.1 Free energy perturbation 
-\end_layout
-
-\begin_layout Standard
-Binding affinity is dicatated by the strength of attrictive forces between
- two molecules in such context a ligand binding onto a receptor site forming
- a complex.
- An higher affinity correlates to an higer distrubition of the ligand remaining
- bound to the receptor in respect in time.
- Therefore, predicting a numerical value of binding affinity is a desired
- in drug discovery in order to rank potential candidates by their binding.
- 
+\begin_layout Section
+Binding Free Energy 
 \end_layout
 
 \begin_layout Itemize
-free energy definition is in terms of the partition funciton, sum of Bolzmann
- weights of all the energy levels in system
+Free energy in essence determines how a process is proceed and probability
+ that a system will adopt at a given state.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-this definition is limited to simple models 
-\end_layout
-
-\begin_layout Itemize
-free energy can be veiwed as a continous function rather than discrete->
- good approximation but free energy repressented in this way required integratio
-n over all 3N degrees of freedom N=number of atoms 
-\end_layout
-
-\begin_layout Itemize
-focus on free energy differnce bewteen systems A and B 
-\begin_inset Formula $\Delta G=G_{B}-G_{A}$
+The Helmholtz free energy 
+\begin_inset Formula $A$
 \end_inset
 
- represented by halitonia 
-\begin_inset Formula $H_{A}$
+ of a system in the canonical ensemble (i.e constant number of particles,
+ volume and temperature) is given by 
+\begin_inset Formula $\beta$
 \end_inset
 
- and 
-\begin_inset Formula $H_{B}$
-\end_inset
-
-
+ is the inverse temperature divided by Boltzmann's and Q is the partition
+ function of the system
 \end_layout
 
-\begin_layout Itemize
-equation: 
+\begin_layout LyX-Code
 \begin_inset Formula 
 \[
-G_{B}-G_{A}=\Delta G=-RTln(e^{-\Delta H/RT})_{A}
+A=-\frac{1}{\beta}lnQ
 \]
 
 \end_inset
@@ -858,21 +1136,817 @@ G_{B}-G_{A}=\Delta G=-RTln(e^{-\Delta H/RT})_{A}
 \end_layout
 
 \begin_layout Itemize
-equation refers to ensemble average over a system represented by Hamiltonian
- 
-\begin_inset Formula $H_{A}$
+The system can also be assumed to be at thermodynamic equilibrium.
+ In case of the partition function can be expressed as:
+\begin_inset Formula 
+\[
+Q=\frac{1}{h^{3N}N!}\int\int e^{-\beta H(p,r)}dpdr
+\]
+
 \end_inset
 
-=free energy perturbation calculations
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Where N is the number of particles in the system and 
+\series bold
+
+\begin_inset Formula $h$
+\end_inset
+
+ 
+\series default
+is Plank's constant.
+ The integral is performed over all 3N positions 
+\begin_inset Formula $r$
+\end_inset
+
+ and momenta 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ The hamiltonian 
+\begin_inset Formula $H(p,r)$
+\end_inset
+
+ consists of a poential energy term 
+\begin_inset Formula $U(x)$
+\end_inset
+
+ that depends on the given configuration and kinetic term 
+\begin_inset Formula $K(p)$
+\end_inset
+
+ that depends on their momenta 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In general evaluting Q is very difficult and not feasible in more complicated
+ cases such as larger systems with strong interactions between particles.
+ 
 \end_layout
 
 \begin_layout Itemize
-If system A and B differ in more than trival (say binding event with protien
- induces a large conformational change or ligand conformational change)
- will not lead to sensible results
+However since we are interested in the free energy differences 
+\begin_inset Formula $\Delta$
+\end_inset
+
+A between two systems such in binding the unbound state (state 0) and bound
+ state (state1).
+ The partition functions 
+\begin_inset Formula $Q_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $Q_{1}$
+\end_inset
+
+ can become a ratio of probabilties for system being in the bound or unbound
+ state as describe below:
+\begin_inset Formula 
+\[
+\Delta A=-\beta^{-1}ln\frac{Q_{1}}{Q_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Where free energy difference process in which neither the temperature or
+ particles' masses change, the kinetic contribution to the Hamiltonian is
+ constant.
+ 
+\end_layout
+
+\begin_layout Itemize
+Therefore only the configurational part of the partition function needed
+ to be considered, and the free free energy of binding can be expressed
+ as follows:
+\begin_inset Formula 
+\[
+\Delta A^{\circ}=-k_{B}Tln\frac{\int_{V_{1}}\int_{\Gamma_{1}}e^{-\beta[U_{1}(x)+pV_{1}]}dVdx}{\int_{V_{0}}\int_{\Gamma_{0}}e^{-\beta[U_{0}(x)+pV_{o}]}dVdx}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Where 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+ are the box volumes, while 
+\begin_inset Formula $\Gamma_{0}$
+\end_inset
+
+and 
+\begin_inset Formula $\Gamma_{1}$
+\end_inset
+
+are the phase space volumes of the bound and unbound states.
+ 
+\end_layout
+
+\begin_layout Itemize
+Due to the compressibility of water, at 1atm the effect of changes in average
+ of volumbe on binding is negligible [10.1007/978-1-61779-465-0_26].
+ Meaning the pV term can be ignored wand the Helmholtz free energy closely
+ approximates the Gibbs free energy 
+\begin_inset Formula 
+\[
+\Delta G^{\circ}\approx\Delta A^{\circ}=-k_{B}Tln\frac{\int_{\Gamma_{1}}e^{-\beta U(x)}dx}{\int_{\Gamma_{0}}e^{-\beta U(x)}dx}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For complex systems the partition functition has no analytical solution
+ and thus simulations need to be used to sample the accessible phase space
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+- Sampling the entire phase space is computationally expensive and needed
+ to calculate accurate estimates.
+ Simulating binding events are usually dominated by rate dissociations which
+ can be the millisecond timescale and reaches the microsecond for a type
+ drug[https://doi.org/10.33011/livecoms.2.1.18378].
+ In section 2.#.# we will discuss how alchemical free energy calculations
+ can yeild predictions that do not require direct simulatins of binding/unbindin
+g events.
+ 
 \end_layout
 
 \end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Molecular Modeling of physical chemistry of binding 
+\end_layout
+
+\begin_layout Itemize
+To estimate the free energy differnces accuratley a molecular model is required
+ that describes the thermodynamic paramters of a system correctly 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The Hamiltonian used to calculate the energy and forces is chosen in order
+ that all configurations have the correct probability of thermodyamic state
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In practice the choice of the hamiltonian is often compromise bewteen accuracy
+ and efficiency.
+ 
+\end_layout
+
+\begin_layout Itemize
+Two major factors that dictate the cost of the energy and force evaluation
+ are the degrees of freedom and the funtional form of the Hamiltonian 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+One can use a quantum-mechanical description of the system as the electrons
+ DOF are modeled explicity, to classical description where one atom are
+ treated as particles.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Quantum-mechanical description of the system will in general be computationally
+ more demanding than classical description.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Here we focus on classical Hamiltonians that incorrporate fixed point charges.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+These type of Hamiltonian are referred as to 
+\begin_inset Quotes eld
+\end_inset
+
+force field
+\begin_inset Quotes erd
+\end_inset
+
+ which attempt to represent inter and intramolecular interaction through
+ general potential energy function.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+In these research we use the general AMBER (Assisted Model Building and
+ Energy Refinement) force field (GAFF) [cite] during our MD simulations.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The potetnial energy function that describes the force field of the AMBER
+ software package is shown below:
+\begin_inset Formula 
+\[
+V_{AMBER}(r^{N})=E_{bonded}+E_{non-bonded},
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+E_{bonded}=E_{bonds}+E_{angles}+E_{torisions}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+E_{non-bonded}=E_{vdW}+E_{electrostatics}
+\]
+
+\end_inset
+
+the function written explicitly as
+\begin_inset Formula 
+\[
+V_{AMBER}(r^{N})=\underset{i_{bonds}}{\sum}k_{bi}(l_{i}-l_{i}^{0})^{2}+\underset{i_{angles}}{\sum}k_{ai}(\theta_{i}-\theta_{i}^{0})^{2}+\underset{i_{torisions}}{\sum}\underset{n}{\sum}\frac{1}{2}V_{i}^{n}[1+cos(n\omega_{i}-\gamma_{i})+
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\stackrel[j=1]{N-1}{\sum}\stackrel[i=j+1]{N}{\sum}f_{ij}^{LJ}\left[\left(\frac{r_{ij}^{0}}{r_{ij}}\right)^{12}-2\left(\frac{r_{ij}^{0}}{r_{ij}}\right)^{6}\right]+f_{ij}^{elec}\frac{q_{i}q_{j}}{4\pi\epsilon_{0}r_{ij}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The first three terms 
+\begin_inset Formula $E_{bonded}$
+\end_inset
+
+ consist of terms describing the bond-angle, bond-stretching,the bond-angle
+ bending, and dihedral-angle bending.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $k_{bi}$
+\end_inset
+
+represents the force constant between the 
+\begin_inset Formula $i$
+\end_inset
+
+th atom pair, 
+\begin_inset Formula $l_{i}^{0}$
+\end_inset
+
+represents the equilibrium bond length and 
+\begin_inset Formula $l_{i}$
+\end_inset
+
+represents the current bond length
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The fourth and fifth term in the double summation represents energy due
+ to the non-bonded pairs of atoms such as electrostatics and van der Waals
+ energies.
+ 
+\end_layout
+
+\begin_layout Itemize
+The van der Waals energy is calculated using the equilibrium distance 
+\begin_inset Formula $r_{ij}^{0}$
+\end_inset
+
+and scaling factor 
+\begin_inset Formula $\epsilon_{ij}$
+\end_inset
+
+and 
+\begin_inset Formula $f_{ij}$
+\end_inset
+
+is another scaling factor for atom bonds.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{ij}=0$
+\end_inset
+
+ for atoms separated by 1-2 bonds, 
+\begin_inset Formula $f_{ij}^{LJ}=1/1.2$
+\end_inset
+
+and 
+\begin_inset Formula $f_{ij}^{elec}=1/2.0$
+\end_inset
+
+ for atoms separated by 3 bonds and 
+\series bold
+
+\begin_inset Formula $f_{ij}=1$
+\end_inset
+
+ 
+\series default
+for all others.
+\end_layout
+
+\begin_layout Itemize
+The factor of 2 ensures the equilibrum distance is 
+\begin_inset Formula $r_{ij}^{0}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Implicit Solvent Model 
+\end_layout
+
+\begin_layout Itemize
+Water plays a fundamental role in molecular association and often mediates
+ protein-ligand interactions.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Traditionally, explict water models are used to which places sufficiently
+ large number of individyal water molecules aroung the solute simulating
+ their motion.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+While arguable explicit models are considered a realastic representation
+ of an water enviroment, it suffers considerbly computational costs.
+ Morever it is not clear if any explict water model can be used for accurate
+ standard estimate of ligand-receptor binding.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+For example a popular TIP3P model can lead to 40% (6 kcal/mol) error relative
+ to experiment in binding enthaply estimates of small host-guest system[J.
+ Chem.
+ Theory Comput.
+ 2018, 14, 1656−1670].
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Implict solvation on the other hand provides a significant computational
+ advantage by representing water as a continous medium and approximations
+ of solvent properties.
+ The basic idea of implict solvation is to integrate out explicit solvent
+ DOF, incorporating their thermodynamic effects into a solvation free energy
+ 
+\begin_inset Formula $\Delta G_{solv}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sampling of equilibrium states are in return greatly enhance by disregarding
+ the kintetics.
+ 
+\end_layout
+
+\begin_layout Itemize
+GB and PB implicit solvent models are popular choice and they both treat
+ the solvent as a uniform dieletric continuum.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+The next section will briefly discuss the theory underlying the GBSA.
+ ->both 
+\end_layout
+
+\begin_layout Subsection
+Generalized Born Surface Area (GBSA) Implicit Solvent Model 
+\end_layout
+
+\begin_layout Itemize
+The GBSA is dervided from the original Born equation[cite].
+ The model computes the 
+\begin_inset Formula $\Delta G_{solv}$
+\end_inset
+
+ which is partitioned into two parts: a polar contribution 
+\begin_inset Formula $\Delta G_{polar}$
+\end_inset
+
+ which depends on the electrostatic contributions, a non-polar contribution
+ 
+\begin_inset Formula $\Delta G_{npol}$
+\end_inset
+
+, which depends on the shape of the solute cavity
+\begin_inset Formula 
+\[
+\Delta G_{solv}=\Delta G_{polar}+\Delta G_{npol}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In AMBER the 
+\begin_inset Quotes eld
+\end_inset
+
+cononical
+\begin_inset Quotes erd
+\end_inset
+
+ generalized Born model approximates the Green function of the Poisson equation
+ shown below:
+\begin_inset Formula 
+\[
+\Delta G_{el}=-\frac{1}{2}\left(\frac{1}{\epsilon_{in}}-\frac{exp(-\kappa f_{GB})}{\epsilon_{out}}\right)\underset{ij}{\sum}\frac{q_{i}q_{j}}{f_{GB}(r_{ij},R_{i},R_{j})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+where 
+\begin_inset Formula $r_{ij}$
+\end_inset
+
+ is the distance btween atoms j and i, 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+and 
+\begin_inset Formula $q_{j}$
+\end_inset
+
+ are the partial charges, the 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+and 
+\begin_inset Formula $R_{j}$
+\end_inset
+
+ are the so-called Born radii and 
+\begin_inset Formula $\kappa$
+\end_inset
+
+is the Debye-Hückel screening paramter[cite].
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $f_{GB}()$
+\end_inset
+
+ is a smooth funciton that takes several forms.
+ A widel used functional form of 
+\begin_inset Formula $f_{GB}()$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+F_{GB}(r_{ij},R_{i},R_{j})=[r_{ij}^{2}+R_{i}R_{j}exp(-r_{ij}^{2}/4R_{i}R_{j})]^{1/2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Free Energy Perturbation 
+\end_layout
+
+\begin_layout Itemize
+While simulating the binding process of ligand-receptor provieds estimates
+ of binding affinity[https://doi.org/10.1002/jcc.21776], the current capbilities
+ of using common molecuar dynamic software packages and high-end GPUs could
+ reach a few hndreded of ns/day making these calculations unappealing for
+ highthoughput drug discovery timescales.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Free energy pertubration calcuations provided way to estimate the binding
+ affinity whithout the actual needed of simulating the binding event.
+ The earilest and well known methods to estimate free energy difference
+ based on the perturbation theory was introduced by Zwanzig[https://doi.org/10.106
+3/1.1740409]
+\begin_inset Formula 
+\[
+\Delta G_{0,1}=-k_{B}Tln\left\langle e^{-\beta\left(U_{1}(x\right)-U_{0}(x))}\right\rangle _{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The free energy difference by two states can be calculated as a logarithm
+ of the ensemble average of Boltzmann weighted potential.
+ 
+\end_layout
+
+\begin_layout Itemize
+The 
+\begin_inset Formula $\left\langle \right\rangle _{0}$
+\end_inset
+
+ indicates the equilibrium sampling was performed in state 0.
+ The above equations applies to a foward transformation from state 0 to
+ state 1
+\end_layout
+
+\begin_layout Itemize
+It is also possible to compute the reverse transformation 1->0 but in practice
+ their convergence properties may not be the same [https://doi.org/10.1021/jp10297
+1x].
+\end_layout
+
+\begin_layout Itemize
+The equation <learn to format number equation> above is referred as exponential
+ averaging (EXP).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+However has shown to converges very slowly wiht the amount of data collected
+ and is also sensitive to any lack of phase space overlap between states[https:/
+/doi.org/10.1063/1.1873592]
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Multistate Bennett Acceptance Ratio 
+\end_layout
+
+\begin_layout Itemize
+A recurring challenge in ligand-receptor binding is the collecting of sufficient
+ amount of data to estimate binding affinity to adequate precision.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Earilier methods such as EXP are one sided and do not make the most efficient
+ used of data when samples from more than one state are available [10.1063/1.29781
+77].
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Mutilstate Bennett acceptance method (MBAR) has shown to be a superior estimator
+ in that it has the lowest variance and is asymptotically unbiased [https://doi.o
+rg/10.1063/1.2978177].
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Noting that sufficient phase space overlap is required for accurate esimates
+ of binding affinity, MBAR make used all configurations sampled form each
+ of these states.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The MBAR equation 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In MBAR formulation, each state is characterized by a specific combination
+ of potential energy function 
+\begin_inset Formula $U_{i}(x)$
+\end_inset
+
+, inverse temperature 
+\begin_inset Formula $\beta$
+\end_inset
+
+, pressure 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ and chemical potentials 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+ depending on the ensemble.
+ The reduced potential energy 
+\series bold
+
+\begin_inset Formula $\mu_{i}(x)$
+\end_inset
+
+ 
+\series default
+of a state i is defined by Shirts and Chodera[cite]
+\begin_inset Formula 
+\[
+\mu_{i}(x)=\beta_{i}\left[U_{i}(x)+p_{i}V(x)+\mu_{i}^{T}n(x)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Where 
+\begin_inset Formula $n(x)$
+\end_inset
+
+ are the number of molecules to each chemical potentials.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The free energy of a state i can be defined by Boltzmann weight:
+\begin_inset Formula 
+\[
+f_{i}=-ln\int e^{-u_{i}(x)}dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+To to estimate the free energy difference between two states 
+\begin_inset Formula $\Delta f_{ij}=f_{i}-f_{j}$
+\end_inset
+
+, is estimated using the MBAR equations down below, 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Using MD simulation data MBAR gives the best estimator for free energy differenc
+e between multiple states.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Let 
+\begin_inset Formula $\left\{ x_{in}\right\} _{n=1}^{N_{i}}$
+\end_inset
+
+be all configurations sampled in state i, then equation follow equation
+ for computing the free energies:
+\begin_inset Formula 
+\[
+\hat{f_{i}}=-ln\stackrel[j=1]{K}{\sum}\stackrel[n=1]{N_{j}}{\sum}\frac{exp[-u_{i}(x_{jn})]}{\sum_{k=1}^{K}N_{k}exp[\hat{f}_{k}-u_{k}(x_{jn})]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\hat{f}_{i}$
+\end_inset
+
+are the solution for MBAR free energy equations.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Note 
+\begin_inset Formula $\hat{f}_{i}$
+\end_inset
+
+ are additative so only the difference 
+\begin_inset Formula $\Delta\hat{f}_{ij}$
+\end_inset
+
+ are meaningful.
+ 
+\end_layout
+
+\begin_layout Itemize
+However when samples from different states have poor phase space overlap
+ equation above will fail to converge or 
+\begin_inset Formula $\hat{f}_{i}$
+\end_inset
+
+could have large uncertainties.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Lastly MBAR also provides a direct expression to esimate the statitical
+ uncertainity in free energy differences.
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Alechemical Transformations 
+\end_layout
+
 \begin_layout Section*
 2.2 Alchemical transformations(overlap)
 \end_layout
