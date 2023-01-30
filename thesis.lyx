@@ -230,10 +230,10 @@ ctivity2010]].
 
 \begin_deeper
 \begin_layout Itemize
-Drugs that were initially deemed as potential lead candidates often show
- poor chemical absorption, distribution, metabolism, excretion, and toxicity
- (ADMET) properties during the clinical stages, ultimately resulting in
- their failure in clinical trials.
+In the intitial states in drug discovery, drugs that were initially deemed
+ as potential lead candidates often show poor chemical absorption, distribution,
+ metabolism, excretion, and toxicity (ADMET) properties during the clinical
+ stages, ultimately resulting in their failure in clinical trials.
  
 \end_layout
 
@@ -616,8 +616,8 @@ n and have emerged as a useful tool for predicting free energy differences
 \begin_deeper
 \begin_layout Itemize
 The term “alchemical” was coined by the fact that in silico, a molecule
- can be manipulated by transforming into a noninteraction molecule where
- its respective potentials are switched off through a series of intermediate
+ can be modified by transforming into a noninteraction molecule where its
+ respective potentials are switched off through a series of intermediate
  steps.
  
 \end_layout
@@ -678,20 +678,6 @@ Alchemical methods could be classified as relative (RBFE) or absolute (ABFE)
 
 \begin_deeper
 \begin_layout Itemize
-RBFE calculations are often utilized during the hit-to-lead and lead optimizatio
-ns of drug discovery [
-\begin_inset CommandInset citation
-LatexCommand citealp
-key "paulHowImproveProductivity2010"
-literal "false"
-
-\end_inset
-
-].
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
 RBFE calculations yield the binding free energy of two compounds by computing
  free energy change by artificially transforming one compound to the other
  in the binding site.
@@ -703,8 +689,15 @@ RBFE calculations yield the binding free energy of two compounds by computing
 However, RBFE requires prior knowledge of the reference compound’s binding
  affinity and requires that the two compounds being prepared are structurally
  and chemically similar.
- This works well in lead optimization during the later stages of drug discovery
- when making small structural changes to the main lead candidate and comparing
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+RBFE play a significant role in the lead optimization occuing in the later
+ states in drug disocovery.
+ Such as making small structural changes to main lead candidate in create
+ a molecular with higher affinity towards targeted host system and comparing
  other candidates’ relative affinity [
 \begin_inset CommandInset citation
 LatexCommand citealp
@@ -714,11 +707,12 @@ literal "false"
 \end_inset
 
 ].
+ 
 \end_layout
 
 \begin_layout Itemize
-Additionally, RBFE also requires structural similarity between molecules
- which in turn limits its capability of exploring chemical space.
+Additionally, RBFE requires structural similarity between molecules which
+ in turn limits its capability of exploring chemical space.
  
 \end_layout
 
@@ -814,7 +808,7 @@ In general, performing MD simulation only at the end-states (i.e receptor-bound
 \end_layout
 
 \begin_layout Itemize
-Therefore, a pathway of intermediate states is needed to allow sufficient
+Therefore, constructing a pathway of intermediate states can allow sufficient
  space overlap between the two endstates to produce reliable binding affinity
  calculations.
  
@@ -1944,7 +1938,384 @@ Lastly MBAR also provides a direct expression to esimate the statitical
 \end_layout
 
 \begin_layout Section
-Alechemical Transformations 
+Intermidate States-provide better phase space overlap 
+\end_layout
+
+\begin_layout Itemize
+Intermidate states states are needed to obtain a relaible estimate of ligand-hos
+t free energy difference.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Attempting to calculate the free energy difference of ligand-host binding
+ using equation (5), end-states (the ligand-bound and ligand-unbound) have
+ to be similar in order to obtain relaible estimate in their free energy
+ difference.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Typically this is not the case since and the end-states have a poor space
+ phace overlap leading to large uncertainities in computing the free energy
+ difference.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Therefore, the choice of intermidate states can significantly make free
+ enery calculations more efficient by bridging the gap between states[https://do
+i.org/10.1063/1.1992483].
+\end_layout
+
+\begin_layout Itemize
+The core step up in alchemical free energy calculations is definined intermidate
+ states that link the unbound and bound states (end-states) to determine
+ a precise estimate of the binding free energy.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Since free energy is a state function, the path that connects the two end
+ states is unimportant and we can choose tailor the cycle that connect the
+ en states through several nonphysical intermidate ones as shown in 
+\series bold
+fig 1
+\series default
+ 
+\series bold
+(which I still need to create).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The cycle depicts independtly simulated states.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+The simplest path to construct is a linear in two end point Hamiltonians:
+\begin_inset Formula 
+\[
+H(\lambda)=\lambda H_{1}+(1-\lambda)H_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+where 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is a coupling parameter denoting an intermidate state and given a value
+ between 0 and 1.
+ where 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+ can denote the bound state and 
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+ the bound state.
+ 
+\end_layout
+
+\begin_layout Itemize
+The cycle depicted in 
+\series bold
+Fig 1 
+\series default
+the intermidate states are simulated indepently.
+ From these simulations the fee energy difference between state 
+\begin_inset Formula $i$
+\end_inset
+
+ and its successor 
+\begin_inset Formula $i+1$
+\end_inset
+
+ can be calculated and binding free energy can be recovered by the sum of
+ all these 
+\begin_inset Formula $\Delta G_{i,i+1}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Delta G_{b}=\sum\Delta G_{i,i+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Our Thermodynamic Pathway 
+\end_layout
+
+\begin_layout Itemize
+Our thermodynamic cycle uses a modified DDM cycle that uses conformational
+ restrants and GB solvent to enhance convergence.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+All of the sampling is done in the fast GBSA implicit solvent model in states
+ 1-8 (fig 1)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/stevenayoub/Desktop/cycle.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Thermo cycle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+States 1 & 8 : State 1 denotes the initial endstate of the unbound host
+ and guest system simulated in GBSA solvent.
+ In this study replica exchange molecular dynamics (REMD) was used here
+ to efficiently explore the different potential energy surfaces.
+ 
+\end_layout
+
+\begin_layout Enumerate
+1->2: Here is the introduction the use of artificial intra-molecular conformatio
+nal restraints.
+ These restraints are place on every atom of the ligand and receptor.
+ By placing these restraints both the receptor and ligand more rigid therefore
+ decreasing accessable degree of freedom.
+ Limiting the DOF will help smooth with the convergence in the later steps.
+ 
+\end_layout
+
+\begin_layout Enumerate
+2->3: This step is decoupling the solvent enviroment between the ligand
+ and host system .
+ Where both are being simulated in vaccuum.
+\end_layout
+
+\begin_layout Enumerate
+3->4: Here the ligand is not annihilated where the intramolecular interactions
+ have been removed.
+ This non-interacting ligand is stratified in steps where its lennard-jones
+ interaction are off and the ligand electrostatics are scaled to zero through
+ several nonphysical 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ states.
+ 
+\end_layout
+
+\begin_layout Enumerate
+4->5: Introduction of a new set of restraints which are important here as
+ it prevents the ligand from leaving the binding pockect whiel its is not
+ interacting with the enviroment.
+ These are orientational restraints which bind the ligand relative to the
+ receptor which corresponds to the configuration of the binding mode of
+ ligand.
+ In this project we used Boresch et al[cite] that not only keeps the ligand
+ in a specific orientation relative to the receptor but also provides an
+ anaytical solution for 
+\begin_inset Formula $\Delta G_{restr}^{solv}$
+\end_inset
+
+.
+ The method selects a total of six heavy atoms 3 from the receptor and 3
+ from the ligand.
+ Then a set harmonic restraints are applied which and comprised by one distance,
+ two angles and three digedrals shown in 
+\series bold
+FIG 2 (create a example of boresch restriants).
+ Then explain the figure ......
+ 
+\series default
+Once the restraints are applied an analytical formula can be then used to
+ compute the 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\Delta G_{restr}^{solv}$
+\end_inset
+
+ shown below 
+\begin_inset Formula 
+\[
+\Delta G_{restraints}=kTln[\frac{8\pi^{2}V(K_{r}K_{\theta1}K_{\theta2}K_{\phi1}K_{\phi2}K_{\phi3})^{1/2}}{r_{1}^{2}sin\theta_{1}sin\theta_{2}(2\pi kT)^{3}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Where K denotes the applied restraints force constant.
+ The 
+\begin_inset Formula $r$
+\end_inset
+
+subscript denoted the distant, 
+\begin_inset Formula $\theta$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi$
+\end_inset
+
+denoting the angle and torsion restriants.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+5->6: This step has a 
+\begin_inset Formula $\Delta G=0$
+\end_inset
+
+ since the intra/intermolecular interactions have been turn off.
+ The Boresch restraints have already been applied and the receptor does
+ not feel the precise of the ligand.
+ The simulation here is no different than the ligand and receptor being
+ separated.
+\end_layout
+
+\begin_layout Enumerate
+6->7: In this state is where we begin to turn on solute-solvent interactions
+ and ligand inter/intramolecular interations of the ligand.
+ This is accomplished in a series of steps.
+ First the lennard-jones interaction between the host and ligand are turn
+ back on.
+ Following the restoration of solute-solvent interactions and finally turning
+ on the ligand charges in a series of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ windows.
+ 
+\end_layout
+
+\begin_layout Enumerate
+7->8: Finally is incremental removal of the the conformational and orientational
+ restriants.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/stevenayoub/Desktop/boresch.pdf
+	width 100text%
+	BoundingBox 0bp 0bp 800bp 450bp
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Boresch restraints 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Methods 
+\end_layout
+
+\begin_layout Section
+Workflow implmentation 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+.
 \end_layout
 
 \begin_layout Section*
