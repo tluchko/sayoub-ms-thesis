@@ -80,7 +80,7 @@
 \use_package stmaryrd 1
 \use_package undertilde 1
 \cite_engine natbib
-\cite_engine_type authoryear
+\cite_engine_type numerical
 \biblio_style plain
 \use_bibtopic false
 \use_indices false
@@ -226,6 +226,16 @@ Currently, the conventional process of a potential drug candidate to reach
  up to 1.8 billion USD and an attrition rate as high as 96% [[paulHowImproveProdu
 ctivity2010]].
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL most cost is due clinical trials
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -244,10 +254,29 @@ Therefore, the ability to efficiently, effectively, and quickly scan a large
  chemical for potential drug candidates with desired ADMET properties is
  sought out and is of great importance in drug discovery.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL Check if BFE is used in ADMET
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL robotic HTS
+\end_layout
+
+\end_inset
+
 Exploring the vast chemical space dates back to the early drug discovery
  period (before the 19th century() and the drug discovery and drug development
  period (20th century and beyond).
@@ -260,6 +289,17 @@ It was not until the “post-genome era,” during the late 20th century, when
  the combination of molecular biology along with advances in computing robotics
  that led to the optimism that drug discovery was indeed a scalable process.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL why/how.
+ screening?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -272,7 +312,6 @@ ion of all drug targets and the creation of very large compound libraries
 \end_layout
 
 \end_deeper
-\end_deeper
 \begin_layout Itemize
 Despite this, HTS operates on the fundamental basis that assumes no prior
  knowledge of the drug binding site on the target protein.
@@ -284,10 +323,21 @@ Despite this, HTS operates on the fundamental basis that assumes no prior
 This led to an “irrational” drug design approach in which many pharmaceutical
  companies saw a decrease in launched drug candidates that were successful
  in the market.
+ [[jhotiHighthroughputScreeningStructurebased2013]]
 \end_layout
 
 \end_deeper
+\end_deeper
 \begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL rational, computational design using structure
+\end_layout
+
+\end_inset
+
 While HTS continues to be a big part of drug discovery and development,
  the lack of understanding of the molecular mechanism behind the potential
  drug species hinders the search for more promising candidates (Macarron
@@ -297,15 +347,25 @@ While HTS continues to be a big part of drug discovery and development,
  
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 On the other hand, a computer-aided drug discovery (CADD) provides a rational
  structure-based approach that can yield valuable information about intermolecul
 ar interactions between protein and ligand systems as well as the binding
  affinity.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL combine with previous sentence?
 \end_layout
 
-\begin_deeper
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 CADD has already been successfully applied in all areas of drug discovery
  and has brought new drug compounds to the market for diverse diseases,
@@ -317,7 +377,6 @@ ancerDrug1996] ]).
  
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
 Understanding how ligands bind to a targeted receptor, how proteins interact
  with each other, and how proteins aggregate in the cell membrane is not
@@ -358,6 +417,7 @@ Docking programs usually treat the receptor as a rigid molecule, and the
 
 \end_deeper
 \end_deeper
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -366,6 +426,15 @@ Docking programs usually treat the receptor as a rigid molecule, and the
 \end_layout
 
 \begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL introducing MD as BFE method and major problems
+\end_layout
+
+\end_inset
+
 In recent years, modern algorithms and rapid development of faster graphics
  processor units (GPUs) [
 \begin_inset CommandInset citation
@@ -476,6 +545,16 @@ Despite this success, classical MD suffers from two major challenges: force
  to the high computational demands that prohibit simulations greater than
  a microsecond in length.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL focus on sampling
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -487,6 +566,15 @@ Despite this success, classical MD suffers from two major challenges: force
 \end_layout
 
 \begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL addressing enhanced sampling
+\end_layout
+
+\end_inset
+
 Additionally, insufficient sampling is a well-recognized problem in molecular
  simulation due to the fact there are high energy barriers separating structures
 /conformations, resulting in biological systems to become trapped in deep
@@ -534,7 +622,17 @@ literal "false"
 
 \end_inset
 
-], weighted histogram techniques [
+], weighted histogram techniques
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL not a sampling method
+\end_layout
+
+\end_inset
+
+ [
 \begin_inset CommandInset citation
 LatexCommand citeauthor
 key "ferrenbergNewMonteCarlo1988"
@@ -599,6 +697,15 @@ However, these techniques suffer from being computationally intensive, requiring
 
 \end_deeper
 \begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL alchemical pathways to avoid exhaustive sampling
+\end_layout
+
+\end_inset
+
 Rather than following a physical pathway between two states, one can construct
  a non-physical pathway that involves the transformation of one system to
  another.
@@ -765,7 +872,6 @@ literal "false"
 
 \end_deeper
 \end_deeper
-\end_deeper
 \begin_layout Itemize
 Therefore, ABFE is more suitable for the virtual screening of diverse ligands
  but suffers from the computational expense and the design (setup/running
@@ -781,6 +887,7 @@ literal "false"
  
 \end_layout
 
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -793,6 +900,15 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL introduce DDM - move to theory?
+\end_layout
+
+\end_inset
+
 While ABFE and RBFE underlying theory is similar, the main difference between
  the two is the implemented thermodynamic cycle pathway.
  
@@ -891,6 +1007,15 @@ literal "false"
 \end_deeper
 \end_deeper
 \begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL explicit and implicit solvent- reduce configurational space to be explored.
+\end_layout
+
+\end_inset
+
 Explicit solvents are fully atomic representations of water molecules that
  surround the solute, providing a physically detailed and generally accurate
  model.
@@ -1010,6 +1135,15 @@ literal "false"
 \end_deeper
 \end_deeper
 \begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Our approach
+\end_layout
+
+\end_inset
+
 Our work attempts to reduce the complexity and computational cost of ABFE
  calculations by using implicit solvent models while achieving reliability
  and accuracy.
@@ -1024,8 +1158,28 @@ To achieve this, we use a modified DDM cycle that uses conformational restraints
 \end_layout
 
 \begin_layout Itemize
-Our DDM cycle (fig.1) provides improved sampling at the end states while
- reducing the need for sampling in intermediate states.
+Our DDM cycle (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:DDM-cycle"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+use cross references
+\end_layout
+
+\end_inset
+
+) provides improved sampling at the end states while reducing the need for
+ sampling in intermediate states.
  We aim to prove that ABFE calculations can be performed for diverse ligands
  and can be done in a fast,efficient, and effective manner.
  
@@ -1051,31 +1205,15 @@ The ISDDM package begins with a parametrized model of the complex and performs
 \begin_layout Itemize
 The ISDDM tool will be tested for accuracy by calculating the binding free
  energy of host-guest systems from SAMPL (Statistical Assessment of Modeling
- of Proteins and Ligands) challenges[
+ of Proteins and Ligands) challenges 
 \begin_inset CommandInset citation
 LatexCommand citealp
-key "muddanaSAMPL4HostGuest2014a"
+key "muddanaSAMPL4HostGuest2014a,rizziOverviewSAMPL6Host2018,yinOverviewSAMPL5Host2017"
 literal "false"
 
 \end_inset
 
-,
-\begin_inset CommandInset citation
-LatexCommand citealp
-key "rizziOverviewSAMPL6Host2018"
-literal "false"
-
-\end_inset
-
-,
-\begin_inset CommandInset citation
-LatexCommand citealp
-key "yinOverviewSAMPL5Host2017"
-literal "false"
-
-\end_inset
-
-].
+.
  
 \end_layout
 
@@ -1084,6 +1222,43 @@ literal "false"
 \end_deeper
 \begin_layout Standard
 The following sections… 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:DDM-cycle"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
