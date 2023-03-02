@@ -209,61 +209,32 @@ Drug discovery, production, and implementation have been a huge part of
 \begin_deeper
 \begin_layout Itemize
 Modern drug development requires the screening of a vast and diverse chemical
- space of potential candidate compounds for FDA approval.
- 
+ space with the aim to simultaneously optimize properties such as protein-ligand
+ affinity.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-This process is often risky, costly, and very time-consuming.
+However, this process is often risky, costly, and very time-consuming.
  
 \end_layout
 
-\end_deeper
+\begin_deeper
 \begin_layout Itemize
 Currently, the conventional process of a potential drug candidate to reach
  the market has been estimated to take an average of 14 years, reaching
  up to 1.8 billion USD and an attrition rate as high as 96% [[paulHowImproveProdu
 ctivity2010]].
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL most cost is due clinical trials
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-In the intitial states in drug discovery, drugs that were initially deemed
- as potential lead candidates often show poor chemical absorption, distribution,
- metabolism, excretion, and toxicity (ADMET) properties during the clinical
- stages, ultimately resulting in their failure in clinical trials.
- 
 \end_layout
 
 \end_deeper
 \end_deeper
+\end_deeper
 \begin_layout Itemize
-Therefore, the ability to efficiently, effectively, and quickly scan a large
- chemical for potential drug candidates with desired ADMET properties is
- sought out and is of great importance in drug discovery.
+Therefore, the ability to efficiently,, and quickly scan a large chemical
+ for potential drug candidates is a major focus in drug discovery.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL Check if BFE is used in ADMET
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -278,36 +249,26 @@ TL robotic HTS
 \end_inset
 
 Exploring the vast chemical space dates back to the early drug discovery
- period (before the 19th century() and the drug discovery and drug development
+ period (before the 19th century) and the drug discovery and drug development
  period (20th century and beyond).
  
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-It was not until the “post-genome era,” during the late 20th century, when
- the combination of molecular biology along with advances in computing robotics
- that led to the optimism that drug discovery was indeed a scalable process.
+It was not until the “post-genome era,” during the late 20th century, where
+ there was a huge surge of protein crystal structures that were made publically
+ available and become targets of therapeutic interest for small-molecule
+ drug disocovery.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL why/how.
- screening?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-During this time there was also a shift in drug discovery strategies that
- focused largely on high-throughput screening (HTS) which led to the identificat
-ion of all drug targets and the creation of very large compound libraries
- [[jhotiHighthroughputScreeningStructurebased2013]].
+Which resulted in a shift of drug discovery strategies that focused largely
+ on high-throughput screening (HTS) which led to the identification of all
+ drug targets and the creation of very large compound libraries [[jhotiHighthrou
+ghputScreeningStructurebased2013]].
  
 \end_layout
 
@@ -338,34 +299,14 @@ TL rational, computational design using structure
 
 \end_inset
 
-While HTS continues to be a big part of drug discovery and development,
- the lack of understanding of the molecular mechanism behind the potential
- drug species hinders the search for more promising candidates (Macarron
- et al.
- 2011; Lionta et al.
- 2014).
+To this end, computer-aided drug discovery (CADD) provides a rational structure-
+based approach that can yield valuable information about intermolecular
+ interactions between protein and ligand systems as well as the binding
+ affinity.
  
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
-On the other hand, a computer-aided drug discovery (CADD) provides a rational
- structure-based approach that can yield valuable information about intermolecul
-ar interactions between protein and ligand systems as well as the binding
- affinity.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL combine with previous sentence?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Itemize
 CADD has already been successfully applied in all areas of drug discovery
  and has brought new drug compounds to the market for diverse diseases,
@@ -377,18 +318,20 @@ ancerDrug1996] ]).
  
 \end_layout
 
-\begin_layout Itemize
-Understanding how ligands bind to a targeted receptor, how proteins interact
- with each other, and how proteins aggregate in the cell membrane is not
- only important for the field of biophysics but also for rational drug design.
- 
-\end_layout
-
 \begin_deeper
 \begin_layout Itemize
 The use of molecular simulations on drug discovery has shown major impact
  in the past decade in response to the rapid development of computer hardware
  and performing computations in a time affordable manner.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Implementation of CADD provides an computational microscope how ligands
+ bind to a targeted receptor, how proteins interact with each other, and
+ how proteins aggregate in the cell membrane is not only important for the
+ field of biophysics but also for rational drug design.
  
 \end_layout
 
@@ -407,7 +350,6 @@ Although molecular docking provides a fast and efficient way to screen a
  
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
 Docking programs usually treat the receptor as a rigid molecule, and the
  lack of water treatments and conformational fluctuations are handled with
@@ -467,13 +409,19 @@ literal "false"
 
 \begin_deeper
 \begin_layout Itemize
-Molecular dynamics (MD) simulations implement structure-based design strategies
- and the ability to account for structural flexibility at full atomic descriptio
-n.
- 
+Binding free energy calulations are readily using in drug discovery to ranked
+ potential canidates by their binding affinity [https://doi.org/10.1021/jp807701h]
+ to a host target.
 \end_layout
 
 \begin_deeper
+\begin_layout Itemize
+Molecular dynamics (MD) simulations gather statitical data of configurations
+ in order to account for structural flexibility at full atomic description
+ to begin free energy calculations.
+ 
+\end_layout
+
 \begin_layout Itemize
 MD studies the physical interaction and motion of atoms based on Newtonian
  physics.
@@ -557,6 +505,23 @@ TL focus on sampling
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Insufficient sampling is due to the integration time of MD, usually limited
+ to femtoseconds or shorter (dictated by bond vibrations) whereas binding
+ process are in the micro/milisecond time scale.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Leading to a large computational cost to be able to sample important configurati
+ons that have a major contribution towards binding affinity.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -622,17 +587,7 @@ literal "false"
 
 \end_inset
 
-], weighted histogram techniques
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL not a sampling method
-\end_layout
-
-\end_inset
-
- [
+], [
 \begin_inset CommandInset citation
 LatexCommand citeauthor
 key "ferrenbergNewMonteCarlo1988"
@@ -708,7 +663,7 @@ TL alchemical pathways to avoid exhaustive sampling
 
 Rather than following a physical pathway between two states, one can construct
  a non-physical pathway that involves the transformation of one system to
- another.
+ another avoiding the need of exhaustive sampling.
  
 \end_layout
 
@@ -1252,17 +1207,9 @@ name "fig:DDM-cycle"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
-\end_layout
-
-\begin_layout Chapter
-Functionality and workflow of ISDDM
 \end_layout
 
 \begin_layout Chapter
@@ -1356,7 +1303,6 @@ is Plank's constant.
 \begin_layout Itemize
 In general evaluting Q is very difficult and not feasible in more complicated
  cases such as larger systems with strong interactions between particles.
- 
 \end_layout
 
 \begin_layout Itemize
@@ -1453,13 +1399,16 @@ For complex systems the partition functition has no analytical solution
 \begin_layout Itemize
 - Sampling the entire phase space is computationally expensive and needed
  to calculate accurate estimates.
- Simulating binding events are usually dominated by rate dissociations which
- can be the millisecond timescale and reaches the microsecond for a type
- drug[https://doi.org/10.33011/livecoms.2.1.18378].
- In section 2.#.# we will discuss how alchemical free energy calculations
- can yeild predictions that do not require direct simulatins of binding/unbindin
-g events.
  
+\end_layout
+
+\begin_layout Itemize
+- Simulating binding events are usually dominated by rate dissociations
+ which can be the millisecond timescale and reaches the microsecond for
+ a type drug[https://doi.org/10.33011/livecoms.2.1.18378].
+ In section 2.#.# we will discuss how alchemical free energy calculations
+ can yeild predictions that do not require direct simulations of binding/unbindi
+ng events.
 \end_layout
 
 \end_deeper
@@ -1472,7 +1421,7 @@ Molecular Modeling of physical chemistry of binding
 
 \begin_layout Itemize
 To estimate the free energy differnces accuratley a molecular model is required
- that describes the thermodynamic paramters of a system correctly 
+ that describes the thermodynamic paramters of a system correctly.
 \end_layout
 
 \begin_deeper
@@ -1672,7 +1621,7 @@ The factor of 2 ensures the equilibrum distance is
 \end_deeper
 \end_deeper
 \begin_layout Subsection
-Implicit Solvent Model 
+Implicit Solvent Model reduces configurational sampling 
 \end_layout
 
 \begin_layout Itemize
@@ -1684,7 +1633,7 @@ Water plays a fundamental role in molecular association and often mediates
 \begin_deeper
 \begin_layout Itemize
 Traditionally, explict water models are used to which places sufficiently
- large number of individyal water molecules aroung the solute simulating
+ large number of individual water molecules aroundthe solute simulating
  their motion.
  
 \end_layout
@@ -1711,30 +1660,88 @@ For example a popular TIP3P model can lead to 40% (6 kcal/mol) error relative
 \end_deeper
 \begin_layout Itemize
 Implict solvation on the other hand provides a significant computational
- advantage by representing water as a continous medium and approximations
- of solvent properties.
- The basic idea of implict solvation is to integrate out explicit solvent
- DOF, incorporating their thermodynamic effects into a solvation free energy
+ advantage by representing water as a continous medium with a uniform dielectric
+ constant.
  
-\begin_inset Formula $\Delta G_{solv}$
-\end_inset
-
-.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Sampling of equilibrium states are in return greatly enhance by disregarding
- the kintetics.
+As a consequence, simulations using implicit solvents are much more efficient
+ since they integrate out explicit solvent DOF and reduction of interacting
+ atoms.
  
 \end_layout
 
+\end_deeper
+\end_deeper
 \begin_layout Itemize
-GB and PB implicit solvent models are popular choice and they both treat
- the solvent as a uniform dieletric continuum.
+Where the use of implicit solvent become more attractive in sampling the
+ vast chemical space in search of a potential drug cannidate.
+ 
 \end_layout
 
 \end_deeper
+\begin_layout Itemize
+The contiuum of implict solvent models can estimate the free energy of solvation
+ as a funtion of the conformation of the solute.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In implicit solvent model the external contiuum medium and the solute will
+ have different dieletric constants.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+For example, most common dielectic of the solvent with have an dielectic
+ of 78.5, while the solute interior will have an dielectic between 1 to 4.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Pervious works have shownt he interal dielectic can be adjusted in order
+ to imporved the accuracy of MM/GBSA estimate of protein-ligand affinity.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+The solvation free energy is the reversble work of transfering a solute
+ from the gas phase to solution.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The 
+\begin_inset Formula $\Delta G_{solvation}$
+\end_inset
+
+ is partitioned into two parts: a polar contribution 
+\begin_inset Formula $\Delta G_{el}$
+\end_inset
+
+ which depends on the electrostatic contributions, a non-polar contribution
+ 
+\begin_inset Formula $\Delta G_{npol}$
+\end_inset
+
+, which depends on the shape of the solute cavity
+\begin_inset Formula 
+\[
+\Delta G_{solv}=\Delta G_{el}+\Delta G_{npol}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \end_deeper
 \begin_layout Itemize
@@ -1747,31 +1754,16 @@ Generalized Born Surface Area (GBSA) Implicit Solvent Model
 \end_layout
 
 \begin_layout Itemize
-The GBSA is dervided from the original Born equation[cite].
- The model computes the 
-\begin_inset Formula $\Delta G_{solv}$
+The GBSA is a fast and analytical method to compute the 
+\series bold
+
+\begin_inset Formula $\Delta G_{el}$
 \end_inset
 
- which is partitioned into two parts: a polar contribution 
-\begin_inset Formula $\Delta G_{polar}$
-\end_inset
-
- which depends on the electrostatic contributions, a non-polar contribution
  
-\begin_inset Formula $\Delta G_{npol}$
-\end_inset
-
-, which depends on the shape of the solute cavity
-\begin_inset Formula 
-\[
-\Delta G_{solv}=\Delta G_{polar}+\Delta G_{npol}
-\]
-
-\end_inset
-
-
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 In AMBER the 
 \begin_inset Quotes eld
@@ -1793,7 +1785,6 @@ cononical
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 where 
 \begin_inset Formula $r_{ij}$
@@ -1842,6 +1833,10 @@ F_{GB}(r_{ij},R_{i},R_{j})=[r_{ij}^{2}+R_{i}R_{j}exp(-r_{ij}^{2}/4R_{i}R_{j})]^{
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+The key paramters in GBSA 
 \end_layout
 
 \end_deeper
@@ -1907,9 +1902,9 @@ The equation <learn to format number equation> above is referred as exponential
 
 \begin_deeper
 \begin_layout Itemize
-However has shown to converges very slowly wiht the amount of data collected
- and is also sensitive to any lack of phase space overlap between states[https:/
-/doi.org/10.1063/1.1873592]
+However since EXP s sampled at one state and then perturb in the other,
+ this tend to lead to slow convergence and is also sensitive to any lack
+ of phase space overlap between states[https://doi.org/10.1063/1.1873592]
 \end_layout
 
 \end_deeper
@@ -2156,23 +2151,11 @@ The core step up in alchemical free energy calculations is definined intermidate
 \begin_layout Itemize
 Since free energy is a state function, the path that connects the two end
  states is unimportant and we can choose tailor the cycle that connect the
- en states through several nonphysical intermidate ones as shown in 
+ end states through several nonphysical intermidate ones as shown in 
 \series bold
-fig 1
-\series default
- 
-\series bold
-(which I still need to create).
- 
+fig 1.
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-The cycle depicts independtly simulated states.
- 
-\end_layout
-
-\end_deeper
 \end_deeper
 \begin_layout Itemize
 The simplest path to construct is a linear in two end point Hamiltonians:
@@ -2301,14 +2284,14 @@ Thermo cycle
 \begin_layout Enumerate
 States 1 & 8 : State 1 denotes the initial endstate of the unbound host
  and guest system simulated in GBSA solvent.
- In this study replica exchange molecular dynamics (REMD) was used here
- to efficiently explore the different potential energy surfaces.
+ In this study we use replica exchange molecular dynamics (REMD) ot efficiently
+ explore the different potential energy surfaces.
  
 \end_layout
 
 \begin_layout Enumerate
-1->2: Here is the introduction the use of artificial intra-molecular conformatio
-nal restraints.
+1->2: Here is the introduction the use of artificial intramolecular conformation
+al restraints.
  These restraints are place on every atom of the ligand and receptor.
  By placing these restraints both the receptor and ligand more rigid therefore
  decreasing accessable degree of freedom.
@@ -2323,11 +2306,11 @@ nal restraints.
 \end_layout
 
 \begin_layout Enumerate
-3->4: Here the ligand is not annihilated where the intramolecular interactions
+3->4: Here the ligand is now annihilated where the intramolecular interactions
  have been removed.
  This non-interacting ligand is stratified in steps where its lennard-jones
- interaction are off and the ligand electrostatics are scaled to zero through
- several nonphysical 
+ interaction are off and then the ligand electrostatics are scaled to zero
+ through several nonphysical 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -2337,8 +2320,8 @@ nal restraints.
 
 \begin_layout Enumerate
 4->5: Introduction of a new set of restraints which are important here as
- it prevents the ligand from leaving the binding pockect whiel its is not
- interacting with the enviroment.
+ it prevents the ligand from leaving the binding pocket while its is not
+ interacting with the enviroment nor the receptor.
  These are orientational restraints which bind the ligand relative to the
  receptor which corresponds to the configuration of the binding mode of
  ligand.
@@ -2379,7 +2362,7 @@ Once the restraints are applied an analytical formula can be then used to
  shown below 
 \begin_inset Formula 
 \[
-\Delta G_{restraints}=kTln[\frac{8\pi^{2}V(K_{r}K_{\theta1}K_{\theta2}K_{\phi1}K_{\phi2}K_{\phi3})^{1/2}}{r_{1}^{2}sin\theta_{1}sin\theta_{2}(2\pi kT)^{3}}
+\Delta G_{restraints}=kTln[\frac{8\pi^{2}V(K_{r}K_{\theta1}K_{\theta2}K_{\phi1}K_{\phi2}K_{\phi3})^{1/2}}{r_{1}^{2}sin\theta_{1}sin\theta_{2}(2\pi kT)^{3}}]
 \]
 
 \end_inset
@@ -2475,13 +2458,326 @@ Boresch restraints
 \end_layout
 
 \begin_layout Chapter
-Methods 
+Methods
 \end_layout
 
 \begin_layout Section
-Workflow implmentation 
+Host-guest systems
 \end_layout
 
+\begin_layout Itemize
+Host-guest (HG) systems have emerge an ideal benchmark for the quantitative
+ assessment of modeling errors for the interactions of ligand-host binding.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+They tend to have low molecular weight and capture most of the interactions
+ involved in protein-ligand binding such as hydrogen bonding, van der Waals
+ interactions and conformational changes upon binding.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Due to there small molecular size sampling can be done more efficiently
+ and experimental data are avaiable for wide variety of HG systems.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Therefore HG systems are good canidates to help focus on developement computatio
+nal modeling schemes to create an reliable and efficient method to estimate
+ ligand-host binding affinity.
+ 
+\end_layout
+
+\begin_layout Itemize
+Host-guest system that were used were sampled from Statistical Assessment
+ of the Modeling of Proteins and Ligands (SAMPL): SAMPL4[cite], SAMPL7[cite]
+ and SAMPL9[cite].
+ 
+\end_layout
+
+\begin_layout Subsection
+Choice of Host-Guest System
+\end_layout
+
+\begin_layout Itemize
+In this work test against variety of macrocyclic host families such as cucurbitu
+rils, pillar[n]arene and cyclodextrins which have a diverse binding affinity
+ and the ability to bind small drug-like compunts [4-cite sampl7 paper].
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We tested against cucurbiturils (CB7), pillar[n]arene (WP6) and 
+\begin_inset Formula $\alpha/\beta$
+\end_inset
+
+-cyclodextrins with a total of 73 unique host-ligand complexes.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Cucurbit[n]urils (CB[n]s), mainly including CB[5], CB[6], CB[7], CB[8] and
+ CB[10] are a family hosts with a molecular structure containing n glycoluril
+ units connected via 2n methylene bridges forming a barrel shapy macrocucle
+ with a central hydrophic cavity.
+ In additon having carbonuls protruding out from the hydrophobic cavity.
+\end_layout
+
+\begin_layout Itemize
+Figure (CB7) shows chemical structures of the CB7 guests, C1–C14, bearing
+ a net charge ranging from +2 to -2.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+WP6 are similar to CB7, where WP6 contains CH2 linkers connecting the phenylene
+ groups, and each phenylene group contains two anionic functional group
+ arms.
+ [cite-samlp9].
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Unlike the neutral CB7 host, WP6 bears six carboxylated moieties on the
+ upper and lower rims that can be, in part, protonated at pH = 7.4 [cite].
+\end_layout
+
+\begin_layout Itemize
+We predict the binding affinities of thirteen ammonium/diammonium cationic
+ ligands (guests) aginast WP6 shown in 
+\series bold
+figure WP6 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The last benchmark system being cyclodextrins which are cyclic oligosaccharides,
+ consisting of glucose monomers.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The most common cyclodextrins being 
+\begin_inset Formula $\alpha$
+\end_inset
+
+and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ consisting of 6 and 7 glucose monomers.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The guest molecules test against 
+\begin_inset Formula $\alpha$
+\end_inset
+
+and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ cyclodextrins contain ammonium or carboxylate groups carry a net charge
+ of 1 or -1 respectivly.
+\end_layout
+
+\begin_layout Itemize
+Resulting in 43 host-guest complexes shown in 
+\series bold
+figure(cyclodx)
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+PA[n]s are linked by methylene bridges at para-positions of 2,5-dialkoxybenzene
+ rings, forming a symmetric and rigid pillar-shaped structure [184-193].
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+C
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Complex parameterization 
+\end_layout
+
+\begin_layout Itemize
+All the ligands were docked into the binding site of an equilibrated host
+ system using Autodock Vina docking single mode[cite-vina] to generate several
+ ligand poses.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this procedure the host is considered rigid and the ligands were centered
+ at the host center of mas
+\end_layout
+
+\begin_layout Itemize
+Autodock Vina is then performed on a grid potential (user-defined region
+ of interest) which the cubic box of side-length of 10 Å with a grid spacing
+ in each direction of 0.375 Å.
+\end_layout
+
+\begin_layout Itemize
+All ligands are fully flexible during the docking calculations.
+ 
+\end_layout
+
+\begin_layout Itemize
+The 
+\begin_inset Formula $.mol2$
+\end_inset
+
+ files, prior being used in the docking calculations were converted to 
+\begin_inset Formula $.pdbqt$
+\end_inset
+
+ file using OpenBabel [cite] using the 
+\begin_inset Formula $-p$
+\end_inset
+
+ option to specify the pH used in the experiments.
+\end_layout
+
+\begin_layout Itemize
+All the SAMPL experimental data and inital 
+\begin_inset Formula $.mol2$
+\end_inset
+
+ files were downloaded from the GitHub repositiories[cite all github repos].
+ 
+\end_layout
+
+\begin_layout Itemize
+In this procedure the host is held fixed and ligand conformations are then
+ generated yield low energy conformers.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Autodock Vina performs a cluster analysis based on all-atom root mean square
+ deviation ranking the dock conformations in order of increasing binding
+ free energies.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The lowest energy ligand pose was selected for each host-guest complex for
+ initital endstate configuration respectivily.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Section
+Force Field Parameters
+\end_layout
+
+\begin_layout Itemize
+The simulations of all host-guest systems were setup by LEaP program in
+ AmberTools software suite[cite-Amber21].
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The partial atomic charges were applied using the AM1-BCC model [10.1002/jcc.10128
+ ] and generalized Amber Force Field v2 (GAFFv2) force field was applied
+ to all guest and host systems using the antechamber program in AmberTools21.
+ (cite).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Rather using an explict solvation model we used implict generalize Born
+ model for binding predictions.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The 
+\begin_inset Formula $GB^{HCT}$
+\end_inset
+
+[cite] model used in this study, which was invoked in AMBER with the keyword
+ 
+\begin_inset Formula $igb=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+GBSA solvent model was applied to for states 1, 2 and 8 shown in 
+\series bold
+figure 1.
+ 
+\end_layout
+
+\begin_layout Itemize
+Ionic concentration was set to 0.3M and temperature set to 298K.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Section
+Simulation details 
+\end_layout
+
+\begin_layout Itemize
+All production simulations were performed on AMBER21 [cite] molecular dynamics
+ simulation software.
+ 
+\end_layout
+
+\begin_layout Itemize
+Each window was for each system was simulated independently.
+\end_layout
+
+\begin_layout Itemize
+Hydrogen mass repartitiong scheme was used for every system whcih increased
+ the mass of hydrogen by a factory of 4, while decreasing massed of the
+ bonded heavy atoms.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This result in slowing down the highest frequency of hydrogen covlent bonds
+ and increasing the time by a factor of 2[https://doi.org/10.1021/ct5010406].
+\end_layout
+
+\begin_layout Itemize
+Therefore all the MD simulations specified a timestep at 
+\begin_inset Formula $dt=0.004$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -2489,18 +2785,341 @@ Workflow implmentation
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
+End-state Simulations
+\end_layout
+
+\begin_layout Itemize
+The endstate 
+\begin_inset Formula $1\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $8\lambda$
+\end_inset
+
+ were perfomed using replica exchange molecular dyanmics simulation (REMD).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The target temperature of 298K and ionic concentration was set to 0.3M was
+ set of all host guest systems.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+REMD begin with a 5000 step minimization to relax system from initial stuctures
+ in states 
+\begin_inset Formula $1\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $8\lambda$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Minimization was completed using 
+\begin_inset Formula $sander$
+\end_inset
+
+ or 
+\begin_inset Formula $sander.MPI$
+\end_inset
+
+ module of AMBER21.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Once obtained a well minimized system, we constructed replicas for REMD
+ simulation.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this study we generated 8 temperature copies with a distribution ranging
+ from 298K to 500K.
+\end_layout
+
+\begin_layout Itemize
+Running REMD was performed using 
+\series bold
+
+\begin_inset Formula $sander.MPI$
+\end_inset
+
+ 
+\series default
+with 
+\begin_inset Formula $numexchg=2500000$
+\end_inset
+
+ (number of exchange attempts) and 
+\begin_inset Formula $nstlim=1$
+\end_inset
+
 .
 \end_layout
 
-\begin_layout Section*
-2.2 Alchemical transformations(overlap)
+\begin_layout Itemize
+For all host-guest bound endstate simulations a center-of-mass flat bottom
+ restraint potential was used.
+ 
 \end_layout
 
-\begin_layout Section*
-2.3 Alchemical binding free energies/thermodynamic cycle 
+\end_deeper
+\begin_layout Itemize
+Extraction of target temperature(298K) was done using 
+\series bold
+
+\begin_inset Formula $cpptraj$
+\end_inset
+
+
+\series default
+ [cite].
+ 
 \end_layout
 
+\end_deeper
+\begin_layout Subsection
+Intermidate Simulations 
+\end_layout
+
+\begin_layout Itemize
+For states 
+\begin_inset Formula $2\lambda-7\lambda$
+\end_inset
+
+ restraints were applied.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Both the orientational and conformations restraints were constructed using
+ the lastframe of complex configuration from REMD simulation in state 
+\begin_inset Formula $8\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The last frame of state 
+\begin_inset Formula $8\lambda$
+\end_inset
+
+ were then split into ligand and host system using 
+\begin_inset Formula $strip$
+\end_inset
+
+ command from 
+\begin_inset Formula $cpptraj$
+\end_inset
+
+ within AMBERtools 21[cite].
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In states 
+\begin_inset Formula $3\lambda-7\lambda$
+\end_inset
+
+ gbsa was set to 0 and 
+\begin_inset Formula $igb=6$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+In state 4 the ligand charges were removed using 
+\begin_inset Formula $parmed.tools.action.charge$
+\end_inset
+
+ setting the ligand net charge to 0.
+ 
+\end_layout
+
+\begin_layout Itemize
+State 5 is not sampled.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The difference of free energy going from state 4 to 5 is computed analytically
+ as described in 
+\series bold
+section ### 
+\series default
+and the difference of free energy from state 5 to 6 is 0.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+State 5 is sampled with the charges for the ligand removed using parmed.tools.acti
+ons.change to set charges on the ligand to 0.
+ State
+\end_layout
+
+\begin_layout Itemize
+State 6 we turn off the lennard jones interaction between the ligand and
+ host system via 
+\series bold
+
+\begin_inset Formula $add\_Exclusions$
+\end_inset
+
+ 
+\series default
+option in 
+\series bold
+
+\begin_inset Formula $parmed$
+\end_inset
+
+ 
+\series default
+package in AMBERtools21[cite].
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The use of orientational restraints prevents the ligand from drifting away
+ from the host and which prevents the need of sampling the entire volume
+ space.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+State 6 to 7 is where we turn back all interactions of system by first turn
+ back on lennard jones potential between the ligand and host, following
+ a scaling of the GB dielectric constant[figure out the parameters].
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Then finally scaling the ligand charges from 0% to 50% and then 100% (fully
+ charge).
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Lastly from state 7 to 8 we slowly decrease the restraint force through
+ bisection until the conformational force constant again reaches 
+\begin_inset Formula $2^{-8}$
+\end_inset
+
+ = 0.00390625 kcal/mol.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Restraint selection 
+\end_layout
+
+\begin_layout Subsubsection
+Conformational Restraints 
+\end_layout
+
+\begin_layout Itemize
+A harmonic distance restrainted was to every atom and its neighbors within
+ 6 Å.
+ 
+\end_layout
+
+\begin_layout Itemize
+The target distance were taken from last frame of REMD state 8 
+\series bold
+(section 3.3.1)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Application of conformational restraints makes the molecule more rigid and
+ retains a single binding mode taken from state 8.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The conformatinal restraints were prepared using an in-house code.
+\end_layout
+
+\begin_layout Subsubsection
+Orientational Restraints 
+\end_layout
+
+\begin_layout Itemize
+A total of six atoms three from the ligand and host respectivly are selected
+ to construct orientational (Boresch) restraints prior running MD simulation.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The selection of these atoms is done autonomously within the 
+\series bold
+ISDDM 
+\series default
+tool and will be breifly descriped here.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+First the atoms on the ligand and receptor are selected for the distance
+ restraints, 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\series bold
+
+\begin_inset Formula $a$
+\end_inset
+
+ (figure2.2).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Ligand atom 
+\begin_inset Formula $A$
+\end_inset
+
+ is the closest heavy-atom to its center of mass (COM), where receptor atom
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ is shorest distance heavy-atom to atom 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
 \begin_layout Standard
 \begin_inset CommandInset citation
 LatexCommand cite
