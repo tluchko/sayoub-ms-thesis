@@ -1790,7 +1790,15 @@ where
 \begin_inset Formula $r_{ij}$
 \end_inset
 
- is the distance btween atoms j and i, 
+ is the distance btween atoms
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $i$
+\end_inset
+
+, 
 \begin_inset Formula $q_{i}$
 \end_inset
 
@@ -1833,10 +1841,6 @@ F_{GB}(r_{ij},R_{i},R_{j})=[r_{ij}^{2}+R_{i}R_{j}exp(-r_{ij}^{2}/4R_{i}R_{j})]^{
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-The key paramters in GBSA 
 \end_layout
 
 \end_deeper
@@ -2507,18 +2511,19 @@ Choice of Host-Guest System
 
 \begin_layout Itemize
 In this work test against variety of macrocyclic host families such as cucurbitu
-rils, pillar[n]arene and cyclodextrins which have a diverse binding affinity
- and the ability to bind small drug-like compunts [4-cite sampl7 paper].
+rils, pillar[n]arene, cyclodextrins and octa-acid which have a diverse binding
+ affinity and the ability to bind small drug-like compunts [4-cite sampl7
+ paper].
  
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-We tested against cucurbiturils (CB7), pillar[n]arene (WP6) and 
+We tested against cucurbiturils (CB7), pillar[n]arene, octa-acid (OAH) 
 \begin_inset Formula $\alpha/\beta$
 \end_inset
 
--cyclodextrins with a total of 73 unique host-ligand complexes.
+-cyclodextrins with a total of 86 unique host-ligand complexes.
  
 \end_layout
 
@@ -2539,35 +2544,61 @@ Figure (CB7) shows chemical structures of the CB7 guests, C1–C14, bearing
 
 \end_deeper
 \begin_layout Itemize
-WP6 are similar to CB7, where WP6 contains CH2 linkers connecting the phenylene
+Pillar[n]arene are another class of supramolecular having a symmetrical
+ rigid cylindrical structures with CH2 linkers connecting the phenylene
  groups, and each phenylene group contains two anionic functional group
  arms.
- [cite-samlp9].
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Unlike the neutral CB7 host, WP6 bears six carboxylated moieties on the
- upper and lower rims that can be, in part, protonated at pH = 7.4 [cite].
+Pillar[n]arene have become an emerging class of synthetic macrocycles having
+ a broad applications in molecular recognition and adsorption to synergistic
+ catalysis and many other aspects[https://doi.org/10.1007/s10847-020-00986-z].
 \end_layout
 
 \begin_layout Itemize
-We predict the binding affinities of thirteen ammonium/diammonium cationic
- ligands (guests) aginast WP6 shown in 
+In this study we test against Pillar[6]arene (WP6) which bears six carboxylated
+ moieties on the upper and lower rims that can be, in part, protonated at
+ pH = 7.4 [cite].
+\end_layout
+
+\begin_layout Itemize
+We predict the binding affinities of 13 ammonium/diammonium cationic ligands
+ (guests) aginast WP6 shown in 
 \series bold
 figure WP6 
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-The last benchmark system being cyclodextrins which are cyclic oligosaccharides,
- consisting of glucose monomers.
+The Octa-acid (OAH) is a water soluble a deep-cavity cavitand that possesses
+ outer surface with eight water-solubilizing carboxylate groups and a deep
+ 10 Å hydrophobic pocket suitable for varitey of guest molecules [https://doi.org
+/10.1007/s10822-013-9690-2 ].
  
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-The most common cyclodextrins being 
+OAH is known to bind with hydrophobic or amphiphilic guests in aqueous solution
+ perhaps due to hydrophbic effect of the desolvation of guests entering
+ the deep hydrophobic binding pocket[https://doi.org/10.1007/s10822-014-9735-1].
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Figure OAH 
+\series default
+shows the chemical structures of 20 guests containing a carboxylic acid
+ functional groups that were binding to OAH.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The last benchmark systems were 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -2575,7 +2606,8 @@ and
 \begin_inset Formula $\beta$
 \end_inset
 
- consisting of 6 and 7 glucose monomers.
+ cyclodextrins which are cyclic oligosaccharides, consisting of 6 and 7
+ glucose monomers respectivly.
  
 \end_layout
 
@@ -2593,25 +2625,15 @@ and
  of 1 or -1 respectivly.
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-Resulting in 43 host-guest complexes shown in 
+Resulting in 41 host-guest complexes shown in 
 \series bold
 figure(cyclodx)
 \end_layout
 
 \end_deeper
 \end_deeper
-\end_deeper
-\begin_layout Itemize
-PA[n]s are linked by methylene bridges at para-positions of 2,5-dialkoxybenzene
- rings, forming a symmetric and rigid pillar-shaped structure [184-193].
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-C
-\end_layout
-
 \end_deeper
 \begin_layout Subsection
 Complex parameterization 
@@ -2627,7 +2649,7 @@ All the ligands were docked into the binding site of an equilibrated host
 \begin_deeper
 \begin_layout Itemize
 In this procedure the host is considered rigid and the ligands were centered
- at the host center of mas
+ at the host center of mass
 \end_layout
 
 \begin_layout Itemize
@@ -2999,8 +3021,11 @@ package in AMBERtools21[cite].
 \begin_deeper
 \begin_layout Itemize
 The use of orientational restraints prevents the ligand from drifting away
- from the host and which prevents the need of sampling the entire volume
- space.
+ from the host and which 
+\series bold
+prevents
+\series default
+ the need of sampling the entire volume space.
  
 \end_layout
 
@@ -3031,9 +3056,87 @@ Lastly from state 7 to 8 we slowly decrease the restraint force through
 
 \end_deeper
 \begin_layout Subsection
-Restraint selection 
+Selection and Implementation of Restraint Forces 
 \end_layout
 
+\begin_layout Itemize
+In states 
+\begin_inset Formula $2\lambda-7\lambda$
+\end_inset
+
+ we applied conformational and orientational restraints in order to ehance
+ convergence in our binding estimate.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A stratification stragey was applied in 2λ were a series of conformational
+ restraints were bisected until a sufficient overlap was achieved between
+ state 2 and state 3.
+ A maxium restraint force constant value is applied in state 3.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Through benchmark testing the lowest energy conformational restraint force
+ for the first 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ window was determine to be 
+\begin_inset Formula $2^{-8}kcal/mol/Å$
+\end_inset
+
+ and the maximum restriant force to be 
+\begin_inset Formula $2^{4}kcal/mol/\mathring{A}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+From previous results a minimum orientational force constant of 
+\begin_inset Formula $2^{-4}kcal/mol/Å$
+\end_inset
+
+ and maximum 
+\begin_inset Formula $2^{8}kcal/mol/Å$
+\end_inset
+
+ gave reduced an accumalted error for highly charge guest molecules.
+ 
+\end_layout
+
+\begin_layout Itemize
+A series of 32 lambda windows 
+\begin_inset Formula $2^{-8}$
+\end_inset
+
+-
+\begin_inset Formula $2^{4}$
+\end_inset
+
+ were generated using 
+\begin_inset Formula $Numpy.logspace$
+\end_inset
+
+ which return a numbers spaced evenly space numbers on 
+\series bold
+
+\begin_inset Formula $log_{2}$
+\end_inset
+
+
+\series default
+ scale.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Subsubsection
 Conformational Restraints 
 \end_layout
@@ -3067,8 +3170,52 @@ Orientational Restraints
 \end_layout
 
 \begin_layout Itemize
-A total of six atoms three from the ligand and host respectivly are selected
- to construct orientational (Boresch) restraints prior running MD simulation.
+In order to facilitate convergence orientational restraints have been used
+ to restrict the ligand's orientation relative to the host.
+ 
+\end_layout
+
+\begin_layout Itemize
+Here we construct orientational suggested by Boresch[cite] which requires
+ an distance restraint(
+\begin_inset Formula $r_{aA}$
+\end_inset
+
+), two angles (
+\begin_inset Formula $\theta_{A}\theta_{a}$
+\end_inset
+
+) and three torsions (
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $ϕ_{AB},ϕ_{aA}ϕ_{ba}$
+\end_inset
+
+) to restrict the ligand relative to the host.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
  
 \end_layout
 
@@ -3110,25 +3257,111 @@ Ligand atom
 \begin_inset Formula $a$
 \end_inset
 
- is shorest distance heavy-atom to atom 
+ is shorest distance to that heavy atom to 
 \begin_inset Formula $A$
 \end_inset
 
 .
 \end_layout
 
-\end_deeper
-\end_deeper
-\end_deeper
-\begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand cite
-key "knuth1986texthe"
-literal "true"
+\begin_layout Itemize
+Then the script looks for the best suited heavy atoms 
+\begin_inset Formula $B,A,a,b$
+\end_inset
 
+ that will create angles for 
+\begin_inset Formula $θ_{A},θ_{a},ϕ_{AB},ϕ_{aA}ϕ_{ba}$
+\end_inset
+
+ (figure 2.2) that are between 80 and 100 degrees.
+\end_layout
+
+\begin_layout Itemize
+It is important that the angle is close to 90 degrees in order to maintain
+ a well define bound state.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Section
+Free Energy Anlaysis using MBAR
+\end_layout
+
+\begin_layout Itemize
+As phase space overlap affects the reliability of the free energy difference
+ estimates, many intermidate states are needed in order to bridge and increase
+ the overlap between two endstates (figure 2.2).
+ MBAR proposed by Shirts et al [cite] has been superior to other estimtors
+ with the lowest variance and is asymptotically unbiased [Shirts and Chodera
+ 2008].
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Calculations of MBAR was done using a python package called 
+\begin_inset Formula $pymbar$
+\end_inset
+
+[cite].
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+MBAR requires the potential energies and therodynamic parameters of each
+ trajectory frame from sampling.
+ 
+\end_layout
+
+\begin_layout Itemize
+For example the trajectory from state 2 would be post processed in the potential
+ energy function in all other states 1, 3 and state 4.
+ 
+\end_layout
+
+\begin_layout Itemize
+The post-processing is done by using 
+\begin_inset Formula $sander$
+\end_inset
+
+ with 
+\begin_inset Formula $imin=5.$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+The MBAR estimate also return its own uncertainty error estimate in our
+ case for ligand, receptor and complex.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Time Series Analysis
+\end_layout
+
+\begin_layout Itemize
+The 
+\begin_inset Formula $pymbar.mbar()$
+\end_inset
+
+ returns an 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Results
 \end_layout
 
 \begin_layout Standard
