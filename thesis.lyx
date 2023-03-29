@@ -41,6 +41,9 @@
 \end_preamble
 \options lof, lot
 \use_default_options true
+\begin_modules
+logicalmkup
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -1829,55 +1832,222 @@ Theory
 
 \begin_layout Section
 Binding Free Energy 
+\change_inserted -1046193749 1680023331
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1680023333
+\begin_inset Note Note
+status open
+
+\begin_layout Description
+
+\change_inserted -1046193749 1680023395
+TL Remember that equations are part of the sentence.
+ They require appropriate punctuation.
+ Most equations should have a period or comma at the end.
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -1046193749 1680023485
+TL Use commands for operators in equations and 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680023428
+
+\backslash
+text{}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ for words.
+ '
+\begin_inset Formula $ln$
+\end_inset
+
+' means '
+\begin_inset Formula $l\times n$
+\end_inset
+
+'.
+ '
+\begin_inset Formula $\ln'$
+\end_inset
+
+ means 'natural log'.
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -1046193749 1680023546
+TL All symbols in the text should use inline math mode.
+ I.e., '
+\begin_inset Formula $N'$
+\end_inset
+
+ and not 'N'.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
-Free energy, in essence, determines how a process is proceed and the probability
- that a system will adopt at a given state.
+Free energy
+\change_deleted -1046193749 1680020740
+, in essence, determines how a process is proceed
+\change_inserted -1046193749 1680020752
+ drives a system towards equilibrium
+\change_unchanged
+ and
+\change_inserted -1046193749 1680020760
+ determines
+\change_unchanged
+ the probability that a system will adopt at a given state.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-The Helmholtz free energy 
+The Helmholtz free energy
+\change_inserted -1046193749 1680020769
+,
+\change_unchanged
+ 
 \begin_inset Formula $A$
 \end_inset
 
+
+\change_inserted -1046193749 1680020770
+,
+\change_unchanged
  of a system in the canonical ensemble (i.e constant number of particles,
  volume and temperature) is given by 
+\change_deleted -1046193749 1680022861
+
 \begin_inset Formula $\beta$
 \end_inset
 
  is the inverse temperature divided by Boltzmann's and Q is the partition
  function of the system
+\change_inserted -1046193749 1680022879
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680022905
+TL use 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680022893
+
+\backslash
+ln
+\change_unchanged
+
 \end_layout
 
-\begin_layout LyX-Code
+\end_inset
+
+ as this is an operator.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1680022861
+
 \begin_inset Formula 
 \[
-A=-\frac{1}{\beta}lnQ
+A=-\frac{1}{\beta}lnQ,
 \]
 
 \end_inset
 
 
-\end_layout
+\change_inserted -1046193749 1680022864
 
-\begin_layout Itemize
-The system can also be assumed to be at thermodynamic equilibrium.
- In case of the partition function can be expressed as:
 \begin_inset Formula 
 \[
-Q=\frac{1}{h^{3N}N!}\int\int e^{-\beta H(p,r)}dpdr
+A=-\frac{1}{\beta}\ln Q,
 \]
 
 \end_inset
 
+where 
+\begin_inset Formula $\beta=kT$
+\end_inset
+
+, 
+\begin_inset Formula $k$
+\end_inset
+
+ Boltzmann's constant and 
+\begin_inset Formula $T$
+\end_inset
+
+ is the temperature.
+\change_unchanged
 
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Where N is the number of particles in the system and 
+
+\change_inserted -1046193749 1680022244
+\begin_inset Formula $Q$
+\end_inset
+
+ is the partition function of the system, 
+\change_deleted -1046193749 1680022168
+The system can also be assumed to be at thermodynamic equilibrium.
+ In case of the partition function can be expressed as:
+\change_unchanged
+
+\begin_inset Formula 
+\[
+Q=\frac{1}{h^{3N}N!}\int\int e^{-\beta H(p,r)}dpdr,
+\]
+
+\end_inset
+
+
+\change_inserted -1046193749 1680022262
+w
+\change_deleted -1046193749 1680022262
+W
+\change_unchanged
+here 
+\change_deleted -1046193749 1680022264
+N
+\change_inserted -1046193749 1680022264
+
+\begin_inset Formula $N$
+\end_inset
+
+
+\change_unchanged
+ is the number of particles in the system and 
 \series bold
 
 \begin_inset Formula $h$
@@ -1886,44 +2056,174 @@ Where N is the number of particles in the system and
  
 \series default
 is Plank's constant.
- The integral is performed over all 3N positions 
-\begin_inset Formula $r$
-\end_inset
+ 
+\change_inserted -1046193749 1680022306
 
- and momenta 
-\begin_inset Formula $p$
-\end_inset
-
-.
- The hamiltonian 
-\begin_inset Formula $H(p,r)$
-\end_inset
-
- consists of a potential energy term 
-\begin_inset Formula $U(x)$
-\end_inset
-
- that depends on the given configuration and kinetic term 
-\begin_inset Formula $K(p)$
-\end_inset
-
- that depends on their momenta 
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-In general evaluting Q is very difficult and not feasible in more complicated
- cases such as larger systems with strong interactions between particles.
+The integral is performed over all 
+\change_deleted -1046193749 1680022310
+3N
+\change_inserted -1046193749 1680022310
+
+\begin_inset Formula $3N$
+\end_inset
+
+
+\change_unchanged
+ positions
+\change_inserted -1046193749 1680022320
+,
+\change_unchanged
+ 
+\begin_inset Formula $r$
+\end_inset
+
+
+\change_inserted -1046193749 1680022322
+,
+\change_unchanged
+ and momenta
+\change_inserted -1046193749 1680022324
+,
+\change_unchanged
+ 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ 
+\change_inserted -1046193749 1680022326
+
 \end_layout
 
 \begin_layout Itemize
-However since we are interested in the free energy differences 
+The 
+\change_inserted -1046193749 1680022332
+H
+\change_deleted -1046193749 1680022332
+h
+\change_unchanged
+amiltonian 
+\begin_inset Formula $H(p,r)$
+\end_inset
+
+ consists of a potential energy term
+\change_inserted -1046193749 1680022559
+,
+\change_unchanged
+ 
+\begin_inset Formula $U(x)$
+\end_inset
+
+
+\change_inserted -1046193749 1680022344
+,
+\change_unchanged
+ that depends on the given configuration
+\change_inserted -1046193749 1680022347
+,
+\change_unchanged
+ and kinetic
+\change_inserted -1046193749 1680022566
+ energy
+\change_unchanged
+ term
+\change_inserted -1046193749 1680022562
+,
+\change_unchanged
+ 
+\begin_inset Formula $K(p)$
+\end_inset
+
+
+\change_inserted -1046193749 1680022563
+,
+\change_unchanged
+ that depends on 
+\change_deleted -1046193749 1680022579
+their
+\change_inserted -1046193749 1680022581
+particle
+\change_unchanged
+ momenta
+\change_inserted -1046193749 1680022570
+.
+
+\change_deleted -1046193749 1680022301
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_layout Itemize
+In general
+\change_inserted -1046193749 1680022591
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1680022585
+evaluting
+\change_inserted -1046193749 1680022585
+evaluating
+\change_unchanged
+ 
+\change_deleted -1046193749 1680022594
+Q
+\change_inserted -1046193749 1680022594
+
+\begin_inset Formula $Q$
+\end_inset
+
+
+\change_unchanged
+ is very difficult and not feasible in more complicated cases such as larger
+ systems with strong interactions between particles.
+\end_layout
+
+\begin_layout Itemize
+However
+\change_inserted -1046193749 1680022649
+,
+\change_unchanged
+ since we are interested in the free energy differences
+\change_inserted -1046193749 1680022627
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1680022613
+
 \begin_inset Formula $\Delta$
 \end_inset
 
-A between two systems such in binding the unbound state (state 0) and bound
- state (state1).
- The partition functions 
+A
+\change_inserted -1046193749 1680022623
+
+\begin_inset Formula $∆A$
+\end_inset
+
+,
+\change_unchanged
+ between 
+\change_deleted -1046193749 1680022724
+two systems such in binding
+\change_unchanged
+ the unbound state (state 0) and bound state (state1)
+\change_inserted -1046193749 1680022687
+, 
+\change_deleted -1046193749 1680022686
+.
+ T
+\change_inserted -1046193749 1680022786
+we require t
+\change_unchanged
+he 
+\change_inserted -1046193749 1680022796
+ratio of 
+\change_unchanged
+partition functions 
 \begin_inset Formula $Q_{0}$
 \end_inset
 
@@ -1931,8 +2231,14 @@ A between two systems such in binding the unbound state (state 0) and bound
 \begin_inset Formula $Q_{1}$
 \end_inset
 
- can become a ratio of probabilities for system being in the bound or unbound
- state as describe below:
+ 
+\change_deleted -1046193749 1680022803
+can become a ratio of probabilities for system being in the bound or unbound
+ state as describe below
+\change_unchanged
+:
+\change_deleted -1046193749 1680022846
+
 \begin_inset Formula 
 \[
 \Delta A=-\beta^{-1}ln\frac{Q_{1}}{Q_{0}}
@@ -1941,31 +2247,67 @@ A between two systems such in binding the unbound state (state 0) and bound
 \end_inset
 
 
-\end_layout
+\change_inserted -1046193749 1680022848
 
-\begin_layout Itemize
-Where free energy difference process in which neither the temperature or
- particles' masses change, the kinetic contribution to the Hamiltonian is
- constant.
- 
-\end_layout
-
-\begin_layout Itemize
-Therefore only the configurational part of the partition function needed
- to be considered, and the free free energy of binding can be expressed
- as follows:
 \begin_inset Formula 
 \[
-\Delta A^{\circ}=-k_{B}Tln\frac{\int_{V_{1}}\int_{\Gamma_{1}}e^{-\beta[U_{1}(x)+pV_{1}]}dVdx}{\int_{V_{0}}\int_{\Gamma_{0}}e^{-\beta[U_{0}(x)+pV_{o}]}dVdx}
+\Delta A=A_{1}-A_{0}=-\beta^{-1}\ln\frac{Q_{1}}{Q_{0}}.
 \]
 
 \end_inset
 
 
+\change_deleted -1046193749 1680022956
+
 \end_layout
 
 \begin_layout Itemize
-Where 
+
+\change_deleted -1046193749 1680022954
+Where free energy difference process in which neither the temperature or
+ particles' masses change, the kinetic contribution to the Hamiltonian is
+ constant.
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680023157
+As neither the temperature or particles' masses change, the momenta of the
+ two partition functions integrate out and cancel, 
+\change_deleted -1046193749 1680023161
+Therefore
+\change_inserted -1046193749 1680023161
+so
+\change_unchanged
+ only the configurational part of the partition function needed to be considered
+, and the free free energy of binding can be expressed as 
+\change_deleted -1046193749 1680023169
+follows:
+\change_unchanged
+
+\begin_inset Formula 
+\[
+\Delta A^{\circ}=-k_{B}Tln\frac{\int_{V_{1}}\int_{\Gamma_{1}}e^{-\beta[U_{1}(x)+pV_{1}]}dVdx}{\int_{V_{0}}\int_{\Gamma_{0}}e^{-\beta[U_{0}(x)+pV_{o}]}dVdx},
+\]
+
+\end_inset
+
+
+\change_deleted -1046193749 1680023197
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680023195
+W
+\change_inserted -1046193749 1680023203
+w
+\change_unchanged
+here 
 \begin_inset Formula $V_{1}$
 \end_inset
 
@@ -1973,21 +2315,40 @@ Where
 \begin_inset Formula $V_{2}$
 \end_inset
 
- are the box volumes, while 
+ are the box volumes,
+\change_deleted -1046193749 1680023211
+ while
+\change_inserted -1046193749 1680023213
+ and
+\change_unchanged
+ 
 \begin_inset Formula $\Gamma_{0}$
 \end_inset
 
+
+\change_inserted -1046193749 1680023218
+ 
+\change_unchanged
 and 
 \begin_inset Formula $\Gamma_{1}$
 \end_inset
 
+
+\change_inserted -1046193749 1680023221
+ 
+\change_unchanged
 are the phase space volumes of the bound and unbound states.
  
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-Due to the compressibility of water, at 1atm the effect of changes in average
- of volume on binding is negligible 
+Due to the compressibility of water, at 1
+\change_inserted -1046193749 1680023227
+ 
+\change_unchanged
+atm the effect of changes in average of volume on binding is negligible
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "shirtsBestPracticesFree2012b"
@@ -1995,34 +2356,95 @@ literal "false"
 
 \end_inset
 
- Meaning the pV term can be ignored wand the Helmholtz free energy closely
- approximates the Gibbs free energy 
+
+\change_inserted -1046193749 1680023289
+,
+\change_unchanged
+ 
+\change_inserted -1046193749 1680023291
+m
+\change_deleted -1046193749 1680023291
+M
+\change_unchanged
+eaning the 
+\change_deleted -1046193749 1680023297
+pV
+\change_inserted -1046193749 1680023299
+
+\begin_inset Formula $pV$
+\end_inset
+
+-
+\change_deleted -1046193749 1680023299
+ 
+\change_unchanged
+term can be ignored 
+\change_deleted -1046193749 1680023275
+w
+\change_unchanged
+and the Helmholtz free energy closely approximates the Gibbs free energy
+ 
 \begin_inset Formula 
-\[
-\Delta G^{\circ}\approx\Delta A^{\circ}=-k_{B}Tln\frac{\int_{\Gamma_{1}}e^{-\beta U(x)}dx}{\int_{\Gamma_{0}}e^{-\beta U(x)}dx}
-\]
+\begin{equation}
+\Delta G^{\circ}\approx\Delta A^{\circ}=-k_{B}Tln\frac{\int_{\Gamma_{1}}e^{-\beta U(x)}dx}{\int_{\Gamma_{0}}e^{-\beta U(x)}dx}.\label{eq:final-two-state-binding}
+\end{equation}
 
 \end_inset
 
 
 \end_layout
 
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
 \begin_layout Itemize
-For complex systems the partition function has no analytical solution and
- thus simulations need to be used to sample the accessible phase space 
+For complex systems
+\change_inserted -1046193749 1680023661
+,
+\change_unchanged
+ the partition function has no analytical solution and
+\change_deleted -1046193749 1680023811
+ thus
+\change_unchanged
+ simulations need to be used to sample the accessible phase space
+\change_deleted -1046193749 1680023815
+ 
+\change_inserted -1046193749 1680023669
+.
+\change_unchanged
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680023943
 - Sampling the entire phase space is computationally expensive and needed
  to calculate accurate estimates.
  
+\change_unchanged
+
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-- Simulating binding events are usually dominated by rate dissociations
- which can be the millisecond timescale and reaches the microsecond for
- a type drug
+
+\change_deleted -1046193749 1680023692
+- 
+\change_unchanged
+Simulating binding events are usually dominated by rate dissociations which
+ can be the millisecond timescale and reaches the microsecond for 
+\change_deleted -1046193749 1680023841
+a type
+\change_inserted -1046193749 1680023842
+some
+\change_unchanged
+ drug
+\change_inserted -1046193749 1680023837
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "meyBestPracticesAlchemical2020a"
@@ -2031,12 +2453,33 @@ literal "false"
 \end_inset
 
 ]..
- In section 2.1.4 we will discuss how alchemical free energy calculations
- can yield predictions that do not require direct simulations of binding/unbindi
-ng events.
+ 
+\change_inserted -1046193749 1680023742
+
 \end_layout
 
-\end_deeper
+\begin_deeper
+\begin_layout Itemize
+In 
+\change_inserted -1046193749 1680023925
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Free-Energy-Perturbation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+,
+\change_deleted -1046193749 1680023729
+section 2.1.4
+\change_unchanged
+ we will discuss how alchemical free energy calculations can yield predictions
+ that do not require direct simulations of binding/unbinding events.
+\end_layout
+
 \end_deeper
 \end_deeper
 \end_deeper
@@ -2045,20 +2488,73 @@ Molecular Modeling of physical chemistry of binding
 \end_layout
 
 \begin_layout Itemize
-To estimate the free energy differences accuratley a molecular model is
- required that describes the thermodynamic parameters of a system correctly.
+To estimate the free energy differences 
+\change_deleted -1046193749 1680023953
+accuratley
+\change_inserted -1046193749 1680024295
+accurately,
+\change_unchanged
+ a molecular model is required that describes the 
+\change_inserted -1046193749 1680024334
+relevant 
+\change_deleted -1046193749 1680024317
+thermodynamic
+\change_inserted -1046193749 1680024318
+physical
+\change_unchanged
+ 
+\change_deleted -1046193749 1680024323
+parameters
+\change_inserted -1046193749 1680024325
+properties
+\change_unchanged
+ of a system correctly.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-The Hamiltonian used to calculate the energy and forces is chosen in order
- that all configurations have the correct probability of thermodynamic state
+
+\change_inserted -1046193749 1680024352
+Specifically, 
+\change_deleted -1046193749 1680024353
+T
+\change_inserted -1046193749 1680024355
+t
+\change_unchanged
+he Hamiltonian used to calculate the energy and forces 
+\change_deleted -1046193749 1680024373
+is chosen in order 
+\change_inserted -1046193749 1680024383
+should ensure 
+\change_unchanged
+that all configurations 
+\change_inserted -1046193749 1680024423
+will be sampled with 
+\change_deleted -1046193749 1680024425
+have
+\change_unchanged
+ the correct probability
+\change_deleted -1046193749 1680024399
+ of thermodynamic state
+\change_inserted -1046193749 1680024345
+.
+\change_unchanged
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-In practice the choice of the hamiltonian is often compromise between accuracy
- and efficiency.
+In practice
+\change_inserted -1046193749 1680024437
+,
+\change_unchanged
+ the choice of the 
+\change_inserted -1046193749 1680024441
+H
+\change_deleted -1046193749 1680024440
+h
+\change_unchanged
+amiltonian is often compromise between accuracy and efficiency.
  
 \end_layout
 
@@ -2069,9 +2565,85 @@ Two major factors that dictate the cost of the energy and force evaluation
 
 \begin_deeper
 \begin_layout Itemize
-One can use a quantum-mechanical description of the system as the electrons
- DOF are modeled explicitly, to classical description where one atom are
- treated as particles.
+
+\change_deleted -1046193749 1680024556
+One can use a
+\change_inserted -1046193749 1680024556
+A
+\change_unchanged
+ quantum-mechanical description of the system 
+\change_inserted -1046193749 1680024576
+provides the most detailed description, 
+\change_unchanged
+as the electrons DOF
+\change_inserted -1046193749 1680024467
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680024470
+TL define
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ are modeled explicitly
+\change_inserted -1046193749 1680024583
+.
+\end_layout
+
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680024610
+, to c
+\change_inserted -1046193749 1680024610
+C
+\change_unchanged
+lassical description
+\change_inserted -1046193749 1680024615
+s
+\change_unchanged
+ 
+\change_deleted -1046193749 1680024632
+where
+\change_inserted -1046193749 1680024637
+ treat 
+\change_deleted -1046193749 1680024639
+ one
+\change_unchanged
+ 
+\change_deleted -1046193749 1680024680
+atom are treated
+\change_inserted -1046193749 1680024681
+atoms
+\change_unchanged
+ as particles.
+\change_inserted -1046193749 1680024694
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680024808
+TL there is a lot of variety here too, so you may want to rephrase.
+ The are multisite classical models for both fixed charge and polarizable
+ FFs (i.e., more than one particle per atom) and coarse-grained with with
+ multiple atoms per particle.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
  
 \end_layout
 
@@ -2088,7 +2660,7 @@ Here we focus on classical Hamiltonians that incorporate fixed point charges.
  
 \end_layout
 
-\end_deeper
+\begin_deeper
 \begin_layout Itemize
 These type of Hamiltonian are referred as to 
 \begin_inset Quotes eld
@@ -2098,15 +2670,31 @@ force field
 \begin_inset Quotes erd
 \end_inset
 
- which attempt to represent inter and intramolecular interaction through
- general potential energy function.
+ which attempt to represent inter
+\change_inserted -1046193749 1680025032
+-
+\change_unchanged
+ and intra
+\change_inserted -1046193749 1680025035
+-
+\change_unchanged
+molecular interaction through general potential energy function.
  
 \end_layout
 
 \end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
 \begin_layout Itemize
-In these research we use the general AMBER (Assisted Model Building and
- Energy Refinement) force field (GAFF) 
+In th
+\change_deleted -1046193749 1680025080
+ese research
+\change_inserted -1046193749 1680025083
+is thesis,
+\change_unchanged
+ we use the general AMBER (Assisted Model Building and Energy Refinement)
+ force field (GAFF) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "wangDevelopmentTestingGeneral2004"
@@ -2114,14 +2702,56 @@ literal "false"
 
 \end_inset
 
-during our MD simulations.
+
+\change_deleted -1046193749 1680025090
+during
+\change_inserted -1046193749 1680025090
+ for
+\change_unchanged
+ our MD simulations.
  
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
 The potential energy function that describes the force field of the AMBER
- software package is shown below:
+ software package is 
+\change_deleted -1046193749 1680025126
+shown below:
+\change_inserted -1046193749 1680025098
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680025119
+TL use 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680025111
+
+\backslash
+text{}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ for all of the words
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \begin_inset Formula 
 \[
 V_{AMBER}(r^{N})=E_{bonded}+E_{non-bonded},
@@ -2166,20 +2796,44 @@ V_{AMBER}(r^{N})=\underset{i_{bonds}}{\sum}k_{bi}(l_{i}-l_{i}^{0})^{2}+\underset
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680025173
 The first three terms 
+\change_unchanged
+
 \begin_inset Formula $E_{bonded}$
 \end_inset
 
- consist of terms describing the bond-angle, bond-stretching, the bond-angle
- bending, and dihedral-angle bending.
+ consist
+\change_inserted -1046193749 1680025180
+s
+\change_unchanged
+ of terms describing 
+\change_deleted -1046193749 1680025225
+the bond-angle, 
+\change_unchanged
+bond-stretching, 
+\change_deleted -1046193749 1680025230
+the 
+\change_unchanged
+bond-angle bending, and dihedral-angle bending.
  
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_inserted -1046193749 1680025288
+For bond-stretching, 
+\change_unchanged
+
 \begin_inset Formula $k_{bi}$
 \end_inset
 
+
+\change_inserted -1046193749 1680025240
+ 
+\change_unchanged
 represents the force constant between the 
 \begin_inset Formula $i$
 \end_inset
@@ -2188,38 +2842,151 @@ th atom pair,
 \begin_inset Formula $l_{i}^{0}$
 \end_inset
 
- represents the equilibrium bond length and 
+ represents the equilibrium bond length
+\change_inserted -1046193749 1680025299
+,
+\change_unchanged
+ and 
 \begin_inset Formula $l_{i}$
 \end_inset
 
 represents the current bond length
+\change_inserted -1046193749 1680025314
+.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680025328
+For bond-angle bending, ....
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680025349
+For dihedral-angle bending, ....
+\change_unchanged
+
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
+
+\change_inserted -1046193749 1680025390
+\begin_inset Formula $E_{\text{electrostatics}}$
+\end_inset
+
+ consists of 
+\change_deleted -1046193749 1680025370
 The fourth and fifth term in the double summation represents energy due
- to the non-bonded pairs of atoms such as electrostatics and van der Waals
- energies.
+ to the non-bonded pairs of atoms such as
+\change_unchanged
+ electrostatics and van der Waals energies.
  
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-The van der Waals energy is calculated using the equilibrium distance 
+The van der Waals energy is calculated using 
+\change_deleted -1046193749 1680025712
+the
+\change_inserted -1046193749 1680025719
+the Lennard-Jone model 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680025720
+TL cite
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ 
+\change_inserted -1046193749 1680025724
+with 
+\change_unchanged
+equilibrium distance 
 \begin_inset Formula $r_{ij}^{0}$
 \end_inset
 
-and scaling factor 
+
+\change_inserted -1046193749 1680025398
+ 
+\change_unchanged
+and 
+\change_deleted -1046193749 1680025430
+scaling
+\change_unchanged
+ 
+\change_inserted -1046193749 1680025456
+and energy 
+\change_deleted -1046193749 1680025457
+factor
+\change_unchanged
+ 
 \begin_inset Formula $\epsilon_{ij}$
 \end_inset
 
-and 
-\begin_inset Formula $f_{ij}$
-\end_inset
 
-is another scaling factor for atom bonds.
+\change_inserted -1046193749 1680025546
+.
+\change_deleted -1046193749 1680025545
+and
+\change_unchanged
+ 
+\change_inserted -1046193749 1680025660
+
 \end_layout
 
 \begin_layout Itemize
+
+\change_inserted -1046193749 1680025674
+The electrostatic energy ...
+\change_unchanged
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{ij}^{\text{LJ}}$
+\end_inset
+
+
+\change_inserted -1046193749 1680025731
+ and 
+\begin_inset Formula $f_{ij}^{\text{elec}}$
+\end_inset
+
+ 
+\change_deleted -1046193749 1680025554
+is another
+\change_unchanged
+ 
+\change_deleted -1046193749 1680025559
+scaling
+\change_inserted -1046193749 1680025769
+ are scaling factors for the Lennard-Jones and electrostatic energy
+\change_deleted -1046193749 1680025586
+ factor for
+\change_inserted -1046193749 1680025587
+based
+\change_unchanged
+ atom
+\change_inserted -1046193749 1680025494
+s
+\change_unchanged
+ 
+\change_deleted -1046193749 1680025496
+bonds
+\change_inserted -1046193749 1680025611
+ on the bond separations:
+\change_unchanged
+
 \begin_inset Formula $f_{ij}=0$
 \end_inset
 
@@ -2227,6 +2994,10 @@ is another scaling factor for atom bonds.
 \begin_inset Formula $f_{ij}^{LJ}=1/1.2$
 \end_inset
 
+
+\change_inserted -1046193749 1680025627
+ 
+\change_unchanged
 and 
 \begin_inset Formula $f_{ij}^{elec}=1/2.0$
 \end_inset
@@ -2242,6 +3013,7 @@ and
 for all others.
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 The factor of 2 ensures the equilibrium distance is 
 \begin_inset Formula $r_{ij}^{0}$
@@ -2253,37 +3025,131 @@ The factor of 2 ensures the equilibrium distance is
 \end_deeper
 \end_deeper
 \end_deeper
+\end_deeper
 \begin_layout Subsection
-Implicit solvent model reduces configurational sampling 
+Implicit solvent model
+\change_inserted -1046193749 1680026113
+s
+\change_deleted -1046193749 1680026111
+ reduces configurational sampling 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
-Water plays a fundamental role in molecular association and often mediates
- protein-ligand interactions.
+Water plays a fundamental role in molecular association and 
+\change_deleted -1046193749 1680026130
+often
+\change_unchanged
+ mediates protein-ligand interactions.
  
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Traditionally, explicit water models are used to which places sufficiently
- large number of individual water molecules around the solute simulating
- their motion.
+
+\change_deleted -1046193749 1680026147
+Traditionally
+\change_inserted -1046193749 1680026149
+Commonly
+\change_unchanged
+, explicit water models are used
+\change_inserted -1046193749 1680026161
+,
+\change_deleted -1046193749 1680026157
+ to
+\change_unchanged
+ 
+\change_inserted -1046193749 1680026207
+in 
+\change_unchanged
+which 
+\change_deleted -1046193749 1680026210
+places sufficiently
+\change_unchanged
+ large number of individual water molecules 
+\change_inserted -1046193749 1680026216
+are placed 
+\change_unchanged
+around the solute
+\change_deleted -1046193749 1680026180
+ simulating their motion
+\change_inserted -1046193749 1680026260
+ and modeled with approximately the same theoretical level as the solute
+\change_unchanged
+.
  
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-While arguable explicit models are considered a realistic representation
- of an water environment, it suffers considerably computational costs.
- Moreover it is not clear if any explicit water model can be used for accurate
- standard estimate of ligand-receptor binding.
+While 
+\change_deleted -1046193749 1680026275
+arguable
+\change_unchanged
+ explicit models are 
+\change_deleted -1046193749 1680026289
+considered
+\change_inserted -1046193749 1680026290
+generally
+\change_unchanged
+ a realistic representation of an water environment, 
+\change_inserted -1046193749 1680026298
+they are
+\change_deleted -1046193749 1680026296
+it suffers considerably
+\change_unchanged
+ computational
+\change_inserted -1046193749 1680026307
+ly demanding
+\change_deleted -1046193749 1680026303
+ costs
+\change_unchanged
+.
  
+\change_inserted -1046193749 1680026316
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-For example a popular TIP3P model can lead to 40% (6 kcal/mol) error relative
- to experiment in binding enthalpy estimates of small host-guest system
+Moreover
+\change_inserted -1046193749 1680026323
+,
+\change_unchanged
+ it is not clear if any explicit water model can be used for accurate standard
+ estimate of ligand-receptor binding.
+\change_inserted -1046193749 1680026415
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680026566
+TL This is a very general statement and worry-some if true.
+ Certainly, the result will be sensitive to the model.
+ And there are challenges using explicit solvent, such as proper sampling,
+ especially for buried waters that can mediate binding.
+ 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ 
+\end_layout
+
+\begin_layout Itemize
+For example
+\change_inserted -1046193749 1680026399
+,
+\change_unchanged
+ a popular TIP3P model can lead to 40% (6 kcal/mol) error relative to experiment
+ in binding enthalpy estimates of small host-guest system
 \begin_inset CommandInset citation
 LatexCommand citep
 key "kidderOxygenationFrogGastric1975"
@@ -2293,14 +3159,69 @@ literal "false"
 
 .
  
+\change_inserted -1046193749 1680026342
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680026387
+TL This citation is strange.
+ It is from 1975, pre-dating TIP3P by several years.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Implicit solvation on the other hand provides a significant computational
- advantage by representing water as a continuous medium with a uniform dielectri
-c constant.
+Implicit solvation on the other hand
+\change_inserted -1046193749 1680026602
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680026616
+TL provide a simple definition of an implicit solvent
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ provides a significant computational advantage by representing water as
+ a continuous medium with a uniform dielectric constant.
  
+\change_inserted -1046193749 1680026626
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680026655
+TL also mention the drawback of implicit solvent.
+ Certainly accuracy is one.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_deeper
@@ -2314,8 +3235,33 @@ As a consequence, simulations using implicit solvents are much more efficient
 \end_deeper
 \end_deeper
 \begin_layout Itemize
-Where the use of implicit solvent become more attractive in sampling the
- vast chemical space in search of a potential drug candidate.
+
+\change_deleted -1046193749 1680026678
+Where the use of i
+\change_inserted -1046193749 1680026680
+I
+\change_unchanged
+mplicit solvent 
+\change_deleted -1046193749 1680026689
+become more
+\change_inserted -1046193749 1680026691
+is an
+\change_unchanged
+ attractive
+\change_inserted -1046193749 1680026698
+ approach for
+\change_deleted -1046193749 1680026699
+ in
+\change_unchanged
+ sampling the vast chemical space in search of 
+\change_deleted -1046193749 1680026705
+a
+\change_unchanged
+ potential drug candidate
+\change_inserted -1046193749 1680026708
+s
+\change_unchanged
+.
  
 \end_layout
 
@@ -2324,32 +3270,14 @@ Where the use of implicit solvent become more attractive in sampling the
 The continuum of implicit solvent models can estimate the free energy of
  solvation as a function of the conformation of the solute.
  
+\change_inserted -1046193749 1680026846
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-In implicit solvent model the external continuum medium and the solute will
- have different dielectric constants.
- 
-\end_layout
 
-\begin_deeper
-\begin_layout Itemize
-For example, most common dielectric of the solvent with have an dielectric
- of 78.5, while the solute interior will have an dielectric between 1 to
- 4.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Pervious works have shown he internal dielectric can be adjusted in order
- to improved the accuracy of MM/GBSA estimate of protein-ligand affinity.
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
+\change_inserted -1046193749 1680026847
 The solvation free energy is the reversible work of transferring a solute
  from the gas phase to solution.
  
@@ -2357,6 +3285,139 @@ The solvation free energy is the reversible work of transferring a solute
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_inserted -1046193749 1680026847
+The 
+\begin_inset Formula $\Delta G_{\text{solv}}$
+\end_inset
+
+ is partitioned into two parts: a polar contribution 
+\begin_inset Formula $\Delta G_{el}$
+\end_inset
+
+ which depends on the electrostatic contributions, a non-polar contribution
+ 
+\begin_inset Formula $\Delta G_{npol}$
+\end_inset
+
+, which depends on the shape of the solute cavity
+\begin_inset Formula 
+\[
+\Delta G_{solv}=\Delta G_{el}+\Delta G_{npol}
+\]
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+In implicit solvent model
+\change_inserted -1046193749 1680026730
+s,
+\change_unchanged
+ the external continuum medium and the solute will have different dielectric
+ constants.
+
+\change_inserted -1046193749 1680026732
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680026745
+TL this is only true for dielectric continuum models
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+For example, 
+\change_deleted -1046193749 1680026770
+most common
+\change_inserted -1046193749 1680026770
+the
+\change_unchanged
+ dielectric of the solvent 
+\change_deleted -1046193749 1680026781
+with have an dielectric of
+\change_inserted -1046193749 1680026785
+is typically set to
+\change_unchanged
+ 78.5
+\change_inserted -1046193749 1680026790
+ to mimic water
+\change_unchanged
+, while the solute interior will have an dielectric between 1 to 4.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+P
+\change_inserted -1046193749 1680026796
+re
+\change_deleted -1046193749 1680026796
+er
+\change_unchanged
+vious work
+\change_deleted -1046193749 1680026801
+s
+\change_unchanged
+ ha
+\change_inserted -1046193749 1680026803
+s
+\change_deleted -1046193749 1680026803
+ve
+\change_unchanged
+ shown he internal dielectric can be adjusted in order to improved the accuracy
+ of MM/GBSA estimate of protein-ligand affinity.
+ 
+\change_inserted -1046193749 1680026806
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680026808
+TL Cite
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680026844
+The solvation free energy is the reversible work of transferring a solute
+ from the gas phase to solution.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680026844
 The 
 \begin_inset Formula $\Delta G_{solvation}$
 \end_inset
@@ -2379,17 +3440,50 @@ The
 \end_inset
 
 
+\change_unchanged
+
 \end_layout
 
 \end_deeper
 \end_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680026855
 The next section will briefly discuss the theory underlying the GBSA.
  ->both 
+\change_unchanged
+
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Generalized Born Surface Area (GBSA) implicit solvent model 
+\change_inserted -1046193749 1680026929
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1680026929
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680027030
+TL I suggest just moving this into 2.1.2 and use it as a specific example
+ of an implicit solvent.
+ Currently, you are describing dielectric continuum models above, which
+ is just one approach.
+ So, make it clear that you are taking about these models and GB specifically.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
@@ -2412,15 +3506,28 @@ canonical
 \begin_inset Quotes erd
 \end_inset
 
- generalized Born model approximates the Green function of the Poisson equation
- shown below:
+ generalized Born model approximates the Green
+\change_inserted -1046193749 1680027041
+'s
+\change_unchanged
+ function of the Poisson equation
+\change_deleted -1046193749 1680027096
+ shown below
+\change_inserted -1046193749 1680027097
+ as
+\change_deleted -1046193749 1680027104
+:
+\change_unchanged
+
 \begin_inset Formula 
 \[
-\Delta G_{el}=-\frac{1}{2}\left(\frac{1}{\epsilon_{in}}-\frac{exp(-\kappa f_{GB})}{\epsilon_{out}}\right)\underset{ij}{\sum}\frac{q_{i}q_{j}}{f_{GB}(r_{ij},R_{i},R_{j})}
+\Delta G_{el}=-\frac{1}{2}\left(\frac{1}{\epsilon_{in}}-\frac{exp(-\kappa f_{GB})}{\epsilon_{out}}\right)\underset{ij}{\sum}\frac{q_{i}q_{j}}{f_{GB}(r_{ij},R_{i},R_{j})},
 \]
 
 \end_inset
 
+
+\change_deleted -1046193749 1680027059
 
 \end_layout
 
@@ -2449,6 +3556,10 @@ and
 \begin_inset Formula $R_{i}$
 \end_inset
 
+
+\change_inserted -1046193749 1680027069
+ 
+\change_unchanged
 and 
 \begin_inset Formula $R_{j}$
 \end_inset
@@ -2457,6 +3568,10 @@ and
 \begin_inset Formula $\kappa$
 \end_inset
 
+
+\change_inserted -1046193749 1680027075
+ 
+\change_unchanged
 is the Debye-Hückel screening parameter[cite].
  
 \end_layout
@@ -2472,10 +3587,57 @@ is the Debye-Hückel screening parameter[cite].
 \end_inset
 
  is 
+\change_inserted -1046193749 1680027132
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680027140
+TL is this the form used in igb=2?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \begin_inset Formula 
 \[
-F_{GB}(r_{ij},R_{i},R_{j})=[r_{ij}^{2}+R_{i}R_{j}exp(-r_{ij}^{2}/4R_{i}R_{j})]^{1/2}
+F_{GB}(r_{ij},R_{i},R_{j})=[r_{ij}^{2}+R_{i}R_{j}exp(-r_{ij}^{2}/4R_{i}R_{j})]^{1/2}.
 \]
+
+\end_inset
+
+
+\change_inserted -1046193749 1680027151
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680027153
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680027200
+TL be sure to point out the 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{j}$
+\end_inset
+
+ are fit parameters of the model.
+\change_unchanged
+
+\end_layout
 
 \end_inset
 
@@ -2486,6 +3648,17 @@ F_{GB}(r_{ij},R_{i},R_{j})=[r_{ij}^{2}+R_{i}R_{j}exp(-r_{ij}^{2}/4R_{i}R_{j})]^{
 \end_deeper
 \begin_layout Subsection
 Free Energy Perturbation 
+\change_inserted -1046193749 1680023724
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Free-Energy-Perturbation"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
@@ -2498,18 +3671,113 @@ literal "false"
 
 \end_inset
 
-] the current capabilities of using common molecular dynamic software packages
- and high-end GPUs could reach a few hundred of ns/day making these calculations
- unappealing for highthoughput drug discovery timescales.
+]
+\change_inserted -1046193749 1680027402
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1680027438
+the
+\change_unchanged
+ current 
+\change_deleted -1046193749 1680027440
+capabilities
+\change_unchanged
+ 
+\change_deleted -1046193749 1680027444
+of
+\change_unchanged
+ 
+\change_deleted -1046193749 1680027417
+using
+\change_unchanged
+ common molecular dynamic software packages and high-end GPUs 
+\change_deleted -1046193749 1680027450
+could
+\change_unchanged
+ reach a 
+\change_inserted -1046193749 1680027464
+only a 
+\change_unchanged
+few hundred of ns/day
+\change_inserted -1046193749 1680027479
+ for small systems 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680027502
+TL you need to specify this a bit more, what size of system?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ making these calculations unappealing for high
+\change_inserted -1046193749 1680027382
+ 
+\change_unchanged
+th
+\change_inserted -1046193749 1680027386
+r
+\change_unchanged
+oughput drug discovery timescales.
  
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Free energy perturbation calculations provided way to estimate the binding
- affinity without the actual needed of simulating the binding event.
- The earliest and well known methods to estimate free energy difference
- based on the perturbation theory was introduced by Zwanzig
+Free energy perturbation calculations provide
+\change_deleted -1046193749 1680027517
+d
+\change_unchanged
+ 
+\change_inserted -1046193749 1680027519
+a 
+\change_unchanged
+way to estimate the binding affinity without the actual needed of simulating
+ the binding event.
+ 
+\change_inserted -1046193749 1680027532
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The earliest and well known methods to estimate free energy difference based
+ on the perturbation theory was introduced by 
+\change_inserted -1046193749 1680027658
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680027685
+yTL you should be able to derive this directly from 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:final-two-state-binding"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+Zwanzig
 \begin_inset CommandInset citation
 LatexCommand citep
 key "zwanzigHighTemperatureEquation1954"
@@ -2518,9 +3786,13 @@ literal "false"
 \end_inset
 
 
+\change_inserted -1046193749 1680027550
+, 
+\change_unchanged
+
 \begin_inset Formula 
 \[
-\Delta G_{0,1}=-k_{B}Tln\left\langle e^{-\beta\left(U_{1}(x\right)-U_{0}(x))}\right\rangle _{0}
+\Delta G_{0,1}=-k_{B}Tln\left\langle e^{-\beta\left(U_{1}(x\right)-U_{0}(x))}\right\rangle _{0}.
 \]
 
 \end_inset
@@ -2528,13 +3800,17 @@ literal "false"
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680027570
 The free energy difference by two states can be calculated as a logarithm
  of the ensemble average of Boltzmann weighted potential.
  
+\change_unchanged
+
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 The 
 \begin_inset Formula $\left\langle \right\rangle _{0}$
@@ -2545,7 +3821,26 @@ The
  state 1
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
+
+\change_inserted -1046193749 1680027736
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680027766
+TL generally, you should go in both directions if using this formula.
+ This is how you check for convergence.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 It is also possible to compute the reverse transformation 1->0 but in practice
  their convergence properties may not be the same 
 \begin_inset CommandInset citation
@@ -2581,8 +3876,13 @@ Multistate Bennett Acceptance Ratio (MBAR)
 \end_layout
 
 \begin_layout Itemize
-A recurring challenge in ligand-receptor binding is the collecting of sufficient
- amount of data to estimate binding affinity to adequate precision.
+A recurring challenge in ligand-receptor binding is the 
+\change_deleted -1046193749 1680027803
+collecting
+\change_inserted -1046193749 1680027807
+sampling
+\change_unchanged
+ of sufficient amount of data to estimate binding affinity to adequate precision.
 \end_layout
 
 \begin_deeper
@@ -2600,9 +3900,18 @@ literal "false"
  
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
-Mutilstate Bennett acceptance method (MBAR) has shown to be a superior estimator
+Mu
+\change_inserted -1046193749 1680027834
+lt
+\change_deleted -1046193749 1680027834
+t
+\change_inserted -1046193749 1680027828
+i
+\change_deleted -1046193749 1680027828
+il
+\change_unchanged
+state Bennett acceptance method (MBAR) has shown to be a superior estimator
  in that it has the lowest variance and is asymptotically unbiased 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2616,18 +3925,41 @@ literal "false"
 
 \begin_deeper
 \begin_layout Itemize
-Noting that sufficient phase space overlap is required for accurate estimates
- of binding affinity, MBAR make used all configurations sampled form each
- of these states.
+
+\change_inserted -1046193749 1680027899
+MBAR makes use of all configurations sampled form each of these states,
+ though
+\change_deleted -1046193749 1680027900
+Noting that
+\change_unchanged
+ sufficient phase space overlap is
+\change_inserted -1046193749 1680027862
+ still
+\change_unchanged
+ required for accurate estimates of binding affinity
+\change_inserted -1046193749 1680027907
+.
+\change_deleted -1046193749 1680027905
+,
+\change_unchanged
  
+\change_deleted -1046193749 1680027881
+MBAR make used all configurations sampled form each of these states.
+ 
+\change_unchanged
+
 \end_layout
 
 \end_deeper
+\end_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680027964
 The MBAR equation 
+\change_unchanged
+
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 In MBAR formulation, each state is characterized by a specific combination
  of potential energy function 
@@ -2647,18 +3979,53 @@ In MBAR formulation, each state is characterized by a specific combination
 \end_inset
 
  depending on the ensemble.
- The reduced potential energy 
+ 
+\change_inserted -1046193749 1680028116
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The reduced potential energy 
 \series bold
 
 \begin_inset Formula $\mu_{i}(x)$
 \end_inset
 
  
+\change_inserted -1046193749 1680028026
+
 \series default
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680028068
+TL check you notation here.
+ You are using 
+\begin_inset Formula $\mu$
+\end_inset
+
+ for both the reduced potential and the chemical potential.
+ Maybe use 
+\begin_inset Formula $u$
+\end_inset
+
+ for the former?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 of a state i is defined by Shirts and Chodera[cite]
 \begin_inset Formula 
 \[
-\mu_{i}(x)=\beta_{i}\left[U_{i}(x)+p_{i}V(x)+\mu_{i}^{T}n(x)\right]
+\mu_{i}(x)=\beta_{i}\left[U_{i}(x)+p_{i}V(x)+\mu_{i}^{T}n(x)\right],
 \]
 
 \end_inset
@@ -2666,9 +4033,14 @@ of a state i is defined by Shirts and Chodera[cite]
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
-Where 
+
+\change_inserted -1046193749 1680028097
+w
+\change_deleted -1046193749 1680028095
+W
+\change_unchanged
+here 
 \begin_inset Formula $n(x)$
 \end_inset
 
@@ -2676,9 +4048,37 @@ Where
  
 \end_layout
 
-\end_deeper
+\begin_deeper
 \begin_layout Itemize
-The free energy of a state i can be defined by Boltzmann weight:
+The free energy of a state 
+\change_deleted -1046193749 1680028086
+i
+\change_inserted -1046193749 1680028086
+
+\begin_inset Formula $i$
+\end_inset
+
+
+\change_unchanged
+ can be defined by Boltzmann weight:
+\change_inserted -1046193749 1680035165
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680035171
+TL I don't think this is correct.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \begin_inset Formula 
 \[
 f_{i}=-ln\int e^{-u_{i}(x)}dx
@@ -2689,28 +4089,56 @@ f_{i}=-ln\int e^{-u_{i}(x)}dx
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680028152
 To to estimate the free energy difference between two states 
 \begin_inset Formula $\Delta f_{ij}=f_{i}-f_{j}$
 \end_inset
 
 , is estimated using the MBAR equations down below, 
+\change_unchanged
+
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680028180
 Using MD simulation data MBAR gives the best estimator for free energy differenc
 e between multiple states.
  
+\change_unchanged
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_inserted -1046193749 1680035201
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680035206
+TL revise this sentence
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 Let 
 \begin_inset Formula $\left\{ x_{in}\right\} _{n=1}^{N_{i}}$
 \end_inset
 
+
+\change_inserted -1046193749 1680028189
+ 
+\change_unchanged
 be all configurations sampled in state i, then equation follow equation
  for computing the free energies:
 \begin_inset Formula 
@@ -2723,6 +4151,7 @@ be all configurations sampled in state i, then equation follow equation
 
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 
 \family roman
@@ -2740,6 +4169,10 @@ be all configurations sampled in state i, then equation follow equation
 \begin_inset Formula $\hat{f}_{i}$
 \end_inset
 
+
+\change_inserted -1046193749 1680028174
+ 
+\change_unchanged
 are the solution for MBAR free energy equations.
  
 \end_layout
@@ -2770,9 +4203,29 @@ could have large uncertainties.
 
 \end_deeper
 \end_deeper
+\end_deeper
 \begin_layout Itemize
 Lastly MBAR also provides a direct expression to estimate the statistical
  uncertainty in free energy differences.
+
+\change_inserted -1046193749 1680035225
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680035269
+TL you should state this
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \begin_inset Separator plain
 \end_inset
 
