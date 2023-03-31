@@ -116,6 +116,7 @@ logicalmkup
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -1463621830 "steven ayoub"
 \author -1046193749 "Luchko"
 \end_header
 
@@ -193,217 +194,104 @@ http://www.csun.edu/~mathgs/LaTex.html
 \end_layout
 
 \begin_layout Chapter
-Introduction 
+Introduction
+\change_deleted -1463621830 1680203174
+ 
+\change_inserted -1463621830 1680203170
+
 \end_layout
 
-\begin_layout Itemize
-From 
-\change_inserted -1046193749 1679958869
-the plagues of history to 
-\change_unchanged
-the influenza epidemic (1889-1890) 
-\change_deleted -1046193749 1679958872
-to
-\change_inserted -1046193749 1679958872
-and
-\change_unchanged
- the most recent COVID-19 virus outbreak, the world population is constantly
+\begin_layout Standard
+From the plagues of history to the influenza epidemic (1889-1890) and the
+ most recent COVID-19 virus outbreak, the world population is constantly
  facing life-threatening events and diseases, such as cancer.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Drug discovery, production, and implementation have been a huge part of
- preventing or improving these events and diseases.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Modern drug development requires the screening of a vast and diverse chemical
- space with the aim to simultaneously optimize properties such as protein-ligand
- affinity.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-However, this process is often risky, costly, and very time-consuming.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Currently, the conventional process of a potential drug candidate to reach
+ Drug discovery, production, and implementation have been a huge part of
+ preventing or improving these events and diseases.Modern drug development
+ requires the screening of a vast and diverse chemical space with the aim
+ to simultaneously optimize properties such as protein-ligand affinity.
+ However, this process is often risky, costly, and very time-consuming.
+ Currently, the conventional process of a potential drug candidate to reach
  the market has been estimated to take an average of 14 years, reaching
- up to 1.8 billion USD and an attrition rate as high as 96% [[paulHowImproveProdu
-ctivity2010]].
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-Therefore, the ability to efficiently
-\change_deleted -1046193749 1679958917
-,,
-\change_unchanged
- and quickly scan a large chemical for potential drug candidates is a major
- focus in drug discovery.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-
-\change_inserted -1046193749 1679959169
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1679959233
-TL it isn't necessarily obvious that you are talking about physical HTS
- here.
- Try to make this clear.
- Perhaps briefly describe the methods used?
-\change_unchanged
-
-\end_layout
+ up to 1.8 billion USD and an attrition rate as high as 96% 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "paulHowImproveProductivity2010"
+literal "false"
 
 \end_inset
 
-
-\change_deleted -1046193749 1679959167
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL robotic HTS
-\end_layout
-
-\end_inset
-
-
-\change_inserted -1046193749 1679958943
-Attempts to 
-\change_deleted -1046193749 1679958939
-E
-\change_inserted -1046193749 1679958945
-e
-\change_unchanged
-xploring 
-\change_deleted -1046193749 1679958948
-the vast
-\change_unchanged
- chemical space date
-\change_deleted -1046193749 1679958952
-s
-\change_unchanged
- back to the early drug discovery period (before the 19th century)
-\change_inserted -1046193749 1679959028
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1679959037
-TL do you have an example?
-\change_unchanged
-
-\end_layout
+.
+ Therefore, the ability to efficiently and quickly scan a large chemical
+ for potential drug candidates is a major focus in drug discoveryTherefore,
+ the ability to efficiently and quickly scan a large chemical for potential
+ drug candidates is a major focus in drug discovery.Attempts to exploring
+ chemical space date back to the early drug discovery period (before the
+ 19th century) during which chemists expanded the chemical space at an exponenti
+al rate from a handful of new substances in 1800 up to 11,000 of 1868
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lealExpansionChemicalSpace2022"
+literal "false"
 
 \end_inset
 
-
-\change_unchanged
- and the drug discovery and drug development period (20th century and beyond).
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-It was not until the “post-genome era,” during the late 20th century, where
+and the drug discovery and drug development period (20th century and beyond).
+ It was not until the “post-genome era,” during the late 20th century, where
  there was a huge surge of protein crystal structures that were made publicly
  available and become targets of therapeutic interest for small-molecule
- drug discovery.
- 
-\end_layout
+ drug discovery
+\begin_inset CommandInset citation
+LatexCommand citep
+key "reymondChemicalSpaceProject2015"
+literal "false"
 
-\begin_deeper
-\begin_layout Itemize
+\end_inset
 
-\change_deleted -1046193749 1679958980
-Which
-\change_inserted -1046193749 1679958980
-This
-\change_unchanged
- resulted in a shift of drug discovery strategies that focused largely on
- high-throughput screening (HTS)
-\change_inserted -1046193749 1679958990
-,
-\change_deleted -1046193749 1679958989
- which
-\change_unchanged
- le
-\change_inserted -1046193749 1679958992
-a
-\change_unchanged
-d
-\change_inserted -1046193749 1679958994
-ing
-\change_unchanged
- to the identification of all drug targets
-\change_inserted -1046193749 1679959065
-
+.This resulted in a shift of drug discovery strategies that focused largely
+ on high-throughput screening (HTS), leading to the identification of multiple
+ therapeutic drug targets
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -1046193749 1679959103
 TL I'm not sure what you are trying to say here.
  But I don't think you mean that 
 \series bold
 all
 \series default
  drug targets have been discovered.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
+ and the creation of very large compound libraries 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jhotiHighthroughputScreeningStructurebased2013"
+literal "false"
 
-\change_unchanged
- and the creation of very large compound libraries [[jhotiHighthroughputScreenin
-gStructurebased2013]].
- 
-\end_layout
+\end_inset
 
-\end_deeper
-\begin_layout Itemize
-Despite this, HTS operates on the fundamental basis that assumes no prior
+.
+ Despite this, HTS operates on the fundamental basis that assumes no prior
  knowledge of the drug binding site on the target protein.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-This led to an “irrational” drug design approach in which many pharmaceutical
+ This led to an “irrational” drug design approach in which many pharmaceutical
  companies saw a decrease in launched drug candidates that were successful
  in the market.
- [[jhotiHighthroughputScreeningStructurebased2013]]
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jhotiHighthroughputScreeningStructurebased2013"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
-\end_deeper
-\end_deeper
-\begin_layout Itemize
+\begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 TL rational, computational design using structure
@@ -411,168 +299,94 @@ TL rational, computational design using structure
 
 \end_inset
 
-
-\change_deleted -1046193749 1679959653
-To this end
-\change_inserted -1046193749 1679959656
-As an alternative
-\change_unchanged
-, computer-aided drug discovery (CADD) provides a rational structure-based
- approach that can yield valuable information about intermolecular interactions
- between protein and ligand systems as well as the binding affinity.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-CADD has already been successfully applied in all areas of drug discovery
+As an alternative, computer-aided drug discovery (CADD) provides a rational
+ structure-based approach that can yield valuable information about intermolecul
+ar interactions between protein and ligand systems as well as the binding
+ affinity.
+ CADD has already been successfully applied in all areas of drug discovery
  and has brought new drug compounds to the market for diverse diseases,
- including HIV-1-inhibiting drugs (atazanavir[ [robinsonBMS232632HighlyPotent200
-0]]
-\change_inserted -1046193749 1679959681
-,
-\change_unchanged
- saquinavir[ [krohnNovelBindingMode1991]] and ritonavir [ [kempfABT538PotentInhi
-bitor1995]]), as well as anticancer drugs, such as raltitrexed [[andersonProcess
-StructureBasedDrug2003]], and antibiotics (norfloxacin [[rutenberBindingAnticanc
-erDrug1996] ]).
- 
-\change_inserted -1046193749 1679959708
+ including HIV-1-inhibiting drugs (amprenavir
+\begin_inset CommandInset citation
+LatexCommand citep
+key "clarkWhatHasComputeraided2006"
+literal "false"
 
+\end_inset
+
+ and raltitrexed
+\begin_inset CommandInset citation
+LatexCommand citep
+key "andersonProcessStructureBasedDrug2003"
+literal "false"
+
+\end_inset
+
+), as well as topoisomerase II and IV inhibitor, such as norfloxacin
+\begin_inset CommandInset citation
+LatexCommand citep
+key "batoolStructureBasedDrugDiscovery2019"
+literal "false"
+
+\end_inset
+
+.
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -1046193749 1679959766
 TL These are all really old citations.
  Maybe that reflects how long it takes drugs to come to market.
  Anything newer?
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
 The use of molecular simulations on drug discovery has shown major impact
  in the past decade in response to the rapid development of computer hardware
  and performing computations in a time affordable manner.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Implementation of CADD provides an computational microscope how ligands
+ Implementation of CADD provides an computational microscope how ligands
  bind to a targeted receptor, how proteins interact with each other, and
- how proteins aggregate in the cell membrane 
-\change_inserted -1046193749 1679959809
-and 
-\change_unchanged
-is not only important for
-\change_inserted -1046193749 1679959827
- rational drug design
-\change_deleted -1046193749 1679959831
- the field of biophysics
-\change_unchanged
- but also for 
-\change_deleted -1046193749 1679959823
-rational drug design
-\change_inserted -1046193749 1679959845
- the field of biophysics and biochemistry
-\change_unchanged
-.
- 
-\end_layout
+ how proteins aggregate in the cell membrane and is not only important for
+ rational drug design but also for rational drug design the field of biophysics
+ and biochemistry.
+ An example is molecular docking programs
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wangMolecularDockingDrug2016"
+literal "false"
 
-\begin_deeper
-\begin_layout Itemize
-An example 
-\change_deleted -1046193749 1679959863
-being
-\change_inserted -1046193749 1679959863
-is
-\change_unchanged
- molecular docking programs[cite]
-\change_inserted -1046193749 1679959860
-,
-\change_unchanged
- which are widely used to target the binding site and compute the ligand
+\end_inset
+
+, which are widely used to target the binding site and compute the ligand
  binding affinity.
- 
-\end_layout
+ Although molecular docking provides a fast and efficient way to screen
+ a large number of potential drug candidates, the accuracy of docking is
+ limited by approximations used to achieve high computational speed.
+ Docking programs usually treat the receptor as a rigid molecule, employ
+ simple models of the receptor, ligand and water, and handle conformational
+ fluctuations with a gross approximation.
+\change_deleted -1463621830 1680220127
 
-\begin_deeper
-\begin_layout Itemize
-Although molecular docking provides a fast and efficient way to screen a
- large number of potential drug candidates, the accuracy of docking is limited
- by approximations used to achieve high computational speed.
- 
-\end_layout
-
-\begin_layout Itemize
-Docking programs usually treat the receptor as a rigid molecule, 
-\change_deleted -1046193749 1679960878
-and
-\change_inserted -1046193749 1679960882
-employ
-\change_unchanged
- 
-\change_inserted -1046193749 1679960864
-simple models of the receptor, ligand and water, 
-\change_deleted -1046193749 1679960821
-the lack of water treatments
-\change_unchanged
- and 
-\change_inserted -1046193749 1679960896
-handle 
-\change_unchanged
-conformational fluctuations 
-\change_deleted -1046193749 1679960902
-are handled 
-\change_unchanged
-with a gross approximation.
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\end_deeper
-\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
 
 \end_layout
 
-\begin_layout Itemize
-
-\change_inserted -1046193749 1679961222
+\begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -1046193749 1679961260
 TL The middle of this paragraph needs work.
  Specifically the three sentences that start with 'MD'.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
 
-\change_unchanged
-
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 TL introducing MD as BFE method and major problems
@@ -581,414 +395,170 @@ TL introducing MD as BFE method and major problems
 \end_inset
 
 In recent years, modern algorithms and rapid development of faster graphics
- processor units (GPUs) [
+ processor units (GPUs) 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
-key "friedrichsAcceleratingMolecularDynamic2009"
+LatexCommand citep
+key "friedrichsAcceleratingMolecularDynamic2009,stoneGPUacceleratedMolecularModeling2010,harveyACEMDAcceleratingBiomolecular2009"
 literal "false"
 
 \end_inset
 
-, 
+have made great strides in estimating protein-ligand molecule binding free
+ energies.
+ Binding free energy calculations are readily used in drug discovery to
+ rank potential candidates by their binding affinity 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
-key "stoneGPUacceleratedMolecularModeling2010"
+LatexCommand citep
+key "dengComputationsStandardBinding2009"
 literal "false"
 
 \end_inset
 
-, 
+ to a host target.
+ Molecular dynamics (MD) offer the ability to use full atomic description
+ and gather configurations of the receptor and ligand in order to account
+ for structural flexibility.
+ MD simulations are useful to monitor the time evolution of a system, for
+ example efficient sampling tool to recover statistical ensembles.
+ A force field is used to describe the potential energy of a system representing
+ both bonded and non-bonded (van der Waals) and electrostatic interactions.Severa
+l force fields commonly used in MD simulations are AMBER 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
-key "harveyACEMDAcceleratingBiomolecular2009"
+LatexCommand citep
+key "cornellSecondGenerationForce1995a,wangDevelopmentTestingGeneral2004"
 literal "false"
 
 \end_inset
 
-] have made great strides in estimating protein-ligand molecule binding
- free energies.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Binding free energy calculations are readily us
-\change_inserted -1046193749 1679960930
-ed
-\change_deleted -1046193749 1679960929
-ing
-\change_unchanged
- in drug discovery to rank
-\change_deleted -1046193749 1679960949
-ed
-\change_unchanged
- potential candidates by their binding affinity [https://doi.org/10.1021/jp807701h
-] to a host target.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-Molecular dynamics (MD) simulations 
-\change_inserted -1046193749 1679961120
-typically use a full atomic description and 
-\change_unchanged
-gather 
-\change_deleted -1046193749 1679961135
-statistical data of
-\change_unchanged
- configurations 
-\change_inserted -1046193749 1679961147
-of the receptor and ligand 
-\change_unchanged
-in order to account for structural flexibility
-\change_deleted -1046193749 1679961217
- at full atomic description to begin free energy calculations
-\change_unchanged
-.
- 
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-MD studies the physical interaction and motion of atoms based on Newtonian
- physics.
- 
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-MD are time-evolution simulations in which Newton’s laws of motions are
- continuously being updated generating configurations and trajectories of
- particles over time.
- 
-\end_layout
-
-\begin_layout Itemize
-A force field is used to describe the potential energy of a system representing
- both bonded and non-bonded (van der Waals) and electrostatic interactions.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Several force fields commonly used in MD simulations are AMBER [
+, CHARMM 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
-key "cornellSecondGenerationForce1995a"
-literal "false"
-
-\end_inset
-
-, 
-\begin_inset CommandInset citation
-LatexCommand citeauthor
-key "wangDevelopmentTestingGeneral2004"
-literal "false"
-
-\end_inset
-
-], CHARMM [
-\begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "brooksCHARMMProgramMacromolecular1983"
 literal "false"
 
 \end_inset
 
-], and GROMOS [
+, and GROMOS 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
-key "christenGROMOSSoftwareBiomolecular2005"
+LatexCommand citep
+key "christenGROMOSSoftwareBiomolecular2005a"
 literal "false"
 
 \end_inset
 
-].
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Today, classical MD simulations of protein and ligand binding events can
+.Today, classical MD simulations of protein and ligand binding events can
  last up to a few microseconds and have a sufficient degree of accuracy.
- 
+ Despite this success, classical MD suffers from two major challenges: molecular
+ modeling accuracy and insufficient sampling of conformational states due
+ to the high computational demands of simulations greater than a microsecond
+ in length.
 \end_layout
 
-\end_deeper
-\begin_layout Itemize
-Despite this success, classical MD suffers from two major challenges: force
- field inaccuracy and insufficient sampling of conformational states due
- to the high computational demands 
-\change_deleted -1046193749 1679961352
-that prohibit 
-\change_inserted -1046193749 1679961352
-of 
-\change_unchanged
-simulations greater than a microsecond in length.
- 
-\change_inserted -1046193749 1679963194
-
-\end_layout
-
-\end_deeper
 \begin_layout Itemize
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-TL focus on sampling
-\change_inserted -1046193749 1679963266
- - Intro sentence
-\change_unchanged
-
+TL focus on sampling - Intro sentence
 \end_layout
 
 \end_inset
 
-
-\change_inserted -1046193749 1679963281
  The latter of these problems....
-\change_unchanged
-
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Insufficient sampling is due to the 
-\change_inserted -1046193749 1679961374
-size of the 
-\change_unchanged
-integration time
-\change_inserted -1046193749 1679961381
--step
-\change_unchanged
- of MD, usually limited to femtoseconds or shorter (dictated by bond vibrations)
-\change_inserted -1046193749 1679961388
-,
-\change_unchanged
+Insufficient sampling is due to the size of the integration time-step of
+ MD, usually limited to femtoseconds or shorter (dictated by bond vibrations),
  whereas binding process are in the micro/millisecond time scale.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1046193749 1679961414
-This 
-\change_deleted -1046193749 1679961417
-Leading
-\change_inserted -1046193749 1679961419
-leads
-\change_unchanged
- to 
-\change_deleted -1046193749 1679961435
-a 
-\change_unchanged
-large computational cost
-\change_inserted -1046193749 1679961438
-s
-\change_unchanged
- to 
-\change_deleted -1046193749 1679961446
-be able to
-\change_unchanged
- sample important configurations that have a major contribution towards
- binding affinity.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL addressing enhanced sampling
-\end_layout
-
-\end_inset
-
-
-\change_deleted -1046193749 1679961549
-Additionally
-\change_inserted -1046193749 1679961586
-Beyond the computational cost
-\change_unchanged
-, insufficient sampling is a well-recognized problem in molecular simulation
- due to the fact there are high energy barriers separating structures/conformati
-ons, resulting in biological systems to become trapped in deep energy wells
- of their potential energy surfaces[
+ This leads to large computational costs to sample important configurations
+ that have a major contribution towards binding affinity.
+ Beyond the computational cost, insufficient sampling is a well-recognized
+ problem in molecular simulation due to the fact there are high energy barriers
+ separating structures/conformations, resulting in biological systems to
+ become trapped in deep energy wells of their potential energy surfaces
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "onuchicTheoryProteinFolding2004"
 literal "false"
 
 \end_inset
 
-].
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1046193749 1679961687
-Enhanced sampling techniques 
-\change_deleted -1046193749 1679961691
-A direct and effective way to
-\change_inserted -1046193749 1679961691
-can
-\change_unchanged
- accelerate
-\change_deleted -1046193749 1679961695
- the
-\change_unchanged
- thermodynamics calculations
-\change_inserted -1046193749 1679961840
+.Enhanced sampling techniques can accelerate thermodynamics calculations
  by making rare transition conformations more likely.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1046193749 1679961874
-This can be achieved by, fore example, modifying
-\change_deleted -1046193749 1679961727
- is to modify
-\change_unchanged
- the potential energy surfaces by adding a bias potential to the Hamiltonian
- on the system
-\change_inserted -1046193749 1679961837
- or increasing the temperature 
-\change_deleted -1046193749 1679961753
-; such techniques are called enhanced sampling
-\change_unchanged
-[
+ This can be achieved by, fore example, modifying the potential energy surfaces
+ by adding a bias potential to the Hamiltonian on the system or increasing
+ the temperature 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "yangEnhancedSamplingMolecular2019"
 literal "false"
 
 \end_inset
 
-].
-\end_layout
-
-\begin_layout Itemize
-
-\change_deleted -1046193749 1679961888
-Such methods , that are c
-\change_inserted -1046193749 1679961888
-C
-\change_unchanged
-ommonly used
-\change_inserted -1046193749 1679961897
- methods include 
-\change_deleted -1046193749 1679961897
-,
-\change_unchanged
-adaptive force bias [
+.
+ Commonly used methods include adaptive force bias 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "darveAdaptiveBiasingForce2008"
 literal "false"
 
 \end_inset
 
-], umbrella sampling[
+] umbrella sampling
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "pateyMonteCarloMethod1975"
 literal "false"
 
 \end_inset
 
-], [
+, steered MD
 \begin_inset CommandInset citation
-LatexCommand citeauthor
-key "ferrenbergNewMonteCarlo1988"
-literal "false"
-
-\end_inset
-
-], steered MD[
-\begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "grubmullerLigandBindingMolecular1996"
 literal "false"
 
 \end_inset
 
-], metadynamics[
+, metadynamics
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "laioEscapingFreeenergyMinima2002"
 literal "false"
 
 \end_inset
 
-], and replica exchange molecular dynamics (REMD) [
+, and replica exchange molecular dynamics (REMD) 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "hamelbergAcceleratedMolecularDynamics2004"
 literal "false"
 
 \end_inset
 
-]
-\change_deleted -1046193749 1679961915
- which have been developed to address the sampling problem
-\change_unchanged
 .
- 
-\change_inserted -1046193749 1679961920
-
-\end_layout
-
-\begin_layout Itemize
-Additionally, endpoint methods such as molecular mechanics Poission-Boltzman
+ Additionally, endpoint methods such as molecular mechanics Poission-Boltzman
  Surface Area (MM/PBSA) and molecular mechanics generalized Born Surface
  Area (MM/GBSA) provide a cheaper way to estimate binding free energy without
- simulating the binding process [
+ simulating the binding process 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
-key "houAssessingPerformanceMM2011"
+LatexCommand citep
+key "houAssessingPerformanceMM2011,millerMMPBSAPyEfficient2012"
 literal "false"
 
 \end_inset
 
-, 
-\begin_inset CommandInset citation
-LatexCommand citeauthor
-key "millerMMPBSAPyEfficient2012"
-literal "false"
-
-\end_inset
-
-].
- 
-\end_layout
-
-\begin_layout Itemize
-However, these techniques 
-\change_deleted -1046193749 1679961940
-suffer from being
-\change_inserted -1046193749 1679961942
-are still
-\change_unchanged
- computationally intensive, requiring a significant number of ensembles
- to converge completely.
- 
+.
+ However, these techniques are still computationally intensive, requiring
+ a significant number of ensembles to converge completely.
 \end_layout
 
 \end_deeper
-\end_deeper
-\begin_layout Itemize
+\begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 TL alchemical pathways to avoid exhaustive sampling
@@ -999,49 +569,13 @@ TL alchemical pathways to avoid exhaustive sampling
 Rather than following a physical pathway between two states, one can construct
  a non-physical pathway that involves the transformation of one system to
  another avoiding the need of exhaustive sampling.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-These classes of unphysical pathways are referred to as alchemical transformatio
-n and have emerged as a useful tool for predicting free energy differences
+ These classes of unphysical pathways are referred to as alchemical transformati
+on and have emerged as a useful tool for predicting free energy differences
  such as the binding of a small molecule to a receptor.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The term “alchemical” was coined by the fact that
-\change_inserted -1046193749 1679962005
-,
-\change_unchanged
- in silico, a molecule can be 
-\change_deleted -1046193749 1679961997
-modified by
-\change_unchanged
- transform
-\change_inserted -1046193749 1679962009
-ed
-\change_deleted -1046193749 1679962008
-ing
-\change_unchanged
- into a non
-\change_inserted -1046193749 1679962012
--
-\change_unchanged
-interaction molecule
-\change_inserted -1046193749 1679962017
-,
-\change_unchanged
- where its respective potentials are switched off through a series of intermedia
-te steps.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Most alchemical methods include free energy perturbation (FEP) [
+ The term “alchemical” was coined by the fact that, in silico, a molecule
+ can be transformed into a non-interaction molecule, where its respective
+ potentials are switched off through a series of intermediate steps.
+ Most alchemical methods include free energy perturbation (FEP) [
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "bennettEfficientEstimationFree1976"
@@ -1057,32 +591,8 @@ literal "false"
 
 \end_inset
 
-].
-\change_inserted -1046193749 1679962029
-
-\end_layout
-
-\begin_layout Itemize
-One of the earlier works conducted by Semial 
-\change_inserted -1046193749 1679962096
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1679962100
-TL is this a person?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-showcased that MD and Monte Carlo simulations could carry out these calculations
- for biomolecular systems [
+].Earlier works showcased that MD and Monte Carlo simulations could carry
+ out these calculations for biomolecular systems [
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "jorgensenMonteCarloSimulation1985"
@@ -1099,77 +609,21 @@ literal "false"
 \end_inset
 
 ].
- 
 \end_layout
 
-\end_deeper
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-Alchemical methods 
-\change_deleted -1046193749 1679962125
-could
-\change_inserted -1046193749 1679962125
-can
-\change_unchanged
- be classified as relative (RBFE) or absolute (ABFE) binding free energy
- calculations.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-RBFE calculations yield the binding free energy of two compounds by computing
+\begin_layout Standard
+Alchemical methods can be classified as relative (RBFE) or absolute (ABFE)
+ binding free energy calculations.
+ RBFE calculations yield the binding free energy of two compounds by computing
  free energy change by artificially transforming one compound to the other
  in the binding site.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1679962263
-However, 
-\change_unchanged
-RBFE requires prior knowledge of the reference compound’s binding affinity
+ RBFE requires prior knowledge of the reference compound’s binding affinity
  and requires that the two compounds being prepared are structurally and
  chemically similar.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-RBFE play a significant role in the lead optimization occurring in the later
- states in drug discovery
-\change_inserted -1046193749 1679962167
-, 
-\change_deleted -1046193749 1679962166
-.
- S
-\change_inserted -1046193749 1679962168
-s
-\change_unchanged
-uch as making small structural changes to 
-\change_deleted -1046193749 1679962196
-main 
-\change_inserted -1046193749 1679962197
-a 
-\change_unchanged
-lead candidate
-\change_inserted -1046193749 1679962203
- compound
-\change_unchanged
- 
-\change_deleted -1046193749 1679962210
-in
-\change_inserted -1046193749 1679962210
-to
-\change_unchanged
- create a molecular with higher affinity towards targeted host system
-\change_deleted -1046193749 1679962224
- and comparing other candidates’ relative affinity
-\change_unchanged
- [
+ RBFE play a significant role in the lead optimization occurring in the
+ later states in drug discovery, such as making small structural changes
+ to a lead candidate compound to create a molecular with higher affinity
+ towards targeted host system [
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "schindlerLargeScaleAssessmentBinding2020"
@@ -1178,319 +632,103 @@ literal "false"
 \end_inset
 
 ].
- 
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1679962257
-Additionally
-\change_inserted -1046193749 1679962258
-However
-\change_unchanged
-, RBFE requires structural similarity between molecules which in turn limits
- its capability of exploring chemical space.
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-Conversely, ABFE calculations are capable of computing the standard free
+\begin_layout Standard
+However, RBFE requires structural similarity between molecules which in
+ turn limits its capability of exploring chemical space.
+ Conversely, ABFE calculations are capable of computing the standard free
  energy difference between a given compound and the receptor of interest.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The standard free energy difference is computed from the reversible work
+ The standard free energy difference is computed from the reversible work
  of decoupling the ligand from the binding site and recouping it with the
- bulk solvent [
+ bulk solvent 
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "fengAbsoluteBindingFree2022"
 literal "false"
 
 \end_inset
 
-].
- 
-\end_layout
-
-\begin_layout Itemize
-Importantly, ABFE can be applied to diverse chemical space without requiring
- prior knowledge of 
-\change_inserted -1046193749 1679962304
-any
-\change_deleted -1046193749 1679962301
-the 
-\change_inserted -1046193749 1679962339
-binding 
-\change_unchanged
-affinit
-\change_inserted -1046193749 1679962309
-ies
-\change_deleted -1046193749 1679962308
-y
-\change_unchanged
- or structural similarities 
-\change_inserted -1046193749 1679962320
-between
-\change_deleted -1046193749 1679962315
-of
-\change_unchanged
- compounds [
+.
+ Importantly, ABFE can be applied to diverse chemical space without requiring
+ prior knowledge of any binding affinities or structural similarities between
+ compounds 
 \begin_inset CommandInset citation
-LatexCommand citealp
-key "courniaRigorousFreeEnergy2020"
+LatexCommand citep
+key "courniaRigorousFreeEnergy2020,gilsonStatisticalthermodynamicBasisComputation1997a"
 literal "false"
 
 \end_inset
 
-, 
+.
+ Therefore, ABFE is more suitable for the virtual screening of diverse ligands
+ but suffers from computational expense and the design (setup/running calculatio
+ns) can be complicated to perform 
 \begin_inset CommandInset citation
-LatexCommand citealp
-key "gilsonStatisticalthermodynamicBasisComputation1997a"
-literal "false"
-
-\end_inset
-
-].
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-Therefore, ABFE is more suitable for the virtual screening of diverse ligands
- but suffers from 
-\change_deleted -1046193749 1679962369
-the 
-\change_unchanged
-computational expense and the design (setup/running calculations) can be
- complicated to perform [
-\begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "meyBestPracticesAlchemical2020"
 literal "false"
 
 \end_inset
 
-].
- 
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+.
 \end_layout
 
 \begin_layout Standard
-—
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL introduce DDM - move to theory?
-\end_layout
-
-\end_inset
-
-
-\change_deleted -1046193749 1679962799
-While ABFE and RBFE underlying theory is similar, the main difference between
- the two is the implemented thermodynamic cycle pathway.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1679962799
-In general, performing MD simulation only at the end-states (i.e receptor-bound
- and receptor-unbound ligand) is still not computationally feasible with
- unbiased simulations due to the time scales in the binding or unbinding
- process.
- 
-\change_unchanged
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1679962702
-Therefore
-\change_inserted -1046193749 1679962713
-Rigourous ABFE calculations require
-\change_deleted -1046193749 1679962716
-, constructing 
-\change_unchanged
-a 
-\change_inserted -1046193749 1679962722
-thermodynamic 
-\change_unchanged
-pathway of
-\change_inserted -1046193749 1679962766
- overlapping
-\change_unchanged
- intermediate states 
-\change_deleted -1046193749 1679962776
-can allow sufficient space overlap between
-\change_inserted -1046193749 1679962778
-to connect
-\change_unchanged
- the 
-\change_deleted -1046193749 1679962783
-two
-\change_inserted -1046193749 1679962786
-bound and unbound
-\change_unchanged
- end
-\change_inserted -1046193749 1679962625
--
-\change_unchanged
-states to produce reliable binding affinity calculations.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-A widely used approach
-\change_inserted -1046193749 1679962812
-,
-\change_unchanged
- 
-\change_deleted -1046193749 1679962813
-called
-\change_unchanged
- the double decoupling method (DDM) [
+Rigorous ABFE calculations require a thermodynamic pathway of overlapping
+ intermediate states to connect the bound and unbound end-states to produce
+ reliable binding affinity calculations.
+ A widely used approach, the double decoupling method (DDM) 
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "gilsonStatisticalthermodynamicBasisComputation1997a"
 literal "false"
 
 \end_inset
 
-] 
-\change_deleted -1046193749 1679962827
-is used
-\change_inserted -1046193749 1679962828
-uses
-\change_unchanged
- 
-\change_inserted -1046193749 1679962838
-a series of alchemical steps 
-\change_unchanged
-to estimate the absolute binding free energy
-\change_deleted -1046193749 1679962843
- through a series of alchemical steps.
-
-\change_unchanged
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The DDM cycle consists of two physically meaningful end states (i.e bound
+ uses a series of alchemical steps to estimate the absolute binding free
+ energy.
+ The DDM cycle consists of two physically meaningful end states (i.e bound
  and unbound states) and a series of intermediate states where the ligand
  is decoupled from the environment.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The ligand intermolecular and intramolecular interactions are removed through
+ The ligand intermolecular and intramolecular interactions are removed through
  a series of intermediate windows scaling its electrostatics and van der
  Waals (VDW) interactions to zero.
- 
-\end_layout
-
-\begin_layout Itemize
-In this way, the two molecules (receptor and ligand) are brought together
+ In this way, the two molecules (receptor and ligand) are brought together
  without having to account for complicated interactions during the binding
  process and then gradually turning back on the interactions of the ligand
  allowing it to go through the physical binding process.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Nevertheless, the DDM method is known to suffer from poor convergence without
+ Nevertheless, the DDM method is known to suffer from poor convergence without
  intramolecular interactions of the ligand.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The ligands may collide or overlap in physical space, creating enormous
+ The ligands may collide or overlap in physical space, creating enormous
  potential energies and numerical instabilities.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-To prevent this from occurring, 
-\change_deleted -1046193749 1679962950
-the use of 
-\change_unchanged
-artificial restraints 
-\change_inserted -1046193749 1679962959
-are used to
-\change_deleted -1046193749 1679962957
-is proposed that will
-\change_unchanged
- keep the ligand from leaving the binding pocket and stop it from interacting
- with the environment.
- 
-\change_inserted -1046193749 1679962928
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1679962935
-TL cite Boresch here
-\change_unchanged
-
-\end_layout
+ To prevent this from occurring, artificial restraints are used to keep
+ the ligand from leaving the binding pocket and stop it from interacting
+ with the environment
+\begin_inset CommandInset citation
+LatexCommand citep
+key "boreschAbsoluteBindingFree2003"
+literal "false"
 
 \end_inset
 
-
-\change_unchanged
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The use of these restraints is necessary to ensure conformations are sampled
+.
+ The use of these restraints is necessary to ensure conformations are sampled
  during the simulations and aids in good phase space overlap and faster
- convergence [
+ convergence 
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "mobleyUseOrientationalRestraints2006"
 literal "false"
 
 \end_inset
 
-].
+.
 \end_layout
 
-\end_deeper
-\end_deeper
-\end_deeper
-\begin_layout Itemize
+\begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 TL explicit and implicit solvent- reduce configurational space to be explored.
@@ -1498,114 +736,47 @@ TL explicit and implicit solvent- reduce configurational space to be explored.
 
 \end_inset
 
-
-\change_inserted -1046193749 1679963369
  Of course, accurate sampling only helps if the molecular model, including
  the solvent environment, is accurate.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Explicit solvents are fully atomic representations of water molecules that
+ Explicit solvents are fully atomic representations of water molecules that
  surround the solute, providing a physically detailed and generally accurate
- model
-\change_inserted -1046193749 1679963422
- 
-\change_deleted -1046193749 1679963420
-.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1679963401
-Therefore, the 
-\change_inserted -1046193749 1679963413
-and 
-\change_unchanged
-DDM 
-\change_deleted -1046193749 1679963407
-approach to ABFE
-\change_unchanged
- was conceived with explicit solvents in mind.
- 
-\end_layout
-
-\begin_layout Itemize
-However, the inclusion of these explicit water molecules causes the simulations
+ model and DDM was conceived with explicit solvents in mind.
+ However, the inclusion of these explicit water molecules causes the simulations
  to be computationally expensive because the degrees of freedom of each
- water molecule must be calculated for every time-step [
+ water molecule must be calculated for every time-step 
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "durrantMolecularDynamicsSimulations2011"
 literal "false"
 
 \end_inset
 
-].
- 
-\end_layout
-
-\begin_layout Itemize
-Additionally, explicit solvent specific to ABFE calculations can cause “singular
+.Additionally, explicit solvent specific to ABFE calculations can cause “singular
 ity events,” meaning that solute-solvent steric overlap occurs.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The use of soft-core potentials [
+ The use of soft-core potentials 
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "leeAlchemicalBindingFree2020"
 literal "false"
 
 \end_inset
 
-] is used in order to minimize or resolve the instabilities observed during
+ is used in order to minimize or resolve the instabilities observed during
  the decoupling of the VDW parameters by shifting the inter-particle distance
  between the solute and solvent atoms.
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-To avoid the extra complexity and the required computational costs of using
- explicit solvents, implicit solvents 
-\change_deleted -1046193749 1679963467
-are proposed
-\change_inserted -1046193749 1679963468
-may be used
-\change_unchanged
-.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Implicit solvents are well suited for the DDM approach as the solvent degrees
+ To avoid the extra complexity and the required computational costs of using
+ explicit solvents, implicit solvents may be used.
+ Implicit solvents are well suited for the DDM approach as the solvent degrees
  of freedom (DOF) are integrated out and solute-solvent steric overlap does
  not occur.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Rather than physically representing water molecules, implicit solvent models
+ Rather than physically representing water molecules, implicit solvent models
  provide a mean-field dielectric representation.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Two popular pathway techniques that utilized implicit solvent models that
+ Two popular pathway techniques that utilized implicit solvent models that
  have been widely exploited in free energy calculations are Molecular Mechanics/
 Poisson-Boltzmann Surface Area (MM/PBSA) and Molecular Mechanics/Generalized
- Born Surface Area (MM/GBSA) [
+ Born Surface Area (MM/GBSA) 
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "wangRecentAdvancesFree2006"
 literal "false"
 
@@ -1613,38 +784,28 @@ literal "false"
 
 , 
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "wangBiomolecularSimulationsRecent2001"
 literal "false"
 
 \end_inset
 
-].
+.
+ However, both of these methods have severe thermodynamic approximations
  
-\end_layout
-
-\begin_layout Itemize
-However, both of these methods have severe thermodynamic approximations
- [
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "swansonRevisitingFreeEnergy2004"
 literal "false"
 
 \end_inset
 
-], for example, ignoring structural changes in receptor and ligand upon
- binding.
- 
+, for example, ignoring structural changes in receptor and ligand upon binding.
 \end_layout
 
-\end_deeper
-\end_deeper
-\end_deeper
-\end_deeper
-\begin_layout Itemize
+\begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Our approach
@@ -1655,17 +816,12 @@ Our approach
 Our work attempts to reduce the complexity and computational cost of ABFE
  calculations by using implicit solvent models while achieving reliability
  and accuracy.
- 
-\end_layout
+ To achieve this, we use a modified DDM cycle that uses conformational restraint
+s and generalized Born (GB) solvent to enhance convergence.
 
-\begin_deeper
-\begin_layout Itemize
-To achieve this, we use a modified DDM cycle that uses conformational restraints
- and generalized Born (GB) solvent to enhance convergence.
+\change_inserted -1463621830 1680220173
  
-\end_layout
-
-\begin_layout Itemize
+\change_unchanged
 Our DDM cycle (
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -1705,57 +861,41 @@ use cross references
 \end_inset
 
 ) provides improved sampling at the end states while reducing the need for
- sampling in intermediate states.
+ sampling in intermediate states.We aim to prove that ABFE calculations can
+ be performed for diverse ligands and can be done in a fast, efficient,
+ and effective manner.To this end, we created the Implicit Solvent DDM tool
+ (
+\begin_inset Formula $ISDDM.py$
+\end_inset
+
+), a command line Python interface, to facilitate and automate the use of
+ ABFE calculations for virtual compound screening.The ISDDM package begins
+ with a parametrized model of the complex and performs all calculations
+ of the alchemical cycle, post-processing, and data analysis.Our implementation
+ utilizes the open-source AmberTools molecular modeling suite to maximize
+ computational throughput.
+
+\change_inserted -1463621830 1680221281
  
-\change_inserted -1046193749 1679963530
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-We aim to prove that ABFE calculations can be performed for diverse ligands
- and can be done in a fast, efficient, and effective manner.
- 
-\end_layout
-
-\begin_layout Itemize
-To this end, we created the Implicit Solvent DDM tool (ISDDM), a command
- line Python interface, to facilitate and automate the use of ABFE calculations
- for virtual compound screening.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The ISDDM package begins with a parametrized model of the complex and performs
- all calculations of the alchemical cycle, post-processing, and data analysis.
- 
-\change_inserted -1046193749 1679963601
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Our implementation utilizes the open-source AmberTools molecular modeling
- suite to maximize computational throughput.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1679963606
-The
-\change_inserted -1046193749 1679963613
-We have tested
 \change_unchanged
- ISDDM 
-\change_deleted -1046193749 1679963618
-tool will be tested
+We have tested 
+\begin_inset Formula $ISDDM.py$
+\end_inset
+
+ for accuracy by calculating the binding free energy of a series of host-guest
+ systems based on 5 hosts, cucurbit[7]uril, pillar[6]arene, octa-acid and
+ 
+\begin_inset Formula $\alpha/\beta$
+\end_inset
+
+-cyclodextrin.
+ 
+\change_inserted -1463621830 1680221312
+A
 \change_unchanged
- for accuracy by calculating the binding free energy of host-guest systems
- from SAMPL (Statistical Assessment of Modeling of Proteins and Ligands)
- challenges 
+ total of 83 unique host-guest complexes.
+ SAMPL (Statistical Assessment of Modeling of Proteins and Ligands) challenges
+ 
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "muddanaSAMPL4HostGuest2014a,rizziOverviewSAMPL6Host2018,yinOverviewSAMPL5Host2017"
@@ -1763,32 +903,25 @@ literal "false"
 
 \end_inset
 
-
-\change_inserted -1046193749 1679963643
  
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -1046193749 1679963682
 TL and other sources.
  Maye just summarize five hosts and ___ ligands...
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 .
+
+\change_deleted -1463621830 1680220239
  
+\change_unchanged
+
 \end_layout
 
-\end_deeper
-\end_deeper
-\end_deeper
 \begin_layout Standard
 The following sections… 
 \end_layout
@@ -2754,7 +1887,7 @@ text{}
 
 \begin_inset Formula 
 \[
-V_{AMBER}(r^{N})=E_{bonded}+E_{non-bonded},
+V_{AMBER}(r^{N})=E_{\text{bonded}}+E_{non-bonded},
 \]
 
 \end_inset
@@ -4386,7 +3519,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/stevenayoub/Desktop/cycle.png
+	filename images/cycle.png
 	lyxscale 25
 	width 100text%
 
@@ -4399,15 +3532,33 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Thermo cycle
+
+\change_inserted -1463621830 1680130347
+This figure illustrates the states/steps in out thermodynamic cycle.
+ The free energy change in GB solvent is the free energy difference between
+ states 1 and 8.
+ Conformational restraints (padlock) indicates the presence of harmonic
+ distance restraints between each atom separated by < 6 Å.
+ Here ligand (green circle) indicates that charges are active, while the
+ unfilled circle indicates charges have been set to 0.
+ The light blue background is representation of GBSA solvent.
+ Orientational restraints(red dotted line) are applied in states 5 and 6
+\begin_inset CommandInset citation
+LatexCommand citep
+key "boreschAbsoluteBindingFree2003"
+literal "false"
+
+\end_inset
+
+.State 5 is where the ligand is decoupled from the receptor but is orientationall
+y restrained relative to receptor, so state 6 is not simulated.
+ 
+\change_unchanged
+
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -4567,7 +3718,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/stevenayoub/Desktop/boresch.pdf
+	filename images/boresch.png
 	width 100text%
 	BoundingBox 0bp 0bp 800bp 450bp
 
@@ -4580,7 +3731,23 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Boresch restraints 
+
+\change_deleted -1463621830 1680130377
+Boresch restraints
+\change_inserted -1463621830 1680130641
+A total of 6 atoms are selected to created orientational restraints between
+ the ligand and receptor.The distance restraint is denoted as 
+\begin_inset Formula $r_{aA}$
+\end_inset
+
+.
+ Atoms b-a-A create the 
+\begin_inset Formula $\sig$
+\end_inset
+
+
+\change_unchanged
+ 
 \end_layout
 
 \end_inset
@@ -4609,7 +3776,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/stevenayoub/Desktop/entire_system_2.png
+	filename images/entire_system_2.png
 	width 100text%
 
 \end_inset
@@ -5981,7 +5148,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/stevenayoub/Desktop/overlap_matrix_combine.png
+	filename images/overlap_matrix_combine.png
 	width 100text%
 
 \end_inset
@@ -6043,9 +5210,19 @@ Here we use
  how it prepares all the necessary input files, manages simulations and
  perform post-treatments.
  In section 4.2 we report on the accuracy and access the convergence of each
- step as shown in figure 1
+ step as shown in figure 
+\change_inserted -1463621830 1680124331
+
+\series bold
+4.1
+\change_deleted -1463621830 1680124298
+
+\series default
+1
 \series bold
 .
+
+\change_unchanged
  
 \series default
 Finally we look at the overall scaling performance for the time required
@@ -6065,7 +5242,17 @@ Implementation Details
  is a program written entirely in Python that streamline the entire workflow
  procedure of preparing, running and post-processing all the MD simulations
  for calculating the free energies, whose general workflow is shown in figure
- 1
+ 
+\change_inserted -1463621830 1680124334
+
+\series bold
+4.1
+\change_deleted -1463621830 1680124333
+
+\series default
+1
+\change_unchanged
+
 \series bold
 .
  
@@ -6167,7 +5354,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/stevenayoub/Desktop/Workflow-2.pdf
+	filename images/Workflow-2.pdf
 	width 100text%
 
 \end_inset
@@ -6724,7 +5911,7 @@ Calculations of binding free energies of cucurbit[7]uril (CB7)
 \begin_layout Standard
 Calculations of binding free energies of 14-cb7 cationic guest binding systems
  with Generalize born implicit solvent model (
-\begin_inset Formula $GB^{HCT}$
+\begin_inset Formula $GB^{OBC}$
 \end_inset
 
 ) are conducted in this work.
@@ -6751,8 +5938,16 @@ The calculated statistics that computed free energies with this automated
 \begin_inset Formula $R^{2}=0.8$
 \end_inset
 
-) suggesting well prediction with throughout.
+) suggesting well prediction 
+\change_deleted -1463621830 1680127658
  
+\change_unchanged
+throughout.
+
+\change_deleted -1463621830 1680127658
+ 
+\change_unchanged
+
 \end_layout
 
 \end_deeper
@@ -6891,7 +6086,13 @@ CD with a deviation RMSE=1.6 and RMSE=1.6 kcal/mol respectively.
 
 \begin_deeper
 \begin_layout Itemize
-interestingly when comparing the correlation values between the two system
+
+\change_inserted -1463621830 1680127737
+I
+\change_deleted -1463621830 1680127736
+i
+\change_unchanged
+nterestingly when comparing the correlation values between the two system
  (
 \series bold
 
@@ -7619,7 +6820,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/stevenayoub/Desktop/results.png
+	filename images/Results.png
 	width 100text%
 
 \end_inset
@@ -7663,65 +6864,12 @@ a.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Perturb charge host systems OAH and WP6 binding modes
-\end_layout
-
-\begin_layout Itemize
-As shown in table 4.3 and scatter plot the host systems seem to have little
- or no effect in binding and major dominated by ligand net charge.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-OAH and WP6 are the only two host systems that have perturb charges of -8
- and -6 respectively.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-OAH-m4p and OAH-hxa binding modes are analyzed in figure 
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
+\change_deleted -1463621830 1680129173
 
 \end_layout
 
 \begin_layout Standard
-I think the host charge doesn’t matter here because charged atoms on the
- host are still solvent exposed when the ligand is bound.
- This is true for OAH.
- Steven, can you confirm if this is the case for WP6? However, both OAH
- and WP6 (the only charged hosts) have the worst statistics.
+
 \end_layout
 
 \begin_layout Section
@@ -7729,13 +6877,1034 @@ Generalize Born hydration asymmetry correction
 \end_layout
 
 \begin_layout Itemize
-hdfhdjhfshddf
+
+\change_inserted -1463621830 1680116755
+Calculation of all host guest system binding affinity calculations is shown
+ In figure 4.2a with the generalize Born model (
+\begin_inset Formula $igb^{OBC}$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1463621830 1680119924
+In which we clearly see a bias of ligand charge having a major influencing
+ the overall binding of these host guest system and host systems have little
+ or no effect.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1463621830 1680127872
+It is known that the GB models lack hydration asymmetry
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mukhopadhyayChargeHydrationAsymmetry2012"
+literal "false"
+
+\end_inset
+
+ which indicates the charge bias we are observing for the charge ligands.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1463621830 1680122479
+Therefore we applied a linear hydration asymmetry correction:
+\begin_inset Formula 
+\begin{equation}
+\Delta G_{bind}^{corr}=(1+a)\Delta G_{bind}^{GB}+b\label{4.3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+
+\change_inserted -1463621830 1680127898
+A separate linear correction we were done for positive, neutral and negative
+ ligands and the fitted parameters are shown in table 4.2
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\change_inserted -1463621830 1680122599
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129257
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129257
+Charge
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129257
+a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129257
+b
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129257
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129257
+-0.18
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129257
+-1.89
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129257
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129257
+-0.41
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129257
+-0.97
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129257
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129257
+-0.44
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129257
+-0.23
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129257
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129257
+-0.58
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129257
+-2.30
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680122599
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680129274
+Hydration asymmetry linear corrections fitted parameters 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1463621830 1680122475
+Therefore a separate linear correction we were done for positive, neutral
+ and negative ligands.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1463621830 1680122008
+In figure 4.4 shows the corrected calculations of binding using equation
+ 4.3.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1463621830 1680122161
+We see an overall improvement all host system calculations in the correction
+ of with a deviation (
+\begin_inset Formula $R^{2}=1.06kcal/mol$
+\end_inset
+
+) compared to uncorrected binding estimates of 
+\begin_inset Formula $(RMSE=3.7kcal/mol)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1463621830 1680122322
+In table 4.2 highlights the hydration asymmetry correction metrics of all
+ host guest systems.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1463621830 1680122953
+In all host guest systems we saw a improvement of deviation within 1kcal/mol.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+
+\change_inserted -1463621830 1680121377
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121491
+\begin_inset Graphics
+	filename images/correction_allData.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121377
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121522
+Generalized Born-Hydration Asymmetry Correction.
+ 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
+
+\change_inserted -1463621830 1680121534
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463621830 1680121542
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+System
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+\begin_inset Formula $R^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+Slope
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+RMSE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+ME
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+RMSE
+\begin_inset Formula $_{o}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+RMSE
+\begin_inset Formula $_{o}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+All
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.87
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.87
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+1.06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+-0.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+1.06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+1.51
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+ACD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.54
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.53
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.67
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+-0.25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.62
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.91
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+BCD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.83
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.66
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.88
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.71
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.52
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.76
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+CB7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.80
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.81
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+1.03
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+-0.44
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.94
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+1.38
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+OAH
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.38
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.67
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+1.30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+-0.11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+1.30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+1.88
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+WP6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.51
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.70
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+1.39
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+0.10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+1.39
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121628
+2.05
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121542
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680121604
+This table shows various metrics for comparison of all host guest systems
+ using the generalized Born-hydration asymmetry correction.
+ Units are in kcal/mol.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 
 \end_layout
 
@@ -7845,7 +8014,15 @@ status open
 \end_layout
 
 \begin_layout Chapter
-Disscussion 
+
+\change_inserted -1463621830 1680124202
+Discussion
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1463621830 1680129137
+RBFE performance comparison against SAMPL4 challenge submission
 \end_layout
 
 \begin_layout Standard
