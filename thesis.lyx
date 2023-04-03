@@ -117,7 +117,6 @@ logicalmkup
 \html_css_as_file 0
 \html_be_strict false
 \author -1463621830 "steven ayoub"
-\author -1046193749 "Luchko"
 \end_header
 
 \begin_body
@@ -185,7 +184,11 @@ http://www.csun.edu/~mathgs/LaTex.html
 
 \end_inset
 
+
+\change_deleted -1463621830 1680390346
  
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -195,10 +198,6 @@ http://www.csun.edu/~mathgs/LaTex.html
 
 \begin_layout Chapter
 Introduction
-\change_deleted -1463621830 1680203174
- 
-\change_inserted -1463621830 1680203170
-
 \end_layout
 
 \begin_layout Standard
@@ -222,12 +221,16 @@ literal "false"
 
 .
  Therefore, the ability to efficiently and quickly scan a large chemical
- for potential drug candidates is a major focus in drug discoveryTherefore,
- the ability to efficiently and quickly scan a large chemical for potential
- drug candidates is a major focus in drug discovery.Attempts to exploring
- chemical space date back to the early drug discovery period (before the
- 19th century) during which chemists expanded the chemical space at an exponenti
-al rate from a handful of new substances in 1800 up to 11,000 of 1868
+ for potential drug candidates is a major focus in drug discovery.
+\end_layout
+
+\begin_layout Standard
+Therefore, the ability to efficiently and quickly scan a large chemical
+ for potential drug candidates is a major focus in drug discovery.Attempts
+ to exploring chemical space date back to the early drug discovery period
+ (before the 19th century) during which chemists expanded the chemical space
+ at an exponential rate from a handful of new substances in 1800 up to 11,000
+ of 1868
 \begin_inset CommandInset citation
 LatexCommand citep
 key "lealExpansionChemicalSpace2022"
@@ -305,7 +308,7 @@ ar interactions between protein and ligand systems as well as the binding
  affinity.
  CADD has already been successfully applied in all areas of drug discovery
  and has brought new drug compounds to the market for diverse diseases,
- including HIV-1-inhibiting drugs (amprenavir
+ including HIV-1-inhibiting drugs(amprenavir
 \begin_inset CommandInset citation
 LatexCommand citep
 key "clarkWhatHasComputeraided2006"
@@ -313,7 +316,7 @@ literal "false"
 
 \end_inset
 
- and raltitrexed
+and raltitrexed
 \begin_inset CommandInset citation
 LatexCommand citep
 key "andersonProcessStructureBasedDrug2003"
@@ -365,15 +368,6 @@ literal "false"
  Docking programs usually treat the receptor as a rigid molecule, employ
  simple models of the receptor, ligand and water, and handle conformational
  fluctuations with a gross approximation.
-\change_deleted -1463621830 1680220127
-
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status collapsed
 
@@ -422,7 +416,7 @@ literal "false"
  example efficient sampling tool to recover statistical ensembles.
  A force field is used to describe the potential energy of a system representing
  both bonded and non-bonded (van der Waals) and electrostatic interactions.Severa
-l force fields commonly used in MD simulations are AMBER 
+l force fields commonly used in MD simulations are AMBER
 \begin_inset CommandInset citation
 LatexCommand citep
 key "cornellSecondGenerationForce1995a,wangDevelopmentTestingGeneral2004"
@@ -430,7 +424,7 @@ literal "false"
 
 \end_inset
 
-, CHARMM 
+, CHARMM
 \begin_inset CommandInset citation
 LatexCommand citep
 key "brooksCHARMMProgramMacromolecular1983"
@@ -438,7 +432,7 @@ literal "false"
 
 \end_inset
 
-, and GROMOS 
+, and GROMOS
 \begin_inset CommandInset citation
 LatexCommand citep
 key "christenGROMOSSoftwareBiomolecular2005a"
@@ -454,24 +448,11 @@ literal "false"
  in length.
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL focus on sampling - Intro sentence
-\end_layout
-
-\end_inset
-
- The latter of these problems....
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Insufficient sampling is due to the size of the integration time-step of
- MD, usually limited to femtoseconds or shorter (dictated by bond vibrations),
- whereas binding process are in the micro/millisecond time scale.
+\begin_layout Standard
+The latter of these problems, insufficient sampling is due to the size of
+ the integration time-step of MD, usually limited to femtoseconds or shorter
+ (dictated by bond vibrations), whereas binding process are in the micro/millise
+cond time scale.
  This leads to large computational costs to sample important configurations
  that have a major contribution towards binding affinity.
  Beyond the computational cost, insufficient sampling is a well-recognized
@@ -555,7 +536,6 @@ literal "false"
  a significant number of ensembles to converge completely.
 \end_layout
 
-\end_deeper
 \begin_layout Standard
 \begin_inset Note Note
 status collapsed
@@ -818,41 +798,19 @@ Our work attempts to reduce the complexity and computational cost of ABFE
  and accuracy.
  To achieve this, we use a modified DDM cycle that uses conformational restraint
 s and generalized Born (GB) solvent to enhance convergence.
-
-\change_inserted -1463621830 1680220173
- 
-\change_unchanged
-Our DDM cycle (
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:DDM-cycle"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-
-\change_inserted -1046193749 1679963547
-
+ Our DDM cycle 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -1046193749 1679963557
 TL see section ___ for details
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
 
-\change_unchanged
-
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 use cross references
@@ -874,11 +832,7 @@ use cross references
  of the alchemical cycle, post-processing, and data analysis.Our implementation
  utilizes the open-source AmberTools molecular modeling suite to maximize
  computational throughput.
-
-\change_inserted -1463621830 1680221281
- 
-\change_unchanged
-We have tested 
+ We have tested 
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
@@ -889,11 +843,7 @@ We have tested
 \end_inset
 
 -cyclodextrin.
- 
-\change_inserted -1463621830 1680221312
-A
-\change_unchanged
- total of 83 unique host-guest complexes.
+ A total of 83 unique host-guest complexes.
  SAMPL (Statistical Assessment of Modeling of Proteins and Ligands) challenges
  
 \begin_inset CommandInset citation
@@ -905,7 +855,7 @@ literal "false"
 
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 TL and other sources.
@@ -915,47 +865,25 @@ TL and other sources.
 \end_inset
 
 .
+\change_inserted -1463621830 1680393843
 
-\change_deleted -1463621830 1680220239
+\end_layout
+
+\begin_layout Standard
+The following sectio
+\change_inserted -1463621830 1680474204
+ns will be outline by: chapter 2 provides underlying theory behind this
+ work.
+ Going over binding free energy calculations, use of implicit solvent models,
+ free energy perturbation and introduce our modified double decoupling thermodya
+nmic cycle.
+ In chapter 3 we will discuss the chemistry of host-guest systems and our
+ simulation setup parameters.
+ Chapter 4 and 5 will highlight our results and discuss our findings.
  
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-The following sections… 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:DDM-cycle"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
+\change_deleted -1463621830 1680473684
+ns…
+\change_inserted -1463621830 1680393852
 
 \end_layout
 
@@ -964,40 +892,28 @@ Theory
 \end_layout
 
 \begin_layout Section
-Binding Free Energy 
-\change_inserted -1046193749 1680023331
-
+Binding Free Energy
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1046193749 1680023333
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Description
-
-\change_inserted -1046193749 1680023395
 TL Remember that equations are part of the sentence.
  They require appropriate punctuation.
  Most equations should have a period or comma at the end.
 \end_layout
 
 \begin_layout Description
-
-\change_inserted -1046193749 1680023485
 TL Use commands for operators in equations and 
 \begin_inset Flex Code
 status open
 
 \begin_layout Plain Layout
 
-\change_inserted -1046193749 1680023428
-
 \backslash
 text{}
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1020,105 +936,49 @@ text{}
 \end_layout
 
 \begin_layout Description
-
-\change_inserted -1046193749 1680023546
 TL All symbols in the text should use inline math mode.
  I.e., '
 \begin_inset Formula $N'$
 \end_inset
 
  and not 'N'.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
-\begin_layout Itemize
-Free energy
-\change_deleted -1046193749 1680020740
-, in essence, determines how a process is proceed
-\change_inserted -1046193749 1680020752
- drives a system towards equilibrium
-\change_unchanged
- and
-\change_inserted -1046193749 1680020760
- determines
-\change_unchanged
- the probability that a system will adopt at a given state.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The Helmholtz free energy
-\change_inserted -1046193749 1680020769
-,
-\change_unchanged
- 
+\begin_layout Standard
+Free energy drives a system towards equilibrium and determines the probability
+ that a system will adopt at a given state.
+ The Helmholtz free energy, 
 \begin_inset Formula $A$
 \end_inset
 
-
-\change_inserted -1046193749 1680020770
-,
-\change_unchanged
- of a system in the canonical ensemble (i.e constant number of particles,
+, of a system in the canonical ensemble (i.e constant number of particles,
  volume and temperature) is given by 
-\change_deleted -1046193749 1680022861
-
-\begin_inset Formula $\beta$
-\end_inset
-
- is the inverse temperature divided by Boltzmann's and Q is the partition
- function of the system
-\change_inserted -1046193749 1680022879
-
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -1046193749 1680022905
 TL use 
 \begin_inset Flex Code
 status open
 
 \begin_layout Plain Layout
 
-\change_inserted -1046193749 1680022893
-
 \backslash
 ln
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
  as this is an operator.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_deleted -1046193749 1680022861
-
-\begin_inset Formula 
-\[
-A=-\frac{1}{\beta}lnQ,
-\]
-
-\end_inset
-
-
-\change_inserted -1046193749 1680022864
 
 \begin_inset Formula 
 \[
@@ -1140,23 +1000,11 @@ where
 \end_inset
 
  is the temperature.
-\change_unchanged
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1046193749 1680022244
+ 
 \begin_inset Formula $Q$
 \end_inset
 
  is the partition function of the system, 
-\change_deleted -1046193749 1680022168
-The system can also be assumed to be at thermodynamic equilibrium.
- In case of the partition function can be expressed as:
-\change_unchanged
-
 \begin_inset Formula 
 \[
 Q=\frac{1}{h^{3N}N!}\int\int e^{-\beta H(p,r)}dpdr,
@@ -1164,22 +1012,10 @@ Q=\frac{1}{h^{3N}N!}\int\int e^{-\beta H(p,r)}dpdr,
 
 \end_inset
 
-
-\change_inserted -1046193749 1680022262
-w
-\change_deleted -1046193749 1680022262
-W
-\change_unchanged
-here 
-\change_deleted -1046193749 1680022264
-N
-\change_inserted -1046193749 1680022264
-
+where 
 \begin_inset Formula $N$
 \end_inset
 
-
-\change_unchanged
  is the number of particles in the system and 
 \series bold
 
@@ -1189,174 +1025,43 @@ N
  
 \series default
 is Plank's constant.
- 
-\change_inserted -1046193749 1680022306
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The integral is performed over all 
-\change_deleted -1046193749 1680022310
-3N
-\change_inserted -1046193749 1680022310
-
+ The integral is performed over all 
 \begin_inset Formula $3N$
 \end_inset
 
-
-\change_unchanged
- positions
-\change_inserted -1046193749 1680022320
-,
-\change_unchanged
- 
+ positions, 
 \begin_inset Formula $r$
 \end_inset
 
-
-\change_inserted -1046193749 1680022322
-,
-\change_unchanged
- and momenta
-\change_inserted -1046193749 1680022324
-,
-\change_unchanged
- 
+, and momenta, 
 \begin_inset Formula $p$
 \end_inset
 
-.
- 
-\change_inserted -1046193749 1680022326
-
-\end_layout
-
-\begin_layout Itemize
-The 
-\change_inserted -1046193749 1680022332
-H
-\change_deleted -1046193749 1680022332
-h
-\change_unchanged
-amiltonian 
+.The Hamiltonian 
 \begin_inset Formula $H(p,r)$
 \end_inset
 
- consists of a potential energy term
-\change_inserted -1046193749 1680022559
-,
-\change_unchanged
- 
+ consists of a potential energy term, 
 \begin_inset Formula $U(x)$
 \end_inset
 
-
-\change_inserted -1046193749 1680022344
-,
-\change_unchanged
- that depends on the given configuration
-\change_inserted -1046193749 1680022347
-,
-\change_unchanged
- and kinetic
-\change_inserted -1046193749 1680022566
- energy
-\change_unchanged
- term
-\change_inserted -1046193749 1680022562
-,
-\change_unchanged
- 
+, that depends on the given configuration, and kinetic energy term, 
 \begin_inset Formula $K(p)$
 \end_inset
 
-
-\change_inserted -1046193749 1680022563
-,
-\change_unchanged
- that depends on 
-\change_deleted -1046193749 1680022579
-their
-\change_inserted -1046193749 1680022581
-particle
-\change_unchanged
- momenta
-\change_inserted -1046193749 1680022570
-.
-
-\change_deleted -1046193749 1680022301
- 
-\change_unchanged
-
-\end_layout
-
-\begin_layout Itemize
-In general
-\change_inserted -1046193749 1680022591
-,
-\change_unchanged
- 
-\change_deleted -1046193749 1680022585
-evaluting
-\change_inserted -1046193749 1680022585
-evaluating
-\change_unchanged
- 
-\change_deleted -1046193749 1680022594
-Q
-\change_inserted -1046193749 1680022594
-
+, that depends on particle momenta.
+ In general, evaluating 
 \begin_inset Formula $Q$
 \end_inset
 
-
-\change_unchanged
  is very difficult and not feasible in more complicated cases such as larger
  systems with strong interactions between particles.
-\end_layout
-
-\begin_layout Itemize
-However
-\change_inserted -1046193749 1680022649
-,
-\change_unchanged
- since we are interested in the free energy differences
-\change_inserted -1046193749 1680022627
-,
-\change_unchanged
- 
-\change_deleted -1046193749 1680022613
-
-\begin_inset Formula $\Delta$
-\end_inset
-
-A
-\change_inserted -1046193749 1680022623
-
+ However, since we are interested in the free energy differences, 
 \begin_inset Formula $∆A$
 \end_inset
 
-,
-\change_unchanged
- between 
-\change_deleted -1046193749 1680022724
-two systems such in binding
-\change_unchanged
- the unbound state (state 0) and bound state (state1)
-\change_inserted -1046193749 1680022687
-, 
-\change_deleted -1046193749 1680022686
-.
- T
-\change_inserted -1046193749 1680022786
-we require t
-\change_unchanged
-he 
-\change_inserted -1046193749 1680022796
-ratio of 
-\change_unchanged
-partition functions 
+, between the unbound state (state 0) and bound state (state1), we require
+ the ratio of partition functions 
 \begin_inset Formula $Q_{0}$
 \end_inset
 
@@ -1364,24 +1069,7 @@ partition functions
 \begin_inset Formula $Q_{1}$
 \end_inset
 
- 
-\change_deleted -1046193749 1680022803
-can become a ratio of probabilities for system being in the bound or unbound
- state as describe below
-\change_unchanged
-:
-\change_deleted -1046193749 1680022846
-
-\begin_inset Formula 
-\[
-\Delta A=-\beta^{-1}ln\frac{Q_{1}}{Q_{0}}
-\]
-
-\end_inset
-
-
-\change_inserted -1046193749 1680022848
-
+ :
 \begin_inset Formula 
 \[
 \Delta A=A_{1}-A_{0}=-\beta^{-1}\ln\frac{Q_{1}}{Q_{0}}.
@@ -1389,38 +1077,10 @@ can become a ratio of probabilities for system being in the bound or unbound
 
 \end_inset
 
-
-\change_deleted -1046193749 1680022956
-
-\end_layout
-
-\begin_layout Itemize
-
-\change_deleted -1046193749 1680022954
-Where free energy difference process in which neither the temperature or
- particles' masses change, the kinetic contribution to the Hamiltonian is
- constant.
- 
-\change_unchanged
-
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1046193749 1680023157
 As neither the temperature or particles' masses change, the momenta of the
- two partition functions integrate out and cancel, 
-\change_deleted -1046193749 1680023161
-Therefore
-\change_inserted -1046193749 1680023161
-so
-\change_unchanged
- only the configurational part of the partition function needed to be considered
-, and the free free energy of binding can be expressed as 
-\change_deleted -1046193749 1680023169
-follows:
-\change_unchanged
-
+ two partition functions integrate out and cancel, so only the configurational
+ part of the partition function needed to be considered, and the free free
+ energy of binding can be expressed as 
 \begin_inset Formula 
 \[
 \Delta A^{\circ}=-k_{B}Tln\frac{\int_{V_{1}}\int_{\Gamma_{1}}e^{-\beta[U_{1}(x)+pV_{1}]}dVdx}{\int_{V_{0}}\int_{\Gamma_{0}}e^{-\beta[U_{0}(x)+pV_{o}]}dVdx},
@@ -1428,19 +1088,7 @@ follows:
 
 \end_inset
 
-
-\change_deleted -1046193749 1680023197
-
-\end_layout
-
-\begin_layout Itemize
-
-\change_deleted -1046193749 1680023195
-W
-\change_inserted -1046193749 1680023203
-w
-\change_unchanged
-here 
+where 
 \begin_inset Formula $V_{1}$
 \end_inset
 
@@ -1448,40 +1096,17 @@ here
 \begin_inset Formula $V_{2}$
 \end_inset
 
- are the box volumes,
-\change_deleted -1046193749 1680023211
- while
-\change_inserted -1046193749 1680023213
- and
-\change_unchanged
- 
+ are the box volumes, and 
 \begin_inset Formula $\Gamma_{0}$
 \end_inset
 
-
-\change_inserted -1046193749 1680023218
- 
-\change_unchanged
-and 
+ and 
 \begin_inset Formula $\Gamma_{1}$
 \end_inset
 
-
-\change_inserted -1046193749 1680023221
- 
-\change_unchanged
-are the phase space volumes of the bound and unbound states.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Due to the compressibility of water, at 1
-\change_inserted -1046193749 1680023227
- 
-\change_unchanged
-atm the effect of changes in average of volume on binding is negligible
- 
+ are the phase space volumes of the bound and unbound states.
+ Due to the compressibility of water, at 1 atm the effect of changes in
+ average of volume on binding is negligible 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "shirtsBestPracticesFree2012b"
@@ -1489,34 +1114,12 @@ literal "false"
 
 \end_inset
 
-
-\change_inserted -1046193749 1680023289
-,
-\change_unchanged
- 
-\change_inserted -1046193749 1680023291
-m
-\change_deleted -1046193749 1680023291
-M
-\change_unchanged
-eaning the 
-\change_deleted -1046193749 1680023297
-pV
-\change_inserted -1046193749 1680023299
-
+, meaning the 
 \begin_inset Formula $pV$
 \end_inset
 
--
-\change_deleted -1046193749 1680023299
- 
-\change_unchanged
-term can be ignored 
-\change_deleted -1046193749 1680023275
-w
-\change_unchanged
-and the Helmholtz free energy closely approximates the Gibbs free energy
- 
+-term can be ignored and the Helmholtz free energy closely approximates
+ the Gibbs free energy 
 \begin_inset Formula 
 \begin{equation}
 \Delta G^{\circ}\approx\Delta A^{\circ}=-k_{B}Tln\frac{\int_{\Gamma_{1}}e^{-\beta U(x)}dx}{\int_{\Gamma_{0}}e^{-\beta U(x)}dx}.\label{eq:final-two-state-binding}
@@ -1527,57 +1130,12 @@ and the Helmholtz free energy closely approximates the Gibbs free energy
 
 \end_layout
 
-\end_deeper
-\end_deeper
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-For complex systems
-\change_inserted -1046193749 1680023661
-,
-\change_unchanged
- the partition function has no analytical solution and
-\change_deleted -1046193749 1680023811
- thus
-\change_unchanged
- simulations need to be used to sample the accessible phase space
-\change_deleted -1046193749 1680023815
+\begin_layout Standard
+For complex systems, the partition function has no analytical solution and
+ simulations need to be used to sample the accessible phase space.
+ Simulating binding events are usually dominated by rate dissociations which
+ can be the millisecond timescale and reaches the microsecond for some drug
  
-\change_inserted -1046193749 1680023669
-.
-\change_unchanged
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1680023943
-- Sampling the entire phase space is computationally expensive and needed
- to calculate accurate estimates.
- 
-\change_unchanged
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1680023692
-- 
-\change_unchanged
-Simulating binding events are usually dominated by rate dissociations which
- can be the millisecond timescale and reaches the microsecond for 
-\change_deleted -1046193749 1680023841
-a type
-\change_inserted -1046193749 1680023842
-some
-\change_unchanged
- drug
-\change_inserted -1046193749 1680023837
- 
-\change_unchanged
-
 \begin_inset CommandInset citation
 LatexCommand citep
 key "meyBestPracticesAlchemical2020a"
@@ -1585,17 +1143,8 @@ literal "false"
 
 \end_inset
 
-]..
- 
-\change_inserted -1046193749 1680023742
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-In 
-\change_inserted -1046193749 1680023925
-
+].
+ In 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "subsec:Free-Energy-Perturbation"
@@ -1605,822 +1154,76 @@ noprefix "false"
 
 \end_inset
 
-,
-\change_deleted -1046193749 1680023729
-section 2.1.4
-\change_unchanged
- we will discuss how alchemical free energy calculations can yield predictions
+, we will discuss how alchemical free energy calculations can yield predictions
  that do not require direct simulations of binding/unbinding events.
 \end_layout
 
-\end_deeper
-\end_deeper
-\end_deeper
 \begin_layout Subsection
-Molecular Modeling of physical chemistry of binding 
+Implicit solvent models
 \end_layout
 
-\begin_layout Itemize
-To estimate the free energy differences 
-\change_deleted -1046193749 1680023953
-accuratley
-\change_inserted -1046193749 1680024295
-accurately,
-\change_unchanged
- a molecular model is required that describes the 
-\change_inserted -1046193749 1680024334
-relevant 
-\change_deleted -1046193749 1680024317
-thermodynamic
-\change_inserted -1046193749 1680024318
-physical
-\change_unchanged
- 
-\change_deleted -1046193749 1680024323
-parameters
-\change_inserted -1046193749 1680024325
-properties
-\change_unchanged
- of a system correctly.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1046193749 1680024352
-Specifically, 
-\change_deleted -1046193749 1680024353
-T
-\change_inserted -1046193749 1680024355
-t
-\change_unchanged
-he Hamiltonian used to calculate the energy and forces 
-\change_deleted -1046193749 1680024373
-is chosen in order 
-\change_inserted -1046193749 1680024383
-should ensure 
-\change_unchanged
-that all configurations 
-\change_inserted -1046193749 1680024423
-will be sampled with 
-\change_deleted -1046193749 1680024425
-have
-\change_unchanged
- the correct probability
-\change_deleted -1046193749 1680024399
- of thermodynamic state
-\change_inserted -1046193749 1680024345
-.
-\change_unchanged
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-In practice
-\change_inserted -1046193749 1680024437
-,
-\change_unchanged
- the choice of the 
-\change_inserted -1046193749 1680024441
-H
-\change_deleted -1046193749 1680024440
-h
-\change_unchanged
-amiltonian is often compromise between accuracy and efficiency.
- 
-\end_layout
-
-\begin_layout Itemize
-Two major factors that dictate the cost of the energy and force evaluation
- are the degrees of freedom and the functional form of the Hamiltonian 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1680024556
-One can use a
-\change_inserted -1046193749 1680024556
-A
-\change_unchanged
- quantum-mechanical description of the system 
-\change_inserted -1046193749 1680024576
-provides the most detailed description, 
-\change_unchanged
-as the electrons DOF
-\change_inserted -1046193749 1680024467
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1680024470
-TL define
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
- are modeled explicitly
-\change_inserted -1046193749 1680024583
-.
-\end_layout
-
-\begin_layout Itemize
-
-\change_deleted -1046193749 1680024610
-, to c
-\change_inserted -1046193749 1680024610
-C
-\change_unchanged
-lassical description
-\change_inserted -1046193749 1680024615
-s
-\change_unchanged
- 
-\change_deleted -1046193749 1680024632
-where
-\change_inserted -1046193749 1680024637
- treat 
-\change_deleted -1046193749 1680024639
- one
-\change_unchanged
- 
-\change_deleted -1046193749 1680024680
-atom are treated
-\change_inserted -1046193749 1680024681
-atoms
-\change_unchanged
- as particles.
-\change_inserted -1046193749 1680024694
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1680024808
-TL there is a lot of variety here too, so you may want to rephrase.
- The are multisite classical models for both fixed charge and polarizable
- FFs (i.e., more than one particle per atom) and coarse-grained with with
- multiple atoms per particle.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Quantum-mechanical description of the system will in general be computationally
- more demanding than classical description.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Here we focus on classical Hamiltonians that incorporate fixed point charges.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-These type of Hamiltonian are referred as to 
-\begin_inset Quotes eld
-\end_inset
-
-force field
-\begin_inset Quotes erd
-\end_inset
-
- which attempt to represent inter
-\change_inserted -1046193749 1680025032
--
-\change_unchanged
- and intra
-\change_inserted -1046193749 1680025035
--
-\change_unchanged
-molecular interaction through general potential energy function.
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-In th
-\change_deleted -1046193749 1680025080
-ese research
-\change_inserted -1046193749 1680025083
-is thesis,
-\change_unchanged
- we use the general AMBER (Assisted Model Building and Energy Refinement)
- force field (GAFF) 
+\begin_layout Standard
+Water plays a fundamental role in molecular association and mediates protein-lig
+and interactions.
+ Commonly, explicit water models are used, in which large number of individual
+ water molecules are placed around the solute and modeled with approximately
+ the same theoretical level as the solute.
+ While explicit models are generally a realistic representation of an water
+ environment, they are computationally demanding.Moreover, water exchange
+ between bulk and buried cavities can be slow and leads to inefficient sampling
+ of water occupancy states
 \begin_inset CommandInset citation
 LatexCommand citep
-key "wangDevelopmentTestingGeneral2004"
-literal "false"
-
-\end_inset
-
-
-\change_deleted -1046193749 1680025090
-during
-\change_inserted -1046193749 1680025090
- for
-\change_unchanged
- our MD simulations.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The potential energy function that describes the force field of the AMBER
- software package is 
-\change_deleted -1046193749 1680025126
-shown below:
-\change_inserted -1046193749 1680025098
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1680025119
-TL use 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1680025111
-
-\backslash
-text{}
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
- for all of the words
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
-\begin_inset Formula 
-\[
-V_{AMBER}(r^{N})=E_{\text{bonded}}+E_{non-bonded},
-\]
-
-\end_inset
-
-where
-\begin_inset Formula 
-\[
-E_{bonded}=E_{bonds}+E_{angles}+E_{torisions}
-\]
-
-\end_inset
-
-and
-\begin_inset Formula 
-\[
-E_{non-bonded}=E_{vdW}+E_{electrostatics}
-\]
-
-\end_inset
-
-the function written explicitly as
-\begin_inset Formula 
-\[
-V_{AMBER}(r^{N})=\underset{i_{bonds}}{\sum}k_{bi}(l_{i}-l_{i}^{0})^{2}+\underset{i_{angles}}{\sum}k_{ai}(\theta_{i}-\theta_{i}^{0})^{2}+\underset{i_{torisions}}{\sum}\underset{n}{\sum}\frac{1}{2}V_{i}^{n}[1+cos(n\omega_{i}-\gamma_{i})+
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\stackrel[j=1]{N-1}{\sum}\stackrel[i=j+1]{N}{\sum}f_{ij}^{LJ}\left[\left(\frac{r_{ij}^{0}}{r_{ij}}\right)^{12}-2\left(\frac{r_{ij}^{0}}{r_{ij}}\right)^{6}\right]+f_{ij}^{elec}\frac{q_{i}q_{j}}{4\pi\epsilon_{0}r_{ij}}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1680025173
-The first three terms 
-\change_unchanged
-
-\begin_inset Formula $E_{bonded}$
-\end_inset
-
- consist
-\change_inserted -1046193749 1680025180
-s
-\change_unchanged
- of terms describing 
-\change_deleted -1046193749 1680025225
-the bond-angle, 
-\change_unchanged
-bond-stretching, 
-\change_deleted -1046193749 1680025230
-the 
-\change_unchanged
-bond-angle bending, and dihedral-angle bending.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1046193749 1680025288
-For bond-stretching, 
-\change_unchanged
-
-\begin_inset Formula $k_{bi}$
-\end_inset
-
-
-\change_inserted -1046193749 1680025240
- 
-\change_unchanged
-represents the force constant between the 
-\begin_inset Formula $i$
-\end_inset
-
-th atom pair, 
-\begin_inset Formula $l_{i}^{0}$
-\end_inset
-
- represents the equilibrium bond length
-\change_inserted -1046193749 1680025299
-,
-\change_unchanged
- and 
-\begin_inset Formula $l_{i}$
-\end_inset
-
-represents the current bond length
-\change_inserted -1046193749 1680025314
-.
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1046193749 1680025328
-For bond-angle bending, ....
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1046193749 1680025349
-For dihedral-angle bending, ....
-\change_unchanged
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-
-\change_inserted -1046193749 1680025390
-\begin_inset Formula $E_{\text{electrostatics}}$
-\end_inset
-
- consists of 
-\change_deleted -1046193749 1680025370
-The fourth and fifth term in the double summation represents energy due
- to the non-bonded pairs of atoms such as
-\change_unchanged
- electrostatics and van der Waals energies.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The van der Waals energy is calculated using 
-\change_deleted -1046193749 1680025712
-the
-\change_inserted -1046193749 1680025719
-the Lennard-Jone model 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1680025720
-TL cite
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
- 
-\change_inserted -1046193749 1680025724
-with 
-\change_unchanged
-equilibrium distance 
-\begin_inset Formula $r_{ij}^{0}$
-\end_inset
-
-
-\change_inserted -1046193749 1680025398
- 
-\change_unchanged
-and 
-\change_deleted -1046193749 1680025430
-scaling
-\change_unchanged
- 
-\change_inserted -1046193749 1680025456
-and energy 
-\change_deleted -1046193749 1680025457
-factor
-\change_unchanged
- 
-\begin_inset Formula $\epsilon_{ij}$
-\end_inset
-
-
-\change_inserted -1046193749 1680025546
-.
-\change_deleted -1046193749 1680025545
-and
-\change_unchanged
- 
-\change_inserted -1046193749 1680025660
-
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1046193749 1680025674
-The electrostatic energy ...
-\change_unchanged
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $f_{ij}^{\text{LJ}}$
-\end_inset
-
-
-\change_inserted -1046193749 1680025731
- and 
-\begin_inset Formula $f_{ij}^{\text{elec}}$
-\end_inset
-
- 
-\change_deleted -1046193749 1680025554
-is another
-\change_unchanged
- 
-\change_deleted -1046193749 1680025559
-scaling
-\change_inserted -1046193749 1680025769
- are scaling factors for the Lennard-Jones and electrostatic energy
-\change_deleted -1046193749 1680025586
- factor for
-\change_inserted -1046193749 1680025587
-based
-\change_unchanged
- atom
-\change_inserted -1046193749 1680025494
-s
-\change_unchanged
- 
-\change_deleted -1046193749 1680025496
-bonds
-\change_inserted -1046193749 1680025611
- on the bond separations:
-\change_unchanged
-
-\begin_inset Formula $f_{ij}=0$
-\end_inset
-
- for atoms separated by 1-2 bonds, 
-\begin_inset Formula $f_{ij}^{LJ}=1/1.2$
-\end_inset
-
-
-\change_inserted -1046193749 1680025627
- 
-\change_unchanged
-and 
-\begin_inset Formula $f_{ij}^{elec}=1/2.0$
-\end_inset
-
- for atoms separated by 3 bonds and 
-\series bold
-
-\begin_inset Formula $f_{ij}=1$
-\end_inset
-
- 
-\series default
-for all others.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The factor of 2 ensures the equilibrium distance is 
-\begin_inset Formula $r_{ij}^{0}$
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\end_deeper
-\end_deeper
-\end_deeper
-\begin_layout Subsection
-Implicit solvent model
-\change_inserted -1046193749 1680026113
-s
-\change_deleted -1046193749 1680026111
- reduces configurational sampling 
-\change_unchanged
-
-\end_layout
-
-\begin_layout Itemize
-Water plays a fundamental role in molecular association and 
-\change_deleted -1046193749 1680026130
-often
-\change_unchanged
- mediates protein-ligand interactions.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1680026147
-Traditionally
-\change_inserted -1046193749 1680026149
-Commonly
-\change_unchanged
-, explicit water models are used
-\change_inserted -1046193749 1680026161
-,
-\change_deleted -1046193749 1680026157
- to
-\change_unchanged
- 
-\change_inserted -1046193749 1680026207
-in 
-\change_unchanged
-which 
-\change_deleted -1046193749 1680026210
-places sufficiently
-\change_unchanged
- large number of individual water molecules 
-\change_inserted -1046193749 1680026216
-are placed 
-\change_unchanged
-around the solute
-\change_deleted -1046193749 1680026180
- simulating their motion
-\change_inserted -1046193749 1680026260
- and modeled with approximately the same theoretical level as the solute
-\change_unchanged
-.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-While 
-\change_deleted -1046193749 1680026275
-arguable
-\change_unchanged
- explicit models are 
-\change_deleted -1046193749 1680026289
-considered
-\change_inserted -1046193749 1680026290
-generally
-\change_unchanged
- a realistic representation of an water environment, 
-\change_inserted -1046193749 1680026298
-they are
-\change_deleted -1046193749 1680026296
-it suffers considerably
-\change_unchanged
- computational
-\change_inserted -1046193749 1680026307
-ly demanding
-\change_deleted -1046193749 1680026303
- costs
-\change_unchanged
-.
- 
-\change_inserted -1046193749 1680026316
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Moreover
-\change_inserted -1046193749 1680026323
-,
-\change_unchanged
- it is not clear if any explicit water model can be used for accurate standard
- estimate of ligand-receptor binding.
-\change_inserted -1046193749 1680026415
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1680026566
-TL This is a very general statement and worry-some if true.
- Certainly, the result will be sensitive to the model.
- And there are challenges using explicit solvent, such as proper sampling,
- especially for buried waters that can mediate binding.
- 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
- 
-\end_layout
-
-\begin_layout Itemize
-For example
-\change_inserted -1046193749 1680026399
-,
-\change_unchanged
- a popular TIP3P model can lead to 40% (6 kcal/mol) error relative to experiment
- in binding enthalpy estimates of small host-guest system
-\begin_inset CommandInset citation
-LatexCommand citep
-key "kidderOxygenationFrogGastric1975"
+key "bergazinEnhancingWaterSampling2021,courniaRelativeBindingFree2017"
 literal "false"
 
 \end_inset
 
 .
- 
-\change_inserted -1046193749 1680026342
-
+ Alternatively, implicit solvation (sometimes termed continuum solvation)
+ treats water as a a structureless continuum which in turn 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -1046193749 1680026387
-TL This citation is strange.
- It is from 1975, pre-dating TIP3P by several years.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Implicit solvation on the other hand
-\change_inserted -1046193749 1680026602
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1680026616
 TL provide a simple definition of an implicit solvent
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
- provides a significant computational advantage by representing water as
- a continuous medium with a uniform dielectric constant.
+ provides a significant computational advantage by integrating out explicit
+ solvent DOF and reduction of interacting atoms.
+ constant.
  
-\change_inserted -1046193749 1680026626
-
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -1046193749 1680026655
 TL also mention the drawback of implicit solvent.
  Certainly accuracy is one.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
+However, the computational advantage comes at a cost of lacking hydrogen
+ bonds with solvent and hydrogen bonding within the solute and unphysical
+ sampling
+\begin_inset CommandInset citation
+LatexCommand citep
+key "zhangComparisonImplicitExplicit2017"
+literal "false"
 
-\change_unchanged
+\end_inset
 
+.Implicit solvent is an attractive approach for sampling the vast chemical
+ space in search of potential drug candidates.
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-As a consequence, simulations using implicit solvents are much more efficient
- since they integrate out explicit solvent DOF and reduction of interacting
- atoms.
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1680026678
-Where the use of i
-\change_inserted -1046193749 1680026680
-I
-\change_unchanged
-mplicit solvent 
-\change_deleted -1046193749 1680026689
-become more
-\change_inserted -1046193749 1680026691
-is an
-\change_unchanged
- attractive
-\change_inserted -1046193749 1680026698
- approach for
-\change_deleted -1046193749 1680026699
- in
-\change_unchanged
- sampling the vast chemical space in search of 
-\change_deleted -1046193749 1680026705
-a
-\change_unchanged
- potential drug candidate
-\change_inserted -1046193749 1680026708
-s
-\change_unchanged
-.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-The continuum of implicit solvent models can estimate the free energy of
- solvation as a function of the conformation of the solute.
- 
-\change_inserted -1046193749 1680026846
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1046193749 1680026847
-The solvation free energy is the reversible work of transferring a solute
- from the gas phase to solution.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1046193749 1680026847
-The 
+\begin_layout Standard
+Continuum of implicit solvent models can estimate the free energy of solvation
+ as a function of the conformation of the solute.
+ The solvation free energy is the reversible work of transferring a solute
+ from the gas phase to solution.The 
 \begin_inset Formula $\Delta G_{\text{solv}}$
 \end_inset
 
@@ -2436,202 +1239,64 @@ The
 , which depends on the shape of the solute cavity
 \begin_inset Formula 
 \[
-\Delta G_{solv}=\Delta G_{el}+\Delta G_{npol}
+\Delta G_{solv}=\Delta G_{el}+\Delta G_{npol}.
 \]
 
 \end_inset
 
-
-\change_unchanged
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-In implicit solvent model
-\change_inserted -1046193749 1680026730
-s,
-\change_unchanged
- the external continuum medium and the solute will have different dielectric
- constants.
-
-\change_inserted -1046193749 1680026732
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1680026745
-TL this is only true for dielectric continuum models
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-For example, 
-\change_deleted -1046193749 1680026770
-most common
-\change_inserted -1046193749 1680026770
-the
-\change_unchanged
- dielectric of the solvent 
-\change_deleted -1046193749 1680026781
-with have an dielectric of
-\change_inserted -1046193749 1680026785
-is typically set to
-\change_unchanged
- 78.5
-\change_inserted -1046193749 1680026790
- to mimic water
-\change_unchanged
-, while the solute interior will have an dielectric between 1 to 4.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-P
-\change_inserted -1046193749 1680026796
-re
-\change_deleted -1046193749 1680026796
-er
-\change_unchanged
-vious work
-\change_deleted -1046193749 1680026801
-s
-\change_unchanged
- ha
-\change_inserted -1046193749 1680026803
-s
-\change_deleted -1046193749 1680026803
-ve
-\change_unchanged
- shown he internal dielectric can be adjusted in order to improved the accuracy
- of MM/GBSA estimate of protein-ligand affinity.
- 
-\change_inserted -1046193749 1680026806
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1680026808
-TL Cite
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1680026844
-The solvation free energy is the reversible work of transferring a solute
- from the gas phase to solution.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1680026844
-The 
-\begin_inset Formula $\Delta G_{solvation}$
-\end_inset
-
- is partitioned into two parts: a polar contribution 
-\begin_inset Formula $\Delta G_{el}$
-\end_inset
-
- which depends on the electrostatic contributions, a non-polar contribution
- 
-\begin_inset Formula $\Delta G_{npol}$
-\end_inset
-
-, which depends on the shape of the solute cavity
-\begin_inset Formula 
-\[
-\Delta G_{solv}=\Delta G_{el}+\Delta G_{npol}
-\]
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1680026855
-The next section will briefly discuss the theory underlying the GBSA.
- ->both 
-\change_unchanged
-
-\end_layout
-
-\begin_layout Subsubsection
-Generalized Born Surface Area (GBSA) implicit solvent model 
-\change_inserted -1046193749 1680026929
 
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1046193749 1680026929
+In dielectric continuum models, the external continuum medium and the solute
+ will have different dielectric constants.
+ 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
+TL this is only true for dielectric continuum models
+\end_layout
 
-\change_inserted -1046193749 1680027030
-TL I suggest just moving this into 2.1.2 and use it as a specific example
- of an implicit solvent.
- Currently, you are describing dielectric continuum models above, which
- is just one approach.
- So, make it clear that you are taking about these models and GB specifically.
-\change_unchanged
+\end_inset
 
+For example, the dielectric of the solvent is typically set to 78.5 to mimic
+ water, while the solute interior will have an dielectric between 1 to 4.
+ Previous work has shown he internal dielectric can be adjusted in order
+ to improved the accuracy of MM/GBSA estimate of protein-ligand affinity
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ravindranathanImprovingMMGBSA2011"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+TL Cite
 \end_layout
 
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
-\begin_layout Itemize
-The GBSA is a fast and analytical method to compute the 
+\begin_layout Standard
+The Generalized Born Surface Area (GBSA) treats solvent as a uniform dielectric
+ being a fast and analytical method to compute the 
 \series bold
 
 \begin_inset Formula $\Delta G_{el}$
 \end_inset
 
- 
-\end_layout
 
-\begin_deeper
-\begin_layout Itemize
-In AMBER the 
+\series default
+.
+ In AMBER the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2639,19 +1304,8 @@ canonical
 \begin_inset Quotes erd
 \end_inset
 
- generalized Born model approximates the Green
-\change_inserted -1046193749 1680027041
-'s
-\change_unchanged
- function of the Poisson equation
-\change_deleted -1046193749 1680027096
- shown below
-\change_inserted -1046193749 1680027097
- as
-\change_deleted -1046193749 1680027104
-:
-\change_unchanged
-
+ generalized Born model approximates the Green's function of the Poisson
+ equation as
 \begin_inset Formula 
 \[
 \Delta G_{el}=-\frac{1}{2}\left(\frac{1}{\epsilon_{in}}-\frac{exp(-\kappa f_{GB})}{\epsilon_{out}}\right)\underset{ij}{\sum}\frac{q_{i}q_{j}}{f_{GB}(r_{ij},R_{i},R_{j})},
@@ -2659,12 +1313,6 @@ canonical
 
 \end_inset
 
-
-\change_deleted -1046193749 1680027059
-
-\end_layout
-
-\begin_layout Itemize
 where 
 \begin_inset Formula $r_{ij}$
 \end_inset
@@ -2689,11 +1337,7 @@ and
 \begin_inset Formula $R_{i}$
 \end_inset
 
-
-\change_inserted -1046193749 1680027069
- 
-\change_unchanged
-and 
+ and 
 \begin_inset Formula $R_{j}$
 \end_inset
 
@@ -2701,16 +1345,8 @@ and
 \begin_inset Formula $\kappa$
 \end_inset
 
-
-\change_inserted -1046193749 1680027075
+ is the Debye-Hückel screening parameter.
  
-\change_unchanged
-is the Debye-Hückel screening parameter[cite].
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
 \begin_inset Formula $f_{GB}()$
 \end_inset
 
@@ -2719,47 +1355,37 @@ is the Debye-Hückel screening parameter[cite].
 \begin_inset Formula $f_{GB}()$
 \end_inset
 
- is 
-\change_inserted -1046193749 1680027132
 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "onufrievModificationGeneralizedBorn2000"
+literal "false"
+
+\end_inset
+
+ is 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -1046193749 1680027140
 TL is this the form used in igb=2?
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
 
-\change_unchanged
-
 \begin_inset Formula 
 \[
-F_{GB}(r_{ij},R_{i},R_{j})=[r_{ij}^{2}+R_{i}R_{j}exp(-r_{ij}^{2}/4R_{i}R_{j})]^{1/2}.
+F_{GB}(r_{ij},R_{i},R_{j})=[r_{ij}^{2}+R_{i}R_{j}exp(-r_{ij}^{2}/4R_{i}R_{j})]^{1/2}
 \]
 
 \end_inset
 
 
-\change_inserted -1046193749 1680027151
-
 \end_layout
 
-\begin_layout Itemize
-
-\change_inserted -1046193749 1680027153
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1680027200
-TL be sure to point out the 
+\begin_layout Standard
+where 
 \begin_inset Formula $R_{i}$
 \end_inset
 
@@ -2767,22 +1393,14 @@ TL be sure to point out the
 \begin_inset Formula $R_{j}$
 \end_inset
 
- are fit parameters of the model.
-\change_unchanged
-
+ denote the effective Born radius atoms i and j which represent each atom’s
+ degree of burial within the solute.
+ Larger the effective radii reflects a deeper burial where the surrounding
+ atoms are reducing the extent the atom charge is screened by the solvent.
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\end_deeper
 \begin_layout Subsection
 Free Energy Perturbation 
-\change_inserted -1046193749 1680023724
-
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Free-Energy-Perturbation"
@@ -2790,11 +1408,9 @@ name "subsec:Free-Energy-Perturbation"
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 While simulating the binding process of ligand-receptor provides estimates
  of binding affinity[
 \begin_inset CommandInset citation
@@ -2804,93 +1420,36 @@ literal "false"
 
 \end_inset
 
-]
-\change_inserted -1046193749 1680027402
-,
-\change_unchanged
+], depending on the size of the system current common molecular dynamic
+ software packages and high-end GPUs reach a only a few hundred of ns/day
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kutznerMoreBangYour2019"
+literal "false"
+
+\end_inset
+
+.
  
-\change_deleted -1046193749 1680027438
-the
-\change_unchanged
- current 
-\change_deleted -1046193749 1680027440
-capabilities
-\change_unchanged
- 
-\change_deleted -1046193749 1680027444
-of
-\change_unchanged
- 
-\change_deleted -1046193749 1680027417
-using
-\change_unchanged
- common molecular dynamic software packages and high-end GPUs 
-\change_deleted -1046193749 1680027450
-could
-\change_unchanged
- reach a 
-\change_inserted -1046193749 1680027464
-only a 
-\change_unchanged
-few hundred of ns/day
-\change_inserted -1046193749 1680027479
- for small systems 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -1046193749 1680027502
 TL you need to specify this a bit more, what size of system?
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
- making these calculations unappealing for high
-\change_inserted -1046193749 1680027382
- 
-\change_unchanged
-th
-\change_inserted -1046193749 1680027386
-r
-\change_unchanged
-oughput drug discovery timescales.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Free energy perturbation calculations provide
-\change_deleted -1046193749 1680027517
-d
-\change_unchanged
- 
-\change_inserted -1046193749 1680027519
-a 
-\change_unchanged
-way to estimate the binding affinity without the actual needed of simulating
- the binding event.
- 
-\change_inserted -1046193749 1680027532
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The earliest and well known methods to estimate free energy difference based
- on the perturbation theory was introduced by 
-\change_inserted -1046193749 1680027658
-
+ making these calculations unappealing for high throughput drug discovery
+ timescales.
+ Free energy perturbation calculations provide a way to estimate the binding
+ affinity without the actual needed of simulating the binding event.
+ The earliest and well known methods to estimate free energy difference
+ based on the perturbation theory was introduced by 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -1046193749 1680027685
 yTL you should be able to derive this directly from 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -2902,14 +1461,10 @@ noprefix "false"
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 Zwanzig
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2918,11 +1473,50 @@ literal "false"
 
 \end_inset
 
+,starting from Helmholtz free energy
+\begin_inset Formula 
+\[
+A=-\frac{1}{\beta}\ln Q,
+\]
 
-\change_inserted -1046193749 1680027550
-, 
-\change_unchanged
+\end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+the free energy difference between two states with potentials is 
+\begin_inset Formula 
+\[
+A_{1}-A_{0}=-\beta^{-1}[ln(Q_{1})-ln(Q_{0})=-\beta^{-1}ln\left[\frac{Q_{1}}{Q_{0}}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then adding and subtracting 
+\begin_inset Formula $e^{-\beta U_{0}(\overrightarrow{q})}$
+\end_inset
+
+ from the partition function in the numerator results in 
+\begin_inset Formula 
+\[
+\Delta A_{10}=-\beta^{-1}\text{ln}\left[\frac{\int e^{-\beta\left(U_{1}(\overrightarrow{q})-U_{0}(\overrightarrow{q})\right)e^{-\beta U_{0}(\overrightarrow{q})}d\overrightarrow{q}}}{Q_{0}}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which gives:
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
 \Delta G_{0,1}=-k_{B}Tln\left\langle e^{-\beta\left(U_{1}(x\right)-U_{0}(x))}\right\rangle _{0}.
@@ -2933,18 +1527,7 @@ literal "false"
 
 \end_layout
 
-\begin_layout Itemize
-
-\change_deleted -1046193749 1680027570
-The free energy difference by two states can be calculated as a logarithm
- of the ensemble average of Boltzmann weighted potential.
- 
-\change_unchanged
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
+\begin_layout Standard
 The 
 \begin_inset Formula $\left\langle \right\rangle _{0}$
 \end_inset
@@ -2954,27 +1537,18 @@ The
  state 1
 \end_layout
 
-\end_deeper
-\begin_layout Itemize
-
-\change_inserted -1046193749 1680027736
+\begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -1046193749 1680027766
 TL generally, you should go in both directions if using this formula.
  This is how you check for convergence.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
-It is also possible to compute the reverse transformation 1->0 but in practice
+Generally sampling in both directions checks for convergence but in practice
  their convergence properties may not be the same 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2986,8 +1560,7 @@ literal "false"
 .
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
+\begin_layout Standard
 However since EXP is only sampled at one state and then perturb in the other,
  this tend to lead to slow convergence and is also sensitive to any lack
  of phase space overlap between states
@@ -3001,26 +1574,14 @@ literal "false"
 
 \end_layout
 
-\end_deeper
-\end_deeper
-\end_deeper
 \begin_layout Subsection
 Multistate Bennett Acceptance Ratio (MBAR)
 \end_layout
 
-\begin_layout Itemize
-A recurring challenge in ligand-receptor binding is the 
-\change_deleted -1046193749 1680027803
-collecting
-\change_inserted -1046193749 1680027807
-sampling
-\change_unchanged
- of sufficient amount of data to estimate binding affinity to adequate precision.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Earlier methods such as EXP are one sided and do not make the most efficient
+\begin_layout Standard
+A recurring challenge in ligand-receptor binding is the sampling of sufficient
+ amount of data to estimate binding affinity to adequate precision.
+ Earlier methods such as EXP are one sided and do not make the most efficient
  used of data when samples from more than one state are available
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -3030,22 +1591,9 @@ literal "false"
 \end_inset
 
 .
+ Multistate Bennett acceptance method (MBAR) has shown to be a superior
+ estimator in that it has the lowest variance and is asymptotically unbiased
  
-\end_layout
-
-\begin_layout Itemize
-Mu
-\change_inserted -1046193749 1680027834
-lt
-\change_deleted -1046193749 1680027834
-t
-\change_inserted -1046193749 1680027828
-i
-\change_deleted -1046193749 1680027828
-il
-\change_unchanged
-state Bennett acceptance method (MBAR) has shown to be a superior estimator
- in that it has the lowest variance and is asymptotically unbiased 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "shirtsStatisticallyOptimalAnalysis2008a"
@@ -3054,47 +1602,10 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1046193749 1680027899
-MBAR makes use of all configurations sampled form each of these states,
- though
-\change_deleted -1046193749 1680027900
-Noting that
-\change_unchanged
- sufficient phase space overlap is
-\change_inserted -1046193749 1680027862
- still
-\change_unchanged
- required for accurate estimates of binding affinity
-\change_inserted -1046193749 1680027907
-.
-\change_deleted -1046193749 1680027905
-,
-\change_unchanged
- 
-\change_deleted -1046193749 1680027881
-MBAR make used all configurations sampled form each of these states.
- 
-\change_unchanged
-
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1680027964
-The MBAR equation 
-\change_unchanged
-
-\end_layout
-
-\begin_layout Itemize
-In MBAR formulation, each state is characterized by a specific combination
+ MBAR makes use of all configurations sampled form each of these states,
+ though sufficient phase space overlap is still required for accurate estimates
+ of binding affinity.
+ In MBAR formulation, each state is characterized by a specific combination
  of potential energy function 
 \begin_inset Formula $U_{i}(x)$
 \end_inset
@@ -3112,30 +1623,19 @@ In MBAR formulation, each state is characterized by a specific combination
 \end_inset
 
  depending on the ensemble.
- 
-\change_inserted -1046193749 1680028116
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The reduced potential energy 
+ The reduced potential energy 
 \series bold
 
 \begin_inset Formula $\mu_{i}(x)$
 \end_inset
 
  
-\change_inserted -1046193749 1680028026
-
 \series default
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -1046193749 1680028068
 TL check you notation here.
  You are using 
 \begin_inset Formula $\mu$
@@ -3147,18 +1647,22 @@ TL check you notation here.
 \end_inset
 
  for the former?
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
+of a state i is defined by Shirts and Chodera
+\begin_inset CommandInset citation
+LatexCommand citep
+key "shirtsStatisticallyOptimalAnalysis2008a"
+literal "false"
 
-\change_unchanged
-of a state i is defined by Shirts and Chodera[cite]
+\end_inset
+
+
 \begin_inset Formula 
 \[
-\mu_{i}(x)=\beta_{i}\left[U_{i}(x)+p_{i}V(x)+\mu_{i}^{T}n(x)\right],
+\text{u}_{i}(x)=\beta_{i}\left[U_{i}(x)+p_{i}V(x)+\mu_{i}^{T}\text{N}(x)\right],
 \]
 
 \end_inset
@@ -3166,114 +1670,36 @@ of a state i is defined by Shirts and Chodera[cite]
 
 \end_layout
 
-\begin_layout Itemize
-
-\change_inserted -1046193749 1680028097
-w
-\change_deleted -1046193749 1680028095
-W
-\change_unchanged
-here 
-\begin_inset Formula $n(x)$
+\begin_layout Standard
+where 
+\begin_inset Formula $\text{N}(x)$
 \end_inset
 
- are the number of molecules to each chemical potentials.
+ are the number of molecules to each chemical potentials , 
+\begin_inset Formula $\beta_{i}$
+\end_inset
+
+denoting inverse temperature, 
+\begin_inset Formula $U_{i}(x)$
+\end_inset
+
+potential energy function and 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+denoting the chemical potential of the system.
+\end_layout
+
+\begin_layout Standard
+The reduced potentials can be denoted as reduced free energy differences
  
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The free energy of a state 
-\change_deleted -1046193749 1680028086
-i
-\change_inserted -1046193749 1680028086
-
-\begin_inset Formula $i$
+\begin_inset Formula $\Delta f_{ij}\equiv\beta_{j}A_{j}-\beta_{i}A_{i}$
 \end_inset
 
-
-\change_unchanged
- can be defined by Boltzmann weight:
-\change_inserted -1046193749 1680035165
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1680035171
-TL I don't think this is correct.
-\change_unchanged
-
+among states.
 \end_layout
 
-\end_inset
-
-
-\change_unchanged
-
-\begin_inset Formula 
-\[
-f_{i}=-ln\int e^{-u_{i}(x)}dx
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\change_deleted -1046193749 1680028152
-To to estimate the free energy difference between two states 
-\begin_inset Formula $\Delta f_{ij}=f_{i}-f_{j}$
-\end_inset
-
-, is estimated using the MBAR equations down below, 
-\change_unchanged
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-
-\change_deleted -1046193749 1680028180
-Using MD simulation data MBAR gives the best estimator for free energy differenc
-e between multiple states.
- 
-\change_unchanged
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1046193749 1680035201
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1680035206
-TL revise this sentence
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-Let 
-\begin_inset Formula $\left\{ x_{in}\right\} _{n=1}^{N_{i}}$
-\end_inset
-
-
-\change_inserted -1046193749 1680028189
- 
-\change_unchanged
-be all configurations sampled in state i, then equation follow equation
- for computing the free energies:
+\begin_layout Standard
 \begin_inset Formula 
 \[
 \hat{f_{i}}=-ln\stackrel[j=1]{K}{\sum}\stackrel[n=1]{N_{j}}{\sum}\frac{exp[-u_{i}(x_{jn})]}{\sum_{k=1}^{K}N_{k}exp[\hat{f}_{k}-u_{k}(x_{jn})]}
@@ -3281,11 +1707,10 @@ be all configurations sampled in state i, then equation follow equation
 
 \end_inset
 
-
+,
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
+\begin_layout Standard
 
 \family roman
 \series medium
@@ -3302,17 +1727,21 @@ be all configurations sampled in state i, then equation follow equation
 \begin_inset Formula $\hat{f}_{i}$
 \end_inset
 
+ are the solution for MBAR free energy equations.
 
-\change_inserted -1046193749 1680028174
- 
-\change_unchanged
-are the solution for MBAR free energy equations.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Note 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ Note 
 \begin_inset Formula $\hat{f}_{i}$
 \end_inset
 
@@ -3321,88 +1750,39 @@ Note
 \end_inset
 
  are meaningful.
- 
-\end_layout
-
-\begin_layout Itemize
-However when samples from different states have poor phase space overlap
+ However when samples from different states have poor phase space overlap
  equation above will fail to converge or 
 \begin_inset Formula $\hat{f}_{i}$
 \end_inset
 
 could have large uncertainties.
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-Lastly MBAR also provides a direct expression to estimate the statistical
- uncertainty in free energy differences.
-
-\change_inserted -1046193749 1680035225
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1680035269
-TL you should state this
-\change_unchanged
-
-\end_layout
+ Lastly MBAR also provides a direct expression to estimate the statistical
+ uncertainty in free energy differences:
+\begin_inset Formula 
+\[
+\delta^{2}\Delta\hat{f_{ij}}\equiv\text{cov}\left(-\text{ln\ensuremath{\frac{\hat{c_{j}}}{\hat{c_{i}}}-\text{ln\ensuremath{\frac{\hat{c_{j}}}{\hat{c_{i}}}}}}}\right)=\hat{\Theta_{ii}}-2\hat{\Theta_{ij}}+\hat{\Theta_{jj}}
+\]
 
 \end_inset
 
 
-\change_unchanged
-
-\begin_inset Separator plain
-\end_inset
-
-
 \end_layout
 
-\end_deeper
+\begin_layout Subsection
+Intermediate states-provide better phase space overlap
+\end_layout
+
 \begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Intermediate states-provide better phase space overlap 
-\end_layout
-
-\begin_layout Itemize
 Intermediate states states are needed to obtain a reliable estimate of ligand-ho
 st free energy difference.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Attempting to calculate the free energy difference of ligand-host binding
+ Attempting to calculate the free energy difference of ligand-host binding
  using equation (5), end-states (the ligand-bound and ligand-unbound) have
  to be similar in order to obtain reliable estimate in their free energy
  difference.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Typically this is not the case since and the end-states have a poor space
+ Typically this is not the case since and the end-states have a poor space
  phase overlap leading to large uncertainties in computing the free energy
  difference.
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-Therefore, the choice of intermediate states can significantly make free
+ Therefore, the choice of intermediate states can significantly make free
  energy calculations more efficient by bridging the gap between states[
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -3412,25 +1792,14 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Itemize
-The core step up in alchemical free energy calculations is defined intermediate
+ The core step up in alchemical free energy calculations is defined intermediate
  states that link the unbound and bound states (end-states) to determine
- a precise estimate of the binding free energy.
+ a precise estimate of the binding free energy.Since free energy is a state
+ function, the path that connects the two end states is unimportant and
+ we can choose tailor the cycle that connect the end states through several
+ nonphysical intermediate ones as shown in figure 2.1.
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Since free energy is a state function, the path that connects the two end
- states is unimportant and we can choose tailor the cycle that connect the
- end states through several nonphysical intermediate ones as shown in figure
- 2.1
-\series bold
-.
-\end_layout
-
-\end_deeper
 \begin_layout Itemize
 The simplest path to construct is a linear in two end point Hamiltonians:
 \begin_inset Formula 
@@ -3460,15 +1829,19 @@ where
 \end_inset
 
  the bound state.
+
+\change_deleted -1463621830 1680390346
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
-The cycle depicted in 
+The cycle depicted in
 \series bold
-Fig 1 
+ 
 \series default
-the intermediate states are simulated independently.
+figure 2.1 the intermediate states are simulated independently.
  From these simulations the fee energy difference between state 
 \begin_inset Formula $i$
 \end_inset
@@ -3494,23 +1867,17 @@ the intermediate states are simulated independently.
 \end_layout
 
 \end_deeper
-\begin_layout Section
-Our Thermodynamic Pathway 
+\begin_layout Subsection
+Our Thermodynamic Pathway
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 Our thermodynamic cycle uses a modified DDM cycle that uses conformational
  restraints and GB solvent to enhance convergence.
- 
+ All of the sampling is done in the fast GBSA implicit solvent model in
+ states 1-8 (figure 2.1)
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-All of the sampling is done in the fast GBSA implicit solvent model in states
- 1-8 (fig 1)
-\end_layout
-
-\end_deeper
 \begin_layout Standard
 \begin_inset Float figure
 wide false
@@ -3532,8 +1899,15 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+Our modified thermodynamic cycle
+\end_layout
 
-\change_inserted -1463621830 1680130347
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 This figure illustrates the states/steps in out thermodynamic cycle.
  The free energy change in GB solvent is the free energy difference between
  states 1 and 8.
@@ -3552,22 +1926,11 @@ literal "false"
 
 .State 5 is where the ligand is decoupled from the receptor but is orientationall
 y restrained relative to receptor, so state 6 is not simulated.
- 
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
@@ -3579,7 +1942,11 @@ States 1 & 8 : State 1 denotes the initial endstate of the unbound host
  and guest system simulated in GBSA solvent.
  In this study we use replica exchange molecular dynamics (REMD) to efficiently
  explore the different potential energy surfaces.
+
+\change_deleted -1463621830 1680390346
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3589,7 +1956,11 @@ al restraints.
  By placing these restraints both the receptor and ligand more rigid therefore
  decreasing accessible degree of freedom.
  Limiting the DOF will help smooth with the convergence in the later steps.
+
+\change_deleted -1463621830 1680390346
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3608,7 +1979,11 @@ al restraints.
 \end_inset
 
  states.
+
+\change_deleted -1463621830 1680390346
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3618,9 +1993,22 @@ al restraints.
  These are orientational restraints which bind the ligand relative to the
  receptor which corresponds to the configuration of the binding mode of
  ligand.
- In this project we used Boresch et al[cite] that not only keeps the ligand
- in a specific orientation relative to the receptor but also provides an
- analytical solution for 
+ In this project we used Boresch 
+\change_inserted -1463621830 1680484006
+restraints 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "boreschAbsoluteBindingFree2003"
+literal "false"
+
+\end_inset
+
+
+\change_deleted -1463621830 1680483958
+et al[cite]
+\change_unchanged
+ that not only keeps the ligand in a specific orientation relative to the
+ receptor but also provides an analytical solution for 
 \begin_inset Formula $\Delta G_{restr}^{solv}$
 \end_inset
 
@@ -3673,7 +2061,11 @@ subscript denoted the distant,
 \end_inset
 
 denoting the angle and torsion restraints.
+
+\change_deleted -1463621830 1680390346
  
+\change_unchanged
+
 \end_layout
 
 \end_deeper
@@ -3701,13 +2093,21 @@ denoting the angle and torsion restraints.
 \end_inset
 
  windows.
+
+\change_deleted -1463621830 1680390346
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Enumerate
 7->8: Finally is incremental removal of the the conformational and orientational
  restraints.
+
+\change_deleted -1463621830 1680390346
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -3719,8 +2119,8 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename images/boresch.png
-	width 100text%
-	BoundingBox 0bp 0bp 800bp 450bp
+	lyxscale 50
+	width 50text%
 
 \end_inset
 
@@ -3732,9 +2132,34 @@ status open
 
 \begin_layout Plain Layout
 
-\change_deleted -1463621830 1680130377
-Boresch restraints
-\change_inserted -1463621830 1680130641
+\change_inserted -1463621830 1680474290
+Implementation of Boresch Restraints
+\change_deleted -1463621830 1680474275
+A total of 6 atoms are selected to created orientational restraints between
+ the ligand and receptor.The distance restraint is denoted as 
+\begin_inset Formula $r_{aA}$
+\end_inset
+
+.
+ Atoms b-a-A create the 
+\begin_inset Formula $\sig$
+\end_inset
+
+ 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_inserted -1463621830 1680474271
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680474272
 A total of 6 atoms are selected to created orientational restraints between
  the ligand and receptor.The distance restraint is denoted as 
 \begin_inset Formula $r_{aA}$
@@ -3747,17 +2172,265 @@ A total of 6 atoms are selected to created orientational restraints between
 
 
 \change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Molecular Modeling of physical chemistry of binding
+\change_deleted -1463621830 1680390346
  
+\change_unchanged
+
 \end_layout
+
+\begin_layout Standard
+To estimate the free energy differences accurately, a molecular model is
+ required that describes the relevant physical parameters properties of
+ a system correctly.
+ Specifically, the Hamiltonian used to calculate the energy and forces should
+ ensure that all configurations will be sampled with the correct probability.
+ In practice, the choice of the Hamiltonian is often compromise between
+ accuracy and efficiency.
+ Two major factors that dictate the cost of the energy and force evaluation
+ are the degrees of freedom and the functional form of the Hamiltonian.
+ A quantum-mechanical description of the system provides the most detailed
+ description, as the electrons degree of freedom
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL define
+\end_layout
+
+\end_inset
+
+ are modeled explicitly and interaction energy is calculated by solving
+ electronic structure of the system.
+ In molecular mechanics (MM) description, molecules are represented by particles
+ which represent atoms or groups of atoms.
+ Quantum-mechanical description of the system will in general be computationally
+ more demanding than classical molecular models.
+ Here we focus on classical Hamiltonians that incorporate fixed point charges.
+ These type of Hamiltonian are referred as to 
+\begin_inset Quotes eld
+\end_inset
+
+force field
+\begin_inset Quotes erd
+\end_inset
+
+ which attempt to represent inter- and intra-molecular interaction through
+ general potential energy function.
+\end_layout
+
+\begin_layout Standard
+In this thesis, we use the general AMBER (Assisted Model Building and Energy
+ Refinement) force field (GAFF)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wangDevelopmentTestingGeneral2004"
+literal "false"
+
+\end_inset
+
+ for our MD simulations.
+ The potential energy function that describes the force field of the AMBER
+ software package is 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+TL use 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+text{}
+\end_layout
+
+\end_inset
+
+ for all of the words
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V_{\text{AMBER}}(r^{N})=E_{\text{bonded}}+E_{\text{non-bonded}},
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+E_{\text{bonded}}=E_{\text{bonds}}+E_{\text{angles}}+E_{\text{torisions}}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+E_{\text{non-bonded}}=E_{\text{vdW}}+E_{\text{electrostatics}}
+\]
+
+\end_inset
+
+the function written explicitly as
+\begin_inset Formula 
+\[
+V_{\text{AMBER}}(r^{N})=\underset{i_{\text{bonds}}}{\sum}k_{bi}(l_{i}-l_{i}^{0})^{2}+\underset{i_{\text{angles}}}{\sum}k_{ai}(\theta_{i}-\theta_{i}^{0})^{2}+\underset{i_{\text{torisions}}}{\sum}\underset{n}{\sum}\frac{1}{2}V_{i}^{n}[1+cos(n\omega_{i}-\gamma_{i})+
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\stackrel[j=1]{N-1}{\sum}\stackrel[i=j+1]{N}{\sum}f_{ij}^{LJ}\left[\left(\frac{r_{ij}^{0}}{r_{ij}}\right)^{12}-2\left(\frac{r_{ij}^{0}}{r_{ij}}\right)^{6}\right]+f_{ij}^{\text{elec}}\frac{q_{i}q_{j}}{4\pi\epsilon_{0}r_{ij}}.
+\]
 
 \end_inset
 
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula $E_{\text{bonded}}$
+\end_inset
+
+ consists of terms describing bond-stretching, bond-angle bending, and dihedral-
+angle bending.
+ For bond-stretching, 
+\begin_inset Formula $k_{bi}$
+\end_inset
+
+ represents the force constant between the 
+\begin_inset Formula $i$
+\end_inset
+
+th atom pair, 
+\begin_inset Formula $l_{i}^{0}$
+\end_inset
+
+ represents the equilibrium bond length, and 
+\begin_inset Formula $l_{i}$
+\end_inset
+
+represents the current bond length.
+ For bond-angle bending, 
+\begin_inset Formula $k_{ai}$
+\end_inset
+
+represents the force constant, 
+\begin_inset Formula $\theta_{i}^{0}$
+\end_inset
+
+ being the bond angle at equilibrium and 
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+the current bond angle between atoms.
+ For dihedral-angle bending, 
+\begin_inset Formula $V_{i}^{n}$
+\end_inset
+
+(amplitude) represents the dihedral energy barrier, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is the phase angle for dihedral angle 
+\begin_inset Formula $\omega$
 \end_inset
 
 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "hornakComparisonMultipleAmber2006"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Formula $E_{\text{electrostatics}}$
+\end_inset
+
+ consists of electrostatics and van der Waals energies.
+ The van der Waals energy is calculated using the Lennard-Jone model 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL cite
+\end_layout
+
+\end_inset
+
+ with equilibrium distance 
+\begin_inset Formula $r_{ij}^{0}$
+\end_inset
+
+ and and energy 
+\begin_inset Formula $\epsilon_{ij}$
+\end_inset
+
+.
+ Lastly, the electrostatic energy is defined by Coulomb’s law where each
+ 
+\begin_inset Formula $q$
+\end_inset
+
+ is the charge on atom i and j and 
+\begin_inset Formula $r_{ij}$
+\end_inset
+
+ is the distance from each other.
+ 
+\begin_inset Formula $f_{ij}^{\text{LJ}}$
+\end_inset
+
+ and 
+\begin_inset Formula $f_{ij}^{\text{elec}}$
+\end_inset
+
+ are scaling factors for the Lennard-Jones and electrostatic energy based
+ atoms on the bond separations:
+\begin_inset Formula $f_{ij}=0$
+\end_inset
+
+ for atoms separated by 1-2 bonds, 
+\begin_inset Formula $f_{ij}^{LJ}=1/1.2$
+\end_inset
+
+ and 
+\begin_inset Formula $f_{ij}^{elec}=1/2.0$
+\end_inset
+
+ for atoms separated by 3 bonds and 
+\series bold
+
+\begin_inset Formula $f_{ij}=1$
+\end_inset
+
+ 
+\series default
+for all others.
+ The factor of 2 ensures the equilibrium distance is 
+\begin_inset Formula $r_{ij}^{0}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Chapter
@@ -3777,6 +2450,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename images/entire_system_2.png
+	lyxscale 50
 	width 100text%
 
 \end_inset
@@ -3794,6 +2468,33 @@ Host guest system dataset.
 
 \end_inset
 
+
+\change_inserted -1463621830 1680390756
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680484180
+CB7 receptor and 14 guest ligands from the SAMPL4 challenge dataset described
+ in [5].
+ WP6 receptor and 13 guest molecules from SAMPL6 dataset
+\begin_inset CommandInset citation
+LatexCommand citep
+key "rizziOverviewSAMPL6Host2018"
+literal "false"
+
+\end_inset
+
+.
+ Octa-acid receptor and 23 guest molecules.
+ 
+\begin_inset Formula $\alpha/\beta$
+\end_inset
+
+-cyclodextrins 30 guest molecules[taproom].
+ Together with all host systems comprise 83 unique host-guest pairs.
+\change_unchanged
 
 \end_layout
 
@@ -3862,7 +2563,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-Choice of Host-Guest System
+Host-Guest Systems
 \end_layout
 
 \begin_layout Itemize
@@ -3890,8 +2591,17 @@ literal "false"
 
 \begin_deeper
 \begin_layout Itemize
-We tested against cucurbit[7]uril, (CB7), pillar[n]arene, octa-acid (OAH)
- 
+We tested against cucurbit[7]uril
+\change_deleted -1463621830 1680290823
+, 
+\change_unchanged
+(CB7), pillar[
+\change_inserted -1463621830 1680290832
+6
+\change_deleted -1463621830 1680290831
+n
+\change_unchanged
+]arene, octa-acid (OAH) 
 \begin_inset Formula $\alpha/\beta$
 \end_inset
 
@@ -3940,7 +2650,21 @@ literal "false"
 \begin_layout Itemize
 In this study we test against Pillar[6]arene (WP6) which bears six carboxylated
  moieties on the upper and lower rims that can be, in part, protonated at
- pH = 7.4 [cite].
+ pH = 7.4 
+\change_deleted -1463621830 1680484234
+[cite]
+\change_inserted -1463621830 1680484234
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "amezcuaSamplchallengesSAMPL9Version2021"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Itemize
@@ -4034,8 +2758,21 @@ Complex parameterization
 
 \begin_layout Itemize
 All the ligands were docked into the binding site of an equilibrated host
- system using Autodock Vina docking single mode[cite-vina] to generate several
- ligand poses.
+ system using Autodock Vina docking single mode
+\change_deleted -1463621830 1680484394
+[cite-vina]
+\change_inserted -1463621830 1680484394
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "forliComputationalProteinLigand2016"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+ to generate several ligand poses.
  
 \end_layout
 
@@ -4065,7 +2802,21 @@ The
 \begin_inset Formula $.pdbqt$
 \end_inset
 
- file using OpenBabel [cite] using the 
+ file using OpenBabel 
+\change_deleted -1463621830 1680484519
+[cite]
+\change_inserted -1463621830 1680484519
+
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "oboyleOpenBabelOpen2011"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+ using the 
 \begin_inset Formula $-p$
 \end_inset
 
@@ -4077,7 +2828,9 @@ All the SAMPL experimental data and initial
 \begin_inset Formula $.mol2$
 \end_inset
 
- files were downloaded from the GitHub repositories[
+ files were downloaded from the GitHub repositories
+\change_deleted -1463621830 1680484536
+[
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "slochowerTaproom2022"
@@ -4085,7 +2838,19 @@ literal "false"
 
 \end_inset
 
-].
+]
+\change_inserted -1463621830 1680484536
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "oboyleOpenBabelOpen2011"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+.
  
 \end_layout
 
@@ -4118,22 +2883,30 @@ Force Field Parameters
 
 \begin_layout Itemize
 The simulations of all host-guest systems were setup by LEaP program in
- AmberTools software suite[
+ AmberTools software suite
+\change_deleted -1463621830 1680484549
+[
+\change_unchanged
+
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "AmberTools22"
 literal "false"
 
 \end_inset
 
-].
+
+\change_deleted -1463621830 1680484551
+]
+\change_unchanged
+.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
 The partial atomic charges were applied using the AM1-BCC model 
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "jakalianFastEfficientGeneration2002"
 literal "false"
 
@@ -4141,7 +2914,21 @@ literal "false"
 
  and generalized Amber Force Field v2 (GAFFv2) force field was applied to
  all guest and host systems using the antechamber program in AmberTools21.
- (cite).
+ 
+\change_deleted -1463621830 1680484601
+(cite)
+\change_inserted -1463621830 1680484601
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AmberTools22"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+.
 \end_layout
 
 \begin_deeper
@@ -4154,11 +2941,24 @@ Rather using an explicit solvation model we used implicit generalize Born
 \begin_deeper
 \begin_layout Itemize
 The 
-\begin_inset Formula $GB^{HCT}$
+\begin_inset Formula $GB^{OBC}$
 \end_inset
 
-[cite] model used in this study, which was invoked in AMBER with the keyword
- 
+
+\change_deleted -1463621830 1680484807
+[cite]
+\change_inserted -1463621830 1680484807
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "onufrievModificationGeneralizedBorn2000"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+ model used in this study, which was invoked in AMBER with the keyword 
 \begin_inset Formula $igb=2$
 \end_inset
 
@@ -4185,8 +2985,21 @@ Simulation details
 \end_layout
 
 \begin_layout Itemize
-All production simulations were performed on AMBER21 [cite] molecular dynamics
- simulation software.
+All production simulations were performed on AMBER21 
+\change_deleted -1463621830 1680484828
+[cite]
+\change_inserted -1463621830 1680484828
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AmberTools22"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+ molecular dynamics simulation software.
  
 \end_layout
 
@@ -4334,7 +3147,21 @@ Extraction of target temperature(298K) was done using
 
 
 \series default
- [cite].
+ 
+\change_deleted -1463621830 1680484847
+[cite]
+\change_inserted -1463621830 1680484847
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AmberTools22"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+.
  
 \end_layout
 
@@ -4379,7 +3206,21 @@ The last frame of state
 \begin_inset Formula $AMBERtools$
 \end_inset
 
- 21[cite].
+ 21
+\change_deleted -1463621830 1680484861
+[cite]
+\change_inserted -1463621830 1680484861
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AmberTools22"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+.
 \end_layout
 
 \begin_deeper
@@ -4453,7 +3294,13 @@ package in
 \begin_inset Formula $AMBERtools21$
 \end_inset
 
-[cite].
+
+\change_inserted -1463621830 1680484873
+.
+\change_deleted -1463621830 1680484872
+[cite
+\change_unchanged
+].
  
 \end_layout
 
@@ -4614,8 +3461,21 @@ In order to facilitate convergence orientational restraints have been used
 \end_layout
 
 \begin_layout Itemize
-Here we construct orientational suggested by Boresch[cite] which requires
- an distance restraint(
+Here we construct orientational suggested by Boresch
+\change_deleted -1463621830 1680484891
+[cite] 
+\change_inserted -1463621830 1680484891
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "boreschAbsoluteBindingFree2003"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+which requires an distance restraint(
 \begin_inset Formula $r_{aA}$
 \end_inset
 
@@ -4739,7 +3599,26 @@ Free energy analysis using MBAR
 As phase space overlap affects the reliability of the free energy difference
  estimates, many intermediate states are needed in order to bridge and increase
  the overlap between two endstates (figure 2.2).
- MBAR proposed by Shirts et al [cite] has been superior to other estimtors
+ MBAR proposed by Shirts et al 
+\change_deleted -1463621830 1680484938
+[cite]
+\change_inserted -1463621830 1680484938
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "shirtsStatisticallyOptimalAnalysis2008a"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+ has been superior to other 
+\change_deleted -1463621830 1680484942
+estimtors
+\change_inserted -1463621830 1680484942
+estimators
+\change_unchanged
  with the lowest variance and is asymptotically unbiased
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -6626,10 +5505,16 @@ OAH
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted -1463621830 1680480933
 \begin_inset Formula $\alpha-$
 \end_inset
 
 cyclodextrins
+\change_inserted -1463621830 1680480933
+ACD
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -6703,10 +5588,16 @@ cyclodextrins
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted -1463621830 1680480936
 \begin_inset Formula $\beta-$
 \end_inset
 
 cyclodextrins
+\change_inserted -1463621830 1680480937
+BCD
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -7926,8 +6817,14 @@ s can speed up overall workflow completion.
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
- package utilizes toil[cite] which is a workflow management system which
- allow us to utilize all processors available to run and complete all tasks.
+ package utilizes 
+\change_inserted -1463621830 1680487688
+T
+\change_deleted -1463621830 1680487687
+t
+\change_unchanged
+oil[cite] which is a workflow management system which allow us to utilize
+ all processors available to run and complete all tasks.
  
 \end_layout
 
@@ -8021,8 +6918,2746 @@ Discussion
 
 \begin_layout Section
 
-\change_inserted -1463621830 1680129137
-RBFE performance comparison against SAMPL4 challenge submission
+\change_inserted -1463621830 1680450200
+Comparison with Other Methods 
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1463621830 1680450204
+CB7 SAMPL4 Comparison 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463621830 1680477242
+Overall, binding affinity prediction for 
+\begin_inset Formula $ISDDM.py$
+\end_inset
+
+ workflow performed well for CB7 system compared to other submission on
+ to the SAMPL4 challenge[cite].
+ We rank one of the top performers among the challenge submissions (table
+ 5.1).
+ Our Pearson correlation(
+\begin_inset Formula $R^{2}=0.78$
+\end_inset
+
+) where only two methods had match ours.
+ The first being method was RRHO rigid rotor harmonic oscillator approximation
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "grimmeSupramolecularBindingThermodynamics2012"
+literal "false"
+
+\end_inset
+
+, which employed COSMO-RS(conductor-like screening model for real solvents)
+ and OST (orthogonal space tempering) with TIP3P-MOD(transferable interaction
+ potential three-point).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463621830 1680409853
+A total of 5 entires use an implicit solvent model and among these methods
+ we outperformed all 5 of them.
+ The RRHO/COSMO and M2/PBSA are more detailed predecessor than GBSA solvent.
+ Where our seemed to outperform all the implicit applicants.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463621830 1680410941
+Explicit solvent models which are considered a more detailed models seemed
+ to varied with correlations(
+\begin_inset Formula $R^{2}$
+\end_inset
+
+) that range from 0 to 0.8.
+ As stated before OST/TIP3P-MOD explicit solvent (
+\begin_inset Formula $R^{2}=0.8)$
+\end_inset
+
+ having a RMSE
+\begin_inset Formula $_{r}$
+\end_inset
+
+ of 2.8 and RMSE
+\begin_inset Formula $_{o}$
+\end_inset
+
+ of 2.8 kcal/mol.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463621830 1680449391
+While SAMPL4 did not compute any absolute metrics we can compare our results
+ with published work using quantum mechanics with continuum-dielectric implicit
+ solvent[cite cite]..
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463621830 1680396037
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="26" columns="10">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Solvent Model
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Method
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Slope
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RMSE
+\begin_inset Formula $_{o}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RMSE
+\begin_inset Formula $_{r}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RMSE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MAE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MSE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_deleted -1463621830 1680399116
+Intercept
+\change_inserted -1463621830 1680399125
+Solvent Type
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ours-GBSA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_deleted -1463621830 1680399048
+1.4
+\change_inserted -1463621830 1680409002
+MBAR(DDM/GB)
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.
+\change_inserted -1463621830 1680406556
+78
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+–6.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Implicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ours-GBSA (
+\begin_inset Formula $\Delta G_{corr}^{GB}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MBAR(DDM/GB)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.81
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.94
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.38
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.03
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Implicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+BRI BEM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SIE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.18
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Implicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+BRI BEM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SIE +HB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.19
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Implicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AMSOL
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DOCK 3.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explicit-Quantum
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+COSMO-RS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RRHO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Implicit-Quantum
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+COSMO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+QM-M2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Implicit-Quantum
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBSA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Implicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIP4P
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FEP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIP4P
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FEP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIP4P-EW
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FEP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIP4P-EW
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FEP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIP3P/4P-EW
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Enthalpy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIP3P
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Enthalpy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIP3P-EW
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Enthalpy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AMOEBA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+BAR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIP4P
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Water Count
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIP3P-MOD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_deleted -1463621830 1680407473
+OST
+\change_inserted -1463621830 1680407549
+OST
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIP3P
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PMF
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AMOEBA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+BAR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIP3P
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+EES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIP3P
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+EES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explicit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+QM-VM2(DFTB3-D3)**
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-7.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Implicit-Quantum
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+QM-VM2(RHF-D3)**
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Implicit-Quantum
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+QM-VM2(TPSS-D3)**
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Implicit-Quantum
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Predictions from SAMPL4 CB7 dataset.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+All entries were from the SAMPL4 CB7 dataset[cite-cite].
+ Units are in kcal/mol
+\change_inserted -1463621830 1680449396
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1463621830 1680450001
+WP6 SAMPL9 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463621830 1680477274
+SAMPL9 challenge there were 5 rank submissions for WP6 dataset.
+ The results from rank submissions were taken from another published work[cite].
+ Looking at the RMSE to rank criteria of submissions, the machine learning
+ method which had the smallest RMSE ~2 kcal/mol and performed the best.
+ The second top performer was a extended linear interaction energy (ELIE)
+ with ~2.5kcal/mol.
+ The other three methods were had an average RMSE of about ~3kcal/mol.
+ As we compared our RMSE with our uncorrected 
+\begin_inset Formula $\Delta G_{gb}^{bind}$
+\end_inset
+
+(table 4.3) with RMSE 6.6kcal/mol having the largest deviation from the rank
+ submissions.
+ The trained MM/PBSA ELIE method[cite] is very similar to end-point calculations
+ using an implicit solvent model GBSA.
+ However this method required some system-specific training step sharing
+ some similarities with ML based method and it is not fully physics based
+ and is not directly transferable to other systems, especially for targets
+ without known binding affinities[cite-paper].
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463621830 1680477363
+Another published study after SAMPL9 challenge also performed end-point
+ free energy study on SAMPL9 challenge data set.
+ In which compute a comparison between different charge models for solutes
+ such as AM1-BCC,( ) RESP-1( ), and RESP-2( ) using the GAFF2 forcefield.
+ From there results RESP-1 charge performed the best among the other charge
+ models but there deviation from experiment for both MM/PBSA and MM/GBSA
+ were still very large ~12kcal/mol.
+ When comparing our RMSE to theirs we are getting better metrics but still
+ not the best.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1463621830 1680476137
+OAH SAMPL4 comparison 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463621830 1680482832
+To the best of our knowledge there hasn't been any published work that benchmark
+ the entire dataset of octa-acid for comparisons.
+ However in SAMPL4 challenge did a smaller set of 9 guests molecules for
+ blind affinity measurements for octa-acid [cite=sampl4].
+ One submission in particular interest used BEDAM method [42] coupled to
+ the OPLS-AA classical force field [43] and the AGBNP2 [44] continuum solvation
+ model being one of the fairly accurate predictions of the SAMPL4 challenge.
+ The reported average signed error was RMSE
+\begin_inset Formula $_{o}$
+\end_inset
+
+=1.3 and root mean square error of all pairs of relative binding free energies
+ RMSE
+\begin_inset Formula $_{r}$
+\end_inset
+
+=0.9 kcal/mol.
+ Also higher a one of the highest Person correlation coefficient (
+\begin_inset Formula $R^{2}=0.9$
+\end_inset
+
+).
+ As for our results it we compute the 9 guests from the SAMPL4 challenge
+ using our method will results in RMSE_o=1.3 and RMSE_r=2.0 kcal/mol and correlati
+on of 
+\begin_inset Formula $R^{2}=0.64$
+\end_inset
+
+.
+ The AGBNP2 method tuned the model to properly treat enclosed hydration
+ sites has been important to achieve good accuracy.[cite-paper].
+ That being said our GB model is unable to accuracy treat hydration in deep
+ hydrophobic of OAH resulting in poor accuracy.
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1463621830 1680458455
+Generalize Born Hydration Asymmetry Correction Considerations 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463621830 1680464947
+The simplicity of implicit solvent models by treating water structureless
+ continuum dielectric medium provides fast estimation of solvation effects
+ making them very popular for virtual screening campaigns.
+ Generalize Born arguably one the faster implicit models due to making approxima
+ting for calculating molecular electrostatics in solvent as describing by
+ the Poisson Boltzmann equation.
+ However with a number of approximations for solving polar interactions
+ (electrostatics), generalize Born (GB) models causes a separation from
+ the more accurate explicit solvent treatment.
+ (33).
+ One major approximation is the neglect of hydration asymmetry (CHA) [cite-luchk
+ko paper], which contributed towards solvation free energy 
+\begin_inset Formula $\Delta G_{solv}$
+\end_inset
+
+ on the sign of the charges of the solute.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463621830 1680464677
+From entire host guest dataset (figure 4.2a) using GB-OBC[cite] model we
+ clearly see a bias for all charge guest ligands.
+ In figure 4.2a the absolute binding estimates for positively charge guests
+ being overestimates and negatively charge guests are being underestimated.
+ The guest molecules having the dominate effect in binding where the host
+ system having little or no effect.
+ By applying a charge hydration correction on each individual charge guests
+ (table4.2) which resulted in better metrics (table 4.3) across all host-guest
+ system.
+ This correction is suggestive that the lack of charge hydration asymmetry
+ in GB is the issue.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463621830 1680466263
+Within AMBER contains four variants of GB models which are GB-HCT,127−129
+ GB-OBC,130,131 GB-neck2,88,132 and GBNSR6.109,133.Except for GBNSR6, all
+ GB models differ in how the effective Born radii are computed.
+ GBNSR6 (“Numerical Surface R6 GB”) is one of newest additions to AMBER
+ suite in which the effect Born radii are computed via the 
+\begin_inset Quotes eld
+\end_inset
+
+R6
+\begin_inset Quotes erd
+\end_inset
+
+ numerical integration overall the molecular surface of the solute[cite].
+ GBNSR6 is known to account for hydration asymmetry and has been reported
+ in predicting electrostatic solvation free energies 
+\begin_inset Formula $\Delta G_{solv}$
+\end_inset
+
+[cite all papaer] are good agreement with numerical PB and explicit models
+ such as TIP3P[cite all paper].
+ However unlike the other GB variants models, GBNSR6 can not yet be used
+ in dynamics.
+ Therefore a tranferable correction towards our results will need a more
+ accurate solvation model that could account for CHA.
+ 
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1463621830 1680482919
+Automation Workflow Scalability 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463621830 1680483143
+Performing alchemical absolute 
 \end_layout
 
 \begin_layout Standard
