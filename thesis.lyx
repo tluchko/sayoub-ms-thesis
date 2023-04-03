@@ -446,7 +446,12 @@ literal "false"
 
 \end_inset
 
-.Today, classical MD simulations of protein and ligand binding events can
+.
+
+\change_inserted -1046193749 1680468526
+ 
+\change_unchanged
+Today, classical MD simulations of protein and ligand binding events can
  last up to a few microseconds and have a sufficient degree of accuracy.
  Despite this success, classical MD suffers from two major challenges: molecular
  modeling accuracy and insufficient sampling of conformational states due
@@ -464,14 +469,73 @@ TL focus on sampling - Intro sentence
 
 \end_inset
 
- The latter of these problems....
+
+\change_inserted -1046193749 1680469064
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680469067
+Looks good.
+\change_unchanged
+
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Insufficient sampling is due to the size of the integration time-step of
- MD, usually limited to femtoseconds or shorter (dictated by bond vibrations),
- whereas binding process are in the micro/millisecond time scale.
+\end_inset
+
+
+\change_unchanged
+Insufficient sampling is due to
+\change_inserted -1046193749 1680469017
+ limitations of numerical methods used for sampling and the rugged potential
+ energy landscape.
+
+\change_deleted -1046193749 1680468642
+ 
+\change_inserted -1046193749 1680468642
+T
+\change_deleted -1046193749 1680468642
+t
+\change_unchanged
+he 
+\change_inserted -1046193749 1680468683
+primary barrier is the 
+\change_unchanged
+size of the integration time-step of MD, usually 
+\change_deleted -1046193749 1680468709
+limited to 
+\change_unchanged
+femtoseconds or shorter (dictated by bond vibrations), 
+\change_inserted -1046193749 1680468722
+relative to 
+\change_deleted -1046193749 1680468725
+whereas
+\change_inserted -1046193749 1680468733
+the timescale of
+\change_unchanged
+ binding process
+\change_inserted -1046193749 1680468739
+, which
+\change_unchanged
+ are 
+\change_deleted -1046193749 1680468753
+in the
+\change_unchanged
+ micro
+\change_inserted -1046193749 1680468767
+seconds,
+\change_deleted -1046193749 1680468756
+/
+\change_unchanged
+millisecond
+\change_inserted -1046193749 1680468770
+s or longer
+\change_deleted -1046193749 1680468748
+ time scale
+\change_unchanged
+.
  This leads to large computational costs to sample important configurations
  that have a major contribution towards binding affinity.
  Beyond the computational cost, insufficient sampling is a well-recognized
@@ -485,11 +549,19 @@ literal "false"
 
 \end_inset
 
-.Enhanced sampling techniques can accelerate thermodynamics calculations
+.
+
+\change_inserted -1046193749 1680469039
+ 
+\change_unchanged
+Enhanced sampling techniques can accelerate thermodynamics calculations
  by making rare transition conformations more likely.
- This can be achieved by, fore example, modifying the potential energy surfaces
- by adding a bias potential to the Hamiltonian on the system or increasing
- the temperature 
+ This can be achieved by, for
+\change_deleted -1046193749 1680468818
+e
+\change_unchanged
+ example, modifying the potential energy surfaces by adding a bias potential
+ to the Hamiltonian on the system or increasing the temperature 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "yangEnhancedSamplingMolecular2019"
@@ -555,7 +627,6 @@ literal "false"
  a significant number of ensembles to converge completely.
 \end_layout
 
-\end_deeper
 \begin_layout Standard
 \begin_inset Note Note
 status collapsed
@@ -3385,25 +3456,96 @@ st free energy difference.
 
 \begin_deeper
 \begin_layout Itemize
-Attempting to calculate the free energy difference of ligand-host binding
- using equation (5), end-states (the ligand-bound and ligand-unbound) have
- to be similar in order to obtain reliable estimate in their free energy
+
+\change_inserted -1046193749 1680469305
+When a
+\change_deleted -1046193749 1680469305
+A
+\change_unchanged
+ttempting to calculate the free energy difference 
+\change_deleted -1046193749 1680469298
+of ligand-host binding
+\change_inserted -1046193749 1680469301
+between two states
+\change_unchanged
+ using equation (5),
+\change_inserted -1046193749 1680469251
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680469264
+TL use cross references.
+ I don't know which this is.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1680469315
+end-
+\change_inserted -1046193749 1680469316
+ the 
+\change_unchanged
+states 
+\change_deleted -1046193749 1680469321
+(the ligand-bound and ligand-unbound) 
+\change_unchanged
+have to be similar in order to obtain reliable estimate in their free energy
  difference.
  
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Typically this is not the case since and the end-states have a poor space
- phase overlap leading to large uncertainties in computing the free energy
- difference.
+Typically
+\change_inserted -1046193749 1680469326
+,
+\change_unchanged
+ this is 
+\change_inserted -1046193749 1680469360
+almost never 
+\change_deleted -1046193749 1680469363
+not
+\change_unchanged
+ the case 
+\change_deleted -1046193749 1680469366
+since
+\change_unchanged
+ 
+\change_inserted -1046193749 1680469373
+for bound and unbound states as
+\change_deleted -1046193749 1680469372
+and
+\change_unchanged
+ the end-states have a poor space phase overlap leading to large uncertainties
+ in computing the free energy difference.
 \end_layout
 
-\end_deeper
-\end_deeper
+\begin_deeper
 \begin_layout Itemize
-Therefore, the choice of intermediate states can significantly make free
- energy calculations more efficient by bridging the gap between states[
+Therefore, 
+\change_deleted -1046193749 1680469423
+the choice of
+\change_inserted -1046193749 1680469427
+appropriately selected
+\change_unchanged
+ intermediate states can significantly make free energy calculations more
+ efficient by bridging the gap between 
+\change_inserted -1046193749 1680469458
+the target end-
+\change_unchanged
+states
+\change_deleted -1046193749 1680469415
+[
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "wuPhasespaceOverlapMeasures2005"
@@ -3412,64 +3554,326 @@ literal "false"
 \end_inset
 
 .
+\change_inserted -1046193749 1680470003
+
 \end_layout
 
+\end_deeper
+\end_deeper
+\end_deeper
 \begin_layout Itemize
-The core step up in alchemical free energy calculations is defined intermediate
- states that link the unbound and bound states (end-states) to determine
- a precise estimate of the binding free energy.
+
+\change_deleted -1046193749 1680469567
+The core
+\change_inserted -1046193749 1680469570
+An essential
+\change_unchanged
+ step 
+\change_deleted -1046193749 1680469564
+up
+\change_unchanged
+ in 
+\change_inserted -1046193749 1680469573
+preparing 
+\change_unchanged
+alchemical free energy calculations is
+\change_inserted -1046193749 1680469507
+ to
+\change_unchanged
+ define
+\change_deleted -1046193749 1680469509
+d
+\change_unchanged
+ intermediate states that link the unbound and bound 
+\change_deleted -1046193749 1680469520
+states
+\change_unchanged
+ 
+\change_deleted -1046193749 1680469521
+(
+\change_unchanged
+end-states
+\change_deleted -1046193749 1680469593
+) to determine a precise estimate of the binding free energy.
+\change_inserted -1046193749 1680469593
+.
+\change_unchanged
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Since free energy is a state function, the path that connects the two end
- states is unimportant and we can choose tailor the cycle that connect the
- end states through several nonphysical intermediate ones as shown in figure
- 2.1
-\series bold
-.
+
+\change_inserted -1046193749 1680470271
+Each state is defined by a different Hamiltonian.
 \end_layout
 
-\end_deeper
+\begin_deeper
 \begin_layout Itemize
-The simplest path to construct is a linear in two end point Hamiltonians:
-\begin_inset Formula 
-\[
-H(\lambda)=\lambda H_{1}+(1-\lambda)H_{0}
-\]
+Since free energy is a state function, the path that connects the 
+\change_deleted -1046193749 1680470283
+two end 
+\change_unchanged
+states is unimportant and we can 
+\change_deleted -1046193749 1680469671
+choose tailor the
+\change_inserted -1046193749 1680470265
+select a
+\change_unchanged
+ cycle that connect
+\change_inserted -1046193749 1680470303
+s
+\change_unchanged
+ 
+\change_deleted -1046193749 1680470312
+the end 
+\change_inserted -1046193749 1680470315
+any two 
+\change_unchanged
+states through several nonphysical intermediate ones
+\change_inserted -1046193749 1680470326
+, such
+\change_unchanged
+ as 
+\change_inserted -1046193749 1680470329
+those 
+\change_unchanged
+shown in 
+\change_inserted -1046193749 1680470265
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:thermodynamic-cycle"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
 
+\change_deleted -1046193749 1680469722
+figure 2.1
+\change_unchanged
+
+\series bold
+.
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
+Th
+\change_inserted -1046193749 1680470569
+ough other paths may be used,
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680470587
+TL reference soft-core paths used for LJ
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1680470552
+e
+\change_unchanged
+ 
+\change_inserted -1046193749 1680470593
+the 
+\change_unchanged
+simplest path to construct 
+\change_deleted -1046193749 1680470382
+is a linear in two end
+\change_inserted -1046193749 1680470387
+between two
+\change_unchanged
+ 
+\change_deleted -1046193749 1680470391
+point
+\change_unchanged
+ Hamiltonians
+\change_inserted -1046193749 1680470399
+ is linear
+\change_unchanged
+:
+\begin_inset Formula 
+\begin{equation}
+H(\lambda)=\lambda H_{1}+(1-\lambda)H_{0}\label{eq:linear-mixing}
+\end{equation}
+
+\end_inset
+
 where 
 \begin_inset Formula $\lambda$
 \end_inset
 
  is a coupling parameter denoting an intermediate state and given a value
  between 0 and 1.
- where 
+ 
+\change_deleted -1046193749 1680470477
+where
+\change_inserted -1046193749 1680470516
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680470427
+When
+\change_unchanged
+ 
 \begin_inset Formula $\lambda=0$
 \end_inset
 
- can denote the bound state and 
+
+\change_inserted -1046193749 1680470464
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1680470434
+can denote the
+\change_inserted -1046193749 1680470438
+the system is in
+\change_unchanged
+ 
+\change_deleted -1046193749 1680470447
+bound 
+\change_inserted -1046193749 1680470452
+the 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ 
+\change_unchanged
+state
+\change_inserted -1046193749 1680470468
+,
+\change_unchanged
+ and 
+\change_inserted -1046193749 1680470454
+when 
+\change_unchanged
+
 \begin_inset Formula $\lambda=1$
 \end_inset
 
- the bound state.
  
+\change_inserted -1046193749 1680470473
+it is in 
+\change_unchanged
+the 
+\change_deleted -1046193749 1680470477
+bound
+\change_inserted -1046193749 1680470479
+
+\begin_inset Formula $H_{1}$
+\end_inset
+
+
+\change_unchanged
+ state.
+
+\change_deleted -1046193749 1680470477
+ 
+\change_inserted -1046193749 1680470522
+
 \end_layout
 
 \begin_layout Itemize
-The cycle depicted in 
+
+\change_inserted -1046193749 1680470534
+For values between 0 and 1, the system is in a mixed state.
+\change_unchanged
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680470612
+For t
+\change_deleted -1046193749 1680470612
+T
+\change_unchanged
+he cycle depicted in 
 \series bold
-Fig 1 
+Fig 1
+\change_inserted -1046193749 1680470616
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680469954
+
+\series bold
+TL 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:thermodynamic-cycle"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+,
+\change_unchanged
+ 
+\change_inserted -1046193749 1680470740
+
 \series default
-the intermediate states are simulated independently.
- From these simulations the fee energy difference between state 
+there additional mixed-states between the major ones shown are simulated
+ with 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:linear-mixing"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680470745
+Each of 
+\change_unchanged
+the
+\change_inserted -1046193749 1680470747
+se
+\change_unchanged
+ intermediate states are simulated independently.
+ 
+\change_inserted -1046193749 1680470653
+
+\end_layout
+
+\begin_layout Itemize
+From these simulations the f
+\change_inserted -1046193749 1680470666
+r
+\change_unchanged
+ee energy difference between state 
 \begin_inset Formula $i$
 \end_inset
 
@@ -3485,7 +3889,7 @@ the intermediate states are simulated independently.
 
 \begin_inset Formula 
 \[
-\Delta G_{b}=\sum\Delta G_{i,i+1}
+\Delta G_{b}=\sum\Delta G_{i,i+1}.
 \]
 
 \end_inset
@@ -3499,15 +3903,23 @@ Our Thermodynamic Pathway
 \end_layout
 
 \begin_layout Itemize
-Our thermodynamic cycle uses a modified DDM cycle that uses conformational
- restraints and GB solvent to enhance convergence.
+Our thermodynamic cycle uses a modified DDM cycle that 
+\change_deleted -1046193749 1680470812
+uses
+\change_inserted -1046193749 1680470814
+employs
+\change_unchanged
+ conformational restraints and GB solvent to enhance convergence.
  
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-All of the sampling is done in the fast GBSA implicit solvent model in states
- 1-8 (fig 1)
+All of the sampling is done in the fast GB
+\change_deleted -1046193749 1680470827
+SA
+\change_unchanged
+ implicit solvent model in states 1-8 (fig 1)
 \end_layout
 
 \end_deeper
@@ -3533,16 +3945,62 @@ status open
 
 \begin_layout Plain Layout
 
+\change_deleted -1046193749 1680470850
+This figure illustrates t
+\change_inserted -1046193749 1680470852
+Major 
+\change_deleted -1046193749 1680470853
+he
 \change_inserted -1463621830 1680130347
-This figure illustrates the states/steps in out thermodynamic cycle.
+ states
+\change_deleted -1046193749 1680470858
+/steps
+\change_inserted -1463621830 1680130347
+ in ou
+\change_inserted -1046193749 1680470860
+r
+\change_deleted -1046193749 1680470860
+t
+\change_inserted -1463621830 1680130347
+ thermodynamic cycle.
  The free energy change in GB solvent is the free energy difference between
  states 1 and 8.
  Conformational restraints (padlock) indicates the presence of harmonic
- distance restraints between each atom separated by < 6 Å.
- Here ligand (green circle) indicates that charges are active, while the
- unfilled circle indicates charges have been set to 0.
+ distance restraints between each atom separated by 
+\change_deleted -1046193749 1680470884
+< 6 Å
+\change_inserted -1046193749 1680470884
+
+\begin_inset Formula $<6\,\text{Å}$
+\end_inset
+
+
+\change_inserted -1463621830 1680130347
+.
+ 
+\change_deleted -1046193749 1680470904
+Here
+\change_inserted -1046193749 1680470904
+The
+\change_inserted -1463621830 1680130347
+ 
+\change_inserted -1046193749 1680470934
+filled green circle 
+\change_deleted -1046193749 1680470940
+ligand (green circle)
+\change_inserted -1463621830 1680130347
+ indicates that 
+\change_inserted -1046193749 1680470945
+ligand 
+\change_inserted -1463621830 1680130347
+charges are active, while the unfilled circle indicates charges have been
+ set to 0.
  The light blue background is representation of GBSA solvent.
- Orientational restraints(red dotted line) are applied in states 5 and 6
+ Orientational restraints
+\change_inserted -1046193749 1680470963
+ 
+\change_inserted -1463621830 1680130347
+(red dotted line) are applied in states 5 and 6
 \begin_inset CommandInset citation
 LatexCommand citep
 key "boreschAbsoluteBindingFree2003"
@@ -3550,9 +4008,65 @@ literal "false"
 
 \end_inset
 
-.State 5 is where the ligand is decoupled from the receptor but is orientationall
-y restrained relative to receptor, so state 6 is not simulated.
+.
+
+\change_inserted -1046193749 1680470974
  
+\change_inserted -1463621830 1680130347
+State 
+\change_inserted -1046193749 1680470992
+6
+\change_deleted -1046193749 1680470992
+5
+\change_inserted -1463621830 1680130347
+ is where the ligand is decoupled from the receptor but is orientationally
+ restrained relative to receptor
+\change_inserted -1046193749 1680471010
+.
+\change_deleted -1046193749 1680471010
+, so
+\change_inserted -1463621830 1680130347
+ 
+\change_inserted -1046193749 1680471012
+S
+\change_deleted -1046193749 1680471012
+s
+\change_inserted -1463621830 1680130347
+tate 
+\change_inserted -1046193749 1680470995
+5
+\change_deleted -1046193749 1680470995
+6
+\change_inserted -1463621830 1680130347
+ is 
+\change_inserted -1046193749 1680471020
+equivalent and 
+\change_inserted -1463621830 1680130347
+not simulated.
+ 
+\change_inserted -1046193749 1680487230
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:thermodynamic-cycle"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680487263
+TL I think GB should be on for step 7
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
 \change_unchanged
 
 \end_layout
@@ -3575,35 +4089,140 @@ y restrained relative to receptor, so state 6 is not simulated.
 \end_layout
 
 \begin_layout Enumerate
-States 1 & 8 : State 1 denotes the initial endstate of the unbound host
- and guest system simulated in GBSA solvent.
+States 1 & 8 : 
+\change_deleted -1046193749 1680471143
+State 1 denotes the initial endstate of the
+\change_inserted -1046193749 1680471144
+The
+\change_unchanged
+ unbound 
+\change_inserted -1046193749 1680471150
+and bound 
+\change_unchanged
+host
+\change_inserted -1046193749 1680471156
+-
+\change_deleted -1046193749 1680471158
+ and 
+\change_unchanged
+guest system simulated in GBSA solvent.
  In this study we use replica exchange molecular dynamics (REMD) to efficiently
  explore the different potential energy surfaces.
  
 \end_layout
 
 \begin_layout Enumerate
-1->2: Here is the introduction the use of artificial intramolecular conformation
-al restraints.
+1->2: 
+\change_deleted -1046193749 1680471174
+Here is the introduction the use of a
+\change_inserted -1046193749 1680471174
+A
+\change_unchanged
+rtificial intramolecular conformational restraints
+\change_inserted -1046193749 1680471185
+ are turned on
+\change_unchanged
+.
  These restraints are place on every atom of the ligand and receptor.
- By placing these restraints both the receptor and ligand more rigid therefore
- decreasing accessible degree of freedom.
- Limiting the DOF will help smooth with the convergence in the later steps.
+ 
+\change_deleted -1046193749 1680471226
+By placing t
+\change_inserted -1046193749 1680471229
+T
+\change_unchanged
+hese restraints
+\change_inserted -1046193749 1680471246
+ restrict the motion of 
+\change_deleted -1046193749 1680471249
+ both 
+\change_unchanged
+the receptor and ligand 
+\change_inserted -1046193749 1680471270
+to the last frame of state 8.
+ 
+\change_deleted -1046193749 1680471280
+more rigid therefore decreasing accessible degree of freedom.
+ 
+\change_unchanged
+Limiting the 
+\change_inserted -1046193749 1680471290
+range of motion
+\change_deleted -1046193749 1680471285
+DOF
+\change_unchanged
+ will 
+\change_deleted -1046193749 1680471308
+help
+\change_inserted -1046193749 1680471315
+prevent steric clashes and
+\change_unchanged
+ smooth 
+\change_deleted -1046193749 1680471317
+with
+\change_unchanged
+ the convergence in the later steps.
  
 \end_layout
 
 \begin_layout Enumerate
-2->3: This step is decoupling the solvent environment between the ligand
- and host system .
+2->3: Th
+\change_inserted -1046193749 1680471345
+e host and guest systems are decoupled 
+\change_deleted -1046193749 1680471349
+is step is decoupling
+\change_inserted -1046193749 1680471350
+from
+\change_unchanged
+ the solvent environment
+\change_inserted -1046193749 1680471363
+.
+
+\change_deleted -1046193749 1680471368
+ between the ligand and host system .
  Where both are being simulated in vacuum.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Enumerate
-3->4: Here the ligand is now annihilated where the intramolecular interactions
- have been removed.
- This non-interacting ligand is stratified in steps where its Lennard-Jones
- interaction are off and then the ligand electrostatics are scaled to zero
- through several nonphysical 
+3->4: 
+\change_deleted -1046193749 1680471381
+Here the
+\change_inserted -1046193749 1680471382
+The
+\change_unchanged
+ ligand is 
+\change_deleted -1046193749 1680471568
+now
+\change_unchanged
+ annihilated
+\change_deleted -1046193749 1680471482
+ where the intramolecular interactions have been removed.
+ This non-interacting ligand is stratified in steps where its
+\change_unchanged
+ 
+\change_inserted -1046193749 1680471498
+by first turning off 
+\change_unchanged
+Lennard-Jones interaction
+\change_inserted -1046193749 1680471500
+s
+\change_deleted -1046193749 1680471501
+ are off
+\change_unchanged
+ and 
+\change_deleted -1046193749 1680471507
+then the
+\change_inserted -1046193749 1680471510
+scaling the
+\change_unchanged
+ ligand 
+\change_deleted -1046193749 1680471514
+electrostatics are scaled
+\change_inserted -1046193749 1680471519
+partial charges
+\change_unchanged
+ to zero through several nonphysical 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -3612,24 +4231,130 @@ al restraints.
 \end_layout
 
 \begin_layout Enumerate
-4->5: Introduction of a new set of restraints which are important here as
- it prevents the ligand from leaving the binding pocket while its is not
- interacting with the environment nor the receptor.
- These are orientational restraints which bind the ligand relative to the
- receptor which corresponds to the configuration of the binding mode of
- ligand.
- In this project we used Boresch et al[cite] that not only keeps the ligand
- in a specific orientation relative to the receptor but also provides an
- analytical solution for 
+4->5: 
+\change_deleted -1046193749 1680471582
+Introduction of a new set of
+\change_inserted -1046193749 1680471582
+Orientational
+\change_unchanged
+ restraints
+\change_inserted -1046193749 1680471588
+ are introduced,
+\change_unchanged
+ which 
+\change_deleted -1046193749 1680471594
+are important here as it
+\change_unchanged
+ prevents the ligand from leaving the binding pocket wh
+\change_deleted -1046193749 1680471624
+ile its
+\change_inserted -1046193749 1680471625
+en it
+\change_unchanged
+ is not interacting with the environment nor the receptor.
+ 
+\change_inserted -1046193749 1680471664
+We select t
+\change_deleted -1046193749 1680471663
+T
+\change_unchanged
+he
+\change_deleted -1046193749 1680471656
+se are
+\change_unchanged
+ orientational restraints 
+\change_deleted -1046193749 1680471668
+which
+\change_inserted -1046193749 1680471668
+to
+\change_unchanged
+ bind the ligand relative to the receptor
+\change_inserted -1046193749 1680471723
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1680471709
+which corresponds to the configuration of the binding mode of ligand
+\change_inserted -1046193749 1680471718
+using the last frame of step 8 as a reference
+\change_unchanged
+.
+ In this project we used 
+\change_inserted -1046193749 1680471768
+restraints proposed by 
+\change_unchanged
+Boresch et al[cite]
+\change_inserted -1046193749 1680471770
+,
+\change_unchanged
+ 
+\change_inserted -1046193749 1680471776
+which
+\change_deleted -1046193749 1680471780
+that not only 
+\change_inserted -1046193749 1680471784
+ 
+\change_unchanged
+keep
+\change_deleted -1046193749 1680471736
+s
+\change_unchanged
+ the ligand in a specific orientation relative to the receptor
+\change_inserted -1046193749 1680471886
+.
+
+\change_deleted -1046193749 1680471884
+ but also provides an analytical solution for 
 \begin_inset Formula $\Delta G_{restr}^{solv}$
 \end_inset
 
 .
- The method selects a total of six heavy atoms 3 from the receptor and 3
+
+\change_unchanged
+ The method selects a total of six heavy atoms
+\change_inserted -1046193749 1680471817
+:
+\change_unchanged
+ 
+\change_inserted -1046193749 1680471819
+three
+\change_deleted -1046193749 1680471818
+3
+\change_unchanged
+ from the receptor and 
+\change_inserted -1046193749 1680471822
+three
+\change_deleted -1046193749 1680471821
+3
+\change_unchanged
  from the ligand.
  Then a set harmonic restraints are applied which and comprised by one distance,
- two angles and three dihedrals shown in figure 2.2.Once the restraints are
- applied an analytical formula can be then used to compute the 
+ two angles and three dihedrals shown in 
+\change_inserted -1046193749 1680471868
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:orientational-restraints"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_deleted -1046193749 1680471864
+figure 2.2
+\change_unchanged
+.
+
+\change_inserted -1046193749 1680471872
+ 
+\change_unchanged
+Once the restraints are applied
+\change_inserted -1046193749 1680471891
+,
+\change_unchanged
+ an analytical formula can be then used to compute the 
 \family roman
 \series medium
 \shape up
@@ -3647,24 +4372,74 @@ al restraints.
 \end_inset
 
  shown below 
+\change_inserted -1046193749 1680471916
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680471921
+TL fix braces
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \begin_inset Formula 
 \[
-\Delta G_{restraints}=kTln[\frac{8\pi^{2}V(K_{r}K_{\theta1}K_{\theta2}K_{\phi1}K_{\phi2}K_{\phi3})^{1/2}}{r_{1}^{2}sin\theta_{1}sin\theta_{2}(2\pi kT)^{3}}]
+\Delta G_{restraints}=kTln[\frac{8\pi^{2}V(K_{r}K_{\theta1}K_{\theta2}K_{\phi1}K_{\phi2}K_{\phi3})^{1/2}}{r_{1}^{2}sin\theta_{1}sin\theta_{2}(2\pi kT)^{3}}],
 \]
 
 \end_inset
 
 
-\end_layout
+\change_inserted -1046193749 1680471897
 
-\begin_deeper
-\begin_layout Standard
-Where K denotes the applied restraints force constant.
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+w
+\change_unchanged
+here 
+\change_deleted -1046193749 1680471939
+K
+\change_inserted -1046193749 1680471939
+
+\begin_inset Formula $K$
+\end_inset
+
+
+\change_unchanged
+ denotes the applied restraints force constant.
  The 
 \begin_inset Formula $r$
 \end_inset
 
-subscript denoted the distant, 
+
+\change_inserted -1046193749 1680471944
+ 
+\change_unchanged
+subscript denoted the distant
+\change_inserted -1046193749 1680471962
+.
+\change_deleted -1046193749 1680471961
+,
+\change_unchanged
+ 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -3672,11 +4447,24 @@ subscript denoted the distant,
 \begin_inset Formula $\phi$
 \end_inset
 
-denoting the angle and torsion restraints.
+
+\change_inserted -1046193749 1680471948
  
+\change_unchanged
+denot
+\change_inserted -1046193749 1680471955
+e
+\change_deleted -1046193749 1680471954
+ing
+\change_unchanged
+ the angle and torsion restraints.
+
+\change_deleted -1046193749 1680471902
+ 
+\change_unchanged
+
 \end_layout
 
-\end_deeper
 \begin_layout Enumerate
 5->6: This step has a 
 \begin_inset Formula $\Delta G=0$
@@ -3685,29 +4473,133 @@ denoting the angle and torsion restraints.
  since the intra/intermolecular interactions have been turn off.
  The Boresch restraints have already been applied and the receptor does
  not feel the precise of the ligand.
- The simulation here is no different than the ligand and receptor being
- separated.
+ 
+\change_inserted -1046193749 1680472005
+In step 5, 
+\change_deleted -1046193749 1680472009
+The simulation here is no different than
+\change_unchanged
+ the ligand and receptor 
+\change_deleted -1046193749 1680472013
+being
+\change_inserted -1046193749 1680472013
+are
+\change_unchanged
+ 
+\change_inserted -1046193749 1680472021
+in 
+\change_unchanged
+separate
+\change_deleted -1046193749 1680472018
+d
+\change_inserted -1046193749 1680472067
+ simulations and not interacting.
+ In step 6, the ligand and receptor are in the same simulate and not interacting
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Enumerate
-6->7: In this state is where we begin to turn on solute-solvent interactions
- and ligand inter/intramolecular interactions of the ligand.
+6->7: 
+\change_deleted -1046193749 1680472107
+In this state is where we begin to turn on s
+\change_inserted -1046193749 1680472107
+S
+\change_unchanged
+olute-solvent 
+\change_deleted -1046193749 1680472135
+interactions 
+\change_unchanged
+and ligand inter/intramolecular interactions 
+\change_deleted -1046193749 1680472125
+of the ligand
+\change_inserted -1046193749 1680472140
+are restored
+\change_unchanged
+.
  This is accomplished in a series of steps.
  First the Lennard-Jones interaction between the host and ligand are turn
- back on.
- Following the restoration of solute-solvent interactions and finally turning
- on the ligand charges in a series of 
+ back on
+\change_inserted -1046193749 1680472168
+, 
+\change_deleted -1046193749 1680472173
+.
+ 
+\change_inserted -1046193749 1680472173
+f
+\change_deleted -1046193749 1680472173
+F
+\change_unchanged
+ollow
+\change_inserted -1046193749 1680472177
+ed
+\change_deleted -1046193749 1680472176
+ing
+\change_unchanged
+ 
+\change_inserted -1046193749 1680472180
+by 
+\change_deleted -1046193749 1680472182
+the
+\change_unchanged
+ restoration of solute-solvent interactions
+\change_inserted -1046193749 1680472186
+.
+
+\change_deleted -1046193749 1680472187
+ and
+\change_unchanged
+ 
+\change_inserted -1046193749 1680472190
+F
+\change_deleted -1046193749 1680472189
+f
+\change_unchanged
+inally 
+\change_deleted -1046193749 1680472227
+turning on the
+\change_unchanged
+ ligand charges 
+\change_deleted -1046193749 1680472248
+in a series of
+\change_inserted -1046193749 1680472274
+are re-introduced in a series of
+\change_unchanged
+ 
 \begin_inset Formula $\lambda$
 \end_inset
 
- windows.
+
+\change_inserted -1046193749 1680472271
+-
+\change_deleted -1046193749 1680472271
+ 
+\change_unchanged
+windows.
  
 \end_layout
 
 \begin_layout Enumerate
-7->8: Finally is incremental removal of the the conformational and orientational
- restraints.
+7->8: 
+\change_inserted -1046193749 1680472304
+Conformational and orientational restraints
+\change_deleted -1046193749 1680472291
+Finally is
+\change_inserted -1046193749 1680472291
+ are
+\change_unchanged
+ incremental
+\change_inserted -1046193749 1680472294
+ly
+\change_unchanged
+ remov
+\change_inserted -1046193749 1680472298
+ed.
+\change_deleted -1046193749 1680472299
+al of the the conformational and orientational restraints.
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -3735,8 +4627,19 @@ status open
 \change_deleted -1463621830 1680130377
 Boresch restraints
 \change_inserted -1463621830 1680130641
-A total of 6 atoms are selected to created orientational restraints between
- the ligand and receptor.The distance restraint is denoted as 
+A total of 
+\change_inserted -1046193749 1680472314
+six
+\change_deleted -1046193749 1680472313
+6
+\change_inserted -1463621830 1680130641
+ atoms are selected to created orientational restraints between the ligand
+ and receptor.
+
+\change_inserted -1046193749 1680472322
+ 
+\change_inserted -1463621830 1680130641
+The distance restraint is denoted as 
 \begin_inset Formula $r_{aA}$
 \end_inset
 
@@ -3748,6 +4651,31 @@ A total of 6 atoms are selected to created orientational restraints between
 
 \change_unchanged
  
+\change_inserted -1046193749 1680472332
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:orientational-restraints"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680472339
+TL needs to be finished
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -3762,6 +4690,30 @@ A total of 6 atoms are selected to created orientational restraints between
 
 \begin_layout Chapter
 Methods
+\change_inserted -1046193749 1680474810
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1680474811
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680474822
+TL methods are past-tense.
+ You already did the work
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Section
@@ -3789,6 +4741,30 @@ status open
 
 \begin_layout Plain Layout
 Host guest system dataset.
+\change_inserted -1046193749 1680473591
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680473602
+TL give the source of each set.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Host-guest-systems"
+
+\end_inset
+
+
+\change_unchanged
  
 \end_layout
 
@@ -3811,29 +4787,58 @@ Host-guest (HG) systems have emerge an ideal benchmark for the quantitative
 \begin_deeper
 \begin_layout Itemize
 They tend to have low molecular weight and capture most of the interactions
- involved in protein-ligand binding such as hydrogen bonding, van der Waals
- interactions and conformational changes upon binding.
+ involved in protein-ligand binding
+\change_inserted -1046193749 1680473359
+,
+\change_unchanged
+ such as hydrogen bonding, van der Waals interactions and conformational
+ changes upon binding.
  
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
 Due to there small molecular size sampling can be done more efficiently
+\change_inserted -1046193749 1680473376
+,
+\change_unchanged
  and experimental data are available for wide variety of HG systems.
 \end_layout
 
-\end_deeper
-\end_deeper
 \begin_layout Itemize
-Therefore HG systems are good candidates to help focus on development computatio
-nal modeling schemes to create an reliable and efficient method to estimate
+Therefore
+\change_inserted -1046193749 1680473393
+,
+\change_unchanged
+ HG systems are good candidates to help focus on development computational
+ modeling schemes to create an reliable and efficient method to estimate
  ligand-host binding affinity.
  
 \end_layout
 
+\end_deeper
+\end_deeper
 \begin_layout Itemize
-Host-guest system that were used were sampled from Statistical Assessment
- of the Modeling of Proteins and Ligands (SAMPL): SAMPL4
+
+\change_inserted -1046193749 1680473484
+To test thermodynamic cycle and our software implementation of it, we selected
+\change_deleted -1046193749 1680473477
+H
+\change_inserted -1046193749 1680473487
+ h
+\change_unchanged
+ost-guest system
+\change_inserted -1046193749 1680473489
+s
+\change_deleted -1046193749 1680473504
+ that were used were sampled
+\change_unchanged
+ from 
+\change_inserted -1046193749 1680473511
+the 
+\change_unchanged
+Statistical Assessment of the Modeling of Proteins and Ligands (SAMPL):
+ SAMPL4
 \begin_inset CommandInset citation
 LatexCommand citep
 key "muddanaSAMPL4HostGuest2014a"
@@ -3857,18 +4862,118 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1680473558
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\change_unchanged
 .
  
+\change_inserted -1046193749 1680473515
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680474887
+In addition...
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680473576
+TL the other systems as well
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680474888
+All the SAMPL experimental data and initial 
+\begin_inset Formula $.mol2$
+\end_inset
+
+ files were downloaded from the GitHub repositories[
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "slochowerTaproom2022"
+literal "false"
+
+\end_inset
+
+].
+ 
+\change_unchanged
+
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 Choice of Host-Guest System
 \end_layout
 
 \begin_layout Itemize
-In this work test against variety of macrocyclic host families such as cucurbit[
-n]uril, pillar[n]arene, cyclodextrins and octa-acid which have a diverse
- binding affinity and the ability to bind small drug-like compounds 
+In this work
+\change_inserted -1046193749 1680473620
+, we
+\change_unchanged
+ test
+\change_inserted -1046193749 1680473763
+ed
+\change_unchanged
+ against 
+\change_deleted -1046193749 1680473678
+variety of
+\change_inserted -1046193749 1680473679
+several
+\change_unchanged
+ macrocyclic host families
+\change_inserted -1046193749 1680473891
+, cucurbit[7]uril, (CB7), pillar[n]arene, octa-acid (OAH) and 
+\begin_inset Formula $\alpha/\beta$
+\end_inset
+
+-cyclodextrins.
+
+\change_deleted -1046193749 1680473819
+ such as cucurbit[n]uril, pillar[n]arene, cyclodextrins and octa-acid
+\change_inserted -1046193749 1680473812
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680473692
+These
+\change_deleted -1046193749 1680473693
+ which
+\change_unchanged
+ have a diverse binding affinity
+\change_inserted -1046193749 1680473917
+ to variety of 
+\change_deleted -1046193749 1680473719
+ and the ability to bind
+\change_unchanged
+ small drug-like compounds 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "muddanaSAMPL4HostGuest2014a"
@@ -3886,10 +4991,23 @@ literal "false"
 
 .
  
+\change_inserted -1046193749 1680473924
+
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
+
+\change_inserted -1046193749 1680473994
+From the ligand data available, we tested a total of 86 unique host-ligand
+ complexes.
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680473866
 We tested against cucurbit[7]uril, (CB7), pillar[n]arene, octa-acid (OAH)
  
 \begin_inset Formula $\alpha/\beta$
@@ -3897,36 +5015,196 @@ We tested against cucurbit[7]uril, (CB7), pillar[n]arene, octa-acid (OAH)
 
 -cyclodextrins with a total of 86 unique host-ligand complexes.
  
+\change_inserted -1046193749 1680474865
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Cucurbit[
+\change_deleted -1046193749 1680474024
+n
+\change_inserted -1046193749 1680474024
+
+\begin_inset Formula $n$
+\end_inset
+
+
+\change_unchanged
+]urils (CB[
+\change_deleted -1046193749 1680474027
+n
+\change_inserted -1046193749 1680474027
+
+\begin_inset Formula $n$
+\end_inset
+
+
+\change_unchanged
+]s), 
+\change_deleted -1046193749 1680474008
+mainly
+\change_unchanged
+ including CB[5], CB[6], CB[7], CB[8] and CB[10]
+\change_inserted -1046193749 1680474013
+,
+\change_unchanged
+ are a family hosts with a molecular structure containing 
+\change_deleted -1046193749 1680474030
+n
+\change_inserted -1046193749 1680474044
+
+\begin_inset Formula $n$
+\end_inset
+
+ 
+\change_deleted -1046193749 1680474032
+ 
+\change_unchanged
+glycoluril units connected via 
+\change_deleted -1046193749 1680474038
+2n
+\change_inserted -1046193749 1680474038
+
+\begin_inset Formula $2n$
+\end_inset
+
+
+\change_unchanged
+ methylene bridges
+\change_inserted -1046193749 1680474051
+,
+\change_unchanged
+ forming a barrel shape macrocycle with a central hydrophobic cavity.
+ 
+\change_inserted -1046193749 1680474066
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Cucurbit[n]urils (CB[n]s), mainly including CB[5], CB[6], CB[7], CB[8] and
- CB[10] are a family hosts with a molecular structure containing n glycoluril
- units connected via 2n methylene bridges forming a barrel shape macrocycle
- with a central hydrophobic cavity.
- In addition having carbonyls protruding out from the hydrophobic cavity.
+In addition
+\change_inserted -1046193749 1680474061
+, they
+\change_unchanged
+ hav
+\change_inserted -1046193749 1680474064
+e
+\change_deleted -1046193749 1680474063
+ing
+\change_unchanged
+ carbonyls protruding out from the hydrophobic cavity.
 \end_layout
 
 \begin_layout Itemize
-Figure (CB7) shows chemical structures of the CB7 guests, C1–C14, bearing
- a net charge ranging from +2 to -2.
+
+\change_deleted -1046193749 1680474082
+Figure (CB7)
+\change_inserted -1046193749 1680474082
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_unchanged
+ shows chemical structures of the CB7 guests, C1–C14, bearing a net charge
+ ranging from 
+\change_inserted -1046193749 1680474144
+
+\emph on
++1e
+\emph default
+ to 
+\change_unchanged
+
+\emph on
++2
+\change_inserted -1046193749 1680474139
+e
+\change_unchanged
+
+\emph default
+ 
+\change_deleted -1046193749 1680474134
+to -2
+\change_unchanged
+.
  
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Pillar[n]arene are another class of supramolecular having a symmetrical
- rigid cylindrical structures with CH2 linkers connecting the phenylene
- groups, and each phenylene group contains two anionic functional group
- arms.
+Pillar[
+\change_deleted -1046193749 1680474151
+n
+\change_inserted -1046193749 1680474151
+
+\begin_inset Formula $n$
+\end_inset
+
+
+\change_unchanged
+]arene
+\change_inserted -1046193749 1680474153
+s
+\change_unchanged
+ are another class of supramolecular having a symmetrical rigid cylindrical
+ structures
+\change_inserted -1046193749 1680474171
+,
+\change_unchanged
+ with CH
+\change_deleted -1046193749 1680474164
+2
+\change_inserted -1046193749 1680474164
+
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680474164
+2
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ linkers connecting the phenylene groups,
+\change_inserted -1046193749 1680474211
+ each of which
+\change_deleted -1046193749 1680474212
+ and each
+\change_unchanged
+ phenylene group contains two anionic functional group arms.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Pillar[n]arene have become an emerging class of synthetic macrocycles having
- a broad applications in molecular recognition and adsorption to synergistic
- catalysis and many other aspects[
+Pillar[
+\change_deleted -1046193749 1680474220
+n
+\change_inserted -1046193749 1680474220
+
+\begin_inset Formula $n$
+\end_inset
+
+
+\change_unchanged
+]arene have become an emerging class of synthetic macrocycles
+\change_inserted -1046193749 1680474225
+,
+\change_unchanged
+ having a broad applications in molecular recognition and adsorption to
+ synergistic catalysis and many other aspects[
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "guoAdvancesDiversifiedApplication2020"
@@ -3937,28 +5215,79 @@ literal "false"
 ].
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-In this study we test against Pillar[6]arene (WP6) which bears six carboxylated
- moieties on the upper and lower rims that can be, in part, protonated at
- pH = 7.4 [cite].
+In this study we test against Pillar[6]arene (WP6)
+\change_inserted -1046193749 1680474235
+,
+\change_unchanged
+ which bears six carboxylated moieties on the upper and lower rims that
+ can be, in part, protonated at pH = 7.4 [cite].
 \end_layout
 
 \begin_layout Itemize
-We predict the binding affinities of 13 ammonium/diammonium cationic ligands
- (guests) against WP6 shown in
+We 
+\change_deleted -1046193749 1680474248
+predict
+\change_inserted -1046193749 1680474249
+calculated
+\change_unchanged
+ the binding affinities of 13 ammonium/diammonium cationic ligands (guests)
+ against WP6
+\change_inserted -1046193749 1680474313
+,
+\change_unchanged
+ 
+\change_inserted -1046193749 1680474317
+depicted in
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\change_deleted -1046193749 1680474265
+shown in
 \series bold
  
 \series default
 figure 3.1
+\change_unchanged
+
 \series bold
  
 \end_layout
 
 \end_deeper
+\end_deeper
 \begin_layout Itemize
-The Octa-acid (OAH) is a water soluble a deep-cavity cavitand that possesses
- outer surface with eight water-solubilizing carboxylate groups and a deep
- 10 Å hydrophobic pocket suitable for variety of guest molecules
+
+\change_deleted -1046193749 1680474326
+The 
+\change_unchanged
+Octa-acid (OAH) is a water soluble a deep-cavity cavitand
+\change_inserted -1046193749 1680474337
+, which
+\change_deleted -1046193749 1680474338
+ that
+\change_unchanged
+ possesses 
+\change_deleted -1046193749 1680474353
+outer surface with
+\change_unchanged
+ eight water-solubilizing 
+\change_inserted -1046193749 1680474360
+outer surface 
+\change_unchanged
+carboxylate groups
+\change_inserted -1046193749 1680474366
+,
+\change_unchanged
+ and a deep 10 Å hydrophobic pocket suitable for variety of guest molecules
 \begin_inset CommandInset citation
 LatexCommand citep
 key "gibbBindingCyclicCarboxylates2014"
@@ -3973,8 +5302,17 @@ literal "false"
 \begin_deeper
 \begin_layout Itemize
 OAH is known to bind with hydrophobic or amphiphilic guests in aqueous solution
- perhaps due to hydrophobic effect of the desolation of guests entering
- the deep hydrophobic binding pocket
+ perhaps due to 
+\change_inserted -1046193749 1680474409
+the 
+\change_unchanged
+hydrophobic effect of the deso
+\change_inserted -1046193749 1680474418
+vation
+\change_deleted -1046193749 1680474415
+lation
+\change_unchanged
+ of guests entering the deep hydrophobic binding pocket
 \begin_inset CommandInset citation
 LatexCommand citep
 key "muddanaSAMPL4HostGuest2014a"
@@ -3985,78 +5323,307 @@ literal "false"
 .
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-Figure 3.1 of OAH shows the chemical structures of 20 guests containing a
- carboxylic acid functional groups that were binding to OAH.
+
+\change_inserted -1046193749 1680474438
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_deleted -1046193749 1680474433
+Figure 3.1 of
+\change_unchanged
+ OAH shows the chemical structures of 20 guests containing a carboxylic
+ acid functional groups that were binding to OAH.
  
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Itemize
 The last benchmark systems were 
 \begin_inset Formula $\alpha$
 \end_inset
 
+
+\change_inserted -1046193749 1680474450
+ 
+\change_unchanged
 and 
 \begin_inset Formula $\beta$
 \end_inset
 
- cyclodextrins which are cyclic oligosaccharides, consisting of 6 and 7
+ cyclodextrins
+\change_inserted -1046193749 1680474453
+,
+\change_unchanged
+ which are cyclic oligosaccharides, consisting of 
+\change_inserted -1046193749 1680474459
+six
+\change_deleted -1046193749 1680474458
+6
+\change_unchanged
+ and 
+\change_inserted -1046193749 1680474462
+seven
+\change_deleted -1046193749 1680474461
+7
+\change_unchanged
  glucose monomers respectively.
  
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-The guest molecules test against 
+The guest molecules 
+\change_deleted -1046193749 1680474488
+test against
+\change_inserted -1046193749 1680474495
+we used with
+\change_unchanged
+ 
 \begin_inset Formula $\alpha$
 \end_inset
 
+
+\change_inserted -1046193749 1680474471
+ 
+\change_unchanged
 and 
 \begin_inset Formula $\beta$
 \end_inset
 
- cyclodextrins contain ammonium or carboxylate groups carry a net charge
- of 1 or -1 respectively.
+ cyclodextrins contain ammonium or carboxylate groups 
+\change_inserted -1046193749 1680474506
+and 
+\change_unchanged
+carry a net charge of 1 or -1 respectively.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Resulting in 41 host-guest complexes shown in figure 3.1.
+
+\change_deleted -1046193749 1680474541
+Resulting in
+\change_inserted -1046193749 1680474541
+The
+\change_unchanged
+ 
+\change_inserted -1046193749 1680474551
+two hosts and 
+\change_unchanged
+41 host-guest complexes shown in 
+\change_inserted -1046193749 1680474557
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_deleted -1046193749 1680474520
+figure 3.1
+\change_unchanged
+.
 \end_layout
 
 \end_deeper
 \end_deeper
-\end_deeper
 \begin_layout Subsection
-Complex parameterization 
+Complex 
+\change_deleted -1046193749 1680487010
+parameterization
+\change_inserted -1046193749 1680487015
+preparation
+\change_unchanged
+ 
 \end_layout
 
 \begin_layout Itemize
 All the ligands were docked into the binding site of an equilibrated host
- system using Autodock Vina docking single mode[cite-vina] to generate several
- ligand poses.
+ system using 
+\change_inserted -1046193749 1680474589
+the 
+\change_unchanged
+Autodock Vina docking 
+\change_deleted -1046193749 1680474595
+single
+\change_inserted -1046193749 1680474597
+software
+\change_unchanged
+ 
+\change_deleted -1046193749 1680474608
+mode
+\change_unchanged
+[cite-vina] to generate several ligand poses.
  
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-In this procedure the host is considered rigid and the ligands were centered
- at the host center of mass
+
+\change_deleted -1046193749 1680474619
+In this procedure t
+\change_inserted -1046193749 1680474656
+In the initial configuration, t
+\change_unchanged
+he host 
+\change_inserted -1046193749 1680474622
+was
+\change_deleted -1046193749 1680474622
+is
+\change_unchanged
+ 
+\change_deleted -1046193749 1680474627
+considered 
+\change_unchanged
+rigid and the ligands were centered at the host center of mass
+\change_inserted -1046193749 1680474908
+
 \end_layout
 
 \begin_layout Itemize
-Autodock Vina is then performed on a grid potential (user-defined region
- of interest) which the cubic box of side-length of 10 Å with a grid spacing
- in each direction of 0.375 Å.
+
+\change_inserted -1046193749 1680474990
+Prior being used in the docking calculations, we converted 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680474926
+mol2
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ files of the hosts and ligands to the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680474949
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+pdbqt
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ file using OpenBabel [cite] with the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680474996
+-p
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ option to specify the pH used in the experiments.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
-All ligands are fully flexible during the docking calculations.
+Autodock Vina 
+\change_deleted -1046193749 1680474666
+is 
+\change_unchanged
+then 
+\change_deleted -1046193749 1680474676
+performed on
+\change_inserted -1046193749 1680474764
+searched ligand binding poses on
+\change_unchanged
+ a grid potential
+\change_inserted -1046193749 1680474778
+ constructed from the host
+\change_deleted -1046193749 1680474712
+ (user-defined region of interest)
+\change_inserted -1046193749 1680474697
+,
+\change_unchanged
+ which
+\change_inserted -1046193749 1680474794
+ had
+\change_unchanged
+ 
+\change_deleted -1046193749 1680474695
+the
+\change_inserted -1046193749 1680474695
+a
+\change_unchanged
+ cubic box of side-length of 10 Å with a grid spacing in each direction
+ of 0.375 Å.
+
+\change_inserted -1046193749 1680474726
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680474800
+TL I may be confuse about what you meant here
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+All ligands 
+\change_deleted -1046193749 1680474805
+are
+\change_inserted -1046193749 1680474805
+were
+\change_unchanged
+ fully flexible during the docking calculations.
  
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680474906
 The 
 \begin_inset Formula $.mol2$
 \end_inset
@@ -4070,9 +5637,13 @@ The
 \end_inset
 
  option to specify the pH used in the experiments.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680474860
 All the SAMPL experimental data and initial 
 \begin_inset Formula $.mol2$
 \end_inset
@@ -4087,33 +5658,82 @@ literal "false"
 
 ].
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680475028
 In this procedure the host is held fixed and ligand conformations are then
  generated yield low energy conformers.
  
+\change_unchanged
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Autodock Vina performs a cluster analysis based on all-atom root mean square
- deviation ranking the dock conformations in order of increasing binding
- free energies.
+Autodock Vina 
+\change_deleted -1046193749 1680475037
+perform
+\change_inserted -1046193749 1680475040
+carried out
+\change_deleted -1046193749 1680475037
+s
+\change_unchanged
+ a cluster analysis based on all-atom root mean square deviation ranking
+ the dock conformations in order of increasing binding free energies.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
 The lowest energy ligand pose was selected for each host-guest complex for
- initial endstate configuration respectively.
+ 
+\change_inserted -1046193749 1680475072
+the 
+\change_unchanged
+initial end
+\change_inserted -1046193749 1680475058
+-
+\change_unchanged
+state configuration
+\change_inserted -1046193749 1680475078
+.
+
+\change_deleted -1046193749 1680475075
+ respectively.
+
+\change_unchanged
  
 \end_layout
 
 \end_deeper
 \end_deeper
 \end_deeper
-\begin_layout Section
+\begin_layout Subsection
+
+\change_deleted -1046193749 1680487334
 Force Field Parameters
+\change_inserted -1046193749 1680487378
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680487412
+TL just two sentences at this point.
+ You can just make this part of 3.1.2
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
@@ -4142,13 +5762,50 @@ literal "false"
  and generalized Amber Force Field v2 (GAFFv2) force field was applied to
  all guest and host systems using the antechamber program in AmberTools21.
  (cite).
+\change_inserted -1046193749 1680487068
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680487119
+TL Were these provided as part of the datasets? If not, you would have had
+ to use 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680487119
+antechamber
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680487354
 Rather using an explicit solvation model we used implicit generalize Born
  model for binding predictions.
  
+\change_unchanged
+
 \end_layout
 
 \begin_deeper
@@ -4163,13 +5820,54 @@ The
 \end_inset
 
 .
+\change_inserted -1046193749 1680487364
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680487373
+TL This should go in simulation details
+\change_unchanged
+
 \end_layout
 
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_deeper
 \begin_layout Itemize
 GBSA solvent model was applied to for states 1, 2 and 8 shown in 
 \series bold
 figure 1.
  
+\change_inserted -1046193749 1680487284
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680487307
+
+\series bold
+TL I think GB should be on for step 7.
+ And it is just GB.
+ We didn't use the SA term
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
@@ -4177,6 +5875,7 @@ Ionic concentration was set to 0.3M and temperature set to 298K.
  
 \end_layout
 
+\end_deeper
 \end_deeper
 \end_deeper
 \end_deeper
