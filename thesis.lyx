@@ -11,7 +11,9 @@
 \author{<Steven Ayoub Jr>}
 \committee{<Tyler Luchko>}{<Ravi Abrol>}{<Miao>}
 
-\abstract{<abstract>}
+\abstract{Identifying small drug-like molecules for therapeutic targets of interest is an ongoing effort in drug discovery. Virtual high throughput screening is a powerful computational approach when applied successfully it can be much faster and explore a diverse set of potential drug candidates that may have been overlooked experimentally. Therefore, we implement an approach that utilizes faster implicit solvents, such as generalized Born (GB), greatly reducing computational costs. We adapted the double decoupling method (DDM), which uses conformational restraints, and paired it with GB solvent to enhance convergence. The overall method is tested on 83 unique host-guest complex systems. Our work here attempts to reduce the computational expense of absolute binding free energies by using implicit solvent models and automating and streamlining a python workflow package to perform all calculations of the thermodynamic cycle, post-processing, and data analysis.
+
+}
 
 \submitted{<month>}{<year>}
 
@@ -27,9 +29,9 @@
 
 %information for producing a defense announcement page
 %comment out to supress announcement page.
-\defense{<day>}{<date>}{<time>}{<room>}
+\defense{14}{April}{3:30pm}{<room>}
 
-\copyrightyear{<year>}
+\copyrightyear{2023}
 
 \dedication{<dedication}
 
@@ -185,10 +187,6 @@ http://www.csun.edu/~mathgs/LaTex.html
 \end_inset
 
 
-\change_deleted -1463621830 1680390346
- 
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -252,22 +250,8 @@ literal "false"
 
 .This resulted in a shift of drug discovery strategies that focused largely
  on high-throughput screening (HTS), leading to the identification of multiple
- therapeutic drug targets
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-TL I'm not sure what you are trying to say here.
- But I don't think you mean that 
-\series bold
-all
-\series default
- drug targets have been discovered.
-\end_layout
-
-\end_inset
-
- and the creation of very large compound libraries 
+ therapeutic drug targets and the creation of very large compound libraries
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "jhotiHighthroughputScreeningStructurebased2013"
@@ -293,15 +277,6 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-TL rational, computational design using structure
-\end_layout
-
-\end_inset
-
 As an alternative, computer-aided drug discovery (CADD) provides a rational
  structure-based approach that can yield valuable information about intermolecul
 ar interactions between protein and ligand systems as well as the binding
@@ -332,19 +307,7 @@ literal "false"
 
 \end_inset
 
-.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-TL These are all really old citations.
- Maybe that reflects how long it takes drugs to come to market.
- Anything newer?
-\end_layout
-
-\end_inset
-
-The use of molecular simulations on drug discovery has shown major impact
+.The use of molecular simulations on drug discovery has shown major impact
  in the past decade in response to the rapid development of computer hardware
  and performing computations in a time affordable manner.
  Implementation of CADD provides an computational microscope how ligands
@@ -367,29 +330,8 @@ literal "false"
  limited by approximations used to achieve high computational speed.
  Docking programs usually treat the receptor as a rigid molecule, employ
  simple models of the receptor, ligand and water, and handle conformational
- fluctuations with a gross approximation.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-TL The middle of this paragraph needs work.
- Specifically the three sentences that start with 'MD'.
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-TL introducing MD as BFE method and major problems
-\end_layout
-
-\end_inset
-
-In recent years, modern algorithms and rapid development of faster graphics
- processor units (GPUs) 
+ fluctuations with a gross approximation.In recent years, modern algorithms
+ and rapid development of faster graphics processor units (GPUs) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "friedrichsAcceleratingMolecularDynamic2009,stoneGPUacceleratedMolecularModeling2010,harveyACEMDAcceleratingBiomolecular2009"
@@ -537,15 +479,6 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-TL alchemical pathways to avoid exhaustive sampling
-\end_layout
-
-\end_inset
-
 Rather than following a physical pathway between two states, one can construct
  a non-physical pathway that involves the transformation of one system to
  another avoiding the need of exhaustive sampling.
@@ -707,16 +640,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-TL explicit and implicit solvent- reduce configurational space to be explored.
-\end_layout
-
-\end_inset
-
- Of course, accurate sampling only helps if the molecular model, including
+Of course, accurate sampling only helps if the molecular model, including
  the solvent environment, is accurate.
  Explicit solvents are fully atomic representations of water molecules that
  surround the solute, providing a physically detailed and generally accurate
@@ -784,43 +708,14 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Our approach
-\end_layout
-
-\end_inset
-
 Our work attempts to reduce the complexity and computational cost of ABFE
  calculations by using implicit solvent models while achieving reliability
  and accuracy.
  To achieve this, we use a modified DDM cycle that uses conformational restraint
 s and generalized Born (GB) solvent to enhance convergence.
- Our DDM cycle 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-TL see section ___ for details
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-use cross references
-\end_layout
-
-\end_inset
-
-) provides improved sampling at the end states while reducing the need for
- sampling in intermediate states.We aim to prove that ABFE calculations can
- be performed for diverse ligands and can be done in a fast, efficient,
+ Our DDM cycle provides improved sampling at the end states while reducing
+ the need for sampling in intermediate states.We aim to prove that ABFE calculati
+ons can be performed for diverse ligands and can be done in a fast, efficient,
  and effective manner.To this end, we created the Implicit Solvent DDM tool
  (
 \begin_inset Formula $ISDDM.py$
@@ -853,38 +748,18 @@ literal "false"
 
 \end_inset
 
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-TL and other sources.
- Maye just summarize five hosts and ___ ligands...
-\end_layout
-
-\end_inset
-
 .
-\change_inserted -1463621830 1680393843
-
 \end_layout
 
 \begin_layout Standard
-The following sectio
-\change_inserted -1463621830 1680474204
-ns will be outline by: chapter 2 provides underlying theory behind this
- work.
+The following sections will be outline by: chapter 2 provides underlying
+ theory behind this work.
  Going over binding free energy calculations, use of implicit solvent models,
  free energy perturbation and introduce our modified double decoupling thermodya
 nmic cycle.
  In chapter 3 we will discuss the chemistry of host-guest systems and our
  simulation setup parameters.
  Chapter 4 and 5 will highlight our results and discuss our findings.
- 
-\change_deleted -1463621830 1680473684
-ns…
-\change_inserted -1463621830 1680393852
-
 \end_layout
 
 \begin_layout Chapter
@@ -893,60 +768,6 @@ Theory
 
 \begin_layout Section
 Binding Free Energy
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Description
-TL Remember that equations are part of the sentence.
- They require appropriate punctuation.
- Most equations should have a period or comma at the end.
-\end_layout
-
-\begin_layout Description
-TL Use commands for operators in equations and 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-text{}
-\end_layout
-
-\end_inset
-
- for words.
- '
-\begin_inset Formula $ln$
-\end_inset
-
-' means '
-\begin_inset Formula $l\times n$
-\end_inset
-
-'.
- '
-\begin_inset Formula $\ln'$
-\end_inset
-
- means 'natural log'.
-\end_layout
-
-\begin_layout Description
-TL All symbols in the text should use inline math mode.
- I.e., '
-\begin_inset Formula $N'$
-\end_inset
-
- and not 'N'.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1282,10 +1103,6 @@ TL Cite
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 The Generalized Born Surface Area (GBSA) treats solvent as a uniform dielectric
  being a fast and analytical method to compute the 
 \series bold
@@ -1776,14 +1593,18 @@ Intermediate states-provide better phase space overlap
 Intermediate states states are needed to obtain a reliable estimate of ligand-ho
 st free energy difference.
  Attempting to calculate the free energy difference of ligand-host binding
- using equation (5), end-states (the ligand-bound and ligand-unbound) have
- to be similar in order to obtain reliable estimate in their free energy
- difference.
- Typically this is not the case since and the end-states have a poor space
- phase overlap leading to large uncertainties in computing the free energy
- difference.
- Therefore, the choice of intermediate states can significantly make free
- energy calculations more efficient by bridging the gap between states[
+ the states have to be similar in order to obtain reliable estimate in their
+ free energy difference.
+ 
+\change_deleted -1463621830 1680537226
+T
+\change_unchanged
+Typically, this is almost never the case for bound and unbound states as
+ the end-states have a poor space phase overlap leading to large uncertainties
+ in computing the free energy difference.
+ Therefore, appropriately selected intermediate states can significantly
+ make free energy calculations more efficient by bridging the gap between
+ the target end-states
 \begin_inset CommandInset citation
 LatexCommand citep
 key "wuPhasespaceOverlapMeasures2005"
@@ -1792,57 +1613,84 @@ literal "false"
 \end_inset
 
 .
- The core step up in alchemical free energy calculations is defined intermediate
- states that link the unbound and bound states (end-states) to determine
- a precise estimate of the binding free energy.Since free energy is a state
- function, the path that connects the two end states is unimportant and
- we can choose tailor the cycle that connect the end states through several
- nonphysical intermediate ones as shown in figure 2.1.
 \end_layout
 
-\begin_layout Itemize
-The simplest path to construct is a linear in two end point Hamiltonians:
+\begin_layout Standard
+An essential step in preparing alchemical free energy calculations is to
+ define intermediate states that link the unbound and bound end-states.Each
+ state is defined by a different Hamiltonian.Since free energy is a state
+ function, the path that connects the states is unimportant and we can select
+ a cycle that connects any two states through several nonphysical intermediate
+ ones, such as those shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:thermodynamic-cycle"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.Though other paths may be used the simplest path to construct between two
+ Hamiltonians is linear:
 \begin_inset Formula 
-\[
-H(\lambda)=\lambda H_{1}+(1-\lambda)H_{0}
-\]
+\begin{equation}
+H(\lambda)=\lambda H_{1}+(1-\lambda)H_{0}\label{eq:linear-mixing}
+\end{equation}
 
 \end_inset
 
 
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
+\begin_layout Standard
 where 
 \begin_inset Formula $\lambda$
 \end_inset
 
  is a coupling parameter denoting an intermediate state and given a value
  between 0 and 1.
- where 
+ When 
 \begin_inset Formula $\lambda=0$
 \end_inset
 
- can denote the bound state and 
+, the system is in the 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ state, and when 
 \begin_inset Formula $\lambda=1$
 \end_inset
 
- the bound state.
+ it is in the 
+\begin_inset Formula $H_{1}$
+\end_inset
 
-\change_deleted -1463621830 1680390346
- 
-\change_unchanged
+ state.For values between 0 and 1, the system is in a mixed state.
+ For the cycle depicted in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:thermodynamic-cycle"
+plural "false"
+caps "false"
+noprefix "false"
 
-\end_layout
+\end_inset
 
-\begin_layout Itemize
-The cycle depicted in
-\series bold
- 
-\series default
-figure 2.1 the intermediate states are simulated independently.
- From these simulations the fee energy difference between state 
+,there additional mixed-states between the major ones shown are simulated
+ with 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:linear-mixing"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Each of these intermediate states are simulated independently.From these
+ simulations the free energy difference between state 
 \begin_inset Formula $i$
 \end_inset
 
@@ -1866,16 +1714,24 @@ figure 2.1 the intermediate states are simulated independently.
 
 \end_layout
 
-\end_deeper
 \begin_layout Subsection
 Our Thermodynamic Pathway
 \end_layout
 
 \begin_layout Standard
-Our thermodynamic cycle uses a modified DDM cycle that uses conformational
- restraints and GB solvent to enhance convergence.
- All of the sampling is done in the fast GBSA implicit solvent model in
- states 1-8 (figure 2.1)
+Our thermodynamic cycle uses a modified DDM cycle that employs conformational
+ restraints and GB solvent to enhance convergence.All of the sampling is
+ done in the fast GB implicit solvent model in states 1-8 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:thermodynamic-cycle"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1908,15 +1764,20 @@ Our modified thermodynamic cycle
 \end_layout
 
 \begin_layout Plain Layout
-This figure illustrates the states/steps in out thermodynamic cycle.
+Major states in our thermodynamic cycle.
  The free energy change in GB solvent is the free energy difference between
  states 1 and 8.
  Conformational restraints (padlock) indicates the presence of harmonic
- distance restraints between each atom separated by < 6 Å.
- Here ligand (green circle) indicates that charges are active, while the
- unfilled circle indicates charges have been set to 0.
+ distance restraints between each atom separated by 
+\begin_inset Formula $<6\,\text{Å}$
+\end_inset
+
+.
+ The filled green circle indicates that ligand charges are active, while
+ the unfilled circle indicates charges have been set to 0.
  The light blue background is representation of GBSA solvent.
- Orientational restraints(red dotted line) are applied in states 5 and 6
+ Orientational restraints (red dotted line) are applied in states 5 and
+ 6
 \begin_inset CommandInset citation
 LatexCommand citep
 key "boreschAbsoluteBindingFree2003"
@@ -1924,8 +1785,18 @@ literal "false"
 
 \end_inset
 
-.State 5 is where the ligand is decoupled from the receptor but is orientationall
-y restrained relative to receptor, so state 6 is not simulated.
+.
+ State 6 is where the ligand is decoupled from the receptor but is orientational
+ly restrained relative to receptor.
+ State 5 is equivalent and not simulated.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:thermodynamic-cycle"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1938,64 +1809,42 @@ y restrained relative to receptor, so state 6 is not simulated.
 \end_layout
 
 \begin_layout Enumerate
-States 1 & 8 : State 1 denotes the initial endstate of the unbound host
- and guest system simulated in GBSA solvent.
+States 1 & 8 : The unbound and bound host-guest system simulated in GBSA
+ solvent.
  In this study we use replica exchange molecular dynamics (REMD) to efficiently
  explore the different potential energy surfaces.
-
-\change_deleted -1463621830 1680390346
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Enumerate
-1->2: Here is the introduction the use of artificial intramolecular conformation
-al restraints.
+1->2: Artificial intramolecular conformational restraints are turned on.
  These restraints are place on every atom of the ligand and receptor.
- By placing these restraints both the receptor and ligand more rigid therefore
- decreasing accessible degree of freedom.
- Limiting the DOF will help smooth with the convergence in the later steps.
+ These restraints restrict the motion of the receptor and ligand to the
+ last frame of state 8.
+ Limiting the range of motion will prevent steric clashes and smooth the
+ convergence in the later steps.
+\end_layout
 
-\change_deleted -1463621830 1680390346
+\begin_layout Enumerate
+2->3: The host and guest systems are decoupled from the solvent environment.
+\end_layout
+
+\begin_layout Enumerate
+3->4: The ligand is annihilated by first turning off Lennard-Jones interactions
+ and scaling the ligand partial charges to zero through several nonphysical
  
-\change_unchanged
-
-\end_layout
-
-\begin_layout Enumerate
-2->3: This step is decoupling the solvent environment between the ligand
- and host system .
- Where both are being simulated in vacuum.
-\end_layout
-
-\begin_layout Enumerate
-3->4: Here the ligand is now annihilated where the intramolecular interactions
- have been removed.
- This non-interacting ligand is stratified in steps where its Lennard-Jones
- interaction are off and then the ligand electrostatics are scaled to zero
- through several nonphysical 
 \begin_inset Formula $\lambda$
 \end_inset
 
  states.
-
-\change_deleted -1463621830 1680390346
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Enumerate
-4->5: Introduction of a new set of restraints which are important here as
- it prevents the ligand from leaving the binding pocket while its is not
- interacting with the environment nor the receptor.
- These are orientational restraints which bind the ligand relative to the
- receptor which corresponds to the configuration of the binding mode of
- ligand.
- In this project we used Boresch 
-\change_inserted -1463621830 1680484006
-restraints 
+4->5: Orientational restraints are introduced, which prevents the ligand
+ from leaving the binding pocket when it is not interacting with the environment
+ nor the receptor.
+ We select the orientational restraints to bind the ligand relative to the
+ receptor, using the last frame of step 8 as a reference.
+ In this project we used restraints proposed by Boresch et al
 \begin_inset CommandInset citation
 LatexCommand citep
 key "boreschAbsoluteBindingFree2003"
@@ -2003,21 +1852,23 @@ literal "false"
 
 \end_inset
 
+, which keep the ligand in a specific orientation relative to the receptor.
+ The method selects a total of six heavy atoms: three from the receptor
+ and three from the ligand.
+ Then a set harmonic restraints are applied which and comprised by one distance,
+ two angles and three dihedrals shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:thermodynamic-cycle"
+plural "false"
+caps "false"
+noprefix "false"
 
-\change_deleted -1463621830 1680483958
-et al[cite]
-\change_unchanged
- that not only keeps the ligand in a specific orientation relative to the
- receptor but also provides an analytical solution for 
-\begin_inset Formula $\Delta G_{restr}^{solv}$
 \end_inset
 
 .
- The method selects a total of six heavy atoms 3 from the receptor and 3
- from the ligand.
- Then a set harmonic restraints are applied which and comprised by one distance,
- two angles and three dihedrals shown in figure 2.2.Once the restraints are
- applied an analytical formula can be then used to compute the 
+ Once the restraints are applied, an analytical formula can be then used
+ to compute the 
 \family roman
 \series medium
 \shape up
@@ -2035,9 +1886,19 @@ et al[cite]
 \end_inset
 
  shown below 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL fix braces
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
-\Delta G_{restraints}=kTln[\frac{8\pi^{2}V(K_{r}K_{\theta1}K_{\theta2}K_{\phi1}K_{\phi2}K_{\phi3})^{1/2}}{r_{1}^{2}sin\theta_{1}sin\theta_{2}(2\pi kT)^{3}}]
+\Delta G_{restraints}=kTln\left[\frac{8\pi^{2}V(K_{r}K_{\theta1}K_{\theta2}K_{\phi1}K_{\phi2}K_{\phi3})^{1/2}}{r_{1}^{2}sin\theta_{1}sin\theta_{2}(2\pi kT)^{3}}\right],
 \]
 
 \end_inset
@@ -2047,12 +1908,17 @@ et al[cite]
 
 \begin_deeper
 \begin_layout Standard
-Where K denotes the applied restraints force constant.
+where 
+\begin_inset Formula $K$
+\end_inset
+
+ denotes the applied restraints force constant.
  The 
 \begin_inset Formula $r$
 \end_inset
 
-subscript denoted the distant, 
+ subscript denoted the distant.
+ 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -2060,12 +1926,7 @@ subscript denoted the distant,
 \begin_inset Formula $\phi$
 \end_inset
 
-denoting the angle and torsion restraints.
-
-\change_deleted -1463621830 1680390346
- 
-\change_unchanged
-
+ denote the angle and torsion restraints.
 \end_layout
 
 \end_deeper
@@ -2077,40 +1938,26 @@ denoting the angle and torsion restraints.
  since the intra/intermolecular interactions have been turn off.
  The Boresch restraints have already been applied and the receptor does
  not feel the precise of the ligand.
- The simulation here is no different than the ligand and receptor being
- separated.
+ In step 5, the ligand and receptor are in separate simulations and not
+ interacting.
+ In step 6, the ligand and receptor are in the same simulate and not interacting.
 \end_layout
 
 \begin_layout Enumerate
-6->7: In this state is where we begin to turn on solute-solvent interactions
- and ligand inter/intramolecular interactions of the ligand.
+6->7: Solute-solvent and ligand inter/intramolecular interactions are restored.
  This is accomplished in a series of steps.
  First the Lennard-Jones interaction between the host and ligand are turn
- back on.
- Following the restoration of solute-solvent interactions and finally turning
- on the ligand charges in a series of 
+ back on, followed by restoration of solute-solvent interactions.
+ Finally ligand charges are re-introduced in a series of 
 \begin_inset Formula $\lambda$
 \end_inset
 
- windows.
-
-\change_deleted -1463621830 1680390346
- 
-\change_unchanged
-
+-windows.
 \end_layout
 
 \begin_layout Enumerate
-7->8: Finally is incremental removal of the the conformational and orientational
- restraints.
-
-\change_deleted -1463621830 1680390346
- 
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
+7->8: Conformational and orientational restraints are incrementally removed.7->8:
+ Conformational and orientational restraints are incrementally removed.
 \begin_inset Float figure
 wide false
 sideways false
@@ -2125,53 +1972,28 @@ status open
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680474290
 Implementation of Boresch Restraints
-\change_deleted -1463621830 1680474275
-A total of 6 atoms are selected to created orientational restraints between
- the ligand and receptor.The distance restraint is denoted as 
-\begin_inset Formula $r_{aA}$
-\end_inset
-
-.
- Atoms b-a-A create the 
-\begin_inset Formula $\sig$
-\end_inset
-
- 
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_inserted -1463621830 1680474271
 
 \end_layout
 
 \begin_layout Plain Layout
+Set of restraints proposed by Boresch[32] for use in free energy calculations.
+ The atoms and terms involved in this set of restraints are shown.
+ Atoms “a,” “b,” and “c” belong to the ligand (on the top right), while
+ atoms “A,” “B,” and “C” belong to the protein (on bottom left)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Boresch-restraints-1-1"
 
-\change_inserted -1463621830 1680474272
-A total of 6 atoms are selected to created orientational restraints between
- the ligand and receptor.The distance restraint is denoted as 
-\begin_inset Formula $r_{aA}$
 \end_inset
 
-.
- Atoms b-a-A create the 
-\begin_inset Formula $\sig$
-\end_inset
-
-
-\change_unchanged
 
 \end_layout
 
@@ -2182,10 +2004,6 @@ A total of 6 atoms are selected to created orientational restraints between
 
 \begin_layout Section
 Molecular Modeling of physical chemistry of binding
-\change_deleted -1463621830 1680390346
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -2442,99 +2260,19 @@ Choice of host-guest systems
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/entire_system_2.png
-	lyxscale 50
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Host guest system dataset.
- 
-\end_layout
-
-\end_inset
-
-
-\change_inserted -1463621830 1680390756
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -1463621830 1680484180
-CB7 receptor and 14 guest ligands from the SAMPL4 challenge dataset described
- in [5].
- WP6 receptor and 13 guest molecules from SAMPL6 dataset
-\begin_inset CommandInset citation
-LatexCommand citep
-key "rizziOverviewSAMPL6Host2018"
-literal "false"
-
-\end_inset
-
-.
- Octa-acid receptor and 23 guest molecules.
- 
-\begin_inset Formula $\alpha/\beta$
-\end_inset
-
--cyclodextrins 30 guest molecules[taproom].
- Together with all host systems comprise 83 unique host-guest pairs.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
 Host-guest (HG) systems have emerge an ideal benchmark for the quantitative
  assessment of modeling errors for the interactions of ligand-host binding.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-They tend to have low molecular weight and capture most of the interactions
- involved in protein-ligand binding such as hydrogen bonding, van der Waals
+ They tend to have low molecular weight and capture most of the interactions
+ involved in protein-ligand binding, such as hydrogen bonding, van der Waals
  interactions and conformational changes upon binding.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Due to there small molecular size sampling can be done more efficiently
+ Due to there small molecular size sampling can be done more efficiently,
  and experimental data are available for wide variety of HG systems.
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-Therefore HG systems are good candidates to help focus on development computatio
-nal modeling schemes to create an reliable and efficient method to estimate
- ligand-host binding affinity.
- 
-\end_layout
-
-\begin_layout Itemize
-Host-guest system that were used were sampled from Statistical Assessment
- of the Modeling of Proteins and Ligands (SAMPL): SAMPL4
+ Therefore, HG systems are good candidates to help focus on development
+ computational modeling schemes to create an reliable and efficient method
+ to estimate ligand-host binding affinity.
+ To test thermodynamic cycle and our software implementation of it, we selected
+ host-guest systems from the Statistical Assessment of the Modeling of Proteins
+ and Ligands (SAMPL): SAMPL4
 \begin_inset CommandInset citation
 LatexCommand citep
 key "muddanaSAMPL4HostGuest2014a"
@@ -2558,18 +2296,132 @@ literal "false"
 
 \end_inset
 
-.
  
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ In addition the octa-acid and cyclodextrins were obtained from host-guest
+ Github 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "slochowerTaproom2022"
+literal "false"
+
+\end_inset
+
+.
+ All the SAMPL experimental data and initial 
+\begin_inset Formula $.mol2$
+\end_inset
+
+ files were downloaded from the GitHub repositories[
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "slochowerTaproom2022"
+literal "false"
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/entire_system_2.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Host guest system dataset.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+CB7 receptor and 14 guest ligands from the SAMPL4 challenge dataset described
+ in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "muddanaSAMPL4HostGuest2014a"
+literal "false"
+
+\end_inset
+
+ WP6 receptor and 13 guest molecules from SAMPL9 dataset
+\begin_inset CommandInset citation
+LatexCommand citep
+key "amezcuaSamplchallengesSAMPL9Version2021"
+literal "false"
+
+\end_inset
+
+.
+ Octa-acid receptor and 23 guest molecules.
+ 
+\begin_inset Formula $\alpha/\beta$
+\end_inset
+
+-cyclodextrins 30 guest molecules
+\begin_inset CommandInset citation
+LatexCommand citep
+key "slochowerTaproom2022"
+literal "false"
+
+\end_inset
+
+.
+ Together with all host systems comprise 83 unique host-guest pairs.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Host-guest-systems"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Host-Guest Systems
+Choice of Host-Guest System
 \end_layout
 
-\begin_layout Itemize
-In this work test against variety of macrocyclic host families such as cucurbit[
-n]uril, pillar[n]arene, cyclodextrins and octa-acid which have a diverse
- binding affinity and the ability to bind small drug-like compounds 
+\begin_layout Standard
+In this work, we tested against several macrocyclic host families, cucurbit[7]ur
+il, (CB7), pillar[n]arene, octa-acid (OAH) and 
+\begin_inset Formula $\alpha/\beta$
+\end_inset
+
+-cyclodextrins.
+ These have a diverse binding affinity to variety of small drug-like compounds
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "muddanaSAMPL4HostGuest2014a"
@@ -2586,56 +2438,74 @@ literal "false"
 \end_inset
 
 .
- 
+ From the ligand data available, we tested a total of 86 unique host-ligand
+ complexes.
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-We tested against cucurbit[7]uril
-\change_deleted -1463621830 1680290823
-, 
-\change_unchanged
-(CB7), pillar[
-\change_inserted -1463621830 1680290832
-6
-\change_deleted -1463621830 1680290831
-n
-\change_unchanged
-]arene, octa-acid (OAH) 
-\begin_inset Formula $\alpha/\beta$
+\begin_layout Standard
+Cucurbit[
+\begin_inset Formula $n$
 \end_inset
 
--cyclodextrins with a total of 86 unique host-ligand complexes.
- 
+]urils (CB[
+\begin_inset Formula $n$
+\end_inset
+
+]s), including CB[5], CB[6], CB[7], CB[8] and CB[10], are a family hosts
+ with a molecular structure containing 
+\begin_inset Formula $n$
+\end_inset
+
+ glycoluril units connected via 
+\begin_inset Formula $2n$
+\end_inset
+
+ methylene bridges, forming a barrel shape macrocycle with a central hydrophobic
+ cavity.In addition, they have carbonyls protruding out from the hydrophobic
+ cavity.
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows chemical structures of the CB7 guests, C1–C14, bearing a net charge
+ ranging from 
+\emph on
++1e
+\emph default
+ to 
+\emph on
++2e
+\emph default
+ .
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Cucurbit[n]urils (CB[n]s), mainly including CB[5], CB[6], CB[7], CB[8] and
- CB[10] are a family hosts with a molecular structure containing n glycoluril
- units connected via 2n methylene bridges forming a barrel shape macrocycle
- with a central hydrophobic cavity.
- In addition having carbonyls protruding out from the hydrophobic cavity.
+\begin_layout Standard
+Pillar[
+\begin_inset Formula $n$
+\end_inset
+
+]arenes are another class of supramolecular having a symmetrical rigid cylindric
+al structures, with CH
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
 \end_layout
 
-\begin_layout Itemize
-Figure (CB7) shows chemical structures of the CB7 guests, C1–C14, bearing
- a net charge ranging from +2 to -2.
- 
-\end_layout
+\end_inset
 
-\end_deeper
-\begin_layout Itemize
-Pillar[n]arene are another class of supramolecular having a symmetrical
- rigid cylindrical structures with CH2 linkers connecting the phenylene
- groups, and each phenylene group contains two anionic functional group
- arms.
-\end_layout
+ linkers connecting the phenylene groups, each of which phenylene group
+ contains two anionic functional group arms.Pillar[
+\begin_inset Formula $n$
+\end_inset
 
-\begin_deeper
-\begin_layout Itemize
-Pillar[n]arene have become an emerging class of synthetic macrocycles having
- a broad applications in molecular recognition and adsorption to synergistic
+]arene have become an emerging class of synthetic macrocycles, having a
+ broad applications in molecular recognition and adsorption to synergistic
  catalysis and many other aspects[
 \begin_inset CommandInset citation
 LatexCommand citealp
@@ -2644,45 +2514,34 @@ literal "false"
 
 \end_inset
 
-].
-\end_layout
-
-\begin_layout Itemize
-In this study we test against Pillar[6]arene (WP6) which bears six carboxylated
- moieties on the upper and lower rims that can be, in part, protonated at
- pH = 7.4 
-\change_deleted -1463621830 1680484234
-[cite]
-\change_inserted -1463621830 1680484234
-
+].In this study we test against Pillar[6]arene (WP6), which bears six carboxylate
+d moieties on the upper and lower rims that can be, in part, protonated
+ at pH = 7.4
 \begin_inset CommandInset citation
 LatexCommand citep
-key "amezcuaSamplchallengesSAMPL9Version2021"
+key "dengThermodynamicsPillarareneGuest2022"
 literal "false"
 
 \end_inset
 
+.We calculated the binding affinities of 13 ammonium/diammonium cationic
+ ligands (guests) against WP6, depicted in
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
 
-\change_unchanged
+\end_inset
+
 .
 \end_layout
 
-\begin_layout Itemize
-We predict the binding affinities of 13 ammonium/diammonium cationic ligands
- (guests) against WP6 shown in
-\series bold
- 
-\series default
-figure 3.1
-\series bold
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-The Octa-acid (OAH) is a water soluble a deep-cavity cavitand that possesses
- outer surface with eight water-solubilizing carboxylate groups and a deep
- 10 Å hydrophobic pocket suitable for variety of guest molecules
+\begin_layout Standard
+Octa-acid (OAH) is a water soluble a deep-cavity cavitand, which possesses
+ eight water-solubilizing outer surface carboxylate groups, and a deep 10
+ Å hydrophobic pocket suitable for variety of guest molecules
 \begin_inset CommandInset citation
 LatexCommand citep
 key "gibbBindingCyclicCarboxylates2014"
@@ -2690,14 +2549,8 @@ literal "false"
 
 \end_inset
 
-.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-OAH is known to bind with hydrophobic or amphiphilic guests in aqueous solution
- perhaps due to hydrophobic effect of the desolation of guests entering
+.OAH is known to bind with hydrophobic or amphiphilic guests in aqueous solution
+ perhaps due to the hydrophobic effect of the desovation of guests entering
  the deep hydrophobic binding pocket
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2707,62 +2560,59 @@ literal "false"
 \end_inset
 
 .
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ OAH shows the chemical structures of 20 guests containing a carboxylic
+ acid functional groups that were binding to OAH.
 \end_layout
 
-\begin_layout Itemize
-Figure 3.1 of OAH shows the chemical structures of 20 guests containing a
- carboxylic acid functional groups that were binding to OAH.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
+\begin_layout Standard
 The last benchmark systems were 
 \begin_inset Formula $\alpha$
 \end_inset
 
-and 
+ and 
 \begin_inset Formula $\beta$
 \end_inset
 
- cyclodextrins which are cyclic oligosaccharides, consisting of 6 and 7
- glucose monomers respectively.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The guest molecules test against 
+ cyclodextrins, which are cyclic oligosaccharides, consisting of six and
+ seven glucose monomers respectively.The guest molecules we used with 
 \begin_inset Formula $\alpha$
 \end_inset
 
-and 
+ and 
 \begin_inset Formula $\beta$
 \end_inset
 
- cyclodextrins contain ammonium or carboxylate groups carry a net charge
- of 1 or -1 respectively.
+ cyclodextrins contain ammonium or carboxylate groups and carry a net charge
+ of 1 or -1 respectively.The two hosts and 41 host-guest complexes shown
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Resulting in 41 host-guest complexes shown in figure 3.1.
-\end_layout
-
-\end_deeper
-\end_deeper
-\end_deeper
 \begin_layout Subsection
-Complex parameterization 
+Complex preparation
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 All the ligands were docked into the binding site of an equilibrated host
  system using Autodock Vina docking single mode
-\change_deleted -1463621830 1680484394
-[cite-vina]
-\change_inserted -1463621830 1680484394
-
 \begin_inset CommandInset citation
 LatexCommand citep
 key "forliComputationalProteinLigand2016"
@@ -2770,31 +2620,32 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
  to generate several ligand poses.
- 
-\end_layout
+ In this procedure the host is considered rigid and the ligands were centered
+ at the host center of mass.Prior being used in the docking calculations,
+ we converted 
+\begin_inset Formula $mol2$
+\end_inset
 
-\begin_deeper
-\begin_layout Itemize
-In this procedure the host is considered rigid and the ligands were centered
- at the host center of mass
-\end_layout
+ files of the hosts and ligands to the 
+\begin_inset Formula $pdbqt$
+\end_inset
 
-\begin_layout Itemize
-Autodock Vina is then performed on a grid potential (user-defined region
- of interest) which the cubic box of side-length of 10 Å with a grid spacing
- in each direction of 0.375 Å.
-\end_layout
+ file using OpenBabel
+\begin_inset CommandInset citation
+LatexCommand citep
+key "oboyleOpenBabelOpen2011"
+literal "false"
 
-\begin_layout Itemize
-All ligands are fully flexible during the docking calculations.
- 
-\end_layout
+\end_inset
 
-\begin_layout Itemize
-The 
+ with the 
+\begin_inset Formula $-p$
+\end_inset
+
+ option to specify the pH used in the experiments.
+ All ligands are fully flexible during the docking calculations.
+ The 
 \begin_inset Formula $.mol2$
 \end_inset
 
@@ -2802,11 +2653,7 @@ The
 \begin_inset Formula $.pdbqt$
 \end_inset
 
- file using OpenBabel 
-\change_deleted -1463621830 1680484519
-[cite]
-\change_inserted -1463621830 1680484519
-
+ file using OpenBabel
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "oboyleOpenBabelOpen2011"
@@ -2814,97 +2661,31 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
  using the 
 \begin_inset Formula $-p$
 \end_inset
 
  option to specify the pH used in the experiments.
+ All ligands were fully flexible during the docking calculations.
+ Autodock Vina carried out a cluster analysis based on all-atom root mean
+ square deviation ranking the dock conformations in order of increasing
+ binding free energies.
+ The lowest energy ligand pose was selected for each host-guest complex
+ for the initial end-state configuration.
 \end_layout
 
-\begin_layout Itemize
-All the SAMPL experimental data and initial 
-\begin_inset Formula $.mol2$
-\end_inset
-
- files were downloaded from the GitHub repositories
-\change_deleted -1463621830 1680484536
-[
+\begin_layout Standard
+The simulations of all host-guest systems were setup by LEaP program in
+ AmberTools software suite[
 \begin_inset CommandInset citation
 LatexCommand citealp
-key "slochowerTaproom2022"
-literal "false"
-
-\end_inset
-
-]
-\change_inserted -1463621830 1680484536
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "oboyleOpenBabelOpen2011"
-literal "false"
-
-\end_inset
-
-
-\change_unchanged
-.
- 
-\end_layout
-
-\begin_layout Itemize
-In this procedure the host is held fixed and ligand conformations are then
- generated yield low energy conformers.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Autodock Vina performs a cluster analysis based on all-atom root mean square
- deviation ranking the dock conformations in order of increasing binding
- free energies.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The lowest energy ligand pose was selected for each host-guest complex for
- initial endstate configuration respectively.
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\end_deeper
-\begin_layout Section
-Force Field Parameters
-\end_layout
-
-\begin_layout Itemize
-The simulations of all host-guest systems were setup by LEaP program in
- AmberTools software suite
-\change_deleted -1463621830 1680484549
-[
-\change_unchanged
-
-\begin_inset CommandInset citation
-LatexCommand citep
 key "AmberTools22"
 literal "false"
 
 \end_inset
 
-
-\change_deleted -1463621830 1680484551
-]
-\change_unchanged
-.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The partial atomic charges were applied using the AM1-BCC model 
+].
+ The partial atomic charges were applied using the AM1-BCC model 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "jakalianFastEfficientGeneration2002"
@@ -2913,12 +2694,12 @@ literal "false"
 \end_inset
 
  and generalized Amber Force Field v2 (GAFFv2) force field was applied to
- all guest and host systems using the antechamber program in AmberTools21.
- 
-\change_deleted -1463621830 1680484601
-(cite)
-\change_inserted -1463621830 1680484601
+ all guest and host systems using the 
+\begin_inset Formula $antechamber$
+\end_inset
 
+ program in AmberTools21.
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AmberTools22"
@@ -2926,28 +2707,27 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
 .
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Rather using an explicit solvation model we used implicit generalize Born
- model for binding predictions.
- 
+\begin_layout Section
+Simulation details
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-The 
+\begin_layout Standard
+All production simulations were performed on AMBER21 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AmberTools22"
+literal "false"
+
+\end_inset
+
+ molecular dynamics simulation software.
+ The 
 \begin_inset Formula $GB^{OBC}$
 \end_inset
 
-
-\change_deleted -1463621830 1680484807
-[cite]
-\change_inserted -1463621830 1680484807
 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2956,68 +2736,28 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
  model used in this study, which was invoked in AMBER with the keyword 
 \begin_inset Formula $igb=2$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Itemize
-GBSA solvent model was applied to for states 1, 2 and 8 shown in 
-\series bold
-figure 1.
- 
-\end_layout
-
-\begin_layout Itemize
-Ionic concentration was set to 0.3M and temperature set to 298K.
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\end_deeper
-\begin_layout Section
-Simulation details 
-\end_layout
-
-\begin_layout Itemize
-All production simulations were performed on AMBER21 
-\change_deleted -1463621830 1680484828
-[cite]
-\change_inserted -1463621830 1680484828
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "AmberTools22"
-literal "false"
+ GB solvent model was applied to for states 1, 2 and 7 shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:thermodynamic-cycle"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-
-\change_unchanged
- molecular dynamics simulation software.
- 
-\end_layout
-
-\begin_layout Itemize
-Each window was for each system was simulated independently.
-\end_layout
-
-\begin_layout Itemize
-Hydrogen mass repartition scheme was used for every system which increased
+.Ionic concentration was set to 0.3M and temperature set to 298K.
+ Each window was for each system was simulated independently.
+ Hydrogen mass repartition scheme was used for every system which increased
  the mass of hydrogen by a factory of 4, while decreasing massed of the
  bonded heavy atoms.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-This result in slowing down the highest frequency of hydrogen covalent bonds
- and increasing the time by a factor of 2
+ This result in slowing down the highest frequency of hydrogen covalent
+ bonds and increasing the time by a factor of 2
 \begin_inset CommandInset citation
 LatexCommand citep
 key "hopkinsLongTimeStepMolecularDynamics2015"
@@ -3025,23 +2765,11 @@ literal "false"
 
 \end_inset
 
-,
-\end_layout
-
-\begin_layout Itemize
-Therefore all the MD simulations specified a tilmestep at 
+, Therefore all the MD simulations specified a tilmestep at 
 \begin_inset Formula $dt=0.004$
 \end_inset
 
-
-\begin_inset Formula $\beta$
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
+.
 \begin_inset Separator plain
 \end_inset
 
@@ -3050,9 +2778,16 @@ Therefore all the MD simulations specified a tilmestep at
 
 \begin_layout Subsection
 End-state Simulations
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:End-state-Simulations"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 The endstate 
 \begin_inset Formula $1\lambda$
 \end_inset
@@ -3062,19 +2797,10 @@ The endstate
 \end_inset
 
  were performed using replica exchange molecular dynamics simulation (REMD).
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The target temperature of 298K and ionic concentration was set to 0.3M was
+ The target temperature of 298K and ionic concentration was set to 0.3M was
  set of all host guest systems.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-REMD begin with a 5000 step minimization to relax system from initial structures
- in states 
+ REMD begin with a 5000 step minimization to relax system from initial structure
+s in states 
 \begin_inset Formula $1\lambda$
 \end_inset
 
@@ -3083,11 +2809,7 @@ REMD begin with a 5000 step minimization to relax system from initial structures
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Itemize
-Minimization was completed using 
+ Minimization was completed using 
 \begin_inset Formula $sander$
 \end_inset
 
@@ -3096,23 +2818,10 @@ Minimization was completed using
 \end_inset
 
  module of AMBER21.
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Once obtained a well minimized system, we constructed replicas for REMD
- simulation.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-In this study we generated 8 temperature copies with a distribution ranging
- from 298K to 500K.
-\end_layout
-
-\begin_layout Itemize
-Running REMD was performed using 
+ Once obtained a well minimized system, we constructed replicas for REMD
+ simulation.In this study we generated 8 temperature copies with a distribution
+ ranging from 298K to 500K.
+ Running REMD was performed using 
 \series bold
 
 \begin_inset Formula $sander.MPI$
@@ -3129,17 +2838,9 @@ with
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Itemize
-For all host-guest bound endstate simulations a center-of-mass flat bottom
+ For all host-guest bound endstate simulations a center-of-mass flat bottom
  restraint potential was used.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Extraction of target temperature(298K) was done using 
+ Extraction of target temperature(298K) was done using 
 \series bold
 
 \begin_inset Formula $cpptraj$
@@ -3148,10 +2849,6 @@ Extraction of target temperature(298K) was done using
 
 \series default
  
-\change_deleted -1463621830 1680484847
-[cite]
-\change_inserted -1463621830 1680484847
-
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AmberTools22"
@@ -3159,38 +2856,26 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
 .
- 
 \end_layout
 
-\end_deeper
 \begin_layout Subsection
-Intermediate Simulations 
+Intermediate Simulations
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 For states 
 \begin_inset Formula $2\lambda-7\lambda$
 \end_inset
 
  restraints were applied.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Both the orientational and conformations restraints were constructed using
+ Both the orientational and conformations restraints were constructed using
  the last frame of complex configuration from REMD simulation in state 
 \begin_inset Formula $8\lambda$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Itemize
-The last frame of state 
+ The last frame of state 
 \begin_inset Formula $8\lambda$
 \end_inset
 
@@ -3202,15 +2887,7 @@ The last frame of state
 \begin_inset Formula $cpptraj$
 \end_inset
 
- within 
-\begin_inset Formula $AMBERtools$
-\end_inset
-
- 21
-\change_deleted -1463621830 1680484861
-[cite]
-\change_inserted -1463621830 1680484861
-
+ within AMBERtools21
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AmberTools22"
@@ -3218,62 +2895,42 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
 .
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-In states 
+ In states 
 \begin_inset Formula $3\lambda-7\lambda$
 \end_inset
 
- gbsa was set to 0 and 
+ GB was set to 0 and 
 \begin_inset Formula $igb=6$
 \end_inset
 
 .
- 
-\end_layout
+ In state 
+\begin_inset Formula $4$
+\end_inset
 
-\begin_layout Itemize
-In state 4 the ligand charges were removed using 
+ the ligand charges were removed using 
 \begin_inset Formula $parmed.tools.action.charge$
 \end_inset
 
  setting the ligand net charge to 0.
- 
-\end_layout
-
-\begin_layout Itemize
-State 5 is not sampled.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The difference of free energy going from state 4 to 5 is computed analytically
+ State 5 is not sampled.
+ The difference of free energy going from state 4 to 5 is computed analytically
  as described in 2.3
 \series bold
  
 \series default
-and the difference of free energy from state 5 to 6 is 0.
- 
-\end_layout
+and the difference of free energy from state 5 to 6 is 
+\begin_inset Formula $\Delta G=0$
+\end_inset
 
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-State 5 is sampled with the charges for the ligand removed using
+.
+ State 5 is sampled with the charges for the ligand removed using
 \begin_inset Formula $parmed.tools.actions.change$
 \end_inset
 
  to set charges on the ligand to 0.
- State
-\end_layout
-
-\begin_layout Itemize
-State 6 we turn off the Lennard Jones interaction between the ligand and
+ State 6 we turn off the Lennard Jones interaction between the ligand and
  host system via 
 \series bold
 
@@ -3294,79 +2951,38 @@ package in
 \begin_inset Formula $AMBERtools21$
 \end_inset
 
-
-\change_inserted -1463621830 1680484873
-.
-\change_deleted -1463621830 1680484872
-[cite
-\change_unchanged
-].
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The use of orientational restraints prevents the ligand from drifting away
- from the host and which 
-\series bold
-prevents
-\series default
- the need of sampling the entire volume space.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-State 6 to 7 is where we turn back all interactions of system by first turn
- back on Lennard Jones potential between the ligand and host, following
+.].
+ The use of orientational restraints prevents the ligand from drifting away
+ from the host and which prevents the need of sampling the entire volume
+ space.State 6 to 7 is where we turn back all interactions of system by first
+ turn back on Lennard Jones potential between the ligand and host, following
  a scaling of the GB dielectric constant.
+ Then finally scaling the ligand charges from 0% to 50% and then 100% (fully
+ charge).Lastly from state 7 to 8 we slowly decrease the restraint force
+ through bisection until the conformational force constant again reaches
  
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Then finally scaling the ligand charges from 0% to 50% and then 100% (fully
- charge).
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Lastly from state 7 to 8 we slowly decrease the restraint force through
- bisection until the conformational force constant again reaches 
 \begin_inset Formula $2^{-8}$
 \end_inset
 
  = 0.00390625 kcal/mol.
 \end_layout
 
-\end_deeper
 \begin_layout Subsection
-Selection and Implementation of Restraint Forces 
+Selection and Implementation of Restraint Forces
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 In states 
 \begin_inset Formula $2\lambda-7\lambda$
 \end_inset
 
  we applied conformational and orientational restraints in order to enhance
  convergence in our binding estimate.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-A stratification strategy was applied in 2λ were a series of conformational
+ A stratification strategy was applied in 2λ were a series of conformational
  restraints were bisected until a sufficient overlap was achieved between
  state 2 and state 3.
  A maximum restraint force constant value is applied in state 3.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Through benchmark testing the lowest energy conformational restraint force
+ Through benchmark testing the lowest energy conformational restraint force
  for the first 
 \begin_inset Formula $\lambda$
 \end_inset
@@ -3380,11 +2996,7 @@ Through benchmark testing the lowest energy conformational restraint force
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Itemize
-From previous results a minimum orientational force constant of 
+ From previous results a minimum orientational force constant of 
 \begin_inset Formula $2^{-4}kcal/mol/Å$
 \end_inset
 
@@ -3393,11 +3005,7 @@ From previous results a minimum orientational force constant of
 \end_inset
 
  gave reduced an accumulated error for highly charge guest molecules.
- 
-\end_layout
-
-\begin_layout Itemize
-A series of 32 lambda windows 
+ A series of 29 lambda windows 
 \begin_inset Formula $2^{-8}$
 \end_inset
 
@@ -3418,54 +3026,43 @@ A series of 32 lambda windows
 
 \series default
  scale.
- 
 \end_layout
 
-\end_deeper
-\end_deeper
 \begin_layout Subsubsection
-Conformational Restraints 
+Conformational Restraints
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 A harmonic distance restrained was to every atom and its neighbors within
  6 Å.
- 
-\end_layout
+ The target distance were taken from last frame of REMD state 8 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:End-state-Simulations"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_layout Itemize
-The target distance were taken from last frame of REMD state 8 (section
- 3.3.1)
-\end_layout
+\end_inset
 
-\begin_deeper
-\begin_layout Itemize
-Application of conformational restraints makes the molecule more rigid and
- retains a single binding mode taken from state 8.
- 
-\end_layout
+.
+ Application of conformational restraints makes the molecule more rigid
+ and retains a single binding mode taken from state 8.
+ The conformational restraints were prepared using 
+\begin_inset Formula $ISDDM.py$
+\end_inset
 
-\end_deeper
-\begin_layout Itemize
-The conformational restraints were prepared using an in-house code.
+.
 \end_layout
 
 \begin_layout Subsubsection
-Orientational Restraints 
+Orientational Restraints
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 In order to facilitate convergence orientational restraints have been used
  to restrict the ligand's orientation relative to the host.
- 
-\end_layout
-
-\begin_layout Itemize
-Here we construct orientational suggested by Boresch
-\change_deleted -1463621830 1680484891
-[cite] 
-\change_inserted -1463621830 1680484891
-
+ Here we construct orientational suggested by Boresch
 \begin_inset CommandInset citation
 LatexCommand citep
 key "boreschAbsoluteBindingFree2003"
@@ -3473,8 +3070,6 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
 which requires an distance restraint(
 \begin_inset Formula $r_{aA}$
 \end_inset
@@ -3501,7 +3096,6 @@ which requires an distance restraint(
 \end_inset
 
 ) to restrict the ligand relative to the host.
-
 \family default
 \series default
 \shape default
@@ -3514,11 +3108,6 @@ which requires an distance restraint(
 \uwave default
 \noun default
 \color inherit
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
 The selection of these atoms is done autonomously within the 
 \series bold
 
@@ -3527,14 +3116,8 @@ The selection of these atoms is done autonomously within the
 
  
 \series default
-tool and will be briefly descriped here.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-First the atoms on the ligand and receptor are selected for the distance
- restraints, 
+tool and will be briefly described here.First the atoms on the ligand and
+ receptor are selected for the distance restraints, 
 \begin_inset Formula $A$
 \end_inset
 
@@ -3545,16 +3128,19 @@ First the atoms on the ligand and receptor are selected for the distance
 \end_inset
 
  
-\series default
-(figure2.2)
-\series bold
-.
- 
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Boresch-restraints-1-1"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_deeper
-\begin_layout Itemize
-Ligand atom 
+\end_inset
+
+.
+
+\series default
+ Ligand atom 
 \begin_inset Formula $A$
 \end_inset
 
@@ -3567,11 +3153,7 @@ Ligand atom
 \begin_inset Formula $A$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Itemize
-Then the script looks for the best suited heavy atoms 
+.Then the script looks for the best suited heavy atoms 
 \begin_inset Formula $B,A,a,b$
 \end_inset
 
@@ -3579,31 +3161,46 @@ Then the script looks for the best suited heavy atoms
 \begin_inset Formula $θ_{A},θ_{a},ϕ_{AB},ϕ_{aA}ϕ_{ba}$
 \end_inset
 
- (figure 2.2) that are between 80 and 100 degrees.
-\end_layout
-
-\begin_layout Itemize
-It is important that the angle is close to 90 degrees in order to maintain
- a well define bound state.
  
+\change_deleted -1463621830 1680537260
+(figure 2.2)
+\change_inserted -1463621830 1680537260
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Boresch-restraints-1-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_unchanged
+ that are between 80 and 100 degrees.
+ It is important that the angle is close to 90 degrees in order to maintain
+ a well define bound state.
 \end_layout
 
-\end_deeper
-\end_deeper
-\end_deeper
 \begin_layout Section
-Free energy analysis using MBAR
+Free Energy Analysis Using MBAR
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 As phase space overlap affects the reliability of the free energy difference
  estimates, many intermediate states are needed in order to bridge and increase
- the overlap between two endstates (figure 2.2).
- MBAR proposed by Shirts et al 
-\change_deleted -1463621830 1680484938
-[cite]
-\change_inserted -1463621830 1680484938
+ the overlap between two endstates 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:thermodynamic-cycle"
+plural "false"
+caps "false"
+noprefix "false"
 
+\end_inset
+
+.
+ MBAR proposed by Shirts et al 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "shirtsStatisticallyOptimalAnalysis2008a"
@@ -3611,15 +3208,8 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
- has been superior to other 
-\change_deleted -1463621830 1680484942
-estimtors
-\change_inserted -1463621830 1680484942
-estimators
-\change_unchanged
- with the lowest variance and is asymptotically unbiased
+ has been superior to other estimators with the lowest variance and is asymptoti
+cally unbiased
 \begin_inset CommandInset citation
 LatexCommand citep
 key "shirtsStatisticallyOptimalAnalysis2008a"
@@ -3628,12 +3218,7 @@ literal "false"
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Calculations of MBAR was done using a python package called 
+ Calculations of MBAR was done using a python package called 
 \begin_inset Formula $pymbar$
 \end_inset
 
@@ -3645,24 +3230,11 @@ literal "false"
 
 \end_inset
 
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-MBAR requires the potential energies and thermodynamic parameters of each
- trajectory frame from sampling.
- 
-\end_layout
-
-\begin_layout Itemize
-For example the trajectory from state 2 would be post processed in the potential
- energy function in all other states 1, 3 and state 4.
- 
-\end_layout
-
-\begin_layout Itemize
-The post-processing is done by using 
+.MBAR requires the potential energies and thermodynamic parameters of each
+ trajectory frame from sampling.For example the trajectory from state 2 would
+ be post processed in the potential energy function in all other states
+ 1, 3 and state 4.
+ The post-processing is done by using 
 \begin_inset Formula $sander$
 \end_inset
 
@@ -3670,22 +3242,15 @@ The post-processing is done by using
 \begin_inset Formula $imin=5.$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Itemize
-The MBAR estimate also return its own uncertainty error estimate in our
+ The MBAR estimate also return its own uncertainty error estimate in our
  case for ligand, receptor and complex.
- 
 \end_layout
 
-\end_deeper
-\end_deeper
 \begin_layout Subsection
 Time Series Analysis
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 The time correlations functions of MD simulations incorporate the relaxation
  of fluctuations around equilibrium and if non equilibrated part is not
  removed from the final analysis this will result in an underestimate the
@@ -3698,23 +3263,13 @@ literal "false"
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Therefore we ran post-process analysis on the relevant energies using AMBER
+ Therefore we ran post-process analysis on the relevant energies using AMBER
  engine 
 \begin_inset Formula $sander$
 \end_inset
 
- on all thermodynamics states.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-All the uncorrelated frames was then remove using the 
+ on all thermodynamics states.All the uncorrelated frames was then remove
+ using the 
 \begin_inset Formula $timeseries$
 \end_inset
 
@@ -3730,35 +3285,33 @@ literal "false"
 \begin_inset Formula $pymbar$
 \end_inset
 
-.
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-The final uncorrelated equilibrated data is then ran through 
+.The final uncorrelated equilibrated data is then ran through 
 \begin_inset Formula $.mbar()$
 \end_inset
 
  function to calculate the final free energy change for all the thermodynamic
- steps shown in figure 1.
- 
+ steps shown in
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:thermodynamic-cycle"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
-\end_deeper
 \begin_layout Section
-Overlap Matrix Exploring the Degree of Space Phase Overlap 
+Overlap Matrix Exploring the Degree of Space Phase Overlap
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 Phase space overlap when constructing alchemical intermediate windows is
  an important property that should be considered for reliable free energy
  estimates.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-When using any perturb approach such as FEP or MBAR having very poor overlap
+ When using any perturb approach such as FEP or MBAR having very poor overlap
  between states can result in an inaccurate free energy estimate
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -3768,12 +3321,17 @@ literal "false"
 \end_inset
 
 .
-\end_layout
+ Therefore when construction our thermodynamic cycle
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:thermodynamic-cycle"
+plural "false"
+caps "false"
+noprefix "false"
 
-\end_deeper
-\begin_layout Itemize
-Therefore when construction our thermodynamic cycle figure 2.1 we created
- an overlap matrix
+\end_inset
+
+creating an overlap matrix
 \begin_inset CommandInset citation
 LatexCommand citep
 key "klimovichGuidelinesAnalysisFree2015"
@@ -3781,33 +3339,26 @@ literal "false"
 
 \end_inset
 
- in order to provide us help in finding the magnitude of the phase space
- overlap in our calculations.
- 
+ provides us help in finding the magnitude of the phase space overlap in
+ our calculations.
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
+\begin_layout Standard
 The matrix shows the probability of a sample state i being evaluated in
  state j, providing a degree of overlap between both states.
- 
-\end_layout
+ A example of an overlap matrix is shown in
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Overlap-matrix"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_deeper
-\begin_layout Itemize
-A example of an overlap matrix is shown in figure 3.2.
- 
-\end_layout
+\end_inset
 
-\begin_deeper
-\begin_layout Itemize
-Firstly the overlap matrix should be tridiagonal in which all pairs in the
+.Firstly the overlap matrix should be tridiagonal in which all pairs in the
  main diagonal should have overlap and should not have any non-zero values.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-A value of 0.03 for the tridiagonal elements have been reported as a minimum
+ A value of 0.03 for the tridiagonal elements have been reported as a minimum
  threshold to yield reliable free energy estimates but this should be taken
  with a grain of salt 
 \begin_inset CommandInset citation
@@ -3817,47 +3368,49 @@ literal "false"
 
 \end_inset
 
-.
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-The overlap matrix shown in 
+.The overlap matrix shown in 
 \series bold
-figure 3.1 a 
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Overlap-matrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a 
 \series default
 showcases all the windows for the WP6-G1 complex where every column in denotes
- denote every simulation performed in states 6-8 in figure 2.1
+ denote every simulation performed in states 6-8 in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:thermodynamic-cycle"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \series bold
 .
- 
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
+\begin_layout Standard
 For example column 
 \begin_inset Formula $\lambda_{0}$
 \end_inset
 
  denotes state 6 where the Lennard-jones and Van der Walls interaction of
  the ligand were turned off are removed.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Following 
+ Following 
 \begin_inset Formula $\lambda_{1}$
 \end_inset
 
  step where Lennard-jones and Van der Walls are reintroduced in the simulation.
-\end_layout
-
-\begin_layout Itemize
+ 
 \begin_inset Formula $\lambda_{2-5}$
 \end_inset
 
@@ -3867,19 +3420,12 @@ Following
 \end_inset
 
 ).
- 
-\end_layout
-
-\begin_layout Itemize
 \begin_inset Formula $\lambda_{6-8}$
 \end_inset
 
  was the scaling the electrostatics of the ligand charges in increments
  of 0%, 50% and 100%.
  
-\end_layout
-
-\begin_layout Itemize
 \begin_inset Formula $\lambda_{9-22}$
 \end_inset
 
@@ -3897,23 +3443,23 @@ Following
 \end_inset
 
  module.
- 
-\end_layout
-
-\begin_layout Itemize
 \begin_inset Formula $\lambda_{23}$
 \end_inset
 
  is the endstate simulation of the complex.
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-In 
+ In 
 \series bold
-figure 3.1a 
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Overlap-matrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a 
 \series default
 looking at 
 \begin_inset Formula $\lambda_{0}$
@@ -3937,12 +3483,7 @@ looking at
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The probability of finding a microstate sampled from state 
+ The probability of finding a microstate sampled from state 
 \begin_inset Formula $\lambda_{0}$
 \end_inset
 
@@ -3959,21 +3500,13 @@ The probability of finding a microstate sampled from state
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Itemize
-Then looking at the overlap at 
+ Then looking at the overlap at 
 \begin_inset Formula $\lambda_{2}-\lambda_{9}$
 \end_inset
 
  (scale the GB external dielectric and ligand electrostatics) shows well
  behavior and good overlap.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The overlap 
+ The overlap 
 \begin_inset Formula $\lambda_{3}$
 \end_inset
 
@@ -3987,13 +3520,7 @@ The overlap
 
  which suggest we scaling of GB external dielectric and electrostatics of
  the ligand may be unnecessary and can done with one intermediate window
- only.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-However 
+ only.However 
 \begin_inset Formula $\lambda_{9}-\lambda_{10}$
 \end_inset
 
@@ -4002,23 +3529,33 @@ However
 \end_inset
 
 show very poor overlap suggesting the additional of intermediate restraints
- are needed to increase the overlap.
- 
-\end_layout
+ are needed to increase the overlap.Therefore for our method we increased
+ number of restraint windows to 29 resulting in a total of 41 windows shown
+ in
+\change_deleted -1463621830 1680537284
+ figure 3.2
+\change_inserted -1463621830 1680537284
 
-\begin_deeper
-\begin_layout Itemize
-Therefore for our method we increased number of restraint windows to 29
- resulting in a total of 41 windows shown in figure 3.2 b
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Overlap-matrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_deleted -1463621830 1680537286
+ 
+\change_unchanged
+b
 \series bold
  
 \series default
 and shows good overlap spacing.
- 
 \end_layout
 
-\end_deeper
-\end_deeper
 \begin_layout Standard
 \begin_inset Float figure
 wide false
@@ -4028,6 +3565,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename images/overlap_matrix_combine.png
+	lyxscale 50
 	width 100text%
 
 \end_inset
@@ -4040,7 +3578,15 @@ status open
 
 \begin_layout Plain Layout
 Overlap matrix for WP6-G1.
- 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \series bold
 a
 \series default
@@ -4052,17 +3598,17 @@ a
 \series bold
 b 
 \series default
-Increaing the number of restraint windows to 29 show good overlap throughout
- all intermidate windows.
- 
-\end_layout
-
-\end_inset
-
-
+Increasing the number of restraint windows to 29 show good overlap throughout
+ all intermediate windows.
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Overlap-matrix"
+
+\end_inset
+
 
 \end_layout
 
@@ -4072,7 +3618,7 @@ Increaing the number of restraint windows to 29 show good overlap throughout
 \end_layout
 
 \begin_layout Chapter
-Results 
+Results
 \end_layout
 
 \begin_layout Standard
@@ -4082,62 +3628,69 @@ Here we use
 
  to carry out the absolute binding free energy calculations on the host-guest
  systems describe in the previous section.
- In section 4.1 we will describe the automated workflow for using 
+ In
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Implementation-Details"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we will describe the automated workflow for using 
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
  how it prepares all the necessary input files, manages simulations and
  perform post-treatments.
- In section 4.2 we report on the accuracy and access the convergence of each
- step as shown in figure 
-\change_inserted -1463621830 1680124331
+ The following
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Calculations-of-binding"
+plural "false"
+caps "false"
+noprefix "false"
 
-\series bold
-4.1
-\change_deleted -1463621830 1680124298
+\end_inset
 
-\series default
-1
-\series bold
-.
-
-\change_unchanged
- 
-\series default
-Finally we look at the overall scaling performance for the time required
- for the cycle to finish.
- 
+ we report on the accuracy and access the convergence of each step in our
+ automate workflow pipeline Finally we look at the overall scaling performance
+ for the time required for the cycle to finish.
 \end_layout
 
 \begin_layout Section
 Implementation Details 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Implementation-Details"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-- The 
+The 
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
  is a program written entirely in Python that streamline the entire workflow
  procedure of preparing, running and post-processing all the MD simulations
- for calculating the free energies, whose general workflow is shown in figure
- 
-\change_inserted -1463621830 1680124334
+ for calculating the free energies, whose general workflow is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Automated-workflow"
+plural "false"
+caps "false"
+noprefix "false"
 
-\series bold
-4.1
-\change_deleted -1463621830 1680124333
+\end_inset
 
-\series default
-1
-\change_unchanged
 
 \series bold
 .
- 
-\end_layout
-
-\begin_layout Itemize
+\series default
 The first step the user would proved a parameterize complex 
 \begin_inset Formula $.parmameter$
 \end_inset
@@ -4146,59 +3699,36 @@ The first step the user would proved a parameterize complex
 \begin_inset Formula $.coordinate$
 \end_inset
 
- files which will be further explain in the user configuration sections
- 4.1.1.
- 
-\end_layout
+ files which will be further explain in the user configuration
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Configuration-File"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_deeper
-\begin_layout Itemize
-Following the user input of complex parameter files an REMD GBSA endstate
+\end_inset
+
+.
+ Following the user input of complex parameter files an REMD GB endstate
  simulations is then executed and once completed the equilibrated binding
  conformation from the complex in state 8 is used to select and generate
  conformational and orientational restraints.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-At the same time, the receptor and ligand are spilt from the complex endstate
+ At the same time, the receptor and ligand are spilt from the complex endstate
  structure to be used for all the restrained MD states 
 \begin_inset Formula $2\lambda-7\lambda.$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Itemize
-All the intermediate MD states are run simultaneously and executed in parallel
- using all the available processors that was specified.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Once an intermediate MD simulation is completed this gets automatically
- pushed into post analysis to gather all the necessary state comparison
- and minimized energies.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The post-process data is then parsed into an 
-\begin_inset Formula $pandas.Dateframe$
+ All the intermediate MD states are run simultaneously and executed in parallel
+ using all the available processors that was specified.Once an intermediate
+ MD simulation is completed this gets automatically pushed into post analysis
+ to gather all the necessary state comparison and minimized energies.
+ The post-process data is then parsed into an 
+\begin_inset Formula $pandas.DateFrame$
 \end_inset
 
  which is then submitted to MBAR where the final change in BFE is calculated
- for each system.
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-All steps within in the workflow are handled using the 
+ for each system.All steps within in the workflow are handled using the 
 \begin_inset Formula $Toil$
 \end_inset
 
@@ -4213,18 +3743,14 @@ literal "false"
  which is a pure Python workflow engine which allows us to create multiple
  simulations and run them simultaneously.
  
-\end_layout
+\begin_inset Formula $Toil$
+\end_inset
 
-\begin_deeper
-\begin_layout Itemize
-Toil uses an API to describe the job order programmatically.
+ uses an API to describe the job order programmatically.
  Which allows use to create our workflow pipeline and step simulation job
  dependencies to pass there relevant information only once they are completed.
- 
 \end_layout
 
-\end_deeper
-\end_deeper
 \begin_layout Standard
 \begin_inset Float figure
 wide false
@@ -4245,8 +3771,22 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+Automated workflow pipeline for 
+\begin_inset Formula $ISDDM.py$
+\end_inset
+
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Automated-workflow"
 
 \end_inset
 
@@ -4259,32 +3799,27 @@ status open
 \end_layout
 
 \begin_layout Subsection
-Configuration user input 
+Configuration File
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Configuration-File"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 Here we aim that the entire workflow can be automated for calculating ABFEs
  for diverse ligands.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-In our protocol the total number of intermediate states are 
+ In our protocol the total number of intermediate states are 
 \begin_inset Formula $112$
 \end_inset
 
  MD simulations that were automatically setup and ran.
-\end_layout
-
-\begin_layout Itemize
-Once an intermediate MD simulation is complete its output trajectory will
+ Once an intermediate MD simulation is complete its output trajectory will
  be passed in every system specific state for post analysis energy minimization.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-For example, the intermediate state for complex 
+ For example, the intermediate state for complex 
 \begin_inset Formula $5\lambda-7\lambda$
 \end_inset
 
@@ -4297,12 +3832,7 @@ For example, the intermediate state for complex
 \end_inset
 
  additional post-process simulations.
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-The 
+ The 
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
@@ -4312,7 +3842,6 @@ The
 \end_inset
 
  configurational consisting of only 36 lines which will be discussed below.
- 
 \end_layout
 
 \begin_layout Standard
@@ -4323,30 +3852,37 @@ The
 \end_layout
 
 \begin_layout Subsubsection
-System Parameters 
+System Parameters
 \end_layout
 
 \begin_layout Standard
 The system parameters denotes which AMBER engine the user wishes to execute
- (sander, pmemd, pmemd.CUDA, ect) the endstate and intermediate MD simulations
- and 
+ (
+\begin_inset Formula $sander$
+\end_inset
+
+, 
+\begin_inset Formula $pmemd$
+\end_inset
+
+, 
+\begin_inset Formula $pmemd.CUDA$
+\end_inset
+
+, ect) the endstate and intermediate MD simulations and 
 \begin_inset Formula $mpi_{-}command$
 \end_inset
 
- the type of HPC scheduler (SLURM, TORQUE, ect).
- 
-\end_layout
+ the type of HPC scheduler (
+\begin_inset Formula $SLURM,TORQUE$
+\end_inset
 
-\begin_layout Itemize
-Memory and disk are keywords for resource requirements for each individual
+, ect).
+ Memory and disk are keywords for resource requirements for each individual
  MD simulation.
-\end_layout
-
-\begin_layout Itemize
-The number of processors for each system is simply an integer input such
+ The number of processors for each system is simply an integer input such
  as, all the complex intermediate MD simulations will be ran with two CPU
  cores.
- 
 \end_layout
 
 \begin_layout Standard
@@ -4409,10 +3945,10 @@ number_of_cores_per_system:
 \end_layout
 
 \begin_layout Subsubsection
-Define Receptor and Ligand Atoms 
+Define Receptor and Ligand Atoms
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 User will need to specify a path to AMBER 
 \begin_inset Formula $.parm7$
 \end_inset
@@ -4422,20 +3958,10 @@ User will need to specify a path to AMBER
 \end_inset
 
  file to designated bound ligand host complex system.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-This assumes the user has already parameterized the complex with there desired
- force fields and charge model.
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Lastly AMBER masks to denote ligand and receptor atoms from the complex
+ This assumes the user has already parameterized the complex with there
+ desired force fields and charge model.
+ Lastly AMBER masks to denote ligand and receptor atoms from the complex
  parameter file.
- 
 \end_layout
 
 \begin_layout Standard
@@ -4479,7 +4005,7 @@ AMBER_masks:
 \end_layout
 
 \begin_layout Subsubsection
-Workflow Arguments 
+Workflow Arguments
 \end_layout
 
 \begin_layout Standard
@@ -4487,34 +4013,15 @@ Workflow Arguments
 \end_inset
 
  workflow denoted the endstate type of simulation, REMD being the default
- setting but they user can specify there own endstate simulation aswell.
- 
-\end_layout
-
-\begin_layout Itemize
-If REMD is selected a set of arguments will need to be specified such as
+ setting but they user can specify there own endstate simulation as well.
+ If REMD is selected a set of arguments will need to be specified such as
  the number of threads for each system and total number of groups.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-REMD is ran by replicas of range of temperature which can be input as a
+ REMD is ran by replicas of range of temperature which can be input as a
  list which is shown below.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Since the example config file down below has 4 temperatures meaning that
- 4 input files will be needed for both equlibration and remd simulations.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
+ Since the example config file down below has 4 temperatures meaning that
+ 4 input files will be needed for both equilibration and remd simulations.
 \series bold
+
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
@@ -4525,18 +4032,9 @@ Since the example config file down below has 4 temperatures meaning that
 \begin_inset Formula $ig$
 \end_inset
 
-) is different for each structure.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-All the user needs to provide is one equilibration and 
-\begin_inset Quotes eld
-\end_inset
-
-remd
-\begin_inset Quotes erd
+) is different for each structure.All the user needs to provide is one equilibrat
+ion and 
+\begin_inset Formula $“remd”$
 \end_inset
 
  input file with there desired input key values with
@@ -4556,43 +4054,56 @@ and
 \end_inset
 
  which these string keys will be filled during the workflow.
- 
 \end_layout
 
-\end_deeper
-\end_deeper
-\end_deeper
-\end_deeper
-\begin_layout Itemize
+\begin_layout Standard
 The intermediate argument keywords asks for the type of GB models (
-\begin_inset Formula $igb=2^{HTC}$
+\begin_inset Formula $GB^{HCT}$
 \end_inset
 
-[cite],
-\begin_inset Formula $igb=1^{OBC}$
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "hawkinsPairwiseSoluteDescreening1995"
+literal "false"
+
 \end_inset
 
-[cite]).
-\end_layout
+,
+\begin_inset Formula $GB^{OBC}$
+\end_inset
 
-\begin_deeper
-\begin_layout Itemize
-Strength of harmonic conformational and orientational restraints are specified
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "onufrievModificationGeneralizedBorn2000"
+literal "false"
+
+\end_inset
+
+,
+\begin_inset Formula $GB-neck2$
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "monganGeneralizedBornModel2007"
+literal "false"
+
+\end_inset
+
+).
+ Strength of harmonic conformational and orientational restraints are specified
  by a list of integers to calculate powers of 2, such as 
 \begin_inset Formula $2^{-8}=0.00390625kcal/mol$
 \end_inset
 
 .
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Scaling ligand electrostatics are done by percentage values such as shown
+ Scaling ligand electrostatics are done by percentage values such as shown
  below 0% and 50%.
 \end_layout
 
-\end_deeper
-\end_deeper
 \begin_layout Standard
 \begin_inset listings
 inline false
@@ -4695,31 +4206,38 @@ workflow:
 
 \begin_layout Section
 Calculations of binding free energies for host-guest systems
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Calculations-of-binding"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Statistical metrics of absolute binding 
+Statistical metrics of absolute binding
 \end_layout
 
-\begin_layout Itemize
-In table 4.1 are some metrics used to help analyzed the effectiveness of
- using GBSA in this automation workflow protocol.
- 
-\end_layout
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "table:host-guest-metrics"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_deeper
-\begin_layout Itemize
-We calculated the Pearson coefficient (
+\end_inset
+
+are some metrics used to help analyzed the effectiveness of using GBSA in
+ this automation workflow protocol.
+ We calculated the Pearson coefficient (
 \begin_inset Formula $R^{2}$
 \end_inset
 
 ) to analyze the degree of correlation with our estimate.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Also computed other error metrics, including the RMSE
+ Also computed other error metrics, including the RMSE
 \begin_inset Formula $_{o}$
 \end_inset
 
@@ -4736,31 +4254,39 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-RMSE
+ RMSE
 \begin_inset Formula $_{o}$
 \end_inset
 
- (equation 4.1) is the computed root mean square error of predicted binding
- affinities after subtracting it with the average signed error.
-\end_layout
 
-\begin_layout Itemize
-RMSE
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "4.1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is the computed root mean square error of predicted binding affinities
+ after subtracting it with the average signed error.RMSE
 \begin_inset Formula $_{r}$
 \end_inset
 
- (equation 4.2) is used to measure the accuracy of relative binding free
- energies by considering all guest molecules and n is the number of measurements.
  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "4.2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is used to measure the accuracy of relative binding free energies by considerin
+g all guest molecules and n is the number of measurements.
 \end_layout
 
-\end_deeper
-\end_deeper
-\end_deeper
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
@@ -4795,88 +4321,64 @@ Calculations of binding free energies of 14-cb7 cationic guest binding systems
 
 ) are conducted in this work.
  
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_layout Itemize
-Figure 4.2b shows the correlation scatter plot of CB7 systems versus experimental
- measurements with fitted linear regression.
- 
-\end_layout
+\end_inset
 
-\begin_deeper
-\begin_layout Itemize
-Each ligand are colored by there respective net charge which range from
- +1 to +2.
- 
-\end_layout
-
-\begin_layout Itemize
-The calculated statistics that computed free energies with this automated
+b shows the correlation scatter plot of CB7 systems versus experimental
+ measurements with fitted linear regression.Each ligand are colored by there
+ respective net charge which range from +1 to +2.
+ The calculated statistics that computed free energies with this automated
  workflow model had a significant deviation (RMSE=6.9 kcal/mol) but a good
  correlation (
 \begin_inset Formula $R^{2}=0.8$
 \end_inset
 
-) suggesting well prediction 
-\change_deleted -1463621830 1680127658
+) suggesting well prediction throughout.
+ It is evident in.
  
-\change_unchanged
-throughout.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
 
-\change_deleted -1463621830 1680127658
- 
-\change_unchanged
+\end_inset
 
+b all the calculations of absolute binding are being overestimated for all
+ the cationic ligands.Which may be suggesting favorable polar interaction
+ with ammonium and carbonyl rich ports of CB7.
 \end_layout
 
-\end_deeper
-\begin_layout Itemize
-It is evident in
-\series bold
- 
-\series default
-figure 4b all the calculations of absolute binding are being overestimated
- for all the cationic ligands.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Which may be suggesting favorable polar interaction with ammonium and carbonyl
- rich ports of CB7.
-\end_layout
-
-\end_deeper
 \begin_layout Subsubsection
 Calculations of binding free energies of Pillar[6]ene (WP6)
 \end_layout
 
-\begin_layout Itemize
-Here 13 guest ligands were tested against WP6 as shown in figure 4.2c.
-\end_layout
+\begin_layout Standard
+Here 13 guest ligands were tested against WP6 as shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_deeper
-\begin_layout Itemize
-The coloring of each guest is the same as CB7 where 12 guests are bearing
+\end_inset
+
+c.
+ The coloring of each guest is the same as CB7 where 12 guests are bearing
  a +1 to +2 charge ammoniums and one neutral guest denoted as G8.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-We see the absolute binding for all positively charge guest are being overestima
-ted similar what we saw with CB7.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Interesting G8 being the only neutral ligand in the entire dataset and its
- binding free energy is underestimated being a clear outlier.
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Calculated statistics that computed free energies had a deviation (RMSE=6.64
+ We see the absolute binding for all positively charge guest are being overestim
+ated similar what we saw with CB7.
+ Interesting G8 being the only neutral ligand in the entire dataset and
+ its binding free energy is underestimated being a clear outlier.
+ Calculated statistics that computed free energies had a deviation (RMSE=6.64
  kcal/mol) and a decent correlation (
 \begin_inset Formula $R^{2}=0.52$
 \end_inset
@@ -4884,44 +4386,37 @@ Calculated statistics that computed free energies had a deviation (RMSE=6.64
 ).
 \end_layout
 
-\end_deeper
-\end_deeper
 \begin_layout Subsubsection
 Calculations of binding free energies of Octa-acid (OAH)
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 Here we tested against structurally different host system OAH with a deep
  10 Å hydrophobic pocket and eight water-solubilizing carboxylate groups
- at the outer surface figure 4.2 d.
-\end_layout
+ at the outer surface figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_deeper
-\begin_layout Itemize
-A total of 20 guests were binding against OAH where 18 guest had a charge
+\end_inset
+
+d.
+ A total of 20 guests were binding against OAH where 18 guest had a charge
  of -1 and only two (tzh,hxa) bearing a +1 charge.
- 
-\end_layout
-
-\begin_layout Itemize
-The calculated statistics of computed free energies had a deviation (RMSE=2.9
+ The calculated statistics of computed free energies had a deviation (RMSE=2.9
  kcal/mol) and poor correlation (
 \begin_inset Formula $R^{2}=0.07$
 \end_inset
 
 ).
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The two cationic ligands (trz,hxa) in the dataset are being overestimated
+ The two cationic ligands (trz,hxa) in the dataset are being overestimated
  resulting in the poor correlation indicating our GB model will may need
  an correction to handle these charge ligands.
- 
 \end_layout
 
-\end_deeper
-\end_deeper
 \begin_layout Subsubsection
 Calculations of binding free energies of 
 \begin_inset Formula $\alpha/\beta$
@@ -4936,18 +4431,23 @@ Calculations of binding free energies of
 -CD)
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 Calculations of binding free energies of 38-
 \begin_inset Formula $\alpha/\beta$
 \end_inset
 
 CD guests with charges net charges varying from +1 to -1.
- 
-\end_layout
+ In table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "table:host-guest-metrics"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_deeper
-\begin_layout Itemize
-In table 4.3 shows the computed statistics for both 
+\end_inset
+
+shows the computed statistics for both 
 \series bold
 
 \begin_inset Formula $\beta$
@@ -4960,18 +4460,7 @@ CD and
 \end_inset
 
 CD with a deviation RMSE=1.6 and RMSE=1.6 kcal/mol respectively.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1463621830 1680127737
-I
-\change_deleted -1463621830 1680127736
-i
-\change_unchanged
-nterestingly when comparing the correlation values between the two system
+ Interestingly when comparing the correlation values between the two system
  (
 \series bold
 
@@ -5002,17 +4491,18 @@ CD reported a stronger correlation between calculated and experimental of
 \end_inset
 
 CD with a poor correlation of 0.17.
-\end_layout
+ This may suggest that the GB mode can be system dependent.
+ In figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_deeper
-\begin_layout Itemize
-This may suggest that the GBSA mode can be system dependent.
-\end_layout
+\end_inset
 
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-In figure 4.2e is a scatter plot of both 
+e is a scatter plot of both 
 \series bold
 
 \begin_inset Formula $\beta$
@@ -5026,81 +4516,72 @@ CD and
 
 CD systems where we begin to see a clear bias of ligand charges which have
  been similar trend in the other host guest systems.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-In which we clearly see the negativity charge ligands are being underestimated
+ In which we clearly see the negativity charge ligands are being underestimated
  and positively charge ligands are overestimating the absolute binding free
  energies.
- 
+ These results are indicative an correction should be applied to these charge
+ ligands and will be explored in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Generalize-Born-hydration"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-These results are indicative an correction should be applied to these charge
- ligands and will be explored in section 4.3.
-\end_layout
-
-\end_deeper
-\end_deeper
-\end_deeper
 \begin_layout Subsubsection
 Calculations of binding in all host guest systems
 \end_layout
 
-\begin_layout Itemize
-In figure 4.2a shows the scatter plot of all the systems that were tested
- against in the dissertation.
- 
-\end_layout
+\begin_layout Standard
+In figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ABFE-host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_deeper
-\begin_layout Itemize
-The different shapes in the legend box corresponds to the different host
+\end_inset
+
+a shows the scatter plot of all the systems that were tested against in
+ the dissertation.
+ The different shapes in the legend box corresponds to the different host
  systems.
- 
-\end_layout
+ In table
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "table:host-guest-metrics"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_deeper
-\begin_layout Itemize
-In table 4.3 shows the computed statistics for the combine dataset with a
- deviation (RMSE=4.1) and correlation of 0.76.
- 
-\end_layout
+\end_inset
 
-\begin_layout Itemize
-In all the test cases we clearly see the ligand overall charge is dominating
+shows the computed statistics for the combine dataset with a deviation (RMSE=4.1)
+ and correlation of 0.76.
+ In all the test cases we clearly see the ligand overall charge is dominating
  factor in estimating the absolute binding affinity of our model.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-What is unexpected is the little influence the host charge has on the binding,
+ What is unexpected is the little influence the host charge has on the binding,
  such as WP6 and OAH being the two highly perturb systems bering a charge
  of -6 and -8 receptivity.
+ One possibly is both WP6 and OAH having no effect is due to the fact there
+ charge carbonyl atoms are solvent exposed when the ligand is bound.This
+ may be the result of GB lack of charge asymmetry in GB
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mukhopadhyayChargeHydrationAsymmetry2012"
+literal "false"
+
+\end_inset
+
+ which will be explored in the following section.
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-One possibly is both WP6 and OAH having no effect is due to the fact there
- charge carbonyl atoms are solvent exposed when the ligand is bound.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-This may be the result of GB lack of charge asymmetry in GB[https://pubs.acs.org/d
-oi/full/10.1021/jp305226j] which will be explored in the following section.
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\end_deeper
-\end_deeper
-\end_deeper
 \begin_layout Standard
 \begin_inset Float table
 wide false
@@ -5505,16 +4986,7 @@ OAH
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_deleted -1463621830 1680480933
-\begin_inset Formula $\alpha-$
-\end_inset
-
-cyclodextrins
-\change_inserted -1463621830 1680480933
 ACD
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -5588,16 +5060,7 @@ ACD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_deleted -1463621830 1680480936
-\begin_inset Formula $\beta-$
-\end_inset
-
-cyclodextrins
-\change_inserted -1463621830 1680480937
 BCD
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -5688,6 +5151,12 @@ Table 4.3: This table shows various metrics for comparison of all host guest
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "table:host-guest-metrics"
+
+\end_inset
+
 
 \end_layout
 
@@ -5712,6 +5181,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename images/Results.png
+	lyxscale 50
 	width 100text%
 
 \end_inset
@@ -5734,18 +5204,55 @@ Comparison of calculated absolute binding free energies
 \end_inset
 
 .
- 
-\series default
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 The black solid line is the experimental identity.
  The blue solid indicates the linear regression fitting for host guest systems
  in this study.
  
 \series bold
 a.
-
+ 
 \series default
- kjkjkjkj
+The linear regression fitting of 14-CB7 systems in this study.
 \end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+b 
+\series default
+The fitted regression of WP6.
+ 
+\series bold
+c 
+\series default
+Linear regression fitting of octa-acid
+\series bold
+.
+ e 
+\series default
+Linear fitted regression of both 
+\begin_inset Formula $\alpha$
+\end_inset
+
+/
+\begin_inset Formula $\beta$
+\end_inset
+
+-cyclodextrin.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ABFE-host-guest-systems"
 
 \end_inset
 
@@ -5754,46 +5261,49 @@ a.
 
 \end_inset
 
+Generalize Born hydration asymmetry correction 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Generalize-Born-hydration"
 
-\change_deleted -1463621830 1680129173
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Section
-Generalize Born hydration asymmetry correction 
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1463621830 1680116755
 Calculation of all host guest system binding affinity calculations is shown
- In figure 4.2a with the generalize Born model (
+ 
+\change_inserted -1463621830 1680537373
+i
+\change_deleted -1463621830 1680537373
+I
+\change_unchanged
+n 
+\change_deleted -1463621830 1680537369
+figure 4.2
+\change_inserted -1463621830 1680537369
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:ABFE-host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_unchanged
+a with the generalize Born model (
 \begin_inset Formula $igb^{OBC}$
 \end_inset
 
 ).
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1463621830 1680119924
-In which we clearly see a bias of ligand charge having a major influencing
+ In which we clearly see a bias of ligand charge having a major influencing
  the overall binding of these host guest system and host systems have little
  or no effect.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1463621830 1680127872
-It is known that the GB models lack hydration asymmetry
+ It is known that the GB models lack hydration asymmetry
 \begin_inset CommandInset citation
 LatexCommand citep
 key "mukhopadhyayChargeHydrationAsymmetry2012"
@@ -5802,13 +5312,7 @@ literal "false"
 \end_inset
 
  which indicates the charge bias we are observing for the charge ligands.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1463621830 1680122479
-Therefore we applied a linear hydration asymmetry correction:
+ Therefore we applied a linear hydration asymmetry correction:
 \begin_inset Formula 
 \begin{equation}
 \Delta G_{bind}^{corr}=(1+a)\Delta G_{bind}^{GB}+b\label{4.3}
@@ -5816,30 +5320,27 @@ Therefore we applied a linear hydration asymmetry correction:
 
 \end_inset
 
-
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-
-\change_inserted -1463621830 1680127898
 A separate linear correction we were done for positive, neutral and negative
- ligands and the fitted parameters are shown in table 4.2
+ ligands and the fitted parameters are shown in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "table:fitted-parameters"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
-\end_deeper
 \begin_layout Standard
-
-\change_inserted -1463621830 1680122599
 \begin_inset Float table
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129257
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="3">
 <features tabularvalignment="middle">
@@ -5851,8 +5352,6 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129257
 Charge
 \end_layout
 
@@ -5862,8 +5361,6 @@ Charge
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129257
 a
 \end_layout
 
@@ -5873,8 +5370,6 @@ a
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129257
 b
 \end_layout
 
@@ -5886,8 +5381,6 @@ b
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129257
 -1
 \end_layout
 
@@ -5897,8 +5390,6 @@ b
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129257
 -0.18
 \end_layout
 
@@ -5908,8 +5399,6 @@ b
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129257
 -1.89
 \end_layout
 
@@ -5921,8 +5410,6 @@ b
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129257
 0
 \end_layout
 
@@ -5932,8 +5419,6 @@ b
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129257
 -0.41
 \end_layout
 
@@ -5943,8 +5428,6 @@ b
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129257
 -0.97
 \end_layout
 
@@ -5956,8 +5439,6 @@ b
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129257
 1
 \end_layout
 
@@ -5967,8 +5448,6 @@ b
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129257
 -0.44
 \end_layout
 
@@ -5978,8 +5457,6 @@ b
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129257
 -0.23
 \end_layout
 
@@ -5991,8 +5468,6 @@ b
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129257
 2
 \end_layout
 
@@ -6002,8 +5477,6 @@ b
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129257
 -0.58
 \end_layout
 
@@ -6013,8 +5486,6 @@ b
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129257
 -2.30
 \end_layout
 
@@ -6026,31 +5497,27 @@ b
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680122599
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680129274
-Hydration asymmetry linear corrections fitted parameters 
-\change_unchanged
-
+Hydration asymmetry linear corrections fitted parameters
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "table:fitted-parameters"
+
+\end_inset
+
 
 \end_layout
 
@@ -6059,27 +5526,31 @@ Hydration asymmetry linear corrections fitted parameters
 
 \end_layout
 
-\begin_layout Itemize
-
-\change_inserted -1463621830 1680122475
+\begin_layout Standard
 Therefore a separate linear correction we were done for positive, neutral
  and negative ligands.
- 
-\end_layout
+ In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:HCA"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_layout Itemize
+\end_inset
 
-\change_inserted -1463621830 1680122008
-In figure 4.4 shows the corrected calculations of binding using equation
- 4.3.
- 
-\end_layout
+ shows the corrected calculations of binding using 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "4.3"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_deeper
-\begin_layout Itemize
+\end_inset
 
-\change_inserted -1463621830 1680122161
-We see an overall improvement all host system calculations in the correction
+.
+ We see an overall improvement all host system calculations in the correction
  of with a deviation (
 \begin_inset Formula $R^{2}=1.06kcal/mol$
 \end_inset
@@ -6089,39 +5560,18 @@ We see an overall improvement all host system calculations in the correction
 \end_inset
 
 .
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1463621830 1680122322
-In table 4.2 highlights the hydration asymmetry correction metrics of all
+ In table 4.2 highlights the hydration asymmetry correction metrics of all
  host guest systems.
- 
+ In all host guest systems we saw a improvement of deviation within 1kcal/mol.
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1463621830 1680122953
-In all host guest systems we saw a improvement of deviation within 1kcal/mol.
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\end_deeper
 \begin_layout Standard
-
-\change_inserted -1463621830 1680121377
 \begin_inset Float figure
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121491
 \begin_inset Graphics
 	filename images/correction_allData.pdf
 	width 100text%
@@ -6132,27 +5582,24 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121377
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121522
 Generalized Born-Hydration Asymmetry Correction.
- 
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:HCA"
+
+\end_inset
+
 
 \end_layout
 
@@ -6166,25 +5613,15 @@ Generalized Born-Hydration Asymmetry Correction.
 \end_inset
 
 
-\change_inserted -1463621830 1680121534
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1463621830 1680121542
 \begin_inset Float table
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="7">
 <features tabularvalignment="middle">
@@ -6200,8 +5637,6 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 System
 \end_layout
 
@@ -6211,8 +5646,6 @@ System
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 \begin_inset Formula $R^{2}$
 \end_inset
 
@@ -6225,8 +5658,6 @@ System
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 Slope
 \end_layout
 
@@ -6236,8 +5667,6 @@ Slope
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 RMSE
 \end_layout
 
@@ -6247,8 +5676,6 @@ RMSE
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 ME
 \end_layout
 
@@ -6258,8 +5685,6 @@ ME
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 RMSE
 \begin_inset Formula $_{o}$
 \end_inset
@@ -6273,8 +5698,6 @@ RMSE
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 RMSE
 \begin_inset Formula $_{o}$
 \end_inset
@@ -6290,8 +5713,6 @@ RMSE
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 All
 \end_layout
 
@@ -6301,8 +5722,6 @@ All
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.87
 \end_layout
 
@@ -6312,8 +5731,6 @@ All
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.87
 \end_layout
 
@@ -6323,8 +5740,6 @@ All
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 1.06
 \end_layout
 
@@ -6334,8 +5749,6 @@ All
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 -0.0
 \end_layout
 
@@ -6345,8 +5758,6 @@ All
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 1.06
 \end_layout
 
@@ -6356,8 +5767,6 @@ All
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 1.51
 \end_layout
 
@@ -6369,8 +5778,6 @@ All
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 ACD
 \end_layout
 
@@ -6380,8 +5787,6 @@ ACD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.54
 \end_layout
 
@@ -6391,8 +5796,6 @@ ACD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.53
 \end_layout
 
@@ -6402,8 +5805,6 @@ ACD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.67
 \end_layout
 
@@ -6413,8 +5814,6 @@ ACD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 -0.25
 \end_layout
 
@@ -6424,8 +5823,6 @@ ACD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.62
 \end_layout
 
@@ -6435,8 +5832,6 @@ ACD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.91
 \end_layout
 
@@ -6448,8 +5843,6 @@ ACD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 BCD
 \end_layout
 
@@ -6459,8 +5852,6 @@ BCD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.83
 \end_layout
 
@@ -6470,8 +5861,6 @@ BCD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.66
 \end_layout
 
@@ -6481,8 +5870,6 @@ BCD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.88
 \end_layout
 
@@ -6492,8 +5879,6 @@ BCD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.71
 \end_layout
 
@@ -6503,8 +5888,6 @@ BCD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.52
 \end_layout
 
@@ -6514,8 +5897,6 @@ BCD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.76
 \end_layout
 
@@ -6527,8 +5908,6 @@ BCD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 CB7
 \end_layout
 
@@ -6538,8 +5917,6 @@ CB7
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.80
 \end_layout
 
@@ -6549,8 +5926,6 @@ CB7
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.81
 \end_layout
 
@@ -6560,8 +5935,6 @@ CB7
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 1.03
 \end_layout
 
@@ -6571,8 +5944,6 @@ CB7
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 -0.44
 \end_layout
 
@@ -6582,8 +5953,6 @@ CB7
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.94
 \end_layout
 
@@ -6593,8 +5962,6 @@ CB7
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 1.38
 \end_layout
 
@@ -6606,8 +5973,6 @@ CB7
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 OAH
 \end_layout
 
@@ -6617,8 +5982,6 @@ OAH
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.38
 \end_layout
 
@@ -6628,8 +5991,6 @@ OAH
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.67
 \end_layout
 
@@ -6639,8 +6000,6 @@ OAH
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 1.30
 \end_layout
 
@@ -6650,8 +6009,6 @@ OAH
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 -0.11
 \end_layout
 
@@ -6661,8 +6018,6 @@ OAH
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 1.30
 \end_layout
 
@@ -6672,8 +6027,6 @@ OAH
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 1.88
 \end_layout
 
@@ -6685,8 +6038,6 @@ OAH
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 WP6
 \end_layout
 
@@ -6696,8 +6047,6 @@ WP6
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.51
 \end_layout
 
@@ -6707,8 +6056,6 @@ WP6
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.70
 \end_layout
 
@@ -6718,8 +6065,6 @@ WP6
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 1.39
 \end_layout
 
@@ -6729,8 +6074,6 @@ WP6
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 0.10
 \end_layout
 
@@ -6740,8 +6083,6 @@ WP6
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 1.39
 \end_layout
 
@@ -6751,8 +6092,6 @@ WP6
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121628
 2.05
 \end_layout
 
@@ -6767,98 +6106,69 @@ WP6
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121542
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -1463621830 1680121604
 This table shows various metrics for comparison of all host guest systems
  using the generalized Born-hydration asymmetry correction.
  Units are in kcal/mol.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
 
-\change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
 \begin_layout Section
-Performance Scaling 
+Performance Scaling
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
  is implemented in parallel, so if users have availability to multiple processor
 s can speed up overall workflow completion.
  
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
  package utilizes 
-\change_inserted -1463621830 1680487688
-T
-\change_deleted -1463621830 1680487687
-t
-\change_unchanged
-oil[cite] which is a workflow management system which allow us to utilize
- all processors available to run and complete all tasks.
- 
-\end_layout
+\begin_inset Formula $Toil$
+\end_inset
 
-\begin_deeper
-\begin_layout Itemize
-Since all intermediate states (3-7
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "vivianToilEnablesReproducible2017"
+literal "false"
+
+\end_inset
+
+ which is a workflow management system which allow us to utilize all processors
+ available to run and complete all tasks.
+ Since all intermediate states (3-7
 \begin_inset Formula $\lambda$
 \end_inset
 
 ) are independent, all MD simulations, post-analysis calculations and MBAR
  computation can be parallelized given number of available processors.
+ As shown in figure 4.3 shows the processor scaling in order to complete
+ the entire workflow protocol (figure 2.1) which was tested on 150-atom CB7-C1
+ complex system The automation application was able to achieve perfect scaling
+ as the number of processes increases which suggest this automation application
  
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-As shown in figure 4.3 shows the processor scaling in order to complete the
- entire workflow protocol (figure 2.1) which was tested on 150-atom CB7-C1
- complex system
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The automation application was able to achieve perfect scaling as the number
- of processes increases which suggest this automation application 
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
  is scalable.
- 
 \end_layout
 
-\end_deeper
-\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -6871,10 +6181,6 @@ The automation application was able to achieve perfect scaling as the number
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -6911,32 +6217,32 @@ status open
 \end_layout
 
 \begin_layout Chapter
-
-\change_inserted -1463621830 1680124202
 Discussion
 \end_layout
 
 \begin_layout Section
-
-\change_inserted -1463621830 1680450200
-Comparison with Other Methods 
+Comparison with Other Methods
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted -1463621830 1680450204
-CB7 SAMPL4 Comparison 
+CB7 SAMPL4 Comparison
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1463621830 1680477242
 Overall, binding affinity prediction for 
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
  workflow performed well for CB7 system compared to other submission on
- to the SAMPL4 challenge[cite].
+ to the SAMPL4 challenge
+\begin_inset CommandInset citation
+LatexCommand citep
+key "muddanaSAMPL4HostGuest2014a"
+literal "false"
+
+\end_inset
+
+.
  We rank one of the top performers among the challenge submissions (table
  5.1).
  Our Pearson correlation(
@@ -6956,23 +6262,11 @@ literal "false"
 , which employed COSMO-RS(conductor-like screening model for real solvents)
  and OST (orthogonal space tempering) with TIP3P-MOD(transferable interaction
  potential three-point).
- 
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1463621830 1680409853
-A total of 5 entires use an implicit solvent model and among these methods
+ A total of 5 entires use an implicit solvent model and among these methods
  we outperformed all 5 of them.
  The RRHO/COSMO and M2/PBSA are more detailed predecessor than GBSA solvent.
  Where our seemed to outperform all the implicit applicants.
- 
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1463621830 1680410941
-Explicit solvent models which are considered a more detailed models seemed
+ Explicit solvent models which are considered a more detailed models seemed
  to varied with correlations(
 \begin_inset Formula $R^{2}$
 \end_inset
@@ -6991,20 +6285,9 @@ Explicit solvent models which are considered a more detailed models seemed
 \end_inset
 
  of 2.8 kcal/mol.
- 
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1463621830 1680449391
-While SAMPL4 did not compute any absolute metrics we can compare our results
- with published work using quantum mechanics with continuum-dielectric implicit
- solvent[cite cite]..
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1463621830 1680396037
 \begin_inset Float table
 wide false
 sideways false
@@ -7012,10 +6295,8 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="26" columns="10">
+<lyxtabular version="3" rows="26" columns="8">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -7094,15 +6375,6 @@ RMSE
 \begin_inset Text
 
 \begin_layout Plain Layout
-RMSE
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 MAE
 \end_layout
 
@@ -7113,21 +6385,6 @@ MAE
 
 \begin_layout Plain Layout
 MSE
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_deleted -1463621830 1680399116
-Intercept
-\change_inserted -1463621830 1680399125
-Solvent Type
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -7147,13 +6404,7 @@ Ours-GBSA
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_deleted -1463621830 1680399048
-1.4
-\change_inserted -1463621830 1680409002
 MBAR(DDM/GB)
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -7171,11 +6422,7 @@ MBAR(DDM/GB)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.
-\change_inserted -1463621830 1680406556
-78
-\change_unchanged
-
+0.78
 \end_layout
 
 \end_inset
@@ -7202,15 +6449,6 @@ MBAR(DDM/GB)
 \begin_inset Text
 
 \begin_layout Plain Layout
-6.9
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 6.7
 \end_layout
 
@@ -7221,15 +6459,6 @@ MBAR(DDM/GB)
 
 \begin_layout Plain Layout
 –6.7
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Implicit
 \end_layout
 
 \end_inset
@@ -7298,15 +6527,6 @@ MBAR(DDM/GB)
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.03
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -7317,15 +6537,6 @@ MBAR(DDM/GB)
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Implicit
 \end_layout
 
 \end_inset
@@ -7404,24 +6615,6 @@ SIE
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Implicit
-\end_layout
-
-\end_inset
-</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
@@ -7492,24 +6685,6 @@ SIE +HB
 
 \begin_layout Plain Layout
 -
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Implicit
 \end_layout
 
 \end_inset
@@ -7588,24 +6763,6 @@ DOCK 3.7
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Explicit-Quantum
-\end_layout
-
-\end_inset
-</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
@@ -7676,24 +6833,6 @@ RRHO
 
 \begin_layout Plain Layout
 -
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Implicit-Quantum
 \end_layout
 
 \end_inset
@@ -7772,24 +6911,6 @@ QM-M2
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Implicit-Quantum
-\end_layout
-
-\end_inset
-</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
@@ -7860,24 +6981,6 @@ M2
 
 \begin_layout Plain Layout
 -
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Implicit
 \end_layout
 
 \end_inset
@@ -7956,24 +7059,6 @@ FEP
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Explicit
-\end_layout
-
-\end_inset
-</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
@@ -8044,24 +7129,6 @@ FEP
 
 \begin_layout Plain Layout
 -
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Explicit
 \end_layout
 
 \end_inset
@@ -8140,24 +7207,6 @@ FEP
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Explicit
-\end_layout
-
-\end_inset
-</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
@@ -8228,24 +7277,6 @@ FEP
 
 \begin_layout Plain Layout
 -
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Explicit
 \end_layout
 
 \end_inset
@@ -8324,24 +7355,6 @@ Enthalpy
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Explicit
-\end_layout
-
-\end_inset
-</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
@@ -8412,24 +7425,6 @@ Enthalpy
 
 \begin_layout Plain Layout
 -
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Explicit
 \end_layout
 
 \end_inset
@@ -8508,24 +7503,6 @@ Enthalpy
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Explicit
-\end_layout
-
-\end_inset
-</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
@@ -8596,24 +7573,6 @@ BAR
 
 \begin_layout Plain Layout
 -
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Explicit
 \end_layout
 
 \end_inset
@@ -8692,24 +7651,6 @@ Water Count
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Explicit
-\end_layout
-
-\end_inset
-</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
@@ -8725,13 +7666,7 @@ TIP3P-MOD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_deleted -1463621830 1680407473
 OST
-\change_inserted -1463621830 1680407549
-OST
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -8786,24 +7721,6 @@ OST
 
 \begin_layout Plain Layout
 -
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Explicit
 \end_layout
 
 \end_inset
@@ -8882,24 +7799,6 @@ PMF
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Explicit
-\end_layout
-
-\end_inset
-</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
@@ -8970,24 +7869,6 @@ BAR
 
 \begin_layout Plain Layout
 -
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Explicit
 \end_layout
 
 \end_inset
@@ -9066,24 +7947,6 @@ EES
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Explicit
-\end_layout
-
-\end_inset
-</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
@@ -9158,24 +8021,6 @@ EES
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Explicit
-\end_layout
-
-\end_inset
-</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
@@ -9236,15 +8081,6 @@ QM-VM2(DFTB3-D3)**
 \begin_inset Text
 
 \begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 7.2
 \end_layout
 
@@ -9255,15 +8091,6 @@ QM-VM2(DFTB3-D3)**
 
 \begin_layout Plain Layout
 -7.2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Implicit-Quantum
 \end_layout
 
 \end_inset
@@ -9328,15 +8155,6 @@ QM-VM2(RHF-D3)**
 \begin_inset Text
 
 \begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 2.3
 \end_layout
 
@@ -9347,15 +8165,6 @@ QM-VM2(RHF-D3)**
 
 \begin_layout Plain Layout
 -2.3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Implicit-Quantum
 \end_layout
 
 \end_inset
@@ -9420,15 +8229,6 @@ QM-VM2(TPSS-D3)**
 \begin_inset Text
 
 \begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 2.4
 \end_layout
 
@@ -9439,15 +8239,6 @@ QM-VM2(TPSS-D3)**
 
 \begin_layout Plain Layout
 2.2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Implicit-Quantum
 \end_layout
 
 \end_inset
@@ -9473,10 +8264,16 @@ Predictions from SAMPL4 CB7 dataset.
 \end_layout
 
 \begin_layout Plain Layout
-All entries were from the SAMPL4 CB7 dataset[cite-cite].
- Units are in kcal/mol
-\change_inserted -1463621830 1680449396
+All entries were from the SAMPL4 CB7 dataset
+\begin_inset CommandInset citation
+LatexCommand citep
+key "muddanaSAMPL4HostGuest2014a"
+literal "false"
 
+\end_inset
+
+.
+ Units are in kcal/mol
 \end_layout
 
 \end_inset
@@ -9485,16 +8282,19 @@ All entries were from the SAMPL4 CB7 dataset[cite-cite].
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted -1463621830 1680450001
-WP6 SAMPL9 
+WP6 SAMPL9
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1463621830 1680477274
 SAMPL9 challenge there were 5 rank submissions for WP6 dataset.
- The results from rank submissions were taken from another published work[cite].
+ The results from rank submissions were taken from another published work
+\begin_inset CommandInset citation
+LatexCommand citep
+key "liuComprehensiveEvaluationEndpoint2022"
+literal "false"
+
+\end_inset
+
  Looking at the RMSE to rank criteria of submissions, the machine learning
  method which had the smallest RMSE ~2 kcal/mol and performed the best.
  The second top performer was a extended linear interaction energy (ELIE)
@@ -9506,22 +8306,43 @@ SAMPL9 challenge there were 5 rank submissions for WP6 dataset.
 
 (table 4.3) with RMSE 6.6kcal/mol having the largest deviation from the rank
  submissions.
- The trained MM/PBSA ELIE method[cite] is very similar to end-point calculations
+ The trained MM/PBSA ELIE method is very similar to end-point calculations
  using an implicit solvent model GBSA.
  However this method required some system-specific training step sharing
  some similarities with ML based method and it is not fully physics based
  and is not directly transferable to other systems, especially for targets
- without known binding affinities[cite-paper].
- 
+ without known binding affinities
+\begin_inset CommandInset citation
+LatexCommand citep
+key "liuComprehensiveEvaluationEndpoint2022"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1463621830 1680477363
 Another published study after SAMPL9 challenge also performed end-point
  free energy study on SAMPL9 challenge data set.
  In which compute a comparison between different charge models for solutes
- such as AM1-BCC,( ) RESP-1( ), and RESP-2( ) using the GAFF2 forcefield.
+ such as AM1-BCC
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jakalianFastEfficientGeneration2002"
+literal "false"
+
+\end_inset
+
+, RESP-1
+\begin_inset CommandInset citation
+LatexCommand citep
+key "baylyWellbehavedElectrostaticPotential1993"
+literal "false"
+
+\end_inset
+
+ and RESP-2 using the GAFF2 forcefield.
  From there results RESP-1 charge performed the best among the other charge
  models but there deviation from experiment for both MM/PBSA and MM/GBSA
  were still very large ~12kcal/mol.
@@ -9530,21 +8351,48 @@ Another published study after SAMPL9 challenge also performed end-point
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted -1463621830 1680476137
-OAH SAMPL4 comparison 
+OAH SAMPL4 comparison
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1463621830 1680482832
 To the best of our knowledge there hasn't been any published work that benchmark
  the entire dataset of octa-acid for comparisons.
  However in SAMPL4 challenge did a smaller set of 9 guests molecules for
- blind affinity measurements for octa-acid [cite=sampl4].
- One submission in particular interest used BEDAM method [42] coupled to
- the OPLS-AA classical force field [43] and the AGBNP2 [44] continuum solvation
- model being one of the fairly accurate predictions of the SAMPL4 challenge.
+ blind affinity measurements for octa-acid 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "muddanaSAMPL4HostGuest2014a"
+literal "false"
+
+\end_inset
+
+.
+ One submission in particular interest used BEDAM method 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gallicchioBindingEnergyDistribution2010"
+literal "false"
+
+\end_inset
+
+] coupled to the OPLS-AA classical force field
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jorgensenDevelopmentTestingOPLS1996"
+literal "false"
+
+\end_inset
+
+] and the AGBNP2 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gallicchioAGBNP2ImplicitSolvation2009"
+literal "false"
+
+\end_inset
+
+ continuum solvation model being one of the fairly accurate predictions
+ of the SAMPL4 challenge.
  The reported average signed error was RMSE
 \begin_inset Formula $_{o}$
 \end_inset
@@ -9568,20 +8416,25 @@ on of
 
 .
  The AGBNP2 method tuned the model to properly treat enclosed hydration
- sites has been important to achieve good accuracy.[cite-paper].
+ sites has been important to achieve good accuracy.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gallicchioBEDAMBindingFree2015"
+literal "false"
+
+\end_inset
+
  That being said our GB model is unable to accuracy treat hydration in deep
  hydrophobic of OAH resulting in poor accuracy.
+\change_inserted -1463621830 1680650600
+
 \end_layout
 
 \begin_layout Section
-
-\change_inserted -1463621830 1680458455
-Generalize Born Hydration Asymmetry Correction Considerations 
+Generalize Born Hydration Asymmetry Correction Considerations
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1463621830 1680464947
 The simplicity of implicit solvent models by treating water structureless
  continuum dielectric medium provides fast estimation of solvation effects
  making them very popular for virtual screening campaigns.
@@ -9590,22 +8443,28 @@ ting for calculating molecular electrostatics in solvent as describing by
  the Poisson Boltzmann equation.
  However with a number of approximations for solving polar interactions
  (electrostatics), generalize Born (GB) models causes a separation from
- the more accurate explicit solvent treatment.
- (33).
- One major approximation is the neglect of hydration asymmetry (CHA) [cite-luchk
-ko paper], which contributed towards solvation free energy 
+ the more accurate explicit solvent treatment..
+ One major approximation is the neglect of hydration asymmetry (CHA) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mukhopadhyayChargeHydrationAsymmetry2012"
+literal "false"
+
+\end_inset
+
+ which contributed towards solvation free energy 
 \begin_inset Formula $\Delta G_{solv}$
 \end_inset
 
  on the sign of the charges of the solute.
- 
 \end_layout
 
 \begin_layout Standard
+From entire host guest dataset (figure 4.2a) using 
+\begin_inset Formula $GB^{OBC}$
+\end_inset
 
-\change_inserted -1463621830 1680464677
-From entire host guest dataset (figure 4.2a) using GB-OBC[cite] model we
- clearly see a bias for all charge guest ligands.
+] model we clearly see a bias for all charge guest ligands.
  In figure 4.2a the absolute binding estimates for positively charge guests
  being overestimates and negatively charge guests are being underestimated.
  The guest molecules having the dominate effect in binding where the host
@@ -9615,15 +8474,55 @@ From entire host guest dataset (figure 4.2a) using GB-OBC[cite] model we
  system.
  This correction is suggestive that the lack of charge hydration asymmetry
  in GB is the issue.
- 
 \end_layout
 
 \begin_layout Standard
+Within AMBER contains four variants of GB models which are 
+\begin_inset Formula $GB^{HCT}$
+\end_inset
 
-\change_inserted -1463621830 1680466263
-Within AMBER contains four variants of GB models which are GB-HCT,127−129
- GB-OBC,130,131 GB-neck2,88,132 and GBNSR6.109,133.Except for GBNSR6, all
- GB models differ in how the effective Born radii are computed.
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "hawkinsPairwiseSoluteDescreening1995"
+literal "false"
+
+\end_inset
+
+,
+\begin_inset Formula $GB^{OBC}$
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "onufrievModificationGeneralizedBorn2000"
+literal "false"
+
+\end_inset
+
+,
+\begin_inset Formula $GB-neck2$
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "monganGeneralizedBornModel2007"
+literal "false"
+
+\end_inset
+
+ and GBNSR6.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "aguilarEfficientComputationTotal2012"
+literal "false"
+
+\end_inset
+
+.Except for GBNSR6, all GB models differ in how the effective Born radii
+ are computed.
  GBNSR6 (“Numerical Surface R6 GB”) is one of newest additions to AMBER
  suite in which the effect Born radii are computed via the 
 \begin_inset Quotes eld
@@ -9639,25 +8538,52 @@ R6
 \begin_inset Formula $\Delta G_{solv}$
 \end_inset
 
-[cite all papaer] are good agreement with numerical PB and explicit models
- such as TIP3P[cite all paper].
+e good agreement with numerical PB and explicit models such as TIP3P
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mukhopadhyayChargeHydrationAsymmetry2012,izadiAccuracyComparisonGeneralized2018,izadiProteinLigandElectrostatic2015"
+literal "false"
+
+\end_inset
+
+.
  However unlike the other GB variants models, GBNSR6 can not yet be used
  in dynamics.
- Therefore a tranferable correction towards our results will need a more
+ Therefore a transferable correction towards our results will need a more
  accurate solvation model that could account for CHA.
- 
 \end_layout
 
 \begin_layout Section
+Automation Workflow Scalability
+\end_layout
 
-\change_inserted -1463621830 1680482919
-Automation Workflow Scalability 
+\begin_layout Standard
+Performing alchemical 
+\change_deleted -1463621830 1680536143
+absolutet
+\change_inserted -1463621830 1680648303
+
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1463621830 1680483143
-Performing alchemical absolute 
+\change_inserted -1463621830 1680648306
+\begin_inset Formula 
+\[
+Å
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+
+\change_inserted -1463621830 1680537003
+Conclusion 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
