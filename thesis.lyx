@@ -3615,6 +3615,7 @@ Simulation details
 \end_layout
 
 \begin_layout Itemize
+<<<<<<< HEAD
 All production simulations were performed on AMBER21 [cite] molecular dynamics
  simulation software.
 
@@ -3634,6 +3635,60 @@ Hydrogen mass repartition scheme was used for every system which increased
  bonded heavy atoms.
 
 \change_deleted -1463621830 1680718590
+=======
+All production simulations 
+\change_inserted -1046193749 1680716874
+were run by our Python script 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680716820
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISDDM.py
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ (see 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Implementation-Details"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for implementation details)
+\change_deleted -1046193749 1680716748
+were performed
+\change_inserted -1046193749 1680716825
+using
+\change_deleted -1046193749 1680716829
+ on
+\change_unchanged
+ AMBER
+\change_inserted -1046193749 1680716812
+ 
+\change_unchanged
+21 [cite] molecular dynamics simulation software.
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
  
 \change_unchanged
 
@@ -3641,8 +3696,146 @@ Hydrogen mass repartition scheme was used for every system which increased
 
 \begin_deeper
 \begin_layout Itemize
-This result in slowing down the highest frequency of hydrogen covalent bonds
- and increasing the time by a factor of 2
+
+\change_inserted -1046193749 1680715292
+For each system, the bound end-state was simulated first to provide a reference
+ structure for restraints.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680715313
+The unbound end-state and 
+\change_deleted -1046193749 1680715317
+Each
+\change_inserted -1046193749 1680715322
+all intermediate
+\change_unchanged
+ 
+\change_deleted -1046193749 1680715025
+window
+\change_inserted -1046193749 1680715324
+states
+\change_unchanged
+ w
+\change_inserted -1046193749 1680715330
+ere
+\change_deleted -1046193749 1680715329
+as
+\change_unchanged
+ 
+\change_inserted -1046193749 1680715338
+then
+\change_deleted -1046193749 1680715340
+for each system was
+\change_unchanged
+ simulated independently.
+
+\change_inserted -1046193749 1680715291
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680715098
+TL I used 'state' because you haven't really defined 'window' yet.
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680715376
+TL I rephrased for what I think you meant.
+ You may want to change it more.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680715398
+All systems used h
+\change_deleted -1046193749 1680715397
+H
+\change_unchanged
+ydrogen mass repartition
+\change_inserted -1046193749 1680715402
+ing
+\change_deleted -1046193749 1680715415
+ scheme was used for every system
+\change_inserted -1046193749 1680715415
+,
+\change_unchanged
+ 
+\change_inserted -1046193749 1680715449
+in 
+\change_unchanged
+which 
+\change_deleted -1046193749 1680715490
+increased the
+\change_unchanged
+ mass of hydrogen
+\change_inserted -1046193749 1680715465
+ atoms are increased
+\change_unchanged
+ by a factory of 4
+\change_deleted -1046193749 1680715440
+, while 
+\change_inserted -1046193749 1680715514
+ and the 
+\change_deleted -1046193749 1680715523
+decreasing
+\change_unchanged
+ mass
+\change_deleted -1046193749 1680715519
+ed
+\change_unchanged
+ of the bonded heavy atoms
+\change_inserted -1046193749 1680715546
+ is decreased by an equivalent amount
+\change_unchanged
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This
+\change_inserted -1046193749 1680715558
+ has be shown
+\change_unchanged
+ 
+\change_deleted -1046193749 1680715562
+result in
+\change_inserted -1046193749 1680715562
+to
+\change_unchanged
+ slow
+\change_deleted -1046193749 1680715564
+ing
+\change_unchanged
+ 
+\change_deleted -1046193749 1680715593
+down
+\change_unchanged
+ the highest frequency of hydrogen covalent bonds and
+\change_inserted -1046193749 1680715610
+ and allow 
+\change_deleted -1046193749 1680715621
+ increasing the time by a factor of 2
+\change_inserted -1046193749 1680715641
+a time-step size of 4 fs
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "hopkinsLongTimeStepMolecularDynamics2015"
@@ -3653,7 +3846,10 @@ literal "false"
 ,
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680715650
 Therefore all the MD simulations specified a tilmestep at 
 \begin_inset Formula $dt=0.004$
 \end_inset
@@ -3662,6 +3858,8 @@ Therefore all the MD simulations specified a tilmestep at
 \begin_inset Formula $\beta$
 \end_inset
 
+
+\change_inserted -1046193749 1680716725
 
 \end_layout
 
@@ -3678,7 +3876,25 @@ End-state Simulations
 \end_layout
 
 \begin_layout Itemize
-The endstate 
+
+\change_deleted -1046193749 1680715668
+The e
+\change_inserted -1046193749 1680715668
+E
+\change_unchanged
+nd
+\change_inserted -1046193749 1680715657
+-
+\change_unchanged
+state
+\change_inserted -1046193749 1680715655
+s
+\change_unchanged
+ 
+\change_inserted -1046193749 1680715685
+simulations for 
+\change_unchanged
+
 \begin_inset Formula $1\lambda$
 \end_inset
 
@@ -3686,15 +3902,70 @@ The endstate
 \begin_inset Formula $8\lambda$
 \end_inset
 
- were performed using replica exchange molecular dynamics simulation (REMD).
+ 
+\change_deleted -1046193749 1680715688
+were
+\change_inserted -1046193749 1680715688
+used
+\change_deleted -1046193749 1680715691
+ performed using
+\change_unchanged
+ replica exchange molecular dynamics simulation (REMD).
+\change_inserted -1046193749 1680715699
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680715986
+TL cite
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680718183
+TL have you defined the '
+\begin_inset Formula $1\lambda$
+\end_inset
+
+' notations? Why do you need the 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ symbol? You seem to be inconsistent in using it or I don't understand what
+ it means.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
+<<<<<<< HEAD
 The target temperature of 298K and ionic concentration was set to 0.3M was
  set of all host guest systems.
 
 \change_deleted -1463621830 1680718590
+=======
+The target temperature of 298K and ionic concentration was set to 0.3
+\change_inserted -1046193749 1680715706
+ 
+\change_unchanged
+M 
+\change_deleted -1046193749 1680715719
+was set of
+\change_inserted -1046193749 1680715720
+for
+\change_unchanged
+ all host guest systems.
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
  
 \change_unchanged
 
@@ -3702,8 +3973,11 @@ The target temperature of 298K and ionic concentration was set to 0.3M was
 
 \begin_deeper
 \begin_layout Itemize
-REMD begin with a 5000 step minimization to relax system from initial structures
- in states 
+
+\change_deleted -1046193749 1680715937
+REMD 
+\change_inserted -1046193749 1680715963
+, we prepared the initial structures of states 
 \begin_inset Formula $1\lambda$
 \end_inset
 
@@ -3711,32 +3985,219 @@ REMD begin with a 5000 step minimization to relax system from initial structures
 \begin_inset Formula $8\lambda$
 \end_inset
 
+<<<<<<< HEAD
 .
 
 \change_deleted -1463621830 1680718590
  
+=======
+ for REMD simulation 
+\change_deleted -1046193749 1680715771
+begin with
+\change_unchanged
+ 
+\change_inserted -1046193749 1680716050
+with 
+\change_deleted -1046193749 1680715790
+a
+\change_unchanged
+ 5000 step
+\change_inserted -1046193749 1680715961
+s
+\change_unchanged
+ 
+\change_inserted -1046193749 1680715961
+of energy 
+\change_unchanged
+minimization 
+\change_inserted -1046193749 1680716066
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680716063
+TL what method?
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
 
-\begin_layout Itemize
-Minimization was completed using 
-\begin_inset Formula $sander$
 \end_inset
 
+ 
+\change_deleted -1046193749 1680716087
+ 
+\change_unchanged
+using 
+\change_deleted -1046193749 1680716251
+
+\begin_inset Formula $ $
+\end_inset
+
+
+\change_inserted -1046193749 1680716254
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680716255
+sander
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
  or 
-\begin_inset Formula $sander.MPI$
+\change_deleted -1046193749 1680716242
+
+\begin_inset Formula $ $
 \end_inset
 
- module of AMBER21.
+
+\change_inserted -1046193749 1680716245
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680716245
+sander.MPI
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ module of AMBER
+\change_inserted -1046193749 1680716093
+ 
+\change_unchanged
+21.
+
+\change_inserted -1046193749 1680716095
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680716098
+TL cite
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
+<<<<<<< HEAD
 Once obtained a well minimized system, we constructed replicas for REMD
  simulation.
 
 \change_deleted -1463621830 1680718590
+=======
+
+\change_deleted -1046193749 1680716116
+Once obtained a well minimized system, w
+\change_inserted -1046193749 1680716203
+From these starting structures, w
+\change_unchanged
+e 
+\change_inserted -1046193749 1680716455
+ran REMD using 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680716271
+sander.MPI
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
+\series default
+with eight temperature copies distributed from 298K to 500K for 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+2,500,000
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ exchange attempts (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680716287
+numexchg=2500000
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+) with exchanges attempted every step (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680716456
+nstlim=1
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+)
+\change_deleted -1046193749 1680716212
+constructed replicas for REMD simulation.
+
+\change_unchanged
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
  
 \change_unchanged
 
@@ -3744,11 +4205,17 @@ Once obtained a well minimized system, we constructed replicas for REMD
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680716466
 In this study we generated 8 temperature copies with a distribution ranging
  from 298K to 500K.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680716468
 Running REMD was performed using 
 \series bold
 
@@ -3765,32 +4232,129 @@ with
 \begin_inset Formula $nstlim=1$
 \end_inset
 
+
+\change_unchanged
 .
 \end_layout
 
 \begin_layout Itemize
+<<<<<<< HEAD
 For all host-guest bound endstate simulations a center-of-mass flat bottom
  restraint potential was used.
 
 \change_deleted -1463621830 1680718590
  
+=======
+For all host-guest bound end
+\change_inserted -1046193749 1680716475
+-
+\change_unchanged
+state simulations
+\change_inserted -1046193749 1680716477
+,
+\change_unchanged
+ a center-of-mass flat bottom restraint potential was used.
+ 
+\change_inserted -1046193749 1680716498
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680716514
+TL was this not used for all bound-state simulations?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Extraction of target temperature(298K) was done using 
+
+\change_inserted -1046193749 1680716549
+Coordinate trajectories 
+\change_deleted -1046193749 1680716553
+Extraction of
+\change_inserted -1046193749 1680716554
+at the
+\change_unchanged
+ target temperature
+\change_inserted -1046193749 1680716559
+ of 
+\change_deleted -1046193749 1680716558
+(
+\change_unchanged
+298
+\change_inserted -1046193749 1680716561
+ 
+\change_unchanged
+K
+\change_deleted -1046193749 1680716562
+)
+\change_unchanged
+ w
+\change_inserted -1046193749 1680716570
+ere
+\change_deleted -1046193749 1680716569
+as
+\change_unchanged
+ 
+\change_deleted -1046193749 1680716576
+done using
+\change_inserted -1046193749 1680716579
+extracted by
+\change_unchanged
+ 
+\change_deleted -1046193749 1680716585
+
 \series bold
 
-\begin_inset Formula $cpptraj$
+\begin_inset Formula $ $
 \end_inset
 
 
+\change_inserted -1046193749 1680716587
+
 \series default
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680716589
+nstlim=1.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
  [cite].
+<<<<<<< HEAD
 
 \change_deleted -1463621830 1680718590
+=======
+\change_inserted -1046193749 1680716596
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680716621
+Number of frames saved or the save frequency
+\change_deleted -1046193749 1680716596
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
  
 \change_unchanged
 
@@ -3806,22 +4370,87 @@ Intermediate Simulations
 \end_layout
 
 \begin_layout Itemize
-For states 
+
+\change_deleted -1046193749 1680716670
+For
+\change_inserted -1046193749 1680716675
+All simulates of
+\change_unchanged
+ states 
 \begin_inset Formula $2\lambda-7\lambda$
 \end_inset
 
+
+\change_deleted -1046193749 1680717119
  restraints were applied.
 
 \change_deleted -1463621830 1680718590
  
+<<<<<<< HEAD
+=======
+\change_inserted -1046193749 1680717163
+used the last frame of of REMD simulations in state 
+\begin_inset Formula $8\lambda$
+\end_inset
+
+ for initial structures.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680717035
+TL maybe cite Barton's thesis here
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Both the orientational and conformations restraints were constructed using
- the last frame of complex configuration from REMD simulation in state 
+
+\change_inserted -1046193749 1680717355
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680717230
+ISDDM.py
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ constructed b
+\change_deleted -1046193749 1680717355
+B
+\change_unchanged
+oth the orientational and conformation
+\change_inserted -1046193749 1680717362
+al
+\change_deleted -1046193749 1680717362
+s
+\change_unchanged
+ restraints 
+\change_deleted -1046193749 1680717367
+were
+\change_unchanged
+ 
+\change_deleted -1046193749 1680716979
+constructed using t
+\change_inserted -1046193749 1680717382
+t
+\change_unchanged
+he last frame of complex configuration from REMD simulation in state 
 \begin_inset Formula $8\lambda$
 \end_inset
 
@@ -3833,11 +4462,67 @@ The last frame of state
 \begin_inset Formula $8\lambda$
 \end_inset
 
- were then split into ligand and host system using 
+ w
+\change_inserted -1046193749 1680717399
+as
+\change_deleted -1046193749 1680717399
+ere
+\change_unchanged
+ 
+\change_deleted -1046193749 1680717403
+then 
+\change_unchanged
+split into 
+\change_inserted -1046193749 1680717415
+the unbound 
+\change_unchanged
+ligand and host system
+\change_inserted -1046193749 1680717419
+s
+\change_unchanged
+ using 
+\change_inserted -1046193749 1680717430
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680717432
+strip
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1680717428
+
 \begin_inset Formula $strip$
 \end_inset
 
+
+\change_unchanged
  command from 
+\change_inserted -1046193749 1680717439
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680717442
+cpptraj
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1680717445
+
 \begin_inset Formula $cpptraj$
 \end_inset
 
@@ -3846,15 +4531,45 @@ The last frame of state
 \end_inset
 
  21[cite].
+\change_inserted -1046193749 1680718332
+.
 \end_layout
 
 \begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680718339
+State 2-3
+\change_unchanged
+
+\end_layout
+
 \begin_layout Itemize
 In states 
 \begin_inset Formula $3\lambda-7\lambda$
 \end_inset
 
- gbsa was set to 0 and 
+ 
+\change_deleted -1046193749 1680717463
+gbsa
+\change_inserted -1046193749 1680717463
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680717463
+gbsa
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ was set to 0 and 
 \begin_inset Formula $igb=6$
 \end_inset
 
@@ -3867,13 +4582,61 @@ In states
 \end_layout
 
 \begin_layout Itemize
-In state 4 the ligand charges were removed using 
-\begin_inset Formula $parmed.tools.action.charge$
+In state 4 the ligand charges were 
+\change_deleted -1046193749 1680717510
+removed using
+\change_inserted -1046193749 1680717532
+set to 0 by the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680717530
+parmed
+\change_unchanged
+
+\end_layout
+
 \end_inset
 
+<<<<<<< HEAD
  setting the ligand net charge to 0.
 
 \change_deleted -1463621830 1680718590
+=======
+ function
+\change_unchanged
+ 
+\change_deleted -1046193749 1680717477
+
+\begin_inset Formula $ $
+\end_inset
+
+
+\change_unchanged
+ 
+\change_inserted -1046193749 1680717486
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680717481
+parmed.tools.action.charge
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1680717538
+setting the ligand net charge to 0
+\change_unchanged
+.
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
  
 \change_unchanged
 
@@ -3901,33 +4664,119 @@ and the difference of free energy from state 5 to 6 is 0.
 \end_deeper
 \end_deeper
 \begin_layout Itemize
-State 5 is sampled with the charges for the ligand removed using
+State 
+\change_inserted -1046193749 1680717600
+6
+\change_deleted -1046193749 1680717600
+5
+\change_unchanged
+ is sampled with 
+\change_deleted -1046193749 1680717669
+the 
+\change_inserted -1046193749 1680717671
+ligand 
+\change_unchanged
+charges 
+\change_deleted -1046193749 1680717682
+for the ligand removed using
 \begin_inset Formula $parmed.tools.actions.change$
 \end_inset
 
- to set charges on the ligand to 0.
+ to
+\change_unchanged
+ set 
+\change_deleted -1046193749 1680717687
+charges on the ligand
+\change_unchanged
+ to 0
+\change_deleted -1046193749 1680717693
+.
  State
+\change_inserted -1046193749 1680717694
+ and 
+\change_deleted -1046193749 1680717705
+ 
+\change_unchanged
+Lennard Jones interaction
+\change_inserted -1046193749 1680717708
+s
+\change_unchanged
+ between the ligand and host system 
+\change_inserted -1046193749 1680717720
+removed 
+\change_unchanged
+via
+\change_inserted -1046193749 1680717737
+ the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680717742
+add_exclusions
+\change_unchanged
+
 \end_layout
 
-\begin_layout Itemize
-State 6 we turn off the Lennard Jones interaction between the ligand and
- host system via 
+\end_inset
+
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1680717733
+
 \series bold
 
 \begin_inset Formula $add\_Exclusions$
 \end_inset
 
+
+\change_unchanged
  
+\change_deleted -1046193749 1680717753
+
 \series default
-option in 
+option
+\change_inserted -1046193749 1680717753
+function
+\change_unchanged
+ in
+\change_inserted -1046193749 1680717778
+ 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680717784
+parmed.tools.action.charge
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1680717774
+
 \series bold
 
-\begin_inset Formula $parmed$
+\begin_inset Formula $ $
 \end_inset
 
  
 \series default
-package in 
+package
+\change_inserted -1046193749 1680717763
+.
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1680717762
+in 
 \begin_inset Formula $AMBERtools21$
 \end_inset
 
@@ -3941,6 +4790,8 @@ package in
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680717815
 The use of orientational restraints prevents the ligand from drifting away
  from the host and which 
 \series bold
@@ -3956,18 +4807,100 @@ prevents
 
 \end_deeper
 \begin_layout Itemize
+<<<<<<< HEAD
 State 6 to 7 is where we turn back all interactions of system by first turn
  back on Lennard Jones potential between the ligand and host, following
  a scaling of the GB dielectric constant.
 
 \change_deleted -1463621830 1680718590
  
+=======
+
+\change_deleted -1046193749 1680717823
+S
+\change_inserted -1046193749 1680717876
+S
+\change_unchanged
+tate 
+\change_deleted -1046193749 1680717833
+6 to
+\change_unchanged
+ 7 
+\change_inserted -1046193749 1680717898
+consisted of several 
+\change_deleted -1046193749 1680717948
+is where we
+\change_inserted -1046193749 1680717959
+intermediate states, in which
+\change_unchanged
+ 
+\change_deleted -1046193749 1680717982
+turn back all interactions of system by first turn back on
+\change_unchanged
+ 
+\change_inserted -1046193749 1680717987
+the 
+\change_unchanged
+Lennard
+\change_inserted -1046193749 1680717989
+-
+\change_deleted -1046193749 1680717988
+ 
+\change_unchanged
+Jones potential between the ligand and host
+\change_inserted -1046193749 1680718015
+ was reintroduced in a single step
+\change_unchanged
+, follow
+\change_inserted -1046193749 1680718021
+ed
+\change_deleted -1046193749 1680718021
+ing
+\change_unchanged
+ 
+\change_inserted -1046193749 1680718024
+by 
+\change_deleted -1046193749 1680718027
+a
+\change_unchanged
+ 
+\change_deleted -1046193749 1680718040
+scaling
+\change_inserted -1046193749 1680718044
+increaseing the 
+\change_deleted -1046193749 1680718046
+ of the
+\change_unchanged
+ GB dielectric constant
+\change_inserted -1046193749 1680718061
+ in steps of ____, and then
+\change_deleted -1046193749 1680718077
+.
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1680718092
+ scaling the
+\change_inserted -1046193749 1680718101
+turning on the
+\change_unchanged
+ ligand charges 
+\change_deleted -1046193749 1680718109
+from 0% to
+\change_inserted -1046193749 1680718109
+at
+\change_unchanged
+ 50% and then 100% (fully charge).
+
+\change_deleted -1046193749 1680718070
+ 
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
+<<<<<<< HEAD
 Then finally scaling the ligand charges from 0% to 50% and then 100% (fully
  charge).
 
@@ -3976,32 +4909,113 @@ Then finally scaling the ligand charges from 0% to 50% and then 100% (fully
 \change_unchanged
 
 \end_layout
+=======
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 
-\end_deeper
-\begin_layout Itemize
-Lastly from state 7 to 8 we slowly decrease the restraint force through
- bisection until the conformational force constant again reaches 
+\change_deleted -1046193749 1680718253
+Lastly from state
+\change_unchanged
+ 
+\change_inserted -1046193749 1680718310
+Between states 
+\change_unchanged
+7 
+\change_inserted -1046193749 1680718312
+and
+\change_deleted -1046193749 1680718312
+to
+\change_unchanged
+ 8
+\change_inserted -1046193749 1680718315
+,
+\change_unchanged
+ we slowly 
+\change_deleted -1046193749 1680718351
+decrease
+\change_inserted -1046193749 1680718352
+removed
+\change_unchanged
+ the restraint force through 
+\change_deleted -1046193749 1680718362
+bisection until the conformational force constant again reaches 
 \begin_inset Formula $2^{-8}$
 \end_inset
 
- = 0.00390625 kcal/mol.
+ = 0.00390625 kcal/mol
+\change_inserted -1046193749 1680718378
+a series of intermediate states
+\change_unchanged
+.
 \end_layout
 
 \end_deeper
+<<<<<<< HEAD
 \begin_layout Subsection
 Selection and Implementation of Restraint Forces
 \change_deleted -1463621830 1680718590
  
+=======
+\begin_layout Subsubsection
+Selection and Implementation of Restraint Forces 
+\change_inserted -1046193749 1680718986
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1680718988
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680719035
+TL you need a space between units and they should be in regular text.
+ E.g., 
+\begin_inset Formula $1\,\text{cm/s}$
+\end_inset
+
+ or 
+\begin_inset Formula $\unit[1]{cm/s}$
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
 
 \begin_layout Itemize
-In states 
-\begin_inset Formula $2\lambda-7\lambda$
+
+\change_deleted -1046193749 1680718698
+In states
+\change_inserted -1046193749 1680718770
+Between states 1 and
+\change_unchanged
+ 
+\change_inserted -1046193749 1680718807
+2, conformational restraints were 
+\change_deleted -1046193749 1680718809
+
+\begin_inset Formula $ $
 \end_inset
 
- we applied conformational and orientational restraints in order to enhance
+ we
+\change_unchanged
+ 
+\change_inserted -1046193749 1680718920
+were increased over a series of intermediate states and then orientational
+ and conformational restraints were removed between states 7 and 8 in the
+ same fashion.
+\change_deleted -1046193749 1680718921
+applied conformational and orientational restraints in order to enhance
  convergence in our binding estimate.
 
 \change_deleted -1463621830 1680718590
@@ -4012,6 +5026,8 @@ In states
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680718949
 A stratification strategy was applied in 2λ were a series of conformational
  restraints were bisected until a sufficient overlap was achieved between
  state 2 and state 3.
@@ -4023,21 +5039,69 @@ A stratification strategy was applied in 2λ were a series of conformational
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
-Through benchmark testing the lowest energy conformational restraint force
- for the first 
+Through benchmark testing
+\change_inserted -1046193749 1680718955
+,
+\change_unchanged
+ the lowest energy conformational restraint force
+\change_inserted -1046193749 1680719215
+ constant
+\change_unchanged
+ 
+\change_deleted -1046193749 1680718964
+for the first 
 \begin_inset Formula $\lambda$
 \end_inset
 
- window was determine to be 
+ window 
+\change_unchanged
+was determine to be 
 \begin_inset Formula $2^{-8}kcal/mol/Å$
 \end_inset
 
- and the maximum restraint force to be 
+
+\change_inserted -1046193749 1680719053
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680719053
+TL fix
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ and the maximum 
+\change_deleted -1046193749 1680719220
+restraint force 
+\change_unchanged
+to be 
 \begin_inset Formula $2^{4}kcal/mol/\mathring{A}$
 \end_inset
 
+
+\change_inserted -1046193749 1680719047
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680719048
+TL fix
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 .
 
 \change_deleted -1463621830 1680718590
@@ -4047,14 +5111,64 @@ Through benchmark testing the lowest energy conformational restraint force
 \end_layout
 
 \begin_layout Itemize
-From previous results a minimum orientational force constant of 
+From previous results 
+\change_inserted -1046193749 1680718973
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680718529
+TL cite barton's thesis
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+, 
+\change_unchanged
+a minimum orientational force constant of 
 \begin_inset Formula $2^{-4}kcal/mol/Å$
 \end_inset
 
+
+\change_inserted -1046193749 1680719062
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680719062
+TL fix
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
  and maximum 
 \begin_inset Formula $2^{8}kcal/mol/Å$
 \end_inset
 
+
+\change_inserted -1046193749 1680719057
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680719057
+TL fix
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
  gave reduced an accumulated error for highly charge guest molecules.
 
 \change_deleted -1463621830 1680718590
@@ -4063,8 +5177,17 @@ From previous results a minimum orientational force constant of
 
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-A series of 32 lambda windows 
+
+\change_inserted -1046193749 1680719139
+In both cases, a
+\change_deleted -1046193749 1680719139
+A
+\change_unchanged
+ series of 32 lambda windows 
+\change_deleted -1046193749 1680719153
+
 \begin_inset Formula $2^{-8}$
 \end_inset
 
@@ -4072,11 +5195,31 @@ A series of 32 lambda windows
 \begin_inset Formula $2^{4}$
 \end_inset
 
- were generated using 
+
+\change_unchanged
+ were generated 
+\change_deleted -1046193749 1680719171
+using 
 \begin_inset Formula $Numpy.logspace$
 \end_inset
 
- which return a numbers spaced evenly space numbers on 
+ which return a numbers
+\change_inserted -1046193749 1680719206
+ with rotational and orientational force
+\change_unchanged
+ spaced evenly 
+\change_deleted -1046193749 1680719237
+space numbers
+\change_unchanged
+ on
+\change_inserted -1046193749 1680719259
+ 
+\begin_inset Formula $\log_{2}$
+\end_inset
+
+
+\change_deleted -1046193749 1680719245
+ 
 \series bold
 
 \begin_inset Formula $log_{2}$
@@ -4084,9 +5227,17 @@ A series of 32 lambda windows
 
 
 \series default
+<<<<<<< HEAD
  scale.
 
 \change_deleted -1463621830 1680718590
+=======
+ 
+\change_inserted -1046193749 1680719264
+-
+\change_unchanged
+scale.
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
  
 \change_unchanged
 
@@ -4094,31 +5245,76 @@ A series of 32 lambda windows
 
 \end_deeper
 \end_deeper
+<<<<<<< HEAD
 \begin_layout Subsubsection
 Conformational Restraints
 \change_deleted -1463621830 1680718590
  
+=======
+\begin_layout Paragraph
+
+\change_deleted -1046193749 1680719698
+Conformational Restraints 
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
 
 \begin_layout Itemize
+<<<<<<< HEAD
 A harmonic distance restrained was to every atom and its neighbors within
  6 Å.
 
 \change_deleted -1463621830 1680718590
+=======
+
+\change_inserted -1046193749 1680719611
+Host and guest molecule conformations were restrained by applying a
+\change_deleted -1046193749 1680719611
+A
+\change_unchanged
+ harmonic distance restrain
+\change_inserted -1046193749 1680719622
+t
+\change_deleted -1046193749 1680719620
+ed
+\change_unchanged
+ 
+\change_deleted -1046193749 1680719627
+was 
+\change_inserted -1046193749 1680719572
+ between 
+\change_deleted -1046193749 1680719573
+to
+\change_unchanged
+ every atom and 
+\change_deleted -1046193749 1680719644
+its
+\change_inserted -1046193749 1680719645
+each
+\change_unchanged
+ neighbor
+\change_deleted -1046193749 1680719647
+s
+\change_unchanged
+ within 6 Å.
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
  
 \change_unchanged
 
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680719684
 The target distance were taken from last frame of REMD state 8 (section
  3.3.1)
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680719684
 Application of conformational restraints makes the molecule more rigid and
  retains a single binding mode taken from state 8.
 
@@ -4133,15 +5329,24 @@ Application of conformational restraints makes the molecule more rigid and
 The conformational restraints were prepared using an in-house code.
 \end_layout
 
+<<<<<<< HEAD
 \begin_layout Subsubsection
 Orientational Restraints
 \change_deleted -1463621830 1680718590
  
+=======
+\begin_layout Paragraph
+
+\change_deleted -1046193749 1680719702
+Orientational Restraints 
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680719707
 In order to facilitate convergence orientational restraints have been used
  to restrict the ligand's orientation relative to the host.
 
@@ -4152,16 +5357,93 @@ In order to facilitate convergence orientational restraints have been used
 \end_layout
 
 \begin_layout Itemize
-Here we construct orientational suggested by Boresch[cite] which requires
- an distance restraint(
+
+\change_inserted -1046193749 1680719737
+To maintain the guest molecule in the correct binding mode, 
+\change_deleted -1046193749 1680719738
+Here
+\change_unchanged
+ 
+\change_deleted -1046193749 1680719796
+we
+\change_inserted -1046193749 1680719796
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680719803
+ISDDM.py
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ construct
+\change_inserted -1046193749 1680719813
+ed
+\change_unchanged
+ orientational 
+\change_inserted -1046193749 1680719751
+restraints 
+\change_unchanged
+suggested by Boresch[cite]
+\change_inserted -1046193749 1680719759
+,
+\change_unchanged
+ which requires an distance restraint
+\change_inserted -1046193749 1680719762
+ 
+\change_deleted -1046193749 1680719762
+(
+\change_unchanged
+
 \begin_inset Formula $r_{aA}$
 \end_inset
 
-), two angles (
-\begin_inset Formula $\theta_{A}\theta_{a}$
+
+\change_inserted -1046193749 1680719764
+ 
+\change_deleted -1046193749 1680719764
+)
+\change_unchanged
+, two angles
+\change_inserted -1046193749 1680719846
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1680719832
+(
+\change_unchanged
+
+\begin_inset Formula $\theta_{A}$
 \end_inset
 
-) and three torsions (
+
+\change_inserted -1046193749 1680719841
+ and 
+\begin_inset Formula $\theta_{a}$
+\end_inset
+
+
+\change_deleted -1046193749 1680719837
+)
+\change_inserted -1046193749 1680719844
+,
+\change_unchanged
+ and three torsions
+\change_inserted -1046193749 1680719851
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1680719850
+(
+\change_unchanged
+
 \family roman
 \series medium
 \shape up
@@ -4175,9 +5457,21 @@ Here we construct orientational suggested by Boresch[cite] which requires
 \noun off
 \color none
 
-\begin_inset Formula $ϕ_{AB},ϕ_{aA}ϕ_{ba}$
+\begin_inset Formula $ϕ_{AB}$
 \end_inset
 
+
+\change_inserted -1046193749 1680719875
+, 
+\begin_inset Formula $ϕ_{aA}$
+\end_inset
+
+ and 
+\begin_inset Formula $ϕ_{ba}$
+\end_inset
+
+
+\change_deleted -1046193749 1680719884
 ) to restrict the ligand relative to the host.
 
 \change_deleted -1463621830 1680718590
@@ -4195,12 +5489,29 @@ Here we construct orientational suggested by Boresch[cite] which requires
 \noun default
 \color inherit
  
+<<<<<<< HEAD
+=======
+\change_inserted -1046193749 1680720068
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:orientational-restraints"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680719891
 The selection of these atoms is done autonomously within the 
 \series bold
 
@@ -4219,8 +5530,31 @@ tool and will be briefly descriped here.
 
 \begin_deeper
 \begin_layout Itemize
-First the atoms on the ligand and receptor are selected for the distance
- restraints, 
+First the atoms on the ligand
+\change_inserted -1046193749 1680719993
+, 
+\begin_inset Formula $a$
+\end_inset
+
+,
+\change_unchanged
+ and receptor
+\change_inserted -1046193749 1680720002
+, 
+\begin_inset Formula $A$
+\end_inset
+
+,
+\change_unchanged
+ are selected for the distance restraints
+\change_inserted -1046193749 1680720012
+
+\series bold
+ 
+\change_deleted -1046193749 1680720009
+
+\series default
+, 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4245,15 +5579,44 @@ First the atoms on the ligand and receptor are selected for the distance
 \begin_deeper
 \begin_layout Itemize
 Ligand atom 
-\begin_inset Formula $A$
-\end_inset
+\change_inserted -1046193749 1680720110
 
- is the closest heavy-atom to its center of mass (COM), where receptor atom
- 
 \begin_inset Formula $a$
 \end_inset
 
- is shortest distance to that heavy atom to 
+
+\change_deleted -1046193749 1680720108
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\change_unchanged
+ is the closest heavy-atom to 
+\change_inserted -1046193749 1680720134
+the ligand
+\change_deleted -1046193749 1680720129
+its
+\change_unchanged
+ center of mass (COM), where receptor atom 
+\change_inserted -1046193749 1680720116
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\change_deleted -1046193749 1680720115
+
+\begin_inset Formula $a$
+\end_inset
+
+
+\change_unchanged
+ is 
+\change_inserted -1046193749 1680720120
+the 
+\change_unchanged
+shortest distance to that heavy atom to 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4261,15 +5624,75 @@ Ligand atom
 \end_layout
 
 \begin_layout Itemize
-Then the script looks for the best suited heavy atoms 
+Then the script looks for the best suited heavy atoms
+\change_inserted -1046193749 1680720171
+,
+\change_unchanged
+ 
+\change_inserted -1046193749 1680720181
+
+\begin_inset Formula $b$
+\end_inset
+
+ and 
+\series bold
+
+\begin_inset Formula $B$
+\end_inset
+
+
+\series default
+,
+\change_deleted -1046193749 1680720164
+
 \begin_inset Formula $B,A,a,b$
 \end_inset
 
- that will create angles for 
+
+\change_unchanged
+ 
+\change_inserted -1046193749 1680720194
+to
+\change_deleted -1046193749 1680720193
+that will
+\change_unchanged
+ create angles
+\change_deleted -1046193749 1680720189
+ for
+\change_unchanged
+ 
+\change_deleted -1046193749 1680720214
+
 \begin_inset Formula $θ_{A},θ_{a},ϕ_{AB},ϕ_{aA}ϕ_{ba}$
 \end_inset
 
- (figure 2.2) that are between 80 and 100 degrees.
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1680720210
+(figure 2.2) that are
+\change_unchanged
+ 
+\change_inserted -1046193749 1680720249
+
+\begin_inset Formula $θ_{A}$
+\end_inset
+
+, 
+\begin_inset Formula $θ_{a}$
+\end_inset
+
+, 
+\begin_inset Formula $ϕ_{AB}$
+\end_inset
+
+, and 
+\begin_inset Formula $ϕ_{aA}ϕ_{ba}$
+\end_inset
+
+ 
+\change_unchanged
+between 80 and 100 degrees.
 \end_layout
 
 \begin_layout Itemize
@@ -4290,6 +5713,8 @@ Free energy analysis using MBAR
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680720329
 As phase space overlap affects the reliability of the free energy difference
  estimates, many intermediate states are needed in order to bridge and increase
  the overlap between two endstates (figure 2.2).
@@ -4310,12 +5735,43 @@ literal "false"
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
-Calculations of MBAR was done using a python package called 
+
+\change_deleted -1046193749 1680720352
+Calculations of MBAR was done using a
+\change_inserted -1046193749 1680720353
+The
+\change_unchanged
+ 
+\change_inserted -1046193749 1680720354
+P
+\change_deleted -1046193749 1680720354
+p
+\change_unchanged
+ython package 
+\change_deleted -1046193749 1680720361
+called 
 \begin_inset Formula $pymbar$
 \end_inset
 
+
+\change_inserted -1046193749 1680720380
+ pymbar 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680720381
+TL version
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -4325,30 +5781,135 @@ literal "false"
 \end_inset
 
 
+\change_inserted -1046193749 1680720445
+ was used to calculate free energy differences along the states 1-4 and
+ 6-8.
+\change_unchanged
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
+<<<<<<< HEAD
 MBAR requires the potential energies and thermodynamic parameters of each
  trajectory frame from sampling.
 
 \change_deleted -1463621830 1680718590
+=======
+MBAR requires the potential energies and thermodynamic parameters
+\change_inserted -1046193749 1680720462
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680720490
+TL what do you mean by 'thermodynamic parameters'?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ of each 
+\change_inserted -1046193749 1680720773
+coordinate trajectory to be calculate with the potential function of all
+ other states of the same molecule.
+ 
+\change_deleted -1046193749 1680720520
+ frame from sampling
+\change_unchanged
+.
+
+\change_deleted -1046193749 1680720685
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+For example
+\change_inserted -1046193749 1680720781
+,
+\change_unchanged
+ 
+\change_inserted -1046193749 1680720795
+potential energies 
+\change_deleted -1046193749 1680720789
+the 
+\change_inserted -1046193749 1680720803
+for the coordinate 
+\change_unchanged
+trajectory from state 2
+\change_inserted -1046193749 1680720819
+ need to be caclulated
+\change_deleted -1046193749 1680720824
+ would be post processed in the potential energy function in 
+\change_inserted -1046193749 1680720826
+for 
+\change_unchanged
+all other states 
+\change_inserted -1046193749 1680720838
+between 
+\change_unchanged
+1
+\change_deleted -1046193749 1680720840
+, 3 and state
+\change_inserted -1046193749 1680720841
+ and
+\change_unchanged
+ 4.
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
  
 \change_unchanged
 
 \end_layout
 
 \begin_layout Itemize
+<<<<<<< HEAD
 For example the trajectory from state 2 would be post processed in the potential
  energy function in all other states 1, 3 and state 4.
 
 \change_deleted -1463621830 1680718590
  
+=======
+
+\change_inserted -1046193749 1680720890
+These potential energies were calculated using 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680720880
+sander
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
 
-\begin_layout Itemize
+\end_inset
+
+ with 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680720887
+imin=5
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1680720865
 The post-processing is done by using 
 \begin_inset Formula $sander$
 \end_inset
@@ -4358,14 +5919,29 @@ The post-processing is done by using
 \end_inset
 
 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
+<<<<<<< HEAD
 The MBAR estimate also return its own uncertainty error estimate in our
  case for ligand, receptor and complex.
 
 \change_deleted -1463621830 1680718590
  
+=======
+The MBAR estimate also return
+\change_inserted -1046193749 1680720900
+s
+\change_unchanged
+ its own uncertainty error estimate
+\change_deleted -1046193749 1680720911
+ in our case for ligand, receptor and complex.
+ 
+\change_inserted -1046193749 1680720911
+.
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
@@ -4377,10 +5953,60 @@ Time Series Analysis
 \end_layout
 
 \begin_layout Itemize
-The time correlations functions of MD simulations incorporate the relaxation
- of fluctuations around equilibrium and if non equilibrated part is not
- removed from the final analysis this will result in an underestimate the
- error
+
+\change_inserted -1046193749 1680730168
+The number of independent samples is in an MD trajectory is limited by
+\change_deleted -1046193749 1680730169
+The
+\change_unchanged
+ time correlations 
+\change_deleted -1046193749 1680730175
+functions
+\change_inserted -1046193749 1680730183
+between frames
+\change_deleted -1046193749 1680730228
+ of MD simulations incorporate
+\change_inserted -1046193749 1680730229
+and
+\change_unchanged
+ the
+\change_inserted -1046193749 1680730236
+ time required to
+\change_unchanged
+ relax
+\change_deleted -1046193749 1680730240
+ation
+\change_unchanged
+ 
+\change_deleted -1046193749 1680730253
+of fluctuations around
+\change_inserted -1046193749 1680730254
+to the
+\change_unchanged
+ equilibrium 
+\change_inserted -1046193749 1680730264
+average.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680730283
+and if
+\change_inserted -1046193749 1680730289
+If this is not accounted for,
+\change_deleted -1046193749 1680730291
+ non equilibrated part is not removed from
+\change_unchanged
+ the final analysis 
+\change_deleted -1046193749 1680730304
+this
+\change_unchanged
+ will 
+\change_deleted -1046193749 1680730309
+result in an
+\change_unchanged
+ underestimate the error
 \begin_inset CommandInset citation
 LatexCommand citep
 key "klimovichGuidelinesAnalysisFree2015"
@@ -4396,8 +6022,9 @@ literal "false"
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680730375
 Therefore we ran post-process analysis on the relevant energies using AMBER
  engine 
 \begin_inset Formula $sander$
@@ -4413,10 +6040,44 @@ Therefore we ran post-process analysis on the relevant energies using AMBER
 
 \begin_deeper
 \begin_layout Itemize
-All the uncorrelated frames was then remove using the 
+
+\change_inserted -1046193749 1680730455
+To limit our analysis to independent samples, we used the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680730423
+timeseries
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ module of PyMBAR to remove
+\change_deleted -1046193749 1680730458
+All the
+\change_unchanged
+ 
+\change_deleted -1046193749 1680730460
+un
+\change_unchanged
+correlated frames 
+\change_inserted -1046193749 1680730512
+and the relaxation period of the energy trajectories 
+\change_deleted -1046193749 1680730498
+was then remove using the
+\change_unchanged
+ 
+\change_deleted -1046193749 1680730506
+
 \begin_inset Formula $timeseries$
 \end_inset
 
+
+\change_unchanged
 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -4425,23 +6086,88 @@ literal "false"
 
 \end_inset
 
- module of 
+ 
+\change_deleted -1046193749 1680730504
+module of 
 \begin_inset Formula $pymbar$
 \end_inset
 
 .
+\change_inserted -1046193749 1680730513
+.
+\change_unchanged
+
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-The final uncorrelated equilibrated data is then ran through 
+
+\change_inserted -1046193749 1680730584
+These independent samples were
+\change_deleted -1046193749 1680730590
+The final uncorrelated equilibrated data is then
+\change_inserted -1046193749 1680730596
+ then
+\change_unchanged
+ r
+\change_inserted -1046193749 1680730598
+u
+\change_deleted -1046193749 1680730597
+a
+\change_unchanged
+n through
+\change_inserted -1046193749 1680730612
+ the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680730613
+mbar
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1680730607
+
 \begin_inset Formula $.mbar()$
 \end_inset
 
+<<<<<<< HEAD
  function to calculate the final free energy change for all the thermodynamic
  steps shown in figure 1.
 
 \change_deleted -1463621830 1680718590
+=======
+ 
+\change_unchanged
+function to calculate the final free energy change for all the thermodynamic
+ steps shown in figure 1
+\change_inserted -1046193749 1680730528
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680730529
+TL fix
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
  
 \change_unchanged
 
@@ -4449,14 +6175,41 @@ The final uncorrelated equilibrated data is then ran through
 
 \end_deeper
 \begin_layout Section
+<<<<<<< HEAD
 Overlap Matrix Exploring the Degree of Space Phase Overlap
 \change_deleted -1463621830 1680718590
  
+=======
+Overlap Matrix Exploring the Degree of Space Phase Overlap 
+\change_inserted -1046193749 1680730924
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1680730925
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680730937
+TL This should be in Results
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680730857
 Phase space overlap when constructing alchemical intermediate windows is
  an important property that should be considered for reliable free energy
  estimates.
@@ -4467,10 +6220,36 @@ Phase space overlap when constructing alchemical intermediate windows is
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
-When using any perturb approach such as FEP or MBAR having very poor overlap
- between states can result in an inaccurate free energy estimate
+When using any perturb
+\change_inserted -1046193749 1680730802
+ation
+\change_unchanged
+ approach
+\change_inserted -1046193749 1680730806
+,
+\change_unchanged
+ such as FEP or MBAR
+\change_inserted -1046193749 1680730809
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1680730812
+having very
+\change_inserted -1046193749 1680730812
+a
+\change_unchanged
+ poor 
+\change_inserted -1046193749 1680730832
+phase-space 
+\change_unchanged
+overlap
+\change_deleted -1046193749 1680730830
+ 
+\change_inserted -1046193749 1680730827
+ 
+\change_unchanged
+between states can result in an inaccurate free energy estimate
 \begin_inset CommandInset citation
 LatexCommand citep
 key "klimovichGuidelinesAnalysisFree2015"
@@ -4481,10 +6260,31 @@ literal "false"
 .
 \end_layout
 
-\end_deeper
+\begin_deeper
 \begin_layout Itemize
-Therefore when construction our thermodynamic cycle figure 2.1 we created
- an overlap matrix
+
+\change_deleted -1046193749 1680731057
+Therefore when construction our
+\change_inserted -1046193749 1680731103
+To assess the convergence our implementation of our
+\change_unchanged
+ thermodynamic cycle 
+\change_inserted -1046193749 1680731127
+in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:thermodynamic-cycle"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+,
+\change_deleted -1046193749 1680731118
+figure 2.1
+\change_unchanged
+ we created an overlap matrix
 \begin_inset CommandInset citation
 LatexCommand citep
 key "klimovichGuidelinesAnalysisFree2015"
@@ -4492,10 +6292,44 @@ literal "false"
 
 \end_inset
 
+<<<<<<< HEAD
  in order to provide us help in finding the magnitude of the phase space
  overlap in our calculations.
 
 \change_deleted -1463621830 1680718590
+=======
+ 
+\change_deleted -1046193749 1680731139
+in order to provide us help in finding the magnitude of the phase space
+ overlap in our calculations
+\change_unchanged
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+The matrix shows the probability of a sample state 
+\change_deleted -1046193749 1680731148
+i
+\change_inserted -1046193749 1680731148
+
+\begin_inset Formula $i$
+\end_inset
+
+
+\change_unchanged
+ being evaluated in state 
+\change_deleted -1046193749 1680731145
+j
+\change_inserted -1046193749 1680731145
+
+\begin_inset Formula $j$
+\end_inset
+
+
+\change_unchanged
+, providing a degree of overlap between both states.
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
  
 \change_unchanged
 
@@ -4503,6 +6337,7 @@ literal "false"
 
 \begin_deeper
 \begin_layout Itemize
+<<<<<<< HEAD
 The matrix shows the probability of a sample state i being evaluated in
  state j, providing a degree of overlap between both states.
 
@@ -4511,9 +6346,10 @@ The matrix shows the probability of a sample state i being evaluated in
 \change_unchanged
 
 \end_layout
+=======
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 
-\begin_deeper
-\begin_layout Itemize
+\change_deleted -1046193749 1680731215
 A example of an overlap matrix is shown in figure 3.2.
 
 \change_deleted -1463621830 1680718590
@@ -4524,15 +6360,71 @@ A example of an overlap matrix is shown in figure 3.2.
 
 \begin_deeper
 \begin_layout Itemize
-Firstly the overlap matrix should be tridiagonal in which all pairs in the
- main diagonal should have overlap and should not have any non-zero values.
+
+\change_deleted -1046193749 1680731233
+Firstly
+\change_inserted -1046193749 1680731265
+To obtain reliable free energy estimates,
+\change_unchanged
+ the overlap matrix should 
+\change_inserted -1046193749 1680731279
+at least be
+\change_deleted -1046193749 1680731274
+be
+\change_unchanged
+ tridiagonal
+\change_inserted -1046193749 1680731288
+.
+ 
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-A value of 0.03 for the tridiagonal elements have been reported as a minimum
- threshold to yield reliable free energy estimates but this should be taken
- with a grain of salt 
+
+\change_inserted -1046193749 1680731291
+I.e., 
+\change_deleted -1046193749 1680731293
+ in which 
+\change_unchanged
+all 
+\change_inserted -1046193749 1680731423
+
+\begin_inset Formula $\left(i,i+1\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(i-1,i\right)$
+\end_inset
+
+ 
+\change_deleted -1046193749 1680731385
+pairs in the
+\change_inserted -1046193749 1680731387
+elements
+\change_unchanged
+ 
+\change_deleted -1046193749 1680731498
+main diagonal
+\change_unchanged
+ should 
+\change_inserted -1046193749 1680731509
+be greater than
+\change_deleted -1046193749 1680731503
+have overlap and should not have any non-zero values.
+
+\change_inserted -1046193749 1680731512
+ 
+\change_deleted -1046193749 1680731523
+A value of
+\change_unchanged
+ 0.03
+\change_deleted -1046193749 1680731538
+ for the tridiagonal elements have been reported as a minimum threshold
+ to yield reliable free energy estimates
+\change_inserted -1046193749 1680731538
+,
+\change_unchanged
+ but this should be taken with a grain of salt 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "klimovichGuidelinesAnalysisFree2015"
@@ -4542,8 +6434,29 @@ literal "false"
 
 .
 
+<<<<<<< HEAD
 \change_deleted -1463621830 1680718590
  
+=======
+\change_deleted -1046193749 1680731519
+ 
+\change_inserted -1046193749 1680731544
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680731572
+TL why should this be taken with a grain of salt? needs justification
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
@@ -4564,6 +6477,28 @@ showcases all the windows for the WP6-G1 complex where every column in denotes
 
 \change_deleted -1463621830 1680718590
  
+<<<<<<< HEAD
+=======
+\change_inserted -1046193749 1680731775
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680731834
+
+\series bold
+TL either update the figure so that the state is given in the row/column
+ labels, or move this description to the caption.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
@@ -4662,16 +6597,56 @@ Following
 \end_deeper
 \end_deeper
 \begin_layout Itemize
-In 
-\series bold
-figure 3.1a 
-\series default
-looking at 
-\begin_inset Formula $\lambda_{0}$
+
+\change_deleted -1046193749 1680731867
+In
+\change_inserted -1046193749 1680731864
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Overlap-matrix"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
- we see a in the main diagonal square when Lennard-jones interaction are
- removed and if sampling is done in 
+a
+\change_deleted -1046193749 1680731846
+ 
+\series bold
+figure 3.1a 
+\change_inserted -1046193749 1680732139
+
+\series default
+ shows a representative overlap matrix for states 6-8.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680732185
+looking at 
+\change_unchanged
+
+\begin_inset Formula $\left(\lambda_{0},\lambda_{0}\right)$
+\end_inset
+
+
+\change_deleted -1046193749 1680732196
+ 
+\change_inserted -1046193749 1680732194
+,
+\change_deleted -1046193749 1680732193
+we see a in
+\change_unchanged
+ 
+\change_deleted -1046193749 1680732319
+the main diagonal square when Lennard-jones interaction are removed and
+\change_inserted -1046193749 1680732321
+shows that
+\change_unchanged
+ if sampling is done in 
 \begin_inset Formula $\lambda_{0}$
 \end_inset
 
@@ -4679,11 +6654,35 @@ looking at
 \begin_inset Formula $\lambda_{0}$
 \end_inset
 
- is 
+ 
+\change_inserted -1046193749 1680732331
+, there is
+\change_deleted -1046193749 1680732329
+is
+\change_unchanged
+ 
+\change_inserted -1046193749 1680732334
+a 
+\change_unchanged
+
 \begin_inset Formula $0.74$
 \end_inset
 
- meaning 74% of equilibrated configurations are in 
+ 
+\change_inserted -1046193749 1680732340
+overlap.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680732344
+I.e., 
+\change_deleted -1046193749 1680732345
+meaning
+\change_unchanged
+ 74% of equilibrated configurations are in 
 \begin_inset Formula $\lambda_{0}$
 \end_inset
 
@@ -4695,7 +6694,7 @@ looking at
 
 \end_layout
 
-\begin_deeper
+\end_deeper
 \begin_layout Itemize
 The probability of finding a microstate sampled from state 
 \begin_inset Formula $\lambda_{0}$
@@ -4721,22 +6720,68 @@ The probability of finding a microstate sampled from state
 
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
-Then looking at the overlap at 
+
+\change_deleted -1046193749 1680732616
+Then looking at the overlap at
+\change_unchanged
+ 
+\change_inserted -1046193749 1680732622
+Overlap for 
+\change_unchanged
+
 \begin_inset Formula $\lambda_{2}-\lambda_{9}$
 \end_inset
 
- (scale the GB external dielectric and ligand electrostatics) shows well
- behavior and good overlap.
+ 
+\change_inserted -1046193749 1680732573
+in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Overlap-matrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_deleted -1046193749 1680732598
+(scale the GB external dielectric and ligand electrostatics) shows
+\change_unchanged
+ 
+\change_deleted -1046193749 1680732628
+well behavior and good overlap
+\change_inserted -1046193749 1680732636
+ is also sufficient
+\change_unchanged
+.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-The overlap 
+
+\change_inserted -1046193749 1680732671
+In fact, 
+\change_deleted -1046193749 1680732673
+The
+\change_unchanged
+ overlap 
+\change_inserted -1046193749 1680732680
+of states 
+\change_unchanged
+
 \begin_inset Formula $\lambda_{3}$
 \end_inset
 
- to 
+ 
+\change_inserted -1046193749 1680732683
+and
+\change_deleted -1046193749 1680732683
+to
+\change_unchanged
+ 
 \begin_inset Formula $\lambda_{8}$
 \end_inset
 
@@ -4744,30 +6789,110 @@ The overlap
 \begin_inset Formula $0.11$
 \end_inset
 
+<<<<<<< HEAD
  which suggest we scaling of GB external dielectric and electrostatics of
  the ligand may be unnecessary and can done with one intermediate window
  only.
 
 \change_deleted -1463621830 1680718590
  
+=======
+
+\change_inserted -1046193749 1680732690
+,
+\change_unchanged
+ which suggest
+\change_inserted -1046193749 1680732692
+s
+\change_unchanged
+ 
+\change_deleted -1046193749 1680732739
+we scaling of GB external dielectric and electrostatics of the ligand 
+\change_inserted -1046193749 1680732745
+the intermediate windows 
+\change_unchanged
+may be unnecessary
+\change_deleted -1046193749 1680732749
+ and can done with one intermediate window only.
+ 
+\change_inserted -1046193749 1680732749
+.
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
 However 
-\begin_inset Formula $\lambda_{9}-\lambda_{10}$
+\change_inserted -1046193749 1680732807
+states 
+\change_unchanged
+
+\begin_inset Formula $\lambda_{9}$
 \end_inset
 
- show no overlap between the two states and 
-\begin_inset Formula $\lambda_{10}-\lambda_{22}$
+
+\change_inserted -1046193749 1680732812
+ and 
+\begin_inset Formula $\lambda_{10}$
 \end_inset
 
+<<<<<<< HEAD
 show very poor overlap suggesting the additional of intermediate restraints
  are needed to increase the overlap.
 
 \change_deleted -1463621830 1680718590
+=======
+
+\change_unchanged
+ show no overlap
+\change_inserted -1046193749 1680732820
+,
+\change_deleted -1046193749 1680732818
+ between the two states 
+\change_unchanged
+and 
+\change_inserted -1046193749 1680732826
+states 
+\change_unchanged
+
+\begin_inset Formula $\lambda_{9}-\lambda_{15}$
+\end_inset
+
+
+\change_inserted -1046193749 1680732854
+ 
+\change_unchanged
+show 
+\change_deleted -1046193749 1680732857
+very
+\change_unchanged
+ poor overlap 
+\change_inserted -1046193749 1680732873
+(
+\begin_inset Formula $<0.1$
+\end_inset
+
+), 
+\change_unchanged
+suggesting th
+\change_inserted -1046193749 1680732882
+at
+\change_deleted -1046193749 1680732882
+e
+\change_unchanged
+ additional 
+\change_deleted -1046193749 1680732886
+of 
+\change_unchanged
+intermediate 
+\change_deleted -1046193749 1680732892
+restraints are needed to increase the overlap
+\change_inserted -1046193749 1680732897
+ states should be introduced
+\change_unchanged
+.
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
  
 \change_unchanged
 
@@ -4775,14 +6900,64 @@ show very poor overlap suggesting the additional of intermediate restraints
 
 \begin_deeper
 \begin_layout Itemize
-Therefore for our method we increased number of restraint windows to 29
- resulting in a total of 41 windows shown in figure 3.2 b
+
+\change_deleted -1046193749 1680732948
+Therefore
+\change_inserted -1046193749 1680732953
+To ensure
+\change_unchanged
+ 
+\change_inserted -1046193749 1680733059
+sufficient overlap for the full cycle, 
+\change_deleted -1046193749 1680733060
+for our method
+\change_unchanged
+ we increased number of restraint windows to 29 resulting in a total of
+ 41 windows shown in 
+\change_inserted -1046193749 1680733070
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Overlap-matrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_deleted -1046193749 1680733067
+figure 3.2 
+\change_unchanged
+b
+\change_inserted -1046193749 1680733079
+, 
+\change_deleted -1046193749 1680733078
+
 \series bold
  
 \series default
+<<<<<<< HEAD
 and shows good overlap spacing.
 
 \change_deleted -1463621830 1680718590
+=======
+and
+\change_unchanged
+ 
+\change_inserted -1046193749 1680733083
+which 
+\change_unchanged
+shows good 
+\change_inserted -1046193749 1680733095
+phasespace 
+\change_unchanged
+overlap
+\change_deleted -1046193749 1680733089
+ spacing
+\change_unchanged
+.
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
  
 \change_unchanged
 
@@ -4825,18 +7000,38 @@ b
 \series default
 Increaing the number of restraint windows to 29 show good overlap throughout
  all intermidate windows.
+<<<<<<< HEAD
 
 \change_deleted -1463621830 1680718590
  
 \change_unchanged
 
 \end_layout
+=======
+\change_inserted -1046193749 1680731170
 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Overlap-matrix"
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
+
+\end_inset
+
+
+\change_deleted -1046193749 1680731159
+ 
+\change_unchanged
+
+\end_layout
+
+<<<<<<< HEAD
+=======
 \end_inset
 
 
 \end_layout
 
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \end_inset
 
 
@@ -4852,17 +7047,84 @@ Results
 
 \begin_layout Standard
 Here we use 
+\change_inserted -1046193749 1680733526
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680733533
+ISDDM.py
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1680733524
+
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
- to carry out the absolute binding free energy calculations on the host-guest
+ 
+\change_unchanged
+to carry out the absolute binding free energy calculations on the host-guest
  systems describe in the previous section.
- In section 4.1 we will describe the automated workflow for using 
+ In 
+\change_inserted -1046193749 1680733689
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Implementation-Details"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_deleted -1046193749 1680733685
+section 4.1
+\change_unchanged
+ we 
+\change_deleted -1046193749 1680733603
+will
+\change_unchanged
+ describe the automated workflow for using 
+\change_deleted -1046193749 1680733610
+
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
- how it prepares all the necessary input files, manages simulations and
- perform post-treatments.
+
+\change_inserted -1046193749 1680733620
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680733610
+ISDDM.py
+\end_layout
+
+\end_inset
+
+, including
+\change_unchanged
+ how it prepares all the necessary input files, manages simulations
+\change_inserted -1046193749 1680733632
+,
+\change_unchanged
+ and 
+\change_deleted -1046193749 1680733636
+perform post-treatments
+\change_inserted -1046193749 1680733679
+ and processes the data
+\change_unchanged
+.
  In section 4.2 we report on the accuracy and access the convergence of each
  step as shown in figure 
 \series bold
@@ -4878,18 +7140,28 @@ Finally we look at the overall scaling performance for the time required
 \end_layout
 
 \begin_layout Section
+<<<<<<< HEAD
 Implementation Details
 \change_deleted -1463621830 1680718590
  
 \change_unchanged
+=======
+Implementation Details 
+\change_inserted -1046193749 1680733744
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Implementation-Details"
+
+\end_inset
+
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 
 \end_layout
 
 \begin_layout Standard
-- The 
-\begin_inset Formula $ISDDM.py$
-\end_inset
 
+<<<<<<< HEAD
  is a program written entirely in Python that streamline the entire workflow
  procedure of preparing, running and post-processing all the MD simulations
  for calculating the free energies, whose general workflow is shown in figure
@@ -4901,10 +7173,174 @@ Implementation Details
  
 \change_unchanged
 
+=======
+\change_inserted -1046193749 1680733745
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680733794
+TL This could be its own chapter before Methods
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \end_layout
 
 \begin_layout Itemize
-The first step the user would proved a parameterize complex 
+- 
+\change_deleted -1046193749 1680733842
+The 
+\change_inserted -1046193749 1680733838
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680733838
+ISDDM.py
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1680733837
+
+\begin_inset Formula $ISDDM.py$
+\end_inset
+
+
+\change_unchanged
+ is a 
+\change_inserted -1046193749 1680733877
+Python 
+\change_unchanged
+program
+\change_deleted -1046193749 1680733975
+ written entirely in Python
+\change_unchanged
+ that 
+\change_deleted -1046193749 1680733982
+streamline the entire
+\change_inserted -1046193749 1680733996
+automates 
+\change_deleted -1046193749 1680734088
+ 
+\change_inserted -1046193749 1680734104
+preparing, running and post-processing all the MD simulations for calculating
+ the free energies.
+ 
+\change_deleted -1046193749 1680734111
+workflow procedure of preparing, running and post-processing all the MD
+ simulations for calculating the free energies
+\change_unchanged
+,
+\change_deleted -1046193749 1680734128
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680734152
+The 
+\change_deleted -1046193749 1680734154
+whose general
+\change_unchanged
+ workflow 
+\change_inserted -1046193749 1680734167
+of 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680734167
+ISDDM.py
+\end_layout
+
+\end_inset
+
+ 
+\change_unchanged
+is shown in
+\change_inserted -1046193749 1680734236
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:workflow"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+
+\change_deleted -1046193749 1680734229
+ figure 
+\series bold
+4.1.
+\change_unchanged
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680734641
+In the input file,
+\change_deleted -1046193749 1680734490
+The first step the
+\change_unchanged
+ user
+\change_inserted -1046193749 1680734492
+s
+\change_unchanged
+ 
+\change_deleted -1046193749 1680734494
+would
+\change_unchanged
+ prov
+\change_inserted -1046193749 1680734497
+i
+\change_deleted -1046193749 1680734496
+e
+\change_unchanged
+d
+\change_inserted -1046193749 1680734498
+e
+\change_unchanged
+ 
+\change_inserted -1046193749 1680734706
+parameters for the method, including the location of a
+\change_deleted -1046193749 1680734705
+ 
+\change_inserted -1046193749 1680734692
+force field 
+\change_unchanged
+parameter
+\change_deleted -1046193749 1680734526
+ize
+\change_unchanged
+ 
+\change_inserted -1046193749 1680734552
+file and initial coordinates for the 
+\change_unchanged
+complex
+\change_deleted -1046193749 1680734615
+ 
+\change_inserted -1046193749 1680734716
+.
+\change_deleted -1046193749 1680734615
+
 \begin_inset Formula $.parmameter$
 \end_inset
 
@@ -4921,14 +7357,37 @@ The first step the user would proved a parameterize complex
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
+<<<<<<< HEAD
 Following the user input of complex parameter files an REMD GBSA endstate
  simulations is then executed and once completed the equilibrated binding
  conformation from the complex in state 8 is used to select and generate
  conformational and orientational restraints.
 
 \change_deleted -1463621830 1680718590
+=======
+
+\change_deleted -1046193749 1680734821
+Following
+\change_inserted -1046193749 1680734854
+When the program is executed, the first stage 
+\change_deleted -1046193749 1680734867
+ the user input of complex parameter files an
+\change_inserted -1046193749 1680734868
+is
+\change_unchanged
+ REMD GB
+\change_deleted -1046193749 1680734730
+SA
+\change_unchanged
+ 
+\change_deleted -1046193749 1680734880
+endstate
+\change_unchanged
+ simulations 
+\change_inserted -1046193749 1680734942
+of states 1 and 8.
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
  
 \change_unchanged
 
@@ -4936,19 +7395,80 @@ Following the user input of complex parameter files an REMD GBSA endstate
 
 \begin_deeper
 \begin_layout Itemize
-At the same time, the receptor and ligand are spilt from the complex endstate
- structure to be used for all the restrained MD states 
+
+\change_inserted -1046193749 1680734951
+From the final frame of 
+\change_deleted -1046193749 1680734958
+is then executed and once completed the equilibrated binding conformation
+ from
+\change_unchanged
+ the complex in state 8
+\change_inserted -1046193749 1680734962
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1680734968
+is used to select and
+\change_unchanged
+ 
+\change_deleted -1046193749 1680734982
+generate
+\change_unchanged
+ conformational and orientational restraints
+\change_inserted -1046193749 1680734989
+ are generated
+\change_unchanged
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680735017
+At the same time
+\change_inserted -1046193749 1680735092
+The same frame is used to generate the initial coordinates for states 2-7.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680735100
+For states 2-4,
+\change_deleted -1046193749 1680735091
+, 
+\change_unchanged
+the receptor and ligand are spilt from the complex end
+\change_inserted -1046193749 1680735091
+-
+\change_unchanged
+state structure
+\change_deleted -1046193749 1680735108
+ to be used for all the restrained MD states 
 \begin_inset Formula $2\lambda-7\lambda.$
 \end_inset
 
 
+\change_unchanged
+
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 All the intermediate MD states are run simultaneously and executed in parallel
+<<<<<<< HEAD
  using all the available processors that was specified.
 
 \change_deleted -1463621830 1680718590
+=======
+ using 
+\change_inserted -1046193749 1680735182
+the maximum number of processors specified in the input file.
+\change_deleted -1046193749 1680735156
+all the available processors that was specified
+\change_unchanged
+.
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
  
 \change_unchanged
 
@@ -4956,22 +7476,89 @@ All the intermediate MD states are run simultaneously and executed in parallel
 
 \begin_deeper
 \begin_layout Itemize
-Once an intermediate MD simulation is completed this gets automatically
- pushed into post analysis to gather all the necessary state comparison
- and minimized energies.
+
+\change_deleted -1046193749 1680735275
+Once an intermediate
+\change_inserted -1046193749 1680735275
+As
+\change_unchanged
+ MD simulation
+\change_inserted -1046193749 1680735277
+s
+\change_unchanged
+ 
+\change_deleted -1046193749 1680735279
+is
+\change_unchanged
+ complete
+\change_inserted -1046193749 1680735282
+,
+\change_deleted -1046193749 1680735281
+d
+\change_unchanged
+ th
+\change_inserted -1046193749 1680735298
+eir trajectories are
+\change_deleted -1046193749 1680735300
+is gets automatically
+\change_unchanged
+ pushed into post
+\change_inserted -1046193749 1680735307
+-
+\change_deleted -1046193749 1680735307
+ 
+\change_unchanged
+analysis 
+\change_inserted -1046193749 1680735310
+queue 
+\change_unchanged
+to gather all the necessary state comparison and
+\change_deleted -1046193749 1680735325
+ minimized
+\change_unchanged
+ energies.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-The post-process data is then parsed into an 
+The post-process
+\change_inserted -1046193749 1680735334
+ed
+\change_unchanged
+ data is then parsed into 
+\change_inserted -1046193749 1680735375
+a Pandas DataFrame,
+\change_deleted -1046193749 1680735348
+an 
 \begin_inset Formula $pandas.Dateframe$
 \end_inset
 
+
+\change_unchanged
  which is then submitted to MBAR where the final change in BFE is calculated
  for each system.
 
 \change_deleted -1463621830 1680718590
  
+<<<<<<< HEAD
+=======
+\change_inserted -1046193749 1680735398
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680735401
+TL cite pandas
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
@@ -4980,10 +7567,18 @@ The post-process data is then parsed into an
 \end_deeper
 \end_deeper
 \begin_layout Itemize
-All steps within in the workflow are handled using the 
+All steps within in the workflow are handled using the
+\change_inserted -1046193749 1680735496
+ Toil
+\change_unchanged
+ 
+\change_deleted -1046193749 1680735389
+
 \begin_inset Formula $Toil$
 \end_inset
 
+
+\change_unchanged
  package
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -4992,10 +7587,30 @@ literal "false"
 
 \end_inset
 
+<<<<<<< HEAD
  which is a pure Python workflow engine which allows us to create multiple
  simulations and run them simultaneously.
 
 \change_deleted -1463621830 1680718590
+=======
+
+\change_inserted -1046193749 1680735405
+,
+\change_unchanged
+ which is a pure Python workflow engine 
+\change_deleted -1046193749 1680735466
+which
+\change_inserted -1046193749 1680735466
+that
+\change_unchanged
+ allows us to create multiple simulations and run them 
+\change_deleted -1046193749 1680735471
+simultaneously
+\change_inserted -1046193749 1680735473
+in parallel
+\change_unchanged
+.
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
  
 \change_unchanged
 
@@ -5003,6 +7618,8 @@ literal "false"
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680735500
 Toil uses an API to describe the job order programmatically.
  Which allows use to create our workflow pipeline and step simulation job
  dependencies to pass there relevant information only once they are completed.
@@ -5036,6 +7653,30 @@ status open
 
 \begin_layout Plain Layout
 
+\change_inserted -1046193749 1680734217
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680734220
+TL caption
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:workflow"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -5049,14 +7690,45 @@ status open
 \end_layout
 
 \begin_layout Subsection
+<<<<<<< HEAD
 Configuration user input
 \change_deleted -1463621830 1680718590
  
+=======
+Configuration user input 
+\change_inserted -1046193749 1680736500
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1680736501
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680736605
+TL this part can read like a manual.
+ Consider moving it to the appendix.
+ For each section of the input file, create section.
+ Use a description list to describe each keyword.
+ I got this started.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680735605
 Here we aim that the entire workflow can be automated for calculating ABFEs
  for diverse ligands.
 
@@ -5068,6 +7740,8 @@ Here we aim that the entire workflow can be automated for calculating ABFEs
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680735605
 In our protocol the total number of intermediate states are 
 \begin_inset Formula $112$
 \end_inset
@@ -5076,12 +7750,16 @@ In our protocol the total number of intermediate states are
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680735605
 Once an intermediate MD simulation is complete its output trajectory will
  be passed in every system specific state for post analysis energy minimization.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680735605
 For example, the intermediate state for complex 
 \begin_inset Formula $5\lambda-7\lambda$
 \end_inset
@@ -5095,24 +7773,89 @@ For example, the intermediate state for complex
 \end_inset
 
  additional post-process simulations.
+\change_unchanged
+
 \end_layout
 
 \end_deeper
 \end_deeper
 \begin_layout Itemize
 The 
-\begin_inset Formula $ISDDM.py$
+\change_inserted -1046193749 1680735650
+user controls 
+\change_deleted -1046193749 1680735612
+
+\begin_inset Formula $ $
 \end_inset
 
- package can automated then entire workflow binding by supplying a simple
- user 
+
+\change_unchanged
+ 
+\change_inserted -1046193749 1680735620
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680735618
+ISDDM.py
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ 
+\change_deleted -1046193749 1680735669
+package can automated then
+\change_unchanged
+ entire workflow 
+\change_deleted -1046193749 1680735636
+binding
+\change_unchanged
+ by supplying a 
+\change_deleted -1046193749 1680735678
+simple 
+\change_inserted -1046193749 1680735686
+YAML-format 
+\change_unchanged
+user
+\change_deleted -1046193749 1680735692
+ 
 \begin_inset Formula $.yaml$
 \end_inset
 
+<<<<<<< HEAD
  configurational consisting of only 36 lines which will be discussed below.
 
 \change_deleted -1463621830 1680718590
  
+=======
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1680735696
+configurational
+\change_unchanged
+ 
+\change_inserted -1046193749 1680735703
+input files, which 
+\change_unchanged
+consist
+\change_inserted -1046193749 1680735706
+s
+\change_deleted -1046193749 1680735705
+ing
+\change_unchanged
+ of only 36 lines
+\change_inserted -1046193749 1680735719
+.
+
+\change_deleted -1046193749 1680735717
+ which will be discussed below.
+ 
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
@@ -5125,31 +7868,391 @@ The
 \end_layout
 
 \begin_layout Subsubsection
+<<<<<<< HEAD
 System Parameters
 \change_deleted -1463621830 1680718590
  
 \change_unchanged
 
+=======
+
+\change_deleted -1046193749 1680736475
+System Parameters
+\change_inserted -1046193749 1680736475
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680736479
+system_parameters
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ 
+\change_inserted -1046193749 1680735784
+
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \end_layout
 
 \begin_layout Standard
-The system parameters denotes which AMBER engine the user wishes to execute
- (sander, pmemd, pmemd.CUDA, ect) the endstate and intermediate MD simulations
- and 
-\begin_inset Formula $mpi_{-}command$
+
+\change_inserted -1046193749 1680735788
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680735937
+TL 
+\begin_inset Quotes eld
 \end_inset
 
- the type of HPC scheduler (SLURM, TORQUE, ect).
+system
+\begin_inset Quotes erd
+\end_inset
 
-\change_deleted -1463621830 1680718590
- 
+ is a little generic.
+ I would suggest having 'md_engine' and 'hardware_parameters'.
+ This can wait until after the thesis
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
 \change_unchanged
 
 \end_layout
 
 \begin_layout Itemize
-Memory and disk are keywords for resource requirements for each individual
- MD simulation.
+The system parameters denote
+\change_deleted -1046193749 1680736048
+s
+\change_unchanged
+ 
+\change_inserted -1046193749 1680736102
+the software and hardware resources there user wishes to use.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+
+\change_inserted -1046193749 1680736125
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680736130
+executable
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1680736133
+which
+\change_unchanged
+ 
+\change_inserted -1046193749 1680736147
+The 
+\change_unchanged
+A
+\change_deleted -1046193749 1680735950
+MBER
+\change_inserted -1046193749 1680736100
+mber
+\change_unchanged
+ 
+\change_inserted -1046193749 1680736100
+MD 
+\change_unchanged
+engine the user wishes to execute (
+\change_deleted -1046193749 1680735975
+sander
+\change_inserted -1046193749 1680736100
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680735975
+sander
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+, 
+\change_deleted -1046193749 1680735978
+pmemd
+\change_inserted -1046193749 1680736100
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680735978
+pmemd
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+, 
+\change_deleted -1046193749 1680735982
+pmemd.CUDA
+\change_inserted -1046193749 1680736100
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680735982
+pmemd.CUDA
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+, e
+\change_inserted -1046193749 1680736100
+tc.
+\change_deleted -1046193749 1680735986
+ct
+\change_unchanged
+) 
+\change_inserted -1046193749 1680736100
+for the 
+\change_unchanged
+the end
+\change_inserted -1046193749 1680736100
+-
+\change_unchanged
+state and intermediate MD simulations
+\change_inserted -1046193749 1680736157
+.
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -1046193749 1680736164
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680736168
+mpu_command
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1680736162
+ and 
+\begin_inset Formula $mpi_{-}command$
+\end_inset
+
+<<<<<<< HEAD
+ the type of HPC scheduler (SLURM, TORQUE, ect).
+
+\change_deleted -1463621830 1680718590
+=======
+
+\change_unchanged
+ 
+\change_inserted -1046193749 1680736173
+T
+\change_deleted -1046193749 1680736173
+t
+\change_unchanged
+he
+\change_deleted -1046193749 1680736220
+ 
+\change_inserted -1046193749 1680736321
+ command used to run MPI programs on the computer system; e.g., 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680736308
+mpirun
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680736314
+mpiexec
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+, or 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680736303
+srun
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\change_deleted -1046193749 1680736296
+type of HPC scheduler (SLURM, TORQUE, ect).
+
+\change_unchanged
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -1046193749 1680736344
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680736345
+memory
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1680736341
+Memory
+\change_unchanged
+ 
+\change_inserted -1046193749 1680736350
+
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -1046193749 1680736370
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680736370
+disk
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1680736354
+and disk
+\change_unchanged
+ 
+\change_deleted -1046193749 1680736378
+are keywords for resource requirements for
+\change_inserted -1046193749 1680736385
+Storage required for an
+\change_deleted -1046193749 1680736386
+ each
+\change_unchanged
+ individual MD simulation.
+
+\change_inserted -1046193749 1680736454
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680736412
+TL let's change this to 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680736402
+storage
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+.
+ SSD may be used.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+
+\change_inserted -1046193749 1680736494
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680736495
+number_of_cores_per_system
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -5184,7 +8287,27 @@ system_parameters:
 
 \begin_layout Plain Layout
 
-	mpi_command: “srun” 
+	mpi_command: 
+\change_inserted -1046193749 1680735756
+
+\begin_inset Quotes eld
+\end_inset
+
+
+\change_deleted -1046193749 1680735756
+“
+\change_unchanged
+srun
+\change_inserted -1046193749 1680735758
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\change_deleted -1046193749 1680735757
+”
+\change_unchanged
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -5549,6 +8672,17 @@ workflow:
 
 \begin_layout Section
 Calculations of binding free energies for host-guest systems
+\change_inserted -1046193749 1680733711
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Calculations-of-binding"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
@@ -6584,9 +9718,25 @@ cyclodextrins
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Table 4.3: This table shows various metrics for comparison of all host guest
- systems.
+
+\change_deleted -1046193749 1680736744
+Table 4.3: This table shows various
+\change_inserted -1046193749 1680736750
+Binding free energy
+\change_unchanged
+ metrics for comparison of all host guest systems.
  Units are in kcal/mol.
+\change_inserted -1046193749 1680736864
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Binding-free-energy-metrics"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -6650,9 +9800,25 @@ a.
 
 \series default
  kjkjkjkj
+<<<<<<< HEAD
 \change_inserted -1463621830 1680730455
 Comparison of calculated absolute binding free energies 
 \begin_inset Formula $(\Delta G_{GB}^{bind})$
+=======
+\change_inserted -1046193749 1680736927
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ABFE-plot"
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \end_inset
 
  with GAFFV2 force field and 
@@ -6735,9 +9901,22 @@ name "fig:ABFE-host-guest-systems"
 \end_layout
 
 \begin_layout Section
+<<<<<<< HEAD
 Generalize Born hydration asymmetry correction
 \change_deleted -1463621830 1680718590
  
+=======
+Generalize Born hydration asymmetry correction 
+\change_inserted -1046193749 1680733724
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Generalize-Born-hydration"
+
+\end_inset
+
+
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
@@ -7601,9 +10780,22 @@ This table shows various metrics for comparison of all host guest systems
 \end_layout
 
 \begin_layout Section
+<<<<<<< HEAD
 Performance Scaling
 \change_deleted -1463621830 1680718590
  
+=======
+Performance Scaling 
+\change_inserted -1046193749 1680733730
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Performance-Scaling"
+
+\end_inset
+
+
+>>>>>>> 818333fdf40d061451e6d087d79d899ee47efcd1
 \change_unchanged
 
 \end_layout
