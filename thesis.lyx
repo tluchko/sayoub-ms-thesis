@@ -12528,7 +12528,7 @@ status open
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 Discussion
 \end_layout
 
@@ -14883,6 +14883,11 @@ noprefix "false"
 
 \end_inset
 
+
+\change_inserted -1463621830 1680799890
+a.
+ 
+\change_unchanged
 A previous study shown that better incorporations of ionic screening, can
  disrupt this interaction and binding is weakened
 \begin_inset CommandInset citation
@@ -14911,7 +14916,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename images/benz_flip_oah.pdf
+	filename images/benz_flip_oah.png
 	width 100text%
 
 \end_inset
@@ -14923,12 +14928,29 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Benzoate ring flip to form a short range ionic interactions with the alkylammoni
-um head group of the ligand.
+
+\change_inserted -1463621830 1680799656
+OAH-binding models with cationic and negatively charge guest.
+\change_unchanged
+
 \end_layout
 
 \end_inset
 
+
+\change_inserted -1463621830 1680799658
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1463621830 1680799872
+a.
+ Benzoate ring flip to form a short range ionic interactions with the alkylammon
+ium head group of the guest (hxa).
+ b the negativity charge guest (m4p) without benzoate ring flipping.
+ 
+\change_unchanged
 
 \end_layout
 
@@ -15143,32 +15165,118 @@ literal "false"
 \begin_layout Itemize
 Therefore a transferable correction towards our results will need a more
  accurate solvation model that could account for CHA.
-\end_layout
-
-\begin_layout Section
-ISDDM.py scalability and 3D-RISM correction
-\end_layout
-
-\begin_layout Standard
-The construction this modified DDM in GB is much faster than traditional
- applications in explicit solvent due to improved sampling owe to to the
- absence of water degree of freedom associated with explicit solvent models.
- Our method not only is faster a per step, but also requires fewer steps
- than traditional explicit DDM calculations.
- One major benefit from our method is the use of conformational restraints
- which eliminates the need of soft-core potentials which making the overall
- method more simpler and reducing the need of additional windows.
- Soft-core potentials are used to minimized or avoid
-\change_deleted -1463621830 1680753196
- 
 \change_inserted -1463621830 1680753212
 
 \end_layout
 
 \begin_layout Chapter
 
-\change_inserted -1463621830 1680753242
-Conclusion 
+\change_inserted -1463621830 1680794431
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463621830 1680805188
+The goal of this research was to create a simpler user interface that can
+ automate a rigours, modified DDM cycle allowing it to be applied over a
+ broad chemical space.
+ Although other automated absolute binding free energies that due exist
+\begin_inset CommandInset citation
+LatexCommand citep
+key "fuBFEE2AutomatedStreamlined2021,heinzelmannAutomatedDockingRefinement2020"
+literal "false"
+
+\end_inset
+
+, however ISDDM.py contributes to the open-source community, with improve
+ sampling by using a combination of implicit solvents and conformational
+ restraints.
+ To test the automation of 
+\begin_inset Formula $ISDDM.py$
+\end_inset
+
+ we applied it to a series of host guest systems which were presented as
+ community challenge by SAMPL group.
+ We saw overall decent performance with our method (DDM/GB) and outperforms
+ most the SAMPL4 and SAMPL9 challenge submission's RBFE metrics.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463621830 1680805791
+One major issue with using generalize Born in its inability to account hydration
+ charge asymmetry leading towards the strong electrostatics interactions
+ from charge guest molecules.
+ From all the host guest systems shown in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ABFE-host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a we seethe positively charge guest molecules were significantly overestimating
+ the binding free energy predictions and negatively charge guest were being
+ underestimated.
+ Looking at the only two highly perturb host system we see strong favoring
+ of electrostatic interactions with cationic ligand with negativity charge
+ benzoate groups.
+ By applying a simple linear correction for positive, neutral and negative
+ charge guest we much better correlation and deviation range from 1kcal/mol
+ or less.
+ This correction greatly improved our overall accuracy across the entire
+ dataset however transferability of this correction is issue.
+ This correction isn't a solution but just highlight the problems with GB
+ we already knew.
+ That being said, an actual solution to this would to utilized a more accurate
+ solvation model that could account for CHA and other thermodynamic water
+ properties GB lacks.
+ GBNSR6 one of the newer GB models is account for CHA and has been shown
+ to improved electrostatic binding free energies for diverse set of biomolecular
+ complexes
+\begin_inset CommandInset citation
+LatexCommand citep
+key "izadiAccuracyComparisonGeneralized2018"
+literal "false"
+
+\end_inset
+
+.
+ However we are not able to get any dynamics with GBNSR6 which limits it
+ used for improved sampling in our method.
+ Alternately 3-dimensional reference interaction site model (3D-RISM) being
+ another type of implicit solvent model which describes solvent as a classical
+ density distribution of the solvent sites around the solute[cite-].
+ This yields a more detailed molecular structure than GB models and incorporates
+ additional thermodynamic properties such as CHA and hydrogen bonding.
+ Unfortunately 3D-RISM is computational demanding and not suitable for high
+ throughput screening campaigns.
+ However including sampling of 3D-RISM does being promise and could be an
+ avenue to be explored in the future perhaps implementing 3D-RISM on GPUs
+ or perform MonteCarlo simulation rather than getting dynamics from 3D-RISM.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463621830 1680805553
+Overall 
+\begin_inset Formula $ISDDM.py$
+\end_inset
+
+ is flexible enough to accommodate the needs for most users.
+ With a simple user interface to used for a diverse set of ligand-protein
+ binding.
+ As a whole our study demonstrates that 
+\begin_inset Formula $ISDDM.py$
+\end_inset
+
+ incorporates fast GB solvent in a modified DDM cycle to be used in virtual
+ screening campaigns.
 \end_layout
 
 \begin_layout Standard
