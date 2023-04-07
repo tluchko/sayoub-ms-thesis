@@ -10483,12 +10483,48 @@ workflow:
 
 \begin_layout Section
 Statistical metrics of absolute binding
+\change_inserted -1046193749 1680822039
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1680822041
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680822676
+TL You should have equations RMSE*, MAE and MSE metrics.
+ Slope and R^2 don't need equations.
+ This section could go in Methods.
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680822735
+TL then you can have a short intro, one or two sentences, explaining that
+ you are looking at each system individually and then collectively
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
+
+\change_inserted -1046193749 1680814984
+To assess the ABFE predictions of 
+\change_deleted -1046193749 1680815044
 In 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "table:host-guest-metrics"
 plural "false"
 caps "false"
@@ -10496,21 +10532,156 @@ noprefix "false"
 
 \end_inset
 
-are some metrics used to help analyzed the effectiveness of using GBSA in
- this automation workflow protocol.
- We calculated the Pearson coefficient (
+are some metrics used to help analyzed the effectiveness of using
+\change_unchanged
+ GB
+\change_deleted -1046193749 1680815003
+SA
+\change_unchanged
+ in this automation workflow protocol
+\change_inserted -1046193749 1680822205
+, we applied several metrics, several of which are unique to the SAMPL challenge
+s 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "muddanaSAMPL4HostGuest2014a"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+.
+ 
+\change_inserted -1046193749 1680822187
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680822341
+Slope...
+\end_layout
+
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680822215
+We calculated t
+\change_inserted -1046193749 1680822216
+T
+\change_unchanged
+he Pearson 
+\change_inserted -1046193749 1680815202
+correlation 
+\change_unchanged
+coefficient
+\change_inserted -1046193749 1680815194
+,
+\change_deleted -1046193749 1680815193
+ (
+\change_unchanged
+
 \begin_inset Formula $R^{2}$
 \end_inset
 
-) to analyze the degree of correlation with our estimate.
- Also computed other error metrics, including the RMSE
+
+\change_inserted -1046193749 1680815197
+,
+\change_deleted -1046193749 1680815196
+)
+\change_unchanged
+ to analyze the degree of correlation with our estimate
+\change_inserted -1046193749 1680822286
+,
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680822343
+RMSE ...
+\end_layout
+
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680815212
+.
+ Also computed other error metrics,
+\change_unchanged
+ 
+\change_deleted -1046193749 1680815219
+including
+\change_unchanged
+ 
+\change_inserted -1046193749 1680822234
+T
+\change_deleted -1046193749 1680822234
+t
+\change_unchanged
+he RMSE
 \begin_inset Formula $_{o}$
 \end_inset
 
- (equation 4.1) and RMSE
+
+\change_inserted -1046193749 1680822321
+ is the computed root mean square error of predicted binding affinities
+ after subtracting it with the average signed error, 
+\begin_inset Formula 
+\begin{equation}
+RMSE_{o}=\sqrt{\frac{1}{n}\stackrel[i=1]{n}{\sum}\left[\Delta G_{i}^{exp}-\Delta G_{i}^{calc}-\frac{1}{n}\stackrel[j-1]{n}{\sum}\left(\Delta G_{j}^{exp}-\Delta G_{j}^{calc}\right)\right]^{2}},\label{eq:RMSE_O}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $∆G^{\text{exp}}$
+\end_inset
+
+ and 
+\begin_inset Formula $∆G^{\text{calc}}$
+\end_inset
+
+ are....
+ and 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+ are.
+
+\change_deleted -1046193749 1680815245
+ (equation 4.1)
+\change_unchanged
+ 
+\change_inserted -1046193749 1680822597
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680822596
+and 
+\change_unchanged
+RMSE
 \begin_inset Formula $_{r}$
 \end_inset
 
+
+\change_inserted -1046193749 1680822630
+, is used to measure the accuracy of relative binding free energies by consideri
+ng all guest molecules and n is the number of measurements.
+\begin_inset Formula 
+\begin{equation}
+RMSE_{r}=\sqrt{\frac{2}{n\left(n-1\right)}\stackrel[i]{n}{\sum}\stackrel[j=i+1]{n}{\sum}\left[\left(\Delta G_{j}^{calc}-\Delta G_{i}^{calc}\right)-\left(\Delta G_{j}^{exp}-\Delta G_{i}^{exp}\right)\right]^{2}.}\label{eq:RMSE_r}
+\end{equation}
+
+\end_inset
+
+
+\change_deleted -1046193749 1680815263
 (equation 4.2) which was introduced in SAMPl4 challenges 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -10521,12 +10692,25 @@ literal "false"
 
 .
  R
-\change_inserted -1463621830 1680753740
+\change_inserted -1046193749 1680822654
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
+
+\change_inserted -1046193749 1680822658
+MAE
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680822659
+MSE
+\end_layout
+
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680822636
 MSE
 \begin_inset Formula $_{o}$
 \end_inset
@@ -10534,7 +10718,7 @@ MSE
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "4.1"
+reference "eq:RMSE_O"
 plural "false"
 caps "false"
 noprefix "false"
@@ -10543,11 +10727,11 @@ noprefix "false"
 
  is the computed root mean square error of predicted binding affinities
  after subtracting it with the average signed error.
-\change_inserted -1463621830 1680753745
-
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1046193749 1680822636
 RMSE
 \begin_inset Formula $_{r}$
 \end_inset
@@ -10555,7 +10739,7 @@ RMSE
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "4.2"
+reference "eq:RMSE_r"
 plural "false"
 caps "false"
 noprefix "false"
@@ -10564,51 +10748,100 @@ noprefix "false"
 
  is used to measure the accuracy of relative binding free energies by considerin
 g all guest molecules and n is the number of measurements.
+\change_unchanged
+
 \end_layout
 
 \end_deeper
 \begin_layout Standard
+
+\change_deleted -1046193749 1680815226
 \begin_inset Formula 
 \begin{equation}
-RMSE_{o}=\sqrt{\frac{1}{n}\stackrel[i=1]{n}{\sum}\left[\Delta G_{i}^{exp}-\Delta G_{i}^{calc}-\frac{1}{n}\stackrel[j-1]{n}{\sum}\left(\Delta G_{j}^{exp}-\Delta G_{j}^{calc}\right)\right]^{2}}\label{4.1}
+RMSE_{o}=\sqrt{\frac{1}{n}\stackrel[i=1]{n}{\sum}\left[\Delta G_{i}^{exp}-\Delta G_{i}^{calc}-\frac{1}{n}\stackrel[j-1]{n}{\sum}\left(\Delta G_{j}^{exp}-\Delta G_{j}^{calc}\right)\right]^{2}}\label{eq:RMSE_O}
 \end{equation}
 
 \end_inset
 
+
+\change_unchanged
 
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1680822125
 \begin_inset Formula 
 \begin{equation}
-RMSE_{r}=\sqrt{\frac{2}{n\left(n-1\right)}\stackrel[i]{n}{\sum}\stackrel[j=i+1]{n}{\sum}\left[\left(\Delta G_{j}^{calc}-\Delta G_{i}^{calc}\right)-\left(\Delta G_{j}^{exp}-\Delta G_{i}^{exp}\right)\right]^{2}}\label{4.2}
+\label{eq:RMSE_r}
 \end{equation}
 
 \end_inset
 
 
+\change_inserted -1046193749 1680822640
+
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Calculations of binding free energies of cucurbit[7]uril (CB7)
 \end_layout
 
 \begin_layout Itemize
-Calculations of binding free energies of 14-cb7 cationic guest binding systems
- with Generalize born implicit solvent model (
+
+\change_inserted -1046193749 1680823373
+We calculated 
+\change_deleted -1046193749 1680823374
+Calculations of
+\change_inserted -1046193749 1680823375
+the
+\change_unchanged
+ binding free energies of 14
+\change_deleted -1046193749 1680823278
+-cb
+\change_inserted -1046193749 1680823279
+ 
+\change_deleted -1046193749 1680823295
+7
+\change_unchanged
+ cationic guest 
+\change_inserted -1046193749 1680823302
+to CB7 
+\change_deleted -1046193749 1680823304
+binding systems
+\change_unchanged
+ 
+\change_deleted -1046193749 1680823381
+with Generalize born implicit solvent model (
 \begin_inset Formula $GB^{OBC}$
 \end_inset
 
-) are conducted in this work.
+) are conducted in this work
+\change_unchanged
+.
  
-\change_inserted -1463621830 1680753752
+\change_inserted -1046193749 1680824362
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680824362
+TL net charge
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Host-guest-systems"
 plural "false"
 caps "false"
@@ -10625,24 +10858,79 @@ b shows the correlation scatter plot of CB7 systems versus experimental
 \begin_deeper
 \begin_layout Itemize
 Each ligand are colored by there respective net charge which range from
- +1 to +2.
- The calculated statistics that computed free energies with this automated
- workflow model had a significant deviation (RMSE=6.9 kcal/mol) but a good
- correlation (
+ +1 to +2
+\change_inserted -1046193749 1680824067
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680824074
+TL add that the host is neutral
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
+ 
+\change_inserted -1046193749 1680823947
+
+\end_layout
+
+\begin_layout Itemize
+The calculated statistics that computed free energies with this automated
+ workflow model had a significant 
+\change_deleted -1046193749 1680823976
+deviation
+\change_inserted -1046193749 1680823979
+absolute error
+\change_unchanged
+ (RMSE=6.9 kcal/mol) but a good correlation (
 \begin_inset Formula $R^{2}=0.8$
 \end_inset
 
-) suggesting well prediction throughout.
- It is evident in.
+) suggesting well prediction throughout
+\change_inserted -1046193749 1680823655
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "table:host-guest-metrics"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\change_unchanged
+.
  
-\change_inserted -1463621830 1680753760
+\change_deleted -1046193749 1680823640
+It is evident in.
+ 
+\change_inserted -1046193749 1680823984
 
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_inserted -1046193749 1680823990
+Other metrics...
+\change_inserted -1463621830 1680753760
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680824117
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Host-guest-systems"
 plural "false"
 caps "false"
@@ -10650,22 +10938,58 @@ noprefix "false"
 
 \end_inset
 
-b all the calculations of absolute binding are being overestimated for all
- the cationic ligands.Which may be suggesting favorable polar interaction
- with ammonium and carbonyl rich ports of CB7.
+b a
+\change_inserted -1046193749 1680824119
+A
+\change_unchanged
+ll the calculations of absolute binding are being 
+\change_inserted -1046193749 1680824237
+und
+\change_deleted -1046193749 1680824225
+ov
+\change_unchanged
+erestimated for all the cationic ligands
+\change_inserted -1046193749 1680824013
+, 
+\change_deleted -1046193749 1680824012
+.W
+\change_inserted -1046193749 1680824017
+w
+\change_unchanged
+hich may 
+\change_deleted -1046193749 1680824020
+be
+\change_unchanged
+ suggest
+\change_deleted -1046193749 1680824023
+ing
+\change_unchanged
+ favorable polar interaction with ammonium and carbonyl rich ports of CB7.
 \end_layout
 
 \end_deeper
 \end_deeper
 \end_deeper
-\begin_layout Subsubsection
+\begin_layout Subsection
 Calculations of binding free energies of Pillar[6]ene (WP6)
 \end_layout
 
 \begin_layout Itemize
-Here 13 guest ligands were tested against WP6 as shown in figure 
+
+\change_deleted -1046193749 1680824079
+Here
+\change_unchanged
+ 13 guest ligands were tested against WP6
+\change_inserted -1046193749 1680824091
+,
+\change_unchanged
+ as shown in 
+\change_deleted -1046193749 1680824097
+figu
+\change_unchanged
+re 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand nameref
 reference "fig:Host-guest-systems"
 plural "false"
 caps "false"
@@ -10675,6 +10999,22 @@ noprefix "false"
 
 c.
  
+\change_inserted -1046193749 1680824354
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680824358
+TL net charge
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
 \change_inserted -1463621830 1680753768
 
 \end_layout
@@ -10690,10 +11030,53 @@ The coloring of each guest is the same as CB7 where 12 guests are bearing
 
 \begin_deeper
 \begin_layout Itemize
-We see the absolute binding for all positively charge guest are being overestima
-ted similar what we saw with CB7.
- Interesting G8 being the only neutral ligand in the entire dataset and
- its binding free energy is underestimated being a clear outlier.
+We see the absolute binding for all positively charge guest are being 
+\change_deleted -1046193749 1680824214
+ov
+\change_inserted -1046193749 1680824217
+und
+\change_unchanged
+erestimated similar what we saw with CB7.
+ 
+\change_inserted -1046193749 1680824131
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680824134
+However, 
+\change_deleted -1046193749 1680824135
+Interesting
+\change_inserted -1046193749 1680824170
+ the binding free energy of
+\change_unchanged
+ G8
+\change_inserted -1046193749 1680824139
+,
+\change_deleted -1046193749 1680824140
+ being
+\change_unchanged
+ the only neutral ligand in the entire dataset
+\change_inserted -1046193749 1680824144
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1680824177
+and its binding free energy
+\change_unchanged
+ is 
+\change_deleted -1046193749 1680824182
+und
+\change_inserted -1046193749 1680824185
+ov
+\change_unchanged
+erestimated
+\change_inserted -1046193749 1680824201
+ in contrast to the rest of the ligands.
+
+\change_deleted -1046193749 1680824198
+ being a clear outlier.
  
 \change_inserted -1463621830 1680753775
 
@@ -10707,19 +11090,44 @@ Calculated statistics that computed free energies had a deviation (RMSE=6.64
 \end_inset
 
 ).
+\change_inserted -1046193749 1680824249
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680824257
+Other metrics...
+\change_unchanged
+
 \end_layout
 
 \end_deeper
-\begin_layout Subsubsection
+\begin_layout Subsection
 Calculations of binding free energies of Octa-acid (OAH)
 \end_layout
 
-\begin_layout Standard
-Here we tested against structurally different host system OAH with a deep
- 10 Å hydrophobic pocket and eight water-solubilizing carboxylate groups
- at the outer surface figure 
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680824325
+Here we tested against structurally different
+\change_inserted -1046193749 1680824325
+The
+\change_unchanged
+ host system OAH 
+\change_deleted -1046193749 1680824329
+with
+\change_inserted -1046193749 1680824330
+has
+\change_unchanged
+ a deep 10 Å hydrophobic pocket and eight water-solubilizing carboxylate
+ groups at the outer surface 
+\change_deleted -1046193749 1680824272
+figure 
+\change_unchanged
+
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Host-guest-systems"
 plural "false"
 caps "false"
@@ -10728,20 +11136,101 @@ noprefix "false"
 \end_inset
 
 d.
- A total of 20 guests were binding against OAH where 18 guest had a charge
- of -1 and only two (tzh,hxa) bearing a +1 charge.
- The calculated statistics of computed free energies had a deviation (RMSE=2.9
+ 
+\change_inserted -1046193749 1680824342
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680824344
+TL net charge
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680824384
+A total of 
+\change_inserted -1046193749 1680824391
+ABFEs of 
+\change_unchanged
+20 guests were 
+\change_deleted -1046193749 1680824394
+binding against
+\change_inserted -1046193749 1680824396
+calculated
+\change_unchanged
+ OAH
+\change_inserted -1046193749 1680824398
+,
+\change_unchanged
+ where 18 guest had a charge of -1 and only two (tzh,hxa) 
+\change_deleted -1046193749 1680824404
+bearing
+\change_inserted -1046193749 1680824405
+had
+\change_unchanged
+ a +1 charge.
+ 
+\change_inserted -1046193749 1680824278
+
+\end_layout
+
+\begin_layout Itemize
+The calculated statistics of computed free energies had a deviation (RMSE=2.9
  kcal/mol) and poor correlation (
 \begin_inset Formula $R^{2}=0.07$
 \end_inset
 
 ).
- The two cationic ligands (trz,hxa) in the dataset are being overestimated
- resulting in the poor correlation indicating our GB model will may need
- an correction to handle these charge ligands.
+ 
+\change_inserted -1046193749 1680824427
+
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680824427
+other metrics
+\change_unchanged
+
+\end_layout
+
+\begin_layout Itemize
+The two cationic ligands (trz,hxa) in the dataset are 
+\change_deleted -1046193749 1680824452
+being
+\change_unchanged
+ 
+\change_inserted -1046193749 1680824456
+und
+\change_deleted -1046193749 1680824456
+ov
+\change_unchanged
+erestimated
+\change_inserted -1046193749 1680824461
+,
+\change_unchanged
+ resulting in the poor correlation indicating our GB model
+\change_deleted -1046193749 1680824467
+ will may need an correction to handle these charge ligands.
+\change_inserted -1046193749 1680824467
+.
+\change_unchanged
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
 Calculations of binding free energies of 
 \begin_inset Formula $\alpha/\beta$
 \end_inset
@@ -10753,17 +11242,66 @@ Calculations of binding free energies of
 \end_inset
 
 -CD)
+\change_inserted -1046193749 1680824490
+
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -1046193749 1680824491
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680824538
+TL it is best to split this into alpha and beta sections.
+ 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Itemize
 Calculations of binding free energies of 38-
 \begin_inset Formula $\alpha/\beta$
 \end_inset
 
 CD guests with charges net charges varying from +1 to -1.
- In table 
+ 
+\change_inserted -1046193749 1680824915
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680824917
+TL net charge
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In 
+\change_deleted -1046193749 1680824576
+table
+\change_unchanged
+ 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand nameref
 reference "table:host-guest-metrics"
 plural "false"
 caps "false"
@@ -10784,7 +11322,19 @@ CD and
 \end_inset
 
 CD with a deviation RMSE=1.6 and RMSE=1.6 kcal/mol respectively.
- Interestingly when comparing the correlation values between the two system
+ 
+\change_inserted -1046193749 1680824599
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680824604
+other metrics
+\end_layout
+
+\begin_layout Itemize
+Interestingly when comparing the correlation values between the two system
  (
 \series bold
 
@@ -10815,10 +11365,43 @@ CD reported a stronger correlation between calculated and experimental of
 \end_inset
 
 CD with a poor correlation of 0.17.
- This may suggest that the GB mode can be system dependent.
- In figure 
+ 
+\change_inserted -1046193749 1680824652
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680824735
+TL This and the slope is the only real difference in the metrics.
+ You can't see the reason why because both hosts are in the same plot.
+ If you separate them, you should see that beta has a larger dynamic range
+ than alpha and probably has tighter binding as well
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+This may suggest that the GB mode can be system dependent.
+ 
+\change_inserted -1046193749 1680824569
+
+\end_layout
+
+\begin_layout Itemize
+In 
+\change_deleted -1046193749 1680824582
+figure
+\change_unchanged
+ 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Host-guest-systems"
 plural "false"
 caps "false"
@@ -10840,13 +11423,63 @@ CD and
 
 CD systems where we begin to see a clear bias of ligand charges which have
  been similar trend in the other host guest systems.
- In which we clearly see the negativity charge ligands are being underestimated
- and positively charge ligands are overestimating the absolute binding free
- energies.
- These results are indicative an correction should be applied to these charge
- ligands and will be explored in 
+ 
+\change_inserted -1046193749 1680824622
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680824781
+In which
+\change_inserted -1046193749 1680824782
+Here,
+\change_unchanged
+ we 
+\change_deleted -1046193749 1680824787
+clearly
+\change_unchanged
+ see the 
+\change_inserted -1046193749 1680824844
+ABFEs for the 
+\change_unchanged
+negativ
+\change_inserted -1046193749 1680824795
+ely
+\change_deleted -1046193749 1680824793
+ity
+\change_unchanged
+ charge
+\change_inserted -1046193749 1680824828
+d
+\change_unchanged
+ ligands are 
+\change_deleted -1046193749 1680824848
+being 
+\change_unchanged
+underestimated and positively charge ligands are overestimat
+\change_inserted -1046193749 1680824817
+ed
+\change_deleted -1046193749 1680824864
+ing the absolute binding free energies
+\change_unchanged
+.
+ 
+\change_inserted -1046193749 1680824868
+
+\end_layout
+
+\begin_layout Itemize
+These results 
+\change_deleted -1046193749 1680824885
+are indicative
+\change_inserted -1046193749 1680824886
+suggest
+\change_deleted -1046193749 1680824897
+ an correction should be applied to these charge ligands and will be explored
+ in 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "sec:Generalize-Born-hydration"
 plural "false"
 caps "false"
@@ -10855,16 +11488,25 @@ noprefix "false"
 \end_inset
 
 
+\change_inserted -1046193749 1680824934
+a significant bias due to ligand charge.
+\change_unchanged
+
 \end_layout
 
-\begin_layout Subsubsection
+\end_deeper
+\begin_layout Subsection
 Calculations of binding in all host guest systems
 \end_layout
 
-\begin_layout Standard
-In figure 
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680825049
+In figure
+\change_unchanged
+ 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:ABFE-host-guest-systems"
 plural "false"
 caps "false"
@@ -10872,13 +11514,53 @@ noprefix "false"
 
 \end_inset
 
-a shows the scatter plot of all the systems that were tested against in
- the dissertation.
- The different shapes in the legend box corresponds to the different host
+a shows the scatter plot of all the systems 
+\change_deleted -1046193749 1680824997
+that
+\change_inserted -1046193749 1680824997
+we
+\change_deleted -1046193749 1680825000
+ were tested against in the dissertation
+\change_inserted -1046193749 1680825000
+ tested
+\change_unchanged
+.
+ 
+\change_inserted -1046193749 1680825020
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The different shapes in the legend box corresponds to the different host
  systems.
- In table
+ 
+\change_inserted -1046193749 1680825023
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680825032
+Tl this can go in the caption or omit it.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680825043
+In table
+\change_unchanged
+
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "table:host-guest-metrics"
 plural "false"
 caps "false"
@@ -10886,16 +11568,150 @@ noprefix "false"
 
 \end_inset
 
-shows the computed statistics for the combine dataset with a deviation (RMSE=4.1)
+shows the computed statistics for the combine dataset 
+\change_deleted -1046193749 1680825063
+with
+\change_inserted -1046193749 1680825063
+have 
+\change_deleted -1046193749 1680825069
+ a deviation
+\change_inserted -1046193749 1680825072
+an
+\change_unchanged
+ 
+\change_deleted -1046193749 1680825073
+(
+\change_unchanged
+RMSE
+\change_inserted -1046193749 1680825076
+ of 
+\change_deleted -1046193749 1680825075
+=
+\change_unchanged
+4.1
+\change_deleted -1046193749 1680825078
+)
+\change_unchanged
  and correlation of 0.76.
- In all the test cases we clearly see the ligand overall charge is dominating
- factor in estimating the absolute binding affinity of our model.
- What is unexpected is the little influence the host charge has on the binding,
- such as WP6 and OAH being the two highly perturb systems bering a charge
- of -6 and -8 receptivity.
- One possibly is both WP6 and OAH having no effect is due to the fact there
- charge carbonyl atoms are solvent exposed when the ligand is bound.This
- may be the result of GB lack of charge asymmetry in GB
+ 
+\change_inserted -1046193749 1680824947
+
+\end_layout
+
+\begin_layout Itemize
+In all the test cases
+\change_inserted -1046193749 1680825083
+,
+\change_unchanged
+ we clearly see the ligand 
+\change_deleted -1046193749 1680825183
+overall 
+\change_inserted -1046193749 1680825184
+net 
+\change_unchanged
+charge 
+\change_deleted -1046193749 1680825194
+is dominating factor in estimating
+\change_inserted -1046193749 1680825196
+strongly affects
+\change_unchanged
+ the 
+\change_inserted -1046193749 1680825212
+calculated ABFEs
+\change_deleted -1046193749 1680825210
+absolute binding affinity of our model
+\change_unchanged
+.
+ 
+\change_inserted -1046193749 1680825402
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680825458
+This may be due to the fact that GB does not naturally handle charge hydration
+ asymmetry
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mukhopadhyayChargeHydrationAsymmetry2012"
+literal "false"
+
+\end_inset
+
+ .
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680825224
+What is unexpected is the little influence
+\change_inserted -1046193749 1680825225
+However,
+\change_unchanged
+ the host charge has 
+\change_inserted -1046193749 1680825236
+little impact 
+\change_unchanged
+on the 
+\change_deleted -1046193749 1680825240
+binding
+\change_inserted -1046193749 1680825252
+ABFE.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680825296
+, such as 
+\change_unchanged
+WP6 and OAH 
+\change_deleted -1046193749 1680825304
+being the two highly perturb systems bering a
+\change_inserted -1046193749 1680825306
+have net
+\change_unchanged
+ charge
+\change_inserted -1046193749 1680825309
+s
+\change_unchanged
+ of -6 and -8 re
+\change_inserted -1046193749 1680825313
+sp
+\change_deleted -1046193749 1680825316
+c
+\change_unchanged
+e
+\change_inserted -1046193749 1680825324
+ctively
+\change_deleted -1046193749 1680825322
+ptivity.
+\change_inserted -1046193749 1680825376
+, but seem to follow the same trends as the other molecules.
+
+\change_deleted -1046193749 1680825322
+ 
+\change_inserted -1046193749 1680825250
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680826278
+One possibly is both WP6 and OAH having no effect is due to the fact there
+ charge carbonyl atoms are solvent exposed when the ligand is bound.
+\change_inserted -1046193749 1680824958
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680825397
+This may be the result of GB lack of charge asymmetry in GB
 \begin_inset CommandInset citation
 LatexCommand citep
 key "mukhopadhyayChargeHydrationAsymmetry2012"
@@ -10904,8 +11720,11 @@ literal "false"
 \end_inset
 
  which will be explored in the following section.
+\change_unchanged
+
 \end_layout
 
+\end_deeper
 \begin_layout Standard
 \begin_inset Float table
 wide false
@@ -11464,9 +12283,46 @@ BCD
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Table 4.3: This table shows various metrics for comparison of all host guest
- systems.
- Units are in kcal/mol.
+
+\change_deleted -1046193749 1680823677
+Table 4.3: This table shows various m
+\change_inserted -1046193749 1680825742
+ABFE m
+\change_unchanged
+etrics 
+\change_deleted -1046193749 1680823685
+for
+\change_unchanged
+ 
+\change_deleted -1046193749 1680825750
+comparison of
+\change_inserted -1046193749 1680825751
+for
+\change_unchanged
+ all host
+\change_inserted -1046193749 1680825753
+-
+\change_deleted -1046193749 1680825752
+ 
+\change_unchanged
+guest systems.
+ Units 
+\change_inserted -1046193749 1680823715
+for ...
+ 
+\change_unchanged
+are in kcal/mol.
+\change_inserted -1046193749 1680823669
+
+\begin_inset CommandInset label
+LatexCommand label
+name "table:host-guest-metrics"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -11475,12 +12331,16 @@ Table 4.3: This table shows various metrics for comparison of all host guest
 \end_layout
 
 \begin_layout Plain Layout
+
+\change_deleted -1046193749 1680823667
 \begin_inset CommandInset label
 LatexCommand label
 name "table:host-guest-metrics"
 
 \end_inset
 
+
+\change_unchanged
 
 \end_layout
 
@@ -11527,7 +12387,58 @@ Comparison of calculated absolute binding free energies
 \begin_inset Formula $GB^{OBC}$
 \end_inset
 
+
+\change_deleted -1046193749 1680823771
 .
+
+\change_inserted -1046193749 1680823901
+
+\series default
+ for (a) all hosts, (b) CB7, (c) WP6, (d) octa-acid, (e) 
+\begin_inset Formula $\alpha$
+\end_inset
+
+/
+\begin_inset Formula $\beta$
+\end_inset
+
+-cyclodextrin.
+ The black solid line is the experimental identity.
+ The blue solid indicates the linear regression fitting for host guest systems
+ in this study.
+ Ligand charge color....
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ABFE-host-guest-systems"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680823607
+TL I think you should have alpha and beta in separate plots.
+ They are different hosts and everything else about them is reported separately.
+ Then you can also include the guest names.
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680823588
+TL get rid of the titles and put a label in the lower lefthand corner with
+ the name of the host.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -11536,6 +12447,8 @@ Comparison of calculated absolute binding free energies
 \end_layout
 
 \begin_layout Plain Layout
+
+\change_deleted -1046193749 1680823439
 The black solid line is the experimental identity.
  The blue solid indicates the linear regression fitting for host guest systems
  in this study.
@@ -11548,6 +12461,8 @@ The linear regression fitting of 14-CB7 systems in this study.
 \end_layout
 
 \begin_layout Plain Layout
+
+\change_deleted -1046193749 1680823439
 
 \series bold
 b 
@@ -11574,6 +12489,8 @@ Linear fitted regression of both
 \end_layout
 
 \begin_layout Plain Layout
+
+\change_deleted -1046193749 1680823439
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:ABFE-host-guest-systems"
@@ -11581,10 +12498,18 @@ name "fig:ABFE-host-guest-systems"
 \end_inset
 
 
+\change_unchanged
+
 \end_layout
 
 \end_inset
 
+
+\change_inserted -1046193749 1680825488
+
+\end_layout
+
+\begin_layout Subsection
 Generalize Born hydration asymmetry correction 
 \begin_inset CommandInset label
 LatexCommand label
@@ -11595,7 +12520,9 @@ name "sec:Generalize-Born-hydration"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680825590
 Calculation of all host guest system binding affinity calculations is shown
  in 
 \begin_inset CommandInset ref
@@ -11615,7 +12542,33 @@ a with the generalize Born model (
  In which we clearly see a bias of ligand charge having a major influencing
  the overall binding of these host guest system and host systems have little
  or no effect.
- It is known that the GB models lack hydration asymmetry
+ 
+\change_inserted -1046193749 1680825811
+Given that 
+\change_deleted -1046193749 1680825813
+It is known
+\change_unchanged
+ that the GB model
+\change_inserted -1046193749 1680825819
+ used
+\change_deleted -1046193749 1680825816
+s
+\change_unchanged
+ 
+\change_deleted -1046193749 1680825828
+lack
+\change_inserted -1046193749 1680825845
+does not correctly handle
+\change_unchanged
+ 
+\change_inserted -1046193749 1680825852
+charge 
+\change_unchanged
+hydration asymmetry
+\change_inserted -1046193749 1680825857
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "mukhopadhyayChargeHydrationAsymmetry2012"
@@ -11623,19 +12576,85 @@ literal "false"
 
 \end_inset
 
- which indicates the charge bias we are observing for the charge ligands.
- Therefore we applied a linear hydration asymmetry correction:
+
+\change_inserted -1046193749 1680825868
+ and we have observed a 
+\change_deleted -1046193749 1680825871
+ which indicates the charge
+\change_unchanged
+ bias 
+\change_inserted -1046193749 1680825888
+in predicted ABFEs
+\change_deleted -1046193749 1680825894
+we are observing for the 
+\change_inserted -1046193749 1680825924
+associated with 
+\change_deleted -1046193749 1680825926
+charge
+\change_unchanged
+ ligand
+\change_inserted -1046193749 1680825930
+ charge
+\change_deleted -1046193749 1680825934
+s
+\change_inserted -1046193749 1680825935
+,
+\change_deleted -1046193749 1680825938
+.
+ Therefore
+\change_unchanged
+ we applied a linear hydration asymmetry correction
+\change_inserted -1046193749 1680825944
+,
+\change_deleted -1046193749 1680825944
+:
+\change_unchanged
+
 \begin_inset Formula 
 \begin{equation}
-\Delta G_{bind}^{corr}=(1+a)\Delta G_{bind}^{GB}+b\label{4.3}
+\Delta G_{bind}^{corr}=(1+a)\Delta G_{bind}^{GB}+b\label{eq:CHA-correction}
 \end{equation}
 
 \end_inset
 
-A separate linear correction we were done for positive, neutral and negative
- ligands and the fitted parameters are shown in 
+
+\change_inserted -1046193749 1680825998
+,where ...
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680826002
+A s
+\change_inserted -1046193749 1680826017
+We fit s
+\change_unchanged
+eparate 
+\change_deleted -1046193749 1680826007
+linear 
+\change_unchanged
+correction
+\change_inserted -1046193749 1680826009
+s
+\change_unchanged
+ 
+\change_deleted -1046193749 1680826022
+we were done
+\change_unchanged
+ for positive, neutral and negative ligands
+\change_inserted -1046193749 1680826031
+ 
+\change_deleted -1046193749 1680826029
+ and the fitted parameters are shown in
+\change_unchanged
+ 
+\change_inserted -1046193749 1680826038
+(
+\change_unchanged
+
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "table:fitted-parameters"
 plural "false"
 caps "false"
@@ -11643,9 +12662,14 @@ noprefix "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1680826041
+)
+\change_unchanged
 .
 \end_layout
 
+\end_deeper
 \begin_layout Standard
 \begin_inset Float table
 wide false
@@ -11816,6 +12840,32 @@ b
 
 \begin_layout Plain Layout
 Hydration asymmetry linear corrections fitted parameters
+\change_inserted -1046193749 1680826064
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680826069
+TL units
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "table:fitted-parameters"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -11824,6 +12874,8 @@ Hydration asymmetry linear corrections fitted parameters
 \end_layout
 
 \begin_layout Plain Layout
+
+\change_deleted -1046193749 1680826055
 \begin_inset CommandInset label
 LatexCommand label
 name "table:fitted-parameters"
@@ -11831,6 +12883,8 @@ name "table:fitted-parameters"
 \end_inset
 
 
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -11838,12 +12892,16 @@ name "table:fitted-parameters"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680826078
 Therefore a separate linear correction we were done for positive, neutral
  and negative ligands.
  In 
+\change_unchanged
+
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:HCA"
 plural "false"
 caps "false"
@@ -11851,18 +12909,33 @@ noprefix "false"
 
 \end_inset
 
- shows the corrected calculations of binding using 
+ shows the corrected 
+\change_deleted -1046193749 1680826091
+calculations
+\change_inserted -1046193749 1680826093
+ABFE values
+\change_deleted -1046193749 1680826100
+ of binding using 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "4.3"
+reference "eq:CHA-correction"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
+
+\change_unchanged
 .
- We see an overall improvement all host system calculations in the correction
+ 
+\change_inserted -1046193749 1680826113
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We see an overall improvement all host system calculations in the correction
  of with a deviation (
 \begin_inset Formula $R^{2}=1.06kcal/mol$
 \end_inset
@@ -11871,12 +12944,89 @@ noprefix "false"
 \begin_inset Formula $(RMSE=3.7kcal/mol)$
 \end_inset
 
+
+\change_inserted -1046193749 1680826200
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:ABFE-metrics-CHA"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\change_unchanged
 .
- In table 4.2 highlights the hydration asymmetry correction metrics of all
- host guest systems.
- In all host guest systems we saw a improvement of deviation within 1kcal/mol.
+ 
+\change_inserted -1046193749 1680826168
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680826175
+TL you re comparing different values.
+\change_unchanged
+
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680826215
+In table 4.2 highlights the hydration asymmetry correction metrics of all
+ host guest systems.
+ 
+\change_inserted -1046193749 1680826232
+
+\end_layout
+
+\begin_layout Itemize
+In all host guest systems we saw a improvement of deviation within 1kcal/mol.
+\change_inserted -1046193749 1680826285
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680826242
+TL not sure what you are trying to say in this sentence,
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680826318
+The correction depends only on ligand charge and is independent of host
+ charge.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1046193749 1680826286
+One possibly is that both WP6 and OAH having no effect is due to the fact
+ there charge carbonyl atoms are solvent exposed when the ligand is bound.
+\change_unchanged
+
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Standard
 \begin_inset Float figure
 wide false
@@ -11898,6 +13048,17 @@ status open
 
 \begin_layout Plain Layout
 Generalized Born-Hydration Asymmetry Correction.
+\change_inserted -1046193749 1680825615
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:HCA"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -11906,12 +13067,16 @@ Generalized Born-Hydration Asymmetry Correction.
 \end_layout
 
 \begin_layout Plain Layout
+
+\change_deleted -1046193749 1680825613
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:HCA"
 
 \end_inset
 
+
+\change_unchanged
 
 \end_layout
 
@@ -12421,9 +13586,37 @@ WP6
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-This table shows various metrics for comparison of all host guest systems
- using the generalized Born-hydration asymmetry correction.
+
+\change_deleted -1046193749 1680825763
+This table shows various metrics for comparison of
+\change_inserted -1046193749 1680825766
+ABFE metrics
+\change_unchanged
+ all host
+\change_inserted -1046193749 1680825644
+-
+\change_deleted -1046193749 1680825640
+ 
+\change_unchanged
+guest systems 
+\change_deleted -1046193749 1680825771
+using
+\change_inserted -1046193749 1680825771
+with
+\change_unchanged
+ the generalized Born-hydration asymmetry correction.
  Units are in kcal/mol.
+\change_inserted -1046193749 1680825678
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:ABFE-metrics-CHA"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -12440,20 +13633,113 @@ This table shows various metrics for comparison of all host guest systems
 Performance Scaling
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680826359
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
- is implemented in parallel, so if users have availability to multiple processor
-s can speed up overall workflow completion.
+
+\change_inserted -1046193749 1680826387
+As 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680826359
+ISDDM.py
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ is implemented in parallel, 
+\change_deleted -1046193749 1680826395
+so if 
+\change_unchanged
+users have availability to 
+\change_inserted -1046193749 1680826406
+employ 
+\change_unchanged
+multiple processors 
+\change_deleted -1046193749 1680826409
+can
+\change_inserted -1046193749 1680826409
+to
+\change_unchanged
+ speed
+\change_deleted -1046193749 1680826419
+ 
+\change_unchanged
+up 
+\change_deleted -1046193749 1680826424
+overall workflow completion
+\change_inserted -1046193749 1680826428
+ABFE calculations
+\change_unchanged
+.
+\change_inserted -1046193749 1680826522
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680826522
  
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
- package utilizes 
+
+\change_inserted -1046193749 1680826502
+To run jobs in parallel, 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680826432
+ISDDM.py
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1680826439
+package
+\change_unchanged
+ utilizes
+\change_inserted -1046193749 1680826454
+ the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680826456
+Toil
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ 
+\change_inserted -1046193749 1680826461
+package
+\change_deleted -1046193749 1680826446
+
 \begin_inset Formula $Toil$
 \end_inset
 
+
+\change_unchanged
 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -12462,25 +13748,108 @@ literal "false"
 
 \end_inset
 
- which is a workflow management system which allow us to utilize all processors
- available to run and complete all tasks.
- Since all intermediate states (3-7
+
+\change_inserted -1046193749 1680826476
+,
+\change_unchanged
+ which is a workflow management system
+\change_deleted -1046193749 1680826514
+ which allow us to utilize all processors available to run and complete
+ all tasks
+\change_unchanged
+.
+ 
+\change_inserted -1046193749 1680826525
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Since all intermediate states (3-7
 \begin_inset Formula $\lambda$
 \end_inset
 
 ) are independent, all MD simulations, post-analysis calculations and MBAR
  computation can be parallelized given number of available processors.
- As shown in figure 4.3 shows the processor scaling in order to complete
- the entire workflow protocol (figure 2.1) which was tested on 150-atom CB7-C1
- complex system The automation application was able to achieve perfect scaling
- as the number of processes increases which suggest this automation application
  
+\change_inserted -1046193749 1680826533
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_deleted -1046193749 1680826586
+As shown in 
+\change_inserted -1046193749 1680826550
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:-processor-scaling"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+,
+\change_deleted -1046193749 1680826553
+figure 4.3 
+\change_inserted -1046193749 1680826590
+ 
+\change_unchanged
+shows the processor 
+\change_deleted -1046193749 1680826599
+scaling
+\change_inserted -1046193749 1680826599
+time
+\change_deleted -1046193749 1680826601
+ in order
+\change_unchanged
+ to complete the entire workflow protocol (figure 2.1)
+\change_inserted -1046193749 1680826611
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680826607
+TL FIX
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+,
+\change_unchanged
+ which was tested on 150-atom CB7-C1 complex system
+\change_deleted -1046193749 1680826589
+ 
+\change_inserted -1046193749 1680826564
+
+\end_layout
+
+\begin_layout Itemize
+The automation application was able to achieve
+\change_inserted -1046193749 1680826567
+ near
+\change_unchanged
+ perfect scaling as the number of processes increases
+\change_deleted -1046193749 1680826578
+ which suggest this automation application 
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
  is scalable.
+\change_inserted -1046193749 1680826578
+.
+\change_unchanged
+
 \end_layout
 
+\end_deeper
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -12502,20 +13871,72 @@ status open
 \end_inset
 
 
+\change_inserted -1046193749 1680826250
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680826257
+TL missing figure.
+ git add.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\change_inserted -1046193749 1680826344
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1680826348
+ISDDM.py
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1680826342
+
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
+
+\change_unchanged
  processor scaling performance for MM-GBSA workflow protocol used in this
  dissertation on 150-atom CB7-C1 complex.
  The y-axis are times required for entire workflow to finish and x-axis
  are the number of processors used.
- .
+ 
+\change_inserted -1046193749 1680826339
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:-processor-scaling"
+
+\end_inset
+
+
+\change_deleted -1046193749 1680826330
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
