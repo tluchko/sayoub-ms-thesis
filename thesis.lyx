@@ -63,7 +63,7 @@ logicalmkup
 \use_microtype false
 \use_dash_ligatures true
 \graphics default
-\default_output_format default
+\default_output_format pdf2
 \output_sync 0
 \bibtex_command default
 \index_command default
@@ -112,12 +112,13 @@ logicalmkup
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes true
+\tracking_changes false
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
 \author -1463621830 "steven ayoub"
+\author -1046193749 "Luchko"
 \end_header
 
 \begin_body
@@ -1760,16 +1761,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Our modified thermodynamic cycle
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Major states in our thermodynamic cycle.
+Our modified thermodynamic cycle.
+ Major states in our thermodynamic cycle.
  The free energy change in GB solvent is the free energy difference between
  states 1 and 8.
  Conformational restraints (padlock) indicates the presence of harmonic
@@ -1783,10 +1776,19 @@ Major states in our thermodynamic cycle.
  The light blue background is representation of GBSA solvent.
  Orientational restraints (red dotted line) are applied in states 5 and
  6
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset citation
 LatexCommand citep
 key "boreschAbsoluteBindingFree2003"
 literal "false"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1795,9 +1797,23 @@ literal "false"
 ly restrained relative to receptor.
  State 5 is equivalent and not simulated.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:thermodynamic-cycle"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1980,22 +1996,19 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Implementation of Boresch Restraints
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Set of restraints proposed by Boresch[32] for use in free energy calculations.
+Implementation of Boresch Restraints.
+ Set of restraints proposed by Boresch[32] for use in free energy calculations.
  The atoms and terms involved in this set of restraints are shown.
  Atoms “a,” “b,” and “c” belong to the ligand (on the top right), while
  atoms “A,” “B,” and “C” belong to the protein (on bottom left)
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Boresch-restraints-1-1"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2359,15 +2372,7 @@ status open
 
 \begin_layout Plain Layout
 Host guest system dataset.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-CB7 receptor and 14 guest ligands from the SAMPL4 challenge dataset described
+ CB7 receptor and 14 guest ligands from the SAMPL4 challenge dataset described
  in 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2403,6 +2408,11 @@ literal "false"
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Host-guest-systems"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -3753,6 +3763,8 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+
+\change_deleted -1046193749 1681162324
 \begin_inset Graphics
 	filename images/overlap_matrix_15_windows.png
 	lyxscale 50
@@ -3761,6 +3773,31 @@ status open
 \end_inset
 
 
+\change_inserted -1046193749 1681162324
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681162324
+\begin_inset Graphics
+	filename images/overlap_matrix_15_windows.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3768,15 +3805,7 @@ status open
 
 \begin_layout Plain Layout
 Overlap matrix for WP6-G1 with 15 restraint windows.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-The overlap matrix showcases all the windows for the WP6-G1 complex where
+ The overlap matrix showcases all the windows for the WP6-G1 complex where
  every column in denotes denote every simulation performed in states 6-8
  in 
 \begin_inset CommandInset ref
@@ -3797,12 +3826,14 @@ noprefix "false"
  to state 11.
  The probability of finding a microstate sampled state 11 in state 12 is
  0.01.
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Overlap-matrix_15_windows"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -3821,6 +3852,8 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+
+\change_deleted -1046193749 1681162353
 \begin_inset Graphics
 	filename images/overlap_matrix_29_windows.png
 	lyxscale 50
@@ -3829,6 +3862,31 @@ status open
 \end_inset
 
 
+\change_inserted -1046193749 1681162353
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681162353
+\begin_inset Graphics
+	filename images/overlap_matrix_29_windows.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3836,15 +3894,7 @@ status open
 
 \begin_layout Plain Layout
 Overlap matrix for WP6-G1 with 29 restraint windows.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-The overlap matrix showcases all the windows for the WP6-G1 complex where
+ The overlap matrix showcases all the windows for the WP6-G1 complex where
  every column in denotes denote every simulation performed in states 6-8
  in 
 \begin_inset CommandInset ref
@@ -3863,12 +3913,14 @@ noprefix "false"
 \series default
 Increasing the number of restraint windows to 29 show good overlap throughout
  all intermediate windows.
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:overlap_matrix_29_windows"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -4164,18 +4216,15 @@ Automated workflow pipeline for
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
-
-\end_layout
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Automated-workflow"
 
 \end_inset
 
 
 \end_layout
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Automated-workflow"
 
 \end_inset
 
@@ -5087,17 +5136,14 @@ BCD
 Table 4.3: This table shows various metrics for comparison of all host guest
  systems.
  Units are in kcal/mol.
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "table:host-guest-metrics"
 
 \end_inset
 
 
 \end_layout
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "table:host-guest-metrics"
 
 \end_inset
 
@@ -5116,7 +5162,7 @@ name "table:host-guest-metrics"
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -5148,14 +5194,8 @@ Comparison of calculated absolute binding free energies
 \end_inset
 
 .
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
+ 
+\series default
 The black solid line is the experimental identity.
  The blue solid indicates the linear regression fitting for host guest systems
  in this study.
@@ -5165,10 +5205,6 @@ a.
  
 \series default
 The linear regression fitting of 14-CB7 systems in this study.
-\end_layout
-
-\begin_layout Plain Layout
-
 \series bold
 b 
 \series default
@@ -5191,12 +5227,14 @@ Linear fitted regression of both
 \end_inset
 
 -cyclodextrin.
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:ABFE-host-guest-systems"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -5425,18 +5463,16 @@ b
 
 \begin_layout Plain Layout
 Hydration asymmetry linear corrections fitted parameters.
- Units in kcal/mol
-\end_layout
+ Units in kcal/mol.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "table:fitted-parameters"
 
 \end_inset
 
 
 \end_layout
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "table:fitted-parameters"
 
 \end_inset
 
@@ -5496,22 +5532,16 @@ status open
 
 \begin_layout Plain Layout
 Generalized Born-Hydration Asymmetry Correction.
-\end_layout
+ The different shapes in the legend box corresponds to the different host
+ systems.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:HCA"
 
 \end_inset
 
 
 \end_layout
-
-\begin_layout Plain Layout
-The different shapes in the legend box corresponds to the different host
- systems.
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:HCA"
 
 \end_inset
 
@@ -6136,9 +6166,18 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename /Users/stevenayoub/Desktop/DDM_metro/CB7_WP7_data/scaling.pdf
 	width 100text%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -8235,15 +8274,11 @@ QM-VM2(TPSS-D3)**
 
 \begin_layout Plain Layout
 Predictions from SAMPL4 CB7 dataset.
-\end_layout
-
-\end_inset
-
-
-\end_layout
+ All entries were from the SAMPL4 CB7 dataset 
+\begin_inset Note Note
+status open
 
 \begin_layout Plain Layout
-All entries were from the SAMPL4 CB7 dataset
 \begin_inset CommandInset citation
 LatexCommand citep
 key "muddanaSAMPL4HostGuest2014a"
@@ -8251,8 +8286,18 @@ literal "false"
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
 .
- Units are in kcal/mol
+ Units are in kcal/mol.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -8503,9 +8548,18 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename images/benz_flip_oah.png
 	width 100text%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -8517,29 +8571,18 @@ status open
 
 \begin_layout Plain Layout
 OAH-binding models with cationic and negatively charge guest.
-\end_layout
+ a.
+ Benzoate ring flip to form a short range ionic interactions with the alkylammon
+ium head group of the guest (hxa).
+ b the negativity charge guest (m4p) without benzoate ring flipping.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Benz-flip"
 
 \end_inset
 
 
 \end_layout
-
-\begin_layout Plain Layout
-a.
- Benzoate ring flip to form a short range ionic interactions with the alkylammon
-ium head group of the guest (hxa).
- b the negativity charge guest (m4p) without benzoate ring flipping.
-
-\change_deleted -1463621830 1680845469
- 
-\change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Benz-flip"
 
 \end_inset
 
@@ -9573,7 +9616,7 @@ The CSUNthesis way of adding the bibliography does not work with \SpecialChar Ly
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
-bibfiles "thesis,thesis_papers"
+bibfiles "thesis"
 options "achemso"
 
 \end_inset
