@@ -13963,9 +13963,29 @@ CB7 SAMPL4 Comparison
 
 \begin_layout Itemize
 Overall, binding affinity prediction for 
+\change_inserted -1046193749 1681234994
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681234997
+ISDDM.py
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1681234991
+
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
+
+\change_unchanged
  workflow performed well for CB7 system compared to other submission on
  to the SAMPL4 challenge
 \begin_inset CommandInset citation
@@ -13980,16 +14000,76 @@ literal "false"
 
 \begin_deeper
 \begin_layout Itemize
-We rank one of the top performers among the challenge submissions (table
- 5.1).
- Our Pearson correlation(
+
+\change_inserted -1046193749 1681235119
+If our uncorrected method were submitted,
+\change_deleted -1046193749 1681235123
+We 
+\change_inserted -1046193749 1681235124
+ it would 
+\change_unchanged
+rank 
+\change_inserted -1046193749 1681235129
+as 
+\change_unchanged
+one of the top performers among the challenge submissions (
+\change_inserted -1046193749 1681235048
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Predictions-from-SAMPL4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_deleted -1046193749 1681235040
+table 5.1
+\change_unchanged
+)
+\change_inserted -1046193749 1681235320
+ and our corrected results would out perform all entries
+\change_unchanged
+.
+ 
+\change_inserted -1046193749 1681235349
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1046193749 1681235352
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681235645
+TL the discussion gets a little muddled here.
+ I suggest breaking down the discussion by metric or by method.
+ Metric is probably the most succinct, because you can omit the poor performers.
+ remember to discuss the three QM methods at the bottom.
+ They were no part of the challenge.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Our Pearson correlation(
 \begin_inset Formula $R^{2}=0.78$
 \end_inset
 
 ) where only two methods had match ours.
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 The first being method was RRHO rigid rotor harmonic oscillator approximation
  
@@ -16010,6 +16090,49 @@ QM-VM2(TPSS-D3)**
 
 \begin_layout Plain Layout
 Predictions from SAMPL4 CB7 dataset.
+
+\change_inserted -1046193749 1681235178
+ All entries were from the SAMPL4 CB7 dataset
+\begin_inset CommandInset citation
+LatexCommand citep
+key "muddanaSAMPL4HostGuest2014a"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681235520
+TL the last three are recent and you should cite the paper.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681235530
+TL define the acronyms.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ Units are in kcal/mol.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Predictions-from-SAMPL4"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -16018,6 +16141,8 @@ Predictions from SAMPL4 CB7 dataset.
 \end_layout
 
 \begin_layout Plain Layout
+
+\change_deleted -1046193749 1681235026
 All entries were from the SAMPL4 CB7 dataset
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -16028,6 +16153,8 @@ literal "false"
 
 .
  Units are in kcal/mol
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -16037,11 +16164,73 @@ literal "false"
 
 \begin_layout Subsection
 WP6 SAMPL9 Comparison
+\change_inserted -1046193749 1681235812
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1681235813
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681236467
+TL you should have a table for these results.
+ See https://github.com/samplchallenges/SAMPL9/blob/main/host_guest/Analysis/All_
+Accuracy/WP6/StatisticsTables/statistics.csv 
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681236484
+TL You'll have to be careful about whether or not the optional ligands were
+ included.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
-SAMPL9 challenge there were 5 rank submissions for WP6 dataset.
- The results from rank submissions were taken from another published work
+
+\change_inserted -1046193749 1681235733
+There were 5 rank submissions for WP6 dataset from 
+\change_unchanged
+SAMPL9 challenge 
+\change_deleted -1046193749 1681235720
+there were 5 rank submissions for WP6 dataset
+\change_unchanged
+.
+ 
+\change_inserted -1046193749 1681235739
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1046193749 1681235762
+As the official results have not been published at this time, 
+\change_deleted -1046193749 1681235769
+The results from rank
+\change_inserted -1046193749 1681235770
+the
+\change_unchanged
+ submissions were taken from 
+\change_inserted -1046193749 1681235787
+Ref.
+ 
+\change_deleted -1046193749 1681235779
+another published work
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "liuComprehensiveEvaluationEndpoint2022"
@@ -16052,7 +16241,6 @@ literal "false"
 .
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 Looking at the RMSE to rank criteria of submissions, the machine learning
  method which had the smallest RMSE ~2 kcal/mol and performed the best.
@@ -16103,7 +16291,37 @@ literal "false"
 \begin_layout Itemize
 Another published study after SAMPL9 challenge also performed end-point
  free energy study on SAMPL9 challenge data set.
- In which compute a comparison between different charge models for solutes
+ 
+\change_inserted -1046193749 1681238802
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681239015
+TL is this in the table? Citation?
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681239045
+TL I'm not sure this is worth discussing.
+ It looks like the results are poor.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_deleted -1046193749 1681238825
+In which compute a comparison between different charge models for solutes
  such as AM1-BCC
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -16113,9 +16331,10 @@ literal "false"
 \end_inset
 
 .
+\change_unchanged
+
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 In which the study looked at the effect of different charge models such
  as AM1-BCC
@@ -16135,6 +16354,25 @@ literal "false"
 \end_inset
 
  and RESP-2 using the GAFF2 forcefield.
+
+\change_inserted -1046193749 1681238883
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681238899
+TL I've never heard of RESP-1/2
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_deeper
@@ -16153,14 +16391,31 @@ We had similar parameterization setup using the AM1-BCC model with GAFFV2
 
 \begin_deeper
 \begin_layout Itemize
-This is encouraging, because generally the use of either MM/GBSA or MM/PBSA
- methods suffers from severe convergence problems which requires simulations
- of many replicas to yield good precision[cite-].
+
+\change_deleted -1046193749 1681238951
+This is encouraging, because
+\change_inserted -1046193749 1681238952
+However,
+\change_unchanged
+ 
+\change_deleted -1046193749 1681238959
+generally the use of either
+\change_unchanged
+ MM/GBSA or MM/PBSA methods 
+\change_inserted -1046193749 1681238997
+typically employ several approximations, making the 
+\change_unchanged
+suffers from severe convergence problems which requires simulations of many
+ replicas to yield good precision[cite-].
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_deleted -1046193749 1681238938
 Making it an overall more computational expensive compared to our method.
+\change_unchanged
+
 \end_layout
 
 \end_deeper
@@ -16168,6 +16423,29 @@ Making it an overall more computational expensive compared to our method.
 \end_deeper
 \begin_layout Subsection
 OAH SAMPL4 comparison
+\change_inserted -1046193749 1681237505
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1681237507
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681237514
+TL again, you need a table
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
@@ -16183,9 +16461,51 @@ literal "false"
 \end_inset
 
 .
+
+\change_inserted -1046193749 1681238034
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681238112
+TL to discuss these results, you need to calculate stats with only the 9
+ molecules You have 23.
+ This could change things a lot
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1046193749 1681237969
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681238210
+TL Results were generally pretty good for this system.
+ You should mention this, whether or not the results change when you look
+ at just the 9 guests.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
 \begin_layout Itemize
 One submission in particular interest used BEDAM method 
 \begin_inset CommandInset citation
@@ -16203,7 +16523,25 @@ literal "false"
 
 \end_inset
 
-] and the AGBNP2 
+] and the 
+\change_inserted -1046193749 1681237723
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681237725
+TL define
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+AGBNP2 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "gallicchioAGBNP2ImplicitSolvation2009"
@@ -16217,16 +16555,36 @@ literal "false"
 
 \begin_deeper
 \begin_layout Itemize
-They reported average signed error was RMSE
+They reported average signed error was 
+\change_deleted -1046193749 1681239232
+RMSE
 \begin_inset Formula $_{o}$
 \end_inset
 
-=1.3 and root mean square error of all pairs of relative binding free energies
- RMSE
+=1.3
+\change_inserted -1046193749 1681239232
+
+\begin_inset Formula $\text{RMSE}_{o}=\unit[1.3]{kcal/mol}$
+\end_inset
+
+
+\change_unchanged
+ and root mean square error of all pairs of relative binding free energies
+ 
+\change_deleted -1046193749 1681239259
+RMSE
 \begin_inset Formula $_{r}$
 \end_inset
 
-=0.9 kcal/mol.
+=0.9 kcal/mol
+\change_inserted -1046193749 1681239259
+
+\begin_inset Formula $\text{RMSE}_{r}=\unit[0.9]{kcal/mol}$
+\end_inset
+
+
+\change_unchanged
+.
 \end_layout
 
 \begin_deeper
@@ -16242,12 +16600,50 @@ Also higher a one of the highest Person correlation coefficient (
 \end_deeper
 \begin_layout Itemize
 As for our results it we compute the 9 guests molecules that were used from
- the SAMPL4 challenge, our method will results in RMSE_o=1.3 and RMSE_r=2.0
- kcal/mol and correlation of 
+ the SAMPL4 challenge, our method will results in 
+\change_deleted -1046193749 1681239141
+RMSE_o=1.3
+\change_inserted -1046193749 1681239141
+
+\begin_inset Formula $\text{RMSE}_{o}=1\unit[.3]{kcal/mol}$
+\end_inset
+
+
+\change_unchanged
+ and 
+\change_deleted -1046193749 1681239170
+RMSE_r=2.0 kcal/mol
+\change_inserted -1046193749 1681239170
+
+\begin_inset Formula $\text{RMSE}_{r}=\unit[2.0]{kcal/mol}$
+\end_inset
+
+
+\change_unchanged
+ and correlation of 
 \begin_inset Formula $R^{2}=0.64$
 \end_inset
 
 .
+
+\change_inserted -1046193749 1681237259
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681238021
+TL corrected or uncorrected? 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_deeper
@@ -16274,29 +16670,134 @@ Where our GB model is unable to accuracy treat hydration in deep hydrophobic
 \end_deeper
 \end_deeper
 \begin_layout Itemize
-Our predictions for octa-acid were negativity effected due to overestimation
- of positivity charge ligands (trz, hxa) than the negatively charge ones.
+Our 
+\change_inserted -1046193749 1681238303
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681238307
+TL uncorrected?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ 
+\change_unchanged
+predictions for octa-acid were 
+\change_deleted -1046193749 1681238266
+negativity
+\change_inserted -1046193749 1681238269
+adversely
+\change_unchanged
+ 
+\change_inserted -1046193749 1681238274
+a
+\change_deleted -1046193749 1681238274
+e
+\change_unchanged
+ffected 
+\change_deleted -1046193749 1681238379
+due to overestimation of
+\change_inserted -1046193749 1681238452
+primarily the much lower binding free energies predicted for the
+\change_unchanged
+ positiv
+\change_inserted -1046193749 1681238396
+ely
+\change_unchanged
+i
+\change_deleted -1046193749 1681238390
+ty
+\change_unchanged
+ charge ligands (trz, hxa) 
+\change_deleted -1046193749 1681238688
+than the negatively charge ones
+\change_inserted -1046193749 1681238702
+, which remain outliers, even after correction
+\change_unchanged
+.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Given the host bearing a highly negatively charge (-8), this may be pointed
- towards a lack of charge screening from our GB model.
+
+\change_inserted -1046193749 1681238514
+Beyond charge hydration asymmetry,
+\change_deleted -1046193749 1681238519
+Given the host bearing a
+\change_inserted -1046193749 1681238551
+ this may be the result of the large
+\change_deleted -1046193749 1681238526
+ highly
+\change_unchanged
+ negative
+\change_deleted -1046193749 1681238527
+ly
+\change_unchanged
+ charge (
+\change_deleted -1046193749 1681238557
+-8
+\change_inserted -1046193749 1681238557
+
+\begin_inset Formula $-8e$
+\end_inset
+
+
+\change_unchanged
+)
+\change_inserted -1046193749 1681238567
+ on the host
+\change_unchanged
+, 
+\change_inserted -1046193749 1681238571
+coupled with
+\change_deleted -1046193749 1681238577
+this may be pointed towards 
+\change_inserted -1046193749 1681238582
+ 
+\change_unchanged
+a lack of charge screening from our GB model.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-This charge asymmetry is perhaps due to the conformational reorganization
- of a flipped of benzoate ring that occurs for positively charge guests.
+This 
+\change_deleted -1046193749 1681238729
+charge asymmetry is perhaps due to the
+\change_inserted -1046193749 1681238735
+may have caused the
+\change_unchanged
+ conformational reorganization of a flipped of benzoate ring that occurs
+ for positively charge guests.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-During our endstate simulations we also oberseved the alkylammonium head
- group of the ligand forming strong short range electrostatic interactions
- with the benzoate group
+During our end
+\change_inserted -1046193749 1681237558
+-
+\change_unchanged
+state simulations we also ob
+\change_deleted -1046193749 1681237598
+er
+\change_unchanged
+se
+\change_inserted -1046193749 1681237602
+r
+\change_unchanged
+ved the alkylammonium head group of the ligand forming strong short range
+ electrostatic interactions with the benzoate group
+\change_inserted -1046193749 1681237636
+ (
+\change_unchanged
+
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Benz-flip"
 plural "false"
 caps "false"
@@ -16304,6 +16805,12 @@ noprefix "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681237641
+).
+\end_layout
+
+\begin_layout Itemize
 A previous study shown that better incorporations of ionic screening, can
  disrupt this interaction and binding is weakened
 \begin_inset CommandInset citation
@@ -16375,7 +16882,11 @@ Generalize Born Hydration Asymmetry Correction Considerations
 \begin_layout Itemize
 The simplicity of implicit solvent models by treating water structureless
  continuum dielectric medium provides fast estimation of solvation effects
- making them very popular for virtual screening campaigns.
+ making them very popular for virtual screening
+\change_deleted -1046193749 1681239348
+ campaigns
+\change_unchanged
+.
 
 \change_deleted -1463621830 1680753196
  
@@ -16385,9 +16896,33 @@ The simplicity of implicit solvent models by treating water structureless
 
 \begin_deeper
 \begin_layout Itemize
-Generalize Born arguably one the faster implicit models due to making approximat
-ing for calculating molecular electrostatics in solvent as describing by
- the Poisson Boltzmann equation.
+Generalize Born 
+\change_inserted -1046193749 1681239356
+is 
+\change_unchanged
+arguably one the faster implicit models
+\change_inserted -1046193749 1681239363
+,
+\change_unchanged
+ due to 
+\change_deleted -1046193749 1681239386
+making 
+\change_unchanged
+approximating 
+\change_deleted -1046193749 1681239394
+for calculating molecular electrostatics in solvent as describing by
+\change_unchanged
+ the Poisson
+\change_inserted -1046193749 1681239399
+-
+\change_deleted -1046193749 1681239398
+ 
+\change_unchanged
+Boltzmann equation
+\change_inserted -1046193749 1681239411
+ with a simple analytical formula
+\change_unchanged
+.
 
 \change_deleted -1463621830 1680753196
  
@@ -16397,15 +16932,32 @@ ing for calculating molecular electrostatics in solvent as describing by
 
 \begin_deeper
 \begin_layout Itemize
-However with a number of approximations for solving polar interactions (electros
-tatics), generalize Born (GB) models causes a separation from the more accurate
- explicit solvent treatment.
+However
+\change_inserted -1046193749 1681239520
+, it is unable to account for several solvation properties
+\change_deleted -1046193749 1681239534
+ with a number of approximations for solving polar interactions (electrostatics)
+, generalize Born (GB) models causes a separation from
+\change_inserted -1046193749 1681239538
+ that are treated with
+\change_unchanged
+ the more accurate explicit solvent 
+\change_deleted -1046193749 1681239543
+treatment
+\change_inserted -1046193749 1681239544
+models
+\change_unchanged
+.
 \end_layout
 
 \end_deeper
 \end_deeper
 \begin_layout Itemize
-One major approximation is the neglect of hydration asymmetry (CHA) 
+One major approximation is the neglect of 
+\change_inserted -1046193749 1681239554
+charge 
+\change_unchanged
+hydration asymmetry (CHA) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "mukhopadhyayChargeHydrationAsymmetry2012"
@@ -16413,6 +16965,10 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681239559
+,
+\change_unchanged
  which contributed towards solvation free energy 
 \begin_inset Formula $\Delta G_{solv}$
 \end_inset
@@ -16420,10 +16976,29 @@ literal "false"
  on the sign of the charges of the solute.
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-From entire host guest dataset 
+
+\change_inserted -1046193749 1681239586
+When considering 
+\change_deleted -1046193749 1681239601
+From 
+\change_inserted -1046193749 1681239602
+our 
+\change_unchanged
+entire host
+\change_inserted -1046193749 1681239593
+-
+\change_deleted -1046193749 1681239592
+ 
+\change_unchanged
+guest dataset 
+\change_inserted -1046193749 1681239605
+(
+\change_unchanged
+
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:ABFE-host-guest-systems"
 plural "false"
 caps "false"
@@ -16431,11 +17006,17 @@ noprefix "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681239616
+), 
+\change_deleted -1046193749 1681239614
 a using 
 \begin_inset Formula $GB^{OBC}$
 \end_inset
 
- model we clearly see a bias for all charge guest ligands.
+ model
+\change_unchanged
+ we clearly see a bias for all charge guest ligands.
 
 \change_deleted -1463621830 1680753196
  
@@ -16443,33 +17024,211 @@ a using
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
-The absolute binding estimates for positively charge guests being overestimates
- and negatively charge guests are being underestimated.
+The absolute binding estimates for positively charge guests 
+\change_deleted -1046193749 1681239627
+being
+\change_inserted -1046193749 1681239627
+was
+\change_unchanged
+ 
+\change_deleted -1046193749 1681239660
+over
+\change_inserted -1046193749 1681239661
+under
+\change_unchanged
+estimate
+\change_inserted -1046193749 1681239630
+d
+\change_deleted -1046193749 1681239630
+s
+\change_unchanged
+ and negatively charge guests
+\change_deleted -1046193749 1681239635
+ are being
+\change_inserted -1046193749 1681239635
+ were
+\change_unchanged
+ 
+\change_deleted -1046193749 1681239654
+under
+\change_inserted -1046193749 1681239655
+over
+\change_unchanged
+estimated.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-The guest molecules having the dominate effect in binding where the host
- system having little or no effect
+
+\change_inserted -1046193749 1681239686
+We also observe that t
+\change_deleted -1046193749 1681239686
+T
+\change_unchanged
+he guest molecules 
+\change_deleted -1046193749 1681239690
+having 
+\change_inserted -1046193749 1681239691
+have 
+\change_unchanged
+the domina
+\change_inserted -1046193749 1681239694
+nt
+\change_deleted -1046193749 1681239694
+te
+\change_unchanged
+ 
+\change_deleted -1046193749 1681239707
+effect
+\change_inserted -1046193749 1681239714
+source of CHA error, as 
+\change_deleted -1046193749 1681239730
+ in binding where
+\change_inserted -1046193749 1681239733
+the charge of
+\change_unchanged
+ the host system 
+\change_deleted -1046193749 1681239740
+having
+\change_inserted -1046193749 1681239742
+had
+\change_unchanged
+ little or no effect
 \end_layout
 
 \end_deeper
 \end_deeper
 \begin_layout Itemize
-By applying a charge hydration correction on each individual charge guests
- (table4.2) which resulted in better metrics (table 4.3) across all host-guest
- system.
- This correction is suggestive that the lack of charge hydration asymmetry
- in GB is the issue.
+
+\change_deleted -1046193749 1681239827
+By a
+\change_inserted -1046193749 1681239827
+A
+\change_unchanged
+pplying a charge hydration correction 
+\change_inserted -1046193749 1681239847
+based 
+\change_unchanged
+on 
+\change_deleted -1046193749 1681239854
+each individual charge
+\change_unchanged
+ 
+\change_inserted -1046193749 1681239859
+the 
+\change_unchanged
+guests 
+\change_inserted -1046193749 1681239865
+net charge 
+\change_unchanged
+(
+\change_deleted -1046193749 1681239821
+table4.2
+\change_inserted -1046193749 1681239821
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "table:fitted-parameters"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_unchanged
+)
+\change_inserted -1046193749 1681239869
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1681239871
+which
+\change_unchanged
+ resulted in better metrics (
+\change_inserted -1046193749 1681239880
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:ABFE-metrics-CHA"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_deleted -1046193749 1681239876
+table 4.3
+\change_unchanged
+) across all host-guest system
+\change_inserted -1046193749 1681239884
+s
+\change_unchanged
+.
+ 
+\change_inserted -1046193749 1681239886
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Th
+\change_inserted -1046193749 1681239893
+e
+\change_deleted -1046193749 1681239892
+is
+\change_unchanged
+ 
+\change_inserted -1046193749 1681239898
+success of this 
+\change_unchanged
+correction
+\change_inserted -1046193749 1681239921
+ and the values of the fit parameters
+\change_deleted -1046193749 1681239923
+ is
+\change_unchanged
+ sugges
+\change_inserted -1046193749 1681239912
+ts
+\change_deleted -1046193749 1681239910
+tive
+\change_unchanged
+ that the lack of charge hydration asymmetry in GB is the issue.
 \end_layout
 
 \begin_layout Itemize
-Within AMBER contains four variants of GB models which are 
+
+\change_inserted -1046193749 1681239963
+The Amber molecular modeling suite
+\change_deleted -1046193749 1681239965
+Within AMBER
+\change_unchanged
+ contains four variants of GB models which are 
+\change_inserted -1046193749 1681239978
+GB
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681239981
+HCT
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1681239974
+
 \begin_inset Formula $GB^{HCT}$
 \end_inset
 
+
+\change_unchanged
 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -16479,9 +17238,28 @@ literal "false"
 \end_inset
 
 , 
+\change_inserted -1046193749 1681239990
+GB
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681239992
+OBC
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1681239987
+
 \begin_inset Formula $GB^{OBC}$
 \end_inset
 
+
+\change_unchanged
 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -16491,9 +17269,28 @@ literal "false"
 \end_inset
 
 ,
+\change_inserted -1046193749 1681240006
+GB
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681240007
+neck2
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1681240010
+
 \begin_inset Formula $GB-neck2$
 \end_inset
 
+
+\change_unchanged
 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -16517,8 +17314,51 @@ literal "false"
 \begin_layout Itemize
 Except for GBNSR6, all GB models differ in how the effective Born radii
  are computed.
- GBNSR6 (“Numerical Surface R6 GB”) is one of newest additions to AMBER
- suite in which the effect Born radii are computed via the 
+ 
+\change_inserted -1046193749 1681240023
+
+\end_layout
+
+\begin_layout Itemize
+GBNSR6 (“Numerical Surface R6 GB”)
+\change_inserted -1046193749 1681240054
+,
+\change_deleted -1046193749 1681240053
+ is
+\change_unchanged
+ one of newest additions to A
+\change_inserted -1046193749 1681240032
+mber
+\change_deleted -1046193749 1681240030
+MBER
+\change_unchanged
+ suite
+\change_inserted -1046193749 1681240049
+,
+\change_unchanged
+ 
+\change_inserted -1046193749 1681240067
+computes
+\change_deleted -1046193749 1681240069
+in which
+\change_unchanged
+ the effect
+\change_inserted -1046193749 1681240072
+ive
+\change_unchanged
+ Born radii 
+\change_deleted -1046193749 1681240077
+are computed via
+\change_inserted -1046193749 1681240078
+using
+\change_unchanged
+ 
+\change_deleted -1046193749 1681240085
+the
+\change_inserted -1046193749 1681240085
+an
+\change_unchanged
+ 
 \begin_inset Quotes eld
 \end_inset
 
@@ -16526,7 +17366,11 @@ R6
 \begin_inset Quotes erd
 \end_inset
 
- numerical integration overall the molecular surface of the solute[cite].
+ numerical integration overall the molecular surface of the solute
+\change_deleted -1046193749 1681240095
+[cite]
+\change_unchanged
+.
 
 \change_deleted -1463621830 1680753196
  
@@ -16536,12 +17380,39 @@ R6
 
 \begin_deeper
 \begin_layout Itemize
-GBNSR6 is known to account for hydration asymmetry and has been reported
- in predicting electrostatic solvation free energies 
+GBNSR6 
+\change_inserted -1046193749 1681240120
+has also been modified
+\change_deleted -1046193749 1681240122
+is known
+\change_unchanged
+ to account for 
+\change_deleted -1046193749 1681240132
+hydration asymmetry
+\change_inserted -1046193749 1681240133
+CHA
+\change_unchanged
+ and has been reported 
+\change_deleted -1046193749 1681240153
+in predicting
+\change_unchanged
+ electrostatic solvation free energies 
 \begin_inset Formula $\Delta G_{solv}$
 \end_inset
 
-e good agreement with numerical PB and explicit models such as TIP3P
+
+\change_deleted -1046193749 1681240156
+e
+\change_unchanged
+ 
+\change_inserted -1046193749 1681240159
+in 
+\change_unchanged
+good agreement with numerical PB and explicit models
+\change_inserted -1046193749 1681240165
+,
+\change_unchanged
+ such as TIP3P
 \begin_inset CommandInset citation
 LatexCommand citep
 key "mukhopadhyayChargeHydrationAsymmetry2012,izadiAccuracyComparisonGeneralized2018,izadiProteinLigandElectrostatic2015"
@@ -16550,8 +17421,23 @@ literal "false"
 \end_inset
 
 .
- However unlike the other GB variants models, GBNSR6 can not yet be used
- in dynamics.
+ 
+\change_inserted -1046193749 1681240174
+
+\end_layout
+
+\begin_layout Itemize
+However unlike the other GB variants models, GBNSR6 
+\change_deleted -1046193749 1681240201
+can not yet be used
+\change_inserted -1046193749 1681240208
+does not provide forces for used
+\change_unchanged
+ in 
+\change_inserted -1046193749 1681240214
+molecular 
+\change_unchanged
+dynamics.
 
 \change_deleted -1463621830 1680753196
  
@@ -16562,30 +17448,143 @@ literal "false"
 \end_deeper
 \end_deeper
 \begin_layout Itemize
-Therefore a transferable correction towards our results will need a more
- accurate solvation model that could account for CHA.
+Therefore
+\change_inserted -1046193749 1681240234
+,
+\change_unchanged
+ a 
+\change_inserted -1046193749 1681240285
+solvent model capable of accounting for CHA is not readily available.
+\change_deleted -1046193749 1681240286
+transferable correction towards our results will need a more accurate solvation
+ model that could account for CHA.
+\change_unchanged
+
 \end_layout
 
+\end_deeper
 \begin_layout Section
 ISDDM.py scalability and 3D-RISM correction
+\change_inserted -1046193749 1681234755
+
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -1046193749 1681234756
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681234780
+TL you'll need some citations here if you are going to include this in the
+ Discussion
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Itemize
 The construction this modified DDM in GB is much faster than traditional
  applications in explicit solvent due to improved sampling owe to to the
  absence of water degree of freedom associated with explicit solvent models.
- Our method not only is faster a per step, but also requires fewer steps
+ 
+\change_inserted -1046193749 1681234804
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681234849
+TL 10.1016/j.bpj.2014.12.047
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Our method not only is faster a per step, but also requires fewer steps
  than traditional explicit DDM calculations.
- One major benefit from our method is the use of conformational restraints
+ 
+\change_inserted -1046193749 1681234856
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681234894
+TL How do you back up this claim? You used a lot of windows in this study.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+One major benefit from our method is the use of conformational restraints
  which eliminates the need of soft-core potentials which making the overall
  method more simpler and reducing the need of additional windows.
- Soft-core potentials are used to minimized or avoid
+ 
+\change_inserted -1046193749 1681234928
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681234974
+TL Again, discuss specific examples.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Soft-core potentials are used to minimized or avoid
 \change_deleted -1463621830 1680753196
  
+\change_inserted -1046193749 1681234919
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681234926
+TL more to add..
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
 \change_inserted -1463621830 1680753212
 
 \end_layout
 
+\end_deeper
 \begin_layout Chapter
 
 \change_inserted -1463621830 1680753242
