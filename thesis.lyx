@@ -14,7 +14,7 @@
 \abstract{
 	Identifying small drug-like molecules for therapeutic targets of interest is an ongoing effort in drug discovery. Accurate absolute binding free energy calculations (ABFEs) in silico, can reduce the time and cost of exploring a diverse set of potential drug candidates that may have been overlooked experimentally. However, these calculations usually employ explicit solvent models that can be computationally demanding and difficult to implement and perform. To circumvent these drawbacks, we introduced the software ISDDM.py, a Python automated workflow that implements an approach that uses faster implicit solvents, such as generalized Born (GB), which greatly reduces computational costs. We adapted the double decoupling method (DDM), which uses conformational restraints, and paired it with GB solvent to enhance convergence. The software is tested on 83 unique host-guest complex systems and reports encouraging results in estimating binding free energies. Our work here attempts to reduce the computational expense of absolute binding free energies by using implicit solvent models and the ISDDM.py package to handle all the input files, monitor the simulations and perform post-analysis.
 }
-\submitted{month}{year}
+\submitted{May}{2023}
 
 %Recommended
 \degree{Master of Science}{Chemistry}
@@ -32,13 +32,14 @@
 
 \copyrightyear{2023}
 
-\dedication{dedication}
+\dedication{I would like to dedicate this work to parents, specifically my mother who is the most hardworking person I know. My mother is my rock and when it gets hard, she will always be there for me no matter what. I’d like to thank my father who has been always hard on me to push beyond my limits and keep reaching for higher education.}
 
-\acknowledgement{acknowledgement}
+\acknowledgment{First, I would like to thank Dr. Maria Elena Zavala the director of the NIH Bridges for the Doctorate Program which provided me with financial and mentor support throughout my master's. I’d also like to thank Jesus Hernandez a fellow chemistry graduate student who has always been there for me during tough times and has been a great friend. Also, like to thank my girlfriend Martha Avila-Zavala who has supported me emotionally, and who has been my little “lightning McQueen fan” who constantly cheers me on to keep going.  Above all, I’d like to thank my supervisor Dr. Tyler Luchko who has been an amazing mentor and great support through my master's journey. He is always present to answer any questions or to provide any guidance to help me through my project. I’m extremely lucky to have worked under Dr. Tyler Luchko, I have learned a lot from him, and I hope to share my knowledge with future young aspiring research students as he did with me.}
 
-\preface{preface}
+%acknowledgement
+%\preface{preface}
 
-\collaboration{name}
+%\collaboration{name}
 \end_preamble
 \options lof, lot
 \use_default_options true
@@ -117,8 +118,6 @@ logicalmkup
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -1463621830 "steven ayoub"
-\author -1046193749 "Luchko"
 \end_header
 
 \begin_body
@@ -191,8 +190,6 @@ http://www.csun.edu/~mathgs/LaTex.html
 
 \end_inset
 
-
-\change_inserted -1463621830 1680900929
 
 \end_layout
 
@@ -2373,7 +2370,11 @@ status open
 \begin_layout Plain Layout
 Host guest system dataset.
  CB7 receptor and 14 guest ligands from the SAMPL4 challenge dataset described
- in 
+ in
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset citation
 LatexCommand citep
 key "muddanaSAMPL4HostGuest2014a"
@@ -2381,11 +2382,25 @@ literal "false"
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
  WP6 receptor and 13 guest molecules from SAMPL9 dataset
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset citation
 LatexCommand citep
 key "amezcuaSamplchallengesSAMPL9Version2021"
 literal "false"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2396,10 +2411,19 @@ literal "false"
 \end_inset
 
 -cyclodextrins 30 guest molecules
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset citation
 LatexCommand citep
 key "slochowerTaproom2022"
 literal "false"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -3763,8 +3787,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\change_deleted -1046193749 1681162324
 \begin_inset Graphics
 	filename images/overlap_matrix_15_windows.png
 	lyxscale 50
@@ -3772,31 +3794,6 @@ status open
 
 \end_inset
 
-
-\change_inserted -1046193749 1681162324
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1681162324
-\begin_inset Graphics
-	filename images/overlap_matrix_15_windows.png
-	lyxscale 50
-	width 100text%
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 
 \end_layout
 
@@ -3852,8 +3849,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\change_deleted -1046193749 1681162353
 \begin_inset Graphics
 	filename images/overlap_matrix_29_windows.png
 	lyxscale 50
@@ -3861,31 +3856,6 @@ status open
 
 \end_inset
 
-
-\change_inserted -1046193749 1681162353
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1681162353
-\begin_inset Graphics
-	filename images/overlap_matrix_29_windows.png
-	lyxscale 50
-	width 100text%
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 
 \end_layout
 
@@ -6166,18 +6136,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename /Users/stevenayoub/Desktop/DDM_metro/CB7_WP7_data/scaling.pdf
 	width 100text%
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -6241,22 +6202,14 @@ literal "false"
 \end_inset
 
 .
-
-\change_inserted -1463621830 1680845488
- 
-\change_unchanged
-We rank one of the top performers among the challenge submissions (table
+ We rank one of the top performers among the challenge submissions (table
  5.1).
  Our Pearson correlation(
 \begin_inset Formula $R^{2}=0.78$
 \end_inset
 
 ) where only two methods had match ours.
-
-\change_inserted -1463621830 1680845496
- 
-\change_unchanged
-The first being method was RRHO rigid rotor harmonic oscillator approximation
+ The first being method was RRHO rigid rotor harmonic oscillator approximation
  
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -6268,23 +6221,11 @@ literal "false"
 , which employed COSMO-RS(conductor-like screening model for real solvents)
  and OST (orthogonal space tempering) with TIP3P-MOD(transferable interaction
  potential three-point).
-
-\change_inserted -1463621830 1680845501
- 
-\change_unchanged
-A total of 5 entires use an implicit solvent model and among these methods
+ A total of 5 entires use an implicit solvent model and among these methods
  we outperformed all 5 of them.
-
-\change_inserted -1463621830 1680845505
- 
-\change_unchanged
-The RRHO/COSMO and M2/PBSA are more detailed predecessor than GBSA solvent.
+ The RRHO/COSMO and M2/PBSA are more detailed predecessor than GBSA solvent.
  Where our seemed to outperform all the implicit applicants.
-
-\change_inserted -1463621830 1680845509
- 
-\change_unchanged
-Explicit solvent models which are considered a more detailed models seemed
+ Explicit solvent models which are considered a more detailed models seemed
  to varied with correlations(
 \begin_inset Formula $R^{2}$
 \end_inset
@@ -8408,11 +8349,7 @@ literal "false"
 \end_inset
 
 .
-
-\change_inserted -1463621830 1680845601
- 
-\change_unchanged
-One submission in particular interest used BEDAM method 
+ One submission in particular interest used BEDAM method 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "gallicchioBindingEnergyDistribution2010"
@@ -8438,11 +8375,7 @@ literal "false"
 
  continuum solvation model being one of the fairly accurate predictions
  of the SAMPL4 challenge.
-
-\change_inserted -1463621830 1680845605
- 
-\change_unchanged
-They reported average signed error was RMSE
+ They reported average signed error was RMSE
 \begin_inset Formula $_{o}$
 \end_inset
 
@@ -8452,31 +8385,19 @@ They reported average signed error was RMSE
 \end_inset
 
 =0.9 kcal/mol.
-
-\change_inserted -1463621830 1680845609
- 
-\change_unchanged
-Also higher a one of the highest Person correlation coefficient (
+ Also higher a one of the highest Person correlation coefficient (
 \begin_inset Formula $R^{2}=0.9$
 \end_inset
 
 ).
-
-\change_inserted -1463621830 1680845612
- 
-\change_unchanged
-As for our results it we compute the 9 guests molecules that were used from
- the SAMPL4 challenge, our method will results in RMSE_o=1.3 and RMSE_r=2.0
+ As for our results it we compute the 9 guests molecules that were used
+ from the SAMPL4 challenge, our method will results in RMSE_o=1.3 and RMSE_r=2.0
  kcal/mol and correlation of 
 \begin_inset Formula $R^{2}=0.64$
 \end_inset
 
 .
-
-\change_inserted -1463621830 1680845615
- 
-\change_unchanged
-The AGBNP2 method was also tuned to properly treat enclosed hydration sites
+ The AGBNP2 method was also tuned to properly treat enclosed hydration sites
  to achieve good accuracy
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -8487,30 +8408,16 @@ literal "false"
 
 .Where our GB model is unable to accuracy treat hydration in deep hydrophobic
  of OAH resulting in poor accuracy.
-\change_inserted -1463621830 1680845621
-
 \end_layout
 
 \begin_layout Standard
 Our predictions for octa-acid were negativity effected due to overestimation
  of positivity charge ligands (trz, hxa) than the negatively charge ones.
-
-\change_inserted -1463621830 1680845627
- 
-\change_unchanged
-Given the host bearing a highly negatively charge (-8), this may be pointed
+ Given the host bearing a highly negatively charge (-8), this may be pointed
  towards a lack of charge screening from our GB model.
-
-\change_inserted -1463621830 1680845632
- 
-\change_unchanged
-This charge asymmetry is perhaps due to the conformational reorganization
+ This charge asymmetry is perhaps due to the conformational reorganization
  of a flipped of benzoate ring that occurs for positively charge guests.
-
-\change_inserted -1463621830 1680845636
- 
-\change_unchanged
-During our endstate simulations we also oberseved the alkylammonium head
+ During our endstate simulations we also oberseved the alkylammonium head
  group of the ligand forming strong short range electrostatic interactions
  with the benzoate group
 \begin_inset CommandInset ref
@@ -8533,11 +8440,7 @@ literal "false"
 \end_inset
 
 .
-
-\change_inserted -1463621830 1680845644
- 
-\change_unchanged
-Where the negative charge guests, performs charge repulsion keeping like
+ Where the negative charge guests, performs charge repulsion keeping like
  charges away from each other as we saw with our results.
 \end_layout
 
@@ -8548,18 +8451,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename images/benz_flip_oah.png
 	width 100text%
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -8602,21 +8496,13 @@ Generalize Born Hydration Asymmetry Correction Considerations
 The simplicity of implicit solvent models by treating water structureless
  continuum dielectric medium provides fast estimation of solvation effects
  making them very popular for virtual screening campaigns.
-
-\change_inserted -1463621830 1680845697
- 
-\change_unchanged
-Generalize Born arguably one the faster implicit models due to making approximat
-ing for calculating molecular electrostatics in solvent as describing by
+ Generalize Born arguably one the faster implicit models due to making approxima
+ting for calculating molecular electrostatics in solvent as describing by
  the Poisson Boltzmann equation.
-
-\change_inserted -1463621830 1680845700
- 
-\change_unchanged
-However with a number of approximations for solving polar interactions (electros
-tatics), generalize Born (GB) models causes a separation from the more accurate
- explicit solvent treatment.One major approximation is the neglect of hydration
- asymmetry (CHA) 
+ However with a number of approximations for solving polar interactions
+ (electrostatics), generalize Born (GB) models causes a separation from
+ the more accurate explicit solvent treatment.One major approximation is
+ the neglect of hydration asymmetry (CHA) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "mukhopadhyayChargeHydrationAsymmetry2012"
@@ -8647,23 +8533,11 @@ a using
 \end_inset
 
  model we clearly see a bias for all charge guest ligands.
-
-\change_inserted -1463621830 1680845723
- 
-\change_unchanged
-The absolute binding estimates for positively charge guests being overestimates
+ The absolute binding estimates for positively charge guests being overestimates
  and negatively charge guests are being underestimated.
-
-\change_inserted -1463621830 1680845726
- 
-\change_unchanged
-The guest molecules having the dominate effect in binding where the host
- system having little or no effect
-\change_inserted -1463621830 1680845731
-.
- 
-\change_unchanged
-By applying a charge hydration correction on each individual charge guests
+ The guest molecules having the dominate effect in binding where the host
+ system having little or no effect.
+ By applying a charge hydration correction on each individual charge guests
  (table4.2) which resulted in better metrics (table 4.3) across all host-guest
  system.
  This correction is suggestive that the lack of charge hydration asymmetry
@@ -8716,11 +8590,7 @@ literal "false"
 \end_inset
 
 .
-
-\change_inserted -1463621830 1680845736
- 
-\change_unchanged
-Except for GBNSR6, all GB models differ in how the effective Born radii
+ Except for GBNSR6, all GB models differ in how the effective Born radii
  are computed.
  GBNSR6 (“Numerical Surface R6 GB”) is one of newest additions to AMBER
  suite in which the effect Born radii are computed via the 
@@ -8732,11 +8602,7 @@ R6
 \end_inset
 
  numerical integration overall the molecular surface of the solute.
-
-\change_inserted -1463621830 1680845739
- 
-\change_unchanged
-GBNSR6 is known to account for hydration asymmetry and has been reported
+ GBNSR6 is known to account for hydration asymmetry and has been reported
  in predicting electrostatic solvation free energies 
 \begin_inset Formula $\Delta G_{solv}$
 \end_inset
@@ -8752,11 +8618,7 @@ literal "false"
 .
  However unlike the other GB variants models, GBNSR6 can not yet be used
  in dynamics.
-
-\change_inserted -1463621830 1680845743
- 
-\change_unchanged
-Therefore a transferable correction towards our results will need a more
+ Therefore a transferable correction towards our results will need a more
  accurate solvation model that could account for CHA.
 \end_layout
 
@@ -8787,11 +8649,6 @@ literal "false"
  community challenge by SAMPL group.
  We saw overall decent performance with our method (DDM/GB) and outperforms
  most the SAMPL4 and SAMPL9 challenge submission's RBFE metrics.
-
-\change_deleted -1463621830 1680845469
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -8840,10 +8697,6 @@ literal "false"
  Alternately 3-dimensional reference interaction site model (3D-RISM) being
  another type of implicit solvent model which describes solvent as a classical
  density distribution of the solvent sites around the solute
-\change_deleted -1463621830 1680899978
-[cite-]
-\change_inserted -1463621830 1680899978
-
 \begin_inset CommandInset citation
 LatexCommand citep
 key "casanovaEvaluationSCFCombination2007"
@@ -8851,8 +8704,6 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
 .
  This yields a more detailed molecular structure than GB models and incorporates
  additional thermodynamic properties such as CHA and hydrogen bonding.
@@ -8861,11 +8712,6 @@ literal "false"
  However including sampling of 3D-RISM does being promise and could be an
  avenue to be explored in the future perhaps implementing 3D-RISM on GPUs
  or perform MonteCarlo simulation rather than getting dynamics from 3D-RISM.
-
-\change_deleted -1463621830 1680845469
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -8882,8 +8728,6 @@ Overall
 
  incorporates fast GB solvent in a modified DDM cycle to be used in virtual
  screening campaigns.
-\change_inserted -1463621830 1680893413
-
 \end_layout
 
 \begin_layout Chapter
@@ -8936,29 +8780,15 @@ ISDDM.py
 
 \begin_layout Standard
 Each keyword syntax is written in the following:
-\change_deleted -1463621830 1680894798
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
 name:str Description of variable 'name' .
-
-\change_deleted -1463621830 1680894798
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
 The name:str syntax indicates the name argument should be of type str.Following
  a brief description of the varible.
-
-\change_deleted -1463621830 1680894798
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Subsubsection
