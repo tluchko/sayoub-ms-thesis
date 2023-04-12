@@ -3302,6 +3302,17 @@ From these simulations the free energy difference between state
 
 \begin_layout Subsection
 Our Thermodynamic Pathway
+\change_inserted -1046193749 1681325208
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Our-Thermodynamic-Pathway"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -4226,7 +4237,13 @@ name "chap:Methods"
 \end_layout
 
 \begin_layout Section
-Choice of host-guest systems
+
+\change_deleted -1046193749 1681323712
+Choice of h
+\change_inserted -1046193749 1681323712
+H
+\change_unchanged
+ost-guest systems
 \end_layout
 
 \begin_layout Standard
@@ -4243,6 +4260,10 @@ Host-guest (HG) systems have emerge an ideal benchmark for the quantitative
  To test thermodynamic cycle and our software implementation of it, we selected
  host-guest systems from the Statistical Assessment of the Modeling of Proteins
  and Ligands (SAMPL): SAMPL4
+\change_inserted -1046193749 1681323667
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "muddanaSAMPL4HostGuest2014a"
@@ -4251,6 +4272,10 @@ literal "false"
 \end_inset
 
 , SAMPL7
+\change_inserted -1046193749 1681323672
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "amezcuaSAMPL7HostGuest2021"
@@ -4258,7 +4283,15 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681323673
+ 
+\change_unchanged
 and SAMPL9
+\change_inserted -1046193749 1681323676
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "amezcuaSamplchallengesSAMPL9Version2021"
@@ -4267,6 +4300,10 @@ literal "false"
 \end_inset
 
  
+\change_inserted -1046193749 1681323682
+(
+\change_unchanged
+
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Host-guest-systems"
@@ -4276,8 +4313,41 @@ noprefix "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681323680
+)
+\change_unchanged
 .
- In addition the octa-acid and cyclodextrins were obtained from host-guest
+ 
+\change_deleted -1046193749 1681323777
+In addition t
+\change_inserted -1046193749 1681323819
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+- and 
+\begin_inset Formula $\beta$
+\end_inset
+
+-cyclodextrin hosts and additional guests for
+\change_deleted -1046193749 1681323761
+he
+\change_unchanged
+ octa-acid
+\change_deleted -1046193749 1681323823
+ and
+\change_unchanged
+ 
+\change_deleted -1046193749 1681323777
+cyclodextrins
+\change_unchanged
+ were obtained from 
+\change_deleted -1046193749 1681323937
+host-guest
+\change_inserted -1046193749 1681323945
+the Taproom repository on
+\change_unchanged
  Github 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -4291,7 +4361,11 @@ literal "false"
 \begin_inset Formula $.mol2$
 \end_inset
 
- files were downloaded from the GitHub repositories[
+ files were downloaded from the GitHub repositories
+\change_inserted -1046193749 1681323621
+ 
+\change_deleted -1046193749 1681323966
+[
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "slochowerTaproom2022"
@@ -4299,7 +4373,9 @@ literal "false"
 
 \end_inset
 
-].
+]
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
@@ -4323,7 +4399,17 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Host guest system dataset.
+Host
+\change_inserted -1046193749 1681323978
+-
+\change_deleted -1046193749 1681323977
+ 
+\change_unchanged
+guest system
+\change_inserted -1046193749 1681323984
+s
+\change_unchanged
+ dataset.
  CB7 receptor and 14 guest ligands from the SAMPL4 challenge dataset described
  in 
 \begin_inset CommandInset citation
@@ -4333,7 +4419,16 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681323994
+.
+
+\change_unchanged
  WP6 receptor and 13 guest molecules from SAMPL9 dataset
+\change_inserted -1046193749 1681324002
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "amezcuaSamplchallengesSAMPL9Version2021"
@@ -4389,6 +4484,8 @@ il, (CB7), pillar[n]arene, octa-acid (OAH) and
 -cyclodextrins.
  These have a diverse binding affinity to variety of small drug-like compounds
  
+\change_deleted -1046193749 1681324047
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "muddanaSAMPL4HostGuest2014a"
@@ -4397,16 +4494,23 @@ literal "false"
 \end_inset
 
 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
-key "amezcuaSAMPL7HostGuest2021"
+key "amezcuaSAMPL7HostGuest2021,muddanaSAMPL4HostGuest2014a"
 literal "false"
 
 \end_inset
 
 .
- From the ligand data available, we tested a total of 86 unique host-ligand
- complexes.
+ From the ligand data available, we tested a total of 8
+\change_deleted -1046193749 1681324055
+6
+\change_inserted -1046193749 1681324055
+3
+\change_unchanged
+ unique host-ligand complexes.
 \end_layout
 
 \begin_layout Standard
@@ -4418,8 +4522,11 @@ Cucurbit[
 \begin_inset Formula $n$
 \end_inset
 
-]s), including CB[5], CB[6], CB[7], CB[8] and CB[10], are a family hosts
- with a molecular structure containing 
+]s), including CB[5], CB[6], CB[7], CB[8] and CB[10], are a family
+\change_inserted -1046193749 1681324067
+ of
+\change_unchanged
+ hosts with a molecular structure containing 
 \begin_inset Formula $n$
 \end_inset
 
@@ -4428,8 +4535,17 @@ Cucurbit[
 \end_inset
 
  methylene bridges, forming a barrel shape macrocycle with a central hydrophobic
- cavity.In addition, they have carbonyls protruding out from the hydrophobic
  cavity.
+
+\change_inserted -1046193749 1681324082
+ 
+\change_unchanged
+In addition, they have carbonyls protruding out from the hydrophobic cavity.
+
+\change_inserted -1046193749 1681324091
+ 
+\change_unchanged
+
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Host-guest-systems"
@@ -4456,8 +4572,11 @@ Pillar[
 \begin_inset Formula $n$
 \end_inset
 
-]arenes are another class of supramolecular having a symmetrical rigid cylindric
-al structures, with CH
+]arenes are another class of supramolecular
+\change_inserted -1046193749 1681324111
+ compounds
+\change_unchanged
+ having a symmetrical rigid cylindrical structures, with CH
 \begin_inset script subscript
 
 \begin_layout Plain Layout
@@ -4467,13 +4586,24 @@ al structures, with CH
 \end_inset
 
  linkers connecting the phenylene groups, each of which phenylene group
- contains two anionic functional group arms.Pillar[
+ contains two anionic functional group arms.
+
+\change_inserted -1046193749 1681324137
+ 
+\change_unchanged
+Pillar[
 \begin_inset Formula $n$
 \end_inset
 
 ]arene have become an emerging class of synthetic macrocycles, having a
  broad applications in molecular recognition and adsorption to synergistic
- catalysis and many other aspects[
+ catalysis and many other aspects
+\change_inserted -1046193749 1681324432
+ 
+\change_deleted -1046193749 1681324432
+[
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "guoAdvancesDiversifiedApplication2020"
@@ -4481,9 +4611,25 @@ literal "false"
 
 \end_inset
 
-].In this study we test against Pillar[6]arene (WP6), which bears six carboxylate
-d moieties on the upper and lower rims that can be, in part, protonated
- at pH = 7.4
+
+\change_deleted -1046193749 1681324436
+]
+\change_unchanged
+.
+
+\change_inserted -1046193749 1681324437
+ 
+\change_unchanged
+In this study we test
+\change_inserted -1046193749 1681324443
+ed
+\change_unchanged
+ against Pillar[6]arene (WP6), which bears six carboxylated moieties on
+ the upper and lower rims that can be, in part, protonated at pH = 7.4
+\change_inserted -1046193749 1681324451
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "dengThermodynamicsPillarareneGuest2022"
@@ -4509,6 +4655,10 @@ noprefix "false"
 Octa-acid (OAH) is a water soluble a deep-cavity cavitand, which possesses
  eight water-solubilizing outer surface carboxylate groups, and a deep 10
  Å hydrophobic pocket suitable for variety of guest molecules
+\change_inserted -1046193749 1681324472
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "gibbBindingCyclicCarboxylates2014"
@@ -4516,9 +4666,18 @@ literal "false"
 
 \end_inset
 
-.OAH is known to bind with hydrophobic or amphiphilic guests in aqueous solution
+.
+
+\change_inserted -1046193749 1681324476
+ 
+\change_unchanged
+OAH is known to bind with hydrophobic or amphiphilic guests in aqueous solution
  perhaps due to the hydrophobic effect of the desovation of guests entering
  the deep hydrophobic binding pocket
+\change_inserted -1046193749 1681324491
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "muddanaSAMPL4HostGuest2014a"
@@ -4527,6 +4686,11 @@ literal "false"
 \end_inset
 
 .
+
+\change_inserted -1046193749 1681324493
+ 
+\change_unchanged
+
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Host-guest-systems"
@@ -4545,11 +4709,21 @@ The last benchmark systems were
 \begin_inset Formula $\alpha$
 \end_inset
 
+
+\change_inserted -1046193749 1681324504
+-
+\change_unchanged
  and 
 \begin_inset Formula $\beta$
 \end_inset
 
- cyclodextrins, which are cyclic oligosaccharides, consisting of six and
+
+\change_inserted -1046193749 1681324501
+-
+\change_deleted -1046193749 1681324501
+ 
+\change_unchanged
+cyclodextrins, which are cyclic oligosaccharides, consisting of six and
  seven glucose monomers respectively.The guest molecules we used with 
 \begin_inset Formula $\alpha$
 \end_inset
@@ -4559,8 +4733,12 @@ The last benchmark systems were
 \end_inset
 
  cyclodextrins contain ammonium or carboxylate groups and carry a net charge
- of 1 or -1 respectively.The two hosts and 41 host-guest complexes shown
- in 
+ of 1 or -1 respectively.
+
+\change_inserted -1046193749 1681324524
+ 
+\change_unchanged
+The two hosts and 41 host-guest complexes shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Host-guest-systems"
@@ -4574,12 +4752,36 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsection
-Complex preparation
+
+\change_deleted -1046193749 1681323729
+Complex
+\change_inserted -1046193749 1681323731
+System
+\change_unchanged
+ preparation
 \end_layout
 
 \begin_layout Standard
 All the ligands were docked into the binding site of an equilibrated host
  system using Autodock Vina docking single mode
+\change_inserted -1046193749 1681324628
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681324637
+TL I don't know what 'single mode' is
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "forliComputationalProteinLigand2016"
@@ -4589,8 +4791,16 @@ literal "false"
 
  to generate several ligand poses.
  In this procedure the host is considered rigid and the ligands were centered
- at the host center of mass.Prior being used in the docking calculations,
- we converted 
+ at the host center of mass.
+
+\change_inserted -1046193749 1681324654
+ 
+\change_unchanged
+Prior
+\change_inserted -1046193749 1681324662
+ to
+\change_unchanged
+ being used in the docking calculations, we converted 
 \begin_inset Formula $mol2$
 \end_inset
 
@@ -4598,7 +4808,17 @@ literal "false"
 \begin_inset Formula $pdbqt$
 \end_inset
 
- file using OpenBabel
+ 
+\change_deleted -1046193749 1681324672
+file
+\change_inserted -1046193749 1681324673
+format
+\change_unchanged
+ using OpenBabel
+\change_inserted -1046193749 1681324680
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "oboyleOpenBabelOpen2011"
@@ -4612,7 +4832,9 @@ literal "false"
 
  option to specify the pH used in the experiments.
  All ligands are fully flexible during the docking calculations.
- The 
+ 
+\change_deleted -1046193749 1681324704
+The 
 \begin_inset Formula $.mol2$
 \end_inset
 
@@ -4634,6 +4856,8 @@ literal "false"
 
  option to specify the pH used in the experiments.
  All ligands were fully flexible during the docking calculations.
+
+\change_unchanged
  Autodock Vina carried out a cluster analysis based on all-atom root mean
  square deviation ranking the dock conformations in order of increasing
  binding free energies.
@@ -4643,7 +4867,13 @@ literal "false"
 
 \begin_layout Standard
 The simulations of all host-guest systems were setup by LEaP program in
- AmberTools software suite[
+ AmberTools software suite
+\change_inserted -1046193749 1681324735
+ 
+\change_deleted -1046193749 1681324735
+[
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "AmberTools22"
@@ -4651,7 +4881,11 @@ literal "false"
 
 \end_inset
 
-].
+
+\change_deleted -1046193749 1681324737
+]
+\change_unchanged
+.
  The partial atomic charges were applied using the AM1-BCC model 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -4715,7 +4949,11 @@ noprefix "false"
 
 \end_inset
 
- for implementation details)using AMBER 21 
+ for implementation details)
+\change_inserted -1046193749 1681324767
+ 
+\change_unchanged
+using AMBER 21 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AmberTools22"
@@ -4745,9 +4983,9 @@ TL I rephrased for what I think you meant.
 
  All systems used hydrogen mass repartitioning, in which mass of hydrogen
  atoms are increased by a factory of 4 and the mass of the bonded heavy
- atoms is decreased by an equivalent amount.
- This has be shown to slow the highest frequency of hydrogen covalent bonds
- and and allow a time-step size of 4 fs
+ atoms is decreased by an equivalent amount
+\change_inserted -1046193749 1681324824
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "hopkinsLongTimeStepMolecularDynamics2015"
@@ -4755,7 +4993,27 @@ literal "false"
 
 \end_inset
 
+
+\change_unchanged
+.
+ This has be shown to slow the highest frequency of hydrogen covalent bonds
+ and and allow a time-step size of 4 fs
+\change_deleted -1046193749 1681324833
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "hopkinsLongTimeStepMolecularDynamics2015"
+literal "false"
+
+\end_inset
+
+
+\change_inserted -1046193749 1681324833
+.
+\change_deleted -1046193749 1681324833
 ,
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -4777,7 +5035,17 @@ name "subsec:End-state-Simulations"
 \end_layout
 
 \begin_layout Standard
-End-states simulations for 
+
+\change_deleted -1046193749 1681324847
+End-states s
+\change_inserted -1046193749 1681324847
+S
+\change_unchanged
+imulations for 
+\change_inserted -1046193749 1681324850
+states 
+\change_unchanged
+
 \begin_inset Formula $1$
 \end_inset
 
@@ -4808,8 +5076,15 @@ TL have you defined the '
 
 \end_inset
 
-The target temperature of 298K and ionic concentration was set to 0.3 M for
- all host guest systems.
+
+\change_inserted -1046193749 1681324946
+ 
+\change_unchanged
+The target temperature of 298
+\change_inserted -1046193749 1681324932
+ 
+\change_unchanged
+K and ionic concentration was set to 0.3 M for all host guest systems.
  We prepared the initial structures of states 
 \begin_inset Formula $1$
 \end_inset
@@ -4819,6 +5094,8 @@ The target temperature of 298K and ionic concentration was set to 0.3 M for
 \end_inset
 
  for REMD simulation with 5000 steps of energy minimization 
+\change_deleted -1046193749 1681324969
+
 \begin_inset Note Note
 status open
 
@@ -4828,6 +5105,22 @@ TL what method?
 
 \end_inset
 
+
+\change_inserted -1046193749 1681324969
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681324969
+TL what method?
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
  using 
 \begin_inset Flex Code
 status open
@@ -4849,6 +5142,10 @@ sander.MPI
 \end_inset
 
  module of AMBER 21
+\change_inserted -1046193749 1681324977
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AmberTools22"
@@ -4858,6 +5155,8 @@ literal "false"
 
 .
  
+\change_deleted -1046193749 1681324980
+
 \begin_inset Note Note
 status open
 
@@ -4867,6 +5166,8 @@ TL cite
 
 \end_inset
 
+
+\change_unchanged
 From these starting structures, we ran REMD using 
 \begin_inset Flex Code
 status open
@@ -4927,7 +5228,12 @@ nstlim=1
 
 \end_inset
 
-).For all host-guest bound end-state simulations, a center-of-mass flat bottom
+).
+
+\change_inserted -1046193749 1681324992
+ 
+\change_unchanged
+For all host-guest bound end-state simulations, a center-of-mass flat bottom
  restraint potential was used.
  
 \begin_inset Note Note
@@ -4950,12 +5256,61 @@ nstlim=1.
 
 \end_inset
 
- [cite].
+ [cite]
+\change_deleted -1046193749 1681325009
+.
+
+\change_unchanged
  Number of frames saved or the save frequency
+\change_inserted -1046193749 1681325031
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681325038
+TL incomplete
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
 Intermediate Simulations
+\change_inserted -1046193749 1681325101
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1681325105
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681325127
+TL What are the 
+\begin_inset Formula $\lambda$
+\end_inset
+
+s everywhere? You need to define or delete them.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -4980,11 +5335,21 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
+
+\change_deleted -1046193749 1681325064
 TL maybe cite Barton's thesis here
+\change_inserted -1046193749 1681325079
+TL This citation doesn't look correct
+\change_unchanged
+
 \end_layout
 
 \end_inset
 
+
+\change_inserted -1046193749 1681325088
+ 
+\change_unchanged
 
 \begin_inset Flex Code
 status open
@@ -5041,9 +5406,29 @@ gbsa
 \end_inset
 
  was set to 0 and 
+\change_deleted -1046193749 1681325150
+
 \begin_inset Formula $igb=6$
 \end_inset
 
+
+\change_inserted -1046193749 1681325155
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681325157
+igb=6
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 .
  In state 4 the ligand charges were set to 0 by the 
 \begin_inset Flex Code
@@ -5067,14 +5452,54 @@ parmed.tools.action.charge
 
 .
  State 5 is not sampled.
- The difference of free energy going from state 4 to 5 is computed analytically
- as described in 2.3
+ The difference 
+\change_deleted -1046193749 1681325177
+of
+\change_inserted -1046193749 1681325177
+in
+\change_unchanged
+ free energy going from state 4 to 5 is computed analytically
+\change_inserted -1046193749 1681325182
+,
+\change_unchanged
+ as described in 
+\change_inserted -1046193749 1681325221
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Our-Thermodynamic-Pathway"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+,
+\change_deleted -1046193749 1681325188
+2.3
+\change_unchanged
+
 \series bold
  
 \series default
-and the difference of free energy from state 5 to 6 is 0.
- State 6 is sampled with ligand charges set to 0 and Lennard Jones interactions
- between the ligand and host system removed via the 
+and the difference 
+\change_deleted -1046193749 1681325226
+of
+\change_inserted -1046193749 1681325227
+in
+\change_unchanged
+ free energy from state 5 to 6 is 0.
+ State 6 is sampled with ligand charges set to 0 and Lennard
+\change_inserted -1046193749 1681325241
+-
+\change_deleted -1046193749 1681325239
+ 
+\change_unchanged
+Jones interactions between the ligand and host system 
+\change_inserted -1046193749 1681325249
+were 
+\change_unchanged
+removed via the 
 \begin_inset Flex Code
 status open
 
@@ -5097,13 +5522,66 @@ parmed.tools.action.charge
 .
  State 7 consisted of several intermediate states, in which the Lennard-Jones
  potential between the ligand and host was reintroduced in a single step,
- followed by increaseing the GB dielectric constant in steps of 5%, 10%,
- 20%, 50% and 100%(78.5 
+ followed by 
+\change_deleted -1046193749 1681325260
+increaseing
+\change_inserted -1046193749 1681325260
+increasing
+\change_unchanged
+ the GB dielectric constant in steps of 5%, 10%, 20%, 50% and 100%
+\change_inserted -1046193749 1681325322
+ 
+\change_unchanged
+(78.5
+\change_deleted -1046193749 1681325333
+ 
 \begin_inset Formula $\epsilon$
 \end_inset
 
-).
- Following turning on the ligand charges at 50% and then 100% (fully charge).
+
+\change_unchanged
+)
+\change_inserted -1046193749 1681325337
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681325350
+TL replace the percentages with values
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
+ 
+\change_inserted -1046193749 1681325297
+This was f
+\change_deleted -1046193749 1681325297
+F
+\change_unchanged
+ollow
+\change_inserted -1046193749 1681325302
+ed
+\change_deleted -1046193749 1681325301
+ing
+\change_unchanged
+ 
+\change_inserted -1046193749 1681325304
+by 
+\change_unchanged
+turning on the ligand charges 
+\change_inserted -1046193749 1681325311
+to
+\change_deleted -1046193749 1681325310
+at
+\change_unchanged
+ 50% and then 100% (fully charge).
  Between states 7 and 8, we slowly removed the restraint force through a
  series of intermediate states.
 \end_layout
@@ -5116,8 +5594,22 @@ Selection and Implementation of Restraint Forces
 Between states 1 and 2, conformational restraints were were increased over
  a series of intermediate states and then orientational and conformational
  restraints were removed between states 7 and 8 in the same fashion.
- Through benchmark testing, the lowest energy conformational restraint force
- constant was determine to be 
+ 
+\change_inserted -1046193749 1681325497
+For the benchmark testing, a series of 29 lambda-windows were generated
+ with rotational and orientational force spaced evenly on 
+\begin_inset Formula $\log_{2}$
+\end_inset
+
+-scale.
+ 
+\change_deleted -1046193749 1681325487
+Through benchmark testing, t
+\change_inserted -1046193749 1681325488
+T
+\change_unchanged
+he lowest energy conformational restraint force constant was determine to
+ be 
 \begin_inset Formula $2^{-8}$
 \end_inset
 
@@ -5153,7 +5645,16 @@ TL fix
 
 \end_inset
 
-.From previous results
+.
+
+\change_inserted -1046193749 1681325390
+ 
+\change_unchanged
+From previous results
+\change_inserted -1046193749 1681325394
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "bartonThesisSubmittedPartial"
@@ -5166,7 +5667,13 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
+
+\change_deleted -1046193749 1681325361
 TL cite barton's thesis
+\change_inserted -1046193749 1681325367
+TL again, incorrect citation
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -5207,14 +5714,28 @@ TL fix
 
 \end_inset
 
- gave reduced an accumulated error for highly charge guest molecules.
- In both cases, a series of 29 lambda windows were generated with rotational
+ gave 
+\change_deleted -1046193749 1681325425
+reduced an accumulated
+\change_inserted -1046193749 1681325429
+acceptable
+\change_unchanged
+ error
+\change_inserted -1046193749 1681325431
+s
+\change_unchanged
+ for highly charge guest molecules.
+ 
+\change_deleted -1046193749 1681325505
+In both cases, a series of 29 lambda windows were generated with rotational
  and orientational force spaced evenly on 
 \begin_inset Formula $\log_{2}$
 \end_inset
 
 -scale.
- Host and guest molecule conformations were restrained by applying a harmonic
+ 
+\change_unchanged
+Host and guest molecule conformations were restrained by applying a harmonic
  distance restraint between every atom and each neighbor within 6 Å.
  The conformational restraints were prepared using an in-house code.
  To maintain the guest molecule in the correct binding mode, 
@@ -5227,8 +5748,27 @@ ISDDM.py
 
 \end_inset
 
- constructed orientational restraints suggested by Boresch[cite], which
- requires an distance restraint 
+ constructed orientational restraints suggested by Boresch
+\change_deleted -1046193749 1681325538
+[cite]
+\change_inserted -1046193749 1681325539
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681325539
+[cite]
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+, which requires an distance restraint 
 \begin_inset Formula $r_{aA}$
 \end_inset
 
@@ -5302,15 +5842,36 @@ noprefix "false"
 \begin_inset Formula $a$
 \end_inset
 
- is the closest heavy-atom to the ligand center of mass (COM), where receptor
- atom 
+ is the closest heavy-atom to the ligand center of mass (COM), where 
+\change_deleted -1046193749 1681326096
+receptor atom 
+\change_unchanged
+
 \begin_inset Formula $A$
 \end_inset
 
- is the shortest distance to that heavy atom to 
+ is the
+\change_inserted -1046193749 1681326114
+ receptor heavy-atom that is
+\change_unchanged
+ 
+\change_inserted -1046193749 1681326120
+the 
+\change_unchanged
+shortest distance 
+\change_inserted -1046193749 1681326127
+from 
+\begin_inset Formula $a$
+\end_inset
+
+
+\change_deleted -1046193749 1681326125
+to that heavy atom to 
 \begin_inset Formula $A$
 \end_inset
 
+
+\change_unchanged
 .
  Then the script looks for the best suited heavy atoms, 
 \begin_inset Formula $b$
@@ -5336,10 +5897,22 @@ noprefix "false"
 \begin_inset Formula $ϕ_{AB}$
 \end_inset
 
-, and 
-\begin_inset Formula $ϕ_{aA}ϕ_{ba}$
+, 
+\change_deleted -1046193749 1681326146
+and 
+\change_unchanged
+
+\begin_inset Formula $ϕ_{aA}$
 \end_inset
 
+
+\change_inserted -1046193749 1681326157
+, and 
+\begin_inset Formula $ϕ_{ba}$
+\end_inset
+
+
+\change_unchanged
  between 80 and 100 degrees.
  It is important that the angle is close to 90 degrees in order to maintain
  a well define bound state.
@@ -5350,7 +5923,13 @@ Free Energy Analysis Using MBAR
 \end_layout
 
 \begin_layout Standard
-The Python package pymbar version 3.1 
+The Python package 
+\change_deleted -1046193749 1681326241
+pymbar
+\change_inserted -1046193749 1681326242
+PyMBAR
+\change_unchanged
+ version 3.1 
 \begin_inset Note Note
 status collapsed
 
@@ -5382,9 +5961,19 @@ TL what do you mean by 'thermodynamic parameters'?
 
  of each coordinate trajectory to be calculate with the potential function
  of all other states of the same molecule.
- .
- For example, potential energies for the coordinate trajectory from state
- 2 need to be caclulated for all other states between 1 and 4.
+ 
+\change_deleted -1046193749 1681326185
+.
+ 
+\change_unchanged
+For example, potential energies for the coordinate trajectory from state
+ 2 need to be 
+\change_deleted -1046193749 1681326191
+caclulated
+\change_inserted -1046193749 1681326191
+calculated
+\change_unchanged
+ for all other states between 1 and 4.
  These potential energies were calculated using 
 \begin_inset Flex Code
 status open
@@ -5405,7 +5994,12 @@ imin=5
 
 \end_inset
 
-.The MBAR estimate also returns its own uncertainty error estimate.
+.
+
+\change_inserted -1046193749 1681326195
+ 
+\change_unchanged
+The MBAR estimate also returns its own uncertainty error estimate.
 \end_layout
 
 \begin_layout Subsection
@@ -5413,11 +6007,18 @@ Time Series Analysis
 \end_layout
 
 \begin_layout Standard
-The number of independent samples is in an MD trajectory is limited by time
- correlations between frames and the time required to relax to the equilibrium
- average.
+The number of independent samples
+\change_deleted -1046193749 1681326217
+ is
+\change_unchanged
+ in an MD trajectory is limited by time correlations between frames and
+ the time required to relax to the equilibrium average.
  If this is not accounted for, the final analysis will underestimate the
  error
+\change_inserted -1046193749 1681326229
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "klimovichGuidelinesAnalysisFree2015"
@@ -5445,7 +6046,11 @@ literal "false"
 
 \end_inset
 
- .
+
+\change_deleted -1046193749 1681326254
+ 
+\change_unchanged
+.
  These independent samples were then run through the 
 \begin_inset Flex Code
 status open
@@ -5487,6 +6092,10 @@ Overlap Matrix Exploring the Degree of Space Phase Overlap
 \begin_layout Standard
 When using any perturbation approach, such as FEP or MBAR, a poor phase-space
  overlap between states can result in an inaccurate free energy estimate
+\change_inserted -1046193749 1681326283
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "klimovichGuidelinesAnalysisFree2015"
@@ -5494,8 +6103,16 @@ literal "false"
 
 \end_inset
 
-.To assess the convergence our implementation of our thermodynamic cycle
- in 
+.
+
+\change_inserted -1046193749 1681326313
+ 
+\change_unchanged
+To assess the convergence 
+\change_inserted -1046193749 1681326324
+of 
+\change_unchanged
+our implementation of our thermodynamic cycle in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:thermodynamic-cycle"
@@ -5505,7 +6122,19 @@ noprefix "false"
 
 \end_inset
 
-, we created an overlap matrix
+, we created
+\change_deleted -1046193749 1681326367
+ an
+\change_unchanged
+ overlap matri
+\change_inserted -1046193749 1681326370
+ces
+\change_deleted -1046193749 1681326369
+x
+\change_inserted -1046193749 1681326331
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "klimovichGuidelinesAnalysisFree2015"
@@ -5513,16 +6142,60 @@ literal "false"
 
 \end_inset
 
- .The matrix shows the probability of a sample state 
+
+\change_inserted -1046193749 1681326392
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Overlap-matrix_15_windows"
+plural "true"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:overlap_matrix_29_windows"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ 
+\change_deleted -1046193749 1681326335
+ .
+\change_unchanged
+The matrix shows the probability of a sample state 
 \begin_inset Formula $i$
 \end_inset
 
- being evaluated in state 
+ being 
+\change_deleted -1046193749 1681326441
+evaluated in
+\change_inserted -1046193749 1681326441
+from
+\change_unchanged
+ state 
 \begin_inset Formula $j$
 \end_inset
 
-, providing a degree of overlap between both states.To obtain reliable free
- energy estimates, the overlap matrix should at least be tridiagonal.
+, 
+\change_deleted -1046193749 1681326453
+providing a
+\change_inserted -1046193749 1681326457
+indicating the
+\change_unchanged
+ degree of overlap between both states.
+
+\change_inserted -1046193749 1681326417
+ 
+\change_unchanged
+To obtain reliable free energy estimates, the overlap matrix should at least
+ be tridiagonal.
  I.e., all 
 \begin_inset Formula $\left(i,i+1\right)$
 \end_inset
@@ -5532,6 +6205,10 @@ literal "false"
 \end_inset
 
  elements should be greater than 0.03
+\change_inserted -1046193749 1681326488
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "klimovichGuidelinesAnalysisFree2015"
@@ -5540,12 +6217,53 @@ literal "false"
 \end_inset
 
 .
- For example column 
+ 
+\change_inserted -1046193749 1681326726
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1681326735
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681326735
+TL description of what the values mean should be in the figure caption.
+ I don't think you need to restate the numerical values of each state.
+ That is already done.
+ Better yet, annotate the figures
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+For example column 
 \begin_inset Formula $\lambda_{0}$
 \end_inset
 
- denotes state 6 where the Lennard-jones and Van der Walls interaction of
- the ligand were turned off are removed shown in 
+ denotes state 6 where the Lennard-
+\change_inserted -1046193749 1681326495
+J
+\change_deleted -1046193749 1681326494
+j
+\change_unchanged
+ones and 
+\change_inserted -1046193749 1681326498
+v
+\change_deleted -1046193749 1681326498
+V
+\change_unchanged
+an der Wa
+\change_inserted -1046193749 1681326501
+a
+\change_deleted -1046193749 1681326501
+l
+\change_unchanged
+ls interaction of the ligand were turned off are removed shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Overlap-matrix_15_windows"
@@ -5566,10 +6284,14 @@ noprefix "false"
 \end_inset
 
  is the scaling process the GB external dielectric constant by 5%, 10%,
- 20% 50% and finally 100% (78.5 
+ 20% 50% and finally 100% (78.5
+\change_deleted -1046193749 1681326523
+ 
 \begin_inset Formula $\epsilon$
 \end_inset
 
+
+\change_unchanged
 ).
  
 \begin_inset Formula $\lambda_{6-8}$
@@ -5600,7 +6322,16 @@ noprefix "false"
 \end_inset
 
  is the endstate simulation of the complex.
+\change_inserted -1046193749 1681326720
+
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1046193749 1681326720
  
+\change_unchanged
+
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Overlap-matrix_15_windows"
@@ -5649,7 +6380,12 @@ a shows a representative overlap matrix for states 6-8.
 \begin_inset Formula $\lambda_{0}$
 \end_inset
 
-.Overlap for 
+.
+
+\change_inserted -1046193749 1681326755
+ 
+\change_unchanged
+Overlap for 
 \begin_inset Formula $\lambda_{2}-\lambda_{9}$
 \end_inset
 
@@ -5685,7 +6421,11 @@ noprefix "false"
 \begin_inset Formula $\lambda_{10}$
 \end_inset
 
- show no overlap,and states 
+ show no overlap,
+\change_inserted -1046193749 1681326765
+ 
+\change_unchanged
+and states 
 \begin_inset Formula $\lambda_{9}-\lambda_{15}$
 \end_inset
 
@@ -5705,7 +6445,11 @@ noprefix "false"
 
 \end_inset
 
-,, which shows good phase space overlap.
+,
+\change_deleted -1046193749 1681326774
+,
+\change_unchanged
+ which shows good phase space overlap.
 \end_layout
 
 \begin_layout Standard
@@ -5920,13 +6664,53 @@ literal "false"
 \end_inset
 
 .
- Measuring the slope and Pearson correlation coefficient,
+ 
+\change_inserted -1046193749 1681326869
+Standard metrics included
+\change_deleted -1046193749 1681326870
+Measuring 
+\change_unchanged
+the slope and Pearson correlation coefficient,
+\change_inserted -1046193749 1681326822
+ 
+\change_unchanged
+
 \begin_inset Formula $R^{2}$
 \end_inset
 
-, where a value of 1 for either of these represents perfect correlation.
- We also compute the root mean squared error(RMSE), mean absolute error
- (MAE) and mean sign error (MSE).The RMSE
+
+\change_deleted -1046193749 1681326878
+, where a value of 1 for either of these represents perfect correlation
+\change_unchanged
+.
+ We also compute the root mean squared error
+\change_inserted -1046193749 1681326883
+ 
+\change_unchanged
+(RMSE), mean absolute error (MAE) and mean sign error (MSE)
+\change_inserted -1046193749 1681326891
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681326898
+TL provide equations for these
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
+
+\change_inserted -1046193749 1681326853
+ 
+\change_unchanged
+The RMSE
 \begin_inset Formula $_{o}$
 \end_inset
 
@@ -5957,6 +6741,11 @@ where
 \end_inset
 
  are.
+
+\change_inserted -1046193749 1681326907
+ 
+\change_deleted -1046193749 1681326905
+
 \end_layout
 
 \begin_layout Standard
