@@ -2293,8 +2293,17 @@ name "subsec:Free-Energy-Perturbation"
 \end_layout
 
 \begin_layout Standard
-While simulating the binding process of ligand-receptor provides estimates
- of binding affinity[
+While simulating the binding process of ligand
+\change_inserted -1046193749 1681319614
+ and 
+\change_deleted -1046193749 1681319611
+-
+\change_unchanged
+receptor provides estimates of binding affinity
+\change_deleted -1046193749 1681319575
+[
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "dejongDeterminingEquilibriumConstants2011"
@@ -2302,8 +2311,20 @@ literal "false"
 
 \end_inset
 
-], depending on the size of the system current common molecular dynamic
- software packages and high-end GPUs reach a only a few hundred of ns/day
+
+\change_deleted -1046193749 1681319577
+]
+\change_unchanged
+, 
+\change_deleted -1046193749 1681319651
+depending on the size of the system 
+\change_unchanged
+current common molecular dynamic software packages and high-end GPUs reach
+ a only a few hundred of ns/day
+\change_inserted -1046193749 1681319654
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "kutznerMoreBangYour2019"
@@ -2311,6 +2332,10 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681319689
+ for typical proteins
+\change_unchanged
 .
  
 \begin_inset Note Note
@@ -2322,12 +2347,33 @@ TL you need to specify this a bit more, what size of system?
 
 \end_inset
 
- making these calculations unappealing for high throughput drug discovery
- timescales.
+ 
+\change_inserted -1046193749 1681319706
+As a results, brute force 
+\change_deleted -1046193749 1681319708
+making these
+\change_unchanged
+ calculations
+\change_inserted -1046193749 1681319710
+ are
+\change_unchanged
+ unappealing for high throughput drug discovery timescales.
  Free energy perturbation calculations provide a way to estimate the binding
- affinity without the actual needed of simulating the binding event.
- The earliest and well known methods to estimate free energy difference
- based on the perturbation theory was introduced by 
+ affinity without 
+\change_deleted -1046193749 1681319742
+the actual needed of
+\change_unchanged
+ simulating the binding event.
+ The earliest and 
+\change_inserted -1046193749 1681319761
+most 
+\change_unchanged
+well known method
+\change_deleted -1046193749 1681319764
+s
+\change_unchanged
+ to estimate free energy difference based on the perturbation theory was
+ introduced by 
 \begin_inset Note Note
 status collapsed
 
@@ -2355,7 +2401,34 @@ literal "false"
 
 \end_inset
 
-,starting from Helmholtz free energy
+
+\change_inserted -1046193749 1681319771
+.
+ S
+\change_deleted -1046193749 1681319768
+,
+\change_unchanged
+starting from Helmholtz free energy
+\change_inserted -1046193749 1681319982
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681320030
+TL This section is almost identically from http://alchemistry.org/wiki/Exponentia
+l_Averaging.
+ Delete this and redo the derivation yourself
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \begin_inset Formula 
 \[
 A=-\frac{1}{\beta}\ln Q,
@@ -2363,6 +2436,8 @@ A=-\frac{1}{\beta}\ln Q,
 
 \end_inset
 
+
+\change_deleted -1046193749 1681319776
 
 \end_layout
 
@@ -2376,6 +2451,8 @@ A_{1}-A_{0}=-\beta^{-1}[ln(Q_{1})-ln(Q_{0})=-\beta^{-1}ln\left[\frac{Q_{1}}{Q_{0
 \end_inset
 
 
+\change_deleted -1046193749 1681319786
+
 \end_layout
 
 \begin_layout Standard
@@ -2384,6 +2461,28 @@ Then adding and subtracting
 \end_inset
 
  from the partition function in the numerator results in 
+\change_inserted -1046193749 1681319850
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681319868
+TL you need to define what 
+\begin_inset Formula $Q$
+\end_inset
+
+ is or this step makes no sense
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \begin_inset Formula 
 \[
 \Delta A_{10}=-\beta^{-1}\text{ln}\left[\frac{\int e^{-\beta\left(U_{1}(\overrightarrow{q})-U_{0}(\overrightarrow{q})\right)e^{-\beta U_{0}(\overrightarrow{q})}d\overrightarrow{q}}}{Q_{0}}\right]
@@ -2391,6 +2490,8 @@ Then adding and subtracting
 
 \end_inset
 
+
+\change_deleted -1046193749 1681319790
 
 \end_layout
 
@@ -2407,6 +2508,8 @@ which gives:
 \end_inset
 
 
+\change_deleted -1046193749 1681319796
+
 \end_layout
 
 \begin_layout Standard
@@ -2417,6 +2520,11 @@ The
  indicates the equilibrium sampling was performed in state 0.
  The above equations applies to a forward transformation from state 0 to
  state 1
+\change_inserted -1046193749 1681320086
+.
+ 
+\change_deleted -1046193749 1681320084
+
 \end_layout
 
 \begin_layout Standard
@@ -2430,8 +2538,19 @@ TL generally, you should go in both directions if using this formula.
 
 \end_inset
 
-Generally sampling in both directions checks for convergence but in practice
- their convergence properties may not be the same 
+Generally sampling in both directions 
+\change_inserted -1046193749 1681320096
+is used to 
+\change_unchanged
+check
+\change_deleted -1046193749 1681320098
+s
+\change_unchanged
+ for convergence
+\change_inserted -1046193749 1681320102
+,
+\change_unchanged
+ but in practice their convergence properties may not be the same 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "pohorilleGoodPracticesFreeEnergy2010a"
@@ -2440,12 +2559,52 @@ literal "false"
 \end_inset
 
 .
+\change_deleted -1046193749 1681320109
+
 \end_layout
 
 \begin_layout Standard
-However since EXP is only sampled at one state and then perturb in the other,
- this tend to lead to slow convergence and is also sensitive to any lack
- of phase space overlap between states
+
+\change_deleted -1046193749 1681320228
+However
+\change_inserted -1046193749 1681320230
+In addition,
+\change_unchanged
+ since EXP
+\change_inserted -1046193749 1681320206
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681320213
+TL EXP is not defined
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ is only sampled at one state and then perturb in the other, 
+\change_deleted -1046193749 1681320245
+this tend to lead to slow
+\change_unchanged
+ convergence 
+\change_inserted -1046193749 1681320253
+tends to be slow 
+\change_unchanged
+and is also sensitive to
+\change_deleted -1046193749 1681320259
+ any
+\change_unchanged
+ lack of phase space overlap between states
+\change_inserted -1046193749 1681320262
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "shirtsComparisonEfficiencyBias2005"
@@ -2461,21 +2620,41 @@ Multistate Bennett Acceptance Ratio (MBAR)
 \end_layout
 
 \begin_layout Standard
-A recurring challenge in ligand-receptor binding is the sampling of sufficient
- amount of data to estimate binding affinity to adequate precision.
- Earlier methods such as EXP are one sided and do not make the most efficient
- used of data when samples from more than one state are available
-\begin_inset CommandInset citation
-LatexCommand citep
-key "shirtsStatisticallyOptimalAnalysis2008a"
-literal "false"
-
-\end_inset
-
-.
- Multistate Bennett acceptance method (MBAR) has shown to be a superior
- estimator in that it has the lowest variance and is asymptotically unbiased
+A recurring challenge in ligand-receptor binding is 
+\change_deleted -1046193749 1681320364
+the
+\change_inserted -1046193749 1681320364
+to
+\change_unchanged
+ sampl
+\change_inserted -1046193749 1681320366
+e
+\change_deleted -1046193749 1681320366
+ing
+\change_unchanged
  
+\change_deleted -1046193749 1681320369
+of
+\change_unchanged
+ sufficient
+\change_deleted -1046193749 1681320372
+ amount of
+\change_unchanged
+ data to estimate binding affinity to adequate precision.
+ Earlier methods
+\change_inserted -1046193749 1681320383
+,
+\change_unchanged
+ such as EXP
+\change_inserted -1046193749 1681320385
+,
+\change_unchanged
+ are one sided and do not make the most efficient used of data when samples
+ from more than one state are available
+\change_inserted -1046193749 1681320395
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "shirtsStatisticallyOptimalAnalysis2008a"
@@ -2484,38 +2663,117 @@ literal "false"
 \end_inset
 
 .
- MBAR makes use of all configurations sampled form each of these states,
- though sufficient phase space overlap is still required for accurate estimates
+ Multistate Bennett acceptance method (MBAR) 
+\change_deleted -1046193749 1681320417
+has shown to be
+\change_inserted -1046193749 1681320417
+is
+\change_unchanged
+ a superior estimator in that it has the lowest
+\change_inserted -1046193749 1681320428
+ possible
+\change_unchanged
+ variance and is asymptotically unbiased 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "shirtsStatisticallyOptimalAnalysis2008a"
+literal "false"
+
+\end_inset
+
+.
+ MBAR makes use of all configurations sampled f
+\change_inserted -1046193749 1681320562
+ro
+\change_deleted -1046193749 1681320562
+or
+\change_unchanged
+m each 
+\change_deleted -1046193749 1681320583
+of these
+\change_unchanged
+ state
+\change_deleted -1046193749 1681320579
+s
+\change_unchanged
+, though sufficient phase space overlap is still required for accurate estimates
  of binding affinity.
- In MBAR formulation, each state is characterized by a specific combination
- of potential energy function 
+ In
+\change_inserted -1046193749 1681320596
+ the
+\change_unchanged
+ MBAR formulation, each state 
+\change_inserted -1046193749 1681320623
+
+\begin_inset Formula $i$
+\end_inset
+
+ 
+\change_unchanged
+is characterized by a specific 
+\change_deleted -1046193749 1681320613
+combination of
+\change_unchanged
+ potential energy function
+\change_inserted -1046193749 1681320671
+,
+\change_unchanged
+ 
 \begin_inset Formula $U_{i}(x)$
 \end_inset
 
-, inverse temperature 
-\begin_inset Formula $\beta$
+, inverse temperature
+\change_inserted -1046193749 1681320673
+,
+\change_unchanged
+ 
+\begin_inset Formula $\beta_{i}$
 \end_inset
 
-, pressure 
+, pressure
+\change_inserted -1046193749 1681320675
+,
+\change_unchanged
+ 
 \begin_inset Formula $p_{i}$
 \end_inset
 
- and chemical potentials 
+ and chemical potential
+\change_deleted -1046193749 1681320679
+s
+\change_inserted -1046193749 1681320678
+,
+\change_unchanged
+ 
 \begin_inset Formula $\mu_{i}$
 \end_inset
 
+
+\change_inserted -1046193749 1681320684
+,
+\change_unchanged
  depending on the ensemble.
  The reduced potential energy 
+\change_inserted -1046193749 1681320782
+
 \series bold
+
+\begin_inset Formula $u_{i}\left(x\right)$
+\end_inset
+
+
+\change_deleted -1046193749 1681320780
 
 \begin_inset Formula $\mu_{i}(x)$
 \end_inset
 
+
+\change_unchanged
  
 \series default
 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 TL check you notation here.
@@ -2533,7 +2791,19 @@ TL check you notation here.
 
 \end_inset
 
-of a state i is defined by Shirts and Chodera
+of a state 
+\change_inserted -1046193749 1681320806
+
+\begin_inset Formula $i$
+\end_inset
+
+
+\change_deleted -1046193749 1681320805
+i
+\change_unchanged
+ is defined 
+\change_deleted -1046193749 1681320817
+by Shirts and Chodera
 \begin_inset CommandInset citation
 LatexCommand citep
 key "shirtsStatisticallyOptimalAnalysis2008a"
@@ -2541,6 +2811,10 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681320817
+as
+\change_unchanged
 
 \begin_inset Formula 
 \[
@@ -2550,9 +2824,13 @@ literal "false"
 \end_inset
 
 
+\change_deleted -1046193749 1681320826
+
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1681320838
 where 
 \begin_inset Formula $\text{N}(x)$
 \end_inset
@@ -2570,18 +2848,56 @@ potential energy function and
 \end_inset
 
 denoting the chemical potential of the system.
+
+\change_inserted -1046193749 1681320838
+ 
+\change_deleted -1046193749 1681320838
+
 \end_layout
 
 \begin_layout Standard
 The reduced potentials can be denoted as reduced free energy differences
+\change_inserted -1046193749 1681320856
+,
+\change_unchanged
  
 \begin_inset Formula $\Delta f_{ij}\equiv\beta_{j}A_{j}-\beta_{i}A_{i}$
 \end_inset
 
-among states.
+
+\change_inserted -1046193749 1681320858
+, 
+\change_unchanged
+among states
+\change_inserted -1046193749 1681320862
+,
+\change_deleted -1046193749 1681320861
+.
+\change_inserted -1046193749 1681320885
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681320939
+TL revise.
+ This doesn't make sense.
+ The reduced potentials are not the same thing as the reduced free energy
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1681320870
 \begin_inset Formula 
 \[
 \hat{f_{i}}=-ln\stackrel[j=1]{K}{\sum}\stackrel[n=1]{N_{j}}{\sum}\frac{exp[-u_{i}(x_{jn})]}{\sum_{k=1}^{K}N_{k}exp[\hat{f}_{k}-u_{k}(x_{jn})]}
@@ -2589,10 +2905,24 @@ among states.
 
 \end_inset
 
+
+\change_inserted -1046193749 1681320873
+
+\begin_inset Formula 
+\[
+\hat{f_{i}}=-ln\stackrel[j=1]{K}{\sum}\stackrel[n=1]{N_{j}}{\sum}\frac{exp[-u_{i}(x_{jn})]}{\sum_{k=1}^{K}N_{k}exp[\hat{f}_{k}-u_{k}(x_{jn})]},
+\]
+
+\end_inset
+
+
+\change_deleted -1046193749 1681320879
 ,
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -1046193749 1681320945
 
 \family roman
 \series medium
@@ -2606,10 +2936,41 @@ among states.
 \uwave off
 \noun off
 \color none
+where 
+\change_unchanged
+
 \begin_inset Formula $\hat{f}_{i}$
 \end_inset
 
- are the solution for MBAR free energy equations.
+ 
+\change_deleted -1046193749 1681321089
+are
+\change_inserted -1046193749 1681321089
+is
+\change_unchanged
+ the 
+\change_deleted -1046193749 1681321060
+solution
+\change_inserted -1046193749 1681321061
+estimates
+\change_unchanged
+ 
+\change_inserted -1046193749 1681321067
+of the 
+\change_deleted -1046193749 1681321063
+for
+\change_unchanged
+ MBAR free energ
+\change_inserted -1046193749 1681321098
+y, 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+
+\change_deleted -1046193749 1681321072
+y equations
+\change_unchanged
+.
 
 \family default
 \series default
@@ -2632,14 +2993,27 @@ among states.
 \end_inset
 
  are meaningful.
- However when samples from different states have poor phase space overlap
+ However
+\change_inserted -1046193749 1681321119
+,
+\change_unchanged
+ when samples from different states have poor phase space overlap
+\change_inserted -1046193749 1681321131
+, the
+\change_unchanged
  equation above will fail to converge or 
 \begin_inset Formula $\hat{f}_{i}$
 \end_inset
 
+
+\change_inserted -1046193749 1681321139
+ 
+\change_unchanged
 could have large uncertainties.
  Lastly MBAR also provides a direct expression to estimate the statistical
  uncertainty in free energy differences:
+\change_deleted -1046193749 1681321274
+
 \begin_inset Formula 
 \[
 \delta^{2}\Delta\hat{f_{ij}}\equiv\text{cov}\left(-\text{ln\ensuremath{\frac{\hat{c_{j}}}{\hat{c_{i}}}-\text{ln\ensuremath{\frac{\hat{c_{j}}}{\hat{c_{i}}}}}}}\right)=\hat{\Theta_{ii}}-2\hat{\Theta_{ij}}+\hat{\Theta_{jj}}
@@ -2648,6 +3022,41 @@ could have large uncertainties.
 \end_inset
 
 
+\change_inserted -1046193749 1681321279
+
+\begin_inset Formula 
+\[
+\delta^{2}\Delta\hat{f_{ij}}\equiv\text{cov}\left(-\text{ln\ensuremath{\frac{\hat{c_{j}}}{\hat{c_{i}}}-\text{ln\ensuremath{\frac{\hat{c_{j}}}{\hat{c_{i}}}}}}}\right)=\hat{\Theta_{ii}}-2\hat{\Theta_{ij}}+\hat{\Theta_{jj}}.
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681321321
+TL 
+\begin_inset Formula $\hat{}$
+\end_inset
+
+s are misaligned.
+ The 
+\begin_inset Formula $\hat{}$
+\end_inset
+
+ should only go over the symbol, not the symbol and its subscripts.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
@@ -2655,17 +3064,59 @@ Intermediate states-provide better phase space overlap
 \end_layout
 
 \begin_layout Standard
-Intermediate states states are needed to obtain a reliable estimate of ligand-ho
-st free energy difference.
+Intermediate states 
+\change_deleted -1046193749 1681321333
+states
+\change_unchanged
+ are needed to obtain a reliable estimate of 
+\change_deleted -1046193749 1681321352
+ligand-host
+\change_inserted -1046193749 1681321352
+binding
+\change_unchanged
+ free energy difference.
  Attempting to calculate the free energy difference of ligand-host binding
  the states have to be similar in order to obtain reliable estimate in their
- free energy difference.
+ free energy difference
+\change_inserted -1046193749 1681321431
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681321439
+TL this is not a sentence.
+ Revise
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
  Typically, this is almost never the case for bound and unbound states as
- the end-states have a poor space phase overlap leading to large uncertainties
- in computing the free energy difference.
- Therefore, appropriately selected intermediate states can significantly
+ the end-states have 
+\change_deleted -1046193749 1681321459
+a 
+\change_unchanged
+poor space phase overlap
+\change_inserted -1046193749 1681321464
+,
+\change_unchanged
+ leading to large uncertainties in computing the free energy difference.
+ Therefore, appropriately selected intermediate states can 
+\change_deleted -1046193749 1681321672
+significantly
+\change_unchanged
  make free energy calculations more efficient by bridging the gap between
  the target end-states
+\change_inserted -1046193749 1681321476
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "wuPhasespaceOverlapMeasures2005"
@@ -2674,15 +3125,27 @@ literal "false"
 \end_inset
 
 .
+\change_deleted -1046193749 1681321846
+
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1681321845
 An essential step in preparing alchemical free energy calculations is to
- define intermediate states that link the unbound and bound end-states.Each
- state is defined by a different Hamiltonian.Since free energy is a state
- function, the path that connects the states is unimportant and we can select
- a cycle that connects any two states through several nonphysical intermediate
- ones, such as those shown in 
+ define intermediate states that link the unbound and bound end-states.
+
+\change_inserted -1046193749 1681321695
+ 
+\change_unchanged
+Each state is defined by a different Hamiltonian.
+
+\change_inserted -1046193749 1681321698
+ 
+\change_unchanged
+Since free energy is a state function, the path that connects the states
+ is unimportant and we can select a cycle that connects any two states through
+ several nonphysical intermediate ones, such as those shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:thermodynamic-cycle"
@@ -2692,8 +3155,33 @@ noprefix "false"
 
 \end_inset
 
-.Though other paths may be used the simplest path to construct between two
- Hamiltonians is linear:
+.
+
+\change_inserted -1046193749 1681321811
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1681321915
+There is still a large change between each state in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:thermodynamic-cycle"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and these must also be connected by intermediate states.
+ 
+\change_unchanged
+Though other paths may be used
+\change_inserted -1046193749 1681321920
+,
+\change_unchanged
+ the simplest path to construct between two Hamiltonians is linear:
 \begin_inset Formula 
 \begin{equation}
 H(\lambda)=\lambda H_{1}+(1-\lambda)H_{0}\label{eq:linear-mixing}
@@ -2701,6 +3189,8 @@ H(\lambda)=\lambda H_{1}+(1-\lambda)H_{0}\label{eq:linear-mixing}
 
 \end_inset
 
+
+\change_deleted -1046193749 1681321807
 
 \end_layout
 
@@ -2727,7 +3217,12 @@ where
 \begin_inset Formula $H_{1}$
 \end_inset
 
- state.For values between 0 and 1, the system is in a mixed state.
+ state.
+
+\change_inserted -1046193749 1681321943
+ 
+\change_unchanged
+For values between 0 and 1, the system is in a mixed state.
  For the cycle depicted in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -2738,8 +3233,18 @@ noprefix "false"
 
 \end_inset
 
-,there additional mixed-states between the major ones shown are simulated
- with 
+,
+\change_inserted -1046193749 1681321950
+ 
+\change_unchanged
+the
+\change_deleted -1046193749 1681321967
+re 
+\change_inserted -1046193749 1681321967
+ 
+\change_unchanged
+additional mixed-states between the major ones shown are simulated with
+ 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "eq:linear-mixing"
@@ -2750,8 +3255,12 @@ noprefix "false"
 \end_inset
 
 .
- Each of these intermediate states are simulated independently.From these
- simulations the free energy difference between state 
+ Each of these intermediate states are simulated independently.
+
+\change_inserted -1046193749 1681321978
+ 
+\change_unchanged
+From these simulations the free energy difference between state 
 \begin_inset Formula $i$
 \end_inset
 
@@ -2765,6 +3274,10 @@ noprefix "false"
 \end_inset
 
 
+\change_inserted -1046193749 1681321991
+,
+\change_deleted -1046193749 1681321998
+
 \begin_inset Formula 
 \[
 \Delta G_{b}=\sum\Delta G_{i,i+1}
@@ -2773,6 +3286,18 @@ noprefix "false"
 \end_inset
 
 
+\change_inserted -1046193749 1681321999
+
+\begin_inset Formula 
+\[
+\Delta G_{b}=\sum\Delta G_{i,i+1}.
+\]
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
@@ -2780,9 +3305,25 @@ Our Thermodynamic Pathway
 \end_layout
 
 \begin_layout Standard
-Our thermodynamic cycle uses a modified DDM cycle that employs conformational
- restraints and GB solvent to enhance convergence.All of the sampling is
- done in the fast GB implicit solvent model in states 1-8 
+Our thermodynamic cycle 
+\change_deleted -1046193749 1681322036
+uses
+\change_inserted -1046193749 1681322038
+is based on
+\change_unchanged
+ a modified DDM cycle
+\change_inserted -1046193749 1681322041
+ and
+\change_deleted -1046193749 1681322042
+ that
+\change_unchanged
+ employs conformational restraints and GB solvent to enhance convergence.
+
+\change_inserted -1046193749 1681322047
+ 
+\change_unchanged
+All of the sampling is done in the fast GB implicit solvent model in states
+ 1-8 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:thermodynamic-cycle"
@@ -2816,9 +3357,25 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Our modified thermodynamic cycle.
+
+\change_deleted -1046193749 1681322094
+Our
+\change_inserted -1046193749 1681322094
+ Major states in our
+\change_unchanged
+ 
+\change_deleted -1046193749 1681322094
+modified
+\change_inserted -1046193749 1681322069
+binding free energy
+\change_unchanged
+ thermodynamic cycle.
+
+\change_deleted -1046193749 1681322099
  Major states in our thermodynamic cycle.
- The free energy change in GB solvent is the free energy difference between
+ 
+\change_unchanged
+The free energy change in GB solvent is the free energy difference between
  states 1 and 8.
  Conformational restraints (padlock) indicates the presence of harmonic
  distance restraints between each atom separated by 
@@ -2850,7 +3407,11 @@ literal "false"
 .
  State 6 is where the ligand is decoupled from the receptor but is orientational
 ly restrained relative to receptor.
- State 5 is equivalent and not simulated.
+ State 5 is equivalent 
+\change_inserted -1046193749 1681322148
+to state 6 
+\change_unchanged
+and not simulated.
  
 \begin_inset Note Note
 status open
@@ -2885,29 +3446,85 @@ name "fig:thermodynamic-cycle"
 \end_layout
 
 \begin_layout Enumerate
-States 1 & 8 : The unbound and bound host-guest system simulated in GBSA
+States 1 & 8 : The unbound and bound host-guest system 
+\change_inserted -1046193749 1681322234
+are 
+\change_unchanged
+simulated in GB
+\change_deleted -1046193749 1681322259
+SA
+\change_unchanged
  solvent.
  In this study we use replica exchange molecular dynamics (REMD) to efficiently
  explore the different potential energy surfaces.
 \end_layout
 
 \begin_layout Enumerate
-1->2: Artificial intramolecular conformational restraints are turned on.
- These restraints are place on every atom of the ligand and receptor.
+
+\change_inserted -1046193749 1681322367
+\begin_inset Formula $1\rightarrow2$
+\end_inset
+
+
+\change_deleted -1046193749 1681322366
+1->2
+\change_unchanged
+: Artificial intramolecular conformational restraints are turned on.
+ These restraints are place
+\change_inserted -1046193749 1681322302
+d
+\change_unchanged
+ on every atom of the ligand and receptor.
  These restraints restrict the motion of the receptor and ligand to the
  last frame of state 8.
- Limiting the range of motion will prevent steric clashes and smooth the
- convergence in the later steps.
+ Limiting the range of motion 
+\change_deleted -1046193749 1681322338
+will
+\change_unchanged
+ prevent
+\change_inserted -1046193749 1681322342
+s
+\change_unchanged
+ steric clashes and smooth
+\change_inserted -1046193749 1681322351
+s
+\change_unchanged
+ the convergence in the later steps.
 \end_layout
 
 \begin_layout Enumerate
-2->3: The host and guest systems are decoupled from the solvent environment.
+
+\change_inserted -1046193749 1681322375
+\begin_inset Formula $2\rightarrow3$
+\end_inset
+
+
+\change_deleted -1046193749 1681322374
+2->3
+\change_unchanged
+: The host and guest systems are decoupled from the solvent environment
+\change_inserted -1046193749 1681322417
+ by turning off GB
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Enumerate
-3->4: The ligand is annihilated by first turning off Lennard-Jones interactions
- and scaling the ligand partial charges to zero through several nonphysical
- 
+
+\change_inserted -1046193749 1681322392
+\begin_inset Formula $3\rightarrow4$
+\end_inset
+
+
+\change_deleted -1046193749 1681322388
+3->4
+\change_unchanged
+: The ligand is annihilated by first turning off Lennard-Jones interactions
+ and 
+\change_inserted -1046193749 1681322432
+then 
+\change_unchanged
+scaling the ligand partial charges to zero through several nonphysical 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -2915,12 +3532,30 @@ States 1 & 8 : The unbound and bound host-guest system simulated in GBSA
 \end_layout
 
 \begin_layout Enumerate
-4->5: Orientational restraints are introduced, which prevents the ligand
- from leaving the binding pocket when it is not interacting with the environment
+
+\change_inserted -1046193749 1681322439
+\begin_inset Formula $4\rightarrow5$
+\end_inset
+
+
+\change_deleted -1046193749 1681322439
+4->5
+\change_unchanged
+: Orientational restraints are introduced, which prevents the ligand from
+ leaving the binding pocket when it is not interacting with the environment
  nor the receptor.
  We select the orientational restraints to bind the ligand relative to the
  receptor, using the last frame of step 8 as a reference.
- In this project we used restraints proposed by Boresch et al
+ In this project
+\change_inserted -1046193749 1681322469
+,
+\change_unchanged
+ we used restraints proposed by Boresch et al
+\change_inserted -1046193749 1681322480
+.
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "boreschAbsoluteBindingFree2003"
@@ -2931,11 +3566,16 @@ literal "false"
 , which keep the ligand in a specific orientation relative to the receptor.
  The method selects a total of six heavy atoms: three from the receptor
  and three from the ligand.
- Then a set harmonic restraints are applied which and comprised by one distance,
- two angles and three dihedrals shown in 
+ Then a set harmonic restraints are applied which 
+\change_deleted -1046193749 1681322504
+and
+\change_inserted -1046193749 1681322504
+are
+\change_unchanged
+ comprised by one distance, two angles and three dihedrals shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "fig:thermodynamic-cycle"
+reference "fig:Boresch-restraints-1-1"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2962,6 +3602,8 @@ noprefix "false"
 \end_inset
 
  shown below 
+\change_deleted -1046193749 1681322164
+
 \begin_inset Note Note
 status open
 
@@ -2972,6 +3614,8 @@ TL fix braces
 \end_inset
 
 
+\change_unchanged
+
 \begin_inset Formula 
 \[
 \Delta G_{restraints}=kTln\left[\frac{8\pi^{2}V(K_{r}K_{\theta1}K_{\theta2}K_{\phi1}K_{\phi2}K_{\phi3})^{1/2}}{r_{1}^{2}sin\theta_{1}sin\theta_{2}(2\pi kT)^{3}}\right],
@@ -2979,6 +3623,8 @@ TL fix braces
 
 \end_inset
 
+
+\change_deleted -1046193749 1681322545
 
 \end_layout
 
@@ -3007,10 +3653,35 @@ where
 
 \end_deeper
 \begin_layout Enumerate
-5->6: This step has a 
+
+\change_inserted -1046193749 1681322556
+\begin_inset Formula $5\rightarrow6$
+\end_inset
+
+
+\change_deleted -1046193749 1681322555
+5->6
+\change_unchanged
+: Th
+\change_inserted -1046193749 1681322568
+e
+\change_deleted -1046193749 1681322567
+is
+\change_unchanged
+ 
+\change_inserted -1046193749 1681322578
+change in free energy across this 
+\change_unchanged
+step 
+\change_deleted -1046193749 1681322583
+has a 
 \begin_inset Formula $\Delta G=0$
 \end_inset
 
+
+\change_inserted -1046193749 1681322589
+0,
+\change_unchanged
  since the intra/intermolecular interactions have been turn off.
  The Boresch restraints have already been applied and the receptor does
  not feel the precise of the ligand.
@@ -3020,9 +3691,21 @@ where
 \end_layout
 
 \begin_layout Enumerate
-6->7: Solute-solvent and ligand inter/intramolecular interactions are restored.
+
+\change_inserted -1046193749 1681322815
+\begin_inset Formula $6\rightarrow7$
+\end_inset
+
+
+\change_deleted -1046193749 1681322801
+6->7
+\change_unchanged
+: Solute-solvent and ligand inter/intramolecular interactions are restored.
  This is accomplished in a series of steps.
  First the Lennard-Jones interaction between the host and ligand are turn
+\change_inserted -1046193749 1681322839
+ed
+\change_unchanged
  back on, followed by restoration of solute-solvent interactions.
  Finally ligand charges are re-introduced in a series of 
 \begin_inset Formula $\lambda$
@@ -3032,8 +3715,20 @@ where
 \end_layout
 
 \begin_layout Enumerate
-7->8: Conformational and orientational restraints are incrementally removed.7->8:
- Conformational and orientational restraints are incrementally removed.
+
+\change_inserted -1046193749 1681322859
+\begin_inset Formula $7\rightarrow8$
+\end_inset
+
+
+\change_deleted -1046193749 1681322858
+7->8
+\change_unchanged
+: Conformational and orientational restraints are incrementally removed.
+\change_deleted -1046193749 1681322870
+7->8: Conformational and orientational restraints are incrementally removed.
+\change_unchanged
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -3051,8 +3746,20 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Implementation of Boresch Restraints.
- Set of restraints proposed by Boresch[32] for use in free energy calculations.
+Implementation of Boresch 
+\change_inserted -1046193749 1681322876
+r
+\change_deleted -1046193749 1681322876
+R
+\change_unchanged
+estraints
+\change_deleted -1046193749 1681322895
+.
+ Set of restraints proposed by Boresch[32] for use in
+\change_inserted -1046193749 1681322909
+ for absolute binding
+\change_unchanged
+ free energy calculations.
  The atoms and terms involved in this set of restraints are shown.
  Atoms “a,” “b,” and “c” belong to the ligand (on the top right), while
  atoms “A,” “B,” and “C” belong to the protein (on bottom left)
@@ -3081,16 +3788,32 @@ Molecular Modeling of physical chemistry of binding
 
 \begin_layout Standard
 To estimate the free energy differences accurately, a molecular model is
- required that describes the relevant physical parameters properties of
- a system correctly.
+ required that describes the relevant physical 
+\change_deleted -1046193749 1681323023
+parameters 
+\change_unchanged
+properties of a system correctly.
  Specifically, the Hamiltonian used to calculate the energy and forces should
  ensure that all configurations will be sampled with the correct probability.
- In practice, the choice of the Hamiltonian is often compromise between
- accuracy and efficiency.
+ In practice, the choice of the Hamiltonian is often 
+\change_inserted -1046193749 1681323049
+a 
+\change_unchanged
+compromise between accuracy and efficiency.
  Two major factors that dictate the cost of the energy and force evaluation
  are the degrees of freedom and the functional form of the Hamiltonian.
  A quantum-mechanical description of the system provides the most detailed
- description, as the electrons degree of freedom
+ description, as the electrons
+\change_inserted -1046193749 1681323104
+'
+\change_unchanged
+ degree
+\change_inserted -1046193749 1681323110
+s
+\change_unchanged
+ of freedom
+\change_deleted -1046193749 1681323122
+
 \begin_inset Note Note
 status open
 
@@ -3100,28 +3823,81 @@ TL define
 
 \end_inset
 
- are modeled explicitly and interaction energy is calculated by solving
- electronic structure of the system.
- In molecular mechanics (MM) description, molecules are represented by particles
+
+\change_unchanged
+ are modeled explicitly and 
+\change_inserted -1046193749 1681323084
+the 
+\change_unchanged
+interaction energy is calculated by solving electronic structure of the
+ system.
+ In 
+\change_inserted -1046193749 1681323134
+the 
+\change_unchanged
+molecular mechanics (MM) description, molecules are represented by particles
+\change_inserted -1046193749 1681323143
+,
+\change_unchanged
  which represent atoms or groups of atoms.
- Quantum-mechanical description of the system will in general be computationally
- more demanding than classical molecular models.
+ 
+\change_inserted -1046193749 1681323155
+The q
+\change_deleted -1046193749 1681323155
+Q
+\change_unchanged
+uantum-mechanical description of the system will 
+\change_deleted -1046193749 1681323165
+in 
+\change_unchanged
+general
+\change_inserted -1046193749 1681323167
+ly
+\change_unchanged
+ be 
+\change_deleted -1046193749 1681323172
+computationally
+\change_unchanged
+ more 
+\change_inserted -1046193749 1681323175
+computationally 
+\change_unchanged
+demanding than classical molecular models.
  Here we focus on classical Hamiltonians that incorporate fixed point charges.
- These type of Hamiltonian are referred as to 
+ These type of Hamiltonian
+\change_inserted -1046193749 1681323188
+s
+\change_unchanged
+ are referred as to 
 \begin_inset Quotes eld
 \end_inset
 
 force field
+\change_inserted -1046193749 1681323193
+s
+\change_unchanged
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1046193749 1681323199
+,
+\change_unchanged
  which attempt to represent inter- and intra-molecular interaction through
  general potential energy function.
 \end_layout
 
 \begin_layout Standard
-In this thesis, we use the general AMBER (Assisted Model Building and Energy
- Refinement) force field (GAFF)
+In this thesis, we use the general 
+\change_deleted -1046193749 1681323205
+AMBER
+\change_inserted -1046193749 1681323206
+Amber
+\change_deleted -1046193749 1681323212
+ (Assisted Model Building and Energy Refinement)
+\change_unchanged
+ force field (GAFF)
 \begin_inset CommandInset citation
 LatexCommand citep
 key "wangDevelopmentTestingGeneral2004"
@@ -3129,6 +3905,24 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681323434
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681323435
+TL cite http://dx.doi.org/10.1021/ja00124a002
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
  for our MD simulations.
  The potential energy function that describes the force field of the AMBER
  software package is 
@@ -3194,6 +3988,8 @@ V_{\text{AMBER}}(r^{N})=\underset{i_{\text{bonds}}}{\sum}k_{bi}(l_{i}-l_{i}^{0})
 \end_inset
 
 
+\change_deleted -1046193749 1681323260
+
 \end_layout
 
 \begin_layout Standard
@@ -3218,25 +4014,47 @@ th atom pair,
 \begin_inset Formula $l_{i}$
 \end_inset
 
+
+\change_inserted -1046193749 1681323314
+ 
+\change_unchanged
 represents the current bond length.
  For bond-angle bending, 
 \begin_inset Formula $k_{ai}$
 \end_inset
 
+
+\change_inserted -1046193749 1681323284
+ 
+\change_unchanged
 represents the force constant, 
 \begin_inset Formula $\theta_{i}^{0}$
 \end_inset
 
- being the bond angle at equilibrium and 
+ 
+\change_deleted -1046193749 1681323302
+being
+\change_inserted -1046193749 1681323302
+is
+\change_unchanged
+ the bond angle at equilibrium and 
 \begin_inset Formula $\theta_{i}$
 \end_inset
 
+
+\change_inserted -1046193749 1681323309
+ is 
+\change_unchanged
 the current bond angle between atoms.
  For dihedral-angle bending, 
 \begin_inset Formula $V_{i}^{n}$
 \end_inset
 
-(amplitude) represents the dihedral energy barrier, 
+
+\change_deleted -1046193749 1681323329
+(amplitude)
+\change_unchanged
+ represents the dihedral energy barrier, 
 \begin_inset Formula $\gamma$
 \end_inset
 
@@ -3245,6 +4063,10 @@ the current bond angle between atoms.
 \end_inset
 
 
+\change_inserted -1046193749 1681323342
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "hornakComparisonMultipleAmber2006"
@@ -3252,13 +4074,37 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681323416
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681323429
+TL not sure why you are citing this or why here.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 .
  
 \begin_inset Formula $E_{\text{electrostatics}}$
 \end_inset
 
  consists of electrostatics and van der Waals energies.
- The van der Waals energy is calculated using the Lennard-Jone model 
+ The van der Waals energy is calculated using the Lennard-Jone
+\change_inserted -1046193749 1681323449
+s
+\change_unchanged
+ model 
+\change_deleted -1046193749 1681323459
+
 \begin_inset Note Note
 status open
 
@@ -3268,6 +4114,22 @@ TL cite
 
 \end_inset
 
+
+\change_inserted -1046193749 1681323465
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681323465
+TL cite
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
  with equilibrium distance 
 \begin_inset Formula $r_{ij}^{0}$
 \end_inset
@@ -3282,7 +4144,27 @@ TL cite
 \begin_inset Formula $q$
 \end_inset
 
- is the charge on atom i and j and 
+ is the charge on atom 
+\change_deleted -1046193749 1681323478
+i
+\change_inserted -1046193749 1681323478
+
+\begin_inset Formula $i$
+\end_inset
+
+
+\change_unchanged
+ and 
+\change_deleted -1046193749 1681323481
+j
+\change_inserted -1046193749 1681323481
+
+\begin_inset Formula $j$
+\end_inset
+
+
+\change_unchanged
+ and 
 \begin_inset Formula $r_{ij}$
 \end_inset
 
@@ -3297,6 +4179,10 @@ TL cite
 
  are scaling factors for the Lennard-Jones and electrostatic energy based
  atoms on the bond separations:
+\change_inserted -1046193749 1681323489
+ 
+\change_unchanged
+
 \begin_inset Formula $f_{ij}=0$
 \end_inset
 
