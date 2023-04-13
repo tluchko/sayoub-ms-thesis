@@ -12615,11 +12615,54 @@ Therefore a transferable correction towards our results will need a more
 
 \begin_layout Chapter
 Conclusion
-\change_inserted -1046193749 1681256754
+\change_inserted -1046193749 1681415529
 
 \begin_inset CommandInset label
 LatexCommand label
 name "chap:Conclusion"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1681415532
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681415684
+TL The content is fine but I would like a restructuring.
+ A standard three-paragraph conclusion has the format
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1046193749 1681415695
+what you did
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1046193749 1681415707
+what you found/discovered
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1046193749 1681417178
+what comes next
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681417214
+Move the discussion of solvation models to the CHA section of the Discussion,
+ and add some future directions.
+\end_layout
 
 \end_inset
 
@@ -12630,9 +12673,36 @@ name "chap:Conclusion"
 
 \begin_layout Standard
 The goal of this research was to create a simpler user interface that can
- automate a rigours, modified DDM cycle allowing it to be applied over a
- broad chemical space.
- Although other automated absolute binding free energies that due exist
+ automate a rigo
+\change_inserted -1046193749 1681414070
+ro
+\change_unchanged
+u
+\change_deleted -1046193749 1681414072
+r
+\change_unchanged
+s, modified 
+\change_deleted -1046193749 1681414085
+DDM
+\change_inserted -1046193749 1681414085
+ABFE
+\change_unchanged
+ cycle
+\change_inserted -1046193749 1681414094
+,
+\change_unchanged
+ allowing it to be applied over a broad chemical space.
+ Although other automated absolute binding free energies 
+\change_inserted -1046193749 1681415436
+programs
+\change_deleted -1046193749 1681415397
+that due
+\change_unchanged
+ exist
+\change_inserted -1046193749 1681415408
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "fuBFEE2AutomatedStreamlined2021,heinzelmannAutomatedDockingRefinement2020"
@@ -12640,17 +12710,60 @@ literal "false"
 
 \end_inset
 
-, however ISDDM.py contributes to the open-source community, with improve
+, 
+\change_deleted -1046193749 1681415463
+however ISDDM.py
+\change_inserted -1046193749 1681415456
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681415456
+ISDDM.py
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1681415470
+contributes to the open-source community, with
+\change_inserted -1046193749 1681415482
+is unique in that it
+\change_unchanged
+ improve
+\change_inserted -1046193749 1681415483
+s
+\change_unchanged
  sampling by using a combination of implicit solvents and conformational
  restraints.
  To test the automation of 
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
+
+\change_inserted -1046193749 1681415494
+,
+\change_unchanged
  we applied it to a series of host guest systems which were presented as
  community challenge by SAMPL group.
- We saw overall decent performance with our method (DDM/GB) and outperforms
- most the SAMPL4 and SAMPL9 challenge submission's RBFE metrics.
+ We saw overall 
+\change_deleted -1046193749 1681415768
+decent performance
+\change_inserted -1046193749 1681415776
+good correlation with experiment,
+\change_unchanged
+ with our method (DDM/GB) and outperforms most the SAMPL4 and SAMPL9 challenge
+ submission's RBFE metrics
+\change_inserted -1046193749 1681415811
+, though large systematic errors were present in the raw results
+\change_unchanged
+.
 
 \change_deleted -1463621830 1680845469
  
@@ -12659,12 +12772,37 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-One major issue with using generalize Born in its inability to account hydration
- charge asymmetry leading towards the strong electrostatics interactions
- from charge guest molecules.
+One major issue with using generalize Born
+\change_inserted -1046193749 1681415830
+ solvation method
+\change_unchanged
+ i
+\change_inserted -1046193749 1681415836
+s
+\change_deleted -1046193749 1681415836
+n
+\change_unchanged
+ its inability to account 
+\change_inserted -1046193749 1681415845
+charge 
+\change_unchanged
+hydration
+\change_deleted -1046193749 1681415847
+ charge
+\change_unchanged
+ asymmetry
+\change_inserted -1046193749 1681415850
+,
+\change_unchanged
+ leading towards the strong electrostatics interactions from charge guest
+ molecules
+\change_inserted -1046193749 1681415876
+ and bias in the results
+\change_unchanged
+.
  From all the host guest systems shown in 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:ABFE-host-guest-systems"
 plural "false"
 caps "false"
@@ -12672,25 +12810,238 @@ noprefix "false"
 
 \end_inset
 
-a we seethe positively charge guest molecules were significantly overestimating
- the binding free energy predictions and negatively charge guest were being
- underestimated.
- Looking at the only two highly perturb host system we see strong favoring
- of electrostatic interactions with cationic ligand with negativity charge
- benzoate groups.
- By applying a simple linear correction for positive, neutral and negative
- charge guest we much better correlation and deviation range from 1kcal/mol
- or less.
+a
+\change_inserted -1046193749 1681415885
+,
+\change_unchanged
+ we s
+\change_inserted -1046193749 1681415899
+aw
+\change_deleted -1046193749 1681415898
+ee
+\change_inserted -1046193749 1681415888
+ 
+\change_unchanged
+th
+\change_inserted -1046193749 1681415894
+at
+\change_deleted -1046193749 1681415894
+e
+\change_unchanged
+ positively charge
+\change_inserted -1046193749 1681416266
+d
+\change_unchanged
+ guest molecules 
+\change_deleted -1046193749 1681416272
+were
+\change_inserted -1046193749 1681416272
+had
+\change_unchanged
+ significantly 
+\change_deleted -1046193749 1681416279
+ove
+\change_inserted -1046193749 1681416281
+unde
+\change_unchanged
+restimat
+\change_inserted -1046193749 1681416284
+ed
+\change_deleted -1046193749 1681416285
+ing the
+\change_unchanged
+ binding free energy predictions
+\change_inserted -1046193749 1681416294
+,
+\change_unchanged
+ and negatively charge guest
+\change_inserted -1046193749 1681416297
+s
+\change_unchanged
+ were
+\change_deleted -1046193749 1681416301
+ being
+\change_unchanged
+ 
+\change_deleted -1046193749 1681416306
+unde
+\change_inserted -1046193749 1681416307
+ove
+\change_unchanged
+restimated.
+ Looking at the only two highly 
+\change_inserted -1046193749 1681416333
+charged
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681416334
+?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1681416330
+perturb
+\change_unchanged
+ host system
+\change_inserted -1046193749 1681416339
+s,
+\change_unchanged
+ we s
+\change_inserted -1046193749 1681416347
+aw
+\change_deleted -1046193749 1681416347
+ee
+\change_unchanged
+ 
+\change_deleted -1046193749 1681416364
+strong favoring of 
+\change_unchanged
+electrostatic interactions with cationic ligand with negativity charge benzoate
+ groups
+\change_inserted -1046193749 1681416382
+ were strongly favored
+\change_unchanged
+.
+ By applying a simple linear correction 
+\change_deleted -1046193749 1681416404
+for positive, neutral and negative charge 
+\change_inserted -1046193749 1681416407
+based on 
+\change_unchanged
+guest
+\change_inserted -1046193749 1681416411
+ net charge,
+\change_unchanged
+ we 
+\change_inserted -1046193749 1681416428
+observed 
+\change_unchanged
+much better correlation
+\change_inserted -1046193749 1681416439
+ with
+\change_unchanged
+ and deviation 
+\change_inserted -1046193749 1681416474
+from experiment, with RMSE values 
+\change_deleted -1046193749 1681416480
+range from
+\change_inserted -1046193749 1681416525
+less than
+\change_unchanged
+ 
+\change_deleted -1046193749 1681416485
+1kcal/mol
+\change_inserted -1046193749 1681416485
+
+\begin_inset Formula $\unit[1.4]{kcal/mol}$
+\end_inset
+
+
+\change_deleted -1046193749 1681416519
+ or less
+\change_unchanged
+.
  This correction greatly improved our overall accuracy across the entire
- dataset however transferability of this correction is issue.
- This correction isn't a solution but just highlight the problems with GB
- we already knew.
- That being said, an actual solution to this would to utilized a more accurate
- solvation model that could account for CHA and other thermodynamic water
- properties GB lacks.
- GBNSR6 one of the newer GB models is account for CHA and has been shown
- to improved electrostatic binding free energies for diverse set of biomolecular
- complexes
+ dataset
+\change_inserted -1046193749 1681416538
+;
+\change_unchanged
+ however
+\change_inserted -1046193749 1681416539
+,
+\change_unchanged
+ 
+\change_inserted -1046193749 1681416568
+this correction is likely not 
+\change_unchanged
+transferab
+\change_inserted -1046193749 1681416583
+le
+\change_deleted -1046193749 1681416574
+ility of this correction is issue
+\change_unchanged
+.
+ Th
+\change_inserted -1046193749 1681416593
+at is, the
+\change_deleted -1046193749 1681416590
+is
+\change_unchanged
+ correction is
+\change_inserted -1046193749 1681416598
+ not
+\change_deleted -1046193749 1681416596
+n't
+\change_unchanged
+ a solution but 
+\change_deleted -1046193749 1681416640
+just highlight the problems with GB we already knew
+\change_inserted -1046193749 1681416669
+provides support that charge hydration asymmetry is the dominant source
+ of error
+\change_unchanged
+.
+ 
+\change_deleted -1046193749 1681416694
+That being said, an actual solution to this would to
+\change_inserted -1046193749 1681416697
+Rather, 
+\change_deleted -1046193749 1681416708
+ utilized
+\change_unchanged
+ a more accurate solvation model that could account for CHA and other thermodyna
+mic water properties GB lacks
+\change_inserted -1046193749 1681416717
+ will need to be employed
+\change_unchanged
+.
+ 
+\change_inserted -1046193749 1681416745
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681416786
+TL the discussion of solvation models can go in Discussion
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+GBNSR6 
+\change_deleted -1046193749 1681416801
+one of the
+\change_inserted -1046193749 1681416802
+is a
+\change_unchanged
+ newer GB mode
+\change_inserted -1046193749 1681416811
+ that optionally
+\change_deleted -1046193749 1681416814
+ls is
+\change_unchanged
+ account
+\change_inserted -1046193749 1681416816
+s
+\change_unchanged
+ for CHA and has been shown to improved electrostatic binding free energies
+ for diverse set of biomolecular complexes
+\change_inserted -1046193749 1681416729
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "izadiAccuracyComparisonGeneralized2018"
@@ -12699,14 +13050,58 @@ literal "false"
 \end_inset
 
 .
- However we are not able to get any dynamics with GBNSR6 which limits it
- used for improved sampling in our method.
- Alternately 3-dimensional reference interaction site model (3D-RISM) being
- another type of implicit solvent model which describes solvent as a classical
- density distribution of the solvent sites around the solute
+ However
+\change_inserted -1046193749 1681416829
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1681416837
+we are not able to get any dynamics with 
+\change_unchanged
+GBNSR6
+\change_inserted -1046193749 1681416852
+ does not allow for MD simulations,
+\change_unchanged
+ which limits it used for improved sampling in our method.
+ Alternately
+\change_inserted -1046193749 1681416860
+,
+\change_unchanged
+ 
+\change_inserted -1046193749 1681416862
+the 
+\change_unchanged
+3-dimensional reference interaction site model (3D-RISM) 
+\change_inserted -1046193749 1681417062
+of molecular solvation,
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681417068
+TL please cite 3D-RISM
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1681416884
+being another type of implicit solvent model
+\change_unchanged
+ which describes 
+\change_inserted -1046193749 1681416909
+the 
+\change_unchanged
+solvent as a classical density distribution of the solvent sites around
+ the solute
+\change_inserted -1046193749 1681416937
+,
 \change_deleted -1463621830 1680899978
 [cite-]
-\change_inserted -1463621830 1680899978
+\change_deleted -1046193749 1681416921
 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -12715,16 +13110,43 @@ literal "false"
 
 \end_inset
 
+.
 
 \change_unchanged
+ 
+\change_deleted -1046193749 1681416947
+This
+\change_unchanged
+ yields a more detailed molecular structure than GB models and 
+\change_deleted -1046193749 1681416953
+incorporates additional
+\change_inserted -1046193749 1681416965
+ naturally accounts for
+\change_deleted -1046193749 1681416971
+ thermodynamic
+\change_unchanged
+ properties such as CHA and hydrogen bonding.
+ Unfortunately
+\change_inserted -1046193749 1681416976
+,
+\change_unchanged
+ 3D-RISM is computational demanding and not suitable for high throughput
+ screening campaigns
+\change_inserted -1046193749 1681417016
+ at this time
+\change_unchanged
 .
- This yields a more detailed molecular structure than GB models and incorporates
- additional thermodynamic properties such as CHA and hydrogen bonding.
- Unfortunately 3D-RISM is computational demanding and not suitable for high
- throughput screening campaigns.
- However including sampling of 3D-RISM does being promise and could be an
- avenue to be explored in the future perhaps implementing 3D-RISM on GPUs
- or perform MonteCarlo simulation rather than getting dynamics from 3D-RISM.
+ However
+\change_inserted -1046193749 1681416988
+,
+\change_unchanged
+ 
+\change_inserted -1046193749 1681417053
+improved implementation of 3D-RISM may change this.
+\change_deleted -1046193749 1681417055
+including sampling of 3D-RISM does being promise and could be an avenue
+ to be explored in the future perhaps implementing 3D-RISM on GPUs or perform
+ MonteCarlo simulation rather than getting dynamics from 3D-RISM.
 
 \change_deleted -1463621830 1680845469
  
@@ -12737,10 +13159,43 @@ Overall
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
- is flexible enough to accommodate the needs for most users.
- With a simple user interface to used for a diverse set of ligand-protein
- binding.
- As a whole our study demonstrates that 
+ is flexible enough to accommodate the needs 
+\change_inserted -1046193749 1681417100
+of
+\change_deleted -1046193749 1681417100
+for
+\change_unchanged
+ most users
+\change_inserted -1046193749 1681417114
+, 
+\change_deleted -1046193749 1681417117
+.
+ With
+\change_inserted -1046193749 1681417119
+providing
+\change_unchanged
+ a simple user interface to 
+\change_deleted -1046193749 1681417138
+used
+\change_inserted -1046193749 1681417141
+to calculate ABFEs
+\change_unchanged
+ for a diverse set of 
+\change_deleted -1046193749 1681417155
+ligand-protein
+\change_inserted -1046193749 1681417158
+receptor-ligand
+\change_deleted -1046193749 1681417161
+ binding
+\change_inserted -1046193749 1681417162
+ systems
+\change_unchanged
+.
+ As a whole
+\change_inserted -1046193749 1681417168
+,
+\change_unchanged
+ our study demonstrates that 
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
