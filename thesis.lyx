@@ -113,7 +113,7 @@ logicalmkup
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
@@ -198,13 +198,47 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-From the plagues of history to the influenza epidemic (1889-1890) and the
- most recent COVID-19 virus outbreak, the world population is constantly
- facing life-threatening events and diseases, such as cancer.
+From the plagues of history
+\change_inserted -1046193749 1681241184
+,
+\change_unchanged
+ to 
+\change_deleted -1046193749 1681241186
+the
+\change_unchanged
+ influenza epidemic
+\change_inserted -1046193749 1681241189
+s
+\change_unchanged
+ 
+\change_deleted -1046193749 1681241192
+(1889-1890)
+\change_inserted -1046193749 1681241263
+, cancer
+\change_unchanged
+ and the most recent COVID-19 virus outbreak, the world population is constantly
+ facing life-threatening events and diseases
+\change_deleted -1046193749 1681241233
+, such as cancer
+\change_unchanged
+.
  Drug discovery, production, and implementation have been a huge part of
- preventing or improving these events and diseases.Modern drug development
- requires the screening of a vast and diverse chemical space with the aim
- to simultaneously optimize properties such as protein-ligand affinity.
+ preventing or improving 
+\change_inserted -1046193749 1681241293
+outcomes from 
+\change_unchanged
+these events and diseases.
+
+\change_inserted -1046193749 1681241295
+ 
+\change_unchanged
+Modern drug development requires the screening of a vast and diverse chemical
+ space
+\change_inserted -1046193749 1681241338
+,
+\change_unchanged
+ with the aim to simultaneously optimize properties such as protein-ligand
+ affinity.
  However, this process is often risky, costly, and very time-consuming.
  Currently, the conventional process of a potential drug candidate to reach
  the market has been estimated to take an average of 14 years, reaching
@@ -222,12 +256,37 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1681241373
 Therefore, the ability to efficiently and quickly scan a large chemical
- for potential drug candidates is a major focus in drug discovery.Attempts
- to exploring chemical space date back to the early drug discovery period
- (before the 19th century) during which chemists expanded the chemical space
- at an exponential rate from a handful of new substances in 1800 up to 11,000
- of 1868
+ for potential drug candidates is a major focus in drug discovery.
+\change_unchanged
+Attempts to exploring chemical space date back to the early drug discovery
+ period (before the 19th century)
+\change_inserted -1046193749 1681241411
+,
+\change_unchanged
+ during which chemists expanded 
+\change_inserted -1046193749 1681241436
+their knowledge of
+\change_deleted -1046193749 1681241438
+the
+\change_unchanged
+ chemical space at an exponential rate
+\change_inserted -1046193749 1681241457
+,
+\change_unchanged
+ from a handful of new substances in 1800 up to 11,000 
+\change_inserted -1046193749 1681241466
+in
+\change_deleted -1046193749 1681241465
+of
+\change_unchanged
+ 1868
+\change_inserted -1046193749 1681241470
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "lealExpansionChemicalSpace2022"
@@ -235,11 +294,40 @@ literal "false"
 
 \end_inset
 
-and the drug discovery and drug development period (20th century and beyond).
- It was not until the “post-genome era,” during the late 20th century, where
- there was a huge surge of protein crystal structures that were made publicly
- available and become targets of therapeutic interest for small-molecule
- drug discovery
+
+\change_inserted -1046193749 1681241472
+ 
+\change_deleted -1046193749 1681241519
+and
+\change_inserted -1046193749 1681241519
+to
+\change_unchanged
+ the drug discovery and drug development period (20th century and beyond).
+ It was not until the “post-genome era,” during the late 20th century
+\change_deleted -1046193749 1681241558
+, where
+\change_inserted -1046193749 1681241559
+ that
+\change_unchanged
+ 
+\change_deleted -1046193749 1681241568
+there was 
+\change_unchanged
+a huge surge of protein crystal structures 
+\change_deleted -1046193749 1681241572
+that
+\change_unchanged
+ were made publicly available and bec
+\change_inserted -1046193749 1681241577
+a
+\change_deleted -1046193749 1681241577
+o
+\change_unchanged
+me targets of therapeutic interest for small-molecule drug discovery
+\change_inserted -1046193749 1681241584
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "reymondChemicalSpaceProject2015"
@@ -247,7 +335,12 @@ literal "false"
 
 \end_inset
 
-.This resulted in a shift of drug discovery strategies that focused largely
+.
+
+\change_inserted -1046193749 1681241610
+ 
+\change_unchanged
+This resulted in a shift of drug discovery strategies that focused largely
  on high-throughput screening (HTS), leading to the identification of multiple
  therapeutic drug targets and the creation of very large compound libraries
  
@@ -276,13 +369,28 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-As an alternative, computer-aided drug discovery (CADD) provides a rational
- structure-based approach that can yield valuable information about intermolecul
-ar interactions between protein and ligand systems as well as the binding
- affinity.
+As an alternative
+\change_inserted -1046193749 1681241651
+ approach
+\change_unchanged
+, computer-aided drug discovery (CADD) provides a rational structure-based
+ approach that can yield valuable information about intermolecular interactions
+ between protein and ligand systems
+\change_inserted -1046193749 1681241689
+,
+\change_unchanged
+ as well as the binding affinity.
  CADD has already been successfully applied in all areas of drug discovery
  and has brought new drug compounds to the market for diverse diseases,
- including HIV-1-inhibiting drugs(amprenavir
+ including HIV-1-inhibiting drugs
+\change_inserted -1046193749 1681241704
+ 
+\change_unchanged
+(amprenavir
+\change_inserted -1046193749 1681241708
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "clarkWhatHasComputeraided2006"
@@ -290,7 +398,15 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681241709
+ 
+\change_unchanged
 and raltitrexed
+\change_inserted -1046193749 1681241711
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "andersonProcessStructureBasedDrug2003"
@@ -306,14 +422,85 @@ literal "false"
 
 \end_inset
 
-.The use of molecular simulations on drug discovery has shown major impact
- in the past decade in response to the rapid development of computer hardware
- and performing computations in a time affordable manner.
- Implementation of CADD provides an computational microscope how ligands
- bind to a targeted receptor, how proteins interact with each other, and
- how proteins aggregate in the cell membrane and is not only important for
- rational drug design but also for rational drug design the field of biophysics
- and biochemistry.
+.The use of molecular simulations 
+\change_inserted -1046193749 1681241766
+i
+\change_deleted -1046193749 1681241765
+o
+\change_unchanged
+n drug discovery has 
+\change_deleted -1046193749 1681241788
+shown
+\change_inserted -1046193749 1681241790
+had a
+\change_unchanged
+ major impact in the past decade
+\change_inserted -1046193749 1681241813
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1681241807
+in response to
+\change_inserted -1046193749 1681241807
+as
+\change_unchanged
+ the rapid development of computer hardware
+\change_inserted -1046193749 1681241863
+ and new algorithms has allowed
+\change_deleted -1046193749 1681241865
+ and performing
+\change_unchanged
+ computations 
+\change_deleted -1046193749 1681241870
+in a
+\change_inserted -1046193749 1681241871
+to becomes
+\change_unchanged
+ time
+\change_inserted -1046193749 1681241873
+-
+\change_deleted -1046193749 1681241873
+ 
+\change_unchanged
+affordable
+\change_deleted -1046193749 1681241876
+ manner
+\change_unchanged
+.
+ 
+\change_deleted -1046193749 1681241949
+Implementation of CADD provides an
+\change_inserted -1046193749 1681241951
+ The
+\change_unchanged
+ computational microscope 
+\change_inserted -1046193749 1681241965
+provided by CADD shows 
+\change_unchanged
+how ligands bind to a targeted receptor, 
+\change_deleted -1046193749 1681241972
+how
+\change_unchanged
+ proteins interact with each other, and 
+\change_deleted -1046193749 1681241976
+how
+\change_unchanged
+ proteins aggregate in the cell membrane
+\change_inserted -1046193749 1681241983
+.
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1681241985
+and
+\change_inserted -1046193749 1681241985
+It
+\change_unchanged
+ is not only important for rational drug design but also for 
+\change_deleted -1046193749 1681250980
+rational drug design 
+\change_unchanged
+the field of biophysics and biochemistry.
  An example is molecular docking programs
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -322,6 +509,25 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681242027
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681242060
+TL this doesn't seem to be a good example.
+ Docking is part of CADD but you make the case that it isn't useful.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 , which are widely used to target the binding site and compute the ligand
  binding affinity.
  Although molecular docking provides a fast and efficient way to screen
@@ -342,10 +548,20 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681242086
+ 
+\change_unchanged
 have made great strides in estimating protein-ligand molecule binding free
  energies.
  Binding free energy calculations are readily used in drug discovery to
- rank potential candidates by their binding affinity 
+ rank potential candidates by their binding affinity
+\change_deleted -1046193749 1681242117
+ 
+\change_inserted -1046193749 1681242122
+ to a host target molecule 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "dengComputationsStandardBinding2009"
@@ -353,15 +569,34 @@ literal "false"
 
 \end_inset
 
- to a host target.
- Molecular dynamics (MD) offer the ability to use full atomic description
- and gather configurations of the receptor and ligand in order to account
- for structural flexibility.
+
+\change_deleted -1046193749 1681242115
+ to a host target
+\change_unchanged
+.
+ Molecular dynamics (MD) offer
+\change_inserted -1046193749 1681242132
+s
+\change_unchanged
+ the ability to use full atomic description and gather configurations of
+ the receptor and ligand in order to account for structural flexibility.
  MD simulations are useful to monitor the time evolution of a system, for
  example efficient sampling tool to recover statistical ensembles.
- A force field is used to describe the potential energy of a system representing
- both bonded and non-bonded (van der Waals) and electrostatic interactions.Severa
-l force fields commonly used in MD simulations are AMBER
+ A force field is used to describe the potential energy of a system
+\change_inserted -1046193749 1681242168
+,
+\change_unchanged
+ representing both bonded and non-bonded (van der Waals) and electrostatic
+ interactions.
+
+\change_inserted -1046193749 1681242172
+ 
+\change_unchanged
+Several force fields commonly used in MD simulations are AMBER
+\change_inserted -1046193749 1681242183
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "cornellSecondGenerationForce1995a,wangDevelopmentTestingGeneral2004"
@@ -370,6 +605,10 @@ literal "false"
 \end_inset
 
 , CHARMM
+\change_inserted -1046193749 1681242185
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "brooksCHARMMProgramMacromolecular1983"
@@ -378,6 +617,10 @@ literal "false"
 \end_inset
 
 , and GROMOS
+\change_inserted -1046193749 1681242187
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "christenGROMOSSoftwareBiomolecular2005a"
@@ -385,12 +628,38 @@ literal "false"
 
 \end_inset
 
-.Today, classical MD simulations of protein and ligand binding events can
- last up to a few microseconds and have a sufficient degree of accuracy.
+.
+
+\change_inserted -1046193749 1681242189
+ 
+\change_unchanged
+Today, classical MD simulations of protein and ligand binding events can
+ last up to a few microseconds and have a sufficient degree of accuracy
+\change_inserted -1046193749 1681242208
+ for drug design
+\change_unchanged
+.
  Despite this success, classical MD suffers from two major challenges: molecular
- modeling accuracy and insufficient sampling of conformational states due
- to the high computational demands of simulations greater than a microsecond
- in length.
+ modeling accuracy 
+\change_inserted -1046193749 1681242239
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681242238
+TL the previous sentence says that the accuracy is good
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ 
+\change_unchanged
+and insufficient sampling of conformational states due to the high computational
+ demands of simulations greater than a microsecond in length.
 \end_layout
 
 \begin_layout Standard
@@ -401,9 +670,17 @@ cond time scale.
  This leads to large computational costs to sample important configurations
  that have a major contribution towards binding affinity.
  Beyond the computational cost, insufficient sampling is a well-recognized
- problem in molecular simulation due to the fact there are high energy barriers
- separating structures/conformations, resulting in biological systems to
- become trapped in deep energy wells of their potential energy surfaces
+ problem in molecular simulation
+\change_inserted -1046193749 1681242289
+s
+\change_unchanged
+ due to the fact there are high energy barriers separating structures/conformati
+ons, resulting in biological systems to become trapped in deep energy wells
+ of their potential energy surfaces
+\change_inserted -1046193749 1681242300
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "onuchicTheoryProteinFolding2004"
@@ -411,11 +688,25 @@ literal "false"
 
 \end_inset
 
-.Enhanced sampling techniques can accelerate thermodynamics calculations
+.
+
+\change_inserted -1046193749 1681242304
+ 
+\change_unchanged
+Enhanced sampling techniques can accelerate thermodynamics calculations
  by making rare transition conformations more likely.
- This can be achieved by, fore example, modifying the potential energy surfaces
- by adding a bias potential to the Hamiltonian on the system or increasing
- the temperature 
+ This can be achieved by, for
+\change_deleted -1046193749 1681242312
+e
+\change_unchanged
+ example, modifying the potential energy surfaces 
+\change_deleted -1046193749 1681242332
+by adding
+\change_inserted -1046193749 1681242333
+to include
+\change_unchanged
+ a bias potential to the Hamiltonian on the system or increasing the temperature
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "yangEnhancedSamplingMolecular2019"
@@ -432,7 +723,17 @@ literal "false"
 
 \end_inset
 
-] umbrella sampling
+
+\change_inserted -1046193749 1681242353
+,
+\change_deleted -1046193749 1681242352
+]
+\change_unchanged
+ umbrella sampling
+\change_inserted -1046193749 1681242355
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "pateyMonteCarloMethod1975"
@@ -441,6 +742,10 @@ literal "false"
 \end_inset
 
 , steered MD
+\change_inserted -1046193749 1681242358
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "grubmullerLigandBindingMolecular1996"
@@ -449,6 +754,10 @@ literal "false"
 \end_inset
 
 , metadynamics
+\change_inserted -1046193749 1681242360
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "laioEscapingFreeenergyMinima2002"
@@ -465,10 +774,25 @@ literal "false"
 \end_inset
 
 .
- Additionally, endpoint methods such as molecular mechanics Poission-Boltzman
- Surface Area (MM/PBSA) and molecular mechanics generalized Born Surface
- Area (MM/GBSA) provide a cheaper way to estimate binding free energy without
- simulating the binding process 
+ Additionally, endpoint methods
+\change_inserted -1046193749 1681242395
+,
+\change_unchanged
+ such as molecular mechanics Poiss
+\change_deleted -1046193749 1681242384
+i
+\change_unchanged
+on-Boltzma
+\change_inserted -1046193749 1681242376
+n
+\change_unchanged
+n Surface Area (MM/PBSA) and molecular mechanics generalized Born Surface
+ Area (MM/GBSA)
+\change_inserted -1046193749 1681242397
+,
+\change_unchanged
+ provide a cheaper way to estimate binding free energy without simulating
+ the binding process 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "houAssessingPerformanceMM2011,millerMMPBSAPyEfficient2012"
@@ -483,15 +807,106 @@ literal "false"
 
 \begin_layout Standard
 Rather than following a physical pathway between two states, one can construct
- a non-physical pathway that involves the transformation of one system to
- another avoiding the need of exhaustive sampling.
- These classes of unphysical pathways are referred to as alchemical transformati
-on and have emerged as a useful tool for predicting free energy differences
+ a non-physical pathway that involves 
+\change_deleted -1046193749 1681255076
+the 
+\change_unchanged
+transform
+\change_inserted -1046193749 1681255074
+ing
+\change_deleted -1046193749 1681255073
+ation
+\change_unchanged
+ 
+\change_deleted -1046193749 1681255079
+of
+\change_unchanged
+ one 
+\change_deleted -1046193749 1681255286
+system
+\change_inserted -1046193749 1681255287
+molecule
+\change_unchanged
+ to another
+\change_inserted -1046193749 1681255291
+,
+\change_unchanged
+ avoiding the need of exhaustive sampling.
+ Th
+\change_inserted -1046193749 1681255299
+is
+\change_deleted -1046193749 1681255298
+ese
+\change_unchanged
+ 
+\change_deleted -1046193749 1681255310
+class
+\change_inserted -1046193749 1681255311
+type
+\change_deleted -1046193749 1681255310
+es
+\change_unchanged
+ of unphysical pathway
+\change_deleted -1046193749 1681255316
+s
+\change_unchanged
+ 
+\change_deleted -1046193749 1681255318
+are
+\change_inserted -1046193749 1681255318
+is
+\change_unchanged
+ referred to as 
+\change_inserted -1046193749 1681255324
+
+\begin_inset Quotes eld
+\end_inset
+
+
+\change_unchanged
+alchemical transformation
+\change_inserted -1046193749 1681255326
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\change_unchanged
+ and ha
+\change_inserted -1046193749 1681255330
+s
+\change_deleted -1046193749 1681255330
+ve
+\change_unchanged
+ emerged as a useful tool for predicting free energy differences
+\change_inserted -1046193749 1681255335
+,
+\change_unchanged
  such as the binding of a small molecule to a receptor.
  The term “alchemical” was coined by the fact that, in silico, a molecule
- can be transformed into a non-interaction molecule, where its respective
- potentials are switched off through a series of intermediate steps.
- Most alchemical methods include free energy perturbation (FEP) [
+ can be transformed into a 
+\change_inserted -1046193749 1681255380
+different, even 
+\change_unchanged
+non-interacti
+\change_inserted -1046193749 1681255385
+ng,
+\change_deleted -1046193749 1681255382
+on
+\change_unchanged
+ molecule, where its respective potentials are switched off through a series
+ of intermediate steps.
+ Most alchemical methods 
+\change_deleted -1046193749 1681255417
+include
+\change_inserted -1046193749 1681255419
+utilize
+\change_unchanged
+ free energy perturbation (FEP) 
+\change_deleted -1046193749 1681255424
+[
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "bennettEfficientEstimationFree1976"
@@ -499,7 +914,21 @@ literal "false"
 
 \end_inset
 
-] and thermodynamic integration [
+
+\change_deleted -1046193749 1681255423
+]
+\change_unchanged
+ 
+\change_deleted -1046193749 1681255432
+and
+\change_inserted -1046193749 1681255432
+or
+\change_unchanged
+ thermodynamic integration 
+\change_deleted -1046193749 1681255428
+[
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "kirkwoodQuantumStatisticsAlmost1933"
@@ -507,8 +936,37 @@ literal "false"
 
 \end_inset
 
-].Earlier works showcased that MD and Monte Carlo simulations could carry
- out these calculations for biomolecular systems [
+
+\change_deleted -1046193749 1681255427
+]
+\change_inserted -1046193749 1681255452
+ to mathematically calculate the change in free energy
+\change_unchanged
+.
+
+\change_inserted -1046193749 1681255406
+ 
+\change_unchanged
+Earl
+\change_inserted -1046193749 1681255464
+y
+\change_deleted -1046193749 1681255463
+ier
+\change_unchanged
+ 
+\change_deleted -1046193749 1681255468
+works
+\change_inserted -1046193749 1681255471
+efforts
+\change_unchanged
+ 
+\change_deleted -1046193749 1681255473
+showcased
+\change_inserted -1046193749 1681255481
+demonstrated
+\change_unchanged
+ that MD and Monte Carlo simulations could carry out these calculations
+ for biomolecular systems [
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "jorgensenMonteCarloSimulation1985"
@@ -528,18 +986,56 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Alchemical methods can be classified as relative (RBFE) or absolute (ABFE)
- binding free energy calculations.
- RBFE calculations yield the binding free energy of two compounds by computing
- free energy change by artificially transforming one compound to the other
- in the binding site.
+
+\change_inserted -1046193749 1681255710
+The most popular a
+\change_deleted -1046193749 1681255710
+A
+\change_unchanged
+lchemical methods 
+\change_deleted -1046193749 1681255719
+can be classified as
+\change_inserted -1046193749 1681255720
+are
+\change_unchanged
+ relative 
+\change_deleted -1046193749 1681255727
+(RBFE) or absolute (ABFE) 
+\change_unchanged
+binding free energy 
+\change_inserted -1046193749 1681255827
+(RBFE) 
+\change_unchanged
+calculations.
+ RBFE calculations yield the 
+\change_inserted -1046193749 1681255730
+change in 
+\change_unchanged
+binding free energy 
+\change_deleted -1046193749 1681255659
+of
+\change_inserted -1046193749 1681255730
+between
+\change_unchanged
+ two compounds by computing 
+\change_deleted -1046193749 1681255669
+free energy change
+\change_unchanged
+ by artificially transforming one compound to the other in the binding site.
  RBFE requires prior knowledge of the reference compound’s binding affinity
  and requires that the two compounds being prepared are structurally and
  chemically similar.
  RBFE play a significant role in the lead optimization occurring in the
  later states in drug discovery, such as making small structural changes
- to a lead candidate compound to create a molecular with higher affinity
- towards targeted host system [
+ to a lead candidate compound to create a molecula
+\change_deleted -1046193749 1681255767
+r
+\change_unchanged
+ with higher affinity towards targeted host system 
+\change_deleted -1046193749 1681255771
+[
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "schindlerLargeScaleAssessmentBinding2020"
@@ -547,14 +1043,32 @@ literal "false"
 
 \end_inset
 
-].
+
+\change_deleted -1046193749 1681255770
+]
+\change_unchanged
+.
+\change_deleted -1046193749 1681255783
+
 \end_layout
 
 \begin_layout Standard
 However, RBFE requires structural similarity between molecules which in
  turn limits its capability of exploring chemical space.
- Conversely, ABFE calculations are capable of computing the standard free
- energy difference between a given compound and the receptor of interest.
+ 
+\change_inserted -1046193749 1681255788
+
+\end_layout
+
+\begin_layout Standard
+Conversely, 
+\change_deleted -1046193749 1681255797
+ABFE
+\change_inserted -1046193749 1681255811
+absolute binding free energy (ABFE)
+\change_unchanged
+ calculations are capable of computing the standard free energy difference
+ between a given compound and the receptor of interest.
  The standard free energy difference is computed from the reversible work
  of decoupling the ligand from the binding site and recouping it with the
  bulk solvent 
@@ -566,9 +1080,12 @@ literal "false"
 \end_inset
 
 .
- Importantly, ABFE can be applied to diverse chemical space without requiring
- prior knowledge of any binding affinities or structural similarities between
- compounds 
+ Importantly, ABFE can be applied to 
+\change_inserted -1046193749 1681255878
+a 
+\change_unchanged
+diverse chemical space without requiring prior knowledge of any binding
+ affinities or structural similarities between compounds 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "courniaRigorousFreeEnergy2020,gilsonStatisticalthermodynamicBasisComputation1997a"
@@ -579,7 +1096,11 @@ literal "false"
 .
  Therefore, ABFE is more suitable for the virtual screening of diverse ligands
  but suffers from computational expense and the design (setup/running calculatio
-ns) can be complicated to perform 
+ns) can be complicated
+\change_deleted -1046193749 1681255908
+ to perform
+\change_unchanged
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "meyBestPracticesAlchemical2020"
@@ -608,8 +1129,11 @@ literal "false"
  and unbound states) and a series of intermediate states where the ligand
  is decoupled from the environment.
  The ligand intermolecular and intramolecular interactions are removed through
- a series of intermediate windows scaling its electrostatics and van der
- Waals (VDW) interactions to zero.
+ a series of intermediate windows
+\change_inserted -1046193749 1681256134
+ by
+\change_unchanged
+ scaling its electrostatics and van der Waals (VDW) interactions to zero.
  In this way, the two molecules (receptor and ligand) are brought together
  without having to account for complicated interactions during the binding
  process and then gradually turning back on the interactions of the ligand
@@ -621,6 +1145,10 @@ literal "false"
  To prevent this from occurring, artificial restraints are used to keep
  the ligand from leaving the binding pocket and stop it from interacting
  with the environment
+\change_inserted -1046193749 1681256194
+.
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "boreschAbsoluteBindingFree2003"
@@ -628,10 +1156,21 @@ literal "false"
 
 \end_inset
 
+
+\change_deleted -1046193749 1681256192
 .
+
+\change_unchanged
  The use of these restraints is necessary to ensure conformations are sampled
  during the simulations and aids in good phase space overlap and faster
- convergence 
+ convergence
+\change_inserted -1046193749 1681256188
+.
+
+\change_deleted -1046193749 1681256187
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "mobleyUseOrientationalRestraints2006"
@@ -639,15 +1178,30 @@ literal "false"
 
 \end_inset
 
+
+\change_deleted -1046193749 1681256178
 .
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
 Of course, accurate sampling only helps if the molecular model, including
  the solvent environment, is accurate.
- Explicit solvents are fully atomic representations of water molecules that
- surround the solute, providing a physically detailed and generally accurate
- model and DDM was conceived with explicit solvents in mind.
+ Explicit solvents are 
+\change_deleted -1046193749 1681256223
+fully
+\change_inserted -1046193749 1681256224
+full
+\change_unchanged
+ atomic representations of water molecules that surround the solute, providing
+ a physically detailed and generally accurate model
+\change_inserted -1046193749 1681256256
+;
+\change_deleted -1046193749 1681256257
+ and
+\change_unchanged
+ DDM was conceived with explicit solvents in mind.
  However, the inclusion of these explicit water molecules causes the simulations
  to be computationally expensive because the degrees of freedom of each
  water molecule must be calculated for every time-step 
@@ -658,8 +1212,26 @@ literal "false"
 
 \end_inset
 
-.Additionally, explicit solvent specific to ABFE calculations can cause “singular
-ity events,” meaning that solute-solvent steric overlap occurs.
+.
+
+\change_inserted -1046193749 1681256273
+ 
+\change_unchanged
+Additionally, explicit solvent 
+\change_deleted -1046193749 1681256289
+specific to ABFE calculations 
+\change_unchanged
+can cause “singularity events
+\change_deleted -1046193749 1681256304
+,
+\change_unchanged
+” 
+\change_deleted -1046193749 1681256310
+meaning that
+\change_inserted -1046193749 1681256310
+when
+\change_unchanged
+ solute-solvent steric overlap occurs.
  The use of soft-core potentials 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -671,17 +1243,73 @@ literal "false"
  is used in order to minimize or resolve the instabilities observed during
  the decoupling of the VDW parameters by shifting the inter-particle distance
  between the solute and solvent atoms.
- To avoid the extra complexity and the required computational costs of using
- explicit solvents, implicit solvents may be used.
+ To avoid the extra complexity and 
+\change_deleted -1046193749 1681256340
+the required 
+\change_unchanged
+computational costs of using explicit solvents, implicit solvents may be
+ used.
  Implicit solvents are well suited for the DDM approach as the solvent degrees
  of freedom (DOF) are integrated out and solute-solvent steric overlap does
  not occur.
  Rather than physically representing water molecules, implicit solvent models
  provide a mean-field dielectric representation.
  Two popular pathway techniques that utilized implicit solvent models that
- have been widely exploited in free energy calculations are Molecular Mechanics/
-Poisson-Boltzmann Surface Area (MM/PBSA) and Molecular Mechanics/Generalized
- Born Surface Area (MM/GBSA) 
+ have been widely exploited in free energy calculations are 
+\change_deleted -1046193749 1681256410
+M
+\change_inserted -1046193749 1681256411
+m
+\change_unchanged
+olecular 
+\change_deleted -1046193749 1681256413
+M
+\change_inserted -1046193749 1681256414
+m
+\change_unchanged
+echanics/Poisson-Boltzmann 
+\change_deleted -1046193749 1681256418
+S
+\change_inserted -1046193749 1681256422
+s
+\change_unchanged
+urface 
+\change_deleted -1046193749 1681256424
+A
+\change_inserted -1046193749 1681256424
+a
+\change_unchanged
+rea (MM/PBSA) and 
+\change_inserted -1046193749 1681256380
+m
+\change_deleted -1046193749 1681256380
+M
+\change_unchanged
+olecular 
+\change_inserted -1046193749 1681256383
+m
+\change_deleted -1046193749 1681256383
+M
+\change_unchanged
+echanics/
+\change_inserted -1046193749 1681256389
+g
+\change_deleted -1046193749 1681256389
+G
+\change_unchanged
+eneralized Born 
+\change_inserted -1046193749 1681256407
+s
+\change_deleted -1046193749 1681256406
+S
+\change_unchanged
+urface 
+\change_deleted -1046193749 1681256392
+A
+\change_inserted -1046193749 1681256396
+a
+\change_unchanged
+rea (MM/GBSA) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "wangRecentAdvancesFree2006"
@@ -714,35 +1342,109 @@ literal "false"
 Our work attempts to reduce the complexity and computational cost of ABFE
  calculations by using implicit solvent models while achieving reliability
  and accuracy.
- To achieve this, we use a modified DDM cycle that uses conformational restraint
-s and generalized Born (GB) solvent to enhance convergence.
+ To 
+\change_deleted -1046193749 1681256502
+achieve
+\change_inserted -1046193749 1681256502
+do
+\change_unchanged
+ this, we use a modified DDM cycle that uses conformational restraints and
+ 
+\change_inserted -1046193749 1681256523
+the 
+\change_unchanged
+generalized Born (GB) 
+\change_inserted -1046193749 1681256527
+implicit 
+\change_unchanged
+solvent
+\change_inserted -1046193749 1681256530
+ model
+\change_unchanged
+ to enhance convergence.
  Our DDM cycle provides improved sampling at the end states while reducing
- the need for sampling in intermediate states.We aim to prove that ABFE calculati
-ons can be performed for diverse ligands and can be done in a fast, efficient,
- and effective manner.To this end, we created the Implicit Solvent DDM tool
- (
+ the need for sampling in intermediate states.
+
+\change_inserted -1046193749 1681256540
+ 
+\change_unchanged
+We aim to prove that ABFE calculations can be performed for diverse ligands
+ and can be done in a fast, efficient, and effective manner.
+
+\change_inserted -1046193749 1681256554
+ 
+\change_unchanged
+To this end, we created the Implicit Solvent DDM tool (
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
 ), a command line Python interface, to facilitate and automate the use of
- ABFE calculations for virtual compound screening.The ISDDM package begins
- with a parametrized model of the complex and performs all calculations
- of the alchemical cycle, post-processing, and data analysis.Our implementation
- utilizes the open-source AmberTools molecular modeling suite to maximize
- computational throughput.
+ ABFE calculations for virtual compound screening.
+
+\change_inserted -1046193749 1681256566
+ 
+\change_unchanged
+The ISDDM package begins with a parametrized model of the complex and performs
+ all calculations of the alchemical cycle, post-processing, and data analysis.
+
+\change_inserted -1046193749 1681256583
+ 
+\change_unchanged
+Our implementation utilizes the open-source AmberTools molecular modeling
+ suite to maximize computational throughput.
  We have tested 
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
  for accuracy by calculating the binding free energy of a series of host-guest
- systems based on 5 hosts, cucurbit[7]uril, pillar[6]arene, octa-acid and
- 
+ systems based on 
+\change_inserted -1046193749 1681256599
+five
+\change_deleted -1046193749 1681256597
+5
+\change_unchanged
+ hosts
+\change_inserted -1046193749 1681256604
+:
+\change_deleted -1046193749 1681256604
+,
+\change_unchanged
+ cucurbit[7]uril, pillar[6]arene, octa-acid and 
 \begin_inset Formula $\alpha/\beta$
 \end_inset
 
 -cyclodextrin.
- A total of 83 unique host-guest complexes.
- SAMPL (Statistical Assessment of Modeling of Proteins and Ligands) challenges
+ 
+\change_inserted -1046193749 1681256656
+ABFEs are calculate for
+\change_deleted -1046193749 1681256660
+A total of
+\change_unchanged
+ 83 unique host-guest complexes
+\change_deleted -1046193749 1681256628
+.
+
+\change_unchanged
+ 
+\change_inserted -1046193749 1681256680
+drawn from the literature 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681256686
+TL you aren't using just SAMPL data
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1681256678
+SAMPL (Statistical Assessment of Modeling of Proteins and Ligands) challenges
+\change_unchanged
  
 \begin_inset CommandInset citation
 LatexCommand citealp
@@ -755,18 +1457,107 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The following sections will be outline by: chapter 2 provides underlying
- theory behind this work.
- Going over binding free energy calculations, use of implicit solvent models,
- free energy perturbation and introduce our modified double decoupling thermodya
-nmic cycle.
- In chapter 3 we will discuss the chemistry of host-guest systems and our
- simulation setup parameters.
- Chapter 4 and 5 will highlight our results and discuss our findings.
+
+\change_deleted -1046193749 1681256764
+The following sections will be outline by: chapter 2
+\change_unchanged
+ 
+\change_inserted -1046193749 1681256782
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "chap:Theory"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ 
+\change_unchanged
+provides underlying theory behind this work
+\change_inserted -1046193749 1681256791
+,
+\change_deleted -1046193749 1681256790
+.
+ G
+\change_inserted -1046193749 1681256794
+ g
+\change_unchanged
+oing over binding free energy calculations, use of implicit solvent models,
+ free energy perturbation and introduce our modified double decoupling thermody
+\change_inserted -1046193749 1681256808
+na
+\change_deleted -1046193749 1681256808
+an
+\change_unchanged
+mic cycle.
+ In 
+\change_inserted -1046193749 1681256826
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "chap:Methods"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_deleted -1046193749 1681256815
+chapter 3
+\change_unchanged
+ we will discuss the chemistry of host-guest systems and our simulation
+ setup parameters.
+ 
+\change_inserted -1046193749 1681256845
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "chap:Results"
+plural "true"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_deleted -1046193749 1681256835
+Chapter 4
+\change_unchanged
+ and 
+\change_inserted -1046193749 1681256876
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Discussion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_deleted -1046193749 1681256863
+5
+\change_unchanged
+ will highlight our results and discuss our findings.
 \end_layout
 
 \begin_layout Chapter
 Theory
+\change_inserted -1046193749 1681256726
+
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Theory"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Section
@@ -775,7 +1566,11 @@ Binding Free Energy
 
 \begin_layout Standard
 Free energy drives a system towards equilibrium and determines the probability
- that a system will adopt at a given state.
+ that a system will adopt
+\change_deleted -1046193749 1681256912
+ at
+\change_unchanged
+ a given state.
  The Helmholtz free energy, 
 \begin_inset Formula $A$
 \end_inset
@@ -913,14 +1708,42 @@ As neither the temperature or particles' masses change, the momenta of the
 \end_inset
 
 where 
+\change_deleted -1046193749 1681257116
+
 \begin_inset Formula $V_{1}$
 \end_inset
 
+
+\change_inserted -1046193749 1681257117
+
+\begin_inset Formula $V_{0}$
+\end_inset
+
+
+\change_unchanged
  and 
+\change_deleted -1046193749 1681257123
+
 \begin_inset Formula $V_{2}$
 \end_inset
 
- are the box volumes, and 
+
+\change_inserted -1046193749 1681257123
+
+\begin_inset Formula $V_{1}$
+\end_inset
+
+
+\change_unchanged
+ are the box volumes
+\change_inserted -1046193749 1681257144
+, 
+\begin_inset Formula $p$
+\end_inset
+
+ is the pressure
+\change_unchanged
+, and 
 \begin_inset Formula $\Gamma_{0}$
 \end_inset
 
@@ -957,8 +1780,24 @@ literal "false"
 \begin_layout Standard
 For complex systems, the partition function has no analytical solution and
  simulations need to be used to sample the accessible phase space.
- Simulating binding events are usually dominated by rate dissociations which
- can be the millisecond timescale and reaches the microsecond for some drug
+ Simulating binding events are usually dominated by rate dissociations
+\change_inserted -1046193749 1681257184
+,
+\change_unchanged
+ which can be 
+\change_inserted -1046193749 1681257191
+on 
+\change_unchanged
+the millisecond timescale 
+\change_deleted -1046193749 1681257211
+and reaches the microsecond 
+\change_inserted -1046193749 1681257213
+ or longer 
+\change_unchanged
+for some drug
+\change_inserted -1046193749 1681257216
+s
+\change_unchanged
  
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -967,7 +1806,11 @@ literal "false"
 
 \end_inset
 
-].
+
+\change_deleted -1046193749 1681257219
+]
+\change_unchanged
+.
  In 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -984,18 +1827,52 @@ noprefix "false"
 
 \begin_layout Subsection
 Implicit solvent models
+\change_inserted -1046193749 1681257289
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1681257291
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681257297
+TL this should be in 2.2
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
 Water plays a fundamental role in molecular association and mediates protein-lig
 and interactions.
- Commonly, explicit water models are used, in which large number of individual
- water molecules are placed around the solute and modeled with approximately
- the same theoretical level as the solute.
+ Commonly, explicit water models are used, in which 
+\change_inserted -1046193749 1681257308
+a 
+\change_unchanged
+large number of individual water molecules are placed around the solute
+ and modeled with approximately the same theoretical level as the solute.
  While explicit models are generally a realistic representation of an water
- environment, they are computationally demanding.Moreover, water exchange
- between bulk and buried cavities can be slow and leads to inefficient sampling
- of water occupancy states
+ environment, they are computationally demanding.
+
+\change_inserted -1046193749 1681257321
+ 
+\change_unchanged
+Moreover, water exchange between bulk and buried cavities can be slow and
+ leads to inefficient sampling of water occupancy states
+\change_inserted -1046193749 1681257329
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "bergazinEnhancingWaterSampling2021,courniaRelativeBindingFree2017"
@@ -1004,8 +1881,33 @@ literal "false"
 \end_inset
 
 .
- Alternatively, implicit solvation (sometimes termed continuum solvation)
- treats water as a a structureless continuum which in turn 
+ Alternatively, implicit solvation 
+\change_deleted -1046193749 1681257341
+(sometimes termed continuum solvation)
+\change_inserted -1046193749 1681257351
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681257377
+TL 'continuum' refers to a specific type of solvation model 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1681257421
+treats water as a a structureless continuum
+\change_inserted -1046193749 1681257454
+provides a mean-field model of the solvent,
+\change_unchanged
+ which in turn 
 \begin_inset Note Note
 status collapsed
 
@@ -1017,8 +1919,12 @@ TL provide a simple definition of an implicit solvent
 
  provides a significant computational advantage by integrating out explicit
  solvent DOF and reduction of interacting atoms.
- constant.
  
+\change_deleted -1046193749 1681257469
+constant.
+ 
+\change_unchanged
+
 \begin_inset Note Note
 status collapsed
 
@@ -1029,9 +1935,42 @@ TL also mention the drawback of implicit solvent.
 
 \end_inset
 
-However, the computational advantage comes at a cost of lacking hydrogen
- bonds with solvent and hydrogen bonding within the solute and unphysical
- sampling
+However, the computational advantage comes at a cost
+\change_inserted -1046193749 1681257527
+.
+ Some models
+\change_unchanged
+ 
+\change_deleted -1046193749 1681257529
+of 
+\change_unchanged
+lack
+\change_deleted -1046193749 1681257531
+ing
+\change_unchanged
+ hydrogen
+\change_deleted -1046193749 1681257536
+ bonds with solvent and hydrogen
+\change_unchanged
+ bonding 
+\change_deleted -1046193749 1681257556
+within
+\change_inserted -1046193749 1681257557
+between
+\change_unchanged
+ the solute 
+\change_inserted -1046193749 1681257570
+and solvent, or otherwise
+\change_deleted -1046193749 1681257571
+and
+\change_inserted -1046193749 1681257572
+ cause
+\change_unchanged
+ unphysical sampling
+\change_inserted -1046193749 1681257483
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "zhangComparisonImplicitExplicit2017"
@@ -1039,15 +1978,39 @@ literal "false"
 
 \end_inset
 
-.Implicit solvent is an attractive approach for sampling the vast chemical
+.
+
+\change_inserted -1046193749 1681257601
+ Due to its speed, i
+\change_deleted -1046193749 1681257600
+I
+\change_unchanged
+mplicit solvent is an attractive approach for sampling the vast chemical
  space in search of potential drug candidates.
 \end_layout
 
 \begin_layout Standard
-Continuum of implicit solvent models can estimate the free energy of solvation
- as a function of the conformation of the solute.
+
+\change_inserted -1046193749 1681257709
+Dielectric c
+\change_deleted -1046193749 1681257709
+C
+\change_unchanged
+ontinuum
+\change_inserted -1046193749 1681257704
+ 
+\change_deleted -1046193749 1681257609
+ of
+\change_unchanged
+ implicit solvent models can estimate the free energy of solvation as a
+ function of the conformation of the solute.
  The solvation free energy is the reversible work of transferring a solute
- from the gas phase to solution.The 
+ from the gas phase to solution.
+
+\change_inserted -1046193749 1681257634
+ 
+\change_unchanged
+The 
 \begin_inset Formula $\Delta G_{\text{solv}}$
 \end_inset
 
@@ -1055,6 +2018,10 @@ Continuum of implicit solvent models can estimate the free energy of solvation
 \begin_inset Formula $\Delta G_{el}$
 \end_inset
 
+
+\change_inserted -1046193749 1681257641
+,
+\change_unchanged
  which depends on the electrostatic contributions, a non-polar contribution
  
 \begin_inset Formula $\Delta G_{npol}$
@@ -1072,8 +2039,15 @@ Continuum of implicit solvent models can estimate the free energy of solvation
 \end_layout
 
 \begin_layout Standard
-In dielectric continuum models, the external continuum medium and the solute
- will have different dielectric constants.
+In dielectric continuum models, the external 
+\change_deleted -1046193749 1681257732
+contin
+\change_inserted -1046193749 1681257736
+dielectric
+\change_deleted -1046193749 1681257732
+uum
+\change_unchanged
+ medium and the solute will have different dielectric constants.
  
 \begin_inset Note Note
 status collapsed
@@ -1086,8 +2060,20 @@ TL this is only true for dielectric continuum models
 
 For example, the dielectric of the solvent is typically set to 78.5 to mimic
  water, while the solute interior will have an dielectric between 1 to 4.
- Previous work has shown he internal dielectric can be adjusted in order
- to improved the accuracy of MM/GBSA estimate of protein-ligand affinity
+ Previous work has shown 
+\change_inserted -1046193749 1681257755
+t
+\change_unchanged
+he internal dielectric can be adjusted in order to improved the accuracy
+ of MM/GBSA estimate
+\change_inserted -1046193749 1681257761
+s
+\change_unchanged
+ of protein-ligand affinity
+\change_inserted -1046193749 1681257768
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ravindranathanImprovingMMGBSA2011"
@@ -1110,8 +2096,31 @@ TL Cite
 \end_layout
 
 \begin_layout Standard
-The Generalized Born Surface Area (GBSA) treats solvent as a uniform dielectric
- being a fast and analytical method to compute the 
+The 
+\change_inserted -1046193749 1681257772
+g
+\change_deleted -1046193749 1681257772
+G
+\change_unchanged
+eneralized Born 
+\change_inserted -1046193749 1681257775
+s
+\change_deleted -1046193749 1681257775
+S
+\change_unchanged
+urface 
+\change_inserted -1046193749 1681257778
+a
+\change_deleted -1046193749 1681257777
+A
+\change_unchanged
+rea (GBSA) treats solvent as a uniform dielectric 
+\change_inserted -1046193749 1681257819
+and is 
+\change_deleted -1046193749 1681257817
+being
+\change_unchanged
+ a fast and analytical method to compute the 
 \series bold
 
 \begin_inset Formula $\Delta G_{el}$
@@ -1120,7 +2129,13 @@ The Generalized Born Surface Area (GBSA) treats solvent as a uniform dielectric
 
 \series default
 .
- In AMBER the 
+ In 
+\change_deleted -1046193749 1681257794
+AMBER
+\change_inserted -1046193749 1681257794
+Amber
+\change_unchanged
+ the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1180,6 +2195,10 @@ and
 \end_inset
 
 
+\change_inserted -1046193749 1681257848
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "onufrievModificationGeneralizedBorn2000"
@@ -1205,10 +2224,6 @@ F_{GB}(r_{ij},R_{i},R_{j})=[r_{ij}^{2}+R_{i}R_{j}exp(-r_{ij}^{2}/4R_{i}R_{j})]^{
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 where 
 \begin_inset Formula $R_{i}$
 \end_inset
@@ -1217,10 +2232,50 @@ where
 \begin_inset Formula $R_{j}$
 \end_inset
 
- denote the effective Born radius atoms i and j which represent each atom’s
- degree of burial within the solute.
- Larger the effective radii reflects a deeper burial where the surrounding
- atoms are reducing the extent the atom charge is screened by the solvent.
+ denote the effective Born radius atoms
+\change_inserted -1046193749 1681257875
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1681257876
+i
+\change_inserted -1046193749 1681257876
+
+\begin_inset Formula $i$
+\end_inset
+
+
+\change_unchanged
+ and 
+\change_deleted -1046193749 1681257879
+j
+\change_inserted -1046193749 1681257883
+
+\begin_inset Formula $j$
+\end_inset
+
+,
+\change_unchanged
+ which represent each atom’s degree of burial within the solute.
+ Larger
+\change_deleted -1046193749 1681257942
+ the
+\change_unchanged
+ effective radii reflects a deeper burial
+\change_inserted -1046193749 1681257924
+,
+\change_unchanged
+ where the surrounding atoms 
+\change_deleted -1046193749 1681257934
+are 
+\change_unchanged
+reduc
+\change_inserted -1046193749 1681257932
+e
+\change_deleted -1046193749 1681257932
+ing
+\change_unchanged
+ the extent the atom charge is screened by the solvent.
 \end_layout
 
 \begin_layout Subsection
@@ -1235,8 +2290,17 @@ name "subsec:Free-Energy-Perturbation"
 \end_layout
 
 \begin_layout Standard
-While simulating the binding process of ligand-receptor provides estimates
- of binding affinity[
+While simulating the binding process of ligand
+\change_inserted -1046193749 1681319614
+ and 
+\change_deleted -1046193749 1681319611
+-
+\change_unchanged
+receptor provides estimates of binding affinity
+\change_deleted -1046193749 1681319575
+[
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "dejongDeterminingEquilibriumConstants2011"
@@ -1244,8 +2308,20 @@ literal "false"
 
 \end_inset
 
-], depending on the size of the system current common molecular dynamic
- software packages and high-end GPUs reach a only a few hundred of ns/day
+
+\change_deleted -1046193749 1681319577
+]
+\change_unchanged
+, 
+\change_deleted -1046193749 1681319651
+depending on the size of the system 
+\change_unchanged
+current common molecular dynamic software packages and high-end GPUs reach
+ a only a few hundred of ns/day
+\change_inserted -1046193749 1681319654
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "kutznerMoreBangYour2019"
@@ -1253,6 +2329,10 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681319689
+ for typical proteins
+\change_unchanged
 .
  
 \begin_inset Note Note
@@ -1264,12 +2344,33 @@ TL you need to specify this a bit more, what size of system?
 
 \end_inset
 
- making these calculations unappealing for high throughput drug discovery
- timescales.
+ 
+\change_inserted -1046193749 1681319706
+As a results, brute force 
+\change_deleted -1046193749 1681319708
+making these
+\change_unchanged
+ calculations
+\change_inserted -1046193749 1681319710
+ are
+\change_unchanged
+ unappealing for high throughput drug discovery timescales.
  Free energy perturbation calculations provide a way to estimate the binding
- affinity without the actual needed of simulating the binding event.
- The earliest and well known methods to estimate free energy difference
- based on the perturbation theory was introduced by 
+ affinity without 
+\change_deleted -1046193749 1681319742
+the actual needed of
+\change_unchanged
+ simulating the binding event.
+ The earliest and 
+\change_inserted -1046193749 1681319761
+most 
+\change_unchanged
+well known method
+\change_deleted -1046193749 1681319764
+s
+\change_unchanged
+ to estimate free energy difference based on the perturbation theory was
+ introduced by 
 \begin_inset Note Note
 status collapsed
 
@@ -1297,7 +2398,34 @@ literal "false"
 
 \end_inset
 
-,starting from Helmholtz free energy
+
+\change_inserted -1046193749 1681319771
+.
+ S
+\change_deleted -1046193749 1681319768
+,
+\change_unchanged
+starting from Helmholtz free energy
+\change_inserted -1046193749 1681319982
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681320030
+TL This section is almost identically from http://alchemistry.org/wiki/Exponentia
+l_Averaging.
+ Delete this and redo the derivation yourself
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \begin_inset Formula 
 \[
 A=-\frac{1}{\beta}\ln Q,
@@ -1305,6 +2433,8 @@ A=-\frac{1}{\beta}\ln Q,
 
 \end_inset
 
+
+\change_deleted -1046193749 1681319776
 
 \end_layout
 
@@ -1318,6 +2448,8 @@ A_{1}-A_{0}=-\beta^{-1}[ln(Q_{1})-ln(Q_{0})=-\beta^{-1}ln\left[\frac{Q_{1}}{Q_{0
 \end_inset
 
 
+\change_deleted -1046193749 1681319786
+
 \end_layout
 
 \begin_layout Standard
@@ -1326,6 +2458,28 @@ Then adding and subtracting
 \end_inset
 
  from the partition function in the numerator results in 
+\change_inserted -1046193749 1681319850
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681319868
+TL you need to define what 
+\begin_inset Formula $Q$
+\end_inset
+
+ is or this step makes no sense
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \begin_inset Formula 
 \[
 \Delta A_{10}=-\beta^{-1}\text{ln}\left[\frac{\int e^{-\beta\left(U_{1}(\overrightarrow{q})-U_{0}(\overrightarrow{q})\right)e^{-\beta U_{0}(\overrightarrow{q})}d\overrightarrow{q}}}{Q_{0}}\right]
@@ -1333,6 +2487,8 @@ Then adding and subtracting
 
 \end_inset
 
+
+\change_deleted -1046193749 1681319790
 
 \end_layout
 
@@ -1349,6 +2505,8 @@ which gives:
 \end_inset
 
 
+\change_deleted -1046193749 1681319796
+
 \end_layout
 
 \begin_layout Standard
@@ -1359,6 +2517,11 @@ The
  indicates the equilibrium sampling was performed in state 0.
  The above equations applies to a forward transformation from state 0 to
  state 1
+\change_inserted -1046193749 1681320086
+.
+ 
+\change_deleted -1046193749 1681320084
+
 \end_layout
 
 \begin_layout Standard
@@ -1372,8 +2535,19 @@ TL generally, you should go in both directions if using this formula.
 
 \end_inset
 
-Generally sampling in both directions checks for convergence but in practice
- their convergence properties may not be the same 
+Generally sampling in both directions 
+\change_inserted -1046193749 1681320096
+is used to 
+\change_unchanged
+check
+\change_deleted -1046193749 1681320098
+s
+\change_unchanged
+ for convergence
+\change_inserted -1046193749 1681320102
+,
+\change_unchanged
+ but in practice their convergence properties may not be the same 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "pohorilleGoodPracticesFreeEnergy2010a"
@@ -1382,12 +2556,52 @@ literal "false"
 \end_inset
 
 .
+\change_deleted -1046193749 1681320109
+
 \end_layout
 
 \begin_layout Standard
-However since EXP is only sampled at one state and then perturb in the other,
- this tend to lead to slow convergence and is also sensitive to any lack
- of phase space overlap between states
+
+\change_deleted -1046193749 1681320228
+However
+\change_inserted -1046193749 1681320230
+In addition,
+\change_unchanged
+ since EXP
+\change_inserted -1046193749 1681320206
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681320213
+TL EXP is not defined
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ is only sampled at one state and then perturb in the other, 
+\change_deleted -1046193749 1681320245
+this tend to lead to slow
+\change_unchanged
+ convergence 
+\change_inserted -1046193749 1681320253
+tends to be slow 
+\change_unchanged
+and is also sensitive to
+\change_deleted -1046193749 1681320259
+ any
+\change_unchanged
+ lack of phase space overlap between states
+\change_inserted -1046193749 1681320262
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "shirtsComparisonEfficiencyBias2005"
@@ -1403,21 +2617,41 @@ Multistate Bennett Acceptance Ratio (MBAR)
 \end_layout
 
 \begin_layout Standard
-A recurring challenge in ligand-receptor binding is the sampling of sufficient
- amount of data to estimate binding affinity to adequate precision.
- Earlier methods such as EXP are one sided and do not make the most efficient
- used of data when samples from more than one state are available
-\begin_inset CommandInset citation
-LatexCommand citep
-key "shirtsStatisticallyOptimalAnalysis2008a"
-literal "false"
-
-\end_inset
-
-.
- Multistate Bennett acceptance method (MBAR) has shown to be a superior
- estimator in that it has the lowest variance and is asymptotically unbiased
+A recurring challenge in ligand-receptor binding is 
+\change_deleted -1046193749 1681320364
+the
+\change_inserted -1046193749 1681320364
+to
+\change_unchanged
+ sampl
+\change_inserted -1046193749 1681320366
+e
+\change_deleted -1046193749 1681320366
+ing
+\change_unchanged
  
+\change_deleted -1046193749 1681320369
+of
+\change_unchanged
+ sufficient
+\change_deleted -1046193749 1681320372
+ amount of
+\change_unchanged
+ data to estimate binding affinity to adequate precision.
+ Earlier methods
+\change_inserted -1046193749 1681320383
+,
+\change_unchanged
+ such as EXP
+\change_inserted -1046193749 1681320385
+,
+\change_unchanged
+ are one sided and do not make the most efficient used of data when samples
+ from more than one state are available
+\change_inserted -1046193749 1681320395
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "shirtsStatisticallyOptimalAnalysis2008a"
@@ -1426,38 +2660,117 @@ literal "false"
 \end_inset
 
 .
- MBAR makes use of all configurations sampled form each of these states,
- though sufficient phase space overlap is still required for accurate estimates
+ Multistate Bennett acceptance method (MBAR) 
+\change_deleted -1046193749 1681320417
+has shown to be
+\change_inserted -1046193749 1681320417
+is
+\change_unchanged
+ a superior estimator in that it has the lowest
+\change_inserted -1046193749 1681320428
+ possible
+\change_unchanged
+ variance and is asymptotically unbiased 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "shirtsStatisticallyOptimalAnalysis2008a"
+literal "false"
+
+\end_inset
+
+.
+ MBAR makes use of all configurations sampled f
+\change_inserted -1046193749 1681320562
+ro
+\change_deleted -1046193749 1681320562
+or
+\change_unchanged
+m each 
+\change_deleted -1046193749 1681320583
+of these
+\change_unchanged
+ state
+\change_deleted -1046193749 1681320579
+s
+\change_unchanged
+, though sufficient phase space overlap is still required for accurate estimates
  of binding affinity.
- In MBAR formulation, each state is characterized by a specific combination
- of potential energy function 
+ In
+\change_inserted -1046193749 1681320596
+ the
+\change_unchanged
+ MBAR formulation, each state 
+\change_inserted -1046193749 1681320623
+
+\begin_inset Formula $i$
+\end_inset
+
+ 
+\change_unchanged
+is characterized by a specific 
+\change_deleted -1046193749 1681320613
+combination of
+\change_unchanged
+ potential energy function
+\change_inserted -1046193749 1681320671
+,
+\change_unchanged
+ 
 \begin_inset Formula $U_{i}(x)$
 \end_inset
 
-, inverse temperature 
-\begin_inset Formula $\beta$
+, inverse temperature
+\change_inserted -1046193749 1681320673
+,
+\change_unchanged
+ 
+\begin_inset Formula $\beta_{i}$
 \end_inset
 
-, pressure 
+, pressure
+\change_inserted -1046193749 1681320675
+,
+\change_unchanged
+ 
 \begin_inset Formula $p_{i}$
 \end_inset
 
- and chemical potentials 
+ and chemical potential
+\change_deleted -1046193749 1681320679
+s
+\change_inserted -1046193749 1681320678
+,
+\change_unchanged
+ 
 \begin_inset Formula $\mu_{i}$
 \end_inset
 
+
+\change_inserted -1046193749 1681320684
+,
+\change_unchanged
  depending on the ensemble.
  The reduced potential energy 
+\change_inserted -1046193749 1681320782
+
 \series bold
+
+\begin_inset Formula $u_{i}\left(x\right)$
+\end_inset
+
+
+\change_deleted -1046193749 1681320780
 
 \begin_inset Formula $\mu_{i}(x)$
 \end_inset
 
+
+\change_unchanged
  
 \series default
 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 TL check you notation here.
@@ -1475,7 +2788,19 @@ TL check you notation here.
 
 \end_inset
 
-of a state i is defined by Shirts and Chodera
+of a state 
+\change_inserted -1046193749 1681320806
+
+\begin_inset Formula $i$
+\end_inset
+
+
+\change_deleted -1046193749 1681320805
+i
+\change_unchanged
+ is defined 
+\change_deleted -1046193749 1681320817
+by Shirts and Chodera
 \begin_inset CommandInset citation
 LatexCommand citep
 key "shirtsStatisticallyOptimalAnalysis2008a"
@@ -1483,6 +2808,10 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681320817
+as
+\change_unchanged
 
 \begin_inset Formula 
 \[
@@ -1492,9 +2821,13 @@ literal "false"
 \end_inset
 
 
+\change_deleted -1046193749 1681320826
+
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1681320838
 where 
 \begin_inset Formula $\text{N}(x)$
 \end_inset
@@ -1512,18 +2845,56 @@ potential energy function and
 \end_inset
 
 denoting the chemical potential of the system.
+
+\change_inserted -1046193749 1681320838
+ 
+\change_deleted -1046193749 1681320838
+
 \end_layout
 
 \begin_layout Standard
 The reduced potentials can be denoted as reduced free energy differences
+\change_inserted -1046193749 1681320856
+,
+\change_unchanged
  
 \begin_inset Formula $\Delta f_{ij}\equiv\beta_{j}A_{j}-\beta_{i}A_{i}$
 \end_inset
 
-among states.
+
+\change_inserted -1046193749 1681320858
+, 
+\change_unchanged
+among states
+\change_inserted -1046193749 1681320862
+,
+\change_deleted -1046193749 1681320861
+.
+\change_inserted -1046193749 1681320885
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681320939
+TL revise.
+ This doesn't make sense.
+ The reduced potentials are not the same thing as the reduced free energy
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1681320870
 \begin_inset Formula 
 \[
 \hat{f_{i}}=-ln\stackrel[j=1]{K}{\sum}\stackrel[n=1]{N_{j}}{\sum}\frac{exp[-u_{i}(x_{jn})]}{\sum_{k=1}^{K}N_{k}exp[\hat{f}_{k}-u_{k}(x_{jn})]}
@@ -1531,10 +2902,24 @@ among states.
 
 \end_inset
 
+
+\change_inserted -1046193749 1681320873
+
+\begin_inset Formula 
+\[
+\hat{f_{i}}=-ln\stackrel[j=1]{K}{\sum}\stackrel[n=1]{N_{j}}{\sum}\frac{exp[-u_{i}(x_{jn})]}{\sum_{k=1}^{K}N_{k}exp[\hat{f}_{k}-u_{k}(x_{jn})]},
+\]
+
+\end_inset
+
+
+\change_deleted -1046193749 1681320879
 ,
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -1046193749 1681320945
 
 \family roman
 \series medium
@@ -1548,10 +2933,41 @@ among states.
 \uwave off
 \noun off
 \color none
+where 
+\change_unchanged
+
 \begin_inset Formula $\hat{f}_{i}$
 \end_inset
 
- are the solution for MBAR free energy equations.
+ 
+\change_deleted -1046193749 1681321089
+are
+\change_inserted -1046193749 1681321089
+is
+\change_unchanged
+ the 
+\change_deleted -1046193749 1681321060
+solution
+\change_inserted -1046193749 1681321061
+estimates
+\change_unchanged
+ 
+\change_inserted -1046193749 1681321067
+of the 
+\change_deleted -1046193749 1681321063
+for
+\change_unchanged
+ MBAR free energ
+\change_inserted -1046193749 1681321098
+y, 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+
+\change_deleted -1046193749 1681321072
+y equations
+\change_unchanged
+.
 
 \family default
 \series default
@@ -1574,14 +2990,27 @@ among states.
 \end_inset
 
  are meaningful.
- However when samples from different states have poor phase space overlap
+ However
+\change_inserted -1046193749 1681321119
+,
+\change_unchanged
+ when samples from different states have poor phase space overlap
+\change_inserted -1046193749 1681321131
+, the
+\change_unchanged
  equation above will fail to converge or 
 \begin_inset Formula $\hat{f}_{i}$
 \end_inset
 
+
+\change_inserted -1046193749 1681321139
+ 
+\change_unchanged
 could have large uncertainties.
  Lastly MBAR also provides a direct expression to estimate the statistical
  uncertainty in free energy differences:
+\change_deleted -1046193749 1681321274
+
 \begin_inset Formula 
 \[
 \delta^{2}\Delta\hat{f_{ij}}\equiv\text{cov}\left(-\text{ln\ensuremath{\frac{\hat{c_{j}}}{\hat{c_{i}}}-\text{ln\ensuremath{\frac{\hat{c_{j}}}{\hat{c_{i}}}}}}}\right)=\hat{\Theta_{ii}}-2\hat{\Theta_{ij}}+\hat{\Theta_{jj}}
@@ -1590,6 +3019,41 @@ could have large uncertainties.
 \end_inset
 
 
+\change_inserted -1046193749 1681321279
+
+\begin_inset Formula 
+\[
+\delta^{2}\Delta\hat{f_{ij}}\equiv\text{cov}\left(-\text{ln\ensuremath{\frac{\hat{c_{j}}}{\hat{c_{i}}}-\text{ln\ensuremath{\frac{\hat{c_{j}}}{\hat{c_{i}}}}}}}\right)=\hat{\Theta_{ii}}-2\hat{\Theta_{ij}}+\hat{\Theta_{jj}}.
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681321321
+TL 
+\begin_inset Formula $\hat{}$
+\end_inset
+
+s are misaligned.
+ The 
+\begin_inset Formula $\hat{}$
+\end_inset
+
+ should only go over the symbol, not the symbol and its subscripts.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
@@ -1597,17 +3061,59 @@ Intermediate states-provide better phase space overlap
 \end_layout
 
 \begin_layout Standard
-Intermediate states states are needed to obtain a reliable estimate of ligand-ho
-st free energy difference.
+Intermediate states 
+\change_deleted -1046193749 1681321333
+states
+\change_unchanged
+ are needed to obtain a reliable estimate of 
+\change_deleted -1046193749 1681321352
+ligand-host
+\change_inserted -1046193749 1681321352
+binding
+\change_unchanged
+ free energy difference.
  Attempting to calculate the free energy difference of ligand-host binding
  the states have to be similar in order to obtain reliable estimate in their
- free energy difference.
+ free energy difference
+\change_inserted -1046193749 1681321431
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681321439
+TL this is not a sentence.
+ Revise
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
  Typically, this is almost never the case for bound and unbound states as
- the end-states have a poor space phase overlap leading to large uncertainties
- in computing the free energy difference.
- Therefore, appropriately selected intermediate states can significantly
+ the end-states have 
+\change_deleted -1046193749 1681321459
+a 
+\change_unchanged
+poor space phase overlap
+\change_inserted -1046193749 1681321464
+,
+\change_unchanged
+ leading to large uncertainties in computing the free energy difference.
+ Therefore, appropriately selected intermediate states can 
+\change_deleted -1046193749 1681321672
+significantly
+\change_unchanged
  make free energy calculations more efficient by bridging the gap between
  the target end-states
+\change_inserted -1046193749 1681321476
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "wuPhasespaceOverlapMeasures2005"
@@ -1616,15 +3122,27 @@ literal "false"
 \end_inset
 
 .
+\change_deleted -1046193749 1681321846
+
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1681321845
 An essential step in preparing alchemical free energy calculations is to
- define intermediate states that link the unbound and bound end-states.Each
- state is defined by a different Hamiltonian.Since free energy is a state
- function, the path that connects the states is unimportant and we can select
- a cycle that connects any two states through several nonphysical intermediate
- ones, such as those shown in 
+ define intermediate states that link the unbound and bound end-states.
+
+\change_inserted -1046193749 1681321695
+ 
+\change_unchanged
+Each state is defined by a different Hamiltonian.
+
+\change_inserted -1046193749 1681321698
+ 
+\change_unchanged
+Since free energy is a state function, the path that connects the states
+ is unimportant and we can select a cycle that connects any two states through
+ several nonphysical intermediate ones, such as those shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:thermodynamic-cycle"
@@ -1634,8 +3152,33 @@ noprefix "false"
 
 \end_inset
 
-.Though other paths may be used the simplest path to construct between two
- Hamiltonians is linear:
+.
+
+\change_inserted -1046193749 1681321811
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1681321915
+There is still a large change between each state in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:thermodynamic-cycle"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and these must also be connected by intermediate states.
+ 
+\change_unchanged
+Though other paths may be used
+\change_inserted -1046193749 1681321920
+,
+\change_unchanged
+ the simplest path to construct between two Hamiltonians is linear:
 \begin_inset Formula 
 \begin{equation}
 H(\lambda)=\lambda H_{1}+(1-\lambda)H_{0}\label{eq:linear-mixing}
@@ -1643,6 +3186,8 @@ H(\lambda)=\lambda H_{1}+(1-\lambda)H_{0}\label{eq:linear-mixing}
 
 \end_inset
 
+
+\change_deleted -1046193749 1681321807
 
 \end_layout
 
@@ -1669,7 +3214,12 @@ where
 \begin_inset Formula $H_{1}$
 \end_inset
 
- state.For values between 0 and 1, the system is in a mixed state.
+ state.
+
+\change_inserted -1046193749 1681321943
+ 
+\change_unchanged
+For values between 0 and 1, the system is in a mixed state.
  For the cycle depicted in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -1680,8 +3230,18 @@ noprefix "false"
 
 \end_inset
 
-,there additional mixed-states between the major ones shown are simulated
- with 
+,
+\change_inserted -1046193749 1681321950
+ 
+\change_unchanged
+the
+\change_deleted -1046193749 1681321967
+re 
+\change_inserted -1046193749 1681321967
+ 
+\change_unchanged
+additional mixed-states between the major ones shown are simulated with
+ 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "eq:linear-mixing"
@@ -1692,8 +3252,12 @@ noprefix "false"
 \end_inset
 
 .
- Each of these intermediate states are simulated independently.From these
- simulations the free energy difference between state 
+ Each of these intermediate states are simulated independently.
+
+\change_inserted -1046193749 1681321978
+ 
+\change_unchanged
+From these simulations the free energy difference between state 
 \begin_inset Formula $i$
 \end_inset
 
@@ -1707,6 +3271,10 @@ noprefix "false"
 \end_inset
 
 
+\change_inserted -1046193749 1681321991
+,
+\change_deleted -1046193749 1681321998
+
 \begin_inset Formula 
 \[
 \Delta G_{b}=\sum\Delta G_{i,i+1}
@@ -1715,16 +3283,55 @@ noprefix "false"
 \end_inset
 
 
+\change_inserted -1046193749 1681321999
+
+\begin_inset Formula 
+\[
+\Delta G_{b}=\sum\Delta G_{i,i+1}.
+\]
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
 Our Thermodynamic Pathway
+\change_inserted -1046193749 1681325208
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Our-Thermodynamic-Pathway"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
-Our thermodynamic cycle uses a modified DDM cycle that employs conformational
- restraints and GB solvent to enhance convergence.All of the sampling is
- done in the fast GB implicit solvent model in states 1-8 
+Our thermodynamic cycle 
+\change_deleted -1046193749 1681322036
+uses
+\change_inserted -1046193749 1681322038
+is based on
+\change_unchanged
+ a modified DDM cycle
+\change_inserted -1046193749 1681322041
+ and
+\change_deleted -1046193749 1681322042
+ that
+\change_unchanged
+ employs conformational restraints and GB solvent to enhance convergence.
+
+\change_inserted -1046193749 1681322047
+ 
+\change_unchanged
+All of the sampling is done in the fast GB implicit solvent model in states
+ 1-8 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:thermodynamic-cycle"
@@ -1758,9 +3365,25 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Our modified thermodynamic cycle.
+
+\change_deleted -1046193749 1681322094
+Our
+\change_inserted -1046193749 1681322094
+ Major states in our
+\change_unchanged
+ 
+\change_deleted -1046193749 1681322094
+modified
+\change_inserted -1046193749 1681322069
+binding free energy
+\change_unchanged
+ thermodynamic cycle.
+
+\change_deleted -1046193749 1681322099
  Major states in our thermodynamic cycle.
- The free energy change in GB solvent is the free energy difference between
+ 
+\change_unchanged
+The free energy change in GB solvent is the free energy difference between
  states 1 and 8.
  Conformational restraints (padlock) indicates the presence of harmonic
  distance restraints between each atom separated by 
@@ -1792,7 +3415,11 @@ literal "false"
 .
  State 6 is where the ligand is decoupled from the receptor but is orientational
 ly restrained relative to receptor.
- State 5 is equivalent and not simulated.
+ State 5 is equivalent 
+\change_inserted -1046193749 1681322148
+to state 6 
+\change_unchanged
+and not simulated.
  
 \begin_inset Note Note
 status open
@@ -1827,29 +3454,85 @@ name "fig:thermodynamic-cycle"
 \end_layout
 
 \begin_layout Enumerate
-States 1 & 8 : The unbound and bound host-guest system simulated in GBSA
+States 1 & 8 : The unbound and bound host-guest system 
+\change_inserted -1046193749 1681322234
+are 
+\change_unchanged
+simulated in GB
+\change_deleted -1046193749 1681322259
+SA
+\change_unchanged
  solvent.
  In this study we use replica exchange molecular dynamics (REMD) to efficiently
  explore the different potential energy surfaces.
 \end_layout
 
 \begin_layout Enumerate
-1->2: Artificial intramolecular conformational restraints are turned on.
- These restraints are place on every atom of the ligand and receptor.
+
+\change_inserted -1046193749 1681322367
+\begin_inset Formula $1\rightarrow2$
+\end_inset
+
+
+\change_deleted -1046193749 1681322366
+1->2
+\change_unchanged
+: Artificial intramolecular conformational restraints are turned on.
+ These restraints are place
+\change_inserted -1046193749 1681322302
+d
+\change_unchanged
+ on every atom of the ligand and receptor.
  These restraints restrict the motion of the receptor and ligand to the
  last frame of state 8.
- Limiting the range of motion will prevent steric clashes and smooth the
- convergence in the later steps.
+ Limiting the range of motion 
+\change_deleted -1046193749 1681322338
+will
+\change_unchanged
+ prevent
+\change_inserted -1046193749 1681322342
+s
+\change_unchanged
+ steric clashes and smooth
+\change_inserted -1046193749 1681322351
+s
+\change_unchanged
+ the convergence in the later steps.
 \end_layout
 
 \begin_layout Enumerate
-2->3: The host and guest systems are decoupled from the solvent environment.
+
+\change_inserted -1046193749 1681322375
+\begin_inset Formula $2\rightarrow3$
+\end_inset
+
+
+\change_deleted -1046193749 1681322374
+2->3
+\change_unchanged
+: The host and guest systems are decoupled from the solvent environment
+\change_inserted -1046193749 1681322417
+ by turning off GB
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Enumerate
-3->4: The ligand is annihilated by first turning off Lennard-Jones interactions
- and scaling the ligand partial charges to zero through several nonphysical
- 
+
+\change_inserted -1046193749 1681322392
+\begin_inset Formula $3\rightarrow4$
+\end_inset
+
+
+\change_deleted -1046193749 1681322388
+3->4
+\change_unchanged
+: The ligand is annihilated by first turning off Lennard-Jones interactions
+ and 
+\change_inserted -1046193749 1681322432
+then 
+\change_unchanged
+scaling the ligand partial charges to zero through several nonphysical 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -1857,12 +3540,30 @@ States 1 & 8 : The unbound and bound host-guest system simulated in GBSA
 \end_layout
 
 \begin_layout Enumerate
-4->5: Orientational restraints are introduced, which prevents the ligand
- from leaving the binding pocket when it is not interacting with the environment
+
+\change_inserted -1046193749 1681322439
+\begin_inset Formula $4\rightarrow5$
+\end_inset
+
+
+\change_deleted -1046193749 1681322439
+4->5
+\change_unchanged
+: Orientational restraints are introduced, which prevents the ligand from
+ leaving the binding pocket when it is not interacting with the environment
  nor the receptor.
  We select the orientational restraints to bind the ligand relative to the
  receptor, using the last frame of step 8 as a reference.
- In this project we used restraints proposed by Boresch et al
+ In this project
+\change_inserted -1046193749 1681322469
+,
+\change_unchanged
+ we used restraints proposed by Boresch et al
+\change_inserted -1046193749 1681322480
+.
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "boreschAbsoluteBindingFree2003"
@@ -1873,11 +3574,16 @@ literal "false"
 , which keep the ligand in a specific orientation relative to the receptor.
  The method selects a total of six heavy atoms: three from the receptor
  and three from the ligand.
- Then a set harmonic restraints are applied which and comprised by one distance,
- two angles and three dihedrals shown in 
+ Then a set harmonic restraints are applied which 
+\change_deleted -1046193749 1681322504
+and
+\change_inserted -1046193749 1681322504
+are
+\change_unchanged
+ comprised by one distance, two angles and three dihedrals shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "fig:thermodynamic-cycle"
+reference "fig:Boresch-restraints-1-1"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1904,6 +3610,8 @@ noprefix "false"
 \end_inset
 
  shown below 
+\change_deleted -1046193749 1681322164
+
 \begin_inset Note Note
 status open
 
@@ -1914,6 +3622,8 @@ TL fix braces
 \end_inset
 
 
+\change_unchanged
+
 \begin_inset Formula 
 \[
 \Delta G_{restraints}=kTln\left[\frac{8\pi^{2}V(K_{r}K_{\theta1}K_{\theta2}K_{\phi1}K_{\phi2}K_{\phi3})^{1/2}}{r_{1}^{2}sin\theta_{1}sin\theta_{2}(2\pi kT)^{3}}\right],
@@ -1921,6 +3631,8 @@ TL fix braces
 
 \end_inset
 
+
+\change_deleted -1046193749 1681322545
 
 \end_layout
 
@@ -1949,10 +3661,35 @@ where
 
 \end_deeper
 \begin_layout Enumerate
-5->6: This step has a 
+
+\change_inserted -1046193749 1681322556
+\begin_inset Formula $5\rightarrow6$
+\end_inset
+
+
+\change_deleted -1046193749 1681322555
+5->6
+\change_unchanged
+: Th
+\change_inserted -1046193749 1681322568
+e
+\change_deleted -1046193749 1681322567
+is
+\change_unchanged
+ 
+\change_inserted -1046193749 1681322578
+change in free energy across this 
+\change_unchanged
+step 
+\change_deleted -1046193749 1681322583
+has a 
 \begin_inset Formula $\Delta G=0$
 \end_inset
 
+
+\change_inserted -1046193749 1681322589
+0,
+\change_unchanged
  since the intra/intermolecular interactions have been turn off.
  The Boresch restraints have already been applied and the receptor does
  not feel the precise of the ligand.
@@ -1962,9 +3699,21 @@ where
 \end_layout
 
 \begin_layout Enumerate
-6->7: Solute-solvent and ligand inter/intramolecular interactions are restored.
+
+\change_inserted -1046193749 1681322815
+\begin_inset Formula $6\rightarrow7$
+\end_inset
+
+
+\change_deleted -1046193749 1681322801
+6->7
+\change_unchanged
+: Solute-solvent and ligand inter/intramolecular interactions are restored.
  This is accomplished in a series of steps.
  First the Lennard-Jones interaction between the host and ligand are turn
+\change_inserted -1046193749 1681322839
+ed
+\change_unchanged
  back on, followed by restoration of solute-solvent interactions.
  Finally ligand charges are re-introduced in a series of 
 \begin_inset Formula $\lambda$
@@ -1974,8 +3723,20 @@ where
 \end_layout
 
 \begin_layout Enumerate
-7->8: Conformational and orientational restraints are incrementally removed.7->8:
- Conformational and orientational restraints are incrementally removed.
+
+\change_inserted -1046193749 1681322859
+\begin_inset Formula $7\rightarrow8$
+\end_inset
+
+
+\change_deleted -1046193749 1681322858
+7->8
+\change_unchanged
+: Conformational and orientational restraints are incrementally removed.
+\change_deleted -1046193749 1681322870
+7->8: Conformational and orientational restraints are incrementally removed.
+\change_unchanged
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -1993,8 +3754,20 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Implementation of Boresch Restraints.
- Set of restraints proposed by Boresch[32] for use in free energy calculations.
+Implementation of Boresch 
+\change_inserted -1046193749 1681322876
+r
+\change_deleted -1046193749 1681322876
+R
+\change_unchanged
+estraints
+\change_deleted -1046193749 1681322895
+.
+ Set of restraints proposed by Boresch[32] for use in
+\change_inserted -1046193749 1681322909
+ for absolute binding
+\change_unchanged
+ free energy calculations.
  The atoms and terms involved in this set of restraints are shown.
  Atoms “a,” “b,” and “c” belong to the ligand (on the top right), while
  atoms “A,” “B,” and “C” belong to the protein (on bottom left)
@@ -2023,16 +3796,32 @@ Molecular Modeling of physical chemistry of binding
 
 \begin_layout Standard
 To estimate the free energy differences accurately, a molecular model is
- required that describes the relevant physical parameters properties of
- a system correctly.
+ required that describes the relevant physical 
+\change_deleted -1046193749 1681323023
+parameters 
+\change_unchanged
+properties of a system correctly.
  Specifically, the Hamiltonian used to calculate the energy and forces should
  ensure that all configurations will be sampled with the correct probability.
- In practice, the choice of the Hamiltonian is often compromise between
- accuracy and efficiency.
+ In practice, the choice of the Hamiltonian is often 
+\change_inserted -1046193749 1681323049
+a 
+\change_unchanged
+compromise between accuracy and efficiency.
  Two major factors that dictate the cost of the energy and force evaluation
  are the degrees of freedom and the functional form of the Hamiltonian.
  A quantum-mechanical description of the system provides the most detailed
- description, as the electrons degree of freedom
+ description, as the electrons
+\change_inserted -1046193749 1681323104
+'
+\change_unchanged
+ degree
+\change_inserted -1046193749 1681323110
+s
+\change_unchanged
+ of freedom
+\change_deleted -1046193749 1681323122
+
 \begin_inset Note Note
 status open
 
@@ -2042,28 +3831,81 @@ TL define
 
 \end_inset
 
- are modeled explicitly and interaction energy is calculated by solving
- electronic structure of the system.
- In molecular mechanics (MM) description, molecules are represented by particles
+
+\change_unchanged
+ are modeled explicitly and 
+\change_inserted -1046193749 1681323084
+the 
+\change_unchanged
+interaction energy is calculated by solving electronic structure of the
+ system.
+ In 
+\change_inserted -1046193749 1681323134
+the 
+\change_unchanged
+molecular mechanics (MM) description, molecules are represented by particles
+\change_inserted -1046193749 1681323143
+,
+\change_unchanged
  which represent atoms or groups of atoms.
- Quantum-mechanical description of the system will in general be computationally
- more demanding than classical molecular models.
+ 
+\change_inserted -1046193749 1681323155
+The q
+\change_deleted -1046193749 1681323155
+Q
+\change_unchanged
+uantum-mechanical description of the system will 
+\change_deleted -1046193749 1681323165
+in 
+\change_unchanged
+general
+\change_inserted -1046193749 1681323167
+ly
+\change_unchanged
+ be 
+\change_deleted -1046193749 1681323172
+computationally
+\change_unchanged
+ more 
+\change_inserted -1046193749 1681323175
+computationally 
+\change_unchanged
+demanding than classical molecular models.
  Here we focus on classical Hamiltonians that incorporate fixed point charges.
- These type of Hamiltonian are referred as to 
+ These type of Hamiltonian
+\change_inserted -1046193749 1681323188
+s
+\change_unchanged
+ are referred as to 
 \begin_inset Quotes eld
 \end_inset
 
 force field
+\change_inserted -1046193749 1681323193
+s
+\change_unchanged
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1046193749 1681323199
+,
+\change_unchanged
  which attempt to represent inter- and intra-molecular interaction through
  general potential energy function.
 \end_layout
 
 \begin_layout Standard
-In this thesis, we use the general AMBER (Assisted Model Building and Energy
- Refinement) force field (GAFF)
+In this thesis, we use the general 
+\change_deleted -1046193749 1681323205
+AMBER
+\change_inserted -1046193749 1681323206
+Amber
+\change_deleted -1046193749 1681323212
+ (Assisted Model Building and Energy Refinement)
+\change_unchanged
+ force field (GAFF)
 \begin_inset CommandInset citation
 LatexCommand citep
 key "wangDevelopmentTestingGeneral2004"
@@ -2071,6 +3913,24 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681323434
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681323435
+TL cite http://dx.doi.org/10.1021/ja00124a002
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
  for our MD simulations.
  The potential energy function that describes the force field of the AMBER
  software package is 
@@ -2136,6 +3996,8 @@ V_{\text{AMBER}}(r^{N})=\underset{i_{\text{bonds}}}{\sum}k_{bi}(l_{i}-l_{i}^{0})
 \end_inset
 
 
+\change_deleted -1046193749 1681323260
+
 \end_layout
 
 \begin_layout Standard
@@ -2160,25 +4022,47 @@ th atom pair,
 \begin_inset Formula $l_{i}$
 \end_inset
 
+
+\change_inserted -1046193749 1681323314
+ 
+\change_unchanged
 represents the current bond length.
  For bond-angle bending, 
 \begin_inset Formula $k_{ai}$
 \end_inset
 
+
+\change_inserted -1046193749 1681323284
+ 
+\change_unchanged
 represents the force constant, 
 \begin_inset Formula $\theta_{i}^{0}$
 \end_inset
 
- being the bond angle at equilibrium and 
+ 
+\change_deleted -1046193749 1681323302
+being
+\change_inserted -1046193749 1681323302
+is
+\change_unchanged
+ the bond angle at equilibrium and 
 \begin_inset Formula $\theta_{i}$
 \end_inset
 
+
+\change_inserted -1046193749 1681323309
+ is 
+\change_unchanged
 the current bond angle between atoms.
  For dihedral-angle bending, 
 \begin_inset Formula $V_{i}^{n}$
 \end_inset
 
-(amplitude) represents the dihedral energy barrier, 
+
+\change_deleted -1046193749 1681323329
+(amplitude)
+\change_unchanged
+ represents the dihedral energy barrier, 
 \begin_inset Formula $\gamma$
 \end_inset
 
@@ -2187,6 +4071,10 @@ the current bond angle between atoms.
 \end_inset
 
 
+\change_inserted -1046193749 1681323342
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "hornakComparisonMultipleAmber2006"
@@ -2194,13 +4082,37 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681323416
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681323429
+TL not sure why you are citing this or why here.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 .
  
 \begin_inset Formula $E_{\text{electrostatics}}$
 \end_inset
 
  consists of electrostatics and van der Waals energies.
- The van der Waals energy is calculated using the Lennard-Jone model 
+ The van der Waals energy is calculated using the Lennard-Jone
+\change_inserted -1046193749 1681323449
+s
+\change_unchanged
+ model 
+\change_deleted -1046193749 1681323459
+
 \begin_inset Note Note
 status open
 
@@ -2210,6 +4122,22 @@ TL cite
 
 \end_inset
 
+
+\change_inserted -1046193749 1681323465
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681323465
+TL cite
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
  with equilibrium distance 
 \begin_inset Formula $r_{ij}^{0}$
 \end_inset
@@ -2224,7 +4152,27 @@ TL cite
 \begin_inset Formula $q$
 \end_inset
 
- is the charge on atom i and j and 
+ is the charge on atom 
+\change_deleted -1046193749 1681323478
+i
+\change_inserted -1046193749 1681323478
+
+\begin_inset Formula $i$
+\end_inset
+
+
+\change_unchanged
+ and 
+\change_deleted -1046193749 1681323481
+j
+\change_inserted -1046193749 1681323481
+
+\begin_inset Formula $j$
+\end_inset
+
+
+\change_unchanged
+ and 
 \begin_inset Formula $r_{ij}$
 \end_inset
 
@@ -2239,6 +4187,10 @@ TL cite
 
  are scaling factors for the Lennard-Jones and electrostatic energy based
  atoms on the bond separations:
+\change_inserted -1046193749 1681323489
+ 
+\change_unchanged
+
 \begin_inset Formula $f_{ij}=0$
 \end_inset
 
@@ -2268,10 +4220,27 @@ for all others.
 
 \begin_layout Chapter
 Methods
+\change_inserted -1046193749 1681256734
+
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Methods"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Section
-Choice of host-guest systems
+
+\change_deleted -1046193749 1681323712
+Choice of h
+\change_inserted -1046193749 1681323712
+H
+\change_unchanged
+ost-guest systems
 \end_layout
 
 \begin_layout Standard
@@ -2288,6 +4257,10 @@ Host-guest (HG) systems have emerge an ideal benchmark for the quantitative
  To test thermodynamic cycle and our software implementation of it, we selected
  host-guest systems from the Statistical Assessment of the Modeling of Proteins
  and Ligands (SAMPL): SAMPL4
+\change_inserted -1046193749 1681323667
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "muddanaSAMPL4HostGuest2014a"
@@ -2296,6 +4269,10 @@ literal "false"
 \end_inset
 
 , SAMPL7
+\change_inserted -1046193749 1681323672
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "amezcuaSAMPL7HostGuest2021"
@@ -2303,7 +4280,15 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681323673
+ 
+\change_unchanged
 and SAMPL9
+\change_inserted -1046193749 1681323676
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "amezcuaSamplchallengesSAMPL9Version2021"
@@ -2312,6 +4297,10 @@ literal "false"
 \end_inset
 
  
+\change_inserted -1046193749 1681323682
+(
+\change_unchanged
+
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Host-guest-systems"
@@ -2321,8 +4310,41 @@ noprefix "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1681323680
+)
+\change_unchanged
 .
- In addition the octa-acid and cyclodextrins were obtained from host-guest
+ 
+\change_deleted -1046193749 1681323777
+In addition t
+\change_inserted -1046193749 1681323819
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+- and 
+\begin_inset Formula $\beta$
+\end_inset
+
+-cyclodextrin hosts and additional guests for
+\change_deleted -1046193749 1681323761
+he
+\change_unchanged
+ octa-acid
+\change_deleted -1046193749 1681323823
+ and
+\change_unchanged
+ 
+\change_deleted -1046193749 1681323777
+cyclodextrins
+\change_unchanged
+ were obtained from 
+\change_deleted -1046193749 1681323937
+host-guest
+\change_inserted -1046193749 1681323945
+the Taproom repository on
+\change_unchanged
  Github 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2336,7 +4358,11 @@ literal "false"
 \begin_inset Formula $.mol2$
 \end_inset
 
- files were downloaded from the GitHub repositories[
+ files were downloaded from the GitHub repositories
+\change_inserted -1046193749 1681323621
+ 
+\change_deleted -1046193749 1681323966
+[
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "slochowerTaproom2022"
@@ -2344,7 +4370,9 @@ literal "false"
 
 \end_inset
 
-].
+]
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
@@ -2368,7 +4396,17 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Host guest system dataset.
+Host
+\change_inserted -1046193749 1681323978
+-
+\change_deleted -1046193749 1681323977
+ 
+\change_unchanged
+guest system
+\change_inserted -1046193749 1681323984
+s
+\change_unchanged
+ dataset.
  CB7 receptor and 14 guest ligands from the SAMPL4 challenge dataset described
  in
 \begin_inset Note Note
@@ -2383,15 +4421,15 @@ literal "false"
 \end_inset
 
 
-\end_layout
+\change_inserted -1046193749 1681323994
+.
 
-\end_inset
-
+\change_unchanged
  WP6 receptor and 13 guest molecules from SAMPL9 dataset
-\begin_inset Note Note
-status open
+\change_inserted -1046193749 1681324002
+ 
+\change_unchanged
 
-\begin_layout Plain Layout
 \begin_inset CommandInset citation
 LatexCommand citep
 key "amezcuaSamplchallengesSAMPL9Version2021"
@@ -2461,6 +4499,8 @@ il, (CB7), pillar[n]arene, octa-acid (OAH) and
 -cyclodextrins.
  These have a diverse binding affinity to variety of small drug-like compounds
  
+\change_deleted -1046193749 1681324047
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "muddanaSAMPL4HostGuest2014a"
@@ -2469,16 +4509,23 @@ literal "false"
 \end_inset
 
 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
-key "amezcuaSAMPL7HostGuest2021"
+key "amezcuaSAMPL7HostGuest2021,muddanaSAMPL4HostGuest2014a"
 literal "false"
 
 \end_inset
 
 .
- From the ligand data available, we tested a total of 86 unique host-ligand
- complexes.
+ From the ligand data available, we tested a total of 8
+\change_deleted -1046193749 1681324055
+6
+\change_inserted -1046193749 1681324055
+3
+\change_unchanged
+ unique host-ligand complexes.
 \end_layout
 
 \begin_layout Standard
@@ -2490,8 +4537,11 @@ Cucurbit[
 \begin_inset Formula $n$
 \end_inset
 
-]s), including CB[5], CB[6], CB[7], CB[8] and CB[10], are a family hosts
- with a molecular structure containing 
+]s), including CB[5], CB[6], CB[7], CB[8] and CB[10], are a family
+\change_inserted -1046193749 1681324067
+ of
+\change_unchanged
+ hosts with a molecular structure containing 
 \begin_inset Formula $n$
 \end_inset
 
@@ -2500,8 +4550,17 @@ Cucurbit[
 \end_inset
 
  methylene bridges, forming a barrel shape macrocycle with a central hydrophobic
- cavity.In addition, they have carbonyls protruding out from the hydrophobic
  cavity.
+
+\change_inserted -1046193749 1681324082
+ 
+\change_unchanged
+In addition, they have carbonyls protruding out from the hydrophobic cavity.
+
+\change_inserted -1046193749 1681324091
+ 
+\change_unchanged
+
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Host-guest-systems"
@@ -2528,8 +4587,11 @@ Pillar[
 \begin_inset Formula $n$
 \end_inset
 
-]arenes are another class of supramolecular having a symmetrical rigid cylindric
-al structures, with CH
+]arenes are another class of supramolecular
+\change_inserted -1046193749 1681324111
+ compounds
+\change_unchanged
+ having a symmetrical rigid cylindrical structures, with CH
 \begin_inset script subscript
 
 \begin_layout Plain Layout
@@ -2539,13 +4601,24 @@ al structures, with CH
 \end_inset
 
  linkers connecting the phenylene groups, each of which phenylene group
- contains two anionic functional group arms.Pillar[
+ contains two anionic functional group arms.
+
+\change_inserted -1046193749 1681324137
+ 
+\change_unchanged
+Pillar[
 \begin_inset Formula $n$
 \end_inset
 
 ]arene have become an emerging class of synthetic macrocycles, having a
  broad applications in molecular recognition and adsorption to synergistic
- catalysis and many other aspects[
+ catalysis and many other aspects
+\change_inserted -1046193749 1681324432
+ 
+\change_deleted -1046193749 1681324432
+[
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "guoAdvancesDiversifiedApplication2020"
@@ -2553,9 +4626,25 @@ literal "false"
 
 \end_inset
 
-].In this study we test against Pillar[6]arene (WP6), which bears six carboxylate
-d moieties on the upper and lower rims that can be, in part, protonated
- at pH = 7.4
+
+\change_deleted -1046193749 1681324436
+]
+\change_unchanged
+.
+
+\change_inserted -1046193749 1681324437
+ 
+\change_unchanged
+In this study we test
+\change_inserted -1046193749 1681324443
+ed
+\change_unchanged
+ against Pillar[6]arene (WP6), which bears six carboxylated moieties on
+ the upper and lower rims that can be, in part, protonated at pH = 7.4
+\change_inserted -1046193749 1681324451
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "dengThermodynamicsPillarareneGuest2022"
@@ -2581,6 +4670,10 @@ noprefix "false"
 Octa-acid (OAH) is a water soluble a deep-cavity cavitand, which possesses
  eight water-solubilizing outer surface carboxylate groups, and a deep 10
  Å hydrophobic pocket suitable for variety of guest molecules
+\change_inserted -1046193749 1681324472
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "gibbBindingCyclicCarboxylates2014"
@@ -2588,9 +4681,18 @@ literal "false"
 
 \end_inset
 
-.OAH is known to bind with hydrophobic or amphiphilic guests in aqueous solution
+.
+
+\change_inserted -1046193749 1681324476
+ 
+\change_unchanged
+OAH is known to bind with hydrophobic or amphiphilic guests in aqueous solution
  perhaps due to the hydrophobic effect of the desovation of guests entering
  the deep hydrophobic binding pocket
+\change_inserted -1046193749 1681324491
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "muddanaSAMPL4HostGuest2014a"
@@ -2599,6 +4701,11 @@ literal "false"
 \end_inset
 
 .
+
+\change_inserted -1046193749 1681324493
+ 
+\change_unchanged
+
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Host-guest-systems"
@@ -2617,11 +4724,21 @@ The last benchmark systems were
 \begin_inset Formula $\alpha$
 \end_inset
 
+
+\change_inserted -1046193749 1681324504
+-
+\change_unchanged
  and 
 \begin_inset Formula $\beta$
 \end_inset
 
- cyclodextrins, which are cyclic oligosaccharides, consisting of six and
+
+\change_inserted -1046193749 1681324501
+-
+\change_deleted -1046193749 1681324501
+ 
+\change_unchanged
+cyclodextrins, which are cyclic oligosaccharides, consisting of six and
  seven glucose monomers respectively.The guest molecules we used with 
 \begin_inset Formula $\alpha$
 \end_inset
@@ -2631,8 +4748,12 @@ The last benchmark systems were
 \end_inset
 
  cyclodextrins contain ammonium or carboxylate groups and carry a net charge
- of 1 or -1 respectively.The two hosts and 41 host-guest complexes shown
- in 
+ of 1 or -1 respectively.
+
+\change_inserted -1046193749 1681324524
+ 
+\change_unchanged
+The two hosts and 41 host-guest complexes shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Host-guest-systems"
@@ -2646,12 +4767,36 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsection
-Complex preparation
+
+\change_deleted -1046193749 1681323729
+Complex
+\change_inserted -1046193749 1681323731
+System
+\change_unchanged
+ preparation
 \end_layout
 
 \begin_layout Standard
 All the ligands were docked into the binding site of an equilibrated host
  system using Autodock Vina docking single mode
+\change_inserted -1046193749 1681324628
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681324637
+TL I don't know what 'single mode' is
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "forliComputationalProteinLigand2016"
@@ -2661,8 +4806,16 @@ literal "false"
 
  to generate several ligand poses.
  In this procedure the host is considered rigid and the ligands were centered
- at the host center of mass.Prior being used in the docking calculations,
- we converted 
+ at the host center of mass.
+
+\change_inserted -1046193749 1681324654
+ 
+\change_unchanged
+Prior
+\change_inserted -1046193749 1681324662
+ to
+\change_unchanged
+ being used in the docking calculations, we converted 
 \begin_inset Formula $mol2$
 \end_inset
 
@@ -2670,7 +4823,17 @@ literal "false"
 \begin_inset Formula $pdbqt$
 \end_inset
 
- file using OpenBabel
+ 
+\change_deleted -1046193749 1681324672
+file
+\change_inserted -1046193749 1681324673
+format
+\change_unchanged
+ using OpenBabel
+\change_inserted -1046193749 1681324680
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "oboyleOpenBabelOpen2011"
@@ -2684,7 +4847,9 @@ literal "false"
 
  option to specify the pH used in the experiments.
  All ligands are fully flexible during the docking calculations.
- The 
+ 
+\change_deleted -1046193749 1681324704
+The 
 \begin_inset Formula $.mol2$
 \end_inset
 
@@ -2706,6 +4871,8 @@ literal "false"
 
  option to specify the pH used in the experiments.
  All ligands were fully flexible during the docking calculations.
+
+\change_unchanged
  Autodock Vina carried out a cluster analysis based on all-atom root mean
  square deviation ranking the dock conformations in order of increasing
  binding free energies.
@@ -2715,7 +4882,13 @@ literal "false"
 
 \begin_layout Standard
 The simulations of all host-guest systems were setup by LEaP program in
- AmberTools software suite[
+ AmberTools software suite
+\change_inserted -1046193749 1681324735
+ 
+\change_deleted -1046193749 1681324735
+[
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "AmberTools22"
@@ -2723,7 +4896,11 @@ literal "false"
 
 \end_inset
 
-].
+
+\change_deleted -1046193749 1681324737
+]
+\change_unchanged
+.
  The partial atomic charges were applied using the AM1-BCC model 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2787,7 +4964,11 @@ noprefix "false"
 
 \end_inset
 
- for implementation details)using AMBER 21 
+ for implementation details)
+\change_inserted -1046193749 1681324767
+ 
+\change_unchanged
+using AMBER 21 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AmberTools22"
@@ -2817,9 +4998,9 @@ TL I rephrased for what I think you meant.
 
  All systems used hydrogen mass repartitioning, in which mass of hydrogen
  atoms are increased by a factory of 4 and the mass of the bonded heavy
- atoms is decreased by an equivalent amount.
- This has be shown to slow the highest frequency of hydrogen covalent bonds
- and and allow a time-step size of 4 fs
+ atoms is decreased by an equivalent amount
+\change_inserted -1046193749 1681324824
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "hopkinsLongTimeStepMolecularDynamics2015"
@@ -2827,7 +5008,27 @@ literal "false"
 
 \end_inset
 
+
+\change_unchanged
+.
+ This has be shown to slow the highest frequency of hydrogen covalent bonds
+ and and allow a time-step size of 4 fs
+\change_deleted -1046193749 1681324833
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "hopkinsLongTimeStepMolecularDynamics2015"
+literal "false"
+
+\end_inset
+
+
+\change_inserted -1046193749 1681324833
+.
+\change_deleted -1046193749 1681324833
 ,
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -2849,7 +5050,17 @@ name "subsec:End-state-Simulations"
 \end_layout
 
 \begin_layout Standard
-End-states simulations for 
+
+\change_deleted -1046193749 1681324847
+End-states s
+\change_inserted -1046193749 1681324847
+S
+\change_unchanged
+imulations for 
+\change_inserted -1046193749 1681324850
+states 
+\change_unchanged
+
 \begin_inset Formula $1$
 \end_inset
 
@@ -2880,8 +5091,15 @@ TL have you defined the '
 
 \end_inset
 
-The target temperature of 298K and ionic concentration was set to 0.3 M for
- all host guest systems.
+
+\change_inserted -1046193749 1681324946
+ 
+\change_unchanged
+The target temperature of 298
+\change_inserted -1046193749 1681324932
+ 
+\change_unchanged
+K and ionic concentration was set to 0.3 M for all host guest systems.
  We prepared the initial structures of states 
 \begin_inset Formula $1$
 \end_inset
@@ -2891,6 +5109,8 @@ The target temperature of 298K and ionic concentration was set to 0.3 M for
 \end_inset
 
  for REMD simulation with 5000 steps of energy minimization 
+\change_deleted -1046193749 1681324969
+
 \begin_inset Note Note
 status open
 
@@ -2900,6 +5120,22 @@ TL what method?
 
 \end_inset
 
+
+\change_inserted -1046193749 1681324969
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681324969
+TL what method?
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
  using 
 \begin_inset Flex Code
 status open
@@ -2921,6 +5157,10 @@ sander.MPI
 \end_inset
 
  module of AMBER 21
+\change_inserted -1046193749 1681324977
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AmberTools22"
@@ -2930,6 +5170,8 @@ literal "false"
 
 .
  
+\change_deleted -1046193749 1681324980
+
 \begin_inset Note Note
 status open
 
@@ -2939,6 +5181,8 @@ TL cite
 
 \end_inset
 
+
+\change_unchanged
 From these starting structures, we ran REMD using 
 \begin_inset Flex Code
 status open
@@ -2999,7 +5243,12 @@ nstlim=1
 
 \end_inset
 
-).For all host-guest bound end-state simulations, a center-of-mass flat bottom
+).
+
+\change_inserted -1046193749 1681324992
+ 
+\change_unchanged
+For all host-guest bound end-state simulations, a center-of-mass flat bottom
  restraint potential was used.
  
 \begin_inset Note Note
@@ -3022,12 +5271,61 @@ nstlim=1.
 
 \end_inset
 
- [cite].
+ [cite]
+\change_deleted -1046193749 1681325009
+.
+
+\change_unchanged
  Number of frames saved or the save frequency
+\change_inserted -1046193749 1681325031
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681325038
+TL incomplete
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
 Intermediate Simulations
+\change_inserted -1046193749 1681325101
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1681325105
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681325127
+TL What are the 
+\begin_inset Formula $\lambda$
+\end_inset
+
+s everywhere? You need to define or delete them.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -3052,11 +5350,21 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
+
+\change_deleted -1046193749 1681325064
 TL maybe cite Barton's thesis here
+\change_inserted -1046193749 1681325079
+TL This citation doesn't look correct
+\change_unchanged
+
 \end_layout
 
 \end_inset
 
+
+\change_inserted -1046193749 1681325088
+ 
+\change_unchanged
 
 \begin_inset Flex Code
 status open
@@ -3113,9 +5421,29 @@ gbsa
 \end_inset
 
  was set to 0 and 
+\change_deleted -1046193749 1681325150
+
 \begin_inset Formula $igb=6$
 \end_inset
 
+
+\change_inserted -1046193749 1681325155
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681325157
+igb=6
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 .
  In state 4 the ligand charges were set to 0 by the 
 \begin_inset Flex Code
@@ -3139,14 +5467,54 @@ parmed.tools.action.charge
 
 .
  State 5 is not sampled.
- The difference of free energy going from state 4 to 5 is computed analytically
- as described in 2.3
+ The difference 
+\change_deleted -1046193749 1681325177
+of
+\change_inserted -1046193749 1681325177
+in
+\change_unchanged
+ free energy going from state 4 to 5 is computed analytically
+\change_inserted -1046193749 1681325182
+,
+\change_unchanged
+ as described in 
+\change_inserted -1046193749 1681325221
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Our-Thermodynamic-Pathway"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+,
+\change_deleted -1046193749 1681325188
+2.3
+\change_unchanged
+
 \series bold
  
 \series default
-and the difference of free energy from state 5 to 6 is 0.
- State 6 is sampled with ligand charges set to 0 and Lennard Jones interactions
- between the ligand and host system removed via the 
+and the difference 
+\change_deleted -1046193749 1681325226
+of
+\change_inserted -1046193749 1681325227
+in
+\change_unchanged
+ free energy from state 5 to 6 is 0.
+ State 6 is sampled with ligand charges set to 0 and Lennard
+\change_inserted -1046193749 1681325241
+-
+\change_deleted -1046193749 1681325239
+ 
+\change_unchanged
+Jones interactions between the ligand and host system 
+\change_inserted -1046193749 1681325249
+were 
+\change_unchanged
+removed via the 
 \begin_inset Flex Code
 status open
 
@@ -3169,13 +5537,66 @@ parmed.tools.action.charge
 .
  State 7 consisted of several intermediate states, in which the Lennard-Jones
  potential between the ligand and host was reintroduced in a single step,
- followed by increaseing the GB dielectric constant in steps of 5%, 10%,
- 20%, 50% and 100%(78.5 
+ followed by 
+\change_deleted -1046193749 1681325260
+increaseing
+\change_inserted -1046193749 1681325260
+increasing
+\change_unchanged
+ the GB dielectric constant in steps of 5%, 10%, 20%, 50% and 100%
+\change_inserted -1046193749 1681325322
+ 
+\change_unchanged
+(78.5
+\change_deleted -1046193749 1681325333
+ 
 \begin_inset Formula $\epsilon$
 \end_inset
 
-).
- Following turning on the ligand charges at 50% and then 100% (fully charge).
+
+\change_unchanged
+)
+\change_inserted -1046193749 1681325337
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681325350
+TL replace the percentages with values
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
+ 
+\change_inserted -1046193749 1681325297
+This was f
+\change_deleted -1046193749 1681325297
+F
+\change_unchanged
+ollow
+\change_inserted -1046193749 1681325302
+ed
+\change_deleted -1046193749 1681325301
+ing
+\change_unchanged
+ 
+\change_inserted -1046193749 1681325304
+by 
+\change_unchanged
+turning on the ligand charges 
+\change_inserted -1046193749 1681325311
+to
+\change_deleted -1046193749 1681325310
+at
+\change_unchanged
+ 50% and then 100% (fully charge).
  Between states 7 and 8, we slowly removed the restraint force through a
  series of intermediate states.
 \end_layout
@@ -3188,8 +5609,22 @@ Selection and Implementation of Restraint Forces
 Between states 1 and 2, conformational restraints were were increased over
  a series of intermediate states and then orientational and conformational
  restraints were removed between states 7 and 8 in the same fashion.
- Through benchmark testing, the lowest energy conformational restraint force
- constant was determine to be 
+ 
+\change_inserted -1046193749 1681325497
+For the benchmark testing, a series of 29 lambda-windows were generated
+ with rotational and orientational force spaced evenly on 
+\begin_inset Formula $\log_{2}$
+\end_inset
+
+-scale.
+ 
+\change_deleted -1046193749 1681325487
+Through benchmark testing, t
+\change_inserted -1046193749 1681325488
+T
+\change_unchanged
+he lowest energy conformational restraint force constant was determine to
+ be 
 \begin_inset Formula $2^{-8}$
 \end_inset
 
@@ -3225,7 +5660,16 @@ TL fix
 
 \end_inset
 
-.From previous results
+.
+
+\change_inserted -1046193749 1681325390
+ 
+\change_unchanged
+From previous results
+\change_inserted -1046193749 1681325394
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "bartonThesisSubmittedPartial"
@@ -3238,7 +5682,13 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
+
+\change_deleted -1046193749 1681325361
 TL cite barton's thesis
+\change_inserted -1046193749 1681325367
+TL again, incorrect citation
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -3279,14 +5729,28 @@ TL fix
 
 \end_inset
 
- gave reduced an accumulated error for highly charge guest molecules.
- In both cases, a series of 29 lambda windows were generated with rotational
+ gave 
+\change_deleted -1046193749 1681325425
+reduced an accumulated
+\change_inserted -1046193749 1681325429
+acceptable
+\change_unchanged
+ error
+\change_inserted -1046193749 1681325431
+s
+\change_unchanged
+ for highly charge guest molecules.
+ 
+\change_deleted -1046193749 1681325505
+In both cases, a series of 29 lambda windows were generated with rotational
  and orientational force spaced evenly on 
 \begin_inset Formula $\log_{2}$
 \end_inset
 
 -scale.
- Host and guest molecule conformations were restrained by applying a harmonic
+ 
+\change_unchanged
+Host and guest molecule conformations were restrained by applying a harmonic
  distance restraint between every atom and each neighbor within 6 Å.
  The conformational restraints were prepared using an in-house code.
  To maintain the guest molecule in the correct binding mode, 
@@ -3299,8 +5763,27 @@ ISDDM.py
 
 \end_inset
 
- constructed orientational restraints suggested by Boresch[cite], which
- requires an distance restraint 
+ constructed orientational restraints suggested by Boresch
+\change_deleted -1046193749 1681325538
+[cite]
+\change_inserted -1046193749 1681325539
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681325539
+[cite]
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+, which requires an distance restraint 
 \begin_inset Formula $r_{aA}$
 \end_inset
 
@@ -3374,15 +5857,36 @@ noprefix "false"
 \begin_inset Formula $a$
 \end_inset
 
- is the closest heavy-atom to the ligand center of mass (COM), where receptor
- atom 
+ is the closest heavy-atom to the ligand center of mass (COM), where 
+\change_deleted -1046193749 1681326096
+receptor atom 
+\change_unchanged
+
 \begin_inset Formula $A$
 \end_inset
 
- is the shortest distance to that heavy atom to 
+ is the
+\change_inserted -1046193749 1681326114
+ receptor heavy-atom that is
+\change_unchanged
+ 
+\change_inserted -1046193749 1681326120
+the 
+\change_unchanged
+shortest distance 
+\change_inserted -1046193749 1681326127
+from 
+\begin_inset Formula $a$
+\end_inset
+
+
+\change_deleted -1046193749 1681326125
+to that heavy atom to 
 \begin_inset Formula $A$
 \end_inset
 
+
+\change_unchanged
 .
  Then the script looks for the best suited heavy atoms, 
 \begin_inset Formula $b$
@@ -3408,10 +5912,22 @@ noprefix "false"
 \begin_inset Formula $ϕ_{AB}$
 \end_inset
 
-, and 
-\begin_inset Formula $ϕ_{aA}ϕ_{ba}$
+, 
+\change_deleted -1046193749 1681326146
+and 
+\change_unchanged
+
+\begin_inset Formula $ϕ_{aA}$
 \end_inset
 
+
+\change_inserted -1046193749 1681326157
+, and 
+\begin_inset Formula $ϕ_{ba}$
+\end_inset
+
+
+\change_unchanged
  between 80 and 100 degrees.
  It is important that the angle is close to 90 degrees in order to maintain
  a well define bound state.
@@ -3422,7 +5938,13 @@ Free Energy Analysis Using MBAR
 \end_layout
 
 \begin_layout Standard
-The Python package pymbar version 3.1 
+The Python package 
+\change_deleted -1046193749 1681326241
+pymbar
+\change_inserted -1046193749 1681326242
+PyMBAR
+\change_unchanged
+ version 3.1 
 \begin_inset Note Note
 status collapsed
 
@@ -3454,9 +5976,19 @@ TL what do you mean by 'thermodynamic parameters'?
 
  of each coordinate trajectory to be calculate with the potential function
  of all other states of the same molecule.
- .
- For example, potential energies for the coordinate trajectory from state
- 2 need to be caclulated for all other states between 1 and 4.
+ 
+\change_deleted -1046193749 1681326185
+.
+ 
+\change_unchanged
+For example, potential energies for the coordinate trajectory from state
+ 2 need to be 
+\change_deleted -1046193749 1681326191
+caclulated
+\change_inserted -1046193749 1681326191
+calculated
+\change_unchanged
+ for all other states between 1 and 4.
  These potential energies were calculated using 
 \begin_inset Flex Code
 status open
@@ -3477,7 +6009,12 @@ imin=5
 
 \end_inset
 
-.The MBAR estimate also returns its own uncertainty error estimate.
+.
+
+\change_inserted -1046193749 1681326195
+ 
+\change_unchanged
+The MBAR estimate also returns its own uncertainty error estimate.
 \end_layout
 
 \begin_layout Subsection
@@ -3485,11 +6022,18 @@ Time Series Analysis
 \end_layout
 
 \begin_layout Standard
-The number of independent samples is in an MD trajectory is limited by time
- correlations between frames and the time required to relax to the equilibrium
- average.
+The number of independent samples
+\change_deleted -1046193749 1681326217
+ is
+\change_unchanged
+ in an MD trajectory is limited by time correlations between frames and
+ the time required to relax to the equilibrium average.
  If this is not accounted for, the final analysis will underestimate the
  error
+\change_inserted -1046193749 1681326229
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "klimovichGuidelinesAnalysisFree2015"
@@ -3517,7 +6061,11 @@ literal "false"
 
 \end_inset
 
- .
+
+\change_deleted -1046193749 1681326254
+ 
+\change_unchanged
+.
  These independent samples were then run through the 
 \begin_inset Flex Code
 status open
@@ -3559,6 +6107,10 @@ Overlap Matrix Exploring the Degree of Space Phase Overlap
 \begin_layout Standard
 When using any perturbation approach, such as FEP or MBAR, a poor phase-space
  overlap between states can result in an inaccurate free energy estimate
+\change_inserted -1046193749 1681326283
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "klimovichGuidelinesAnalysisFree2015"
@@ -3566,8 +6118,16 @@ literal "false"
 
 \end_inset
 
-.To assess the convergence our implementation of our thermodynamic cycle
- in 
+.
+
+\change_inserted -1046193749 1681326313
+ 
+\change_unchanged
+To assess the convergence 
+\change_inserted -1046193749 1681326324
+of 
+\change_unchanged
+our implementation of our thermodynamic cycle in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:thermodynamic-cycle"
@@ -3577,7 +6137,19 @@ noprefix "false"
 
 \end_inset
 
-, we created an overlap matrix
+, we created
+\change_deleted -1046193749 1681326367
+ an
+\change_unchanged
+ overlap matri
+\change_inserted -1046193749 1681326370
+ces
+\change_deleted -1046193749 1681326369
+x
+\change_inserted -1046193749 1681326331
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "klimovichGuidelinesAnalysisFree2015"
@@ -3585,16 +6157,60 @@ literal "false"
 
 \end_inset
 
- .The matrix shows the probability of a sample state 
+
+\change_inserted -1046193749 1681326392
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Overlap-matrix_15_windows"
+plural "true"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:overlap_matrix_29_windows"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ 
+\change_deleted -1046193749 1681326335
+ .
+\change_unchanged
+The matrix shows the probability of a sample state 
 \begin_inset Formula $i$
 \end_inset
 
- being evaluated in state 
+ being 
+\change_deleted -1046193749 1681326441
+evaluated in
+\change_inserted -1046193749 1681326441
+from
+\change_unchanged
+ state 
 \begin_inset Formula $j$
 \end_inset
 
-, providing a degree of overlap between both states.To obtain reliable free
- energy estimates, the overlap matrix should at least be tridiagonal.
+, 
+\change_deleted -1046193749 1681326453
+providing a
+\change_inserted -1046193749 1681326457
+indicating the
+\change_unchanged
+ degree of overlap between both states.
+
+\change_inserted -1046193749 1681326417
+ 
+\change_unchanged
+To obtain reliable free energy estimates, the overlap matrix should at least
+ be tridiagonal.
  I.e., all 
 \begin_inset Formula $\left(i,i+1\right)$
 \end_inset
@@ -3604,6 +6220,10 @@ literal "false"
 \end_inset
 
  elements should be greater than 0.03
+\change_inserted -1046193749 1681326488
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "klimovichGuidelinesAnalysisFree2015"
@@ -3612,12 +6232,53 @@ literal "false"
 \end_inset
 
 .
- For example column 
+ 
+\change_inserted -1046193749 1681326726
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1681326735
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681326735
+TL description of what the values mean should be in the figure caption.
+ I don't think you need to restate the numerical values of each state.
+ That is already done.
+ Better yet, annotate the figures
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+For example column 
 \begin_inset Formula $\lambda_{0}$
 \end_inset
 
- denotes state 6 where the Lennard-jones and Van der Walls interaction of
- the ligand were turned off are removed shown in 
+ denotes state 6 where the Lennard-
+\change_inserted -1046193749 1681326495
+J
+\change_deleted -1046193749 1681326494
+j
+\change_unchanged
+ones and 
+\change_inserted -1046193749 1681326498
+v
+\change_deleted -1046193749 1681326498
+V
+\change_unchanged
+an der Wa
+\change_inserted -1046193749 1681326501
+a
+\change_deleted -1046193749 1681326501
+l
+\change_unchanged
+ls interaction of the ligand were turned off are removed shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Overlap-matrix_15_windows"
@@ -3638,10 +6299,14 @@ noprefix "false"
 \end_inset
 
  is the scaling process the GB external dielectric constant by 5%, 10%,
- 20% 50% and finally 100% (78.5 
+ 20% 50% and finally 100% (78.5
+\change_deleted -1046193749 1681326523
+ 
 \begin_inset Formula $\epsilon$
 \end_inset
 
+
+\change_unchanged
 ).
  
 \begin_inset Formula $\lambda_{6-8}$
@@ -3672,7 +6337,16 @@ noprefix "false"
 \end_inset
 
  is the endstate simulation of the complex.
+\change_inserted -1046193749 1681326720
+
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1046193749 1681326720
  
+\change_unchanged
+
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Overlap-matrix_15_windows"
@@ -3721,7 +6395,12 @@ a shows a representative overlap matrix for states 6-8.
 \begin_inset Formula $\lambda_{0}$
 \end_inset
 
-.Overlap for 
+.
+
+\change_inserted -1046193749 1681326755
+ 
+\change_unchanged
+Overlap for 
 \begin_inset Formula $\lambda_{2}-\lambda_{9}$
 \end_inset
 
@@ -3757,7 +6436,11 @@ noprefix "false"
 \begin_inset Formula $\lambda_{10}$
 \end_inset
 
- show no overlap,and states 
+ show no overlap,
+\change_inserted -1046193749 1681326765
+ 
+\change_unchanged
+and states 
 \begin_inset Formula $\lambda_{9}-\lambda_{15}$
 \end_inset
 
@@ -3777,7 +6460,11 @@ noprefix "false"
 
 \end_inset
 
-,, which shows good phase space overlap.
+,
+\change_deleted -1046193749 1681326774
+,
+\change_unchanged
+ which shows good phase space overlap.
 \end_layout
 
 \begin_layout Standard
@@ -3938,13 +6625,53 @@ literal "false"
 \end_inset
 
 .
- Measuring the slope and Pearson correlation coefficient,
+ 
+\change_inserted -1046193749 1681326869
+Standard metrics included
+\change_deleted -1046193749 1681326870
+Measuring 
+\change_unchanged
+the slope and Pearson correlation coefficient,
+\change_inserted -1046193749 1681326822
+ 
+\change_unchanged
+
 \begin_inset Formula $R^{2}$
 \end_inset
 
-, where a value of 1 for either of these represents perfect correlation.
- We also compute the root mean squared error(RMSE), mean absolute error
- (MAE) and mean sign error (MSE).The RMSE
+
+\change_deleted -1046193749 1681326878
+, where a value of 1 for either of these represents perfect correlation
+\change_unchanged
+.
+ We also compute the root mean squared error
+\change_inserted -1046193749 1681326883
+ 
+\change_unchanged
+(RMSE), mean absolute error (MAE) and mean sign error (MSE)
+\change_inserted -1046193749 1681326891
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681326898
+TL provide equations for these
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
+
+\change_inserted -1046193749 1681326853
+ 
+\change_unchanged
+The RMSE
 \begin_inset Formula $_{o}$
 \end_inset
 
@@ -3975,6 +6702,11 @@ where
 \end_inset
 
  are.
+
+\change_inserted -1046193749 1681326907
+ 
+\change_deleted -1046193749 1681326905
+
 \end_layout
 
 \begin_layout Standard
@@ -3996,6 +6728,17 @@ RMSE_{r}=\sqrt{\frac{2}{n\left(n-1\right)}\stackrel[i]{n}{\sum}\stackrel[j=i+1]{
 
 \begin_layout Chapter
 Results
+\change_inserted -1046193749 1681256745
+
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Results"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -4033,7 +6776,9 @@ ISDDM.py
 
 , including how it prepares all the necessary input files, manages simulations,
  and and processes the data.
- In appendix 
+ 
+\change_deleted -1046193749 1681408418
+In appendix 
 \begin_inset CommandInset label
 LatexCommand label
 name "chap:Configuration-user-input-1"
@@ -4051,8 +6796,36 @@ ISDDM.py
 \end_inset
 
  workflow by supplying a YAML-format user input files, which consists of
- only 36 lines.We report on the accuracy and access the convergence of each
- step as shown in 
+ only 36 lines.
+
+\change_inserted -1046193749 1681408475
+ In 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Calculations-of-binding"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, w
+\change_deleted -1046193749 1681408474
+W
+\change_unchanged
+e report on the accuracy 
+\change_inserted -1046193749 1681408498
+of the method compared to experiment 
+\change_unchanged
+and 
+\change_deleted -1046193749 1681408512
+access
+\change_inserted -1046193749 1681408513
+assess
+\change_unchanged
+ the convergence of each step 
+\change_deleted -1046193749 1681408524
+as shown in 
 \series bold
 
 \begin_inset CommandInset ref
@@ -4065,10 +6838,32 @@ noprefix "false"
 \end_inset
 
 .
+\change_inserted -1046193749 1681408527
+
+\series default
+of the cycle.
+
+\change_unchanged
+
+\series bold
  
 \series default
-Finally we look at the overall scaling performance for the time required
- for the cycle to finish.
+Finally
+\change_inserted -1046193749 1681408553
+, in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Performance-Scaling"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+,
+\change_unchanged
+ we look at the overall scaling performance for the time required for the
+ cycle to finish.
 \end_layout
 
 \begin_layout Section
@@ -4115,23 +6910,48 @@ noprefix "false"
 \end_inset
 
 .
- In the input file, users provide parameters for the method, including the
- location of a force field parameter file and initial coordinates for the
- complex.
- When the program is executed, the first stage is REMD GB simulations of
- states 1 and 8.
+ In the input file
+\change_inserted -1046193749 1681408608
+ (see 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "chap:Configuration-user-input"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for details)
+\change_unchanged
+, users provide parameters for the method, including the location of a force
+ field parameter file and initial coordinates for the complex.
+ When the program is executed, 
+\change_deleted -1046193749 1681408639
+the first stage is
+\change_inserted -1046193749 1681408650
+it first carries out
+\change_unchanged
+ REMD GB simulations of states 1 and 8.
  From the final frame of the complex in state 8, conformational and orientationa
 l restraints are generated.
  The same frame is used to generate the initial coordinates for states 2-7.
  For states 2-4, the receptor and ligand are spilt from the complex end-state
  structure.
  All the intermediate MD states are run simultaneously and executed in parallel
- using the maximum number of processors specified in the input file..
- As MD simulations complete, their trajectories are pushed into post-analysis
- queue to gather all the necessary state comparison and energies.
- The post-processed data is then parsed into a Pandas DataFrame , which
- is then submitted to MBAR where the final change in BFE is calculated for
- each system
+ using the maximum number of processors specified in the input file.
+\change_deleted -1046193749 1681408746
+.
+
+\change_unchanged
+ As MD simulations complete, their trajectories are pushed into 
+\change_inserted -1046193749 1681408793
+the 
+\change_unchanged
+post-analysis queue to gather all the necessary state comparison and energies.
+ The post-processed data is then parsed into a Pandas DataFrame
+\change_inserted -1046193749 1681408817
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PandasDocumentationPandas"
@@ -4139,8 +6959,27 @@ literal "false"
 
 \end_inset
 
+
+\change_deleted -1046193749 1681408803
+ 
+\change_unchanged
+, which is then submitted to MBAR where the final change in BFE is calculated
+ for each system
+\change_deleted -1046193749 1681408809
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PandasDocumentationPandas"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
 .
  
+\change_deleted -1046193749 1681408826
+
 \begin_inset Note Note
 status open
 
@@ -4150,7 +6989,13 @@ TL cite pandas
 
 \end_inset
 
+
+\change_unchanged
 All steps within in the workflow are handled using the Toil package
+\change_inserted -1046193749 1681408833
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "vivianToilEnablesReproducible2017"
@@ -4218,13 +7063,30 @@ name "sec:Calculations-of-binding"
 \end_layout
 
 \begin_layout Subsection
-Calculations of binding free energies of cucurbit[7]uril (CB7)
+
+\change_deleted -1046193749 1681410073
+Calculations of binding free energies of c
+\change_inserted -1046193749 1681410073
+C
+\change_unchanged
+ucurbit[7]uril (CB7)
 \end_layout
 
 \begin_layout Standard
-We calculated the binding free energies of 14 cationic guest to neutral
- charge CB7 .
+We calculated the binding free energies of 14 cationic guest to 
+\change_deleted -1046193749 1681408885
+neutral charge 
+\change_unchanged
+CB7
+\change_inserted -1046193749 1681409650
+, which had a neutral net charge
+\change_deleted -1046193749 1681408865
  
+\change_unchanged
+.
+ 
+\change_deleted -1046193749 1681408909
+
 \begin_inset Note Note
 status open
 
@@ -4235,19 +7097,67 @@ TL net charge
 \end_inset
 
 
+\change_unchanged
+
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "fig:Host-guest-systems"
+reference "fig:ABFE-host-guest-systems"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-b shows the correlation scatter plot of CB7 systems versus experimental
- measurements with fitted linear regression.
- Each ligand are colored by there respective net charge which range from
- +1 to +2 
+b shows the correlation scatter plot of CB7 
+\change_deleted -1046193749 1681408943
+systems
+\change_inserted -1046193749 1681408952
+host-guest binding free energies
+\change_unchanged
+ versus experimental measurements
+\change_deleted -1046193749 1681408982
+ with fitted linear regression
+\change_unchanged
+.
+ 
+\change_deleted -1046193749 1681409000
+Each l
+\change_inserted -1046193749 1681409000
+L
+\change_unchanged
+igand are colored by 
+\change_deleted -1046193749 1681409016
+there respective
+\change_unchanged
+ net charge
+\change_inserted -1046193749 1681409019
+,
+\change_unchanged
+ which range
+\change_inserted -1046193749 1681409020
+s
+\change_unchanged
+ from 
+\change_deleted -1046193749 1681409464
++1
+\change_inserted -1046193749 1681409464
+
+\begin_inset Formula $+1e$
+\end_inset
+
+
+\change_unchanged
+ to 
+\change_deleted -1046193749 1681409470
++2
+\change_inserted -1046193749 1681409470
+
+\begin_inset Formula $+2e$
+\end_inset
+
+
+\change_deleted -1046193749 1681409470
+ 
 \begin_inset Note Note
 status open
 
@@ -4257,14 +7167,62 @@ TL add that the host is neutral
 
 \end_inset
 
+
+\change_unchanged
 .
- The calculated statistics that computed free energies with this automated
- workflow model had a significant absolute error (RMSE=6.9 kcal/mol) but
- a good correlation (
+ The 
+\change_deleted -1046193749 1681409068
+calculated statistics that 
+\change_unchanged
+computed free energies 
+\change_deleted -1046193749 1681409073
+with
+\change_inserted -1046193749 1681409073
+from
+\change_unchanged
+ th
+\change_inserted -1046193749 1681409076
+e
+\change_deleted -1046193749 1681409076
+is
+\change_unchanged
+ automated workflow model had a significant absolute error (
+\change_deleted -1046193749 1681409085
+RMSE=6.9 kcal/mol
+\change_inserted -1046193749 1681409085
+
+\begin_inset Formula $\text{RMSE}=\unit[6.9]{kcal/mol}$
+\end_inset
+
+
+\change_unchanged
+) but a good correlation (
 \begin_inset Formula $R^{2}=0.8$
 \end_inset
 
-) suggesting well prediction throughout (
+)
+\change_inserted -1046193749 1681409170
+,
+\change_unchanged
+ suggesting well prediction throughout
+\change_inserted -1046193749 1681409201
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681409210
+TL I'm not sure what is being suggested
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ (
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "table:host-guest-metrics"
@@ -4275,71 +7233,93 @@ noprefix "false"
 \end_inset
 
 ).
- Other metrics of a slope 1.4, MAE 6.7 and MSE of -6.7 kcal/mol.
- All the calculations of absolute binding are being underestimated for all
- the cationic ligands, which may suggest favorable polar interaction with
- ammonium and carbonyl rich ports of CB7.
-\end_layout
-
-\begin_layout Subsection
-Calculations of binding free energies of Pillar[6]ene (WP6)
-\end_layout
-
-\begin_layout Standard
-The 13 guest ligands were tested against WP6 bearing a negatively charge
- of -12 as shown in 
-\begin_inset CommandInset ref
-LatexCommand nameref
-reference "fig:Host-guest-systems"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-c.
+ Other metrics
+\change_inserted -1046193749 1681409268
+,
+\change_deleted -1046193749 1681409266
+ of a
+\change_unchanged
  
-\begin_inset Note Note
-status open
+\change_deleted -1046193749 1681409274
+slope 1.4
+\change_inserted -1046193749 1681409274
 
-\begin_layout Plain Layout
-TL net charge
-\end_layout
-
+\begin_inset Formula $\text{slope}=1.4$
 \end_inset
 
- The coloring of each guest is the same as CB7 where 12 guests are bearing
- a +1 to +2 charge ammoniums and one neutral guest denoted as G8 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Host-guest-systems"
-plural "false"
-caps "false"
-noprefix "false"
 
+\change_unchanged
+, 
+\change_deleted -1046193749 1681409288
+MAE 6.7
+\change_inserted -1046193749 1681409288
+
+\begin_inset Formula $\text{MAE}=\unit[6.7]{kcal/mol}$
 \end_inset
 
-c.
- We see the absolute binding for all positively charge guest are being underesti
-mated similar what we saw with CB7.However, the binding free energy of G8,
- the only neutral ligand in the entire dataset, is overestimated in contrast
- to the rest of the ligands.Calculated statistics that computed free energies
- had a deviation (RMSE=6.64 kcal/mol) and a decent correlation (
-\begin_inset Formula $R^{2}=0.52$
+
+\change_unchanged
+ and 
+\change_deleted -1046193749 1681409337
+MSE of -6.7 kcal/mol
+\change_inserted -1046193749 1681409406
+
+\begin_inset Formula $\text{MSE}=\unit[-6.7]{kcal/mol}$
 \end_inset
 
-).
- The calculated slope for WP6 was 1.6, with an MAE 6.1 and MSE of -6.0 kcal/mol.
+, agree that while the correlation was reasonable,
+\change_deleted -1046193749 1681409384
+.
+ All the calculations of
+\change_unchanged
+ 
+\change_inserted -1046193749 1681409409
+the 
+\change_unchanged
+absolute binding 
+\change_inserted -1046193749 1681409418
+free energies 
+\change_deleted -1046193749 1681409242
+are being
+\change_inserted -1046193749 1681409242
+were
+\change_unchanged
+ underestimated for all the cationic ligands, which may suggest favorable
+ polar interaction with ammonium and carbonyl rich ports of CB7.
 \end_layout
 
 \begin_layout Subsection
-Calculations of binding free energies of Octa-acid (OAH)
+
+\change_deleted -1046193749 1681410076
+Calculations of binding free energies of 
+\change_unchanged
+Pillar[6]ene (WP6)
 \end_layout
 
 \begin_layout Standard
-The host system OAH has a deep 10 Å hydrophobic pocket and eight water-solubiliz
-ing carboxylate groups at the outer surface bearing a negative net charge
- of -8 
+The 13 guest ligands were tested against WP6
+\change_inserted -1046193749 1681409643
+, which had 
+\change_deleted -1046193749 1681409439
+ bearing a
+\change_unchanged
+ 
+\change_inserted -1046193749 1681409447
+a net 
+\change_unchanged
+negative
+\change_deleted -1046193749 1681409450
+ly
+\change_unchanged
+ charge of 
+\emph on
+-12
+\change_inserted -1046193749 1681409458
+e
+\change_unchanged
+
+\emph default
+ as shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Host-guest-systems"
@@ -4349,8 +7329,10 @@ noprefix "false"
 
 \end_inset
 
-d.
+c.
  
+\change_deleted -1046193749 1681409480
+
 \begin_inset Note Note
 status open
 
@@ -4360,20 +7342,298 @@ TL net charge
 
 \end_inset
 
- ABFEs of 20 guests were calculated OAH, where 18 guest had a charge of
- -1 and only two (tzh,hxa) had a +1 charge.
- The calculated statistics of computed free energies had a deviation (RMSE=2.9
- kcal/mol) and poor correlation (
-\begin_inset Formula $R^{2}=0.07$
+
+\change_unchanged
+ 
+\change_inserted -1046193749 1681409566
+Of the 
+\change_deleted -1046193749 1681409569
+The coloring of each guest is the same as CB7 where
+\change_unchanged
+ 12 guests
+\change_inserted -1046193749 1681409575
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1681409524
+are bearing a 
+\change_inserted -1046193749 1681409639
+ 11 had net charges of 
+\change_deleted -1046193749 1681409532
++1
+\change_inserted -1046193749 1681409532
+
+\begin_inset Formula $+1e$
 \end_inset
 
-).The slope of OAH was 0.8 with an MAE and MSE of 2.2 and 0.6 kcal/mol respectively.
- The two cationic ligands (trz,hxa) in the dataset are underestimated, resulting
- in the poor correlation indicating our GB model.
+
+\change_unchanged
+ to 
+\change_deleted -1046193749 1681409537
++2
+\change_inserted -1046193749 1681409554
+
+\begin_inset Formula $+2e$
+\end_inset
+
+, due to 
+\change_deleted -1046193749 1681409555
+ charge
+\change_unchanged
+ ammoniums
+\change_inserted -1046193749 1681409586
+,
+\change_unchanged
+ and one
+\change_inserted -1046193749 1681409601
+, G8,
+\change_unchanged
+ 
+\change_inserted -1046193749 1681409675
+had a net 
+\change_unchanged
+neutral
+\change_deleted -1046193749 1681409609
+ guest denoted as G8
+\change_inserted -1046193749 1681409610
+ charge
+\change_deleted -1046193749 1681409621
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c
+\change_unchanged
+.
+ We see the absolute binding for all positively charge
+\change_inserted -1046193749 1681409628
+d
+\change_unchanged
+ guest 
+\change_deleted -1046193749 1681409633
+are being
+\change_inserted -1046193749 1681409633
+were
+\change_unchanged
+ underestimated
+\change_inserted -1046193749 1681409688
+,
+\change_unchanged
+ similar 
+\change_inserted -1046193749 1681409695
+to 
+\change_unchanged
+what we 
+\change_deleted -1046193749 1681409698
+saw
+\change_inserted -1046193749 1681409699
+observed
+\change_unchanged
+ with CB7
+\change_inserted -1046193749 1681409704
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:ABFE-host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c)
+\change_unchanged
+.
+
+\change_inserted -1046193749 1681409706
+ 
+\change_unchanged
+However, the binding free energy of G8
+\change_deleted -1046193749 1681409717
+, the only neutral ligand in the entire dataset,
+\change_unchanged
+ 
+\change_deleted -1046193749 1681409725
+is
+\change_inserted -1046193749 1681409726
+was
+\change_unchanged
+ overestimated in contrast to the rest of the ligands
+\change_inserted -1046193749 1681409722
+ 
+\change_unchanged
+.Calculated statistics that computed free energies had a deviation (RMSE=6.64
+ kcal/mol) and a decent correlation (
+\begin_inset Formula $R^{2}=0.52$
+\end_inset
+
+).
+ The calculated slope for WP6 was 1.6, with an MAE 6.1 and MSE of -6.0 kcal/mol.
+\change_inserted -1046193749 1681409751
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681409773
+TL say something about what the numbers mean, don't just repeat what is
+ in the table.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
+
+\change_deleted -1046193749 1681410079
+Calculations of binding free energies of
+\change_unchanged
+ Octa-acid (OAH)
+\end_layout
+
+\begin_layout Standard
+The host system OAH ha
+\change_inserted -1046193749 1681409799
+d
+\change_deleted -1046193749 1681409799
+s
+\change_unchanged
+ a deep 10 Å hydrophobic pocket and eight water-solubilizing carboxylate
+ groups at the outer surface
+\change_inserted -1046193749 1681409808
+, which gave it 
+\change_deleted -1046193749 1681409810
+ bearing
+\change_unchanged
+ a negative net charge of 
+\change_deleted -1046193749 1681409816
+-8
+\change_inserted -1046193749 1681409816
+
+\begin_inset Formula $-8e$
+\end_inset
+
+
+\change_unchanged
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:ABFE-host-guest-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+d.
+ 
+\change_deleted -1046193749 1681409885
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TL net charge
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ ABFEs of 20 guests were calculated OAH, where 18 guest had a 
+\change_inserted -1046193749 1681409895
+net 
+\change_unchanged
+charge of 
+\change_deleted -1046193749 1681409902
+-1
+\change_inserted -1046193749 1681409902
+
+\begin_inset Formula $-1e$
+\end_inset
+
+
+\change_unchanged
+ and 
+\change_deleted -1046193749 1681409907
+only
+\change_unchanged
+ two (tzh,hxa) had a 
+\change_inserted -1046193749 1681409913
+net
+\change_deleted -1046193749 1681409912
++1 
+\change_unchanged
+charge
+\change_inserted -1046193749 1681409917
+ of 
+\begin_inset Formula $+1e$
+\end_inset
+
+
+\change_unchanged
+.
+ The calculated statistics of computed free energies had a deviation (
+\change_deleted -1046193749 1681409931
+RMSE=2.9 kcal/mol
+\change_inserted -1046193749 1681409931
+
+\begin_inset Formula $\text{RMSE}=\unit[2.9]{kcal/mol}$
+\end_inset
+
+
+\change_unchanged
+) and poor correlation (
+\begin_inset Formula $R^{2}=0.07$
+\end_inset
+
+).
+
+\change_inserted -1046193749 1681409961
+ 
+\change_unchanged
+The slope of OAH was 0.8 with an MAE and MSE of 2.2 
+\change_inserted -1046193749 1681409971
+kcal/mol 
+\change_unchanged
+and 0.6 kcal/mol respectively.
+ The two cationic ligands (trz,hxa) in the dataset are underestimated, resulting
+ in the 
+\change_inserted -1046193749 1681410044
+overall 
+\change_unchanged
+poor correlation
+\change_deleted -1046193749 1681410047
+ indicating
+\change_inserted -1046193749 1681410053
+ of
+\change_unchanged
+ our GB model
+\change_inserted -1046193749 1681410058
+ with experiment
+\change_unchanged
+.
+\end_layout
+
+\begin_layout Subsection
+
+\change_deleted -1046193749 1681410083
 Calculations of binding free energies of 
+\change_unchanged
+
 \begin_inset Formula $\alpha/\beta$
 \end_inset
 
@@ -4384,15 +7644,93 @@ Calculations of binding free energies of
 \end_inset
 
 -CD)
+\change_inserted -1046193749 1681410086
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681410110
+
+\series medium
+TL define this acronym earlier if you are going to use
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
-Calculations of binding free energies of 38-
+
+\change_inserted -1046193749 1681410134
+We c
+\change_deleted -1046193749 1681410134
+C
+\change_unchanged
+alculat
+\change_inserted -1046193749 1681410142
+ed
+\change_deleted -1046193749 1681410142
+ions
+\change_unchanged
+ 
+\change_deleted -1046193749 1681410146
+of
+\change_inserted -1046193749 1681410146
+the
+\change_unchanged
+ binding free energies of 38
+\change_inserted -1046193749 1681410154
+ 
+\change_deleted -1046193749 1681410242
+-
 \begin_inset Formula $\alpha/\beta$
 \end_inset
 
-CD guests with charges net charges varying from +1 to -1.
+CD 
+\change_unchanged
+guests
+\change_inserted -1046193749 1681410171
+,
+\change_unchanged
+ with 
+\change_deleted -1046193749 1681410177
+charges
+\change_unchanged
+ net charges varying from 
+\change_deleted -1046193749 1681410185
++1
+\change_inserted -1046193749 1681410185
+
+\begin_inset Formula $+1e$
+\end_inset
+
+
+\change_unchanged
+ to 
+\change_deleted -1046193749 1681410190
+-1
+\change_inserted -1046193749 1681410256
+
+\begin_inset Formula $-1e$
+\end_inset
+
+, to 
+\begin_inset Formula $\alpha/\beta$
+\end_inset
+
+-CD 
+\change_unchanged
+.
  
+\change_deleted -1046193749 1681410193
+
 \begin_inset Note Note
 status open
 
@@ -4402,10 +7740,51 @@ TL net charge
 
 \end_inset
 
- Both ACD and BCD are both neutral molecules.
- In 
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1681410262
+Both ACD and BCD
+\change_unchanged
+ 
+\change_inserted -1046193749 1681410271
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1681410228
+TL inconsistent abbreviations.
+ Pick one.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+, which had
+\change_deleted -1046193749 1681410279
+are both
+\change_unchanged
+ neutral
+\change_inserted -1046193749 1681410284
+ net charges
+\change_deleted -1046193749 1681410286
+ molecules
+\change_unchanged
+.
+ 
+\change_inserted -1046193749 1681410435
+Binding free energy metrics for the two molecules were similar 
+\change_deleted -1046193749 1681410421
+In 
+\change_inserted -1046193749 1681410423
+(
+\change_unchanged
+
 \begin_inset CommandInset ref
-LatexCommand nameref
+LatexCommand formatted
 reference "table:host-guest-metrics"
 plural "false"
 caps "false"
@@ -4413,76 +7792,227 @@ noprefix "false"
 
 \end_inset
 
-shows the computed statistics for both 
-\series bold
 
-\begin_inset Formula $\beta$
-\end_inset
-
-
-\series default
-CD and 
-\begin_inset Formula $\alpha$
-\end_inset
-
-CD with a deviation RMSE=1.6 and RMSE=1.6 kcal/mol respectively.ACD has slope
- was 0.8 with MAE and MSE of 1.4 and 0.07 kcal/mol respectively.
- BCD computed a slope of 1.5 and an MAE and MSE of 1.4 and -07 kcal/mol.
- Interestingly when comparing the correlation values between the two system
- (
-\series bold
-
-\begin_inset Formula $\beta$
-\end_inset
-
-
-\series default
-CD and 
-\begin_inset Formula $\alpha$
-\end_inset
-
-CD) 
-\series bold
-
-\begin_inset Formula $\beta$
-\end_inset
-
-
-\series default
-CD reported a stronger correlation between calculated and experimental of
+\change_inserted -1046193749 1681410418
+).
  
+\change_deleted -1046193749 1681410429
+shows the computed statistics for b
+\change_inserted -1046193749 1681410429
+B
+\change_unchanged
+oth 
+\series bold
+
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\series default
+CD and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+CD
+\change_inserted -1046193749 1681410442
+ had
+\change_deleted -1046193749 1681410448
+ with a deviation
+\change_unchanged
+ 
+\change_deleted -1046193749 1681410465
+RMSE=1.6
+\change_inserted -1046193749 1681410465
+
+\begin_inset Formula $\text{RMSE}=\unit[1.6]{kcal/mol}$
+\end_inset
+
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1681410487
+and RMSE=1.6 kcal/mol respectively
+\change_inserted -1046193749 1681410495
+compared to experiment
+\change_unchanged
+.
+
+\change_inserted -1046193749 1681410298
+ 
+\change_unchanged
+ACD ha
+\change_inserted -1046193749 1681410519
+d
+\change_deleted -1046193749 1681410519
+s
+\change_unchanged
+ slope 
+\change_deleted -1046193749 1681410524
+was
+\change_inserted -1046193749 1681410524
+of
+\change_unchanged
+ 0.8 with MAE and MSE of 1.4 and 0.07 kcal/mol
+\change_deleted -1046193749 1681410564
+ respectively
+\change_inserted -1046193749 1681410552
+, while
+\change_deleted -1046193749 1681410551
+.
+
+\change_unchanged
+ BCD 
+\change_deleted -1046193749 1681410538
+computed
+\change_inserted -1046193749 1681410539
+had
+\change_unchanged
+ a slope of 1.5 and an MAE and MSE of 1.4 and -0
+\change_inserted -1046193749 1681410557
+.
+\change_unchanged
+7 kcal/mol.
+ Interestingly
+\change_inserted -1046193749 1681410571
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1681410604
+when comparing the correlation values between the two system (
+\series bold
+
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\series default
+CD and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+CD)
+\change_inserted -1046193749 1681410616
+ we observed
+\change_deleted -1046193749 1681410623
+ 
+\series bold
+
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\series default
+CD
+\change_unchanged
+ 
+\change_deleted -1046193749 1681410625
+reported
+\change_unchanged
+ a stronger correlation between calculated and experimental 
+\change_inserted -1046193749 1681410636
+for 
+\series bold
+
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\series default
+CD
+\change_deleted -1046193749 1681410639
+of
+\change_unchanged
+ 
+\change_inserted -1046193749 1681410645
+(
+\change_unchanged
+
 \begin_inset Formula $R^{2}=0.65$
 \end_inset
 
- whereas 
+
+\change_inserted -1046193749 1681410650
+) compared to 
+\change_deleted -1046193749 1681410651
+ whereas
+\change_unchanged
+ 
 \begin_inset Formula $\alpha$
 \end_inset
 
-CD with a poor correlation of 0.17.
- This could be due to the fact 
+CD 
+\change_deleted -1046193749 1681410658
+with a poor correlation of
+\change_unchanged
+ 
+\change_inserted -1046193749 1681410666
+(
+\begin_inset Formula $R^{2}=0.17$
+\end_inset
+
+
+\change_deleted -1046193749 1681410676
+0.17
+\change_inserted -1046193749 1681410676
+)
+\change_unchanged
+.
+ This 
+\change_deleted -1046193749 1681410687
+could
+\change_inserted -1046193749 1681410688
+likely
+\change_unchanged
+ be due to the fact 
 \begin_inset Formula $\beta$
 \end_inset
 
--CD does have a larger dynamic range than compared to 
+-CD 
+\change_deleted -1046193749 1681410695
+does have
+\change_inserted -1046193749 1681410695
+has
+\change_unchanged
+ a larger dynamic range 
+\change_inserted -1046193749 1681410707
+of binding free energies 
+\change_unchanged
+than 
+\change_deleted -1046193749 1681410713
+compared to 
+\change_unchanged
+
 \begin_inset Formula $\alpha$
 \end_inset
 
+
+\change_inserted -1046193749 1681410716
+-CD
+\change_deleted -1046193749 1681410723
  suggesting ligand binding more favorably with 
 \begin_inset Formula $\beta$
 \end_inset
 
--CD.
- In 
+-CD
+\change_unchanged
+.
+ 
+\change_deleted -1046193749 1681410761
+In 
+\change_unchanged
+
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "fig:Host-guest-systems"
+reference "fig:ABFE-host-guest-systems"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-e is a scatter plot of both 
+e 
+\change_deleted -1046193749 1681410771
+is a scatter plot of both 
 \series bold
 
 \begin_inset Formula $\beta$
@@ -4494,11 +8024,32 @@ CD and
 \begin_inset Formula $\alpha$
 \end_inset
 
-CD systems where we begin to see a clear bias of ligand charges which have
- been similar trend in the other host guest systems.Here, we see the ABFEs
- for the negatively charged ligands are underestimated and positively charge
- ligands are overestimated.These results suggest significant bias due to
- ligand charge.
+CD systems where we begin to see
+\change_inserted -1046193749 1681410772
+shows
+\change_unchanged
+ a clear bias 
+\change_inserted -1046193749 1681410802
+in the error of the ABFE due to
+\change_deleted -1046193749 1681410804
+of
+\change_unchanged
+ ligand charges
+\change_inserted -1046193749 1681410808
+,
+\change_unchanged
+ which have been similar trend in the other host guest systems.
+
+\change_inserted -1046193749 1681410779
+ 
+\change_unchanged
+Here, we see the ABFEs for the negatively charged ligands are underestimated
+ and positively charge ligands are overestimated.
+
+\change_inserted -1046193749 1681410817
+ 
+\change_unchanged
+These results suggest significant bias due to ligand charge.
 \end_layout
 
 \begin_layout Subsection
@@ -4532,6 +8083,10 @@ shows the computed statistics for the combine dataset have an RMSE of 4.1
  the calculated ABFEs.
  This may be due to the fact that GB does not naturally handle charge hydration
  asymmetry
+\change_inserted -1046193749 1681410874
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "mukhopadhyayChargeHydrationAsymmetry2012"
@@ -4539,7 +8094,11 @@ literal "false"
 
 \end_inset
 
- .
+
+\change_deleted -1046193749 1681410877
+ 
+\change_unchanged
+.
  However, the host charge has little impact on the ABFE.
  WP6 and OAH have net charges of -6 and -8 respectively, but seem to follow
  the same trends as the other molecules.
@@ -5103,9 +8662,53 @@ BCD
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Table 4.3: This table shows various metrics for comparison of all host guest
- systems.
- Units are in kcal/mol.
+
+\change_deleted -1046193749 1681410922
+Table 4.3: This table shows various metrics for c
+\change_inserted -1046193749 1681410926
+C
+\change_unchanged
+omparison of all host guest systems.
+ Units 
+\change_inserted -1046193749 1681410981
+for 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+RMSE_std,	RMSE
+\begin_inset Formula $_{o}$
+\end_inset
+
+,	RMSE
+\begin_inset Formula $_{r}$
+\end_inset
+
+,	MAE and	MSE
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\change_unchanged
+are in kcal/mol.
 \begin_inset CommandInset label
 LatexCommand label
 name "table:host-guest-metrics"
@@ -5153,7 +8756,13 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Comparison of calculated absolute binding free energies 
+
+\change_deleted -1046193749 1681411004
+Comparison of c
+\change_inserted -1046193749 1681411004
+C
+\change_unchanged
+alculated absolute binding free energies 
 \begin_inset Formula $(\Delta G_{GB}^{bind})$
 \end_inset
 
@@ -5163,32 +8772,12 @@ Comparison of calculated absolute binding free energies
 \begin_inset Formula $GB^{OBC}$
 \end_inset
 
-.
- 
+
+\change_inserted -1046193749 1681411164
+
 \series default
-The black solid line is the experimental identity.
- The blue solid indicates the linear regression fitting for host guest systems
- in this study.
- 
-\series bold
-a.
- 
-\series default
-The linear regression fitting of 14-CB7 systems in this study.
-\series bold
-b 
-\series default
-The fitted regression of WP6.
- 
-\series bold
-c 
-\series default
-Linear regression fitting of octa-acid
-\series bold
-.
- e 
-\series default
-Linear fitted regression of both 
+ compared with experiment for (a) all host-guest pairs, (b) CB7, (c) WP6,
+ (d) octa-acid and (e) 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -5197,6 +8786,31 @@ Linear fitted regression of both
 \end_inset
 
 -cyclodextrin.
+\change_unchanged
+.
+ The black solid line is the experimental identity.
+ The blue solid indicates the linear regression fitting for host guest systems
+\change_deleted -1046193749 1681411059
+ in this study
+\change_unchanged
+.
+ 
+\change_deleted -1046193749 1681411078
+a.
+ The linear regression fitting of 14-CB7 systems in this study.b The fitted
+ regression of WP6.
+ c Linear regression fitting of octa-acid.
+ e Linear fitted regression of both 
+\begin_inset Formula $\alpha$
+\end_inset
+
+/
+\begin_inset Formula $\beta$
+\end_inset
+
+-cyclodextrin.
+\change_unchanged
+
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:ABFE-host-guest-systems"
@@ -5241,16 +8855,31 @@ literal "false"
  we applied a linear hydration asymmetry correction,
 \begin_inset Formula 
 \begin{equation}
-\Delta G_{bind}^{corr}=(1+a)\Delta G_{bind}^{GB}+b\label{eq:CHA-correction}
+\Delta G_{bind}^{corr}=(1+a)\Delta G_{bind}^{GB}+b,\label{eq:CHA-correction}
 \end{equation}
 
 \end_inset
 
 
+\change_inserted -1046193749 1681411214
+where ...
+\change_deleted -1046193749 1681411215
+
 \end_layout
 
 \begin_layout Standard
-We fit separate corrections for positive, neutral and negative ligands (
+We 
+\change_inserted -1046193749 1681411313
+applied four separate corrections, where host-guest pairs were grouped by
+ the ligand net charge 
+\change_deleted -1046193749 1681411233
+fit separate corrections
+\change_unchanged
+ 
+\change_deleted -1046193749 1681411256
+for positive, neutral and negative ligands
+\change_unchanged
+ (
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "table:fitted-parameters"
@@ -5455,6 +9084,8 @@ name "table:fitted-parameters"
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1681411392
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:HCA"
@@ -5467,18 +9098,105 @@ noprefix "false"
  shows the corrected ABFE values.
 \end_layout
 
-\begin_layout Itemize
-We see an overall improvement all host system calculations.
- By taking into account all host-guest system with a computed coefficient
- of 0.87 and RMSE of 1.06 
+\begin_layout Standard
+We see 
+\change_inserted -1046193749 1681411380
+that the correction provides 
+\change_unchanged
+an overall improvement 
+\change_inserted -1046193749 1681411383
+for 
+\change_unchanged
+all host system calculations
+\change_inserted -1046193749 1681411494
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:HCA"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\change_unchanged
+.
+ 
+\change_inserted -1046193749 1681411544
+For the full dataset, the correlation 
+\change_deleted -1046193749 1681411521
+By taking into account all host-guest system with a computed
+\change_unchanged
+ coefficient 
+\change_deleted -1046193749 1681411532
+of
+\change_inserted -1046193749 1681411662
+was improved to
+\change_unchanged
+ 0.87 and
+\change_inserted -1046193749 1681411550
+ the
+\change_unchanged
+ RMSE 
+\change_inserted -1046193749 1681411556
+is reduced to
+\change_deleted -1046193749 1681411553
+of
+\change_unchanged
+ 1.06 
 \begin_inset Formula $\text{kcal/mol}$
 \end_inset
 
+
+\change_inserted -1046193749 1681411579
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "table:host-guest-metrics-corrected"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\change_unchanged
 .
- The correction depends only on ligand charge and is independent of host
+ 
+\change_inserted -1046193749 1681411592
+Other metrics are similarly improved.
+ 
+\change_unchanged
+The correction depends only on ligand charge and is independent of host
  charge.
- One possibly is that both WP6 and OAH having no effect is due to the fact
- there charge carbonyl atoms are solvent exposed when the ligand is bound
+ One 
+\change_deleted -1046193749 1681411607
+possibly
+\change_inserted -1046193749 1681411628
+reason why host charge appears irrelevant
+\change_unchanged
+ is that both WP6 and OAH 
+\change_deleted -1046193749 1681411638
+having no effect is due to the fact there
+\change_unchanged
+ charge carbonyl atoms 
+\change_deleted -1046193749 1681411641
+are
+\change_inserted -1046193749 1681411641
+were
+\change_unchanged
+ solvent exposed when the ligand 
+\change_inserted -1046193749 1681411681
+was
+\change_deleted -1046193749 1681411681
+is
+\change_unchanged
+ bound
+\change_inserted -1046193749 1681411679
+.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -5501,7 +9219,15 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Generalized Born-Hydration Asymmetry Correction.
+
+\change_inserted -1046193749 1681411708
+Host-guest ABFEs with 
+\change_deleted -1046193749 1681411698
+G
+\change_inserted -1046193749 1681411710
+g
+\change_unchanged
+eneralized Born-Hydration Asymmetry Correction.
  The different shapes in the legend box corresponds to the different host
  systems.
 \begin_inset CommandInset label
@@ -6024,9 +9750,68 @@ WP6
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\change_deleted -1046193749 1681411434
 This table shows various metrics for comparison of all host guest systems
  using the generalized Born-hydration asymmetry correction.
  Units are in kcal/mol.
+\change_inserted -1046193749 1681411461
+Comparison of all host guest systems after the application of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:CHA-correction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Units for 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+RMSE_std,	RMSE
+\begin_inset Formula $_{o}$
+\end_inset
+
+,	RMSE
+\begin_inset Formula $_{r}$
+\end_inset
+
+,	MAE and	MSE
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ are in kcal/mol.
+\begin_inset CommandInset label
+LatexCommand label
+name "table:host-guest-metrics-corrected"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -6041,6 +9826,17 @@ This table shows various metrics for comparison of all host guest systems
 
 \begin_layout Section
 Performance Scaling
+\change_inserted -1046193749 1681408539
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Performance-Scaling"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -6054,8 +9850,13 @@ ISDDM.py
 
 \end_inset
 
- is implemented in parallel, users have availability to employ multiple
- processors to speedup ABFE calculations.
+ is implemented in parallel, users 
+\change_deleted -1046193749 1681411742
+have availability
+\change_inserted -1046193749 1681411743
+are able
+\change_unchanged
+ to employ multiple processors to speedup ABFE calculations.
  To run jobs in parallel, 
 \begin_inset Flex Code
 status open
@@ -6077,6 +9878,10 @@ Toil
 \end_inset
 
  package
+\change_inserted -1046193749 1681411754
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "vivianToilEnablesReproducible2017"
@@ -6086,8 +9891,25 @@ literal "false"
 
 , which is a workflow management system.
  Since all intermediate states (3-7) are independent, all MD simulations,
- post-analysis calculations and MBAR computation can be parallelized given
- number of available processors.
+ post-analysis calculations and MBAR computation
+\change_inserted -1046193749 1681411775
+s
+\change_unchanged
+ can be parallelized
+\change_inserted -1046193749 1681411782
+ over
+\change_unchanged
+ 
+\change_deleted -1046193749 1681411794
+given number of 
+\change_inserted -1046193749 1681411799
+the 
+\change_unchanged
+available processors
+\change_inserted -1046193749 1681411808
+ identified by the user
+\change_unchanged
+.
  
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -6099,8 +9921,10 @@ noprefix "false"
 \end_inset
 
 , shows the processor time to complete the entire workflow protocol 
+\change_deleted -1046193749 1681411852
+
 \begin_inset CommandInset ref
-LatexCommand nameref
+LatexCommand formatted
 reference "fig:Automated-workflow"
 plural "false"
 caps "false"
@@ -6118,8 +9942,17 @@ TL FIX
 
 \end_inset
 
-, which was tested on 150-atom CB7-C1 complex system.The automation application
- was able to achieve near perfect scaling as the number of processes increases.
+, which was tested on
+\change_inserted -1046193749 1681411854
+for the
+\change_unchanged
+ 150-atom CB7-C1 complex system.
+
+\change_inserted -1046193749 1681411858
+ 
+\change_unchanged
+The automation application was able to achieve near perfect scaling as the
+ number of processes increases.
 \end_layout
 
 \begin_layout Standard
@@ -6177,6 +10010,17 @@ name "fig:-processor-scaling"
 
 \begin_layout Chapter
 Discussion
+\change_inserted -1046193749 1681256750
+
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Discussion"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Section
@@ -8624,6 +12468,17 @@ literal "false"
 
 \begin_layout Chapter
 Conclusion
+\change_inserted -1046193749 1681256754
+
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Conclusion"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -8791,7 +12646,7 @@ The name:str syntax indicates the name argument should be of type str.Following
  a brief description of the varible.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Section
 \begin_inset Flex Code
 status open
 
@@ -8943,7 +12798,7 @@ storage
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Section
 number_of_cores_per_system
 \end_layout
 
@@ -9000,7 +12855,7 @@ The number of processors for each system is simply an integer input such
  cores.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Section
 endstate_parameter_files
 \end_layout
 
@@ -9048,7 +12903,7 @@ complex_coordinate_filename
  on a 3-dimensional coordinate plane.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Section
 AMBER masks
 \end_layout
 
@@ -9083,7 +12938,7 @@ ligand_mask
  AMBER mask syntax to select ligand atoms
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Section
 Workflow Arguments
 \end_layout
 
@@ -9249,7 +13104,7 @@ equilibrate_template_mdin, dtype:str.
  simulation.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Section
 intermediate states arguments
 \end_layout
 
