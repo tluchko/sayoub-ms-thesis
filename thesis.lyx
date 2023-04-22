@@ -49,7 +49,7 @@ logicalmkup
 \maintain_unincluded_children false
 \language english
 \language_package default
-\inputencoding iso8859-7
+\inputencoding utf8
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -119,6 +119,7 @@ logicalmkup
 \html_css_as_file 0
 \html_be_strict false
 \author -1463621830 "steven ayoub"
+\author -1046193749 "Luchko"
 \end_header
 
 \begin_body
@@ -194,14 +195,211 @@ http://www.csun.edu/~mathgs/LaTex.html
 
 \end_layout
 
+\begin_layout Standard
+
+\change_inserted -1046193749 1682203089
+\begin_inset Note Note
+status open
+
+\begin_layout Description
+
+\change_inserted -1046193749 1682203011
+TL Preable corrections:
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1046193749 1682203014
+Fix Maosheng Miao's name.
+ You only give his last name.
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1046193749 1682203085
+Fix the abstract.
+ I've added the text here so that track changes works.
+ Once complete, copy you latex back into the preable
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Identifying small drug-like molecules for therapeutic targets of interest
+ is an ongoing effort in drug discovery.
+ Accurate absolute binding free energy calculations (ABFEs) in silico, can
+ reduce the time and cost of exploring a diverse set of potential drug candidate
+s that may have been overlooked experimentally.
+ However, these calculations usually employ explicit solvent models that
+ can be computationally demanding and difficult to implement and perform.
+\change_inserted -1046193749 1682203155
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682203469
+TL It is not just about explicit solvent and be specific.
+ You can also use more than one sentence to layout the background and issues.
+ Current problems your code addresses:
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1046193749 1682203364
+RBFE are only able to calculate ∆∆G between similar molecules.,
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1046193749 1682203394
+explicit solvent is expensive because 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\change_inserted -1046193749 1682203412
+every atom must be simulated,
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1046193749 1682203472
+water configurations can be slow to sample and may never exchange if buried,
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1046193749 1682203529
+soft-core LJ models must be used,
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1046193749 1682203667
+friction between the water and solute can slow solute conformational sampling.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\change_inserted -1046193749 1682203831
+Intermediate states in the thermodynamic cycle may be under sampled because
+ the accessible states are approximately the same as for the end-states.
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682203854
+There is a lot there, so you can focus on the major issues but be specific.
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ To circumvent these drawbacks, we introduced the software 
+\change_deleted -1046193749 1682203180
+ISDDM.py
+\change_inserted -1046193749 1682203180
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682203180
+ISDDM.py
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+, a
+\change_inserted -1046193749 1682203192
+n
+\change_unchanged
+ 
+\change_deleted -1046193749 1682203194
+Python
+\change_unchanged
+ automated
+\change_inserted -1046193749 1682203196
+ Python
+\change_unchanged
+ workflow that implements an approach that uses faster implicit solvents,
+ such as generalized Born (GB), which greatly reduces computational costs.
+ We adapted the double decoupling method (DDM), which uses conformational
+ restraints, and paired it with GB solvent to enhance convergence.
+
+\change_deleted -1046193749 1682203662
+ 
+\change_inserted -1046193749 1682203879
+ Our work here attempts to reduce the computational expense of absolute
+ binding free energies by using implicit solvent models and the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682203879
+ISDDM.py
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ package to handle all the input files, monitor the simulations and perform
+ post-analysis.
+ 
+\change_unchanged
+The software is tested on 83 unique host-guest complex systems and reports
+ encouraging results in estimating binding free energies.
+
+\change_deleted -1046193749 1682203659
+ Our work here attempts to reduce the computational expense of absolute
+ binding free energies by using implicit solvent models and the ISDDM.py
+ package to handle all the input files, monitor the simulations and perform
+ post-analysis.
+ 
+\change_inserted -1046193749 1682203639
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682203647
+TL summarize results.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Introduction
 \end_layout
 
 \begin_layout Standard
-From the plagues of history, to influenza epidemics , cancer and the most
- recent COVID-19 virus outbreak, the world population is constantly facing
- life-threatening events and diseases.
+From the plagues of history, to influenza epidemics
+\change_deleted -1046193749 1682202799
+ 
+\change_unchanged
+, cancer and the most recent COVID-19 virus outbreak, the world population
+ is constantly facing life-threatening events and diseases.
  Drug discovery, production, and implementation have been a huge part of
  preventing or improving outcomes from these events and diseases.
  Modern drug development requires the screening of a vast and diverse chemical
@@ -317,6 +515,11 @@ literal "false"
  of biophysics and biochemistry.
  An example is molecular docking programs which provides a fast and efficient
  way to screen a large number of potential drug candidates
+\change_inserted -1046193749 1682204554
+.
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "wangMolecularDockingDrug2016"
@@ -324,8 +527,36 @@ literal "false"
 
 \end_inset
 
-.Molecular docking have been applied in screening ultra large libraries containin
-g millions of molecules 
+
+\change_inserted -1046193749 1682204556
+ 
+\change_deleted -1046193749 1682204556
+.
+\change_unchanged
+Molecular docking ha
+\change_inserted -1046193749 1682204559
+s
+\change_deleted -1046193749 1682204559
+ve
+\change_unchanged
+ been applied 
+\change_inserted -1046193749 1682204574
+to
+\change_deleted -1046193749 1682204574
+in
+\change_unchanged
+ screen
+\change_deleted -1046193749 1682204577
+ing
+\change_unchanged
+ ultra large libraries containing millions of molecules
+\change_inserted -1046193749 1682204551
+.
+ 
+\change_deleted -1046193749 1682204498
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "yuUniDockGPUAcceleratedDocking2022"
@@ -333,13 +564,15 @@ literal "false"
 
 \end_inset
 
+
+\change_deleted -1046193749 1682204496
 .
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 TL this doesn't seem to be a good example.
@@ -361,6 +594,8 @@ TL this doesn't seem to be a good example.
 \end_inset
 
 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -373,8 +608,13 @@ literal "false"
 
 \end_inset
 
- have made great strides in estimating protein-ligand molecule binding free
- energies.
+ have 
+\change_deleted -1046193749 1682204666
+made
+\change_inserted -1046193749 1682204667
+enabled
+\change_unchanged
+ great strides in estimating protein-ligand molecule binding free energies.
  Binding free energy calculations are readily used in drug discovery to
  rank potential candidates by their binding affinity to a host target molecule
  
@@ -389,6 +629,10 @@ literal "false"
  Binding free energy calculations paired with molecular dynamics (MD) offers
  the ability to use full atomic description and have been proposed to improve
  upon docking scoring methods
+\change_inserted -1046193749 1682204715
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "courniaRigorousFreeEnergy2020a"
@@ -397,9 +641,28 @@ literal "false"
 \end_inset
 
 .
- MD simulations are useful to monitor the time evolution of a system, for
- example efficient sampling tool to recover statistical ensembles.A force
- field is used to describe the potential energy of a system, representing
+ MD simulations 
+\change_deleted -1046193749 1682204824
+are useful to
+\change_unchanged
+ 
+\change_deleted -1046193749 1682204767
+monitor
+\change_inserted -1046193749 1682204769
+compute
+\change_unchanged
+ the time evolution of a system
+\change_inserted -1046193749 1682204857
+ and are used as a
+\change_deleted -1046193749 1682204785
+, for example efficient
+\change_unchanged
+ sampling tool to recover statistical ensembles.
+
+\change_inserted -1046193749 1682204803
+ 
+\change_unchanged
+A force field is used to describe the potential energy of a system, representing
  both bonded and non-bonded (van der Waals) and electrostatic interactions.
  Several force fields commonly used in MD simulations are AMBER 
 \begin_inset CommandInset citation
@@ -427,25 +690,66 @@ literal "false"
 
 .
  Today, classical MD simulations of protein and ligand binding events can
- last up to a few microseconds and have a sufficient degree of accuracy
+ last up to a few microseconds and 
+\change_deleted -1046193749 1682204919
+have a
+\change_inserted -1046193749 1682204919
+are
+\change_unchanged
+ sufficient
+\change_inserted -1046193749 1682204920
+ly
+\change_deleted -1046193749 1682204922
+ degree of
+\change_unchanged
+ accurac
+\change_inserted -1046193749 1682204925
+ate
+\change_deleted -1046193749 1682204925
+y
+\change_unchanged
  for drug design.
- Despite this success, classical MD suffers from insufficient sampling of
- conformational states due to the high computational demands of simulations
- greater than a microsecond in length.
+ Despite this success, classical MD
+\change_inserted -1046193749 1682204957
+ simulations often
+\change_unchanged
+ suffer
+\change_deleted -1046193749 1682204961
+s
+\change_unchanged
+ from insufficient sampling of conformational states due to the high computation
+al demands of simulations greater than a microsecond in length.
 \end_layout
 
 \begin_layout Standard
-The latter of these problems, insufficient sampling is due to the size of
- the integration time-step of MD, usually limited to femtoseconds or shorter
- (dictated by bond vibrations), whereas binding process are in the micro/millise
-cond time scale.
+The latter of these problems, insufficient sampling
+\change_inserted -1046193749 1682205135
+,
+\change_unchanged
+ is due to the size of the integration time-step of MD, usually limited
+ to femtoseconds or shorter (dictated by bond vibrations), whereas binding
+ process are in the micro/millisecond time scale.
  This leads to large computational costs to sample important configurations
- that have a major contribution towards binding affinity.
+ that have 
+\change_inserted -1046193749 1682205201
+may 
+\change_unchanged
+a major contribution towards binding affinity.
  Beyond the computational cost, insufficient sampling is a well-recognized
- problem in molecular simulations due to the fact there are high energy
- barriers separating structures/conformations, resulting in biological systems
- to become trapped in deep energy wells of their potential energy surfaces
+ problem in molecular simulations due to 
+\change_deleted -1046193749 1682205280
+the
+\change_unchanged
  
+\change_deleted -1046193749 1682205275
+fact there are
+\change_unchanged
+ high energy barriers separating 
+\change_deleted -1046193749 1682205322
+structures/
+\change_unchanged
+conformations, resulting in biological systems to become trapped in deep
+ energy wells of their potential energy surfaces 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "onuchicTheoryProteinFolding2004"
@@ -544,7 +848,7 @@ alchemical transformation
  steps.
  Most alchemical methods utilize free energy perturbation (FEP) 
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "bennettEfficientEstimationFree1976"
 literal "false"
 
@@ -552,7 +856,7 @@ literal "false"
 
  or thermodynamic integration 
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "kirkwoodQuantumStatisticsAlmost1933"
 literal "false"
 
@@ -560,14 +864,20 @@ literal "false"
 
  to mathematically calculate the change in free energy.
  Early efforts demonstrated that MD and Monte Carlo simulations could carry
- out these calculations for biomolecular systems [
+ out these calculations for biomolecular systems 
+\change_deleted -1046193749 1682205500
+[
+\change_unchanged
+
 \begin_inset CommandInset citation
-LatexCommand citealp
-key "jorgensenMonteCarloSimulation1985"
+LatexCommand citep
+key "jorgensenMonteCarloSimulation1985,mobleyPerspectiveAlchemicalFree2012"
 literal "false"
 
 \end_inset
 
+
+\change_deleted -1046193749 1682205519
 ,
 \begin_inset CommandInset citation
 LatexCommand citealp
@@ -576,40 +886,104 @@ literal "false"
 
 \end_inset
 
-].
+]
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
-The most popular alchemical methods are relative binding free energy (RBFE)
- calculations.
+
+\change_inserted -1046193749 1682205652
+Currently, t
+\change_deleted -1046193749 1682205603
+T
+\change_unchanged
+he most popular alchemical 
+\change_deleted -1046193749 1682205619
+methods are
+\change_inserted -1046193749 1682205621
+method
+\change_unchanged
+ 
+\change_inserted -1046193749 1682205633
+calculates the 
+\change_unchanged
+relative binding free energy (RBFE)
+\change_deleted -1046193749 1682205636
+ calculations
+\change_unchanged
+.
  RBFE calculations yield the change in binding free energy between two compounds
- by computing by artificially transforming one compound to the other in
- the binding site.
+ 
+\change_deleted -1046193749 1682205679
+by computing 
+\change_unchanged
+by artificially transforming one compound to the other in the binding site.
  RBFE requires prior knowledge of the reference compound’s binding affinity
- and requires that the two compounds being prepared are structurally and
- chemically similar.
- RBFE play a significant role in the lead optimization occurring in the
- later states in drug discovery, such as making small structural changes
- to a lead candidate compound to create a molecula with higher affinity
- towards targeted host system 
+ and 
+\change_deleted -1046193749 1682205728
+requires 
+\change_unchanged
+that the two compounds 
+\change_deleted -1046193749 1682205735
+being prepared
+\change_unchanged
+ are structurally and chemically similar.
+ RBFE play a significant role in the lead optimization 
+\change_deleted -1046193749 1682205788
+occurring
+\change_unchanged
+ in the later states 
+\change_inserted -1046193749 1682205792
+of
+\change_deleted -1046193749 1682205791
+in
+\change_unchanged
+ drug discovery, such as making small
+\change_deleted -1046193749 1682205796
+ structural
+\change_unchanged
+ changes to a lead candidate compound to create a molecul
+\change_deleted -1046193749 1682205801
+a
+\change_unchanged
+ with higher affinity towards targeted host system 
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "schindlerLargeScaleAssessmentBinding2020"
 literal "false"
 
 \end_inset
 
-.However, RBFE requires structural similarity between molecules which in
- turn limits its capability of exploring chemical space.
+.
+
+\change_inserted -1046193749 1682205807
+ 
+\change_unchanged
+However, RBFE requires structural similarity between molecules
+\change_inserted -1046193749 1682205815
+,
+\change_unchanged
+ which in turn limits its capability of exploring chemical space.
 \end_layout
 
 \begin_layout Standard
 Conversely, absolute binding free energy (ABFE) calculations are capable
- of computing the standard free energy difference between a given compound
- and the receptor of interest.
- The standard free energy difference is computed from the reversible work
- of decoupling the ligand from the binding site and recouping it with the
- bulk solvent 
+ of computing the standard free energy 
+\change_inserted -1046193749 1682205858
+of binding
+\change_deleted -1046193749 1682205859
+difference
+\change_unchanged
+ between a given compound and the receptor of interest.
+ The standard free energy 
+\change_deleted -1046193749 1682205880
+difference
+\change_inserted -1046193749 1682205881
+of binding
+\change_unchanged
+ is computed from the reversible work of decoupling the ligand from the
+ binding site and recouping it with the bulk solvent 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "fengAbsoluteBindingFree2022"
@@ -623,7 +997,7 @@ literal "false"
  compounds 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "courniaRigorousFreeEnergy2020,gilsonStatisticalthermodynamicBasisComputation1997a"
+key "courniaRigorousFreeEnergy2020a,gilsonStatisticalthermodynamicBasisComputation1997a"
 literal "false"
 
 \end_inset
@@ -634,7 +1008,7 @@ literal "false"
 ns) can be complicated 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "meyBestPracticesAlchemical2020"
+key "meyBestPracticesAlchemical2020a"
 literal "false"
 
 \end_inset
@@ -664,8 +1038,33 @@ literal "false"
  der Waals (VDW) interactions to zero.
  In this way, the two molecules (receptor and ligand) are brought together
  without having to account for complicated interactions during the binding
- process and then gradually turning back on the interactions of the ligand
- allowing it to go through the physical binding process.
+ process and then
+\change_inserted -1046193749 1682206102
+ 
+\change_deleted -1046193749 1682206132
+ gradually turning back on
+\change_unchanged
+ the interactions 
+\change_inserted -1046193749 1682206140
+with 
+\change_deleted -1046193749 1682206137
+of
+\change_unchanged
+ the ligand 
+\change_inserted -1046193749 1682206152
+are gradually turned back on, 
+\change_unchanged
+allowing it to 
+\change_deleted -1046193749 1682206170
+go through
+\change_inserted -1046193749 1682206171
+complete
+\change_unchanged
+ the
+\change_deleted -1046193749 1682206174
+ physical
+\change_unchanged
+ binding process.
  Nevertheless, the DDM method is known to suffer from poor convergence without
  intramolecular interactions of the ligand.
  The ligands may collide or overlap in physical space, creating enormous
@@ -675,14 +1074,34 @@ literal "false"
  with the environment.
 \begin_inset CommandInset citation
 LatexCommand citep
-key "boreschAbsoluteBindingFree2003"
+key "boreschAbsoluteBindingFree2003b"
 literal "false"
 
 \end_inset
 
- The use of these restraints is necessary to ensure conformations are sampled
- during the simulations and aids in good phase space overlap and faster
- convergence.
+ The use of these restraints is necessary to ensure 
+\change_inserted -1046193749 1682206299
+the bound 
+\change_unchanged
+conf
+\change_inserted -1046193749 1682206308
+iguration
+\change_deleted -1046193749 1682206302
+ormations
+\change_unchanged
+ 
+\change_deleted -1046193749 1682206311
+are
+\change_inserted -1046193749 1682206312
+is
+\change_unchanged
+ sampled during the simulations
+\change_inserted -1046193749 1682206324
+, aiding 
+\change_deleted -1046193749 1682206320
+ and aids
+\change_unchanged
+ in good phase space overlap and faster convergence.
 \begin_inset CommandInset citation
 LatexCommand citep
 key "mobleyUseOrientationalRestraints2006"
@@ -729,18 +1148,30 @@ literal "false"
  of freedom (DOF) are integrated out and solute-solvent steric overlap does
  not occur.
  Rather than physically representing water molecules, implicit solvent models
- provide a mean-field dielectric representation.
- Two popular pathway techniques that utilized implicit solvent models that
- have been widely exploited in free energy calculations are molecular mechanics/
-Poisson-Boltzmann surface area (MM/PBSA) and molecular mechanics/generalized
- Born surface area (MM/GBSA) 
+ provide a mean-field 
+\change_deleted -1046193749 1682206472
+dielectric
+\change_unchanged
+ representation.
+ Two popular 
+\change_deleted -1046193749 1682206499
+pathway
+\change_inserted -1046193749 1682206501
+end-state
+\change_unchanged
+ techniques that utilized implicit solvent models that have been widely
+ exploited in free energy calculations are molecular mechanics/Poisson-Boltzmann
+ surface area (MM/PBSA) and molecular mechanics/generalized Born surface
+ area (MM/GBSA) 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "wangRecentAdvancesFree2006"
+key "wangRecentAdvancesFree2006,wangBiomolecularSimulationsRecent2001"
 literal "false"
 
 \end_inset
 
+
+\change_deleted -1046193749 1682206534
 , 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -749,6 +1180,8 @@ literal "false"
 
 \end_inset
 
+
+\change_unchanged
 .
  However, both of these methods have severe thermodynamic approximations
  
@@ -784,11 +1217,35 @@ ISDDM.py
 
 ), a command line Python interface, to facilitate and automate the use of
  ABFE calculations for virtual compound screening.
- The ISDDM package begins with a parametrized model of the complex and performs
- all calculations of the alchemical cycle, post-processing, and data analysis.
+ The 
+\change_deleted -1046193749 1682206624
+ISDDM
+\change_inserted -1046193749 1682206624
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682206626
+ISDDM.py
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ package begins with a parametrized model of the complex and performs all
+ calculations of the alchemical cycle, post-processing, and data analysis.
  Our implementation utilizes the open-source AmberTools molecular modeling
  suite to maximize computational throughput.
- We have tested (
+ We have tested 
+\change_deleted -1046193749 1682206645
+(
+\change_unchanged
+
 \begin_inset Flex Code
 status open
 
@@ -798,7 +1255,11 @@ ISDDM.py
 
 \end_inset
 
-) for accuracy by calculating the binding free energy of a series of host-guest
+
+\change_deleted -1046193749 1682206646
+)
+\change_unchanged
+ for accuracy by calculating the binding free energy of a series of host-guest
  systems based on five hosts: cucurbit[7]uril, pillar[6]arene, octa-acid
  and 
 \begin_inset Formula $\alpha/\beta$
@@ -839,7 +1300,11 @@ noprefix "false"
 
  provides underlying theory behind this work, going over binding free energy
  calculations, use of implicit solvent models, free energy perturbation
- and introduce our modified double decoupling thermodynamic cycle.
+ and introduce
+\change_inserted -1046193749 1682206717
+s
+\change_unchanged
+ our modified double decoupling thermodynamic cycle.
  In 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -850,14 +1315,17 @@ noprefix "false"
 
 \end_inset
 
- we will discuss the chemistry of host-guest systems and our simulation
- setup parameters.
+ we 
+\change_deleted -1046193749 1682206733
+will
+\change_unchanged
+ discuss the chemistry of host-guest systems and our simulation setup parameters.
  
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "chap:Results"
 plural "true"
-caps "false"
+caps "true"
 noprefix "false"
 
 \end_inset
@@ -872,7 +1340,17 @@ noprefix "false"
 
 \end_inset
 
- will highlight our results and discuss our findings.
+ 
+\change_deleted -1046193749 1682206747
+will
+\change_unchanged
+ 
+\change_deleted -1046193749 1682206752
+highlight
+\change_inserted -1046193749 1682206754
+present 
+\change_unchanged
+ our results and discuss our findings.
 \end_layout
 
 \begin_layout Chapter
@@ -4152,6 +4630,24 @@ noprefix "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1682204161
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682204169
+TL getting ?? in PDF.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 .
 
 \series bold
@@ -6363,6 +6859,24 @@ noprefix "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1682204126
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682204134
+TL getting ?? in the PDF
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 .
  Units for 
 \family roman
@@ -6517,9 +7031,42 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\change_inserted -1046193749 1682204197
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682204197
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISDDM.py
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1682204194
+
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
+
+\change_unchanged
  processor scaling performance for MM-GBSA workflow protocol used in this
  dissertation on 150-atom CB7-C1 complex.
  The y-axis are times required for entire workflow to finish and x-axis
@@ -9311,7 +9858,25 @@ DOCKING/SMINA/VINARDO
 
 \begin_layout Plain Layout
 Predictions from SAMPL9 WP6 dataset.
- All entries were from the SAML9 dataset [cite-github].
+ All entries were from the SAML9 dataset [cite-github]
+\change_inserted -1046193749 1682204101
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682204104
+TL Fix!
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
  Units in kcal/mol
 \begin_inset CommandInset label
 LatexCommand label
