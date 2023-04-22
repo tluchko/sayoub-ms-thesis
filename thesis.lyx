@@ -6505,7 +6505,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/stevenayoub/Desktop/DDM_metro/CB7_WP7_data/scaling.pdf
+	filename images/scaling.pdf
 	width 100text%
 
 \end_inset
@@ -9505,55 +9505,6 @@ literal "false"
 
 .Where the negative charge guests, performs charge repulsion keeping like
  charges away from each other as we saw with our results.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Predictions from SAMPL4 OAH dataset.
- All entries were from the SAMPL4 OAH dataset 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand citep
-key "muddanaSAMPL4HostGuest2014a"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-.
- Units are in kcal/mol.
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Predictions-from-SAMPL4-OAH"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
