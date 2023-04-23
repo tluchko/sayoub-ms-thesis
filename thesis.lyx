@@ -5514,6 +5514,17 @@ TL fix
 
 \begin_layout Section
 Overlap Matrix Exploring the Degree of Space Phase Overlap
+\change_inserted -1046193749 1682271823
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Overlap-Matrix-Exploring"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -6380,8 +6391,16 @@ ISDDM.py
 
 \end_inset
 
-to carry out the absolute binding free energy calculations on the host-guest
- systems describe in the previous section.
+
+\change_inserted -1046193749 1682271662
+ 
+\change_unchanged
+to carry out 
+\change_deleted -1046193749 1682271675
+the
+\change_unchanged
+ absolute binding free energy calculations on the host-guest systems describe
+ in the previous section.
  In 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -6416,6 +6435,36 @@ noprefix "false"
 
 , we report on the accuracy of the method compared to experiment and assess
  the convergence of each step of the cycle.
+\change_inserted -1046193749 1682271775
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682271877
+TL you don't actually discuss convergence here.
+ I suggest moving section 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Overlap-Matrix-Exploring"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to become section 4.3.
+ You only need to update this paragraph to accommodate it.
+ 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 
 \series bold
  
@@ -6492,8 +6541,14 @@ noprefix "false"
  of a force field parameter file and initial coordinates for the complex.
  When the program is executed, it first carries out REMD GB simulations
  of states 1 and 8.
- From the final frame of the complex in state 8, conformational and orientationa
-l restraints are generated.
+ 
+\change_inserted -1046193749 1682272125
+Optionally, the user may provide their own completed simulations of the
+ end-states instead.
+ 
+\change_unchanged
+From the final frame of the complex in state 8, conformational and orientational
+ restraints are generated.
  The same frame is used to generate the initial coordinates for states 2-7.
  For states 2-4, the receptor and ligand are spilt from the complex end-state
  structure.
@@ -6544,9 +6599,42 @@ status open
 
 \begin_layout Plain Layout
 Automated workflow pipeline for 
+\change_inserted -1046193749 1682272650
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682272647
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISDDM.py
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+.
+\change_deleted -1046193749 1682272642
+
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
+
+\change_unchanged
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -6590,14 +6678,18 @@ We calculated the binding free energies of 14 cationic guest to CB7, which
 LatexCommand formatted
 reference "fig:ABFE-host-guest-systems"
 plural "false"
-caps "false"
+caps "true"
 noprefix "false"
 
 \end_inset
 
 b shows the correlation scatter plot of CB7 host-guest binding free energies
  versus experimental measurements.
- Ligand are colored by net charge, which ranges from 
+ Ligand
+\change_inserted -1046193749 1682272534
+s
+\change_unchanged
+ are colored by net charge, which ranges from 
 \begin_inset Formula $+1e$
 \end_inset
 
@@ -6618,7 +6710,7 @@ b shows the correlation scatter plot of CB7 host-guest binding free energies
 ) (
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "table:host-guest-metrics"
+reference "tab:host-guest-metrics"
 plural "false"
 caps "false"
 noprefix "false"
@@ -6640,8 +6732,13 @@ noprefix "false"
 
 , agree that while the correlation was reasonable, the absolute binding
  free energies were underestimated for all the cationic ligands, which may
- suggest favorable polar interaction with ammonium and carbonyl rich ports
- of CB7.
+ suggest favorable polar interaction with ammonium and carbonyl rich p
+\change_inserted -1046193749 1682272628
+a
+\change_deleted -1046193749 1682272628
+o
+\change_unchanged
+rts of CB7.
 \end_layout
 
 \begin_layout Subsection
@@ -6651,9 +6748,15 @@ Pillar[6]ene (WP6)
 \begin_layout Standard
 The 13 guest ligands were tested against WP6, which had a net negative charge
  of 
-\emph on
+\change_deleted -1046193749 1682272671
 -12e
-\emph default
+\change_inserted -1046193749 1682272699
+
+\begin_inset Formula $-12e$
+\end_inset
+
+,
+\change_unchanged
  as shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -6687,19 +6790,97 @@ noprefix "false"
 
 c).
  However, the binding free energy of G8 was overestimated in contrast to
- the rest of the ligands .Calculated statistics that computed free energies
- had a deviation (RMSE=6.64 kcal/mol) and a decent correlation (
+ the rest of the ligands
+\change_inserted -1046193749 1682272728
+.
+ 
+\change_deleted -1046193749 1682272796
+ .Calculated statistics 
+\change_inserted -1046193749 1682272796
+Binding
+\change_deleted -1046193749 1682272783
+that computed
+\change_unchanged
+ free energies had a 
+\change_inserted -1046193749 1682272805
+significant 
+\change_unchanged
+deviation 
+\change_inserted -1046193749 1682272815
+from experimental values 
+\change_unchanged
+(RMSE=6.64 kcal/mol) 
+\change_deleted -1046193749 1682272820
+and
+\change_inserted -1046193749 1682272859
+and good but not strong
+\change_deleted -1046193749 1682272861
+ a
+\change_unchanged
+ decent correlation (
 \begin_inset Formula $R^{2}=0.52$
 \end_inset
 
 ).
- On average the predicated binding affinity was 6.1kcal/mol and a MSE of
- -6.0kcal/mol.
- The high MAE and MSE indicates poor accuracy of predicated binding free
- energy values.
- The large MAE and MSE is probably cause the generalize Born lack of charge
- hydration of the positively charge guest molecules which results in the
- overestimation of binding.
+ On average
+\change_inserted -1046193749 1682272866
+,
+\change_unchanged
+ the predicated binding affinity was 
+\change_deleted -1046193749 1682272871
+6.1kcal/mol
+\change_inserted -1046193749 1682272873
+
+\begin_inset Formula $\unit[6.1]{kcal/mol}$
+\end_inset
+
+
+\change_unchanged
+ and a
+\change_inserted -1046193749 1682272884
+n
+\change_unchanged
+ MSE of 
+\change_inserted -1046193749 1682272891
+
+\begin_inset Formula $\unit[-6.0]{kcal/mol}$
+\end_inset
+
+
+\change_deleted -1046193749 1682272890
+-6.0kcal/mol
+\change_unchanged
+.
+ The 
+\change_deleted -1046193749 1682272916
+high
+\change_inserted -1046193749 1682272926
+magnitude of
+\change_unchanged
+ MAE and MSE indicate
+\change_deleted -1046193749 1682272929
+s
+\change_unchanged
+ poor accuracy of predicated binding free energy values.
+ The large MAE and MSE 
+\change_inserted -1046193749 1682272944
+are
+\change_deleted -1046193749 1682272943
+is
+\change_unchanged
+ probably cause
+\change_inserted -1046193749 1682272954
+d by
+\change_unchanged
+ the 
+\change_deleted -1046193749 1682272961
+generalize Born
+\change_unchanged
+ lack of charge hydration of the positively charge guest molecules
+\change_inserted -1046193749 1682272980
+ in the GB model,
+\change_unchanged
+ which results in the overestimation of binding.
 \end_layout
 
 \begin_layout Subsection
@@ -6804,7 +6985,7 @@ TL inconsistent abbreviations.
  Binding free energy metrics for the two molecules were similar (
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "table:host-guest-metrics"
+reference "tab:host-guest-metrics"
 plural "false"
 caps "false"
 noprefix "false"
@@ -6874,7 +7055,7 @@ a shows the scatter plot of all the systems we tested.
  
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "table:host-guest-metrics"
+reference "tab:host-guest-metrics"
 plural "false"
 caps "false"
 noprefix "false"
@@ -7496,7 +7677,7 @@ RMSE_std,	RMSE
  are in kcal/mol.
 \begin_inset CommandInset label
 LatexCommand label
-name "table:host-guest-metrics"
+name "tab:host-guest-metrics"
 
 \end_inset
 
