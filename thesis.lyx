@@ -1456,7 +1456,12 @@ is Plank's constant.
 \begin_inset Formula $p$
 \end_inset
 
-.The Hamiltonian 
+.
+
+\change_inserted -1046193749 1682208703
+ 
+\change_unchanged
+The Hamiltonian 
 \begin_inset Formula $H(p,r)$
 \end_inset
 
@@ -1473,13 +1478,19 @@ is Plank's constant.
 \begin_inset Formula $Q$
 \end_inset
 
- is very difficult and not feasible in more complicated cases such as larger
- systems with strong interactions between particles.
+ is very difficult and not feasible in more complicated cases
+\change_inserted -1046193749 1682208714
+,
+\change_unchanged
+ such as larger systems with strong interactions between particles.
  However, since we are interested in the free energy differences, 
 \begin_inset Formula $∆A$
 \end_inset
 
 , between the unbound state (state 0) and bound state (state1), we require
+\change_inserted -1046193749 1682208723
+ only
+\change_unchanged
  the ratio of partition functions 
 \begin_inset Formula $Q_{0}$
 \end_inset
@@ -1500,6 +1511,27 @@ As neither the temperature or particles' masses change, the momenta of the
  two partition functions integrate out and cancel, so only the configurational
  part of the partition function needed to be considered, and the free free
  energy of binding can be expressed as 
+\change_inserted -1046193749 1682208734
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682208734
+TL where does 
+\begin_inset Formula $∆A^{\circ}$
+\end_inset
+
+ come from? This is for the standard concentration, but it just appears
+ and is not introduced.
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \begin_inset Formula 
 \[
 \Delta A^{\circ}=-k_{B}Tln\frac{\int_{V_{1}}\int_{\Gamma_{1}}e^{-\beta[U_{1}(x)+pV_{1}]}dVdx}{\int_{V_{0}}\int_{\Gamma_{0}}e^{-\beta[U_{0}(x)+pV_{o}]}dVdx},
