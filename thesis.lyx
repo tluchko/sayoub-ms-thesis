@@ -13435,6 +13435,10 @@ ISDDM.py
  is unique in that it improves sampling by using a combination of implicit
  solvents and conformational restraints.
  To test the automation of
+\change_inserted -1046193749 1682295837
+ 
+\change_unchanged
+
 \begin_inset Flex Code
 status open
 
@@ -13444,17 +13448,70 @@ ISDDM.py
 
 \end_inset
 
-, we applied it to a series of host guest systems which were presented as
- community challenge by SAMPL group.
- We saw overall good correlation with experiment, with our method (DDM/GB)
- and outperforms most the SAMPL4 and SAMPL9 challenge submission's RBFE
- metrics, though large systematic errors were present in the raw results.
+, we applied it to a series of host
+\change_inserted -1046193749 1682295847
+-
+\change_deleted -1046193749 1682295847
+ 
+\change_unchanged
+guest systems
+\change_inserted -1046193749 1682295859
+, most of
+\change_unchanged
+ which were presented as community challenge
+\change_inserted -1046193749 1682295870
+s
+\change_unchanged
+ by SAMPL group.
+ We saw overall good correlation 
+\change_deleted -1046193749 1682295900
+with
+\change_inserted -1046193749 1682295903
+between
+\change_unchanged
+ experiment
+\change_deleted -1046193749 1682295906
+, with
+\change_inserted -1046193749 1682295907
+ and
+\change_unchanged
+ our method (DDM/GB)
+\change_inserted -1046193749 1682295911
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1682295913
+and
+\change_inserted -1046193749 1682295914
+which
+\change_unchanged
+ outperform
+\change_inserted -1046193749 1682295917
+ed
+\change_deleted -1046193749 1682295916
+s
+\change_unchanged
+ most the SAMPL4 and SAMPL9 challenge submission
+\change_deleted -1046193749 1682295933
+'s
+\change_unchanged
+ 
+\change_inserted -1046193749 1682295941
+for 
+\change_unchanged
+RBFE metrics, though large systematic errors were present in the raw results.
 \end_layout
 
 \begin_layout Standard
-One major issue with using generalize Born solvation method is its inability
- to account charge hydration asymmetry, leading towards the strong electrostatic
-s interactions from charge guest molecules and bias in the results.
+One major issue with using 
+\change_deleted -1046193749 1682295970
+generalize Born
+\change_inserted -1046193749 1682295971
+the GB
+\change_unchanged
+ solvation method is its inability to account charge hydration asymmetry,
+ leading towards the strong electrostatics interactions from charge guest
+ molecules and bias in the results.
  From all the host guest systems shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -13478,15 +13535,60 @@ ted.
  This correction greatly improved our overall accuracy across the entire
  dataset; however, this correction is likely not transferable.
  That is, the correction is not a solution but provides support that charge
- hydration asymmetry is the dominant source of error.Rather, a more accurate
- solvation model that could account for CHA and other thermodynamic water
- properties GB lacks will need to be employed.
+ hydration asymmetry is the dominant source of error.
+
+\change_inserted -1046193749 1682296037
+ 
+\change_unchanged
+Rather, a more accurate solvation model that could account for CHA and other
+ thermodynamic water properties GB lacks will need to be employed.
 \end_layout
 
 \begin_layout Standard
-In future analysis we plan on focusing on retrospective prediction of protein-li
-gand binding affinity using public available databases such as BindingDB
+In future analysis
+\change_inserted -1046193749 1682296116
+,
+\change_unchanged
+ we plan on 
+\change_inserted -1046193749 1682296247
+both improving the solvation model and 
+\change_deleted -1046193749 1682296178
+focusing on
+\change_inserted -1046193749 1682296188
+testing the method 
+\change_deleted -1046193749 1682296198
  
+\change_unchanged
+retrospective
+\change_inserted -1046193749 1682296209
+ly on protein-ligand
+\change_unchanged
+ prediction
+\change_inserted -1046193749 1682296258
+s and prospectively on host-guest systems.
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1682296264
+of
+\change_unchanged
+ 
+\change_inserted -1046193749 1682296266
+P
+\change_deleted -1046193749 1682296266
+p
+\change_unchanged
+rotein-ligand binding affinity 
+\change_inserted -1046193749 1682296271
+is 
+\change_deleted -1046193749 1682296273
+using
+\change_unchanged
+ public available
+\change_inserted -1046193749 1682296278
+ in
+\change_unchanged
+ databases such as BindingDB 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "gilsonBindingDB2015Public2016"
@@ -13494,12 +13596,37 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1682296126
+,
+\change_unchanged
  which includes curated datasets from the Drug Design Data Resource (D3R)
- and Community Structure Activity Resource (CSAR).Subsequently, participate
- in future blind challenges to test our method ability to make prospective
- predictions.
- In addition, attempt to improve the overall accuracy by bookending with
- more accurate solvation models such as 3D-RISM.
+ and Community Structure Activity Resource (CSAR).
+
+\change_inserted -1046193749 1682296128
+ 
+\change_deleted -1046193749 1682296298
+Subsequently, participate
+\change_inserted -1046193749 1682296300
+Participation
+\change_unchanged
+ in future blind challenges
+\change_inserted -1046193749 1682296320
+, such as SAMPL, will 
+\change_deleted -1046193749 1682296323
+ to
+\change_unchanged
+ test our method
+\change_inserted -1046193749 1682296327
+'s
+\change_unchanged
+ ability to make prospective predictions.
+ In addition, 
+\change_inserted -1046193749 1682296339
+we will 
+\change_unchanged
+attempt to improve the overall accuracy by bookending with more accurate
+ solvation models such as 3D-RISM.
  3D-RISM is computational demanding but potential remedies for this could
  include implementing 3D-RISM on GPUs or using Monte Carlo sampling scheme
  rather molecular dynamics route.
@@ -13513,9 +13640,22 @@ ISDDM.py
 
 \end_inset
 
-shows promise in performing fast , accurate absolute binding free energy
- calculations that combines the sampling efficiency of GB in a rigorous
- and fully automated application.
+shows promise 
+\change_inserted -1046193749 1682296368
+to
+\change_deleted -1046193749 1682296356
+in
+\change_unchanged
+ perform
+\change_deleted -1046193749 1682296370
+ing
+\change_unchanged
+ fast
+\change_deleted -1046193749 1682296353
+ 
+\change_unchanged
+, accurate absolute binding free energy calculations that combines the sampling
+ efficiency of GB in a rigorous and fully automated application.
 \change_deleted -1463621830 1682137826
 .
 \change_unchanged
@@ -13535,8 +13675,10 @@ name "chap:Configuration-user-input"
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1682296725
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 TL this part can read like a manual.
@@ -13549,10 +13691,16 @@ TL this part can read like a manual.
 \end_inset
 
 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
 The user controls 
+\change_inserted -1046193749 1682296413
+the entire 
+\change_unchanged
+
 \begin_inset Flex Code
 status open
 
@@ -13562,8 +13710,17 @@ ISDDM.py
 
 \end_inset
 
- entire workflow by supplying a YAML-format user input files, which consists
- of only 36 lines.
+
+\change_deleted -1046193749 1682296415
+ entire
+\change_unchanged
+ workflow by supplying a YAML-format user input files, which consists of
+ only 36 lines.
+
+\change_inserted -1046193749 1682296611
+ Each parameter in the input file is defined below.
+\change_unchanged
+
 \begin_inset Separator plain
 \end_inset
 
@@ -13571,16 +13728,24 @@ ISDDM.py
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1682296588
 Each keyword syntax is written in the following:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Description
+
+\change_deleted -1046193749 1682296588
 name:str Description of variable 'name' .
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1682296588
 The name:str syntax indicates the name argument should be of type str.Following
  a brief description of the variable.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Section
@@ -13593,6 +13758,41 @@ hardware_parameters
 
 \end_inset
 
+
+\change_inserted -1046193749 1682296653
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682297990
+TL does the user need to type in 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682296678
+hardware_parameters
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ first? I think it would be good to include a sample input file.
+ The use of subheading is a little confusing too.
+ Some seem like they would go in the input file (those with underscores)
+ and some do not.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 
 \end_layout
 
@@ -13649,7 +13849,13 @@ pmemd.CUDA
 status open
 
 \begin_layout Plain Layout
-mpu_command:str
+mp
+\change_inserted -1046193749 1682296755
+i
+\change_deleted -1046193749 1682296755
+u
+\change_unchanged
+_command:str
 \end_layout
 
 \end_inset
@@ -13692,12 +13898,53 @@ srun
 status open
 
 \begin_layout Plain Layout
-memory, dtype:float
+memory,
+\change_deleted -1046193749 1682296774
+ dtype:
+\change_unchanged
+float
 \end_layout
 
 \end_inset
 
-Amount of memory needed to run intermediate MD simulation.
+
+\change_inserted -1046193749 1682296862
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682296892
+TL 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682296872
+dtype
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ is a numpy thing.
+ The user is just providing a float.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+Amount of memory needed to run 
+\change_inserted -1046193749 1682296796
+an 
+\change_unchanged
+intermediate MD simulation.
 \end_layout
 
 \begin_layout Description
@@ -13711,9 +13958,26 @@ disk:float
 \end_inset
 
  Storage required for an individual MD simulation.
+\change_inserted -1046193749 1682296827
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682296834
+TL what are the units?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 TL let's change this to 
@@ -13736,7 +14000,27 @@ storage
 \end_layout
 
 \begin_layout Section
+
+\change_deleted -1046193749 1682296847
 number_of_cores_per_system
+\change_inserted -1046193749 1682296847
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682296847
+number_of_cores_per_system
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -13749,7 +14033,11 @@ Number of processor to be used for each individual ligand, receptor and
 status open
 
 \begin_layout Plain Layout
-complex_ncores, dtype:int
+complex_ncores,
+\change_deleted -1046193749 1682296901
+ dtype
+\change_unchanged
+:int
 \end_layout
 
 \end_inset
@@ -13763,7 +14051,11 @@ complex_ncores, dtype:int
 status open
 
 \begin_layout Plain Layout
-receptor_ncores, dtype:int
+receptor_ncores
+\change_deleted -1046193749 1682296910
+, dtype
+\change_unchanged
+:int
 \end_layout
 
 \end_inset
@@ -13777,7 +14069,11 @@ receptor_ncores, dtype:int
 status open
 
 \begin_layout Plain Layout
-ligand_ncores, dtype:int
+ligand_ncores
+\change_deleted -1046193749 1682296919
+, dtype
+\change_unchanged
+:int
 \end_layout
 
 \end_inset
@@ -13788,28 +14084,199 @@ ligand_ncores, dtype:int
 
 \begin_layout Standard
 The number of processors for each system is simply an integer input such
- as, all the complex intermediate MD simulations will be ran with two CPU
- cores.
+ as
+\change_inserted -1046193749 1682296972
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682296971
+TL complete the sentence
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+.
+\change_deleted -1046193749 1682296958
+,
+\change_unchanged
+ 
+\change_inserted -1046193749 1682296962
+A
+\change_deleted -1046193749 1682296961
+a
+\change_unchanged
+ll the complex intermediate MD simulations 
+\change_deleted -1046193749 1682296944
+will be ran
+\change_inserted -1046193749 1682296945
+are run
+\change_unchanged
+ with two CPU cores.
+
+\change_inserted -1046193749 1682296976
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682296983
+TL Is this true? why?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Section
+
+\change_deleted -1046193749 1682296991
 endstate_parameter_files
+\change_inserted -1046193749 1682296991
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682296991
+endstate_parameter_files
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
-User will need to specify a path to AMBER 
+User
+\change_inserted -1046193749 1682296997
+s
+\change_deleted -1046193749 1682296996
+ will
+\change_unchanged
+ need to specify a path to AMBER 
+\change_inserted -1046193749 1682297006
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682297007
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+parm7
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1682297005
+
 \begin_inset Formula $.parm7$
 \end_inset
 
+
+\change_unchanged
  and 
+\change_inserted -1046193749 1682297028
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682297029
+rst7
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1682297023
+
 \begin_inset Formula $.coordinate$
 \end_inset
 
- file to designated bound ligand host complex system.
- This assumes the user has already parameterized the complex with there
- desired force fields and charge model.
- Lastly AMBER masks to denote ligand and receptor atoms from the complex
- parameter file.
+
+\change_unchanged
+ file
+\change_inserted -1046193749 1682297032
+s
+\change_unchanged
+ to designated bound 
+\change_deleted -1046193749 1682297042
+ligand 
+\change_inserted -1046193749 1682297046
+receptor-ligand
+\change_deleted -1046193749 1682297056
+host
+\change_inserted -1046193749 1682297056
+-
+\change_deleted -1046193749 1682297056
+ 
+\change_unchanged
+complex system.
+ T
+\change_deleted -1046193749 1682297070
+his assumes t
+\change_unchanged
+he user 
+\change_deleted -1046193749 1682297076
+has already
+\change_inserted -1046193749 1682297078
+must first
+\change_unchanged
+ parameterize
+\change_deleted -1046193749 1682297080
+d
+\change_unchanged
+ the complex with there desired force fields and charge model.
+ Lastly
+\change_inserted -1046193749 1682297092
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1682297096
+AMBER
+\change_inserted -1046193749 1682297097
+Amber
+\change_unchanged
+ masks 
+\change_inserted -1046193749 1682297102
+are used 
+\change_unchanged
+to denote ligand and receptor atoms from the complex parameter file.
 \end_layout
 
 \begin_layout Description
@@ -13818,12 +14285,39 @@ status open
 
 \begin_layout Plain Layout
 complex_parameter_filename
+\change_inserted -1046193749 1682297109
+:str
+\change_unchanged
+
 \end_layout
 
 \end_inset
 
- The path to an AMBER parm7 topology file defines which atoms are bonded
- to each other.
+ The path to an AMBER 
+\change_deleted -1046193749 1682297118
+parm7
+\change_inserted -1046193749 1682297118
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682297118
+parm7
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ topology file
+\change_inserted -1046193749 1682297126
+, which
+\change_unchanged
+ defines which atoms are bonded to each other.
 \end_layout
 
 \begin_layout Description
@@ -13832,21 +14326,54 @@ status open
 
 \begin_layout Plain Layout
 complex_coordinate_filename
+\change_inserted -1046193749 1682297113
+:str
+\change_unchanged
+
 \end_layout
 
 \end_inset
 
- The path to an AMBER coordinate file defines where each atom is located
- on a 3-dimensional coordinate plane.
+ The path to an AMBER 
+\change_inserted -1046193749 1682297133
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682297134
+rst7
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1682297132
+coordinate
+\change_unchanged
+ file
+\change_inserted -1046193749 1682297138
+, which
+\change_unchanged
+ defines where each atom is located on a 3-dimensional coordinate plane.
 \end_layout
 
 \begin_layout Section
+
+\change_deleted -1046193749 1682297159
 AMBER masks
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1682297159
 AMBER masks to denote ligand and receptor atoms from the complex parameter
  file.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -13855,11 +14382,21 @@ status open
 
 \begin_layout Plain Layout
 receptor_mask
+\change_inserted -1046193749 1682297163
+:str
+\change_unchanged
+
 \end_layout
 
 \end_inset
 
- AMBER mask syntax to select receptor atoms
+ A
+\change_deleted -1046193749 1682297167
+MBER
+\change_inserted -1046193749 1682297167
+mber
+\change_unchanged
+ mask syntax to select receptor atoms
 \end_layout
 
 \begin_layout Description
@@ -13868,24 +14405,83 @@ status open
 
 \begin_layout Plain Layout
 ligand_mask
+\change_inserted -1046193749 1682297179
+:str
+\change_unchanged
+
 \end_layout
 
 \end_inset
 
- AMBER mask syntax to select ligand atoms
+ 
+\change_deleted -1046193749 1682297174
+AMBER
+\change_inserted -1046193749 1682297175
+Amber
+\change_unchanged
+ mask syntax to select ligand atoms
 \end_layout
 
 \begin_layout Section
-Workflow Arguments
+
+\change_deleted -1046193749 1682297365
+Workflow
+\change_inserted -1046193749 1682297368
+End-state
+\change_unchanged
+ Arguments
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1682297377
 \begin_inset Formula $ISDDM.py$
 \end_inset
 
- workflow denoted the endstate type of simulation, REMD being the default
- setting but they user can specify there own endstate simulation as well.
- The intermediate argument keywords asks for the general input parameters
+ workflow denoted
+\change_inserted -1046193749 1682297384
+Users must define
+\change_unchanged
+ the end
+\change_inserted -1046193749 1682297202
+-
+\change_unchanged
+state 
+\change_deleted -1046193749 1682297394
+type of 
+\change_unchanged
+simulation
+\change_inserted -1046193749 1682297400
+ to use.
+\change_deleted -1046193749 1682297399
+,
+\change_unchanged
+ REMD 
+\change_deleted -1046193749 1682297403
+being
+\change_inserted -1046193749 1682297404
+is
+\change_unchanged
+ the default setting
+\change_inserted -1046193749 1682297410
+,
+\change_unchanged
+ but 
+\change_deleted -1046193749 1682297412
+they
+\change_unchanged
+ user
+\change_inserted -1046193749 1682297414
+s
+\change_unchanged
+ can specify there own end
+\change_inserted -1046193749 1682297418
+-
+\change_unchanged
+state simulation as well.
+ 
+\change_deleted -1046193749 1682297326
+The intermediate argument keywords asks for the general input parameters
  such as GB (
 \begin_inset Formula $GB^{HCT}$
 \end_inset
@@ -13923,6 +14519,8 @@ literal "false"
 \end_inset
 
 ), scaling restraints and ligand interactions.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -13930,23 +14528,113 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
-endstate_method, dtype:str
+endstate_method
+\change_deleted -1046193749 1682297424
+, dtype
+\change_unchanged
+:str
 \end_layout
 
 \end_inset
 
- Endstate simulation type.
- Default= 
+ End
+\change_inserted -1046193749 1682297427
+-
+\change_unchanged
+state simulation type.
+ 
+\change_inserted -1046193749 1682297451
+The d
+\change_deleted -1046193749 1682297450
+D
+\change_unchanged
+efault
+\change_inserted -1046193749 1682297455
+ setting, 
+\change_deleted -1046193749 1682297448
+=
+\change_unchanged
+ 
+\change_deleted -1046193749 1682297439
+
 \begin_inset Quotes eld
 \end_inset
 
 remd
+\change_inserted -1046193749 1682297435
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682297435
+remd
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1046193749 1682297445
+
 \begin_inset Quotes erd
 \end_inset
 
- endstate simulation would run replica exchange molecular dynamics.
- Or the user can specify to submit there own end state simulation by setting
- value to 0.
+
+\change_inserted -1046193749 1682297463
+,
+\change_unchanged
+ endstate simulation 
+\change_deleted -1046193749 1682297471
+would run
+\change_inserted -1046193749 1682297471
+runs
+\change_unchanged
+ replica exchange molecular dynamics.
+ 
+\change_deleted -1046193749 1682297478
+Or t
+\change_inserted -1046193749 1682297478
+T
+\change_unchanged
+he user can specify 
+\change_deleted -1046193749 1682297499
+to submit there
+\change_inserted -1046193749 1682297500
+their
+\change_unchanged
+ own 
+\change_inserted -1046193749 1682297512
+pre-calculated 
+\change_unchanged
+end
+\change_inserted -1046193749 1682297502
+-
+\change_deleted -1046193749 1682297502
+ 
+\change_unchanged
+state simulation by setting value to 0.
+
+\change_inserted -1046193749 1682297230
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682297538
+TL are there other options? Where are the pre-calculated simulations input?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -13954,12 +14642,20 @@ remd
 status open
 
 \begin_layout Plain Layout
-nthread_complex, dtype:int.
+nthread_complex
+\change_deleted -1046193749 1682297545
+, dtype
+\change_unchanged
+:int.
 \end_layout
 
 \end_inset
 
  Number of processes to run for all complex replicas
+\change_inserted -1046193749 1682297550
+.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -13967,12 +14663,20 @@ nthread_complex, dtype:int.
 status open
 
 \begin_layout Plain Layout
-nthread_receptor, dtype:int.
+nthread_receptor
+\change_deleted -1046193749 1682297574
+, dtype
+\change_unchanged
+:int.
 \end_layout
 
 \end_inset
 
  Number of processes to run for all receptor replicas
+\change_inserted -1046193749 1682297548
+.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -13980,12 +14684,20 @@ nthread_receptor, dtype:int.
 status open
 
 \begin_layout Plain Layout
-nthread_ligand, dtype:int.
+nthread_ligand
+\change_deleted -1046193749 1682297575
+, dtype
+\change_unchanged
+:int.
 \end_layout
 
 \end_inset
 
  Number of processes to run for all ligand replicas
+\change_inserted -1046193749 1682297552
+.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -13993,12 +14705,35 @@ nthread_ligand, dtype:int.
 status open
 
 \begin_layout Plain Layout
-ngroups, dtype:int
+ngroups
+\change_deleted -1046193749 1682297576
+, dtype
+\change_unchanged
+:int
 \end_layout
 
 \end_inset
 
  Specifies number of total groups
+\change_inserted -1046193749 1682297603
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682297610
+TL what are 'groups'?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -14006,7 +14741,11 @@ ngroups, dtype:int
 status open
 
 \begin_layout Plain Layout
-target_temperature, dtype:float.
+target_temperature
+\change_deleted -1046193749 1682297577
+, dtype
+\change_unchanged
+:float.
 \end_layout
 
 \end_inset
@@ -14019,12 +14758,48 @@ target_temperature, dtype:float.
 status open
 
 \begin_layout Plain Layout
-remd_template_mdin, dtype:str.
+remd_template_mdin
+\change_deleted -1046193749 1682297577
+, dtype
+\change_unchanged
+:str.
 \end_layout
 
 \end_inset
 
- Preference template that specifies general input mdin arguments remd simulation.
+ Preference template that specifies general input 
+\change_deleted -1046193749 1682297620
+mdin
+\change_inserted -1046193749 1682297620
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682297620
+mdin
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ arguments 
+\change_inserted -1046193749 1682297624
+for 
+\change_deleted -1046193749 1682297625
+remd
+\change_inserted -1046193749 1682297627
+REMD
+\change_unchanged
+ simulation
+\change_inserted -1046193749 1682297628
+s
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Description
@@ -14032,17 +14807,105 @@ remd_template_mdin, dtype:str.
 status open
 
 \begin_layout Plain Layout
-equilibrate_template_mdin, dtype:str.
+equilibrate_template_mdin
+\change_deleted -1046193749 1682297578
+, dtype
+\change_unchanged
+:str.
 \end_layout
 
 \end_inset
 
- Preference template that specifies general input mdin arguments equilibration
- simulation.
+ Preference template that specifies general input 
+\change_deleted -1046193749 1682297641
+mdin
+\change_inserted -1046193749 1682297641
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682297641
+mdin
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ arguments equilibration simulation.
 \end_layout
 
 \begin_layout Section
-intermediate states arguments
+
+\change_inserted -1046193749 1682297333
+I
+\change_deleted -1046193749 1682297333
+i
+\change_unchanged
+ntermediate 
+\change_inserted -1046193749 1682297338
+S
+\change_deleted -1046193749 1682297338
+s
+\change_unchanged
+tates 
+\change_inserted -1046193749 1682297340
+A
+\change_deleted -1046193749 1682297340
+a
+\change_unchanged
+rguments
+\change_inserted -1046193749 1682297329
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1046193749 1682297330
+The intermediate argument keywords asks for the general input parameters
+ such as GB (
+\begin_inset Formula $GB^{HCT}$
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "hawkinsPairwiseSoluteDescreening1995"
+literal "false"
+
+\end_inset
+
+,
+\begin_inset Formula $GB^{OBC}$
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "onufrievModificationGeneralizedBorn2000"
+literal "false"
+
+\end_inset
+
+,
+\begin_inset Formula $GB-neck2$
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "monganGeneralizedBornModel2007"
+literal "false"
+
+\end_inset
+
+), scaling restraints and ligand interactions.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -14050,12 +14913,30 @@ intermediate states arguments
 status open
 
 \begin_layout Plain Layout
-igb, dtype:int
+igb
+\change_deleted -1046193749 1682297579
+, dtype
+\change_unchanged
+:int
 \end_layout
 
 \end_inset
 
- Type of GB flavor to be used options [
+ 
+\change_deleted -1046193749 1682297681
+Type of 
+\change_unchanged
+GB 
+\change_deleted -1046193749 1682297684
+flavor
+\change_inserted -1046193749 1682297709
+version for all calculation
+\change_deleted -1046193749 1682297713
+ to be used options
+\change_inserted -1046193749 1682297713
+:
+\change_unchanged
+ [
 \begin_inset Formula $GB^{HCT}$
 \end_inset
 
@@ -14092,6 +14973,25 @@ literal "false"
 \end_inset
 
 ]
+\change_inserted -1046193749 1682297722
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682297729
+TL provide numbers for each option
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -14099,14 +14999,46 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
-exponent_conformational_forces, dtype:list[float]
+exponent_conformational_forces
+\change_deleted -1046193749 1682297580
+, dtype
+\change_unchanged
+:list[float]
 \end_layout
 
 \end_inset
 
-: Strength of harmonic conformational restraints are specified by a list
- of integers to calculate powers of 2, such as 
-\begin_inset Formula $2^{-8}=0.00390625$
+
+\change_deleted -1046193749 1682297740
+:
+\change_unchanged
+ Strength of harmonic conformational restraints are specified by a list
+ of integers to calculate powers of 2, 
+\change_deleted -1046193749 1682297762
+such as
+\change_inserted -1046193749 1682297764
+for example
+\change_unchanged
+ 
+\change_inserted -1046193749 1682297829
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682297754
+-8
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ gives a restraint coefficient of 
+\change_unchanged
+
+\begin_inset Formula $\unit[2^{-8}]{kcal/mol}=0.00390625$
 \end_inset
 
  
@@ -14121,13 +15053,19 @@ exponent_conformational_forces, dtype:list[float]
 status open
 
 \begin_layout Plain Layout
-exponent_orientational_forces, dtypelist[float]
+exponent_orientational_forces
+\change_deleted -1046193749 1682297581
+, dtype
+\change_unchanged
+list[float]
 \end_layout
 
 \end_inset
 
 : Strength of harmonic orientational restraints are specified by a list
- of integers to calculate powers of 2, such as 
+ of integers to calculate powers of 2
+\change_deleted -1046193749 1682297810
+, such as 
 \begin_inset Formula $2^{-8}=0.00390625$
 \end_inset
 
@@ -14136,6 +15074,10 @@ exponent_orientational_forces, dtypelist[float]
 \end_inset
 
 .
+\change_inserted -1046193749 1682297810
+.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -14143,14 +15085,48 @@ exponent_orientational_forces, dtypelist[float]
 status open
 
 \begin_layout Plain Layout
-restraint_type, dtype: int
+restraint_type
+\change_deleted -1046193749 1682297583
+, dtype
+\change_unchanged
+: int
 \end_layout
 
 \end_inset
 
- Orientational restraint type.
- default:2.
- Generate orientational based on center of mass of ligand and receptor.
+ Orientational restraint type
+\change_inserted -1046193749 1682297854
+ to generate orientational based on center of mass of ligand and receptor.
+\change_deleted -1046193749 1682297851
+.
+
+\change_unchanged
+ default:
+\change_deleted -1046193749 1682297820
+2
+\change_inserted -1046193749 1682297847
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682297820
+2
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
+ 
+\change_deleted -1046193749 1682297842
+Generate orientational based on center of mass of ligand and receptor.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -14158,12 +15134,35 @@ restraint_type, dtype: int
 status open
 
 \begin_layout Plain Layout
-temperature, dtype: float
+temperature
+\change_deleted -1046193749 1682297584
+, dtype
+\change_unchanged
+: float
 \end_layout
 
 \end_inset
 
  Temperature to run intermediate simulations.
+
+\change_inserted -1046193749 1682297863
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682297877
+TL is this also the target temperature for the REMD calculations?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -14171,12 +15170,22 @@ temperature, dtype: float
 status open
 
 \begin_layout Plain Layout
-charges_lambda_window, dtype: list[float]
+charges_lambda_window
+\change_deleted -1046193749 1682297585
+, dtype
+\change_unchanged
+: list[float]
 \end_layout
 
 \end_inset
 
- Scaling GB external dielectric.
+ 
+\change_deleted -1046193749 1682297885
+Scaling 
+\change_inserted -1046193749 1682297899
+Values to use when scaling the 
+\change_unchanged
+GB external dielectric.
 \end_layout
 
 \begin_layout Standard
