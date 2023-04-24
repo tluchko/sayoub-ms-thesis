@@ -3772,6 +3772,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/entire_system_2.png
 	lyxscale 50
@@ -5757,6 +5758,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/overlap_corrected_15.png
 	lyxscale 50
@@ -6023,6 +6025,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/overlap_corrected_31.png
 	lyxscale 50
@@ -6585,6 +6588,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Workflow-2.pdf
 	width 100text%
@@ -6895,6 +6899,10 @@ ing carboxylate groups at the outer surface, which gave it a negative net
 \end_inset
 
  
+\change_inserted -1046193749 1682284170
+(
+\change_unchanged
+
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:ABFE-host-guest-systems"
@@ -6904,9 +6912,28 @@ noprefix "false"
 
 \end_inset
 
-d.
- ABFEs of 20 guests were calculated OAH, where 18 guest had a net charge
- of 
+d
+\change_inserted -1046193749 1682284173
+)
+\change_unchanged
+.
+ ABFEs of 2
+\change_inserted -1046193749 1682284262
+3
+\change_deleted -1046193749 1682284262
+0
+\change_unchanged
+ guests were calculated OAH
+\change_inserted -1046193749 1682284271
+.
+\change_deleted -1046193749 1682284270
+, where
+\change_unchanged
+ 18 guest
+\change_inserted -1046193749 1682284272
+s
+\change_unchanged
+ had a net charge of 
 \begin_inset Formula $-1e$
 \end_inset
 
@@ -6915,23 +6942,116 @@ d.
 \end_inset
 
 .
- The calculated statistics of computed free energies had a deviation (
+ 
+\change_inserted -1046193749 1682284334
+When compared to experiment, 
+\change_deleted -1046193749 1682284335
+The
+\change_unchanged
+ calculated 
+\change_deleted -1046193749 1682284340
+statistics of computed
+\change_inserted -1046193749 1682284340
+binding
+\change_unchanged
+ free energies had a 
+\change_deleted -1046193749 1682284357
+deviation
+\change_inserted -1046193749 1682284394
+smaller RMSE
+\change_unchanged
+ 
+\change_inserted -1046193749 1682284413
+than for WP6 and CB7 
+\change_unchanged
+(
 \begin_inset Formula $\text{RMSE}=\unit[2.9]{kcal/mol}$
 \end_inset
 
-) and poor correlation (
+) 
+\change_deleted -1046193749 1682284418
+and
+\change_inserted -1046193749 1682284418
+but
+\change_unchanged
+ poor correlation (
 \begin_inset Formula $R^{2}=0.07$
 \end_inset
 
 ).
- The poor correlation is due to the two cationic guest molecules (trz,hxa)
- which if omitted results in decent correlation of 
+ The poor correlation is due 
+\change_inserted -1046193749 1682284452
+in large part 
+\change_unchanged
+to the two cationic guest molecules (trz,hxa)
+\change_inserted -1046193749 1682284477
+.
+ 
+\change_deleted -1046193749 1682284472
+ which i
+\change_inserted -1046193749 1682284472
+I
+\change_unchanged
+f omitted
+\change_inserted -1046193749 1682284465
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1682284492
+results in decent
+\change_inserted -1046193749 1682284493
+the
+\change_unchanged
+ correlation 
+\change_deleted -1046193749 1682284496
+of
+\change_inserted -1046193749 1682284497
+improves to
+\change_unchanged
+ 
 \begin_inset Formula $R^{2}=0.54$
 \end_inset
 
 .
- Our mean average error of binding affinity for OAH was 2.2kcal/mol with
- and MSE of 0.6kcal/mol.
+ 
+\change_inserted -1046193749 1682284518
+Including all data, 
+\change_deleted -1046193749 1682284520
+Our
+\change_inserted -1046193749 1682284521
+the
+\change_unchanged
+ mean average error of binding affinity for OAH was 
+\change_deleted -1046193749 1682284527
+2.2kcal/mol
+\change_inserted -1046193749 1682284527
+
+\begin_inset Formula $\unit[2.2]{kcal/mol}$
+\end_inset
+
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1682284547
+with 
+\change_unchanged
+and 
+\change_inserted -1046193749 1682284573
+the MSE was 
+\change_deleted -1046193749 1682284568
+MSE of
+\change_unchanged
+ 
+\change_deleted -1046193749 1682284578
+0.6kcal/mol
+\change_inserted -1046193749 1682284578
+
+\begin_inset Formula $\unit[0.6]{kcal/mol}$
+\end_inset
+
+
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Subsection
@@ -6939,6 +7059,8 @@ d.
 \end_inset
 
 -cyclodextrins
+\change_deleted -1046193749 1682284632
+
 \series medium
 
 \begin_inset Note Note
@@ -6952,6 +7074,8 @@ TL define this acronym earlier if you are going to use
 
 \end_inset
 
+
+\change_unchanged
 
 \end_layout
 
@@ -6969,7 +7093,9 @@ We calculated the binding free energies of 38 guests, with net charges varying
 \begin_inset Formula $\alpha/\beta$
 \end_inset
 
-–cyclodextrins .
+–cyclodextrins
+\change_deleted -1046193749 1682287718
+ .
  
 \begin_inset Note Note
 status open
@@ -6981,6 +7107,8 @@ TL inconsistent abbreviations.
 
 \end_inset
 
+
+\change_unchanged
 , which had neutral net charges.
  Binding free energy metrics for the two molecules were similar (
 \begin_inset CommandInset ref
@@ -7005,9 +7133,72 @@ noprefix "false"
 \begin_inset Formula $\alpha$
 \end_inset
 
--cyclodextrin (ACD) had RMSE= 1.6 kcal/mol compared to experiment.
- ACD had slope of 0.8 with MAE and MSE of 1.4 and 0.07 kcal/mol, while BCD
- had a slope of 1.5 and an MAE and MSE of 1.4 and -0.7 kcal/mol.
+-cyclodextrin (ACD) had 
+\change_deleted -1046193749 1682287752
+RMSE= 1.6 kcal/mol
+\change_inserted -1046193749 1682287753
+
+\begin_inset Formula $\text{RMSE}=\unit[1.6]{kcal/mol}$
+\end_inset
+
+
+\change_unchanged
+ compared to experiment.
+ ACD had slope of 0.8 with 
+\change_deleted -1046193749 1682287840
+MAE
+\change_inserted -1046193749 1682287840
+
+\begin_inset Formula $\text{MAE}=\unit[1.4]{kcal/mol}$
+\end_inset
+
+
+\change_unchanged
+ and 
+\change_deleted -1046193749 1682287858
+MSE of 1.4 and
+\change_unchanged
+ 
+\change_deleted -1046193749 1682287806
+0.07 kcal/mol
+\change_inserted -1046193749 1682287888
+
+\begin_inset Formula $\text{MSE}=\unit[0.07]{kcal/mol}$
+\end_inset
+
+;
+\change_deleted -1046193749 1682287882
+,
+\change_unchanged
+ while BCD had a slope of 1.5 and 
+\change_deleted -1046193749 1682287903
+an
+\change_unchanged
+ 
+\change_deleted -1046193749 1682287927
+MAE
+\change_inserted -1046193749 1682287927
+
+\begin_inset Formula $\text{MAE}=\unit[1.4]{kcal/mol}$
+\end_inset
+
+
+\change_unchanged
+ and 
+\change_deleted -1046193749 1682287955
+MSE
+\change_unchanged
+ 
+\change_deleted -1046193749 1682287960
+of 1.4 and -0.7 kcal/mol
+\change_inserted -1046193749 1682287960
+
+\begin_inset Formula $\text{MSE}=\unit[-0.7]{kcal/mol}$
+\end_inset
+
+
+\change_unchanged
+.
  Interestingly, we observed a stronger correlation between calculated and
  experimental for BCD (
 \begin_inset Formula $R^{2}=0.65$
@@ -7025,15 +7216,32 @@ noprefix "false"
 LatexCommand formatted
 reference "fig:ABFE-host-guest-systems"
 plural "false"
-caps "false"
+caps "true"
 noprefix "false"
 
 \end_inset
 
 e-f shows a clear bias in the error of the ABFE due to ligand charges, which
- have been similar trend in the other host guest systems.
- Here, we see the ABFEs for the negatively charged ligands are underestimating
- and positively charge ligands are overestimating the binding affinity.
+ 
+\change_deleted -1046193749 1682288074
+have been similar trend
+\change_inserted -1046193749 1682288076
+was also seen
+\change_unchanged
+ in the other host guest systems.
+ Here, we see the ABFEs for the negatively charged ligands 
+\change_inserted -1046193749 1682288145
+were overestimated
+\change_deleted -1046193749 1682288137
+are underestimating
+\change_unchanged
+ and positively charge ligands 
+\change_deleted -1046193749 1682288154
+are overestimating the binding affinity
+\change_inserted -1046193749 1682288158
+were underestimated
+\change_unchanged
+.
  These results suggest significant bias due to ligand charge.
 \end_layout
 
@@ -7046,7 +7254,7 @@ Calculations of binding in all host guest systems
 LatexCommand formatted
 reference "fig:ABFE-host-guest-systems"
 plural "false"
-caps "false"
+caps "true"
 noprefix "false"
 
 \end_inset
@@ -7057,13 +7265,34 @@ a shows the scatter plot of all the systems we tested.
 LatexCommand formatted
 reference "tab:host-guest-metrics"
 plural "false"
-caps "false"
+caps "true"
 noprefix "false"
 
 \end_inset
 
-shows the computed statistics for the combine dataset have an RMSE of 4.1
- and correlation of 0.76.
+
+\change_inserted -1046193749 1682288389
+ 
+\change_unchanged
+shows 
+\change_inserted -1046193749 1682288402
+that 
+\change_unchanged
+the 
+\change_deleted -1046193749 1682288407
+computed
+\change_unchanged
+ statistics for the combine
+\change_inserted -1046193749 1682288413
+d
+\change_unchanged
+ dataset 
+\change_deleted -1046193749 1682288416
+have
+\change_inserted -1046193749 1682288417
+had
+\change_unchanged
+ an RMSE of 4.1 and correlation of 0.76.
  In all the test cases, we clearly see the ligand net charge strongly affects
  the calculated ABFEs.
  This may be due to the fact that GB does not naturally handle charge hydration
@@ -7088,9 +7317,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="8">
-<features tabularvalignment="middle">
+<features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -7708,6 +7938,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Results.png
 	lyxscale 50
@@ -7735,17 +7966,43 @@ Calculated absolute binding free energies
 
 \series default
  compared with experiment for (a) all host-guest pairs, (b) CB7, (c) WP6,
- (d) octa-acid and (e) 
+ (d) octa-acid
+\change_deleted -1046193749 1682288259
+ and
+\change_unchanged
+ (e) 
 \begin_inset Formula $\alpha$
 \end_inset
 
+
+\change_deleted -1046193749 1682288265
 /
 \begin_inset Formula $\beta$
 \end_inset
 
--cyclodextrin..
+
+\change_unchanged
+-cyclodextrin
+\change_inserted -1046193749 1682288279
+ and (f) 
+\begin_inset Formula $\beta$
+\end_inset
+
+-cyclodextrin
+\change_deleted -1046193749 1682288268
+.
+\change_unchanged
+.
  The black solid line is the experimental identity.
- The blue solid indicates the linear regression fitting for host guest systems.
+ The 
+\change_deleted -1046193749 1682288308
+blue
+\change_unchanged
+ solid 
+\change_inserted -1046193749 1682288317
+green line 
+\change_unchanged
+indicates the linear regression fitting for host guest systems.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -7787,6 +8044,10 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1682289067
+,
+\change_unchanged
  and we have observed a bias in predicted ABFEs associated with ligand charge,
  we applied a linear hydration asymmetry correction,
 \begin_inset Formula 
@@ -7796,8 +8057,25 @@ literal "false"
 
 \end_inset
 
-where a is the slope and intercept b of best fitting parameters by plotting
- the experimental as a function of 
+where 
+\change_deleted -1046193749 1682289074
+a
+\change_inserted -1046193749 1682289162
+
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ are fit parameters.
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1682289228
+is the slope and intercept b of best fitting parameters by plotting the
+ experimental as a function of 
 \begin_inset Formula $\Delta\Delta G_{corrected}=\Delta G_{exp}-\Delta G_{GB}^{bind}$
 \end_inset
 
@@ -7805,7 +8083,7 @@ where a is the slope and intercept b of best fitting parameters by plotting
  by the ligand net charge (
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "table:fitted-parameters"
+reference "tab:fitted-parameters"
 plural "false"
 caps "false"
 noprefix "false"
@@ -7813,6 +8091,8 @@ noprefix "false"
 \end_inset
 
 ).
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -7822,14 +8102,15 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="3">
-<features tabularvalignment="middle">
+<features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7838,7 +8119,7 @@ Charge
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7847,7 +8128,7 @@ a
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7989,7 +8270,7 @@ Hydration asymmetry linear corrections fitted parameters.
  
 \begin_inset CommandInset label
 LatexCommand label
-name "table:fitted-parameters"
+name "tab:fitted-parameters"
 
 \end_inset
 
@@ -8007,8 +8288,33 @@ name "table:fitted-parameters"
 \end_layout
 
 \begin_layout Standard
-We see that the correction provides an overall improvement for all host
- system calculations (
+
+\change_inserted -1046193749 1682289234
+We applied four separate corrections, where host-guest pairs were grouped
+ by the ligand net charge (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:fitted-parameters"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ 
+\change_unchanged
+We see that the correction 
+\change_deleted -1046193749 1682289384
+provides an
+\change_inserted -1046193749 1682289385
+improved
+\change_deleted -1046193749 1682289390
+ overall improvement
+\change_inserted -1046193749 1682289395
+ all metrics
+\change_unchanged
+ for all host system calculations (
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:HCA"
@@ -8018,28 +8324,50 @@ noprefix "false"
 
 \end_inset
 
-).
- For the full dataset, the correlation coefficient was improved to 0.87 and
- the RMSE is reduced to 1.06 
-\begin_inset Formula $\text{kcal/mol}$
-\end_inset
 
- (
+\change_inserted -1046193749 1682289510
+ and 
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "table:host-guest-metrics-corrected"
+reference "tab:host-guest-metrics-corrected"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
+
+\change_unchanged
 ).
+ For the full dataset, the correlation coefficient was improved to 0.87 and
+ the RMSE is reduced to 1.06 
+\begin_inset Formula $\text{kcal/mol}$
+\end_inset
+
+
+\change_deleted -1046193749 1682289519
+ (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:host-guest-metrics-corrected"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\change_unchanged
+.
  Other metrics are similarly improved.
  The correction depends only on ligand charge and is independent of host
  charge.
  One reason why host charge appears irrelevant is that both WP6 and OAH
- charge carbonyl atoms were solvent exposed when the ligand was bound.
+ charge carbonyl atoms were solvent exposed when the ligand was bound
+\change_inserted -1046193749 1682289588
+, so there was no change in hydration for these charge groups
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
@@ -8049,6 +8377,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/correction_allData.pdf
 	width 100text%
@@ -8098,9 +8427,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="7">
-<features tabularvalignment="middle">
+<features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -8185,7 +8515,7 @@ RMSE
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8194,7 +8524,7 @@ All
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8203,7 +8533,7 @@ All
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8212,7 +8542,7 @@ All
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8221,7 +8551,7 @@ All
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8230,7 +8560,7 @@ All
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8239,7 +8569,7 @@ All
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8586,8 +8916,12 @@ WP6
 
 \begin_layout Plain Layout
 Comparison of all host guest systems after the application of 
+\change_inserted -1046193749 1682289650
+equation 
+\change_unchanged
+
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "eq:CHA-correction"
 plural "false"
 caps "false"
@@ -8595,24 +8929,6 @@ noprefix "false"
 
 \end_inset
 
-
-\change_inserted -1046193749 1682204126
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1682204134
-TL getting ?? in the PDF
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 .
  Units for 
 \family roman
@@ -8651,7 +8967,7 @@ RMSE_std,	RMSE
  are in kcal/mol.
 \begin_inset CommandInset label
 LatexCommand label
-name "table:host-guest-metrics-corrected"
+name "tab:host-guest-metrics-corrected"
 
 \end_inset
 
@@ -8690,9 +9006,36 @@ ISDDM.py
 
 \end_inset
 
- is implemented in parallel, users are able to employ multiple processors
- to speedup ABFE calculations.
- To run jobs in parallel, 
+ 
+\change_inserted -1046193749 1682289728
+utilizes the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682289719
+Toil
+\end_layout
+
+\end_inset
+
+ workflow management system 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "vivianToilEnablesReproducible2017"
+literal "false"
+
+\end_inset
+
+
+\change_deleted -1046193749 1682289735
+is implemented in parallel
+\change_unchanged
+, users are able to employ multiple processors to speedup ABFE calculations.
+ 
+\change_deleted -1046193749 1682289747
+To run jobs in parallel, 
 \begin_inset Flex Code
 status open
 
@@ -8721,6 +9064,8 @@ literal "false"
 \end_inset
 
 , which is a workflow management system.
+
+\change_unchanged
  Since all intermediate states (3-7) are independent, all MD simulations,
  post-analysis calculations and MBAR computations can be parallelized over
  the available processors identified by the user.
@@ -8729,13 +9074,34 @@ literal "false"
 LatexCommand formatted
 reference "fig:-processor-scaling"
 plural "false"
-caps "false"
+caps "true"
 noprefix "false"
 
 \end_inset
 
-, shows the processor time to complete the entire workflow protocol for
- the 150-atom CB7-C1 complex system.
+
+\change_deleted -1046193749 1682289843
+,
+\change_unchanged
+ shows the processor time to complete the entire workflow
+\change_inserted -1046193749 1682289951
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682289968
+TL does this include the REMD of the end-states?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ protocol for the 150-atom CB7-C1 complex system.
  The automation application was able to achieve near perfect scaling as
  the number of processes increases.
 \end_layout
@@ -8754,6 +9120,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/scaling.pdf
 	width 100text%
@@ -8803,10 +9170,46 @@ ISDDM.py
 
 
 \change_unchanged
- processor scaling performance for MM-GBSA workflow protocol used in this
- dissertation on 150-atom CB7-C1 complex.
- The y-axis are times required for entire workflow to finish and x-axis
- are the number of processors used.
+ processor scaling performance for 
+\change_deleted -1046193749 1682289899
+MM-GBSA workflow protocol used in this dissertation on
+\change_inserted -1046193749 1682289899
+the
+\change_unchanged
+ 150-atom CB7-C1 complex.
+ The 
+\change_deleted -1046193749 1682289907
+y
+\change_inserted -1046193749 1682289907
+
+\begin_inset Formula $y$
+\end_inset
+
+
+\change_unchanged
+-axis 
+\change_inserted -1046193749 1682289918
+is the 
+\change_deleted -1046193749 1682289916
+are
+\change_unchanged
+ times required for entire workflow to finish and 
+\change_deleted -1046193749 1682289928
+x
+\change_inserted -1046193749 1682289928
+
+\begin_inset Formula $x$
+\end_inset
+
+
+\change_unchanged
+-axis 
+\change_deleted -1046193749 1682289936
+are
+\change_inserted -1046193749 1682289936
+is
+\change_unchanged
+ the number of processors used.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:-processor-scaling"
@@ -8858,6 +9261,10 @@ ISDDM.py
 
  workflow performed well for CB7 system compared to other submission on
  to the SAMPL4 challenge
+\change_inserted -1046193749 1682290100
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "muddanaSAMPL4HostGuest2014a"
@@ -8866,8 +9273,27 @@ literal "false"
 \end_inset
 
 .
- If our uncorrected method were submitted, it would rank as one of the top
- performers among the challenge submissions (
+ If our uncorrected 
+\change_deleted -1046193749 1682290051
+method
+\change_inserted -1046193749 1682290052
+results
+\change_unchanged
+ were submitted, 
+\change_inserted -1046193749 1682290055
+they
+\change_deleted -1046193749 1682290054
+it
+\change_unchanged
+ would 
+\change_inserted -1046193749 1682290061
+have 
+\change_unchanged
+rank
+\change_inserted -1046193749 1682290063
+ed
+\change_unchanged
+ as one of the top performers among the challenge submissions (
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "tab:Predictions-from-SAMPL4"
@@ -8877,14 +9303,47 @@ noprefix "false"
 
 \end_inset
 
-) and our corrected results would out perform all entries.Our uncorrected
- Pearson correlation(
+) and our corrected results would
+\change_inserted -1046193749 1682290073
+ have
+\change_unchanged
+ out perform
+\change_inserted -1046193749 1682290076
+ed
+\change_unchanged
+ all entries.
+
+\change_inserted -1046193749 1682290146
+ Only two other methods matched o
+\change_deleted -1046193749 1682290145
+O
+\change_unchanged
+ur uncorrected Pearson correlation
+\change_inserted -1046193749 1682290124
+ 
+\change_unchanged
+(
 \begin_inset Formula $R^{2}=0.78$
 \end_inset
 
-) where only two methods had match ours.
- The first being method was RRHO rigid rotor harmonic oscillator approximation
+)
+\change_inserted -1046193749 1682290318
+:
+\change_unchanged
  
+\change_deleted -1046193749 1682290156
+where only two methods had match ours.
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1682290312
+The first being method was
+\change_unchanged
+ 
+\change_inserted -1046193749 1682290264
+the 
+\change_unchanged
+RRHO rigid rotor harmonic oscillator approximation 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "grimmeSupramolecularBindingThermodynamics2012"
@@ -8892,33 +9351,227 @@ literal "false"
 
 \end_inset
 
-, which employed COSMO-RS(conductor-like screening model for real solvents)
- and OST (orthogonal space tempering) with TIP3P-MOD(transferable interaction
- potential three-point).
+, which employed
+\change_inserted -1046193749 1682290279
+ the
+\change_unchanged
+ COSMO-RS
+\change_inserted -1046193749 1682290280
+ 
+\change_unchanged
+(conductor-like screening model for real solvents) 
+\change_inserted -1046193749 1682290324
+solvent model, 
+\change_unchanged
+and 
+\change_inserted -1046193749 1682290327
+the 
+\change_unchanged
+OST (orthogonal space tempering) with TIP3P-MOD
+\change_inserted -1046193749 1682290332
+ 
+\change_unchanged
+(transferable interaction potential three-point).
  It should be noted that both these methods are significantly more computational
- demanding where COSMO-RS starts with a quantum chemical continuum solvation
- calculations and OST method implements explicit solvation model.
- However all the other metrics of the uncorrected method yields better results
- by comparison ahead of these top performers.
+ demanding
+\change_inserted -1046193749 1682290372
+,
+\change_unchanged
+ where COSMO-RS 
+\change_deleted -1046193749 1682290392
+starts with a
+\change_inserted -1046193749 1682290394
+utilizes
+\change_unchanged
+ quantum chemical 
+\change_deleted -1046193749 1682290384
+continuum solvation
+\change_unchanged
+ calculations
+\change_inserted -1046193749 1682290400
+,
+\change_unchanged
+ and
+\change_inserted -1046193749 1682290397
+ the
+\change_unchanged
+ OST method 
+\change_deleted -1046193749 1682290405
+implements
+\change_inserted -1046193749 1682290408
+employs
+\change_unchanged
+ 
+\change_inserted -1046193749 1682290411
+an 
+\change_unchanged
+explicit solv
+\change_inserted -1046193749 1682290416
+ent
+\change_deleted -1046193749 1682290415
+ation
+\change_unchanged
+ model.
+ However
+\change_inserted -1046193749 1682290499
+,
+\change_unchanged
+ all the other metrics of the uncorrected method
+\change_deleted -1046193749 1682290508
+ yields
+\change_inserted -1046193749 1682290509
+ are
+\change_unchanged
+ better
+\change_inserted -1046193749 1682290517
+ than for
+\change_deleted -1046193749 1682290512
+ results
+\change_unchanged
+ 
+\change_deleted -1046193749 1682290448
+by comparison ahead of these
+\change_inserted -1046193749 1682290456
+ these two
+\change_unchanged
+ 
+\change_deleted -1046193749 1682290458
+top performers
+\change_inserted -1046193749 1682290459
+methods
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
-There are two methods that use Bennet acceptance ratio (BAR) method which
- evaluates free energy differences between two states rather all states
- compared to MBAR.The two submission that used BAR both used atomic multipole
- optimized energetics for biomolecular simulation (AMOEBA) force field with
- explicit solvent.
- Both of there correlation and slope are identical with values of 1.3 and
- 0.6 respectively.
- However when comparing our uncorrected method we see an overall better
- improvements.
+
+\change_deleted -1046193749 1682290553
+There are two
+\change_inserted -1046193749 1682290555
+Two
+\change_unchanged
+ methods 
+\change_deleted -1046193749 1682290558
+that
+\change_unchanged
+ use
+\change_inserted -1046193749 1682290560
+d
+\change_unchanged
+ Bennet acceptance ratio (BAR) method
+\change_inserted -1046193749 1682290563
+,
+\change_unchanged
+ which evaluates free energy differences between two states 
+\change_inserted -1046193749 1682290585
+at a time, 
+\change_unchanged
+rather 
+\change_inserted -1046193749 1682290571
+than 
+\change_unchanged
+all states 
+\change_deleted -1046193749 1682290594
+compared to
+\change_inserted -1046193749 1682290596
+as done by
+\change_unchanged
+ MBAR.
+
+\change_inserted -1046193749 1682290598
+ 
+\change_unchanged
+The two submission that used BAR both used atomic multipole optimized energetics
+ for biomolecular simulation (AMOEBA) force field with explicit solvent.
+ Both 
+\change_deleted -1046193749 1682290655
+of there
+\change_inserted -1046193749 1682290657
+had a
+\change_unchanged
+ 
+\change_deleted -1046193749 1682290701
+correlation
+\change_inserted -1046193749 1682290702
+slope
+\change_unchanged
+ 
+\change_inserted -1046193749 1682290662
+of 1.3
+\change_deleted -1046193749 1682290759
+and slope are identical with values of 1.3 and 0.6 respectively
+\change_unchanged
+.
+ However
+\change_inserted -1046193749 1682290680
+,
+\change_unchanged
+ 
+\change_deleted -1046193749 1682290767
+when comparing 
+\change_unchanged
+our uncorrected method 
+\change_inserted -1046193749 1682290797
+had a better slope, 
+\begin_inset Formula $\text{RMSE}_{o}$
+\end_inset
+
+ and 
+\begin_inset Formula $\text{RMSE}_{r}$
+\end_inset
+
+
+\change_deleted -1046193749 1682290828
+we see an overall better improvements
+\change_inserted -1046193749 1682290855
+ than these methods
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
-A total of 5 entires use an implicit solvent model and among these methods
- we outperformed all 5 of them.
- The RRHO/COSMO and M2/PBSA are more detailed predecessor than GBSA solvent.
+A total of 
+\change_deleted -1046193749 1682290865
+5
+\change_inserted -1046193749 1682290866
+five
+\change_unchanged
+ entires use
+\change_inserted -1046193749 1682290874
+d
+\change_unchanged
+ an implicit solvent model
+\change_inserted -1046193749 1682290892
+,
+\change_unchanged
+ and among these methods
+\change_inserted -1046193749 1682290895
+,
+\change_unchanged
+ we outperformed all 
+\change_inserted -1046193749 1682290902
+five
+\change_deleted -1046193749 1682290901
+5
+\change_unchanged
+ of them.
+ The 
+\change_deleted -1046193749 1682290955
+RRHO/
+\change_unchanged
+COSMO and 
+\change_deleted -1046193749 1682290959
+M2/
+\change_unchanged
+PBSA 
+\change_inserted -1046193749 1682291003
+solve the Poisson equation, which GB provides an analytic approximation
+ of
+\change_deleted -1046193749 1682291028
+are more detailed predecessor than GBSA solvent.
  Where our method seemed to outperform all the implicit applicants.
+
+\change_unchanged
  Explicit solvent models which are considered a more detailed models seemed
  to varied with correlations(
 \begin_inset Formula $R^{2}$
@@ -8938,12 +9591,33 @@ A total of 5 entires use an implicit solvent model and among these methods
 \end_inset
 
  of 2.8 kcal/mol.
+
+\change_inserted -1046193749 1682291035
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682291074
+TL This sentence is about explicit solvents and doesn't belong here.
+ There is not much to this paragraph overall.
+ Consider deleting it.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
 The final three entires in 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "tab:Predictions-from-SAMPL4"
 plural "false"
 caps "false"
@@ -8951,7 +9625,31 @@ noprefix "false"
 
 \end_inset
 
-are published retrospective studies, using QM-VM2 method 
+
+\change_inserted -1046193749 1682291089
+ 
+\change_unchanged
+are
+\change_deleted -1046193749 1682291436
+ published
+\change_unchanged
+ retrospective studies
+\change_inserted -1046193749 1682291445
+ that
+\change_deleted -1046193749 1682291444
+,
+\change_unchanged
+ us
+\change_inserted -1046193749 1682291448
+ed
+\change_deleted -1046193749 1682291447
+ing
+\change_unchanged
+ 
+\change_inserted -1046193749 1682291211
+three variations on the 
+\change_unchanged
+QM-VM2 method 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "xuComputationHostGuest2021"
@@ -8959,16 +9657,38 @@ literal "false"
 
 \end_inset
 
-which presented three approaches that utilizes quantum mechanics with implicit
- solvent.
+
+\change_inserted -1046193749 1682291103
+, 
+\change_unchanged
+which
+\change_deleted -1046193749 1682291417
+ presented three approaches that
+\change_unchanged
+ utilizes quantum mechanics with implicit solvent.
  QM-VM2 restricted Hartree-Fock (RHF-D3) and QM-VM2(TPSS-D3) have an improved
- slope, but relatively the identical metrics compared to our uncorrected
- method.
+ slope, but 
+\change_deleted -1046193749 1682291500
+relatively the identical
+\change_inserted -1046193749 1682291500
+similar
+\change_unchanged
+ metrics compared to our uncorrected method.
  The quantum mechanical method should provide a more accurate model but
- is computationally en tensive.
- However we see our faster sampling uncorrected method is achieving same
- level of accuracy with quantum mechanical method and is promising in virtual
- screening campaigns.
+ is computationally 
+\change_deleted -1046193749 1682291521
+en 
+\change_inserted -1046193749 1682291517
+in
+\change_unchanged
+tensive.
+ However
+\change_inserted -1046193749 1682291525
+,
+\change_unchanged
+ we see our faster sampling uncorrected method is achieving same level of
+ accuracy with quantum mechanical method and is promising in virtual screening
+ campaigns.
 \end_layout
 
 \begin_layout Standard
@@ -8978,15 +9698,16 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="26" columns="8">
-<features tabularvalignment="middle">
+<features rotate="90" booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
@@ -10855,7 +11576,7 @@ QM-VM2(RHF-D3)**
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10864,7 +11585,7 @@ QM-VM2(TPSS-D3)**
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10873,7 +11594,7 @@ QM-VM2(TPSS-D3)**
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10882,7 +11603,7 @@ QM-VM2(TPSS-D3)**
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10891,7 +11612,7 @@ QM-VM2(TPSS-D3)**
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10900,7 +11621,7 @@ QM-VM2(TPSS-D3)**
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10909,7 +11630,7 @@ QM-VM2(TPSS-D3)**
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10918,7 +11639,7 @@ QM-VM2(TPSS-D3)**
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10940,7 +11661,9 @@ QM-VM2(TPSS-D3)**
 
 \begin_layout Plain Layout
 Predictions from SAMPL4 CB7 dataset.
- All entries were from the SAMPL4 CB7 dataset 
+ All entries were from the SAMPL4 CB7 dataset
+\change_deleted -1046193749 1682291560
+ 
 \begin_inset Note Note
 status open
 
@@ -10957,6 +11680,8 @@ literal "false"
 
 \end_inset
 
+
+\change_unchanged
 .
  Units are in kcal/mol.
 \begin_inset CommandInset label
@@ -10980,12 +11705,73 @@ name "tab:Predictions-from-SAMPL4"
 
 \begin_layout Subsection
 WP6 SAMPL9 Comparison
+\change_inserted -1046193749 1682294386
+
 \end_layout
 
 \begin_layout Standard
-There were 5 rank submissions for WP6 dataset from SAMPL9 challenge.
+
+\change_inserted -1046193749 1682294388
+\begin_inset Note Note
+status open
+
+\begin_layout Description
+
+\change_inserted -1046193749 1682294557
+TL you need to update this section.
+ You wrote it for five entries but now you have eight.
+ I did a bit here but more needs to be done.
+ 
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -1046193749 1682294588
+TL Also, you don't mention 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+.
+ Several of the methods with the lowest RMSE had terrible 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ values.
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -1046193749 1682294659
+TL The MAE for your corrected results looks wrong.
+ There is no way it can be this large.
+ In general, MSE<MAE < RMSE.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+There were 
+\change_deleted -1046193749 1682293962
+5
+\change_inserted -1046193749 1682293964
+eight
+\change_unchanged
+ 
+\change_deleted -1046193749 1682293967
+rank
+\change_unchanged
+ submissions for WP6 dataset from SAMPL9 challenge.
  As the official results have not been published at this time, the submissions
- were taken from Ref.
+ were taken from 
+\change_deleted -1046193749 1682293991
+Ref.
  
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -10994,10 +11780,40 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1682294009
+the GitHub page 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682294012
+TL cite
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 .
- Looking at the RMSE to rank criteria of submissions from 
+ Looking 
+\change_inserted -1046193749 1682294196
+first 
+\change_unchanged
+at the 
+\change_deleted -1046193749 1682294208
+RMSE to rank criteria of submissions from
+\change_unchanged
+ 
+\change_inserted -1046193749 1682294238
+RMSE (
+\change_unchanged
+
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "tab:Predictions-from-SAMPL9"
 plural "false"
 caps "false"
@@ -11005,11 +11821,49 @@ noprefix "false"
 
 \end_inset
 
-, the machine learning method which had the smallest RMSE ~2 kcal/mol and
- performed the best.
- The second top performer was a extended linear interaction energy (ELIE)
- with ~2.5kcal/mol.
- The other three methods were had an average RMSE of about ~3kcal/mol.
+
+\change_inserted -1046193749 1682294240
+)
+\change_unchanged
+, the machine learning method which had the smallest RMSE
+\change_inserted -1046193749 1682294281
+ (
+\begin_inset Formula $\unit[1.97]{kcal/mol}$
+\end_inset
+
+)
+\change_unchanged
+ 
+\change_deleted -1046193749 1682294261
+~2 kcal/mol and performed the best
+\change_inserted -1046193749 1682294290
+, followed by
+\change_deleted -1046193749 1682294297
+.
+ The second top performer was a
+\change_inserted -1046193749 1682294311
+ the
+\change_unchanged
+ extended linear interaction energy (ELIE) 
+\change_inserted -1046193749 1682294308
+method 
+\change_unchanged
+with 
+\change_inserted -1046193749 1682294316
+
+\begin_inset Formula $\text{RMSE}=\unit[2.5]{kcal/mol}$
+\end_inset
+
+
+\change_deleted -1046193749 1682294341
+~2.5kcal/mol
+\change_unchanged
+.
+ 
+\change_deleted -1046193749 1682294353
+The other three methods were had an average RMSE of about ~3kcal/mol.
+
+\change_unchanged
  The other three methods were had an average RMSE of about ~3kcal/mol.
  As we compared our RMSE with our uncorrected 
 \begin_inset Formula $\Delta G_{gb}^{bind}$
@@ -11025,12 +11879,37 @@ noprefix "false"
 
 \end_inset
 
-with RMSE 6.6kcal/mol having the largest deviation from the rank submissions.The
- trained MM/PBSA ELIE method is very similar to end-point calculations using
- an implicit solvent model GBSA.However this method required some system-specific
- training step sharing some similarities with ML based method and it is
- not fully physics based and is not directly transferable to other systems,
- especially for targets without known binding affinities
+with RMSE 6.6kcal/mol having the largest deviation from the rank submissions.
+
+\change_inserted -1046193749 1682294436
+ 
+\change_unchanged
+The trained MM/PBSA ELIE method is very similar to end-point calculations
+ using an implicit solvent model GBSA.
+
+\change_inserted -1046193749 1682294444
+ 
+\change_unchanged
+However this method required some system-specific training step
+\change_inserted -1046193749 1682294452
+,
+\change_unchanged
+ sharing some similarities with ML based method
+\change_inserted -1046193749 1682294456
+,
+\change_unchanged
+ and it is not fully physics based 
+\change_deleted -1046193749 1682294471
+and is not
+\change_inserted -1046193749 1682294472
+nor
+\change_unchanged
+ directly transferable to other systems, especially for targets without
+ known binding affinities
+\change_inserted -1046193749 1682294478
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "liuComprehensiveEvaluationEndpoint2022"
@@ -11050,16 +11929,17 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="11" columns="5">
-<features tabularvalignment="middle">
+<features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11068,7 +11948,7 @@ Method
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11077,7 +11957,7 @@ RMSE
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11089,7 +11969,7 @@ RMSE
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11098,18 +11978,22 @@ MAE
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-ME
+M
+\change_inserted -1046193749 1682294655
+S
+\change_unchanged
+E
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11118,7 +12002,7 @@ Ours-GBSA
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11127,7 +12011,7 @@ Ours-GBSA
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11136,7 +12020,7 @@ Ours-GBSA
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11145,7 +12029,7 @@ Ours-GBSA
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11156,7 +12040,7 @@ Ours-GBSA
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11169,7 +12053,7 @@ Ours-GBSA (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11178,7 +12062,7 @@ Ours-GBSA (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11187,16 +12071,34 @@ Ours-GBSA (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 5.97
+\change_inserted -1046193749 1682294720
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682294721
+TL fix me
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11207,7 +12109,7 @@ Ours-GBSA (
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11216,7 +12118,7 @@ DDM/AMOEBA/BAR
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11225,7 +12127,7 @@ DDM/AMOEBA/BAR
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11234,7 +12136,7 @@ DDM/AMOEBA/BAR
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11243,7 +12145,7 @@ DDM/AMOEBA/BAR
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11254,7 +12156,7 @@ DDM/AMOEBA/BAR
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11263,7 +12165,7 @@ APR/GAFF2/TIP3P/MD-US/MBAR
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11272,7 +12174,7 @@ APR/GAFF2/TIP3P/MD-US/MBAR
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11281,7 +12183,7 @@ APR/GAFF2/TIP3P/MD-US/MBAR
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11290,7 +12192,7 @@ APR/GAFF2/TIP3P/MD-US/MBAR
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11301,7 +12203,7 @@ APR/GAFF2/TIP3P/MD-US/MBAR
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11310,7 +12212,7 @@ APR/OFF1.2.0/TIP3P/MD-US/MBAR
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11319,7 +12221,7 @@ APR/OFF1.2.0/TIP3P/MD-US/MBAR
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11328,7 +12230,7 @@ APR/OFF1.2.0/TIP3P/MD-US/MBAR
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11337,7 +12239,7 @@ APR/OFF1.2.0/TIP3P/MD-US/MBAR
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11348,7 +12250,7 @@ APR/OFF1.2.0/TIP3P/MD-US/MBAR
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11357,7 +12259,7 @@ APR/OFF2.0.0/TIP3P/MD-US/MBAR
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11366,7 +12268,7 @@ APR/OFF2.0.0/TIP3P/MD-US/MBAR
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11375,7 +12277,7 @@ APR/OFF2.0.0/TIP3P/MD-US/MBAR
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11384,7 +12286,7 @@ APR/OFF2.0.0/TIP3P/MD-US/MBAR
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11395,7 +12297,7 @@ APR/OFF2.0.0/TIP3P/MD-US/MBAR
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11404,7 +12306,7 @@ MACHINE-LEARNING/NNET/DRAGON-descriptors
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11413,7 +12315,7 @@ MACHINE-LEARNING/NNET/DRAGON-descriptors
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11422,7 +12324,7 @@ MACHINE-LEARNING/NNET/DRAGON-descriptors
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11431,7 +12333,7 @@ MACHINE-LEARNING/NNET/DRAGON-descriptors
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11442,7 +12344,7 @@ MACHINE-LEARNING/NNET/DRAGON-descriptors
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11451,7 +12353,7 @@ ELIE/GAFF2-ABCG2/TIP3P/MD/MMPBSA
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11460,7 +12362,7 @@ ELIE/GAFF2-ABCG2/TIP3P/MD/MMPBSA
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11469,7 +12371,7 @@ ELIE/GAFF2-ABCG2/TIP3P/MD/MMPBSA
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11478,7 +12380,7 @@ ELIE/GAFF2-ABCG2/TIP3P/MD/MMPBSA
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11489,7 +12391,7 @@ ELIE/GAFF2-ABCG2/TIP3P/MD/MMPBSA
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11498,7 +12400,7 @@ vDSSB/GAFF2/OPC3/HREM
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11507,7 +12409,7 @@ vDSSB/GAFF2/OPC3/HREM
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11516,7 +12418,7 @@ vDSSB/GAFF2/OPC3/HREM
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11525,7 +12427,7 @@ vDSSB/GAFF2/OPC3/HREM
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11536,7 +12438,7 @@ vDSSB/GAFF2/OPC3/HREM
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11545,7 +12447,7 @@ DOCKING/SMINA/VINARDO
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11554,7 +12456,7 @@ DOCKING/SMINA/VINARDO
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11563,7 +12465,7 @@ DOCKING/SMINA/VINARDO
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11572,7 +12474,7 @@ DOCKING/SMINA/VINARDO
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11594,23 +12496,9 @@ DOCKING/SMINA/VINARDO
 
 \begin_layout Plain Layout
 Predictions from SAMPL9 WP6 dataset.
- All entries were from the SAML9 dataset [cite-github]
-\change_inserted -1046193749 1682204101
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1682204104
-TL Fix!
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
+ All entries were from the SAML9 dataset
+\change_deleted -1046193749 1682292428
+ [cite-github]
 \change_unchanged
 .
  Units in kcal/mol
@@ -11635,9 +12523,35 @@ name "tab:Predictions-from-SAMPL9"
 
 \begin_layout Subsection
 OAH SAMPL4 comparison
+\change_inserted -1046193749 1682292164
+
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -1046193749 1682292166
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682292210
+TL Why isn't there a table for this section? You should have the SAMPL4
+ results with your results for just the nine ligands.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1046193749 1682291904
 Using our uncorrected method on the 23 guests, results were good for OAH
  with an slope of 0.52 and RMSE of 2.9kcal/mol.
  A poor correlation of 0.07 was due to two positive charge guests (tzh,hxa)
@@ -11653,13 +12567,79 @@ name "table:host-guest-metrics-corrected-1"
  to 0.38 with two cationic guest included in calculation.
  A lower deviation of 1.39kcal/mol making this an overall promising method
  for this highly negatively charge OAH system.
+\change_inserted -1046193749 1682291907
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682291917
+TL you already said all this in your Results.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
-To the best of our knowledge there hasn't been any published work that benchmark
- the entire dataset of octa-acid for comparisons.
- However in SAMPL4 challenge did a smaller set of 9 guests molecules for
- blind affinity measurements for octa-acid 
+To the best of our knowledge
+\change_inserted -1046193749 1682291926
+,
+\change_unchanged
+ there 
+\change_deleted -1046193749 1682291950
+hasn't been any
+\change_inserted -1046193749 1682291951
+are no
+\change_unchanged
+ published 
+\change_deleted -1046193749 1682291955
+work that
+\change_unchanged
+ benchmark
+\change_inserted -1046193749 1682291960
+s of
+\change_unchanged
+ the entire dataset 
+\change_deleted -1046193749 1682291971
+of octa-acid for comparisons
+\change_inserted -1046193749 1682291972
+used here
+\change_unchanged
+.
+ However
+\change_inserted -1046193749 1682291975
+,
+\change_unchanged
+ 
+\change_inserted -1046193749 1682291979
+the
+\change_deleted -1046193749 1682291978
+in
+\change_unchanged
+ SAMPL4 challenge 
+\change_deleted -1046193749 1682291985
+did
+\change_inserted -1046193749 1682291985
+used
+\change_unchanged
+ a smaller set of 
+\change_inserted -1046193749 1682291990
+nine
+\change_deleted -1046193749 1682291988
+9
+\change_unchanged
+ guests molecules 
+\change_deleted -1046193749 1682292009
+for blind affinity measurements for octa-acid 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "muddanaSAMPL4HostGuest2014a"
@@ -11667,7 +12647,22 @@ literal "false"
 
 \end_inset
 
-.One submission in particular interest used BEDAM method 
+.
+
+\change_inserted -1046193749 1682292016
+ 
+\change_unchanged
+One submission 
+\change_inserted -1046193749 1682292023
+of
+\change_deleted -1046193749 1682292022
+in
+\change_unchanged
+ particular interest used 
+\change_inserted -1046193749 1682292028
+the 
+\change_unchanged
+BEDAM method 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "gallicchioBindingEnergyDistribution2010"
@@ -11679,7 +12674,19 @@ literal "false"
 \change_deleted -1463621830 1682138817
 ]
 \change_unchanged
- coupled to the OPLS-AA classical force field
+ 
+\change_deleted -1046193749 1682292051
+coupled
+\change_inserted -1046193749 1682292060
+to evaluate binding free energy with
+\change_deleted -1046193749 1682292063
+ to
+\change_unchanged
+ the OPLS-AA classical force field
+\change_inserted -1046193749 1682292039
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "jorgensenDevelopmentTestingOPLS1996"
@@ -11691,7 +12698,13 @@ literal "false"
 \change_deleted -1463621830 1682138770
 ]
 \change_unchanged
- and the 
+ and 
+\change_deleted -1046193749 1682292067
+the
+\change_unchanged
+ 
+\change_deleted -1046193749 1682292534
+
 \begin_inset Note Note
 status open
 
@@ -11701,6 +12714,8 @@ TL define
 
 \end_inset
 
+
+\change_unchanged
 Analytical Generalized Born plus NonPolar (AGBNP2) 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -11709,23 +12724,83 @@ literal "false"
 
 \end_inset
 
- continuum solvation model being one of the fairly accurate predictions
- of the SAMPL4 challenge.
- They reported average signed error was 
+ continuum solvation model
+\change_inserted -1046193749 1682292115
+.
+ This was 
+\change_deleted -1046193749 1682292121
+ being one of the fairly
+\change_inserted -1046193749 1682292123
+one of the most
+\change_unchanged
+ accurate predictions of the SAMPL4 challenge
+\change_deleted -1046193749 1682292227
+.
+ They reported average signed error was
+\change_inserted -1046193749 1682292231
+, with
+\change_unchanged
+ 
 \begin_inset Formula $\text{RMSE}_{o}=\unit[1.3]{kcal/mol}$
 \end_inset
 
+
+\change_inserted -1046193749 1682292274
+, 
+\change_deleted -1046193749 1682292273
  and root mean square error of all pairs of relative binding free energies
  
+\change_unchanged
+
 \begin_inset Formula $\text{RMSE}_{r}=\unit[0.9]{kcal/mol}$
 \end_inset
 
-.Also higher a one of the highest Person correlation coefficient (
+
+\change_inserted -1046193749 1682292283
+ and 
+\change_deleted -1046193749 1682292285
+.Also higher a
+\change_unchanged
+ one of the highest Person correlation coefficient (
 \begin_inset Formula $R^{2}=0.9$
 \end_inset
 
-).As for our results we compute the same 9 guests that were used from the
- SAMPL4 challenge, using our uncorrected method reported a 
+).
+
+\change_inserted -1046193749 1682292290
+ 
+\change_deleted -1046193749 1682292304
+As for our results we
+\change_inserted -1046193749 1682292312
+Restricting our results to 
+\change_deleted -1046193749 1682292317
+ compute
+\change_unchanged
+ the same 
+\change_inserted -1046193749 1682292320
+nine
+\change_deleted -1046193749 1682292319
+9
+\change_unchanged
+ guests
+\change_deleted -1046193749 1682292326
+ that were used from the SAMPL4 challenge
+\change_unchanged
+, 
+\change_deleted -1046193749 1682292330
+using
+\change_unchanged
+ our uncorrected method 
+\change_deleted -1046193749 1682292332
+reported
+\change_inserted -1046193749 1682292332
+gave
+\change_unchanged
+ 
+\change_deleted -1046193749 1682292334
+a
+\change_unchanged
+ 
 \begin_inset Formula $\text{RMSE}_{o}=1\unit[.3]{kcal/mol}$
 \end_inset
 
@@ -11748,8 +12823,21 @@ TL corrected or uncorrected?
 
 \end_inset
 
-The AGBNP2 method was also tuned to properly treat enclosed hydration sites
- to achieve good accuracy
+
+\change_deleted -1046193749 1682292365
+The
+\change_inserted -1046193749 1682292374
+In contract to the GB method we used, the
+\change_unchanged
+ AGBNP2 method was
+\change_deleted -1046193749 1682292377
+ also
+\change_unchanged
+ tuned to properly treat enclosed hydration sites to achieve good accuracy
+\change_inserted -1046193749 1682292357
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "gallicchioBEDAMBindingFree2015"
@@ -11758,12 +12846,27 @@ literal "false"
 \end_inset
 
 .
- Where our GB model is unable to accuracy treat hydration in deep hydrophobic
+ 
+\change_inserted -1046193749 1682293807
+This suggests that our results could be improved with an more physically
+ realistic solvent model
+\change_deleted -1046193749 1682292402
+Where our GB model is unable to accuracy treat hydration in deep hydrophobic
  of OAH resulting in poor accuracy.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
-Our 
+
+\change_inserted -1046193749 1682293887
+As an example of how a better solvent model would improve our results, o
+\change_deleted -1046193749 1682293887
+O
+\change_unchanged
+ur 
+\change_deleted -1046193749 1682292538
+
 \begin_inset Note Note
 status open
 
@@ -11773,17 +12876,62 @@ TL uncorrected?
 
 \end_inset
 
+
+\change_unchanged
 uncorrected predictions for octa-acid were adversely affected primarily
  the much lower binding free energies predicted for the positively charge
- ligands (trz, hxa) , which remain outliers, even after correction.Beyond
- charge hydration asymmetry, this may be the result of the large negative
+ ligands (trz, hxa)
+\change_deleted -1046193749 1682292736
+ 
+\change_unchanged
+, which remain 
+\change_deleted -1046193749 1682293726
+outliers
+\change_inserted -1046193749 1682293727
+too low
+\change_unchanged
+, even after correction.
+
+\change_inserted -1046193749 1682292744
+ 
+\change_unchanged
+Beyond charge hydration asymmetry, this may be the result of the large negative
  charge (
 \begin_inset Formula $-8e$
 \end_inset
 
-) on the host, coupled with a lack of charge screening from our GB model.This
- may have caused the conformational reorganization of a flipped of benzoate
- ring that occurs for positively charge guests.During our end-state simulations
+) on the host, coupled with a lack of charge screening from our GB model.
+
+\change_inserted -1046193749 1682293555
+ 
+\change_unchanged
+T
+\change_inserted -1046193749 1682293564
+ogether, 
+\change_unchanged
+h
+\change_inserted -1046193749 1682293574
+ese
+\change_deleted -1046193749 1682293574
+is
+\change_unchanged
+ may have caused the conformational reorganization of a 
+\change_deleted -1046193749 1682293619
+flipped of
+\change_unchanged
+ benzoate ring 
+\change_deleted -1046193749 1682293630
+that occurs
+\change_unchanged
+ for positively charge guests.
+
+\change_inserted -1046193749 1682293598
+ 
+\change_unchanged
+During our end-state simulations
+\change_inserted -1046193749 1682293635
+,
+\change_unchanged
  we also observed the alkylammonium head group of the ligand forming strong
  short range electrostatic interactions with the benzoate group (
 \begin_inset CommandInset ref
@@ -11795,8 +12943,34 @@ noprefix "false"
 
 \end_inset
 
-).A previous study shown that better incorporations of ionic screening, can
- disrupt this interaction and binding is weakened
+).
+
+\change_inserted -1046193749 1682293644
+ 
+\change_unchanged
+A previous study show
+\change_inserted -1046193749 1682293659
+ed
+\change_deleted -1046193749 1682293658
+n
+\change_unchanged
+ that better incorporation
+\change_deleted -1046193749 1682293666
+s
+\change_unchanged
+ of ionic screening
+\change_deleted -1046193749 1682293670
+,
+\change_unchanged
+ can disrupt this interaction and 
+\change_inserted -1046193749 1682293679
+weaken 
+\change_unchanged
+binding 
+\change_deleted -1046193749 1682293682
+is weakened
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "palCombinedTreatmentHydration2017"
@@ -11804,7 +12978,12 @@ literal "false"
 
 \end_inset
 
-.Where the negative charge guests, performs charge repulsion keeping like
+.
+
+\change_inserted -1046193749 1682293689
+ 
+\change_unchanged
+Where the negative charge guests, performs charge repulsion keeping like
  charges away from each other as we saw with our results.
 \end_layout
 
@@ -11815,6 +12994,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/benz_flip_oah.png
 	width 100text%
@@ -11857,12 +13037,70 @@ Generalize Born Hydration Asymmetry Correction Considerations
 \end_layout
 
 \begin_layout Standard
-The simplicity of implicit solvent models by treating water structureless
- continuum dielectric medium provides fast estimation of solvation effects
- making them very popular for virtual screening.Generalize Born is arguably
- one the faster implicit models, due to approximating the Poisson-Boltzmann
- equation with a simple analytical formula.However, it is unable to account
- for several solvation properties that are treated with the more accurate
+The simplicity of 
+\change_inserted -1046193749 1682294835
+the GB 
+\change_unchanged
+implicit solvent model
+\change_deleted -1046193749 1682294843
+s by treating water structureless continuum dielectric medium
+\change_unchanged
+ provides fast estimation of solvation effects
+\change_inserted -1046193749 1682294848
+,
+\change_unchanged
+ making 
+\change_deleted -1046193749 1682294852
+them
+\change_inserted -1046193749 1682294852
+it
+\change_unchanged
+ very popular for virtual screening.
+
+\change_inserted -1046193749 1682294857
+ 
+\change_deleted -1046193749 1682294859
+Generalize Born
+\change_inserted -1046193749 1682294859
+GB
+\change_unchanged
+ is arguably one the faster implicit models, 
+\change_deleted -1046193749 1682294867
+due to
+\change_inserted -1046193749 1682294867
+as it
+\change_unchanged
+ approximat
+\change_inserted -1046193749 1682294870
+es
+\change_deleted -1046193749 1682294870
+ing
+\change_unchanged
+ the Poisson-Boltzmann equation with a simple analytical formula.
+
+\change_inserted -1046193749 1682294874
+ 
+\change_unchanged
+However, 
+\change_inserted -1046193749 1682294934
+the version used here
+\change_deleted -1046193749 1682294890
+it 
+\change_inserted -1046193749 1682294890
+ 
+\change_unchanged
+is unable to account for several solvation properties that are 
+\change_deleted -1046193749 1682294902
+treated
+\change_inserted -1046193749 1682294903
+accounted for
+\change_deleted -1046193749 1682294905
+ with
+\change_inserted -1046193749 1682294906
+ in
+\change_deleted -1046193749 1682294914
+ the more accurate
+\change_unchanged
  explicit solvent models.
 \end_layout
 
@@ -11880,8 +13118,12 @@ literal "false"
 \begin_inset Formula $\Delta G_{solv}$
 \end_inset
 
- on the sign of the charges of the solute.When considering our entire host-guest
- dataset (
+ on the sign of the charges of the solute.
+
+\change_inserted -1046193749 1682294956
+ 
+\change_unchanged
+When considering our entire host-guest dataset (
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:ABFE-host-guest-systems"
@@ -11891,26 +13133,48 @@ noprefix "false"
 
 \end_inset
 
+
+\change_deleted -1046193749 1682294958
 )
 \change_inserted -1463621830 1682138504
 a
+\change_inserted -1046193749 1682294960
+)
 \change_unchanged
-, we clearly see a bias for all charge guest ligands.The absolute binding
- free energy estimates for positively charge guests was underestimated and
- negatively charge guests were overestimated.We also observe that the guest
- molecules have the dominant source of CHA error, as the charge of the host
- system had little or no effect.
+, we clearly see a bias for all charge
+\change_inserted -1046193749 1682294978
+d
+\change_unchanged
+ guest ligands.
+
+\change_inserted -1046193749 1682294982
+ 
+\change_unchanged
+The absolute binding free energy estimates for positively charge guests
+ w
+\change_inserted -1046193749 1682295000
+ere
+\change_deleted -1046193749 1682294999
+as
+\change_unchanged
+ underestimated and negatively charge guests were overestimated.
+
+\change_inserted -1046193749 1682295004
+ 
+\change_unchanged
+We also observe that the guest molecules have the dominant source of CHA
+ error, as the charge of the host system had little or no effect.
 \end_layout
 
 \begin_layout Standard
 Applying a charge hydration correction based on the guests net charge (
-\change_inserted -1463621830 1682138682
+\change_deleted -1046193749 1682295053
 table 
 \change_unchanged
 
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "table:fitted-parameters"
+reference "tab:fitted-parameters"
 plural "false"
 caps "false"
 noprefix "false"
@@ -11918,13 +13182,13 @@ noprefix "false"
 \end_inset
 
 ), resulted in better metrics (
-\change_inserted -1463621830 1682138700
+\change_deleted -1046193749 1682295058
 table
 \change_unchanged
 
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "table:host-guest-metrics-corrected-1"
+reference "tab:host-guest-metrics-corrected"
 plural "false"
 caps "false"
 noprefix "false"
@@ -11935,6 +13199,9 @@ noprefix "false"
  The success of this correction and the values of the fit parameters suggests
  that the lack of charge hydration asymmetry in GB is the issue.
  The Amber molecular modeling suite contains four variants of GB models
+\change_inserted -1046193749 1682295121
+,
+\change_unchanged
  which are GB
 \begin_inset script superscript
 
@@ -11986,7 +13253,13 @@ literal "false"
 
 \end_inset
 
- and GBNSR6.
+ and GBNSR6
+\change_inserted -1046193749 1682295118
+ 
+\change_deleted -1046193749 1682295117
+.
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "aguilarEfficientComputationTotal2012"
@@ -11995,8 +13268,19 @@ literal "false"
 \end_inset
 
 .
- Except for GBNSR6, all GB models differ in how the effective Born radii
- are computed.
+ 
+\change_inserted -1046193749 1682295180
+Of these,
+\change_deleted -1046193749 1682295182
+Except for
+\change_unchanged
+ GBNSR6
+\change_deleted -1046193749 1682295188
+, all GB models differ
+\change_inserted -1046193749 1682295194
+ is unique
+\change_unchanged
+ in how the effective Born radii are computed.
  GBNSR6 (“Numerical Surface R6 GB”), one of newest additions to Amber suite,
  computes the effective Born radii using an 
 \begin_inset Quotes eld
@@ -12006,9 +13290,25 @@ R6
 \begin_inset Quotes erd
 \end_inset
 
- numerical integration overall the molecular surface of the solute.GBNSR6
- optionally accounts for CHA and has been shown to improved electrostatic
- binding free energies for diverse set of biomolecular complexes 
+ numerical integration overall the molecular surface of the solute
+\change_deleted -1046193749 1682295213
+.GBNSR6
+\change_inserted -1046193749 1682295213
+ and
+\change_unchanged
+ optionally accounts for CHA
+\change_inserted -1046193749 1682295221
+.
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1682295225
+and
+\change_inserted -1046193749 1682295230
+The CHA correction
+\change_unchanged
+ has been shown to improved electrostatic binding free energies for diverse
+ set of biomolecular complexes 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "izadiAccuracyComparisonGeneralized2018"
@@ -12016,11 +13316,40 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1682295240
+;
+\change_deleted -1046193749 1682295240
 .
- However, GBNSR6 does not allow for MD simulations, which limits it used
- for improved sampling in our method.
+
+\change_unchanged
+ 
+\change_inserted -1046193749 1682295242
+h
+\change_deleted -1046193749 1682295242
+H
+\change_unchanged
+owever, GBNSR6 does not 
+\change_inserted -1046193749 1682295270
+produce analytic forces and
+\change_deleted -1046193749 1682295271
+allow
+\change_inserted -1046193749 1682295274
+ cannot be used
+\change_unchanged
+ for MD simulations, which 
+\change_deleted -1046193749 1682295293
+limits it used for improved sampling in
+\change_inserted -1046193749 1682295302
+mean it cannot be used directly in
+\change_unchanged
+ our method.
  Alternately, the 3-dimensional reference interaction site model (3D-RISM)
  of molecular solvation
+\change_inserted -1046193749 1682295320
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "luchkoThreeDimensionalMolecularTheory2010a"
@@ -12029,6 +13358,8 @@ literal "false"
 \end_inset
 
 ,
+\change_deleted -1046193749 1682295317
+
 \begin_inset Note Note
 status open
 
@@ -12038,9 +13369,29 @@ TL please cite 3D-RISM
 
 \end_inset
 
- which describes the solvent as a classical density distribution of the
- solvent sites around the solute, yields a more detailed molecular structure
- than GB models and naturally accounts for properties such as CHA and hydrogen
+
+\change_unchanged
+ 
+\change_inserted -1046193749 1682295693
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682295689
+TL cite 10.1063/1.478883 and 10.1021/jp971083h
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ 
+\change_unchanged
+which describes the solvent as a classical density distribution of the solvent
+ sites around the solute, yields a more detailed molecular structure than
+ GB models and naturally accounts for properties such as CHA and hydrogen
  bonding.
  Unfortunately, 3D-RISM is computational demanding and not suitable for
  high throughput screening campaigns at this time.
