@@ -118,7 +118,7 @@ logicalmkup
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -1046193749 "Luchko"
+\author 215710309 "Ayoub"
 \end_header
 
 \begin_body
@@ -241,46 +241,23 @@ ISDDM.py
  post-analysis.
  The software was tested on 83 unique host-guest complex systems and reports
  encouraging results in estimating binding free energies.
- We saw overall good correlation with experiments and out outperform
-\change_inserted -1046193749 1682451432
-ed
-\change_deleted -1046193749 1682451431
-s
-\change_unchanged
- most the SAMPL4 and SAMPL9 challenge submission's RBFE metrics, though
- large systematic errors were present in the raw results.
+ We saw overall good correlation with experiments and out outperformed most
+ the SAMPL4 and SAMPL9 challenge submission's RBFE metrics, though large
+ systematic errors were present in the raw results.
  From our raw results, we saw a significant 
-\change_deleted -1046193749 1682451452
-charge
+\change_deleted 215710309 1682453591
+ 
 \change_unchanged
- bias 
-\change_deleted -1046193749 1682451461
-from the
-\change_inserted -1046193749 1682451476
-associated with the
-\change_unchanged
- charge 
-\change_inserted -1046193749 1682451474
-of the 
-\change_unchanged
-guest molecules
-\change_inserted -1046193749 1682451480
-,
-\change_unchanged
- where positively charged guest molecules had significantly underestimated
- binding free energy predictions, and negatively charge guests were overestimate
-d.
+bias associated with the charge of the guest molecules, where positively
+ charged guest molecules had significantly underestimated binding free energy
+ predictions, and negatively charge guests were overestimated.
  Looking at all systems as a whole we report an correlation coefficient
  of 0.76 with an RMSE of 
 \begin_inset Formula $4.1\text{kcal/mol}$
 \end_inset
 
 and a slope of 1.8.
-
-\change_inserted -1046193749 1682451324
- 
-\change_unchanged
-By applying a simple linear correction base on guest charge we observed
+ By applying a simple linear correction base on guest charge we observed
  much better correlation with and deviation from experiment, with RMSE values
  less than 
 \begin_inset Formula $\unit[1.06]{kcal/mol}$
@@ -296,20 +273,9 @@ and a correlation coefficient of 0.87.
 \end_inset
 
 .
+
+\change_deleted 215710309 1682453591
  
-\change_deleted -1046193749 1682451528
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL add in some more results about the uncorrected version.
- Also include R^2
-\end_layout
-
-\end_inset
-
-
 \change_unchanged
 
 \end_layout
@@ -1245,28 +1211,14 @@ literal "false"
 
 .
  If we then add and subtract 
-\change_deleted -1046193749 1682451585
-
-\begin_inset Formula $e^{-\beta U_{1}(x)}$
+\begin_inset Formula $e^{-\beta U_{0}(q)}$
 \end_inset
 
-
-\change_inserted -1046193749 1682451592
-
-\begin_inset Formula $U_{0}(x)$
-\end_inset
-
-
-\change_unchanged
  from 
-\change_inserted -1046193749 1682451619
-
 \begin_inset Formula $U_{1}(x)$
 \end_inset
 
  in 
-\change_unchanged
-
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "eq:final-two-state-binding"
@@ -1282,7 +1234,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\Delta F_{10} & =-\frac{1}{\beta}\text{ln\left[\frac{\int e^{-\beta\left(U_{1}(q)-U_{0}(q)\right)}e^{\beta\left(U_{1}(q)\right)}dq}{Q_{1}}\right]=-\frac{1}{\beta}\text{ln\left[\frac{\int e^{-\beta\left(U_{1}(q)-U_{0}(q)\right)}e^{-\beta\left(U_{1}(q)\right)}dq}{Q_{1}}\right]}},\\
+\Delta F_{10} & =-\frac{1}{\beta}\text{ln\left[\frac{\int e^{-\beta\left(U_{1}(q)-U_{0}(q)+U_{0}(q)\right)dq}}{Q_{0}}\right]=-\frac{1}{\beta}\text{ln\left[\frac{\int e^{-\beta\left(U_{1}(q)-U_{0}(q)\right)}e^{-\beta\left(U_{0}(q)\right)}dq}{Q_{0}}\right]}},\\
 \end{align*}
 
 \end_inset
@@ -1293,17 +1245,17 @@ we obtain the definition of exponential averaging (EXP)
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Delta F_{10}=-\frac{1}{\beta}\text{\text{ln}}\left\langle e^{-\beta\left(U_{0}-U_{1}\right)}\right\rangle _{1}=-\frac{1}{\beta}\left\langle e^{-\beta\Delta U_{10}}\right\rangle _{1},
+\Delta F_{10}=-\frac{1}{\beta}\text{\text{ln}}\left\langle e^{-\beta\left(U_{1}(q)-U_{0}(q)\right)}\right\rangle _{0}=-\frac{1}{\beta}\left\langle e^{-\beta\Delta U(q)}\right\rangle _{0},
 \]
 
 \end_inset
 
 here 
-\begin_inset Formula $\Delta U_{10}=U_{0}-U_{1}$
+\begin_inset Formula $\Delta U_{10}=U_{1}-U_{0}$
 \end_inset
 
  and the 
-\begin_inset Formula $\left\langle \right\rangle _{1}$
+\begin_inset Formula $\left\langle \right\rangle _{0}$
 \end_inset
 
  indicates the equilibrium sampling was performed in state 0.
@@ -2265,7 +2217,7 @@ Dielectric continuum implicit solvent models can estimate the free energy
 
 , which depends on the electrostatic contributions, a non-polar contribution
  
-\begin_inset Formula $\Delta G_{npol}$
+\begin_inset Formula $\Delta G_{\text{npol}}$
 \end_inset
 
 , which depends on the shape of the solute cavity
@@ -3026,19 +2978,6 @@ literal "false"
 \end_inset
 
 .
-\change_deleted -1046193749 1682451779
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL cite
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
  The ionic concentration was set to 0.3 M for all host guest systems.
  We prepared the initial structures of states 
 \begin_inset Formula $1$
@@ -3050,20 +2989,10 @@ TL cite
 
  for REMD simulation with 5000 steps of steepest descent energy minimization
  
-\change_deleted -1046193749 1682451771
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL what minimization method?
-\end_layout
-
-\end_inset
-
-
+\change_deleted 215710309 1682453641
+ 
 \change_unchanged
- using the 
+using the 
 \begin_inset Flex Code
 status open
 
@@ -3352,20 +3281,6 @@ literal "false"
 
 \end_inset
 
-
-\change_deleted -1046193749 1682451815
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL again, incorrect citation
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 , a minimum orientational force constant of 
 \begin_inset Formula $\unit[2^{-4}]{\text{kcal/mol/Å}}$
 \end_inset
@@ -8575,28 +8490,14 @@ noprefix "false"
 \end_inset
 
 ), the DOCKING/SMINA/VINARDO method 
-\change_deleted -1046193749 1682451840
-which
+\change_deleted 215710309 1682453675
+ 
 \change_unchanged
- had the smallest RMSE (
+had the smallest RMSE (
 \begin_inset Formula $\unit[1.8]{kcal/mol}$
 \end_inset
 
-),
-\change_deleted -1046193749 1682451846
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL docking is the lowest
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
- followed by the machine learning method with 
+), followed by the machine learning method with 
 \begin_inset Formula $\text{RMSE}=\unit[1.97]{kcal/mol}$
 \end_inset
 
@@ -8605,16 +8506,10 @@ TL docking is the lowest
 \end_inset
 
 .
- However
-\change_inserted -1046193749 1682451871
-,
-\change_deleted -1046193749 1682451870
- with low RMSE
-\change_unchanged
- all three methods had very low Pearson correlation coefficients of 0.15,
- 0.40 and 0.09 for machine learning, ELIE and Docking/SMINA method respectively,
- which suggests a poor correlation between experimental and prediction binding
- affinity.
+ However, all three methods had very low Pearson correlation coefficients
+ of 0.15, 0.40 and 0.09 for machine learning, ELIE and Docking/SMINA method
+ respectively, which suggests a poor correlation between experimental and
+ prediction binding affinity.
  Whereas both our uncorrected and corrected Pearson correlation rank the
  second highest, only slightly lower than DDM/AMOEBA/BAR method with 
 \begin_inset Formula $R^{2}$
@@ -10770,20 +10665,6 @@ ISDDM.py
  workflow by supplying a YAML-format user input files, which consists of
  only 36 lines.
  Each parameter in the input file is defined below.
-\change_deleted -1046193749 1682451960
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL mark which parameters are optional and when they are needed.
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \begin_inset Separator plain
 \end_inset
 
@@ -10919,40 +10800,9 @@ storage:float
 
  Storage required for an individual MD simulation.
  Units are in Gigabytes (default=2G).
+
+\change_deleted 215710309 1682453688
  
-\change_deleted -1046193749 1682451909
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL what are the units?
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL let's change this to 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-storage
-\end_layout
-
-\end_inset
-
-.
- SSD may be used.
-\end_layout
-
-\end_inset
-
-
 \change_unchanged
 
 \end_layout
@@ -11191,16 +11041,10 @@ standard_MD
 
 .The user can specify their own pre-calculated end-state simulation by setting
  value to 0 .
+
+\change_deleted 215710309 1682453700
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TL are there other options? Where are the pre-calculated simulations input?
-\end_layout
-
-\end_inset
-
+\change_unchanged
 
 \end_layout
 
