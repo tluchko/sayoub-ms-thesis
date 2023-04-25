@@ -118,7 +118,6 @@ logicalmkup
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author 215710309 "Ayoub"
 \end_header
 
 \begin_body
@@ -244,13 +243,10 @@ ISDDM.py
  We saw overall good correlation with experiments and out outperformed most
  the SAMPL4 and SAMPL9 challenge submission's RBFE metrics, though large
  systematic errors were present in the raw results.
- From our raw results, we saw a significant 
-\change_deleted 215710309 1682453591
- 
-\change_unchanged
-bias associated with the charge of the guest molecules, where positively
- charged guest molecules had significantly underestimated binding free energy
- predictions, and negatively charge guests were overestimated.
+ From our raw results, we saw a significant bias associated with the charge
+ of the guest molecules, where positively charged guest molecules had significan
+tly underestimated binding free energy predictions, and negatively charge
+ guests were overestimated.
  Looking at all systems as a whole we report an correlation coefficient
  of 0.76 with an RMSE of 
 \begin_inset Formula $4.1\text{kcal/mol}$
@@ -273,11 +269,6 @@ and a correlation coefficient of 0.87.
 \end_inset
 
 .
-
-\change_deleted 215710309 1682453591
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Chapter
@@ -2988,11 +2979,7 @@ literal "false"
 \end_inset
 
  for REMD simulation with 5000 steps of steepest descent energy minimization
- 
-\change_deleted 215710309 1682453641
- 
-\change_unchanged
-using the 
+ using the 
 \begin_inset Flex Code
 status open
 
@@ -6254,8 +6241,9 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename images/scaling.pdf
+	filename images/scaling_2.png
 	width 100text%
+	rotateOrigin center
 
 \end_inset
 
@@ -8489,11 +8477,7 @@ noprefix "false"
 
 \end_inset
 
-), the DOCKING/SMINA/VINARDO method 
-\change_deleted 215710309 1682453675
- 
-\change_unchanged
-had the smallest RMSE (
+), the DOCKING/SMINA/VINARDO method had the smallest RMSE (
 \begin_inset Formula $\unit[1.8]{kcal/mol}$
 \end_inset
 
@@ -10800,11 +10784,6 @@ storage:float
 
  Storage required for an individual MD simulation.
  Units are in Gigabytes (default=2G).
-
-\change_deleted 215710309 1682453688
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Section
@@ -11041,11 +11020,6 @@ standard_MD
 
 .The user can specify their own pre-calculated end-state simulation by setting
  value to 0 .
-
-\change_deleted 215710309 1682453700
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Subsection
@@ -11433,6 +11407,14 @@ charges_lambda_window: list[float]
 \end_inset
 
  Values to use when scaling the GB external dielectric.
+\begin_inset Formula 
+\[
+\Delta G_{\text{bind}}^{\mathnormal{\text{\ensuremath{\mathbf{GB}}}}}\left(\frac{kcal}{mol}\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
