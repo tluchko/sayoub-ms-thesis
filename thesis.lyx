@@ -196,38 +196,6 @@ http://www.csun.edu/~mathgs/LaTex.html
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1046193749 1682203089
-\begin_inset Note Note
-status open
-
-\begin_layout Description
-
-\change_inserted -1046193749 1682203011
-TL Preable corrections:
-\end_layout
-
-\begin_layout Enumerate
-
-\change_inserted -1046193749 1682203014
-Fix Maosheng Miao's name.
- You only give his last name.
-\end_layout
-
-\begin_layout Enumerate
-
-\change_inserted -1046193749 1682203085
-Fix the abstract.
- I've added the text here so that track changes works.
- Once complete, copy you latex back into the preable
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Identifying small drug-like molecules for therapeutic targets of interest
  is an ongoing effort in drug discovery.
  Accurate absolute binding free energy calculations (ABFEs) in silico, can
@@ -237,13 +205,57 @@ s that may have been overlooked experimentally.
  calculations when screening a diverse set of molecules but these calculations
  can be difficult to implement and perform.
  Currently ABFE calculations are dominated by expensive explicit solvent
- models or the use of severe approximated end state methods.Explicit solvent
- models must simulate every atom and in case of water occupancy of a buried
- site can lead to slow water exchange leading to insufficient sampling.Additional
-ly, the use of Lennard Jones soft-core potentials that are commonly used
- to resolve instabilities during the creation or annihilation of particles
- but this creates additional layer of complexity when performing these ABFE
- calculations.
+ models or the use of severe approximated end state methods.
+
+\change_inserted -1046193749 1682382364
+ For example, e
+\change_deleted -1046193749 1682382364
+E
+\change_unchanged
+xplicit solvent models must simulate every atom and
+\change_inserted -1046193749 1682382374
+,
+\change_unchanged
+ in case of water occupancy of a buried site
+\change_inserted -1046193749 1682382416
+, large potential energy barrier
+\change_unchanged
+ can lead to slow water exchange 
+\change_deleted -1046193749 1682382423
+leading to
+\change_inserted -1046193749 1682382423
+and
+\change_unchanged
+ insufficient sampling.
+
+\change_inserted -1046193749 1682382205
+ 
+\change_unchanged
+Additionally, 
+\change_deleted -1046193749 1682382479
+the use of 
+\change_unchanged
+Lennard
+\change_inserted -1046193749 1682382430
+-
+\change_deleted -1046193749 1682382430
+ 
+\change_unchanged
+Jones soft-core potentials 
+\change_inserted -1046193749 1682382488
+must be used 
+\change_deleted -1046193749 1682382519
+that are commonly used to resolve instabilities
+\change_unchanged
+ during the creation or annihilation of particles
+\change_inserted -1046193749 1682382525
+,
+\change_unchanged
+ but this creates additional 
+\change_deleted -1046193749 1682382535
+layer of
+\change_unchanged
+ complexity when performing these ABFE calculations.
  To circumvent these drawbacks, we introduced the software 
 \begin_inset Flex Code
 status open
@@ -272,15 +284,24 @@ ISDDM.py
 
  package to handle all the input files, monitor the simulations and perform
  post-analysis.
- The software is tested on 83 unique host-guest complex systems and reports
- encouraging results in estimating binding free energies.
+ The software 
+\change_deleted -1046193749 1682382171
+is
+\change_inserted -1046193749 1682382171
+was
+\change_unchanged
+ tested on 83 unique host-guest complex systems and reports encouraging
+ results in estimating binding free energies.
  We saw overall good correlation with experiments and out outperforms most
  the SAMPL4 and SAMPL9 challenge submission's RBFE metrics, though large
  systematic errors were present in the raw results.
- From our raw results we saw a significant charge bias from the charge guest
- molecules where positively charged guest molecules had significantly underestim
-ated binding free energy predictions, and negatively charge guests were
- overestimated.
+ From our raw results
+\change_inserted -1046193749 1682385653
+,
+\change_unchanged
+ we saw a significant charge bias from the charge guest molecules where
+ positively charged guest molecules had significantly underestimated binding
+ free energy predictions, and negatively charge guests were overestimated.
  By applying a simple linear correction base on guest charge we observed
  much better correlation with and deviation from experiment, with RMSE values
  less than 
@@ -291,83 +312,24 @@ ated binding free energy predictions, and negatively charge guests were
 
 \change_deleted -1463621830 1682270602
  
-\end_layout
+\change_inserted -1046193749 1682385658
 
-\begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1046193749 1682203155
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
 
-\change_inserted -1046193749 1682203469
-TL It is not just about explicit solvent and be specific.
- You can also use more than one sentence to layout the background and issues.
- Current problems your code addresses:
-\end_layout
+\change_inserted -1046193749 1682385683
+TL add in some more results about the uncorrected version.
+ Also include R^2
+\change_unchanged
 
-\begin_layout Enumerate
-
-\change_inserted -1046193749 1682203364
-RBFE are only able to calculate ∆∆G between similar molecules.,
-\end_layout
-
-\begin_layout Enumerate
-
-\change_inserted -1046193749 1682203394
-explicit solvent is expensive because 
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-
-\change_inserted -1046193749 1682203412
-every atom must be simulated,
-\end_layout
-
-\begin_layout Enumerate
-
-\change_inserted -1046193749 1682203472
-water configurations can be slow to sample and may never exchange if buried,
-\end_layout
-
-\begin_layout Enumerate
-
-\change_inserted -1046193749 1682203529
-soft-core LJ models must be used,
-\end_layout
-
-\begin_layout Enumerate
-
-\change_inserted -1046193749 1682203667
-friction between the water and solute can slow solute conformational sampling.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-
-\change_inserted -1046193749 1682203831
-Intermediate states in the thermodynamic cycle may be under sampled because
- the accessible states are approximately the same as for the end-states.
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -1046193749 1682203854
-There is a lot there, so you can focus on the major issues but be specific.
 \end_layout
 
 \end_inset
 
 
-\change_deleted -1463621830 1682270621
- 
-\change_inserted -1046193749 1682203639
+\change_deleted -1463621830 1682270602
 
 \end_layout
 
@@ -976,6 +938,8 @@ ISDDM.py
 -cyclodextrin.
  ABFEs are calculate for 83 unique host-guest complexes drawn from the literatur
 e 
+\change_deleted -1046193749 1682382630
+
 \begin_inset Note Note
 status collapsed
 
@@ -985,6 +949,8 @@ TL you aren't using just SAMPL data
 
 \end_inset
 
+
+\change_unchanged
  
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1080,7 +1046,7 @@ Free energy drives a system towards equilibrium and determines the probability
 , of a system in the canonical ensemble (i.e constant number of particles,
  volume and temperature) is given by 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 TL use 
@@ -1246,6 +1212,28 @@ literal "false"
 
 -term can be ignored and the Helmholtz free energy closely approximates
  the Gibbs free energy 
+\change_inserted -1046193749 1682382764
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682382776
+TL need subscripts on 
+\begin_inset Formula $U$
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \begin_inset Formula 
 \begin{equation}
 \Delta G^{\circ}\approx\Delta A^{\circ}=-k_{B}Tln\frac{\int_{\Gamma_{1}}e^{-\beta U(x)}dx}{\int_{\Gamma_{0}}e^{-\beta U(x)}dx}.\label{eq:final-two-state-binding}
@@ -1601,6 +1589,8 @@ literal "false"
 \end_inset
 
  is defined as
+\change_deleted -1046193749 1682382874
+
 \begin_inset Note Note
 status open
 
@@ -1619,6 +1609,8 @@ TL why are
 \end_inset
 
 
+\change_unchanged
+
 \begin_inset Formula 
 \[
 \text{u}_{i}(x)=\beta_{i}\left[U_{i}(x)+p_{i}V(x)+\mu_{i}^{T}N(x)\right],
@@ -1626,10 +1618,6 @@ TL why are
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 where 
 \begin_inset Formula $N(x)$
 \end_inset
@@ -1766,12 +1754,6 @@ where
 
 \end_inset
 
-
-\change_inserted -1463621830 1682275957
-
-\end_layout
-
-\begin_layout Standard
 Where
 \family roman
 \series medium
@@ -2212,11 +2194,7 @@ r interactions have been turn off.
 \begin_inset Formula $\lambda$
 \end_inset
 
--windows
-\change_deleted -1463621830 1682276436
-.
-\change_inserted -1463621830 1682276431
-
+-windows.
 \end_layout
 
 \begin_layout Enumerate
@@ -2634,8 +2612,10 @@ literal "false"
 \end_inset
 
  is 
+\change_deleted -1046193749 1682383013
+
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 TL is this the form used in igb=2?
@@ -2643,6 +2623,8 @@ TL is this the form used in igb=2?
 
 \end_inset
 
+
+\change_unchanged
 
 \begin_inset Formula 
 \[
@@ -2723,7 +2705,11 @@ Host-guest (HG) systems have emerge as valuable benchmarks for the quantitative
 \change_deleted -1463621830 1682278120
  
 \change_unchanged
-develop computational modeling schemesof receptor-ligand binding affinity.
+develop computational modeling scheme
+\change_inserted -1046193749 1682383163
+ 
+\change_unchanged
+sof receptor-ligand binding affinity.
 
 \change_deleted -1463621830 1682278120
  
@@ -2780,8 +2766,23 @@ noprefix "false"
 \begin_inset Formula $\beta$
 \end_inset
 
--cyclodextrin hosts and additional guests for octa-acid were obtained from
- the Taproom repository on Github 
+-cy
+\change_inserted -1046193749 1682383200
+\SpecialChar softhyphen
+
+\change_unchanged
+clo
+\change_inserted -1046193749 1682383182
+\SpecialChar softhyphen
+
+\change_unchanged
+dex
+\change_inserted -1046193749 1682383191
+\SpecialChar softhyphen
+
+\change_unchanged
+trin hosts and additional guests for octa-acid were obtained from the Taproom
+ repository on Github 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "slochowerTaproom2022"
@@ -2823,6 +2824,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/entire_system_2.png
 	lyxscale 50
@@ -2843,6 +2845,8 @@ Host-guest systems dataset.
  (Bottom left.) WP6 receptor and 13 guest molecules from the SAMPL9 dataset.
  (Top right.) Octa-acid receptor and 23 guest molecules.
  
+\change_deleted -1046193749 1682383063
+
 \begin_inset Note Note
 status open
 
@@ -2853,6 +2857,8 @@ TL complete
 \end_inset
 
 .
+
+\change_unchanged
  (Bottom right.) 
 \begin_inset Formula $\alpha/\beta$
 \end_inset
@@ -2865,6 +2871,8 @@ TL complete
 -cyclodextrins host-guest complexes were from GitHub repository as benchmark
  systems.
  
+\change_deleted -1046193749 1682383068
+
 \begin_inset Note Note
 status open
 
@@ -2875,6 +2883,8 @@ TL complete
 \end_inset
 
 .
+
+\change_unchanged
  Together, all host systems comprise 83 unique host-guest pairs.
 \begin_inset CommandInset label
 LatexCommand label
@@ -3208,8 +3218,10 @@ literal "false"
 
 \change_unchanged
  
+\change_deleted -1046193749 1682383231
+
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 TL cite GAFF again
@@ -3217,6 +3229,8 @@ TL cite GAFF again
 
 \end_inset
 
+
+\change_unchanged
 was applied to all guest and host systems using the 
 \begin_inset Flex Code
 status open
@@ -3308,8 +3322,10 @@ literal "false"
 \end_inset
 
  
+\change_deleted -1046193749 1682383240
+
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 TL you say amber 21 and cite amber 22
@@ -3317,6 +3333,8 @@ TL you say amber 21 and cite amber 22
 
 \end_inset
 
+
+\change_unchanged
  for the molecular dynamics calculations.
  For each system, the bound end-state was simulated first to provide a reference
  structure for restraints.
@@ -3482,6 +3500,8 @@ nstlim=1
  For all host-guest bound end-state simulations, a center-of-mass flat bottom
  restraint potential was used.
  
+\change_deleted -1046193749 1682385548
+
 \begin_inset Note Note
 status open
 
@@ -3491,6 +3511,8 @@ TL was this not used for all bound-state simulations?
 
 \end_inset
 
+
+\change_unchanged
  Coordinate trajectories at the target temperature of 298 K were extracted
  by 
 \begin_inset Flex Code
@@ -3512,6 +3534,8 @@ literal "false"
 
 .
  A total of 10,000 frames were saved for each of the end-states.
+\change_deleted -1046193749 1682383386
+
 \begin_inset Note Note
 status open
 
@@ -3523,6 +3547,8 @@ TL Should this sentence be in the next section? or do you mean that 10,000
 
 \end_inset
 
+
+\change_unchanged
 
 \end_layout
 
@@ -3607,6 +3633,10 @@ cpptraj
 
 .
  In all states
+\change_inserted -1046193749 1682383402
+ 
+\change_unchanged
+
 \begin_inset Flex Code
 status open
 
@@ -3617,8 +3647,10 @@ gbsa=0
 \end_inset
 
  
+\change_deleted -1046193749 1682383398
+
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 TL you should have 
@@ -3636,6 +3668,8 @@ gbsa=0
 
 \end_inset
 
+
+\change_unchanged
  and in states 
 \begin_inset Formula $3-7$
 \end_inset
@@ -3741,11 +3775,13 @@ were increased over a series of intermediate states and then orientational
 -scale.
  The lowest energy conformational restraint force constant was determine
  to be 
-\begin_inset Formula $2^{-8}$
+\begin_inset Formula $\unit[2^{-8}]{\text{kcal/mol/Å}}$
 \end_inset
 
  
-\begin_inset Formula $\text{kcal/molÅ}$
+\change_deleted -1046193749 1682383511
+
+\begin_inset Formula $ $
 \end_inset
 
 
@@ -3758,12 +3794,16 @@ TL fix
 
 \end_inset
 
+
+\change_unchanged
  and the maximum to be 
-\begin_inset Formula $2^{4}$
+\begin_inset Formula $\unit[2^{4}]{\text{kcal/mol/Å}}$
 \end_inset
 
  
-\begin_inset Formula $\text{\text{kcal/mol\ensuremath{\cdot}Å}}$
+\change_deleted -1046193749 1682383508
+
+\begin_inset Formula $ $
 \end_inset
 
 
@@ -3776,6 +3816,8 @@ TL fix
 
 \end_inset
 
+
+\change_unchanged
 .
  From previous results 
 \begin_inset CommandInset citation
@@ -3796,6 +3838,8 @@ TL again, incorrect citation
 \end_inset
 
 , a minimum orientational force constant of 
+\change_deleted -1046193749 1682383558
+
 \begin_inset Formula $2^{-4}$
 \end_inset
 
@@ -3813,7 +3857,23 @@ TL fix
 
 \end_inset
 
+
+\change_inserted -1046193749 1682383558
+
+\begin_inset Formula $\unit[2^{-4}]{\text{kcal/mol/Å}}$
+\end_inset
+
+
+\change_unchanged
  and maximum 
+\change_inserted -1046193749 1682383578
+
+\begin_inset Formula $\unit[2^{8}]{\text{kcal/mol/Å}}$
+\end_inset
+
+
+\change_deleted -1046193749 1682383577
+
 \begin_inset Formula $2^{8}$
 \end_inset
 
@@ -3831,6 +3891,8 @@ TL fix
 
 \end_inset
 
+
+\change_unchanged
  gave acceptable errors for highly charge guest molecules.
  Host and guest molecule conformations were restrained by applying a harmonic
  distance restraint between every atom and each neighbor within 6 Å.
@@ -3982,6 +4044,8 @@ Free Energy Analysis Using MBAR
 
 \begin_layout Standard
 The Python package PyMBAR version 3.1 
+\change_deleted -1046193749 1682383596
+
 \begin_inset Note Note
 status open
 
@@ -3991,6 +4055,8 @@ TL version
 
 \end_inset
 
+
+\change_unchanged
 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -4099,6 +4165,8 @@ noprefix "false"
 \end_inset
 
 
+\change_deleted -1046193749 1682383634
+
 \begin_inset Note Note
 status open
 
@@ -4108,6 +4176,8 @@ TL fix
 
 \end_inset
 
+
+\change_unchanged
 .
 \end_layout
 
@@ -4116,6 +4186,8 @@ Statistical metrics of absolute binding
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1682385524
 \begin_inset Note Note
 status open
 
@@ -4132,6 +4204,8 @@ TL then you can have a short intro, one or two sentences, explaining that
 
 \end_inset
 
+
+\change_unchanged
 
 \end_layout
 
@@ -4188,18 +4262,48 @@ where
 \begin_inset Formula $∆G^{\text{calc}}$
 \end_inset
 
- are the experimental and GB predicated binding affinity values.
- Letter 
+ are the experimental and GB predicated binding affinity values
+\change_inserted -1046193749 1682383691
+ for 
+\change_deleted -1046193749 1682383689
+.
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1682383676
+Letter
+\change_unchanged
+ 
+\change_deleted -1046193749 1682383698
+
 \begin_inset Formula $i$
 \end_inset
 
-are the guest molecules and 
+are the
+\change_unchanged
+ guest molecule
+\change_inserted -1046193749 1682383703
+ 
+\begin_inset Formula $i$
+\end_inset
+
+
+\change_deleted -1046193749 1682383701
+s
+\change_unchanged
+ and 
 \begin_inset Formula $n$
 \end_inset
 
+
+\change_inserted -1046193749 1682383707
+ 
+\change_unchanged
 is the number of measurements.
+\change_deleted -1046193749 1682385530
+
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 TL finish this sentence
@@ -4207,6 +4311,8 @@ TL finish this sentence
 
 \end_inset
 
+
+\change_unchanged
  The RMSE
 \begin_inset Formula $_{o}$
 \end_inset
@@ -4220,12 +4326,20 @@ RMSE_{o}=\sqrt{\frac{1}{n}\stackrel[i=1]{n}{\sum}\left[\Delta G_{i}^{exp}-\Delta
 
 \end_inset
 
+
+\change_inserted -1046193749 1682383723
+and 
+\change_unchanged
 RMSE
 \begin_inset Formula $_{r}$
 \end_inset
 
 , is used to measure the accuracy of relative binding free energies by consideri
-ng all guest molecules ,
+ng all guest molecules
+\change_deleted -1046193749 1682383730
+ 
+\change_unchanged
+,
 \begin_inset Formula 
 \begin{equation}
 RMSE_{r}=\sqrt{\frac{2}{n\left(n-1\right)}\stackrel[i]{n}{\sum}\stackrel[j=i+1]{n}{\sum}\left[\left(\Delta G_{j}^{calc}-\Delta G_{i}^{calc}\right)-\left(\Delta G_{j}^{exp}-\Delta G_{i}^{exp}\right)\right]^{2}.}\label{eq:RMSE_r}
@@ -4296,7 +4410,11 @@ noprefix "false"
 
 \end_inset
 
-, we report on the accuracy of the method compared to experiment and
+, we report on the accuracy of the method compared to experiment
+\change_inserted -1046193749 1682383791
+,
+\change_unchanged
+ and
 \change_inserted -1463621830 1682310270
  in 
 \begin_inset CommandInset ref
@@ -4309,10 +4427,14 @@ noprefix "false"
 \end_inset
 
 
+\change_inserted -1046193749 1682383794
+, we 
 \change_unchanged
 assess the convergence of each step of the cycle.
+\change_deleted -1046193749 1682383805
+
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 TL you don't actually discuss convergence here.
@@ -4337,6 +4459,8 @@ noprefix "false"
 
 \end_inset
 
+
+\change_unchanged
 
 \series bold
  
@@ -4453,6 +4577,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Workflow-2.pdf
 	width 100text%
@@ -5509,6 +5634,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Results.png
 	lyxscale 50
@@ -6562,8 +6688,10 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1682383906
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 TL description of what the values mean should be in the figure caption.
@@ -6574,6 +6702,8 @@ TL description of what the values mean should be in the figure caption.
 
 \end_inset
 
+
+\change_unchanged
 In 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -6912,8 +7042,10 @@ noprefix "false"
 
  shows the processor time to complete all intermediate states 2-7 (excluding
  the end-state simulations).
+\change_deleted -1046193749 1682383919
+
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 TL does this include the REMD of the end-states?
@@ -6921,6 +7053,8 @@ TL does this include the REMD of the end-states?
 
 \end_inset
 
+
+\change_unchanged
  protocol for the 150-atom CB7-C1 complex system.
  The automation application was able to achieve near perfect scaling as
  the number of processes increases.
@@ -9175,6 +9309,8 @@ WP6 SAMPL9 Comparison
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1682385508
 \begin_inset Note Note
 status open
 
@@ -9206,12 +9342,18 @@ TL The MAE for your corrected results looks wrong.
 \end_inset
 
 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
 There were eight submissions for WP6 dataset from SAMPL9 challenge.
  As the official results have not been published at this time, the submissions
  were taken from the GitHub page
+\change_inserted -1046193749 1682383989
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "SAMPL9BlindPrediction2023"
@@ -9219,6 +9361,8 @@ literal "false"
 
 \end_inset
 
+
+\change_deleted -1046193749 1682383979
  
 \begin_inset Note Note
 status open
@@ -9229,6 +9373,8 @@ TL cite
 
 \end_inset
 
+
+\change_unchanged
 .
  Looking first at the RMSE (
 \begin_inset CommandInset ref
@@ -9244,20 +9390,66 @@ noprefix "false"
 \begin_inset Formula $\unit[1.97]{kcal/mol}$
 \end_inset
 
-) , followed by the extended linear interaction energy (ELIE) method with
+)
+\change_deleted -1046193749 1682384046
  
+\change_unchanged
+,
+\change_inserted -1046193749 1682384049
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682384054
+TL docking is the lowest
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ followed by the extended linear interaction energy (ELIE) method with 
 \begin_inset Formula $\text{RMSE}=\unit[2.5]{kcal/mol}$
 \end_inset
 
  and Docking/SMINA/VINARDO with RMSE = 1.8kcal/mol.
  However with low RMSE all three methods had very low 
+\change_deleted -1046193749 1682384066
+
 \begin_inset Formula $R^{2}$
 \end_inset
 
- Pearson correlation of 0.15, 0.40 and 0.09 for machine learning, ELIE and
- Docking/SMINA method respectively .
- Which suggest a low relation between experimental and prediction binding
- affinity.
+ 
+\change_unchanged
+Pearson correlation 
+\change_inserted -1046193749 1682384072
+coefficients 
+\change_unchanged
+of 0.15, 0.40 and 0.09 for machine learning, ELIE and Docking/SMINA method
+ respectively
+\change_inserted -1046193749 1682384091
+,
+\change_deleted -1046193749 1682384089
+ .
+ W
+\change_inserted -1046193749 1682384093
+ w
+\change_unchanged
+hich suggest
+\change_inserted -1046193749 1682384097
+s
+\change_unchanged
+ a 
+\change_deleted -1046193749 1682384104
+low relation
+\change_inserted -1046193749 1682384107
+poor correlation
+\change_unchanged
+ between experimental and prediction binding affinity.
  Whereas both our uncorrected and corrected Pearson correlation rank the
  second highest, only slightly lower than DDM/AMOEBA/BAR method with 
 \begin_inset Formula $R^{2}$
@@ -9267,11 +9459,41 @@ of 0.56.
 \end_layout
 
 \begin_layout Standard
-The other five methods were had an average RMSE of about ~3kcal/mol.
- As we compared our RMSE with our uncorrected 
+The other five methods were had an average RMSE of about 
+\change_deleted -1046193749 1682384232
+~3kcal/mol
+\change_inserted -1046193749 1682384232
+
+\begin_inset Formula $\gtrsim\unit[3]{kcal/mol}$
+\end_inset
+
+
+\change_unchanged
+.
+ 
+\change_deleted -1046193749 1682384373
+As we compared our
+\change_inserted -1046193749 1682384373
+The
+\change_unchanged
+ RMSE 
+\change_deleted -1046193749 1682384380
+with
+\change_inserted -1046193749 1682384380
+for
+\change_unchanged
+ our uncorrected 
 \begin_inset Formula $\Delta G_{gb}^{bind}$
 \end_inset
 
+
+\change_inserted -1046193749 1682384446
+ (
+\begin_inset Formula $\unit[6.6]{kcal/mol}$
+\end_inset
+
+)
+\change_deleted -1046193749 1682384385
 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -9282,7 +9504,25 @@ noprefix "false"
 
 \end_inset
 
-with RMSE 6.6kcal/mol having the largest deviation from the rank submissions.
+
+\change_inserted -1046193749 1682384444
+ was
+\change_deleted -1046193749 1682384385
+with RMSE
+\change_unchanged
+ 
+\change_deleted -1046193749 1682384423
+6.6kcal/mol having 
+\change_inserted -1046193749 1682384444
+ 
+\change_unchanged
+the largest deviation 
+\change_deleted -1046193749 1682384427
+from
+\change_inserted -1046193749 1682384444
+of
+\change_unchanged
+ the rank submissions.
  The trained MM/PBSA ELIE method is very similar to end-point calculations
  using an implicit solvent model GBSA.
  However this method required some system-specific training step, sharing
@@ -9297,7 +9537,24 @@ literal "false"
 \end_inset
 
 .
- However our corrected results would have the lowest RMSE error of 1.39 kcal/mol
+ However
+\change_inserted -1046193749 1682384473
+,
+\change_unchanged
+ our corrected results would have 
+\change_inserted -1046193749 1682384479
+had 
+\change_unchanged
+the lowest RMSE error 
+\change_deleted -1046193749 1682384493
+of 1.39 kcal/mol
+\change_inserted -1046193749 1682384509
+(
+\begin_inset Formula $\unit[1.39]{kcal/mol}$
+\end_inset
+
+)
+\change_unchanged
  compared to all participants.
 \end_layout
 
@@ -9913,6 +10170,8 @@ OAH SAMPL4 comparison
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1046193749 1682384688
 \begin_inset Note Note
 status open
 
@@ -9923,6 +10182,8 @@ TL Why isn't there a table for this section? You should have the SAMPL4
 
 \end_inset
 
+
+\change_unchanged
 
 \end_layout
 
@@ -10016,8 +10277,10 @@ our uncorrected method gave
 
 .
  
+\change_deleted -1046193749 1682384693
+
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 TL corrected or uncorrected?
@@ -10025,6 +10288,8 @@ TL corrected or uncorrected?
 
 \end_inset
 
+
+\change_unchanged
 In contract to the GB method we used, the AGBNP2 method was tuned to properly
  treat enclosed hydration sites to achieve good accuracy 
 \begin_inset CommandInset citation
@@ -10089,14 +10354,14 @@ status open
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="14" columns="7">
-<features booktabs="true" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<features rotate="90" booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
@@ -10958,7 +11223,7 @@ DOCK3.7
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10967,7 +11232,7 @@ DFT-D3/COSMO-RS
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10976,7 +11241,7 @@ DFT-D3/COSMO-RS
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10985,7 +11250,7 @@ DFT-D3/COSMO-RS
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10994,7 +11259,7 @@ DFT-D3/COSMO-RS
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11003,7 +11268,7 @@ DFT-D3/COSMO-RS
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11012,7 +11277,7 @@ DFT-D3/COSMO-RS
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11081,8 +11346,16 @@ RMSE_std,	RMSE
 \uwave default
 \noun default
 \color inherit
- are in kcal/mol..
- The guest molecules
+ are in kcal/mol.
+\change_deleted -1046193749 1682384649
+.
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1682384657
+The guest molecules
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -11303,8 +11576,10 @@ literal "false"
 \end_inset
 
 , 
+\change_deleted -1046193749 1682384725
+
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 TL cite 10.1063/1.478883 and 10.1021/jp971083h
@@ -11312,6 +11587,8 @@ TL cite 10.1063/1.478883 and 10.1021/jp971083h
 
 \end_inset
 
+
+\change_unchanged
  which describes the solvent as a classical density distribution of the
  solvent sites around the solute, yields a more detailed molecular structure
  than GB models and naturally accounts for properties such as CHA and hydrogen
@@ -11479,6 +11756,24 @@ ISDDM.py
  workflow by supplying a YAML-format user input files, which consists of
  only 36 lines.
  Each parameter in the input file is defined below.
+\change_inserted -1046193749 1682385132
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682385151
+TL mark which parameters are optional and when they are needed.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \begin_inset Separator plain
 \end_inset
 
@@ -11490,11 +11785,19 @@ ISDDM.py
 status open
 
 \begin_layout Plain Layout
-hardware_parameters
+
+\change_deleted -1046193749 1682384777
+hardware
+\change_inserted -1046193749 1682384777
+system
+\change_unchanged
+_parameters
 \end_layout
 
 \end_inset
 
+
+\change_deleted -1046193749 1682385111
 
 \begin_inset Note Note
 status open
@@ -11518,6 +11821,8 @@ hardware_parameters
 
 \end_inset
 
+
+\change_unchanged
 
 \end_layout
 
@@ -11629,6 +11934,8 @@ float
 \end_inset
 
  
+\change_deleted -1046193749 1682385116
+
 \begin_inset Note Note
 status open
 
@@ -11649,6 +11956,8 @@ dtype
 
 \end_inset
 
+
+\change_unchanged
 Amount of memory needed to run an intermediate MD simulation.
 \end_layout
 
@@ -11888,7 +12197,91 @@ ligand_mask:str
 \end_layout
 
 \begin_layout Section
+
+\change_inserted -1046193749 1682384834
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682384822
+workflow
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -1046193749 1682384835
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682384835
+endstate_method:str
+\end_layout
+
+\end_inset
+
+ End-state simulation type.
+ The default setting, 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682384835
+remd
+\end_layout
+
+\end_inset
+
+, endstate simulation runs replica exchange molecular dynamics.
+ The user can specify their own pre-calculated end-state simulation by setting
+ value to 0.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682384835
+TL are there other options? Where are the pre-calculated simulations input?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\change_deleted -1046193749 1682384855
 End-state Arguments
+\change_inserted -1046193749 1682384855
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682384855
+endstate_arguments
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -11906,6 +12299,8 @@ users can specify there own end-state simulation as well.
 \end_layout
 
 \begin_layout Description
+
+\change_deleted -1046193749 1682384832
 \begin_inset Flex Code
 status open
 
@@ -11919,7 +12314,7 @@ endstate_method:str
  The default setting, 
 \change_deleted -1463621830 1682312322
  
-\change_unchanged
+\change_deleted -1046193749 1682384832
 
 \begin_inset Flex Code
 status open
@@ -11943,6 +12338,8 @@ TL are there other options? Where are the pre-calculated simulations input?
 
 \end_inset
 
+
+\change_unchanged
 
 \end_layout
 
@@ -11996,6 +12393,8 @@ ngroups:int
 \end_inset
 
  Specifies total number of copies (replicas).
+\change_deleted -1046193749 1682384933
+
 \begin_inset Note Note
 status open
 
@@ -12005,6 +12404,8 @@ TL what are 'groups'?
 
 \end_inset
 
+
+\change_unchanged
 
 \end_layout
 
@@ -12065,6 +12466,29 @@ mdin
 \end_inset
 
  arguments equilibration simulation.
+\change_inserted -1046193749 1682384885
+
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -1046193749 1682384888
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1682384891
+temperatures
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Section
@@ -12126,10 +12550,18 @@ igb:int
 
 \end_inset
 
- GB version for all calculation: [
+ GB version for all calculation: 
+\change_deleted -1046193749 1682385436
+[
+\change_unchanged
+
 \begin_inset Formula $GB^{HCT}$
 \end_inset
 
+
+\change_inserted -1046193749 1682385441
+ 
+\change_unchanged
 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -12138,6 +12570,10 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1682385442
+ 
+\change_unchanged
 (
 \begin_inset Flex Code
 status open
@@ -12149,9 +12585,17 @@ igb=1
 \end_inset
 
 ),
+\change_inserted -1046193749 1682385445
+ 
+\change_unchanged
+
 \begin_inset Formula $GB^{OBC}$
 \end_inset
 
+
+\change_inserted -1046193749 1682385448
+ 
+\change_unchanged
 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -12160,6 +12604,10 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1682385450
+ 
+\change_unchanged
 (
 \begin_inset Flex Code
 status open
@@ -12171,9 +12619,17 @@ igb=2
 \end_inset
 
 ),
+\change_inserted -1046193749 1682385453
+ 
+\change_unchanged
+
 \begin_inset Formula $GB^{OBC}$
 \end_inset
 
+
+\change_inserted -1046193749 1682385454
+ 
+\change_unchanged
 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -12182,6 +12638,10 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -1046193749 1682385455
+ 
+\change_unchanged
 (
 \begin_inset Flex Code
 status open
@@ -12195,12 +12655,17 @@ igb=5
 )
 \change_inserted -1463621830 1682365554
 ,
-\end_layout
+\change_inserted -1046193749 1682385488
+ 
+\change_unchanged
 
-\begin_layout Description
 \begin_inset Formula $GB-neck2$
 \end_inset
 
+
+\change_inserted -1046193749 1682385466
+ 
+\change_unchanged
 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -12210,6 +12675,8 @@ literal "false"
 \end_inset
 
 
+\change_inserted -1046193749 1682385467
+ 
 \change_inserted -1463621830 1682365553
 (
 \change_unchanged
@@ -12226,8 +12693,12 @@ igb=8
 
 \change_inserted -1463621830 1682365553
 )
+\change_deleted -1046193749 1682385470
+]
 \change_unchanged
-].
+.
+
+\change_deleted -1046193749 1682385474
  
 \begin_inset Note Note
 status collapsed
@@ -12238,6 +12709,8 @@ TL provide numbers for each option
 
 \end_inset
 
+
+\change_unchanged
 
 \end_layout
 
@@ -12327,8 +12800,20 @@ temperature: float
 
 \end_inset
 
- Temperature to run intermediate simulations.
  
+\change_inserted -1046193749 1682385029
+(Optional.) 
+\change_unchanged
+Temperature to run intermediate simulations
+\change_inserted -1046193749 1682385052
+ if complete end-state simulations are provided.
+\change_deleted -1046193749 1682385030
+.
+
+\change_unchanged
+ 
+\change_deleted -1046193749 1682385055
+
 \begin_inset Note Note
 status open
 
@@ -12338,6 +12823,8 @@ TL is this also the target temperature for the REMD calculations?
 
 \end_inset
 
+
+\change_unchanged
 
 \end_layout
 
@@ -12360,6 +12847,8 @@ charges_lambda_window: list[float]
 
 \change_inserted -1463621830 1682365210
 Sample Input File
+\change_inserted -1046193749 1682385220
+
 \end_layout
 
 \begin_layout Standard
