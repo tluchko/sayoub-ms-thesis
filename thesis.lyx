@@ -12,7 +12,7 @@
 \committee{Tyler Luchko}{Ravi Abrol}{Maosheng Miao}
 
 \abstract{
-	Identifying small drug-like molecules for therapeutic targets of interest is an ongoing effort in drug discovery. Accurate absolute binding free energy calculations (ABFEs) in silico, can reduce the time and cost of exploring a diverse set of potential drug candidates that may have been overlooked experimentally. However, these calculations usually employ explicit solvent models that can be computationally demanding and difficult to implement and perform. To circumvent these drawbacks, we introduced the software ISDDM.py, a Python automated workflow that implements an approach that uses faster implicit solvents, such as generalized Born (GB), which greatly reduces computational costs. We adapted the double decoupling method (DDM), which uses conformational restraints, and paired it with GB solvent to enhance convergence. The software is tested on 83 unique host-guest complex systems and reports encouraging results in estimating binding free energies. Our work here attempts to reduce the computational expense of absolute binding free energies by using implicit solvent models and the ISDDM.py package to handle all the input files, monitor the simulations and perform post-analysis.
+	Identifying small drug-like molecules for therapeutic targets of interest is an ongoing effort in drug discovery. Accurate absolute binding free energy calculations (ABFEs) in silico, can reduce the time and cost of exploring a diverse set of potential drug candidates that may have been overlooked experimentally. ABFEs can overcome many challenges faced by relative binding free energy calculations when screening a diverse set of molecules but these calculations can be difficult to implement and perform. Currently ABFE calculations are dominated by expensive explicit solvent models or the use of severe approximated end state methods. For example, explicit solvent models must simulate every atom and, in case of water occupancy of a buried site, large potential energy barrier can lead to slow water exchange and insufficient sampling. Additionally, Lennard-Jones soft-core potentials must be used during the creation or annihilation of particles, but this creates additional complexity when performing these ABFE calculations. To circumvent these drawbacks, we introduced the software ISDDM.py, an automated Python workflow that implements an approach that uses faster implicit solvents, such as generalized Born (GB), which greatly reduces computational costs. We adapted the double decoupling method (DDM), which uses conformational restraints, and paired it with GB solvent to enhance convergence. Our work here attempts to reduce the computational expense of absolute binding free energies by using implicit solvent models and the ISDDM.py package to handle all the input files, monitor the simulations and perform post-analysis. The software was tested on 83 unique host-guest complex systems and reports encouraging results in estimating binding free energies. We saw overall good correlation with experiments and out outperformed most the SAMPL4 and SAMPL9 challenge submission's RBFE metrics, though large systematic errors were present in the raw results. From our raw results, we saw a significant bias associated with the charge of the guest molecules, where positively charged guest molecules had significantly underestimated binding free energy predictions, and negatively charge guests were overestimated. Looking at all systems as a whole we report an correlation coefficient of 0.76 with an RMSE of 4.1\text{ kcal/mol} and a slope of 1.8. By applying a simple linear correction base on guest charge we observed much better correlation with and deviation from experiment, with RMSE values less than 1.06\text{ kcal/mol} and a correlation coefficient of 0.87. An MAE of 0.9\text{ kcal/mol} and MSE of 0\text{ kcal/mol}
 }
 \submitted{May}{2023}
 
@@ -32,9 +32,9 @@
 
 \copyrightyear{2023}
 
-\dedication{I would like to dedicate this work to parents, specifically my mother who is the most hardworking person I know. My mother is my rock and when it gets hard, she will always be there for me no matter what. I’d like to thank my father who has been always hard on me to push beyond my limits and keep reaching for higher education.}
+\dedication{I would like to dedicate this work to my parents, specifically my mother. My mother is my rock, when it gets hard, she will always be there for me. I’d like to thank my father who has always supported me to achieve an higher education.}
 
-\acknowledgement{First, I would like to thank Dr. Maria Elena Zavala the director of the NIH Bridges for the Doctorate Program which provided me with financial and mentor support throughout my master's. I’d also like to thank Jesus Hernandez a fellow chemistry graduate student who has always been there for me during tough times and has been a great friend. Also, like to thank my girlfriend Martha Avila-Zavala who has supported me emotionally, and who has been my little “lightning McQueen fan” who constantly cheers me on to keep going.  Above all, I’d like to thank my supervisor Dr. Tyler Luchko who has been an amazing mentor and great support through my master's journey. He is always present to answer any questions or to provide any guidance to help me through my project. I’m extremely lucky to have worked under Dr. Tyler Luchko, I have learned a lot from him, and I hope to share my knowledge with future young aspiring research students as he did with me.}
+\acknowledgement{First, I would like to thank Dr. Maria Elena Zavala the director of the NIH Bridges for the Doctorate Program, for providing mentor support throughout my master's. I’d also like to thank Jesus Hernandez a fellow chemistry graduate student who has been a great friend. Also, like to thank my girlfriend Martha Avila-Zavala who has supported me emotionally and has been my little “lightning McQueen fan” who constantly cheers me on to keep going.  Above all, I’d like to thank my supervisor Dr. Tyler Luchko who has been an amazing mentor and great support through my master's journey. He is always present to answer any questions or to provide any guidance through my project. I’m extremely lucky to have worked under Dr. Tyler Luchko, I have learned a lot from him, and I hope to share my knowledge with future young aspiring research students as he did with me.}
 
 %acknowledgement
 %\preface{preface}
@@ -192,84 +192,6 @@ http://www.csun.edu/~mathgs/LaTex.html
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Identifying small drug-like molecules for therapeutic targets of interest
- is an ongoing effort in drug discovery.
- Accurate absolute binding free energy calculations (ABFEs) in silico, can
- reduce the time and cost of exploring a diverse set of potential drug candidate
-s that may have been overlooked experimentally.
- ABFEs can overcome many challenges faced by relative binding free energy
- calculations when screening a diverse set of molecules but these calculations
- can be difficult to implement and perform.
- Currently ABFE calculations are dominated by expensive explicit solvent
- models or the use of severe approximated end state methods.
- For example, explicit solvent models must simulate every atom and, in case
- of water occupancy of a buried site, large potential energy barrier can
- lead to slow water exchange and insufficient sampling.
- Additionally, Lennard-Jones soft-core potentials must be used during the
- creation or annihilation of particles, but this creates additional complexity
- when performing these ABFE calculations.
- To circumvent these drawbacks, we introduced the software 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-ISDDM.py
-\end_layout
-
-\end_inset
-
-, an automated Python workflow that implements an approach that uses faster
- implicit solvents, such as generalized Born (GB), which greatly reduces
- computational costs.
- We adapted the double decoupling method (DDM), which uses conformational
- restraints, and paired it with GB solvent to enhance convergence.
- Our work here attempts to reduce the computational expense of absolute
- binding free energies by using implicit solvent models and the 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-ISDDM.py
-\end_layout
-
-\end_inset
-
- package to handle all the input files, monitor the simulations and perform
- post-analysis.
- The software was tested on 83 unique host-guest complex systems and reports
- encouraging results in estimating binding free energies.
- We saw overall good correlation with experiments and out outperformed most
- the SAMPL4 and SAMPL9 challenge submission's RBFE metrics, though large
- systematic errors were present in the raw results.
- From our raw results, we saw a significant bias associated with the charge
- of the guest molecules, where positively charged guest molecules had significan
-tly underestimated binding free energy predictions, and negatively charge
- guests were overestimated.
- Looking at all systems as a whole we report an correlation coefficient
- of 0.76 with an RMSE of 
-\begin_inset Formula $4.1\text{kcal/mol}$
-\end_inset
-
-and a slope of 1.8.
- By applying a simple linear correction base on guest charge we observed
- much better correlation with and deviation from experiment, with RMSE values
- less than 
-\begin_inset Formula $\unit[1.06]{kcal/mol}$
-\end_inset
-
-and a correlation coefficient of 0.87.
- An MAE of 
-\begin_inset Formula $0.9\text{kcal/mol}$
-\end_inset
-
- and MSE of 
-\begin_inset Formula $0\text{kcal/mol}$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Chapter
