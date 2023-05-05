@@ -10444,7 +10444,7 @@ rmance computing resources is a desirable tool for drug discovery pipelines.
  the number of processes increases for the 150-atom CB7-C1 complex system
  as seen in 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:-processor-scaling"
 plural "false"
 caps "false"
@@ -10458,10 +10458,35 @@ noprefix "false"
  workflow.
  A potential bottleneck of the scalability of our workflow is moving toward
  larger systems, such as proteins, which contain a few thousand heavy atoms.
- As the system grows, we expect the time of completion to increase dramatically
+ As the system grows, we expect the time of completion to increase 
+\change_deleted -1046193749 1683325639
+dramatically
+\change_inserted -1046193749 1683325644
+as the number of atoms squared
+\change_unchanged
  which will affect our overall turnaround time.
  However, our automated workflow is designed to support GPU-accelerated
- engines such as PMEMD.CUDA.
+ engines such as 
+\change_deleted -1046193749 1683325607
+PMEMD.CUDA
+\change_inserted -1046193749 1683325616
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1046193749 1683325616
+pmemd.cuda
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
  In the future, as we move to small proteins using GPUs will be benchmarked
  and tested for performance scaling.
 \end_layout
