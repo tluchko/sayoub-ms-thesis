@@ -118,6 +118,7 @@ logicalmkup
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -1463621830 "steven ayoub"
 \author -1046193749 "Luchko"
 \end_header
 
@@ -1594,7 +1595,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename images/cycle.png
+	filename images/thermo_cycle_conformational_arrow.png
 	lyxscale 25
 	width 100text%
 	rotateOrigin centerTop
@@ -10427,6 +10428,42 @@ literal "false"
  Unfortunately, 3D-RISM is computational demanding and not suitable for
  high throughput screening campaigns at this time.
  However, improved implementation of 3D-RISM may change this.
+\change_inserted -1463621830 1683313121
+
+\end_layout
+
+\begin_layout Section
+Scalable Workflow
+\end_layout
+
+\begin_layout Standard
+Designing a scalable, fully automated absolute binding free energy workflow
+ that can manage the executions of simulations and takes advantage of high-perfo
+rmance computing resources is a desirable tool for drug discovery pipelines.
+ Our automation application was able to achieve near-perfect scaling as
+ the number of processes increases for the 150-atom CB7-C1 complex system
+ as seen in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:-processor-scaling"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ These results suggest we have strong scaling performance in which the time
+ of completion decreases rapidly as we add more CPU cores to our parallel
+ workflow.
+ A potential bottleneck of the scalability of our workflow is moving toward
+ larger systems, such as proteins, which contain a few thousand heavy atoms.
+ As the system grows, we expect the time of completion to increase dramatically
+ which will affect our overall turnaround time.
+ However, our automated workflow is designed to support GPU-accelerated
+ engines such as PMEMD.CUDA.
+ In the future, as we move to small proteins using GPUs will be benchmarked
+ and tested for performance scaling.
 \end_layout
 
 \begin_layout Chapter
