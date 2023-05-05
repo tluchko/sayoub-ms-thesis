@@ -32,9 +32,12 @@
 
 \copyrightyear{2023}
 
-\dedication{I would like to dedicate this work to my parents, specifically my mother. My mother is my rock, when it gets hard, she will always be there for me. I’d like to thank my father who has always supported me to achieve an higher education.}
+\dedication{I would like to dedicate this work to my parents, specifically my mother. My mother has always been my rock. She has been there to love, support and encourage me when things get hard. My father has encouraged me to achieve a higher education and continue my academic career. And finally, I would like to dedicate this work to my older sister. She has never failed to support me and cheer me on.}
 
-\acknowledgement{First, I would like to thank Dr. Maria Elena Zavala the director of the NIH Bridges for the Doctorate Program, for providing mentor support throughout my master's. I’d also like to thank Jesus Hernandez a fellow chemistry graduate student who has been a great friend. Also, like to thank my girlfriend Martha Avila-Zavala who has supported me emotionally and has been my little “lightning McQueen fan” who constantly cheers me on to keep going.  Above all, I’d like to thank my supervisor Dr. Tyler Luchko who has been an amazing mentor and great support through my master's journey. He is always present to answer any questions or to provide any guidance through my project. I’m extremely lucky to have worked under Dr. Tyler Luchko, I have learned a lot from him, and I hope to share my knowledge with future young aspiring research students as he did with me.}
+\acknowledgement{I would like to thank Dr.Maria Elena Zavala, the director of the NIH Bridges for the
+Doctorate Program at CSUN, for providing mentor support throughout my master’s. I’d also like to acknowledge and thank Jesus Hernandez, a fellow chemistry graduate student, who has been a great classmate and friend. Also, like to thank my girlfriend Martha Avila-Zavala who has supported me in many ways but also cheered me on and pushed me to keep going. Above all, I would like to acknowledge and thank my supervisor, Dr. Tyler Luchko, who has been an
+amazing mentor and teacher throughout my master’s journey. He is always approachable, present, genuine and has provided me with an abundance of guidance for my project. I feel honored to have worked under Dr. Luchko. One day, I hope to share my knowledge with future young aspiring research students as he did with me.
+}
 
 %acknowledgement
 %\preface{preface}
@@ -10442,7 +10445,7 @@ Designing a scalable, fully automated absolute binding free energy workflow
 rmance computing resources is a desirable tool for drug discovery pipelines.
  Our automation application was able to achieve near-perfect scaling as
  the number of processes increases for the 150-atom CB7-C1 complex system
- as seen in 
+ as seen in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:-processor-scaling"
@@ -10461,7 +10464,16 @@ noprefix "false"
  As the system grows, we expect the time of completion to increase dramatically
  which will affect our overall turnaround time.
  However, our automated workflow is designed to support GPU-accelerated
- engines such as PMEMD.CUDA.
+ engines such as 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+PMEMD.CUDA.
+\end_layout
+
+\end_inset
+
  In the future, as we move to small proteins using GPUs will be benchmarked
  and tested for performance scaling.
 \end_layout
