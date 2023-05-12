@@ -10445,9 +10445,9 @@ Designing a scalable, fully automated absolute binding free energy workflow
 rmance computing resources is a desirable tool for drug discovery pipelines.
  Our automation application was able to achieve near-perfect scaling as
  the number of processes increases for the 150-atom CB7-C1 complex system
- as seen in figure 
+ as seen in 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:-processor-scaling"
 plural "false"
 caps "false"
@@ -10461,19 +10461,20 @@ noprefix "false"
  workflow.
  A potential bottleneck of the scalability of our workflow is moving toward
  larger systems, such as proteins, which contain a few thousand heavy atoms.
- As the system grows, we expect the time of completion to increase dramatically
- which will affect our overall turnaround time.
+ As the system grows, we expect the time of completion to increase as the
+ number of atoms squared which will affect our overall turnaround time.
  However, our automated workflow is designed to support GPU-accelerated
  engines such as 
 \begin_inset Flex Code
 status open
 
 \begin_layout Plain Layout
-PMEMD.CUDA.
+pmemd.cuda
 \end_layout
 
 \end_inset
 
+.
  In the future, as we move to small proteins using GPUs will be benchmarked
  and tested for performance scaling.
 \end_layout
@@ -10535,7 +10536,11 @@ ISDDM.py
 One major issue with using the GB solvation method is its inability to account
  charge hydration asymmetry, leading towards the strong electrostatics interacti
 ons from charge guest molecules and bias in the results.
- From all the host guest systems shown in 
+ From all the host guest systems shown in figure
+\change_inserted -1463621830 1683326897
+ 
+\change_unchanged
+
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:ABFE-host-guest-systems"
