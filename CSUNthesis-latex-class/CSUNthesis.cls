@@ -737,7 +737,7 @@ By
   \ifx\undefined\@author
   \ClassError{CSUNthesis}{no \protect\author{<author>} given.}{}
   \fi
-  \vspace*{2.5in}
+  \vspace*{0.5in}%               
   \begin{center}
     \begin{minipage}{5.05in}
       The
